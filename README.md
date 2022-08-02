@@ -4,7 +4,8 @@
 # Official Characters 2  by MarvelMods.com
 ------------------------------------------
 
-[Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
+[Latest Release](https://marvelmods.com/forum/index.php/topic,11037.html)
+| [Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
 | [Discussion](https://discord.com/channels/449510825385000960)
 
 
