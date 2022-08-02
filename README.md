@@ -4,6 +4,10 @@
 # Official Characters 2  by MarvelMods.com
 ------------------------------------------
 
+[Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
+[Discussion](https://discord.com/channels/449510825385000960)
+
+
 Features:
 ---------
 
@@ -31,14 +35,14 @@ Installation Instructions:
 
 To install the mod correctly:
 1. Back up your files - the mod overwrites many important game files, including herostat.
-   Alternatively install and/or use Mod Organizer 2 (https://marvelmods.com/forum/index.php/topic,10809.msg199944.html#msg199944).
+   Alternatively install and/or use [Mod Organizer 2](https://marvelmods.com/forum/index.php/topic,10809.msg199944.html#msg199944).
 2. Extract/unpack the contents of this archive to ..\Activision\Marvel - Ultimate Alliance (i.e. the main directory of MUA).
 3. If it asks you to confirm file replace (or similar), click "Yes to all" (or similar), assuming that you have backed up your files already. If you haven't backed up your files, then click "No" and back up your files now.*
 4. Wait for it to unpack.
 5. The mod is now ready. Some changes don't work correctly until you start a new game. Existing saves don't work with the OCP.
 
 6. The default OCP herostat contains Captain Marvel, Hawkeye, Hulk and Moon Knight (in addition to the 23 default characters).
-   You can swap in other characters with OpenHeroSelect (https://marvelmods.com/forum/index.php/topic,10597) or 
+   You can swap in other characters with [OpenHeroSelect](https://marvelmods.com/forum/index.php/topic,10597) or 
    follow this tutorial: https://marvelmods.com/forum/index.php/topic,10809
     With the 36 Roster Hack it's possible to use all official characters of MUA at once.
     Find all herostats here: https://github.com/TheRealPSV/OpenHeroSelect/tree/master/mua/xml
@@ -67,7 +71,7 @@ PLEASE READ THIS BEFORE ASKING FOR HELP ON MARVELMODS.
         If someone can't block after installing a booster, please install the respective fixed talents file from this package:
         https://www.mediafire.com/file/ralg40g29xwerb2/
       - regarding animations: The "Animation mixed files for old character mod releases" are now a requirement.
-        Get them here: https://marvelmods.com/forum/index.php/topic,11054
+        Get them [here](https://marvelmods.com/forum/index.php/topic,11054).
         Instructions: 1) Install a character mod or booster.
                       2) Open this archive and copy/extract the contents of the folder for this mod/booster.
         If you can't find the folder for your newly installed mod or booster, it may not require the fix.
@@ -98,7 +102,7 @@ PLEASE READ THIS BEFORE ASKING FOR HELP ON MARVELMODS.
        Enter "Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Enter" in the Character Selection Screen
        Extra characters usually have all costumes locked and only one way to unlock them:
        Enter "Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Enter" in the Character Selection Screen
-       For more information about the 50RH visit   https://marvelmods.com/forum/index.php/topic,10774.0.html
+       For more information about the 50RH visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10774)
    c. Mods or official characters with many fightmoves (Venom, Nightcrawler) can reach the fighmove limit faster.
        Issues can be crashes, glitches (eg. what we call "Zombie Glitch"), and loading screen freezes.
        To avoid this issue, remove heroes with many fightmoves from your roster, or remove members
@@ -108,7 +112,7 @@ PLEASE READ THIS BEFORE ASKING FOR HELP ON MARVELMODS.
    d. For modders and users who know how to edit herostat.engb: Unique talents (unique = not in shared_talents) in herostat
       have a limit of 70. Skinsegments are limited to 14, stateffects to 37. When the limits are reached, the codes don't load.
        Results: Talents don't work, segments show at all times (esp. in hubs).
-   e. For more information about limit issues visit   https://marvelmods.com/forum/index.php/topic,10884.0.html
+   e. For more information about limit issues visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10884)
 
 
 More Controller Support:
