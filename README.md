@@ -56,63 +56,63 @@ Troubleshooting:
 PLEASE READ THIS BEFORE ASKING FOR HELP ON MARVELMODS.
 
 1) I installed the OCP, but something doesn't work as expected...
-   a. The OCP 2 works only with a specific game and setup, so make sure that...
-      - you have the original release of Marvel: Ultimate Alliance in 2006, and only on PC (especially IGB files).
-      - you use the build.ini (or have the game in English), and game.exe that come with the pack.
-      - you follow the installation instructions to the detail.
-   b. Most characters have been updated since the OCP 1.3, which might cause compatibility issues with old mods and boosters...
-      - regarding sounds for following characters:
+   - a. The OCP 2 works only with a specific game and setup, so make sure that...
+     -  you have the original release of Marvel: Ultimate Alliance in 2006, and only on PC (especially IGB files).
+     -  you use the build.ini (or have the game in English), and game.exe that come with the pack.
+     -  you follow the installation instructions to the detail.
+   - b. Most characters have been updated since the OCP 1.3, which might cause compatibility issues with old mods and boosters...
+     -  regarding sounds for following characters:
         Nightcrawler, Silver Surfer, Ronin, Cyclops, Dr. Doom, Magneto, Hulk, (maybe Hawkeye, Black Widow).
         If you encounter issues with a booster, please install the sounds of the respective character from this package:
         https://www.mediafire.com/file/rhs0duwt0tbjww0/
-      - regarding characters not being able to block:
+     -  regarding characters not being able to block:
         Deadpool, Elektra, Gambit, Iceman, Invisible Woman, Jean, Juggernaut, Magneto, Moon Knight, Mr. Fantastic,
         Professor X, Scarlet Witch, Spiderman, Storm, Thor, Venom.
         If someone can't block after installing a booster, please install the respective fixed talents file from this package:
         https://www.mediafire.com/file/ralg40g29xwerb2/
-      - regarding animations: The "Animation mixed files for old character mod releases" are now a requirement.
+     -  regarding animations: The "Animation mixed files for old character mod releases" are now a requirement.
         Get them [here](https://marvelmods.com/forum/index.php/topic,11054).
         Instructions: 1) Install a character mod or booster.
                       2) Open this archive and copy/extract the contents of the folder for this mod/booster.
         If you can't find the folder for your newly installed mod or booster, it may not require the fix.
-   c. After modding the files in the data folder (eg. herostat, npcstat, simulator - not including sub-folders of data) 
+   - c. After modding the files in the data folder (eg. herostat, npcstat, simulator - not including sub-folders of data) 
       and installing the OCP, a new game is always required. Existing saves don't work.
-   d. There is a bug that powers don't work sometimes. If the installation was done correctly, the all powers cheat should fix this:
+   - d. There is a bug that powers don't work sometimes. If the installation was done correctly, the all powers cheat should fix this:
       Enter "Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Enter" in the Character Selection Screen
-   e. Some characters are locked from the start, because they can be unlocked by playing through the game. 
+   - e. Some characters are locked from the start, because they can be unlocked by playing through the game. 
       They are just black generic figures in the selection stage. This is no bug!
 
 2) Something seems to be missing...
-   a. Access to exclusive comic book missions has been removed (including disks), except Hulk's exclusive next-gen mission.
-      The missions can be found in optional files > "Additional SIM". Extract the files to the game folder and replace, as desired.
-   b. Some exclusive conversations are not included, because of memory limits.
-      Most can be found in optional files > "Optional Conversations". Extract the files to the game folder and replace, as desired.
-   c. x_voice only includes official character voices.
-      The full x_voice can be found in optional files > "Full X_Voice".
-   d. Italian support has been removed. Please don't change "build.ini".
-      A separate translation package is available, including information about how to add support for Italian and other languages.
-   e. The data code for removed unused NPCs and herostats can be found in optional files > "0 Data files decompiled".
+   - a. Access to exclusive comic book missions has been removed (including disks), except Hulk's exclusive next-gen mission.
+        The missions can be found in optional files > "Additional SIM". Extract the files to the game folder and replace, as desired.
+   - b. Some exclusive conversations are not included, because of memory limits.
+        Most can be found in optional files > "Optional Conversations". Extract the files to the game folder and replace, as desired.
+   - c. x_voice only includes official character voices.
+        The full x_voice can be found in optional files > "Full X_Voice".
+   - d. Italian support has been removed. Please don't change "build.ini".
+        A separate translation package is available, including information about how to add support for Italian and other languages.
+   - e. The data code for removed unused NPCs and herostats can be found in optional files > "0 Data files decompiled".
 
 3) I did everything, but something still doesn't work...
    Marvel Ultimate Alliance 2006 PC has its memory allowance limited, which leads to memory based limit issues:
-   a. Some content, like exclusive conversations, cannot be added without causing bugs and is therefore not included.
-   b. The OCP by itself should be stable, but if you decide to add more mods (especially the 50 Roster Hack), the limits
-      can cause powers not to work, effects not to show, or characters not being able to move/attack properly (fightmove limit).
-       The unlock all powers cheat is needed in most cases: 
-       Enter "Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Enter" in the Character Selection Screen
-       Extra characters usually have all costumes locked and only one way to unlock them:
-       Enter "Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Enter" in the Character Selection Screen
-       For more information about the 50RH visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10774)
-   c. Mods or official characters with many fightmoves (Venom, Nightcrawler) can reach the fighmove limit faster.
-       Issues can be crashes, glitches (eg. what we call "Zombie Glitch"), and loading screen freezes.
-       To avoid this issue, remove heroes with many fightmoves from your roster, or remove members
-       from your team (play in a team of one or two).
-       LS freezes can only be fixed by enabling the option "always on top" in the task manager. If the game hangs, press
-       ctrl+alt+del to acces task manager, select Game.exe, and "end task". Alternatively, sign out and back in.
-   d. For modders and users who know how to edit herostat.engb: Unique talents (unique = not in shared_talents) in herostat
-      have a limit of 70. Skinsegments are limited to 14, stateffects to 37. When the limits are reached, the codes don't load.
-       Results: Talents don't work, segments show at all times (esp. in hubs).
-   e. For more information about limit issues visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10884)
+   - a. Some content, like exclusive conversations, cannot be added without causing bugs and is therefore not included.
+   - b. The OCP by itself should be stable, but if you decide to add more mods (especially the 50 Roster Hack), the limits
+        can cause powers not to work, effects not to show, or characters not being able to move/attack properly (fightmove limit).
+         The unlock all powers cheat is needed in most cases: 
+         Enter "Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Enter" in the Character Selection Screen.
+         Extra characters usually have all costumes locked and only one way to unlock them:
+         Enter "Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Enter" in the Character Selection Screen.
+         For more information about the 50RH visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10774)
+   - c. Mods or official characters with many fightmoves (Venom, Nightcrawler) can reach the fighmove limit faster.
+         Issues can be crashes, glitches (eg. what we call "Zombie Glitch"), and loading screen freezes.
+         To avoid this issue, remove heroes with many fightmoves from your roster, or remove members
+         from your team (play in a team of one or two).
+         LS freezes can only be fixed by enabling the option "always on top" in the task manager. If the game hangs, 
+         press ctrl+shift+esc to acces task manager, select Game.exe, and "end task". Alternatively, sign out and back in.
+   - d. For modders and users who know how to edit herostat.engb: Unique talents (unique = not in shared_talents) in herostat
+        have a limit of 70. Skinsegments are limited to 14, stateffects to 37. When the limits are reached, the codes don't load.
+         Results: Talents don't work, segments show at all times (esp. in hubs).
+   - e. For more information about limit issues visit [MarvelMods](https://marvelmods.com/forum/index.php/topic,10884)
 
 
 More Controller Support:
