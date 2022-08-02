@@ -1,0 +1,8 @@
+# Use this file to set up the folders/files that should not be pushed to the server and tracked in Changes / History tab
+
+### The command below tells the game to ignore all "bak" files located anywhere in the "_ignore" folder
+_ignore/**/*.bak
+#_ignore/actors_anims/ - this is example of folder exclusion
+# *.txt - ignores all txt files in this repo.
+
+# To read about gitignore, go here: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
