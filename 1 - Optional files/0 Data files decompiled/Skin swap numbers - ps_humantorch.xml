@@ -1,0 +1,2586 @@
+XMLB PowerStyle {
+cansteal = true ;
+iconfile = textures/ui/humantorch_icons.png ;
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1311 ;
+   skin_filter = 1301 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1312 ;
+   skin_filter = 1302 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1313 ;
+   skin_filter = 1303 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1314 ;
+   skin_filter = 1304 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1316 ;
+   skin_filter = 1306 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = FlameOn ;
+   no_stack = true ;
+   remove_skin_on_exit = true ;
+   skin = 1317 ;
+   skin_filter = 1307 ;
+   skin_swap = true ;
+   tag_name = flame_on ;
+      special_fx {
+      bolt = Bip01 Spine1 ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 1 ;
+      how_used = primary ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = activation ;
+      }
+
+      special_fx {
+      bolt = Bip01 Pelvis ;
+      effect = char/humant/special_flameon ;
+      fxlevel = 2 ;
+      how_used = deactivation ;
+      }
+
+   }
+
+   event {
+   critical = true ;
+   inherit = powerup ;
+   name = FlameOff ;
+   remove_tag = flame_on ;
+   }
+
+   FightMove {
+   animenum = ea_power11 ;
+   fallback = grab_smash ;
+   handler = ch_grab_hold_base ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = grab_smash ;
+   noautoaim = true ;
+   priority = 6 ;
+      trigger {
+      attackerface = false ;
+      doslidemove = true ;
+      interaction = data/fightstyles/interact_humantorch_victim ;
+      name = victim ;
+      nodename = grabsmashvictim ;
+      offset = 22 0 0 ;
+      time = 0 ;
+      victimface = true ;
+      }
+
+      trigger {
+      name = stop ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 8 ;
+      name = effect ;
+      time = 0.43 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 8 ;
+      name = effect ;
+      time = 0.43 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/humant_m/p10_power ;
+      time = 0.45 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.45 ;
+      }
+
+      trigger {
+      arc = 30 ;
+      damage = 4 5 ;
+      height = 96 ;
+      maxrange = 100 ;
+      name = punch ;
+      time = 0.45 ;
+         damagemod {
+         name = dmgmod_no_hiteffect ;
+         }
+
+      }
+
+      trigger {
+      name = stop ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = victim_release ;
+      ownertime = 0.5 ;
+      time = 0.65 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      time = 0.94 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_jumpslamloop ;
+   handler = ch_jump_smash ;
+   name = jumpsmash ;
+   playspeed = 1 ;
+   powerup_tag = jmpsmsh ;
+   startchaintime = 0.4 ;
+   turnrate = 0.5 ;
+      trigger {
+      name = FlameOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      remove_on_node_end = true ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = 0.3 ;
+      name = slide ;
+      targetdistance = 75 ;
+      time = 0 ;
+      }
+
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = common/melee/js_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      tag = 1 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = base/hit/hit_jumpsmash_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      sound = common/melee/js_charge_loop ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag = 2 ;
+      tag_name = jumpsmash_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = base/hit/hit_jumpsmash_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      charge_type = stop ;
+      critical = on_interrupt ;
+      name = charge ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = jumpsmash_release_fall ;
+      }
+
+      chain {
+      action = special ;
+      result = jumpsmash_release_fall ;
+      }
+
+   }
+
+   FightMove {
+   airbornemovement = true ;
+   animenum = ea_fly_idle ;
+   energypersecond = %flight_pwr ;
+   fallback = jumploop ;
+   handler = ch_flying ;
+   lockchaining = false ;
+   name = flying ;
+   noncombat = true ;
+   powerup_tag = flying ;
+      require {
+      cat = skill ;
+      item = flight ;
+      level = 1 ;
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1311 ;
+      skin_filter = 1301 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1312 ;
+      skin_filter = 1302 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1313 ;
+      skin_filter = 1303 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1314 ;
+      skin_filter = 1304 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1316 ;
+      skin_filter = 1306 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      class = remove_on_events ;
+      life = -1 ;
+      name = powerup ;
+      no_stack = true ;
+      on_flying_end = true ;
+      remove_skin_on_exit = true ;
+      skin = 1317 ;
+      skin_filter = 1307 ;
+      skin_swap = true ;
+      tag_name = flame_on ;
+         special_fx {
+         bolt = Bip01 Spine1 ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/special_flameon ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = flying ;
+      }
+
+      chain {
+      action = attack ;
+      result = flymelee1 ;
+      }
+
+      chain {
+      action = smash ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = guard ;
+      result = guarddecide ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+   }
+
+   event {
+   attacktype = projectile ;
+   count = 1 ;
+   damage = %humant_p4_dmg ;
+   damagescale = none ;
+   damagetype = dmg_fire ;
+   entity = humant_p4_proj ;
+   filename = ents_humantorch ;
+   fulltargeting = true ;
+   inherit = projectile ;
+   maxrange = 500 ;
+   name = FireBall ;
+   noautoaim = true ;
+   speed = 800 ;
+   targetable = true ;
+      damagemod {
+      name = dmgmod_no_pain ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light1 ;
+   blendtime = 0 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attacklight1 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0.17 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.2 ;
+      name = trail ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      name = punch ;
+      time = 0.33 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight2 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack2 ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun1 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light2 ;
+   blendtime = 0 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attacklight2 ;
+   priority = 3 ;
+   startchaintime = 0.64 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0.18 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.3 ;
+      name = trail ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      name = punch ;
+      time = 0.36 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight3 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = smash ;
+      result = popupattack2 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light3 ;
+   blendtime = 0 ;
+   lockangles = true ;
+   name = attacklight3 ;
+   priority = 3 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0.23 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.3 ;
+      name = trail ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      name = punch ;
+      time = 0.38 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_trip1 ;
+   blendtime = 0.05 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacktrip2 ;
+   startchaintime = 1 ;
+      event {
+      inherit = kick ;
+      knockback = 0 ;
+      name = sweep ;
+         damageMod {
+         name = dmgmod_trip ;
+         }
+
+         damageMod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      name = whoosh_light ;
+      time = 0.13 ;
+      }
+
+      trigger {
+      movement = 10 ;
+      name = slide ;
+      time = 0.06 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.4 ;
+      name = trail ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      angle = -30 ;
+      height = -10 ;
+      index = 1 ;
+      name = sweep ;
+      time = 0.28 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = -10 ;
+      index = 1 ;
+      name = sweep ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      angle = 30 ;
+      height = -10 ;
+      index = 1 ;
+      name = sweep ;
+      time = 0.33 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_heavy1 ;
+   handler = ch_hold_smash ;
+   name = attackheavy1 ;
+   playspeed = 1 ;
+   powerup_tag = kbatk ;
+   startchaintime = 0.8 ;
+   turnrate = 0.5 ;
+      trigger {
+      name = FlameOn ;
+      remove_on_node_end = true ;
+      time = 0.55 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      tag = 1 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      next_eventtag = 101 ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      next_eventtag = 102 ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/kb_charge_done ;
+      tag = 102 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag = 2 ;
+      tag_name = knockback_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_knockback1 ;
+   handler = ch_hold_smash ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = attack_knockback_charge ;
+   noautoaim = true ;
+   powerup_tag = kbatk ;
+   priority = 3 ;
+   turnrate = 0.5 ;
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      trigger {
+      loop_type = update ;
+      name = sound ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      trigger {
+      min_charge = 1 ;
+      name = filter ;
+      only_non_looped = true ;
+      passtag = 20 ;
+      time = 0.14 ;
+      }
+
+      trigger {
+      life = 0.25 ;
+      name = slide ;
+      tag = 20 ;
+      targetdistance = 96 ;
+      targetradius = 10 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   aitype = melee ;
+   animenum = ea_attack_knockback2 ;
+   blendtime = 0.1 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackknockback2 ;
+   powerup_tag = kbatk ;
+   priority = 5 ;
+   startchaintime = 0.8 ;
+      trigger {
+      charge_type = stop ;
+      name = charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/dmg_knockback ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge_loop ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      movement = 20 ;
+      name = slide ;
+      targetdistance = 50 ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      failtag = 11 ;
+      min_charge = 1 ;
+      name = filter ;
+      passtag = 10 ;
+      time = 0.22 ;
+      }
+
+      trigger {
+      failtag = 11 ;
+      min_charge = 1 ;
+      name = filter ;
+      passtag = 10 ;
+      time = 0.26 ;
+      }
+
+      trigger {
+      damage = 3 4 ;
+      knockback = 190 ;
+      name = kick ;
+      tag = 10 ;
+      time = -1 ;
+         damagemod {
+         name = dmgmod_auto_knockback ;
+         }
+
+         damagemod {
+         name = dmgmod_no_atk_roll ;
+         }
+
+         damagemod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      damage = 2 3 ;
+      knockback = 190 ;
+      name = kick ;
+      tag = 11 ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = knockback_link ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      time = 0.77 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight1 ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power1 ;
+   icon = 0 ;
+   is_power = true ;
+   lockspeed = true ;
+   name = power1 ;
+   powerup_tag = humant_ranged ;
+   priority = 5 ;
+   startchaintime = 0.7 ;
+   turnrate = 0.15 ;
+      require {
+      cat = skill ;
+      item = humant_p1 ;
+      level = 1 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 100 ;
+      time = 0 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p1_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %humant_p1_pwr ;
+      time = 0 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = power1_loop ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power1_loop ;
+   combotextfinisher = Barrage ;
+   combotextstarter = Flaring ;
+   energypersecond = %humant_p1_pwr ;
+   icon = 0 ;
+   is_power = true ;
+   lockchaining = true ;
+   lockspeed = true ;
+   locktransitionangles = true ;
+   name = power1_loop ;
+   noautoaim = true ;
+   powerup_tag = humant_ranged ;
+   priority = 5 ;
+   turnrate = 0.25 ;
+      event {
+      attack_bone_angles = 0 0 0 ;
+      attack_bone_pos = 19 0 56 ;
+      beambolt = Bip01 R Hand ;
+      damage = 0 ;
+      damagetype = dmg_fire ;
+      fxlevel = 1 ;
+      hiteffect = char/humant/p1_impact ;
+      inherit = beam ;
+      maxrange = 150 ;
+      name = flame_dmg ;
+      pierce = true ;
+      radius = 24 ;
+      spawneffect = char/humant/p1_power ;
+      victimeventtag = 100 ;
+         damagemod {
+         name = dmgmod_no_damage ;
+         }
+
+      }
+
+      trigger {
+      damage = 0 ;
+      damagetype = dmg_fire ;
+      name = hitme ;
+      tag = 102 ;
+      time = -1 ;
+      type = ce_atk_self ;
+      }
+
+      trigger {
+      failtag = 120 ;
+      filteractor = true ;
+      name = filter ;
+      passtag = 101 ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      class = harming ;
+      damage = %humant_p1_dmg ;
+      damagetype = dmg_fire ;
+      life = 1 ;
+      name = powerup ;
+      next_eventtag = 102 ;
+      tag = 101 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/p1_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         damageMod {
+         remove = dmgmod_no_pain ;
+         }
+
+      }
+
+      trigger {
+      allow_non_actors = true ;
+      class = harming ;
+      damage = %humant_p1_dmg2 ;
+      damagetype = dmg_fire ;
+      life = 2 ;
+      name = powerup ;
+      tag = 120 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/p1_aura ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+         damageMod {
+         remove = dmgmod_no_pain ;
+         }
+
+      }
+
+      trigger {
+      name = unlock_loop_chaining ;
+      time = 0 ;
+      }
+
+      trigger {
+      button = samepowerhold ;
+      name = button_hint ;
+      time = 0 ;
+      }
+
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      manual_loop_timer = 0.2 ;
+      name = sound ;
+      sound = char/humant_m/p1_loop ;
+      time = 0 ;
+      }
+
+      trigger {
+      index = 1 ;
+      name = flame_dmg ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      index = 2 ;
+      name = flame_dmg ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      index = 3 ;
+      name = flame_dmg ;
+      time = 0.45 ;
+      }
+
+      trigger {
+      index = 4 ;
+      name = flame_dmg ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      index = 5 ;
+      name = flame_dmg ;
+      time = 0.75 ;
+      }
+
+      trigger {
+      index = 6 ;
+      name = flame_dmg ;
+      time = 0.9 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = power1_end ;
+      }
+
+      chain {
+      action = samepowerhold ;
+      result = power1_loop ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power1_end ;
+   icon = 0 ;
+   is_power = true ;
+   lockspeed = true ;
+   locktransitionangles = true ;
+   name = power1_end ;
+   noautoaim = true ;
+   priority = 5 ;
+   turnrate = 0.2 ;
+      trigger {
+      loop_type = stop ;
+      name = sound ;
+      sound = char/humant_m/p1_loop ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power2 ;
+   icon = 1 ;
+   is_power = true ;
+   name = power2 ;
+   powerup_tag = humant_p2 ;
+   priority = 5 ;
+   startchaintime = 0.7 ;
+   turnrate = 0.5 ;
+      require {
+      cat = skill ;
+      item = humant_p2 ;
+      level = 1 ;
+      }
+
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = char/humant_m/p2_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %humant_p2_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 10 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1.0 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p2_power ;
+      fxlevel = 3 ;
+      name = effect_sound ;
+      sound = common/melee/kb_charge_done ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      tag_name = humant_p2_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/humant/p2_power ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = char/humant_m/p2_charge ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = humant_p2_link ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = power2_loop ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   always_target = true ;
+   animenum = ea_power2_loop ;
+   is_power = true ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = power2_loop ;
+   noautoaim = true ;
+   powerup_tag = humant_p2 ;
+   priority = 5 ;
+   turnrate = 0.5 ;
+      trigger {
+      button = samepowerhold ;
+      name = button_hint ;
+      time = 0 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = humant_p2_link ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = power2_release ;
+      }
+
+      chain {
+      action = samepowerhold ;
+      result = power2_loop ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power2_end ;
+   combotextfinisher = Pyre ;
+   combotextstarter = Fiery ;
+   is_power = true ;
+   lockangles = true ;
+   locktransitionangles = true ;
+   name = power2_release ;
+   noautoaim = true ;
+   powerup_tag = humant_ranged ;
+   priority = 5 ;
+      trigger {
+      entity = humant_p2_fire ;
+      filename = ents_humantorch ;
+      life = 5 ;
+      maxinstances = 2 ;
+      name = spawn ;
+      scale = %humant_p2_size ;
+      tag = 50 ;
+      time = -1 ;
+      tracecheck = true ;
+      victimeventtag = 100 ;
+         damageMod {
+         name = dmgmod_no_damage ;
+         }
+
+      }
+
+      trigger {
+      attacks_per_second = 1 ;
+      class = harming ;
+      damage = %humant_p2_dmg2 ;
+      damagetype = dmg_fire ;
+      life = 1 ;
+      name = powerup ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      charge_type = stop ;
+      critical = true ;
+      name = charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p2_power ;
+      fxlevel = 4 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p2_power ;
+      time = 0.32 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = char/humant_m/p2_charge ;
+      time = 0.32 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = humant_p2_link ;
+      time = 0.32 ;
+      }
+
+      trigger {
+      actorbolt = Bip01 R Hand ;
+      attack_bone_angles = 0 0 0 ;
+      attack_bone_pos = 24 -14 66 ;
+      attacktype = projectile ;
+      count = 1 ;
+      damage = %humant_p2_dmg ;
+      damagemods_require_charge = true ;
+      damagescale = none ;
+      damagetype = dmg_fire ;
+      entity = humant_p2_proj ;
+      filename = ents_humantorch ;
+      fulltargeting = true ;
+      maxrange = 800 ;
+      name = projectile ;
+      speed = 600 ;
+      targetable = true ;
+      time = 0.32 ;
+         damageMod {
+         name = dmgmod_stun ;
+         }
+
+      }
+
+      trigger {
+      failtag = 200 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = FlameOff ;
+      tag = 200 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aitype = aoe ;
+   animenum = ea_power3 ;
+   combotextfinisher = Inferno ;
+   combotextstarter = Searing ;
+   icon = 2 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power3 ;
+   powerup_tag = humant_ranged ;
+   priority = 5 ;
+   startchaintime = 0.75 ;
+      require {
+      cat = skill ;
+      item = humant_p3 ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.25 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p3_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.25 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p3_charge ;
+      time = 0.4 ;
+      }
+
+      trigger {
+      attacktype = projectile ;
+      damage = %humant_p3_dmg ;
+      damagetype = dmg_fire ;
+      fxlevel = 2 ;
+      fxlevel = 1 ;
+      hiteffect = char/humant/p3_impact ;
+      name = blast ;
+      numblasts = 1 ;
+      powerusage = %humant_p3_pwr ;
+      radius = 96 ;
+      targetable = true ;
+      time = 0.4 ;
+         damageMod {
+         name = dmgmod_popup ;
+         }
+
+         damagemod {
+         name = dmgmod_ground_only ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power4 ;
+   icon = 3 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power4 ;
+   priority = 5 ;
+   storepowerbuttons = true ;
+      require {
+      cat = skill ;
+      item = humant_p4 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %humant_p4_pwr ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p4_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = power4_loop ;
+      }
+
+   }
+
+   FightMove {
+   aitype = projectile ;
+   animenum = ea_power4_loop ;
+   combotextfinisher = Missiles ;
+   combotextstarter = Incendiary ;
+   icon = 3 ;
+   is_power = true ;
+   lockspeed = true ;
+   locktransitionangles = true ;
+   name = power4_loop ;
+   noautoaim = true ;
+   powerup_tag = humant_ranged ;
+   priority = 5 ;
+   storepowerbuttons = true ;
+   turnrate = 0.5 ;
+      trigger {
+      button = samepowerclick ;
+      name = hint ;
+      time = 0 ;
+      type = ce_power_button_hint ;
+      }
+
+      trigger {
+      actorbolt = Bip01 L Hand ;
+      attack_bone_angles = 0 0 0 ;
+      attack_bone_pos = 7 11 31 ;
+      name = FireBall ;
+      powerusage = %humant_p4_pwr ;
+      time = 0.25 ;
+      victimeventtag = 20 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p4_power ;
+      fxlevel = 2 ;
+      name = effect_sound ;
+      sound = char/humant_m/p4_power ;
+      time = 0.25 ;
+      }
+
+      trigger {
+      actorbolt = Bip01 R Hand ;
+      attack_bone_angles = 0 0 0 ;
+      attack_bone_pos = 20 -5 37 ;
+      name = FireBall ;
+      time = 0.75 ;
+      victimeventtag = 20 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p4_power ;
+      fxlevel = 2 ;
+      name = effect_sound ;
+      sound = char/humant_m/p4_power ;
+      time = 0.75 ;
+      }
+
+      trigger {
+      is_popped_up = true ;
+      name = filter ;
+      passtag = 30 ;
+      tag = 20 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = velocity ;
+      next_eventtag = 31 ;
+      tag = 30 ;
+      time = -1 ;
+      up = 220 ;
+      }
+
+      trigger {
+      life = 1.5 ;
+      name = powerup ;
+      tag = 31 ;
+      time = -1 ;
+         affecter {
+         affect_type = scale ;
+         attribute = gravity ;
+         level = 0 ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = power4_release ;
+      }
+
+      chain {
+      action = samepowerclick ;
+      result = power4_loop ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power4_end ;
+   is_power = true ;
+   lockangles = true ;
+   locktransitionangles = true ;
+   name = power4_release ;
+   priority = 5 ;
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power5 ;
+   combotextfinisher = Heat ;
+   combotextstarter = Scorching ;
+   icon = 4 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power5 ;
+   powerup_tag = humant_hellfire_atk ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = humant_p5 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p5_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.31 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p5_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.31 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p5_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.31 ;
+      }
+
+      trigger {
+      effect = char/humant/p5_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.46 ;
+      }
+
+      trigger {
+      damage = %humant_p5_dmg ;
+      damagetype = dmg_fire ;
+      fxlevel = 1 ;
+      hiteffect = char/humant/p4_impact ;
+      maxrange = 120 ;
+      name = radial ;
+      powerusage = %humant_p5_pwr ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      critical = true ;
+      failtag = 200 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.88 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      tag = 200 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power6 ;
+   combotextfinisher = Nova ;
+   combotextstarter = Blazing ;
+   icon = 5 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power6 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = humant_p6 ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p6_power ;
+      fxlevel = 2 ;
+      name = effect_sound ;
+      sound = char/humant_m/p6_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p6_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/humant/p6_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      center_bolt = true ;
+      class = harming ;
+      damage = %humant_p6_dmg ;
+      damagetype = dmg_fire ;
+      life = %humant_p6_lif ;
+      name = powerup ;
+      powerusage = %humant_p6_pwr ;
+      share_enemies = true ;
+      share_life = 1 ;
+      share_physents = true ;
+      share_radius = 70 ;
+      time = 0.6 ;
+         special_fx {
+         effect = char/humant/p6_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         share_filter = owner ;
+         }
+
+         special_fx {
+         effect = char/humant/p6_aura ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         share_filter = owner ;
+         }
+
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/p1_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         share_filter = shared ;
+         }
+
+         affecter {
+         attribute = powerup_scope ;
+         share_filter = shared ;
+         }
+
+      }
+
+      trigger {
+      class = add_attack ;
+      damagepercent = %humant_p6_dmg2 ;
+      damagetype = dmg_fire ;
+      life = %humant_p6_lif ;
+      name = powerup ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      damage = 1 ;
+      damagetype = dmg_fire ;
+      fxlevel = 8 ;
+      hiteffect = char/humant/p4_impact ;
+      index = 2 ;
+      maxrange = 120 ;
+      name = radial ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      critical = true ;
+      failtag = 200 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.8 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      tag = 200 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power7 ;
+   combotextfinisher = Vortex ;
+   combotextstarter = Fiery ;
+   icon = 6 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power7 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = humant_p7 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p7_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p7_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p7_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      life = %humant_p7_lif ;
+      name = powerup ;
+      time = 0.67 ;
+         affecter {
+         affect_type = scale ;
+         attribute = def_damage ;
+         level = %humant_p7_def ;
+         }
+
+      }
+
+      trigger {
+      apply_ally = all ;
+      class = callevents ;
+      life = %humant_p7_lif ;
+      name = powerup ;
+      powerusage = %humant_p7_pwr ;
+      time = 0.67 ;
+         functionevent {
+         function = damage ;
+         thirdparty = true ;
+         triggertag = 20 ;
+         }
+
+         special_fx {
+         effect = char/humant/p7_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         effect = char/humant/p7_aura ;
+         fxlevel = 2 ;
+         how_used = deactivation ;
+         }
+
+         affecter {
+         attribute = powerup_scope ;
+         scope_non_powers = true ;
+            scope {
+            scope_attack = punch ;
+            }
+
+            scope {
+            scope_attack = kick ;
+            }
+
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      failtag = 200 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.9 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      tag = 200 ;
+      time = -1 ;
+      }
+
+      trigger {
+      chance = %humant_p7_pct ;
+      name = otherevent ;
+      othertag = 21 ;
+      tag = 20 ;
+      time = -1 ;
+      }
+
+      trigger {
+      attacks_per_second = 1 ;
+      class = harming ;
+      damage = %humant_p7_dmg ;
+      damagetype = dmg_fire ;
+      life = 1 ;
+      name = powerup ;
+      tag = 21 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Pelvis ;
+         effect = char/humant/p1_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_idle1 ;
+   blendtime = 0 ;
+   handler = ch_team_xtreme ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   lockspeed = true ;
+   name = team_xtreme ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      require {
+      cat = skill ;
+      item = humant_p9 ;
+      level = 1 ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = xtreme_start ;
+      only_non_looped = true ;
+      team_xtreme = 4 ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = team_xtreme ;
+      }
+
+      chain {
+      action = special ;
+      result = power9 ;
+      }
+
+   }
+
+   event {
+   damage = %humant_p9_dmg ;
+   damagelevel = 2 ;
+   damagetype = dmg_fire ;
+   enemynumber = 0 ;
+   hiteffect = char/humant/p9_impact ;
+   inherit = blast ;
+   maxrange = 225 ;
+   name = fire_impact ;
+   radius = 60 ;
+   random = true ;
+   }
+
+   FightMove {
+   animenum = ea_power9 ;
+   combotextfinisher = Blaze ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = power9 ;
+   playspeed = 10 ;
+   powerup_tag = humant_p9 ;
+   priority = uninterruptable ;
+      trigger {
+      always = true ;
+      name = camera_override ;
+      time = 0 ;
+      }
+
+      trigger {
+      description = Attack ;
+      name = team_xtreme_msg ;
+      time = 0 ;
+      title = Fantastic Fire ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/humant_m/p9_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      failtag = 100 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = FlameOn ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p9_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.11 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p9_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.11 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/p9_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/p9_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      enemynumber = 0 ;
+      name = fire_impact ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      enemynumber = 1 ;
+      name = fire_impact ;
+      time = 0.61 ;
+      }
+
+      trigger {
+      enemynumber = 2 ;
+      name = fire_impact ;
+      time = 0.63 ;
+      }
+
+      trigger {
+      enemynumber = 3 ;
+      name = fire_impact ;
+      time = 0.67 ;
+      }
+
+      trigger {
+      enemynumber = 4 ;
+      name = fire_impact ;
+      time = 0.7 ;
+      }
+
+      trigger {
+      enemynumber = 5 ;
+      name = fire_impact ;
+      time = 0.71 ;
+      }
+
+      trigger {
+      enemynumber = 6 ;
+      name = fire_impact ;
+      time = 0.73 ;
+      }
+
+      trigger {
+      enemynumber = 7 ;
+      name = fire_impact ;
+      time = 0.75 ;
+      }
+
+      trigger {
+      enemynumber = 8 ;
+      name = fire_impact ;
+      time = 0.77 ;
+      }
+
+      trigger {
+      enemynumber = 9 ;
+      name = fire_impact ;
+      time = 0.8 ;
+      }
+
+      trigger {
+      critical = true ;
+      failtag = 200 ;
+      is_flying = true ;
+      name = filter ;
+      time = 0.99 ;
+      }
+
+      trigger {
+      name = FlameOff ;
+      tag = 200 ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      end = true ;
+      name = xtreme_start ;
+      time = 0.8 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+}
+
