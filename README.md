@@ -5,7 +5,7 @@
 ------------------------------------------
 
 [Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
-[Discussion](https://discord.com/channels/449510825385000960)
+| [Discussion](https://discord.com/channels/449510825385000960)
 
 
 Features:
