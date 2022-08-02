@@ -1,3 +1,5 @@
+# Nothing here, yet. Stay tuned...
+
 # Official Characters 2  by MarvelMods.com
 
 Features:
@@ -144,64 +146,61 @@ Credits:
 --------
 
 Official Character Pack 2
--Game developer credits: Raven Software, Beenox, Activision, Marvel, Vicarious Vision (game engine & MUA2/MUAPSP), N-Space (MUA2 Wii content), Salami Studios & Talking Dogz (Voice acting), Zoe Mode (Remaster Edition content), 
+- Game developer credits: Raven Software, Beenox, Activision, Marvel, Vicarious Vision (game engine & MUA2/MUAPSP), N-Space (MUA2 Wii content), Salami Studios & Talking Dogz (Voice acting), Zoe Mode (Remaster Edition content), 
  Additional original MUA credits: Blur Studio (cinematics), CRI Middleware (video), Four Bars Entertainment (music)
--THX: for starting and hosting marvelmods.com
--UltraMegaMagnus: His amazing efforts in putting together OCP2, upscaling files, fixing skins, adding packages, CSS, etc.
--Dark_Mark: Swordsman model, Super Skrull skin, converting Xbox 360 Gold Edition unique character conversations, Venom, Hulk's and Hawkeye's power sounds, revised power sounds for Dr. Doom, Cyclops, Ronin and Nightcrawler, Black Widow fixes, alternative Murderworld storyline, (his other work and models from OCP1 are not included in OCP2)
--LarsAlexandersson: converting RE sounds for many official characters, Dark retexture, Ronin comic mission conversion, general help
--nodoubt_jr: better Magma conversion for XML2, where the OCP2 Magma was updated from
--Shafcrawler: for loadscreen artwork
--Ceamonks890: for general help and providing CSS callouts
--Canino: coding and icons conversion
--Rasdel: for Moon Knight retexture of 4105 skin
--Outsider: for Black Widow & Cable boosters, Dark Phoenix fix, herostats
--MrKablamm0fish: for map + object fixes, Black Widow comic mission conversion
--Krisan Thyme: for converting dlc sounds and fixing various scripts
--Nowhereman: for the Hand Ninjas & JulioCabral for the SIM coding
--Nicaras: for the Jean Grey fix
--BloodyMares: for the Hulk hud fixes
--BaconWizard17: for the statues of Nightcrawler and Jean, XML skins, the Xbox One controller fix and instructions.
--Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
--ak2yny: for general fixes, assistance, gold sounds upgrade, Cyclops, conversion, XML icons upscale
--Cyborg Sun 天: for testing and reporting
--Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy.
--Whiteking: for 5th and 6th skin for Emma Frost
--Anyone else we forgot: Thanks
+- THX: for starting and hosting marvelmods.com
+- UltraMegaMagnus: His amazing efforts in putting together OCP2, upscaling files, fixing skins, adding packages, CSS, etc.
+- Dark_Mark: Swordsman model, Super Skrull skin, converting Xbox 360 Gold Edition unique character conversations, Venom, Hulk's and Hawkeye's power sounds, revised power sounds for Dr. Doom, Cyclops, Ronin and Nightcrawler, Black Widow fixes, alternative Murderworld storyline, (his other work and models from OCP1 are not included in OCP2)
+- LarsAlexandersson: converting RE sounds for many official characters, Dark retexture, Ronin comic mission conversion, general help
+- nodoubt_jr: better Magma conversion for XML2, where the OCP2 Magma was updated from
+- Shafcrawler: for loadscreen artwork
+- Ceamonks890: for general help and providing CSS callouts
+- Canino: coding and icons conversion
+- Rasdel: for Moon Knight retexture of 4105 skin
+- Outsider: for Black Widow & Cable boosters, Dark Phoenix fix, herostats
+- MrKablamm0fish: for map + object fixes, Black Widow comic mission conversion
+- Krisan Thyme: for converting dlc sounds and fixing various scripts
+- Nowhereman: for the Hand Ninjas & JulioCabral for the SIM coding
+- Nicaras: for the Jean Grey fix
+- BloodyMares: for the Hulk hud fixes
+- BaconWizard17: for the statues of Nightcrawler and Jean, XML skins, the Xbox One controller fix and instructions.
+- Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
+- ak2yny: for general fixes, assistance, gold sounds upgrade, Cyclops, conversion, XML icons upscale
+- Cyborg Sun 天: for testing and reporting
+- Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy.
+- Whiteking: for 5th and 6th skin for Emma Frost
+- Anyone else we forgot: Thanks
 
 Official Character Pack 1.3
--BliZZ: for heading up the mod for a long time, doing the bulk of the character conversions, converting PSP exclusive missions for Hawkeye and Captain Marvel, making Comic Book missions for Hulk, Silver Surfer and Moon Knight, Dr Strange's Mannequin
--Tommyboy2002: for his overall work on character models for MUA, as well as his Dr. Doom mannequin
--Dark_Mark: Venom, Hulk, Hawkeye, Black Widow, Captain Marvel, Ronin and Magneto models/mannequins, Cyclops models/skins, Silver Savage model/hud icon, Sabretooth mannequin, Swordsman model, Super Skrull skin, converting Xbox 360 Gold Edition unique character conversations, Venom, Hulk's and Hawkeye's power sounds, revised power sounds for Dr. Doom, Cyclops, Ronin and Nightcrawler, Black Widow fixes, alternative Murderworld storyline, preparation and compilation of versions 1.0 to 1.3
--Iammingy: for incredible skins, fixing of effects, new boltons and the Black Widow mannequin
--Norrin Radd: For Heroselect, the additional 3 Dr Doom skins, the Original Sabretooth skin, research on looping sounds in zsm's and other misc
--Winstrol: for ZSMEditor, without which we wouldn't have sounds
--Teancum: Converting character sounds, capturing Xbox 360 conversations and character voices, compiling of beta 3
--Overload: for the posed Cyclops and Nightcrawler mannequins
--Burning Rage, darkmythology: initial 360 conversion research
--Noelemahc: invaluable research on game texture formats
--LarsAlexandersson: converting more PSP sounds for Ronin
--Venom: RC1 testing
+- BliZZ: for heading up the mod for a long time, doing the bulk of the character conversions, converting PSP exclusive missions for Hawkeye and Captain Marvel, making Comic Book missions for Hulk, Silver Surfer and Moon Knight, Dr Strange's Mannequin
+- Tommyboy2002: for his overall work on character models for MUA, as well as his Dr. Doom mannequin
+- Dark_Mark: Venom, Hulk, Hawkeye, Black Widow, Captain Marvel, Ronin and Magneto models/mannequins, Cyclops models/skins, Silver Savage model/hud icon, Sabretooth mannequin, Swordsman model, Super Skrull skin, converting Xbox 360 Gold Edition unique character conversations, Venom, Hulk's and Hawkeye's power sounds, revised power sounds for Dr. Doom, Cyclops, Ronin and Nightcrawler, Black Widow fixes, alternative Murderworld storyline, preparation and compilation of versions 1.0 to 1.3
+- Iammingy: for incredible skins, fixing of effects, new boltons and the Black Widow mannequin
+- Norrin Radd: For Heroselect, the additional 3 Dr Doom skins, the Original Sabretooth skin, research on looping sounds in zsm's and other misc
+- Winstrol: for ZSMEditor, without which we wouldn't have sounds
+- Teancum: Converting character sounds, capturing Xbox 360 conversations and character voices, compiling of beta 3
+- Overload: for the posed Cyclops and Nightcrawler mannequins
+- Burning Rage, darkmythology: initial 360 conversion research
+- Noelemahc: invaluable research on game texture formats
+- LarsAlexandersson: converting more PSP sounds for Ronin
+- Venom: RC1 testing
 
 X-Men Legends II Characters
--BliZZ: for Bishop, Juggernaut, Toad, Scarlet Witch, Gambit mods; Sunfire and Jean Grey mannequin
--Cates: for Sunfire, Pyro, and Professor X mods; Modern Sunfire, Freedom Force Pyro skins
--Norrin Radd: for Rogue mod; Ultimate Pyro, Original Rogue skins
--darkmythology: for Jean Grey mod
--Teancum & Winstrol: for the sounds
--Noelemahc: for the iconsets
--Iammingy: for the Bishop Gun boltons; X-Men Juggernaut, Classic Jean Grey, Original Bishop, Classic Pyro skins
--Boreman: for Classic/Modern Toad, Ultimate Scarlet Witch skins
--Burning Rage: for Classic Gambit skin
--MXYZPTLK: for Juggernaut, Toad, Pyro, Bishop, Rogue, Professor X mannequins
--thetommyboy2002: for the Gambit mannequin
--Overload: for the Scarlet Witch mannequin
+- BliZZ: for Bishop, Juggernaut, Toad, Scarlet Witch, Gambit mods; Sunfire and Jean Grey mannequin
+- Cates: for Sunfire, Pyro, and Professor X mods; Modern Sunfire, Freedom Force Pyro skins
+- Norrin Radd: for Rogue mod; Ultimate Pyro, Original Rogue skins
+- darkmythology: for Jean Grey mod
+- Teancum & Winstrol: for the sounds
+- Noelemahc: for the iconsets
+- Iammingy: for the Bishop Gun boltons; X-Men Juggernaut, Classic Jean Grey, Original Bishop, Classic Pyro skins
+- Boreman: for Classic/Modern Toad, Ultimate Scarlet Witch skins
+- Burning Rage: for Classic Gambit skin
+- MXYZPTLK: for Juggernaut, Toad, Pyro, Bishop, Rogue, Professor X mannequins
+- thetommyboy2002: for the Gambit mannequin
+- Overload: for the Scarlet Witch mannequin
 
 X-Men Legends II Exclusive and X-Men Legends (I) Characters
--BLiZZ: Beast, Emma Frost, Jubilee, Magma, Cable, and X-Man mods
--Dihan: Psylocke mod
--Boreman: Cannonball mod
--Matt710: Dark Phoenix mod
-
-------------------------
- Official Character Pack (OCP) for Marvel Ultimat Alliance (MUA) was created to add the DLC content of the Xbox 360 verison to the original PC version ported by Beenox in 2006.
+- BLiZZ: Beast, Emma Frost, Jubilee, Magma, Cable, and X-Man mods
+- Dihan: Psylocke mod
+- Boreman: Cannonball mod
+- Matt710: Dark Phoenix mod
