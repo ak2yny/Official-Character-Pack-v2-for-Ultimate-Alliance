@@ -1,0 +1,1866 @@
+XMLB PowerStyle {
+cansteal = true ;
+iconfile = textures/ui/phoenix_icons1.png ;
+   FightMove {
+   airbornemovement = true ;
+   animenum = ea_fly_idle ;
+   energypersecond = %flight_pwr ;
+   fallback = jumploop ;
+   handler = ch_flying ;
+   lockchaining = false ;
+   name = flying ;
+   noncombat = true ;
+   powerup_tag = flying ;
+      require {
+      cat = skill ;
+      item = flight ;
+      level = 1 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = char/phoenx/ability_fly_hand ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/phoenx/ability_fly_hand ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/phoenx/ability_fly_head ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = flying ;
+      }
+
+      chain {
+      action = attack ;
+      result = flymelee1 ;
+      }
+
+      chain {
+      action = smash ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = guard ;
+      result = guarddecide ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_heavy1 ;
+   blendtime = 0 ;
+   handler = ch_hold_smash ;
+   lockangles = true ;
+   name = attackheavy1 ;
+   playspeed = 1 ;
+   powerup_tag = kbatk ;
+   startchaintime = 1 ;
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      tag = 1 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      next_eventtag = 101 ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      name = effect ;
+      next_eventtag = 102 ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/kb_charge_done ;
+      tag = 102 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag = 2 ;
+      tag_name = knockback_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   aitype = melee ;
+   animenum = ea_attack_knockback2 ;
+   blendtime = 0.1 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackknockback2 ;
+   priority = 5 ;
+   startchaintime = 0.8 ;
+      trigger {
+      charge_type = stop ;
+      name = charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 25 ;
+      name = slide ;
+      targetdistance = 55 ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.4 ;
+      name = trail ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.4 ;
+      name = trail ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/dmg_knockback ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge_loop ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0.1 ;
+      }
+
+      trigger {
+      failtag = 11 ;
+      min_charge = 1 ;
+      name = filter ;
+      passtag = 10 ;
+      time = 0.33 ;
+      }
+
+      trigger {
+      damage = 3 4 ;
+      knockback = 190 ;
+      name = punch ;
+      tag = 10 ;
+      time = -1 ;
+         damagemod {
+         name = dmgmod_auto_knockback ;
+         }
+
+         damagemod {
+         name = dmgmod_no_atk_roll ;
+         }
+
+         damagemod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      damage = 2 3 ;
+      knockback = 190 ;
+      name = punch ;
+      tag = 11 ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = knockback_link ;
+      time = 0.25 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight1 ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   ainopush = true ;
+   animenum = ea_power11 ;
+   handler = ch_grab_hold_base ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = grab_smash ;
+   noautoaim = true ;
+   playspeed = 1.2 ;
+   priority = uninterruptable ;
+   startchaintime = 0.99 ;
+      trigger {
+      name = stop ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p4_power ;
+      fxlevel = 2 ;
+      name = effect_sound ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p4_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/phoenx_m/p2_throw ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      attackerface = true ;
+      interaction = data/fightstyles/interact_phoenix_victim ;
+      name = victim ;
+      nodename = telekinesisvictim ;
+      targetdistance = 40 ;
+      time = 0.001 ;
+      victimface = true ;
+      }
+
+      trigger {
+      execute_against = victim ;
+      name = otherevent ;
+      othertag = 1 ;
+      time = 0.66 ;
+      }
+
+      trigger {
+      damage = 4 5 ;
+      damagescale = normal ;
+      name = attackself ;
+      tag = 1 ;
+      time = -1 ;
+      type = ce_atk_self ;
+      }
+
+      trigger {
+      critical = on_exit ;
+      facethrowdir = false ;
+      impactdamage = 1 ;
+      name = throw ;
+      throwdirection = right ;
+      time = 0.67 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_blocking ;
+   blendtime = 0.1 ;
+   handler = ch_block ;
+   lockangles = true ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = blocking ;
+   priority = 6 ;
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      powerup_tag = invis_blk ;
+      remove_on_node_end = true ;
+      time = 0 ;
+         special_fx {
+         effect = char/phoenx/block ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = char/phoenx/block ;
+         fxlevel = 3 ;
+         how_used = activation ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/phoenx/block ;
+         fxlevel = 3 ;
+         how_used = activation ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = invis_blk ;
+      time = -1 ;
+      }
+
+      chain {
+      action = special ;
+      result = idle ;
+      }
+
+      chain {
+      action = rollleft ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = rollright ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = retreat ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = advance ;
+      result = rollforward ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light1 ;
+   blendtime = 0.05 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attacklight1 ;
+   priority = 3 ;
+   startchaintime = 0.42 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      nopushback = true ;
+      targetdistance = 100 ;
+      targetdot = 0.5 ;
+      targetradius = 90 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.15 ;
+      name = trail ;
+      offsetend = 200 ;
+      time = 0.17 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 12 ;
+      index = 1 ;
+      knockback = 0 ;
+      maxrange = 96 ;
+      name = punch ;
+      time = 0.39 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight2 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack2 ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun1 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light2 ;
+   blendtime = 0.1 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacklight2 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      nopushback = true ;
+      targetdistance = 100 ;
+      targetdot = 0.5 ;
+      targetradius = 90 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.3 ;
+      name = trail ;
+      offsetend = 150 ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      height = -12 ;
+      index = 1 ;
+      knockback = 0 ;
+      maxrange = 96 ;
+      name = punch ;
+      time = 0.39 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight3 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = smash ;
+      result = popupattack2 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light3 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacklight3 ;
+   startchaintime = 0.76 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      nopushback = true ;
+      targetdistance = 100 ;
+      targetdot = 0.5 ;
+      targetradius = 90 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.1 ;
+      name = trail ;
+      offsetend = 200 ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      knockback = 40 ;
+      maxrange = 96 ;
+      name = kick_heavy ;
+      time = 0.4 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_popup ;
+   blendtime = 0.07 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   handler = ch_popup_attack ;
+   lockangles = true ;
+   name = popupattack2 ;
+   startchaintime = 0.75 ;
+      event {
+      inherit = kick ;
+      knockback = 0 ;
+      name = popuppsi ;
+         damageMod {
+         name = dmgmod_popup ;
+         }
+
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = whoosh_heavy ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.3 ;
+      name = trail ;
+      offsetend = 90 ;
+      offsetstart = 90 ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      maxrange = 96 ;
+      name = popuppsi ;
+      time = 0.27 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 10 ;
+   aitype = projectile ;
+   animenum = ea_power1 ;
+   combotextfinisher = Dart ;
+   combotextstarter = Mental ;
+   icon = 0 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   name = power1 ;
+   powerup_tag = pho_power1 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_ment_burst ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/phoenx_m/p1_charge ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      arc = 0 ;
+      attacktype = projectile ;
+      center = true ;
+      count = 1 ;
+      damage = %pho_ment_burst_dmg ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      entity = p1_projectile ;
+      filename = ents_phoenix ;
+      maxrange = 800 ;
+      name = projectile ;
+      offset = 40 -4 6 ;
+      powerusage = %pho_ment_burst_pwr ;
+      speed = 450 ;
+      tag = 1 ;
+      targetable = true ;
+      time = 0.48 ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = projectilenear ;
+   animenum = ea_power2 ;
+   combotextfinisher = Control ;
+   combotextstarter = Telekinetic ;
+   handler = ch_telekinesis ;
+   icon = 1 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = true ;
+   name = power2 ;
+   powerup_tag = pho_power2 ;
+   priority = 5 ;
+   startchaintime = 0.1 ;
+      require {
+      cat = skill ;
+      item = pho_telek ;
+      level = 1 ;
+      }
+
+      trigger {
+      attacktype = psionic ;
+      damage = 0 ;
+      damagelevel = 1 ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      maxrange = 300 ;
+      name = telekinesis_dmg ;
+      tag = 2 ;
+      time = -1 ;
+      type = ce_atk_self ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+         damageMod {
+         name = dmgmod_no_damage ;
+         }
+
+      }
+
+      trigger {
+      name = stop ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_telek_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p2_power ;
+      name = effect ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p2_charge ;
+      name = effect ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      damage = %pho_telek_dm1 ;
+      damagetype = dmg_telekinesis ;
+      heaviness = %pho_telek_hvy ;
+      impactdamage = %pho_telek_dm2 ;
+      name = suspend ;
+      tag = 1 ;
+      time = -1 ;
+      tklevel = 11 ;
+      }
+
+      chain {
+      action = special ;
+      result = power2_hold ;
+      }
+
+      chain {
+      action = idle ;
+      result = power2_release ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power2 ;
+   energypersecond = %pho_telek_pwr ;
+   handler = ch_telekinesis ;
+   icon = 1 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = true ;
+   locktransitionangles = true ;
+   name = power2_hold ;
+   priority = 5 ;
+   startchaintime = 1 ;
+      trigger {
+      effect = char/phoenx/p2_power ;
+      name = effect ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p2_charge ;
+      name = effect ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      loop_timeout = 5 ;
+      loop_type = start ;
+      name = sound ;
+      sound = char/phoenx_m/p2_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = special ;
+      result = power2_hold ;
+      }
+
+      chain {
+      action = idle ;
+      result = power2_release ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power2_end ;
+   lockangles = true ;
+   name = power2_release ;
+   priority = uninterruptable ;
+      trigger {
+      name = sound ;
+      sound = char/phoenx_m/p2_throw ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p2_charge2 ;
+      fxlevel = 2 ;
+      loop_type = stop ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p2_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 4 ;
+   aitype = aoe ;
+   animenum = ea_power3 ;
+   combotextfinisher = Slam ;
+   combotextstarter = Dizzying ;
+   icon = 2 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power3 ;
+   powerup_tag = pho_power3 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_mind_blast ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_mind_blast_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p3_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p3_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p3_charge ;
+      time = 0 ;
+      }
+
+      event {
+      arc = 180 ;
+      attacktype = blast ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      fxlevel = 1 ;
+      hiteffect = char/phoenx/p1_impact ;
+      inherit = punch ;
+      name = radial_punch ;
+      victimeventtag = 100 ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+      }
+
+      trigger {
+      life = %pho_mind_blast_lif ;
+      name = powerup ;
+      tag = 100 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = base/powerup/pu_weakened ;
+         how_used = primary ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = atk_damage ;
+         level = %pho_mind_blast_atk ;
+         }
+
+      }
+
+      trigger {
+      effect = char/phoenx/p3_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      damage = %pho_mind_blast_dmg ;
+      maxrange = 80 ;
+      name = radial_punch ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      damage = %pho_mind_blast_dmg ;
+      maxrange = 110 ;
+      name = radial_punch ;
+      time = 0.59 ;
+      }
+
+      trigger {
+      damage = %pho_mind_blast_dmg ;
+      maxrange = 144 ;
+      name = radial_punch ;
+      tag = 4 ;
+      time = 0.6 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 20 ;
+   aitype = buffself ;
+   animenum = ea_power4 ;
+   icon = 3 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power4 ;
+   powerup_tag = pho_power4 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_psych_fury ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_psych_fury_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p4_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p4_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      apply_enemy = none ;
+      apply_self = true ;
+      class = add_attack ;
+      damagepercent = %pho_psych_fury_dmg ;
+      damagetype = dmg_mental ;
+      life = %pho_psych_fury_lif ;
+      name = powerup ;
+      replace = false ;
+      tag = 3 ;
+      time = 0.5 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = char/phoenx/p4_power ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/phoenx/p4_power ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+         affecter {
+         attribute = powerup_scope ;
+            scope {
+            scope_attack = punch ;
+            }
+
+            scope {
+            scope_attack = kick ;
+            }
+
+         }
+
+         affecter {
+         attribute = attack_rating ;
+         level = %pho_psych_fury_atk ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 20 ;
+   aitype = buffself ;
+   animenum = ea_power5 ;
+   icon = 4 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power5 ;
+   powerup_tag = pho_power5 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_calm_pres ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_calm_pres_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p5_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p4_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p5_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p5_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      apply_enemy = none ;
+      apply_self = true ;
+      life = %pho_calm_pres_lif ;
+      name = powerup ;
+      time = 0.5 ;
+         special_fx {
+         effect = char/phoenx/p5_power ;
+         fxlevel = 3 ;
+         how_used = primary ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = energy_regen ;
+         level = %pho_calm_pres_reg ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 20 ;
+   aitype = buffself ;
+   animenum = ea_power6 ;
+   combotextfinisher = Vortex ;
+   combotextstarter = Confusion ;
+   icon = 5 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power6 ;
+   powerup_tag = pho_power6 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_ment_vort ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_ment_vort_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p6_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p4_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p6_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p6_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      apply_enemy = none ;
+      apply_self = true ;
+      class = absorb ;
+      damagepercent = 0.2 ;
+      energy = true ;
+      inflicted = true ;
+      life = %pho_ment_vort_lif ;
+      name = powerup ;
+      time = 0.5 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = char/phoenx/p6_power ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/phoenx/p6_power ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 10 ;
+   aitype = aoe ;
+   animenum = ea_power7 ;
+   cansteal = false ;
+   combotextfinisher = Ward ;
+   combotextstarter = Phoenix ;
+   icon = 6 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   name = power7 ;
+   powerup_tag = pho_power7 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_ment_guard ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p7_charge ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p7_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p7_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p7_charge ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      actorbolt = Bip01 R Hand ;
+      attack_bone_angles = -71 -12 -177 ;
+      attack_bone_pos = 6 -6 77 ;
+      count = 1 ;
+      damage = %pho_ment_guard_dmg ;
+      damagetype = dmg_telekinesis ;
+      entity = p7_guardian ;
+      filename = ents_phoenix ;
+      firingrate = 1 ;
+      health = %pho_ment_guard_hth ;
+      life = %pho_ment_guard_lif ;
+      maxinstances = 1 ;
+      name = guardian ;
+      powerusage = %pho_ment_guard_pwr ;
+      projectileent = p7_projectile ;
+      speed = 300 ;
+      time = 0.3 ;
+      type = ce_atk_spawn_sentry ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = projectile ;
+   animenum = ea_power10 ;
+   combotextfinisher = Darkness ;
+   combotextstarter = Darkening ;
+   icon = 9 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power11 ;
+   powerup_tag = pho_power11 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_dark_phoenx ;
+      level = 1 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p10_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p10_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p10_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 Pelvis ;
+      effect = char/phoenx/p10_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/phoenx_m/p10_charge ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      attacktype = blast ;
+      damage = %pho_dark_phoenx_dm1 ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      index = 1 ;
+      inherit = punch ;
+      knockback = 0 ;
+      maxrange = 144 ;
+      name = radial_punch ;
+      time = 0.7 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p10_power ;
+      fxlevel = 4 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p10_power ;
+      time = 0.7 ;
+      }
+
+      trigger {
+      corpsesonly = true ;
+      damagetype = dmg_physical ;
+      fxlevel = 2 ;
+      hiteffect = base/material/explode/exp_generic_med ;
+      index = 2 ;
+      knockback = 120 ;
+      maxrange = 250 ;
+      name = blast ;
+      numblasts = %pho_dark_phoenx_num ;
+      powerusage = %pho_dark_phoenx_pwr ;
+      radius = 84 ;
+      targetable = false ;
+      targethealthpct = %pho_dark_phoenx_dm2 ;
+      time = 0.75 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 4 ;
+   aitype = aoe ;
+   animenum = ea_power3 ;
+   combotextfinisher = Disorder ;
+   combotextstarter = Mind ;
+   icon = 7 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power8 ;
+   powerup_tag = pho_power8 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = pho_mind_fry ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %pho_mind_fry_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p3_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p3_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p3_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      maxdangerrating = 10 ;
+      name = filter ;
+      noboss = true ;
+      passtag = 121 ;
+      tag = 20 ;
+      time = -1 ;
+      }
+
+      trigger {
+      apply_chance = %pho_mind_fry_pct ;
+      life = %pho_mind_fry_time ;
+      name = powerup ;
+      tag = 121 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = base/powerup/pu_dazed ;
+         }
+
+         affecter {
+         attribute = fear ;
+         level = 1 ;
+         }
+
+      }
+
+      event {
+      arc = 180 ;
+      attacktype = blast ;
+      damage = %pho_mind_fry_dmg ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      fxlevel = 1 ;
+      hiteffect = char/phoenx/p1_impact ;
+      inherit = punch ;
+      name = radial_punch ;
+      victimeventtag = 10 ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+      }
+
+      trigger {
+      name = otherevent ;
+      othertag = 121 ;
+      othertag2 = 101 ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p3_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      maxrange = 80 ;
+      name = radial_punch ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      maxrange = 100 ;
+      name = radial_punch ;
+      time = 0.59 ;
+      }
+
+      trigger {
+      maxrange = 120 ;
+      name = radial_punch ;
+      tag = 4 ;
+      time = 0.6 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_idle1 ;
+   blendtime = 0 ;
+   handler = ch_team_xtreme ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   lockspeed = true ;
+   name = team_xtreme ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      require {
+      cat = skill ;
+      item = pho_pho_force ;
+      level = 1 ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = xtreme_start ;
+      only_non_looped = true ;
+      team_xtreme = 4 ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = team_xtreme ;
+      }
+
+      chain {
+      action = special ;
+      result = power9 ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power9 ;
+   blendtime = 0 ;
+   combotextfinisher = Force ;
+   description = PHOENIX FORCE ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power9 ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      require {
+      cat = skill ;
+      item = pho_pho_force ;
+      level = 1 ;
+      }
+
+      trigger {
+      always = true ;
+      name = camera_override ;
+      time = 0 ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      life = 4 ;
+      name = xtreme_start ;
+      time = 0 ;
+      }
+
+      trigger {
+      description = Attack ;
+      name = team_xtreme_msg ;
+      time = 0 ;
+      title = Phoenix Force ;
+      }
+
+      trigger {
+      effect = char/phoenx/p9_power ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/phoenx_m/p9_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/phoenx/p9_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p9_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = 0 ;
+      damagelevel = 1 ;
+      index = 1 ;
+      maxrange = 350 ;
+      name = convert ;
+      time = 0.43 ;
+      type = ce_atk ;
+      victimeventtag = 98 ;
+      }
+
+      trigger {
+      bolt = Bip01 Pelvis ;
+      effect = base/material/explode/exp_generic_sml ;
+      name = effect ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      attacktype = psionic ;
+      damage = %pho_pho_force_dmg ;
+      damagelevel = 1 ;
+      damagetype = dmg_telekinesis ;
+      index = 2 ;
+      knockback = 190 ;
+      maxrange = 350 ;
+      name = phoenixforce ;
+      time = 0.45 ;
+      type = ce_atk ;
+      victimeventtag = 100 ;
+         damageMod {
+         name = dmgmod_popup ;
+         }
+
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+      }
+
+      trigger {
+      maxdangerrating = 10 ;
+      name = no_bosses ;
+      noboss = true ;
+      passtag = 99 ;
+      tag = 98 ;
+      time = -1 ;
+      type = ce_filter_event ;
+      }
+
+      trigger {
+      chance = %pho_pho_force_pct ;
+      name = do_chance ;
+      othertag = 200 ;
+      tag = 99 ;
+      time = -1 ;
+      type = ce_otherevent ;
+      }
+
+      trigger {
+      class = callevents ;
+      life = 30 ;
+      name = powerup ;
+      tag = 200 ;
+      time = -1 ;
+         FunctionEvent {
+         function = deactivate ;
+         triggertag = 201 ;
+         }
+
+         affecter {
+         attribute = team_switch ;
+         level = 1 ;
+         }
+
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = base/powerup/pu_converted ;
+         }
+
+         special_fx {
+         effect = base/material/explode/exp_generic_med ;
+         how_used = deactivation ;
+         }
+
+      }
+
+      trigger {
+      instantkillonly = true ;
+      name = remove_me ;
+      nosponsor = false ;
+      tag = 201 ;
+      time = -1 ;
+      type = ce_remove ;
+      }
+
+      trigger {
+      critical = true ;
+      end = true ;
+      name = xtreme_start ;
+      time = 0.75 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+}
+

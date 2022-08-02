@@ -1,0 +1,38 @@
+-Reverted run anim to her XML1 anim (a generic one it seems)
+-Removed custom woosh sound (previously not added to all atk with energy wp, plus removed to be consistent with other characters whoosh sound)
+-Psychic Knife (not official, also removed + unused psy-knife projectile entity from entity file) replaced by Psychic Blade from XML1 (using Blitzz coding and effects, modified to behave more like in XML1, still not entirely accurate)
+-Removed the Shatter Psyche power (not official)
+-Mental Shroud is now using it's MUA2 anim
+-removed useless event related to psi-shield bolton that was a custom modification by UMM
+-updated sounds using XML1 asset, previously using Marvel Heroes sounds
+-higher quality skin for X-Treme Gear skin by BaconWizard17
+-Psylocke boost effect fix by Fr3ddy
+
+herostat change:
+-renamed Future to X-Treme Gear
+
+
+XML1 unique stuff:
+-menu anim, I prefer those over MUA2 anims, no bolton used in menu, prererably she should not use them in non-combat zone, but probably hardcoded stuff to remove bolton like Wolverine
+-light1, light2, stun3, looks better than MUA2 anims
+-Psychic Bolt
+
+MUA2 unique stuff (all MUA2 anims are jittery):
+-Cerebral Bolt, modified version of Psychic Bolt with different effect and projectiles
+-menu anim, the menu_goodbye looks like a koEd anim
+-run anim, a bit more atlethic, but meh, the forearms are sticking too close to pelvis
+-trimple jump anim, but horrible for UMM, she jumps backward, UMM don't see the point of jumping backward gameplay-wise, plus it adds fightmoves
+-light1, 2, 3 atk(jittery light2), but without bolton, doesn't make sense, she clearly supposed to hold it when you look at her idle and especilly when looking back at her XML1 version, actually dev probably removed the bolton to avoid redundancy with katana power
+-popup, jittery+motion is not natural 
+-stun1, stun2, good anims, even if jittery, need to add the stun1
+-Katana power (Psi-Blade) maybe to add with stataffecter if possible as a third boost (it's just reused Ronin anims, the katana bolton looks nice though)+missing handler according to MrK
+
+What is needed?
+-icons revamp? Maybe a mix of Blitz & Djihan icons
+-wrong origin or orientation value for for Psychic-defense effects (the one on the ground, plus does not look like the XML1 effect
+-not accurate XML1 Psychic Blade effect
+-not accurate XML1 Xtreme effect
+-Talent to have upgradable bolton linked to idle fightmove (Blade Master talent from XML1)
+-Talent values
+-maybe re-organize power, Psychic-Blade might make more sense to be unlocked as first power?
+-I have not added the katana power to not add too many triggers, still can be added via MrK method

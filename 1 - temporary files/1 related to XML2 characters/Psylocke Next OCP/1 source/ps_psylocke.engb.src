@@ -1,0 +1,2376 @@
+XMLB PowerStyle {
+cansteal = true ;
+iconfile = textures/ui/psylocke_icons.png ;
+   event {
+   inherit = bolton ;
+   name = PsyBlade ;
+   tag_name = PsyBlade ;
+      special_fx {
+      bolt = Bip01 R Hand ;
+      effect = char/psylocke/p6_knife ;
+      }
+
+      special_fx {
+      bolt = Bip01 L Hand ;
+      effect = char/psylocke/p6_knife ;
+      }
+
+   }
+
+   event {
+   inherit = powerup ;
+   life = -1 ;
+   name = SwordOn ;
+   no_stack = true ;
+   tag_name = sword_on ;
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/psylocke_blade_03 ;
+      slot = ebolton_weapon ;
+      }
+
+   }
+
+   event {
+   critical = true ;
+   inherit = powerup ;
+   name = SwordOff ;
+   remove_tag = sword_on ;
+   }
+
+   event {
+   add = cloaked_no_tint ;
+   name = part_disappear ;
+   type = ce_renderfx ;
+   }
+
+   event {
+   name = part_reappear ;
+   remove = cloaked_no_tint ;
+   type = ce_renderfx ;
+   }
+
+   event {
+   attacktype = projectile ;
+   count = 1 ;
+   damage = %psyl_p5_dam ;
+   damagescale = none ;
+   damagetype = dmg_mental ;
+   entity = Psyl_PsiButterfly ;
+   filename = ents_psylocke ;
+   fulltargeting = true ;
+   inherit = projectile ;
+   maxrange = 500 ;
+   name = orbButterfly ;
+   noautoaim = true ;
+   speed = 1000 ;
+   targetable = true ;
+      damagemod {
+      name = dmgmod_stun ;
+      }
+
+   }
+
+   event {
+   actorbolt = Bip01 Head ;
+   arc = 0 ;
+   attacktype = projectile ;
+   center = true ;
+   count = 1 ;
+   damage = %psyl_p1_dam ;
+   damagetype = dmg_telekinesis ;
+   entity = homing_butterfly ;
+   filename = ents_psylocke ;
+   hiteffect = char/psylocke/p1_impact ;
+   inherit = projectile ;
+   maxrange = 800 ;
+   name = Homing_Butterfly ;
+   powerattack = true ;
+   scale = 1.8 ;
+   speed = 600 ;
+   victimeventtag = 10 ;
+      damagemod {
+      name = dmgmod_stun ;
+      }
+
+      damageMod {
+      name = dmgmod_environment ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_blocking ;
+   blendtime = 0.1 ;
+   handler = ch_block ;
+   icon = 2 ;
+   lockangles = true ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = blocking ;
+   priority = 6 ;
+      trigger {
+      name = SwordOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      boltslot = ebolton_clawright ;
+      critical = on_exit ;
+      name = bolton ;
+      removebolton = true ;
+      time = -1 ;
+      }
+
+      chain {
+      action = special ;
+      result = idle ;
+      }
+
+      chain {
+      action = rollleft ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = rollright ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = retreat ;
+      result = rollforward ;
+      }
+
+      chain {
+      action = advance ;
+      result = rollforward ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_heavy1 ;
+   blendtime = 0 ;
+   handler = ch_hold_smash ;
+   lockangles = true ;
+   name = attackheavy1 ;
+   playspeed = 1 ;
+   powerup_tag = kbatk ;
+   startchaintime = 1 ;
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      tag = 1 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      next_eventtag = 101 ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/kb_charge_done ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag = 2 ;
+      tag_name = knockback_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_knockback1 ;
+   handler = ch_hold_smash ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = attack_knockback_charge ;
+   noautoaim = true ;
+   powerup_tag = kbatk ;
+   priority = 3 ;
+   turnrate = 0.5 ;
+      trigger {
+      loop_type = update ;
+      name = sound ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      trigger {
+      min_charge = 1 ;
+      name = filter ;
+      only_non_looped = true ;
+      passtag = 20 ;
+      time = 0.14 ;
+      }
+
+      trigger {
+      life = 0.25 ;
+      name = slide ;
+      tag = 20 ;
+      targetdistance = 96 ;
+      targetradius = 10 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_knockback2 ;
+   blendtime = 0 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackknockback2 ;
+   powerup_tag = kbatk ;
+   priority = 5 ;
+   startchaintime = 0.8 ;
+      trigger {
+      charge_type = stop ;
+      name = charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/whoosh_heavy ;
+      time = 0.19 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge_loop ;
+      time = 0.19 ;
+      }
+
+      trigger {
+      critical = true ;
+      loop_type = stop ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0.19 ;
+      }
+
+      trigger {
+      failtag = 11 ;
+      min_charge = 0.72 ;
+      name = filter ;
+      passtag = 10 ;
+      time = 0.28 ;
+      }
+
+      trigger {
+      arc = 60 ;
+      index = 2 ;
+      knockback = 370 ;
+      mode = 1 ;
+      name = punch_veryheavy ;
+      tag = 10 ;
+      tiles = true ;
+      time = -1 ;
+         damagemod {
+         name = dmgmod_auto_knockback ;
+         }
+
+         damagemod {
+         name = dmgmod_no_atk_roll ;
+         }
+
+         damagemod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      arc = 60 ;
+      index = 2 ;
+      knockback = 190 ;
+      mode = 1 ;
+      name = punch_veryheavy ;
+      tag = 11 ;
+      tiles = true ;
+      time = -1 ;
+         damagemod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight1 ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_idle1 ;
+   handler = ch_idle ;
+   lockchaining = false ;
+   name = idle ;
+   noncombat = true ;
+      trigger {
+      name = SwordOn ;
+      time = 0 ;
+      replacecurrent = true ;
+      }
+
+      chain {
+      action = walk ;
+      result = walk ;
+      }
+
+      chain {
+      action = run ;
+      result = run ;
+      }
+
+      chain {
+      action = sprint ;
+      result = sprint ;
+      }
+
+      chain {
+      action = strafeleft ;
+      result = strafeleft ;
+      }
+
+      chain {
+      action = straferight ;
+      result = straferight ;
+      }
+
+      chain {
+      action = advance ;
+      result = advance ;
+      }
+
+      chain {
+      action = retreat ;
+      result = retreat ;
+      }
+
+      chain {
+      action = guard ;
+      result = guarddecide ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight1 ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackheavy1 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = special ;
+      result = boredloop ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = rollright ;
+      result = dodgeright ;
+      }
+
+      chain {
+      action = rollleft ;
+      result = dodgeleft ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light1 ;
+   blendtime = 0.05 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attacklight1 ;
+   playspeed = 1 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.18 ;
+      name = trail ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      name = punch ;
+      time = 0.33 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight2 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack2 ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun1 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+   
+   FightMove {
+   animenum = ea_attack_light2 ;
+   blendtime = 0.07 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacklight2 ;
+   playspeed = 1 ;
+   priority = 3 ;
+   startchaintime = 0.4 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Toe0 ;
+      life = 0.25 ;
+      name = trail ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 5 ;
+      knockback = 0 ;
+      name = kick ;
+      time = 0.23 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight3 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = smash ;
+      result = popupattack2 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light3 ;
+   blendtime = 0.1 ;
+   endchaintime = 1 ;
+   name = attacklight3 ;
+   playspeed = 1 ;
+   startchaintime = 0.6 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R hand ;
+      life = 0.25 ;
+      name = trail ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 5 ;
+      knockback = 0 ;
+      name = kick ;
+      time = 0.23 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_stun1 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackstun1 ;
+   priority = 3 ;
+   startchaintime = 0.45 ;
+      require {
+      cat = affecter ;
+      item = special ;
+      level = 6 ;
+      }
+
+      event {
+      inherit = punch_heavy ;
+      knockback = 0 ;
+      maxrange = 56 ;
+      name = backhand1 ;
+      }
+
+      trigger {
+      name = whoosh_heavy ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.4 ;
+      name = trail ;
+      time = 0.24 ;
+      }
+
+      trigger {
+      name = backhand1 ;
+      time = 0.4 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun_finish ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacktrip2 ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_stun2 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackstun_finish ;
+   playspeed = 1.25 ;
+      event {
+      inherit = punch_heavy ;
+      knockback = 0 ;
+      maxrange = 56 ;
+      name = backhand1 ;
+         damagemod {
+         name = dmgmod_stun ;
+         }
+
+         damagemod {
+         name = dmgmod_no_atk_roll ;
+         }
+
+      }
+
+      trigger {
+      name = whoosh_heavy ;
+      time = 0.05 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.2 ;
+      name = trail ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = backhand1 ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = PsyBlade ;
+      remove_on_node_end = true ;
+      time = 0.1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_popup ;
+   blendtime = 0.05 ;
+   handler = ch_popup_attack ;
+   lockangles = true ;
+   name = popupattack2 ;
+   priority = 5 ;
+   startchaintime = 0.66 ;
+      trigger {
+      name = whoosh_heavy ;
+      time = 0.25 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Toe0 ;
+      life = 0.32 ;
+      name = trail ;
+      time = 0.25 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Toe0 ;
+      life = 0.32 ;
+      name = trail ;
+      time = 0.29 ;
+      }
+
+      trigger {
+      knockback = 0 ;
+      maxrange = 50 ;
+      name = kick_heavy ;
+      time = 0.41 ;
+         damagemod {
+         name = dmgmod_popup ;
+         }
+
+         damagemod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_grab_smash ;
+   handler = ch_grab_hold_base ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = grab_smash ;
+   noautoaim = true ;
+   priority = uninterruptable ;
+   startchaintime = 0.9 ;
+      trigger {
+      attackerface = true ;
+      doslidemove = true ;
+      interaction = data/fightstyles/interact_blackwidow_victim ;
+      name = victim ;
+      nodename = grabsmashvictim ;
+      targetdistance = 22 ;
+      time = 0 ;
+      victimface = true ;
+      }
+
+      trigger {
+      name = SwordOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      damage = 4 5 ;
+      knockback = 0 ;
+      maxrange = 64 ;
+      name = punch ;
+      offset = -20 ;
+      time = 0.75 ;
+      }
+
+      trigger {
+      name = victim_release ;
+      ownertime = 2 ;
+      time = 0.75 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_double_jump_start ;
+   blendtime = 0.1 ;
+   endchaintime = 0.5 ;
+   handler = ch_move_jump ;
+   lockchaining = false ;
+   locktransitionangles = true ;
+   name = airjump ;
+   playspeed = 1.4 ;
+   turnrate = 0.2 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Toe0 ;
+      life = 0.3 ;
+      name = trail ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      maxrange = 72 ;
+      name = kick ;
+      time = 0.35 ;
+         damagemod {
+         name = dmgmod_popup ;
+         }
+
+      }
+
+      trigger {
+      forward = -180 ;
+      name = velocity ;
+      time = 0.25 ;
+      up = 350 ;
+      }
+
+      trigger {
+      forward = 0 ;
+      name = velocity ;
+      time = 0.49 ;
+      up = 0 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = airjump2 ;
+      }
+
+      chain {
+      action = attack ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = smash ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = special ;
+      result = doublejumpland ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power18 ;
+   blendtime = 0.1 ;
+   endchaintime = 0.5 ;
+   handler = ch_move_jump ;
+   lockchaining = false ;
+   name = airjump2 ;
+   playspeed = 1.4 ;
+      trigger {
+      forward = 75 ;
+      name = velocity ;
+      time = 0 ;
+      up = 200 ;
+      }
+
+      trigger {
+      forward = 0 ;
+      name = velocity ;
+      time = 0.49 ;
+      up = 0 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = attack ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = smash ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = special ;
+      result = doublejumpland ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_jump_land ;
+   blendtime = 0.1 ;
+   endchaintime = 0.7 ;
+   handler = ch_move_jump_land ;
+   lockangles = true ;
+   lockchaining = true ;
+   name = doublejumpland ;
+   noncombat = true ;
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = walk ;
+      result = walk ;
+      }
+
+      chain {
+      action = run ;
+      result = run ;
+      }
+
+      chain {
+      action = sprint ;
+      result = sprint ;
+      }
+
+   }
+
+   FightMove {
+   aicanuse = true ;
+   aireusetime = 5 ;
+   aitype = projectile ;
+   animenum = ea_power1 ;
+   combotextfinisher = Butterfly ;
+   combotextstarter = Psychic ;
+   icon = 0 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power1 ;
+   priority = 5 ;
+   turnrate = 0.5 ;
+      require {
+      cat = skill ;
+      item = psylocke_p1 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_power ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %psyl_p1_pow ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag_name = psy_p10_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/psylocke/ability_flyb ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psy_p10_link ;
+      time = 0.4 ;
+      }
+
+      trigger {
+      effect = char/psylocke/p1_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.3 ;
+      }
+
+      trigger {
+      bolt = Bip01 Head ;
+      effect = char/psylocke/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.2 ;
+      }
+
+      trigger {
+      name = Homing_Butterfly ;
+      time = 0.36 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   ainopush = true ;
+   aitype = projectile ;
+   animenum = ea_power2 ;
+   combotextfinisher = Drill ;
+   combotextstarter = Kinetic ;
+   endchaintime = 1 ;
+   icon = 4 ;
+   is_power = true ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = power2 ;
+   noautoaim = false ;
+   priority = 5 ;
+   startchaintime = 0.93 ;
+      require {
+      cat = skill ;
+      item = psylocke_p2 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %psyl_p2_pow ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = PsyBlade ;
+      remove_on_node_end = true ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p2_power ;
+      time = 0 ;
+      }
+
+      trigger {
+      class = callevents ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag_name = psy_thrust ;
+      time = 0.15 ;
+         functionevent {
+         function = touch ;
+         triggertag = 1 ;
+         }
+
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = %psyl_p2_dam ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      fxlevel = 2 ;
+      hiteffect = char/psylocke/p1_impact ;
+      knockback = 40 ;
+      name = punch ;
+      tag = 1 ;
+      tiles = true ;
+      time = -1 ;
+      victimeventtag = 10 ;
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      trigger {
+      attackermustface = true ;
+      name = victim ;
+      tag = 10 ;
+      time = 0 ;
+      useeventvictim = true ;
+      }
+
+      trigger {
+      bolt = Bip01 L Toe0 ;
+      life = 0.32 ;
+      name = trail ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      damage = %psyl_p2_dam ;
+      damagescale = none ;
+      height = -65 ;
+      index = 3 ;
+      knockback = 40 ;
+      maxrange = 64 ;
+      name = kick_heavy ;
+      time = 0.68 ;
+      verticalrange = 80 ;
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+         damageMod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = %psyl_p2_dam ;
+      damagescale = none ;
+      height = -75 ;
+      index = 2 ;
+      knockback = 40 ;
+      maxrange = 50 ;
+      name = kick_heavy ;
+      time = 0.78 ;
+      verticalrange = 80 ;
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+         damageMod {
+         name = dmgmod_ground ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psy_thrust ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = victim_release ;
+      time = 0.9 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 10 ;
+   aitype = aoe ;
+   animenum = ea_power3 ;
+   combotextfinisher = Torrent ;
+   combotextstarter = Psionic ;
+   icon = 3 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   name = power3 ;
+   playspeed = 1.4 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = psylocke_p3 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = SwordOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %psyl_p3_pow ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag_name = psy_p10_link ;
+      time = 0.4 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/psylocke/ability_flyb ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psy_p10_link ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p3_power ;
+      time = 0 ;
+      }
+
+      event {
+      arc = 180 ;
+      attacktype = blast ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      fxlevel = 1 ;
+      hiteffect = char/phoenx/p1_impact ;
+      inherit = punch ;
+      knockback = 430 ;
+      name = radial_punch ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      trigger {
+      bolt = Bip01 Head ;
+      effect = char/psylocke/p9_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      size = 0.3 ;
+      time = 0.45 ;
+      }
+
+      trigger {
+      damage = %psyl_p3_dam ;
+      maxrange = 95 ;
+      name = radial_punch ;
+      time = 0.45 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aicanuse = false ;
+   animenum = ea_power6 ;
+   fallback = power8_on ;
+   icon = 7 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power8 ;
+   priority = 5 ;
+      require {
+      cat = affecter ;
+      item = invisible ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/psy-invisible-on ;
+      time = 0 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psyl_invis ;
+      time = 0.3 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aicanuse = false ;
+   animenum = ea_power6 ;
+   icon = 7 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power8_on ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = psylocke_p8 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p4_power ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/invisw/p7_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/invisw/p7_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %psyl_p8_pwr ;
+      time = 0.625 ;
+      }
+
+      trigger {
+      effect = char/invisw/p7_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.625 ;
+      }
+
+      trigger {
+      class = callevents ;
+      inherit = powerup ;
+      life = %psyl_p8_life ;
+      name = InvisPowerup ;
+      remove_on_death = true ;
+      tag_name = psyl_invis ;
+      time = 0.625 ;
+         Functionevent {
+         function = activate ;
+         triggertag = 1 ;
+         }
+
+         Functionevent {
+         function = deactivate ;
+         triggertag = 2 ;
+         }
+
+         affecter {
+         affect_type = sum ;
+         attribute = invisible ;
+         level = 1 ;
+         }
+
+         affecter {
+         affect_type = sum ;
+         attribute = atk_critical ;
+         level = %psyl_p8_crit ;
+         }
+
+         affecter {
+         affect_type = sum ;
+         attribute = atk_kill_victim ;
+         level = %psyl_p8_kill ;
+         }
+
+         affecter {
+         affect_type = sum ;
+         attribute = energy_regen ;
+         level = %psyl_p8_pwr2 ;
+         }
+
+         special_fx {
+         effect = char/blackp/p6_power ;
+         fxlevel = 4 ;
+         how_used = activation ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         effect = char/blackp/p6_power ;
+         fxlevel = 4 ;
+         how_used = deactivation ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = part_disappear ;
+      tag = 1 ;
+      time = -1 ;
+      }
+
+      trigger {
+      critical = true ;
+      name = part_reappear ;
+      tag = 2 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 30 ;
+   aitype = projectile ;
+   animenum = ea_power6 ;
+   combotextfinisher = Butterfly ;
+   combotextstarter = Psychic ;
+   icon = 5 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power5 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = psylocke_p5 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = SwordOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag_name = psy_p10_link ;
+      time = 0.09 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/psylocke/ability_flyb ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psy_p10_link ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/psylocke/p5_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.41 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/psylocke/p5_power ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.41 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p5_power ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/psylocke/p5_power ;
+      fxlevel = 4 ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      class = orbiting_projectiles ;
+      life = 180 ;
+      mintime = 0.3 ;
+      name = powerup ;
+      no_stack_use_new = true ;
+      numeventstocall = %psyl_p5_num_butts ;
+      powerusage = %psyl_p5_pow ;
+      range = 300 ;
+      spawnentityname = Psyl_PsiButterfly ;
+      time = 0.5 ;
+         SpawnProjectileAndOrbit {
+         event = 1 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 2 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 3 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 4 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 5 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 6 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 7 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 8 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 9 ;
+         }
+
+         SpawnProjectileAndOrbit {
+         event = 10 ;
+         }
+
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.1 0.1 1 ;
+      tag = 1 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.3 0.4 -1 ;
+      tag = 2 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.5 0.5 1 ;
+      tag = 3 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.7 0.7 -1 ;
+      tag = 4 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.9 0.9 1 ;
+      tag = 5 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.7 0.75 -1 ;
+      tag = 6 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.7 0.25 1 ;
+      tag = 7 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.7 0.25 -1 ;
+      tag = 8 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.9 0.5 1 ;
+      tag = 9 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = orbButterfly ;
+      orbitaxis = 0.9 0.5 -1 ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5000 ;
+   aitype = projectilenear ;
+   animenum = ea_power5 ;
+   combotextfinisher = Control ;
+   combotextstarter = Telekinetic ;
+   handler = ch_telekinesis ;
+   icon = 8 ;
+   lockangles = true ;
+   lockchaining = true ;
+   name = power7 ;
+   priority = 5 ;
+   startchaintime = 0.1 ;
+      require {
+      cat = skill ;
+      item = psylocke_p7 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = SwordOff ;
+      time = 0 ;
+      }
+
+      trigger {
+      attacktype = psionic ;
+      damage = 0 ;
+      damagelevel = 1 ;
+      damagescale = none ;
+      damagetype = dmg_telekinesis ;
+      maxrange = 300 ;
+      name = telekinesis_dmg ;
+      tag = 2 ;
+      time = -1 ;
+      type = ce_atk_self ;
+         damageMod {
+         name = dmgmod_environment ;
+         }
+
+         damageMod {
+         name = dmgmod_no_damage ;
+         }
+
+      }
+
+      trigger {
+      name = stop ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %psyl_p7_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p2_power ;
+      name = effect ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 Head ;
+      effect = char/psylocke/telek ;
+      name = effect ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      damage = %psyl_p7_dm1 ;
+      damagetype = dmg_telekinesis ;
+      heaviness = %psyl_p7_hvy ;
+      impactdamage = %psyl_p7_dm2 ;
+      name = suspend ;
+      tag = 1 ;
+      time = -1 ;
+      tklevel = 11 ;
+      }
+
+      chain {
+      action = special ;
+      result = power7_hold ;
+      }
+
+      chain {
+      action = idle ;
+      result = power7_release ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power5 ;
+   energypersecond = %psyl_p7_pwr ;
+   handler = ch_telekinesis ;
+   icon = 8 ;
+   lockangles = true ;
+   lockchaining = true ;
+   locktransitionangles = true ;
+   name = power7_hold ;
+   priority = 5 ;
+   startchaintime = 1 ;
+      trigger {
+      effect = char/phoenx/p2_power ;
+      name = effect ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/phoenx/p2_charge ;
+      name = effect ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      loop_timeout = 5 ;
+      loop_type = start ;
+      name = sound ;
+      sound = char/psyloc_m/psilift ;
+      time = 0 ;
+      }
+
+      chain {
+      action = special ;
+      result = power7_hold ;
+      }
+
+      chain {
+      action = idle ;
+      result = power7_release ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power5_end ;
+   lockangles = true ;
+   name = power7_release ;
+   priority = uninterruptable ;
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/psiThrow ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/phoenx/p2_charge ;
+      fxlevel = 2 ;
+      loop_type = stop ;
+      name = effect_sound ;
+      sound = char/psyloc_m/psilift ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+   
+   FightMove {
+   aireusetime = 3 ;
+   aitype = melee ;
+   animenum = ea_power16 ;
+   blendtime = 0.07 ;
+   combotextfinisher = Slash ;
+   combotextstarter = Slicing ;
+   icon = 2 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power4 ;
+   priority = 5 ;
+      require {
+      cat = talent ;
+      item = psyl_p4 ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/psyloc/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.05 ;
+      }
+
+      trigger {
+      effect = char/psyloc/p1_arc ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.27 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/psyblade ;
+      time = 0.27 ;
+      }
+
+      trigger {
+      attacktype = punch ;
+      damage = %psyl_p4_dmg ;
+      damagescale = none ;
+      damagetype = dmg_mental ;
+      knockback = %psyl_p4_kb ;
+      maxrange = 60 ;
+      name = punch ;
+      powerusage = %psyl_p4_pwr ;
+      time = 0.4 ;
+         damagemod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 20 ;
+   aitype = buffself ;
+   animenum = ea_power8 ;
+   icon = 11 ;
+   is_power = true ;
+   name = power9 ;
+   priority = 5 ;
+      require {
+      cat = talent ;
+      item = psylocke_p9 ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p9_power ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/psylocke/psylocke_power3_armor ;
+      name = effect ;
+      time = 0 ;
+      }
+      
+      trigger {
+      apply_ally = all ;
+      life = %psyl_p9_lif ;
+      name = powerup ;
+      no_shadow = true ;
+      powerusage = %psyl_p9_pwr ;
+      time = 0.7 ;
+         affecter {
+         affect_type = scale ;
+         attribute = defense_rating ;
+         level = %psyl_p9_dmg ;
+         }
+
+         affecter {
+         attribute = resist_mental ;
+         level = 1.0 ;
+         }
+
+         special_fx {
+         effect = char/psylocke/psylocke_armor ;
+         fxlevel = 1 ;
+         }
+
+      }
+
+      chain {
+      action = Idle ;
+      result = idle ;
+      }
+
+   }
+
+   event {
+   damage = %psyl_p10_dmg ;
+   damagelevel = 2 ;
+   damagetype = dmg_mental ;
+   enemynumber = 0 ;
+   hiteffect = char/psylocke/p10_impact ;
+   inherit = blast ;
+   maxrange = 225 ;
+   name = psybolt ;
+   radius = 60 ;
+   random = true ;
+   }
+
+   FightMove {
+   animenum = ea_idle1 ;
+   blendtime = 0 ;
+   handler = ch_team_xtreme ;
+   icon = 9 ;
+   is_power = true ;
+   lockchaining = false ;
+   name = team_xtreme ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      require {
+      cat = skill ;
+      item = psylocke_p10 ;
+      level = 1 ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = xtreme_start ;
+      only_non_looped = true ;
+      team_xtreme = 8 ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = team_xtreme ;
+      }
+
+      chain {
+      action = special ;
+      result = power10 ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power3_loop ;
+   combotextfinisher = Mayhem ;
+   icon = 9 ;
+   is_power = true ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = power10 ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      trigger {
+      always = true ;
+      name = camera_override ;
+      time = 0 ;
+      }
+
+      trigger {
+      description = Attack ;
+      name = team_xtreme_msg ;
+      time = 0 ;
+      title = Psychic Onslaught ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag_name = psy_p10_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/psylocke/ability_flyb ;
+         fxlevel = 2 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      name = powerup ;
+      remove_tag = psy_p10_link ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = xtreme_start ;
+      only_non_looped = true ;
+      team_xtreme = 8 ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/xtre ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/psylocke/p10_onslaught ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/psylocke/p10_onslaught ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      enemynumber = 0 ;
+      name = psybolt ;
+      time = 0.7 ;
+      }
+
+      trigger {
+      enemynumber = 1 ;
+      name = psybolt ;
+      time = 0.715 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.715 ;
+      }
+
+      trigger {
+      enemynumber = 2 ;
+      name = psybolt ;
+      time = 0.73 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.73 ;
+      }
+
+      trigger {
+      enemynumber = 3 ;
+      name = psybolt ;
+      time = 0.745 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.745 ;
+      }
+
+      trigger {
+      enemynumber = 4 ;
+      name = psybolt ;
+      time = 0.76 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.76 ;
+      }
+
+      trigger {
+      enemynumber = 5 ;
+      name = psybolt ;
+      time = 0.775 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.775 ;
+      }
+
+      trigger {
+      enemynumber = 6 ;
+      name = psybolt ;
+      time = 0.79 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.79 ;
+      }
+
+      trigger {
+      enemynumber = 7 ;
+      name = psybolt ;
+      time = 0.805 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.805 ;
+      }
+
+      trigger {
+      enemynumber = 8 ;
+      name = psybolt ;
+      time = 0.82 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.82 ;
+      }
+
+      trigger {
+      enemynumber = 9 ;
+      name = psybolt ;
+      time = 0.835 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/psyloc_m/p1_impact ;
+      time = 0.835 ;
+      }
+
+      trigger {
+      life = %psyl_p10_stn ;
+      name = powerup ;
+         damagemod {
+         name = dmgmod_stun ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      end = true ;
+      name = xtreme_start ;
+      time = 0.9 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+}
+

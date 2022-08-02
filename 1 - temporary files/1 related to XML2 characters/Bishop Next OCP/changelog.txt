@@ -1,0 +1,9 @@
+Changes:
+- Removed the following trigger from the idle fightmove :
+      trigger {
+      name = mutant_master ;
+      time = 0 ;
+      }
+      
+It's a leftover from Maegawa coding to have the same passive for all skins
+      

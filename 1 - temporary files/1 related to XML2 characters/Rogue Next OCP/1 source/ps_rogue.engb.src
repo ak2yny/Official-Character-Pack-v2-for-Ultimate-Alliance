@@ -1,0 +1,1854 @@
+XMLB PowerStyle {
+cansteal = true ;
+iconfile = textures/ui/rogue_icons.png ;
+   FightMove {
+   animenum = ea_attack_heavy1 ;
+   handler = ch_hold_smash ;
+   name = attackheavy1 ;
+   playspeed = 1 ;
+   powerup_tag = kbatk ;
+   startchaintime = 0.8 ;
+   turnrate = 0.5 ;
+      trigger {
+      loop_timeout = 3 ;
+      loop_type = start ;
+      name = sound ;
+      sound = common/melee/kb_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      charge = 0 ;
+      charge_time = 1 ;
+      charged_eventtag = 100 ;
+      name = charge ;
+      tag = 1 ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = base/hit/hit_knockback_charge ;
+      fxlevel = 2 ;
+      loop_type = start ;
+      name = effect_sound ;
+      next_eventtag = 101 ;
+      sound = common/melee/kb_charge_loop ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = common/melee/kb_charge_done ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      fx_chargeable = true ;
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      tag = 2 ;
+      tag_name = knockback_link ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = base/hit/hit_knockback_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = attackknockback2 ;
+      }
+
+      chain {
+      action = groundsmash ;
+      result = groundattackknockback2 ;
+      }
+
+      chain {
+      action = special ;
+      result = attack_knockback_charge ;
+      }
+
+   }
+
+   FightMove {
+   airbornemovement = true ;
+   animenum = ea_fly_idle ;
+   energypersecond = %flight_pwr ;
+   fallback = jumploop ;
+   handler = ch_flying ;
+   lockchaining = false ;
+   name = flying ;
+   noncombat = true ;
+   powerup_tag = flying ;
+      require {
+      cat = skill ;
+      item = flight ;
+      level = 1 ;
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 L Hand ;
+         effect = char/rogue/ability_fly_hand ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+         special_fx {
+         bolt = Bip01 R Hand ;
+         effect = char/rogue/ability_fly_hand ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         never_cycle = true ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = flying ;
+      }
+
+      chain {
+      action = attack ;
+      result = flymelee1 ;
+      }
+
+      chain {
+      action = smash ;
+      result = jumpsmash ;
+      }
+
+      chain {
+      action = guard ;
+      result = guarddecide ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light1 ;
+   endchaintime = 0.95 ;
+   lockangles = true ;
+   name = attacklight1 ;
+   playspeed = 1 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.21 ;
+      name = trail ;
+      time = 0.22 ;
+      }
+
+      trigger {
+      angle = -30 ;
+      height = 15 ;
+      name = punch_heavy ;
+      time = 0.36 ;
+      }
+
+      trigger {
+      angle = 15 ;
+      height = 10 ;
+      name = punch_heavy ;
+      time = 0.42 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight2 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack2 ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun1 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light2 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacklight2 ;
+   playspeed = 1 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.3 ;
+      name = trail ;
+      offsetend = 10 ;
+      time = 0.14 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 10 ;
+      name = punch_heavy ;
+      time = 0.32 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacklight3 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = smash ;
+      result = popupattack2 ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_light3 ;
+   endchaintime = 0.85 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacklight3 ;
+   playspeed = 1 ;
+   startchaintime = 0.5 ;
+      event {
+      inherit = punch_veryheavy ;
+      knockback = 190 ;
+      name = slug ;
+      }
+
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      bolt = Bip01 Spine2 ;
+      life = 0.35 ;
+      name = trail ;
+      time = 0.15 ;
+      width = 8 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 0 ;
+      index = 1 ;
+      name = slug ;
+      time = 0.22 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 0 ;
+      index = 1 ;
+      name = slug ;
+      time = 0.27 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power10 ;
+   fallback = grab_smash ;
+   handler = ch_grab_hold_base ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = grab_smash ;
+   noautoaim = true ;
+   priority = uninterruptable ;
+   startchaintime = 0.99 ;
+      trigger {
+      name = stop ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = whoosh_light ;
+      time = 0.18 ;
+      }
+
+      trigger {
+      attackerface = true ;
+      doslidemove = true ;
+      interaction = data/fightstyles/interact_rogue_victim ;
+      name = victim ;
+      nodename = Grab_Smash_Victim ;
+      targetdistance = 26 ;
+      time = 0 ;
+      victimface = true ;
+      }
+
+      trigger {
+      bolt = Bip01 L Toe0 ;
+      effect = char/rogue/grabsmash_victim ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.18 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Toe0 ;
+      effect = char/rogue/grabsmash_victim ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0.18 ;
+      }
+
+      trigger {
+      execute_against = victim ;
+      name = otherevent ;
+      othertag = 1 ;
+      time = 0.76 ;
+      }
+
+      trigger {
+      damage = 4 5 ;
+      damagescale = normal ;
+      name = selfattack ;
+      tag = 1 ;
+      time = -1 ;
+      type = ce_atk_self ;
+         damagemod {
+         name = dmgmod_no_hiteffect ;
+         }
+
+      }
+
+      trigger {
+      critical = true ;
+      interactionend = true ;
+      name = victim_release ;
+      time = 0.99 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_popup ;
+   endchaintime = 1 ;
+   fallback = attackheavy1 ;
+   handler = ch_popup_attack ;
+   lockangles = true ;
+   name = popupattack2 ;
+   playspeed = 1 ;
+   startchaintime = 0.9 ;
+      event {
+      inherit = punch_heavy ;
+      knockback = 0 ;
+      maxrange = 50 ;
+      name = uppercut ;
+         damageMod {
+         name = dmgmod_popup ;
+         }
+
+      }
+
+      trigger {
+      name = whoosh_heavy ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/rogue/p8_power ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0.26 ;
+      }
+
+      trigger {
+      height = -10 ;
+      name = uppercut ;
+      time = 0.26 ;
+      }
+
+      trigger {
+      height = -10 ;
+      index = 1 ;
+      name = uppercut ;
+      time = 0.26 ;
+      victimeventtag = 15 ;
+      }
+
+      trigger {
+      finisher = true ;
+      life = 0.26 ;
+      name = xtreme_start ;
+      tag = 15 ;
+      time = -1 ;
+      worldspeed = 0.5 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      targetdistance = 80 ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      height = 96 ;
+      index = 2 ;
+      inherit = kick_heavy ;
+      knockback = 40 ;
+      name = kick_heavy ;
+      time = 0.75 ;
+      verticalrange = 96 ;
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_stun1 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackstun1 ;
+   playspeed = 1 ;
+   priority = 3 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_light ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      life = 0.35 ;
+      name = trail ;
+      time = 0.18 ;
+      }
+
+      trigger {
+      angle = 0 ;
+      height = 0 ;
+      name = punch_heavy ;
+      time = 0.4 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = smash ;
+      result = attackstun_finish ;
+      }
+
+      chain {
+      action = powers ;
+      result = powers ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = attack ;
+      result = attacktrip2 ;
+      }
+
+      chain {
+      action = groundattack ;
+      result = groundattack ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_stun2 ;
+   endchaintime = 1 ;
+   lockangles = true ;
+   name = attackstun_finish ;
+   playspeed = 1 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_heavy ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.16 ;
+      name = trail ;
+      time = 0.26 ;
+      }
+
+      trigger {
+      angle = 10 ;
+      height = 0 ;
+      name = punch_heavy ;
+      time = 0.42 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = move ;
+      result = jump ;
+      }
+
+      chain {
+      action = smash ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_attack_trip1 ;
+   endchaintime = 1 ;
+   fallback = attacklight1 ;
+   lockangles = true ;
+   name = attacktrip2 ;
+   startchaintime = 0.5 ;
+      trigger {
+      name = whoosh_heavy ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      life = 0.16 ;
+      name = trail ;
+      time = 0.26 ;
+      }
+
+      trigger {
+      angle = 10 ;
+      height = 0 ;
+      name = punch_heavy ;
+      time = 0.42 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+      chain {
+      action = guard ;
+      result = null ;
+      }
+
+      chain {
+      action = blocking ;
+      result = blocking ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = melee ;
+   animenum = ea_power1 ;
+   combotextfinisher = Punch ;
+   combotextstarter = Crushing ;
+   icon = 0 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power1 ;
+   powerup_tag = rog_power1 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_smash ;
+      level = 1 ;
+      }
+
+      event {
+      damage = 3 5 ;
+      damagescale = normal ;
+      damagetype = dmg_physical ;
+      fxlevel = 1 ;
+      hiteffect = char/rogue/p1_impact ;
+      inherit = punch ;
+      knockback = %rog_smash_kb ;
+      name = rogsmash ;
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 1 ;
+      name = effect_sound ;
+      sound = char/vogue_m/p1_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %rog_smash_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      angle =  30 ;
+      height =  20 ;
+      name = rogsmash ;
+      time = 0.4 ;
+      }
+
+      trigger {
+      angle =   0 ;
+      height =   0 ;
+      name = rogsmash ;
+      time = 0.43 ;
+      }
+
+      trigger {
+      angle = -30 ;
+      height = -20 ;
+      name = rogsmash ;
+      time = 0.46 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power2 ;
+   combotextfinisher = Diffusion ;
+   combotextstarter = Devitalizing ;
+   icon = 1 ;
+   is_power = true ;
+   lockangles = true ;
+   lockspeed = true ;
+   name = power2 ;
+   powerup_tag = rog_power2 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_ability ;
+      level = 1 ;
+      }
+
+      trigger {
+      class = rogue_drained ;
+      life = %rog_ability_life ;
+      name = powerup ;
+      sound = char/vogue_m/p2_impact ;
+      tag = 105 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/rogue/p2_aura ;
+         how_used = primary ;
+         }
+
+      }
+
+      trigger {
+      attacks_per_second = 1 ;
+      class = harming ;
+      damage = %rog_ability_dmg ;
+      damagetype = dmg_physical ;
+      life = %rog_ability_slife ;
+      name = powerup ;
+      sound = char/vogue_m/p2_impact ;
+      tag = 100 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/rogue/p2_aura ;
+         how_used = primary ;
+         }
+
+      }
+
+      trigger {
+      life = %rog_ability_slife ;
+      name = powerup ;
+      shared_tag = shared_stunned ;
+      tag = 101 ;
+      time = -1 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 2 ;
+      name = effect_sound ;
+      sound = char/vogue_m/p2_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      maxrange = 60 ;
+      name = victim_set ;
+      time = 0 ;
+      }
+
+      trigger {
+      attackerface = true ;
+      name = victim ;
+      nodename = grabstartvictim ;
+      targetdistance = 52.3 ;
+      time = 0 ;
+      victimface = true ;
+      }
+
+      trigger {
+      attackerface = true ;
+      name = victim ;
+      nodename = idle ;
+      targetdistance = 52.3 ;
+      time = 0.5 ;
+      victimface = true ;
+      }
+
+      trigger {
+      name = victim_release ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      damage = 0 ;
+      name = punch ;
+      powerusage = %rog_ability_pwr ;
+      time = 0.5 ;
+      victimeventtag = 10 ;
+      }
+
+      trigger {
+      name = otherevent ;
+      othertag = 100 ;
+      othertag2 = 101 ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      trigger {
+      effect = char/rogue/p2_impact ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = buff ;
+   animenum = ea_power5 ;
+   icon = 5 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power7 ;
+   powerup_tag = rog_power7 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_heal ;
+      level = %rog_heal_life_req ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/rogue/p7_charge ;
+      name = effect_sound ;
+      sound = char/vogue_m/p4_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p7_charge ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      beameffect = char/rogue/p7_power ;
+      healthpct = 0.1 ;
+      maxrange = 600 ;
+      name = remove_powerups ;
+      powerup_class = harming ;
+      powerusage = %rog_heal_pwr ;
+      time = 0.4 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      life = %rog_heal_life ;
+      name = powerup ;
+      time = 0.6 ;
+         special_fx {
+         effect = char/rogue/p7_aura ;
+         how_used = primary ;
+         }
+
+         affecter {
+         attribute = health_regen_pct ;
+         level = %rog_heal_pct ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = aoe ;
+   animenum = ea_power5 ;
+   combotextfinisher = Release ;
+   combotextstarter = Conical ;
+   icon = 4 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power5 ;
+   powerup_tag = rog_power5 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_vortex ;
+      level = 1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 3 ;
+      name = effect_sound ;
+      sound = char/vogue_m/p5_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      bolt = Bip01 L Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %rog_vortex_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/rogue/p5_power ;
+      name = effect_sound ;
+      sound = char/vogue_m/p5_power ;
+      time = 0.5 ;
+      }
+
+      event {
+      arc = 90 ;
+      attacktype = blast ;
+      damagescale = none ;
+      damagetype = dmg_energy ;
+      inherit = punch ;
+      name = radial_punch ;
+      }
+
+      trigger {
+      damage = %rog_vortex_dmg ;
+      maxrange = 80 ;
+      name = radial_punch ;
+      time = 0.55 ;
+      }
+
+      trigger {
+      damage = %rog_vortex_dmg ;
+      maxrange = 110 ;
+      name = radial_punch ;
+      time = 0.65 ;
+      }
+
+      trigger {
+      damage = %rog_vortex_dmg ;
+      maxrange = 144 ;
+      name = radial_punch ;
+      time = 0.75 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = aoe ;
+   animenum = ea_power8 ;
+   combotextfinisher = Torment ;
+   combotextstarter = Rumbling ;
+   icon = 7 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power8 ;
+   powerup_tag = rog_power8 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_tremor ;
+      level = 1 ;
+      }
+
+      trigger {
+      life = %rog_tremor_life ;
+      name = powerup ;
+      shared_tag = shared_stunned ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/rogue/p8_power ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      movement = 0 ;
+      name = slide ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_m/p8_charge ;
+      time = 0.15 ;
+      }
+
+      trigger {
+      damage = 3 5 ;
+      damagescale = normal ;
+      damagetype = dmg_physical ;
+      fxlevel = 2 ;
+      hiteffect = char/rogue/p1_impact ;
+      index = 1 ;
+      name = punch ;
+      powerusage = %rog_tremor_pwr ;
+      time = 0.22 ;
+      victimeventtag1 = 100 ;
+      }
+
+      trigger {
+      bolt = Bip01 R Hand ;
+      effect = char/rogue/p1_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0.35 ;
+      }
+
+      event {
+      arc = 180 ;
+      damage = 3 5 ;
+      damagescale = normal ;
+      damagetype = dmg_physical ;
+      inherit = punch ;
+      name = ground_pound ;
+      victimeventtag1 = 100 ;
+      }
+
+      trigger {
+      index = 2 ;
+      maxrange = 50 ;
+      name = ground_pound ;
+      time = 0.55 ;
+      }
+
+      trigger {
+      index = 2 ;
+      maxrange = 75 ;
+      name = ground_pound ;
+      time = 0.6 ;
+      }
+
+      trigger {
+      index = 2 ;
+      maxrange = 100 ;
+      name = ground_pound ;
+      time = 0.65 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 8 ;
+   aitype = melee ;
+   animenum = ea_power11 ;
+   combotextfinisher = Clash ;
+   combotextstarter = Decimating ;
+   energypersecond = %rog_torpedo_pwr ;
+   handler = ch_charge_move ;
+   icon = 9 ;
+   is_power = true ;
+   lockchaining = true ;
+   locktransitionangles = true ;
+   name = oldpower10 ;
+   noautoaim = true ;
+   powerup_tag = captam_shield ;
+   priority = 5 ;
+   startchaintime = 0.15 ;
+   turnrate = 0.15 ;
+      require {
+      cat = skill ;
+      item = rogue_torpedo ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = unlock_loop_chaining ;
+      }
+
+      trigger {
+      button = samepowerhold ;
+      name = button_hint ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      only_non_looped = true ;
+      powerusage = %rog_torpedo_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = %rog_torpedo_dmg ;
+      damagescale = none ;
+      knockback = 120 ;
+      name = punch ;
+      tag = 1 ;
+      tiles = true ;
+      time = -1 ;
+         damageMod {
+         name = dmgmod_ground ;
+         }
+
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 Spine2 ;
+         effect = char/rogue/p10_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         effect = char/rogue/p10_charge ;
+         fxlevel = 3 ;
+         how_used = primary ;
+         }
+
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/rogue/p10_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = samepowerhold ;
+      result = power10_break ;
+      }
+
+      chain {
+      action = touch ;
+      result = power10_break ;
+      }
+
+      chain {
+      action = idle ;
+      result = fastballland ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 8 ;
+   aitype = melee ;
+   animenum = ea_power11 ;
+   combotextfinisher = Clash ;
+   combotextstarter = Decimating ;
+   handler = ch_charge_move ;
+   icon = 9 ;
+   is_power = true ;
+   lockchaining = true ;
+   locktransitionangles = true ;
+   name = power10 ;
+   noautoaim = true ;
+   powerup_tag = captam_shield ;
+   priority = 5 ;
+   startchaintime = 0.05 ;
+   turnrate = 0.15 ;
+      require {
+      cat = skill ;
+      item = rogue_torpedo ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = powerusage ;
+      powerusage = %rog_torpedo_pwr ;
+      time = 0 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = %rog_torpedo_dmg ;
+      damagescale = none ;
+      knockback = 120 ;
+      name = punch ;
+      tag = 1 ;
+      tiles = true ;
+      time = -1 ;
+         damageMod {
+         name = dmgmod_ground ;
+         }
+
+         damageMod {
+         name = dmgmod_auto_knockback ;
+         }
+
+      }
+
+      trigger {
+      life = -1 ;
+      name = powerup ;
+      remove_on_node_end = true ;
+      time = 0 ;
+         special_fx {
+         bolt = Bip01 Spine2 ;
+         effect = char/rogue/p10_charge ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         special_fx {
+         effect = char/rogue/p10_charge ;
+         fxlevel = 3 ;
+         how_used = primary ;
+         }
+
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_m/p10_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_lunge_land ;
+   is_power = true ;
+   lockangles = true ;
+   lockspeed = true ;
+   locktransitionangles = true ;
+   name = power10_break ;
+   noautoaim = true ;
+   playspeed = 1 ;
+   priority = 5 ;
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = melee ;
+   animenum = ea_power3 ;
+   combotextfinisher = Insult ;
+   combotextstarter = Humiliating ;
+   icon = 2 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power3 ;
+   powerup_tag = rog_power3 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_taunt ;
+      level = 1 ;
+      }
+
+      trigger {
+      effect = char/rogue/p3_charge ;
+      name = effect_sound ;
+      sound = char/vogue_m/p3_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      life = %rog_taunt_life ;
+      name = powerup ;
+      tag = 100 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = char/rogue/p3_aura ;
+         how_used = primary ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = attack_rating ;
+         level = %rog_taunt_ar ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = defense_rating ;
+         level = %rog_taunt_dr ;
+         }
+
+      }
+
+      trigger {
+      effect = char/rogue/p3_power ;
+      name = effect ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      arc = 180 ;
+      damage = 0 ;
+      damagetype = dmg_direct ;
+      maxrange = 144 ;
+      name = taunt ;
+      powerusage = %rog_taunt_pwr ;
+      time = 0.5 ;
+      victimeventtag = 100 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   aireusetime = 5 ;
+   aitype = melee ;
+   animenum = ea_power4 ;
+   icon = 3 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power4 ;
+   powerup_tag = rog_power4 ;
+   priority = 5 ;
+      require {
+      cat = skill ;
+      item = rogue_shout ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_m/p4_charge ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_v/p4_chargeA ;
+      time = 0 ;
+      }
+
+      trigger {
+      apply_ally = all ;
+      life = %rog_shout_life ;
+      name = powerup ;
+      no_shadow = true ;
+      powerusage = %rog_shout_pwr ;
+      time = 0.5 ;
+         special_fx {
+         effect = char/rogue/p4_aura ;
+         fxlevel = 1 ;
+         how_used = primary ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = maxhealth ;
+         level = %rog_shout_health ;
+         }
+
+         affecter {
+         affect_type = scale ;
+         attribute = maxenergy ;
+         level = %rog_shout_energy ;
+         }
+
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_idle1 ;
+   blendtime = 0 ;
+   handler = ch_team_xtreme ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   lockchaining = false ;
+   name = team_xtreme ;
+   playspeed = 10 ;
+   priority = uninterruptable ;
+      require {
+      cat = skill ;
+      item = rogue_xtreme ;
+      level = 1 ;
+      }
+
+      require {
+      cat = xtreme ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = xtreme_start ;
+      only_non_looped = true ;
+      team_xtreme = 2 ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = team_xtreme ;
+      }
+
+      chain {
+      action = special ;
+      result = power9 ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power9 ;
+   blendtime = 0 ;
+   combotextfinisher = Depletion ;
+   description = MANIC SLAM ;
+   handler = ch_teleport_dash_start ;
+   icon = 8 ;
+   is_power = true ;
+   lockangles = true ;
+   name = power9 ;
+   playspeed = 10 ;
+   powerup_tag = rog_power9 ;
+   priority = uninterruptable ;
+      trigger {
+      always = true ;
+      name = camera_override ;
+      time = 0 ;
+      }
+
+      trigger {
+      description = Attack ;
+      name = team_xtreme_msg ;
+      time = 0 ;
+      title = Manic Slam ;
+      }
+
+      trigger {
+      attacktype = direct ;
+      name = teleport_mark_start ;
+      time = 0 ;
+      }
+
+      trigger {
+      maxrange = 300 ;
+      maxtargets = 10 ;
+      name = teleport_dash_prep ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_m/p9_charge ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = power9_relocate ;
+      }
+
+      chain {
+      action = special ;
+      result = power9_return ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power14 ;
+   description = MANIC SLAM ;
+   fallback = power9_return ;
+   handler = ch_restore_visible_on_interrupt ;
+   lockangles = true ;
+   name = power9_relocate ;
+   playspeed = 1 ;
+   powerup_tag = rog_power9 ;
+   priority = uninterruptable ;
+   startchaintime = 0.25 ;
+      require {
+      cat = counter ;
+      level = 1 ;
+      }
+
+      trigger {
+      name = set_visible ;
+      time = 0 ;
+      visible = false ;
+      }
+
+      trigger {
+      effect = char/rogue/p9_charge ;
+      fxlevel = 1 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      count = add ;
+      name = count ;
+      time = 0 ;
+      value = -1 ;
+      }
+
+      trigger {
+      doattack = false ;
+      forcedistance = -1 ;
+      name = teleport_dash ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = power9_contact ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_power14 ;
+   combotextfinisher = Depletion ;
+   description = ENERGY DRAIN ;
+   handler = ch_rogue_energy_drain_atk ;
+   name = power9_contact ;
+   playspeed = 1 ;
+   powerup_tag = rog_power9 ;
+   priority = uninterruptable ;
+      trigger {
+      life = %rog_xtreme_slife ;
+      name = powerup ;
+      shared_tag = shared_stunned ;
+      tag = 100 ;
+      time = -1 ;
+      }
+
+      trigger {
+      life = %rog_xtreme_nlife ;
+      name = powerup ;
+      tag = 101 ;
+      time = -1 ;
+         special_fx {
+         bolt = Bip01 Head ;
+         effect = base/powerup/pu_nullified ;
+         }
+
+         affecter {
+         attribute = nullify ;
+         level = 1 ;
+         }
+
+      }
+
+      powerup {
+      life = -1 ;
+         affecter {
+         affect_type = scale ;
+         attribute = atk_vampire_energy ;
+         level = %rog_xtreme_pct ;
+         scope_node = rog_power9 ;
+         }
+
+      }
+
+      trigger {
+      effect = char/rogue/p9_charge ;
+      fxlevel = 2 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      name = set_visible ;
+      time = 0.5 ;
+      visible = true ;
+      }
+
+      trigger {
+      name = sound ;
+      sound = char/vogue_m/p2_impact ;
+      time = 0.5 ;
+      }
+
+      trigger {
+      arc = 65 ;
+      attacktype = punch ;
+      damage = %rog_xtreme_dmg ;
+      damagescale = none ;
+      height = -40 ;
+      name = teleport_punch ;
+      time = 0.5 ;
+      verticalrange = 200 ;
+      victimeventtag = 10 ;
+      }
+
+      trigger {
+      name = otherevent ;
+      othertag = 100 ;
+      othertag2 = 101 ;
+      tag = 10 ;
+      time = -1 ;
+      }
+
+      chain {
+      action = idle ;
+      result = power9_relocate ;
+      }
+
+   }
+
+   FightMove {
+   animenum = ea_jump_land ;
+   description = MANIC SLAM ;
+   handler = ch_move_jump_land ;
+   lockangles = true ;
+   name = power9_return ;
+   playspeed = 3 ;
+   powerup_tag = rog_power9 ;
+   priority = uninterruptable ;
+      trigger {
+      dashhome = true ;
+      doattack = false ;
+      name = teleport_dash ;
+      time = 0 ;
+      }
+
+      trigger {
+      effect = char/rogue/p9_charge ;
+      fxlevel = 3 ;
+      name = effect ;
+      time = 0 ;
+      }
+
+      trigger {
+      critical = true ;
+      end = true ;
+      name = xtreme_start ;
+      time = 0 ;
+      }
+
+      chain {
+      action = idle ;
+      result = idle ;
+      }
+
+   }
+
+}
+

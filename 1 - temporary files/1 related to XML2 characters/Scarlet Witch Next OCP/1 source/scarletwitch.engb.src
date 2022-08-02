@@ -1,0 +1,1975 @@
+XMLB talents {
+   talent {
+   hidden = true ;
+   name = scar_psionic ;
+      level {
+      count = 1 ;
+         powerup {
+         class = trail_replace ;
+         life = -1 ;
+            special_fx {
+            effect = char/scar/special_trail ;
+            how_used = custom ;
+            }
+
+            affecter {
+            attribute = powerup_scope ;
+               scope {
+               scope_attack = punch ;
+               }
+
+               scope {
+               scope_attack = kick ;
+               }
+
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Hex Bolts ;
+   description = Fire a single Hex-Bolt ;
+   descshort = Projectile ;
+   icon = 3 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_hex_locked ;
+   power = power7 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_locked_req ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_hex_locked_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_hex_locked_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_locked_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_locked_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_hex_locked_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_hex_locked_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_locked_dmg ;
+         value = 11 15 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_hex_locked_dmg ;
+         value = 24 28 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_hex_locked_dmg ;
+         value = 34 39 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_locked_dmg ;
+         value = 55 61 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_locked_dmg ;
+         value = 72 80 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_hex_locked_dmg ;
+         value = 120 130 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_hex_locked_dmg ;
+         value = 170 190 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_locked_pwr ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_hex_locked_pwr ;
+         value = 21 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_hex_locked_pwr ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_locked_pwr ;
+         value = 30 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_locked_pwr ;
+         value = 32 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_hex_locked_pwr ;
+         value = 45 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_hex_locked_pwr ;
+         value = 60 ;
+         }
+
+      }
+
+      level {
+      description = %scar_hex_locked_dmg $DMG_ENERGY\n%scar_hex_locked_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_hex_locked_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Combustion ;
+   description = Use probability to spontaneously combust surrounding enemies and objects ;
+   descshort = Radial ;
+   icon = 2 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_combustion ;
+   power = power3 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_combustion_req ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_combustion_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_combustion_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_combustion_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_combustion_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_combustion_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_combustion_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_combustion_dmg ;
+         value = 21 23 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = scar_combustion_dmg ;
+         value = 41 46 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_combustion_dmg ;
+         value = 71 79 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_combustion_dmg ;
+         value = 97 104 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_combustion_dmg ;
+         value = 128 135 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_combustion_dmg ;
+         value = 174 181 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_combustion_dmg ;
+         value = 193 209 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_combustion_pwr ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = scar_combustion_pwr ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_combustion_pwr ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_combustion_pwr ;
+         value = 31 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_combustion_pwr ;
+         value = 35 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_combustion_pwr ;
+         value = 51 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_combustion_pwr ;
+         value = 65 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_combustion_rad ;
+         value = 120 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = scar_combustion_rad ;
+         value = 144 ;
+         }
+
+      }
+
+      level {
+      description = %scar_combustion_dmg $DMG_FIRE\n%scar_combustion_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_combustion_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Reality Shift ;
+   description = Launch a Hex bolt that has a chance to turn enemy into a crate with something good inside ;
+   descshort = Special ;
+   icon = 4 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_shift ;
+   power = power5 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_shift_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = scar_shift_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_shift_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 7 ;
+         name = scar_shift_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_shift_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 12 ;
+         name = scar_shift_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = scar_shift_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_shift_pwr ;
+         value = 18 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = scar_shift_pwr ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_shift_pwr ;
+         value = 36 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_shift_pwr ;
+         value = 41 ;
+         }
+
+         talentvalue {
+         level = 7 ;
+         name = scar_shift_pwr ;
+         value = 55 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_shift_pwr ;
+         value = 60 ;
+         }
+
+         talentvalue {
+         level = 12 ;
+         name = scar_shift_pwr ;
+         value = 80 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = scar_shift_pwr ;
+         value = 90 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_shift_dmg ;
+         value = 80 80 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = scar_shift_dmg ;
+         value = 130 135 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_shift_dmg ;
+         value = 140 145 ;
+         }
+
+         talentvalue {
+         level = 7 ;
+         name = scar_shift_dmg ;
+         value = 170 179 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_shift_dmg ;
+         value = 210 215 ;
+         }
+
+         talentvalue {
+         level = 12 ;
+         name = scar_shift_dmg ;
+         value = 290 294 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = scar_shift_dmg ;
+         value = 310 319 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_shift_pct ;
+         value = 0.26 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = scar_shift_pct ;
+         value = 0.55 ;
+         }
+
+      }
+
+      level {
+      description = %scar_shift_pct:p chance of conversion \n%scar_shift_dmg $DMG_ENERGY each\n%scar_shift_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 3 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_shift_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Hex Locked ;
+   description = Fire several Hex-Bolts with a chance to cause a Deadly Strike (1/3 instant health loss) ;
+   descshort = Projectile ;
+   icon = 6 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_p4 ;
+   power = power4 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_p4_req ;
+         value = 15 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = scar_p4_req ;
+         value = 18 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_p4_req ;
+         value = 27 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_p4_req ;
+         value = 30 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_p4_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_p4_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_p4_pwr ;
+         value = 12 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = scar_p4_pwr ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_p4_pwr ;
+         value = 40 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_p4_pwr ;
+         value = 45 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_p4_pwr ;
+         value = 75 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_p4_pwr ;
+         value = 80 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_p4_dmg ;
+         value = 43 50 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = scar_p4_dmg ;
+         value = 50 55 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_p4_dmg ;
+         value = 75 80 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_p4_dmg ;
+         value = 84 90 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_p4_dmg ;
+         value = 95 105 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_p4_dmg ;
+         value = 106 115 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_p4_pct ;
+         value = 0.16 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_p4_pct ;
+         value = 0.3 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_p4_num ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_p4_num ;
+         value = 5 ;
+         }
+
+      }
+
+      level {
+      description = %scar_p4_num Hex-Bolts\n%scar_p4_dmg $DMG_ENERGY\n%scar_p4_pct:p chance\n%scar_p4_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_p4_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Hex Explosion ;
+   description = Fire a Hex-Bolt which causes nearby objects to explode violently. ;
+   descshort = Projectile ;
+   icon = 7 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_hex_explos ;
+   power = power8 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_explos_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_hex_explos_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_hex_explos_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_explos_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_explos_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_explos_pwr ;
+         value = 18 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_hex_explos_pwr ;
+         value = 37 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_hex_explos_pwr ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_hex_explos_pwr ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_explos_pwr ;
+         value = 86 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_explos_dm1 ;
+         value = 69 79 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_hex_explos_dm1 ;
+         value = 100 105 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_explos_dm1 ;
+         value = 130 135 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_explos_dm1 ;
+         value = 140 157 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_hex_explos_dm2 ;
+         value = 37 43 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_hex_explos_dm2 ;
+         value = 65 75 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_hex_explos_dm2 ;
+         value = 95 100 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_hex_explos_dm2 ;
+         value = 117 132 ;
+         }
+
+      }
+
+      level {
+      description = %scar_hex_explos_dm1 initial $DMG_ENERGY\n%scar_hex_explos_dm2 explosion $DMG_ENERGY\n%scar_hex_explos_pwr $EP ;
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_hex_explos_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Misfortune ;
+   description = Causes enemy attacks to backfire, reflecting a percentage of damage back on themselves. ;
+   descshort = Boost ;
+   icon = 9 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_misfortune ;
+   power = power10 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_misfortune_req ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_misfortune_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_misfortune_pwr ;
+         value = 30 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_misfortune_pwr ;
+         value = 92 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_misfortune_dmg ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_misfortune_dmg ;
+         value = 4.8 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_misfortune_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_misfortune_lif ;
+         value = 55 ;
+         }
+
+      }
+
+      level {
+      description = %scar_misfortune_dmg:p $DMG relfected\n%scar_misfortune_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_misfortune_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Probability Syphon ;
+   description = Each team member absorbs 20% of inflicted $DMG into $EP ;
+   descshort = Boost ;
+   icon = 1 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_prob_syph ;
+   power = power9 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_prob_syph_req ;
+         value = 7 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_prob_syph_req ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_prob_syph_pwr ;
+         value = 35 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_prob_syph_pwr ;
+         value = 115 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_prob_syph_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_prob_syph_lif ;
+         value = 55 ;
+         }
+
+      }
+
+      level {
+      description = %scar_prob_syph_lif seconds\n%scar_prob_syph_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_prob_syph_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Amplify Luck ;
+   description = Amplify entire team's luck, increasing $DMG and chance of critical hits ;
+   descshort = Boost ;
+   icon = 10 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_amplify ;
+   power = power2 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_amplify_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = scar_amplify_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_amplify_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_amplify_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_amplify_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_amplify_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_amplify_pwr ;
+         value = 32 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = scar_amplify_pwr ;
+         value = 40 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_amplify_pwr ;
+         value = 60 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = scar_amplify_pwr ;
+         value = 65 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = scar_amplify_pwr ;
+         value = 100 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_amplify_pwr ;
+         value = 122 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_amplify_dmg ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_amplify_dmg ;
+         value = 1.19 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_amplify_cri ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_amplify_cri ;
+         value = 1.12 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_amplify_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = scar_amplify_lif ;
+         value = 55 ;
+         }
+
+      }
+
+      level {
+      description = %scar_amplify_dmg:s $DMG\n%scar_amplify_cri:s chance of critical hit\n%scar_amplify_lif seconds\n%scar_amplify_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_amplify_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Heal ;
+   description = Gives party regenerative healing for a time. ;
+   descshort = Boost ;
+   icon = 5 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_heal ;
+   power = power6 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_heal_req ;
+         value = 15 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_heal_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_heal_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_heal_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_heal_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_heal_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_heal_pwr ;
+         value = 64 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_heal_pwr ;
+         value = 68 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_heal_pwr ;
+         value = 92 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_heal_pwr ;
+         value = 100 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_heal_pwr ;
+         value = 152 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_heal_pwr ;
+         value = 188 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_heal_lif ;
+         value = 30 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = scar_heal_lif ;
+         value = 35 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = scar_heal_lif ;
+         value = 44 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_heal_lif ;
+         value = 50 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = scar_heal_lif ;
+         value = 62 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = scar_heal_lif ;
+         value = 70 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_heal_pct ;
+         value = 0.02 ;
+         }
+
+      }
+
+      level {
+      description = %scar_heal_pct:p $HP/sec\n%scar_heal_pwr $EP\n%scar_heal_lif Seconds ;
+         tier {
+         cost = 1 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_heal_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Anarchy Assault ;
+   description = Unleash Magic bursts with a random $DMG type, with a chance of converting enemies for a time. ;
+   descshort = Xtreme ;
+   icon = 8 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = scar_chthonic ;
+   power = team_xtreme ;
+   type = team_xtreme ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = scar_chthonic_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_chthonic_req ;
+         value = 45 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_chthonic_pct ;
+         value = 0.2 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_chthonic_pct ;
+         value = 0.34 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_chthonic_dmg ;
+         value = 51 56 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_chthonic_dmg ;
+         value = 204 225 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = scar_chthonic_lif ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = scar_chthonic_lif ;
+         value = 34 ;
+         }
+
+      }
+
+      level {
+      description = %scar_chthonic_dmg $DMG\n%scar_chthonic_pct:p chance to convert\n%scar_chthonic_lif second conversion ;
+         tier {
+         cost = 2 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 0 ;
+         count = 7 ;
+         }
+
+         require {
+         cat = level ;
+         level = %scar_chthonic_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Max Energy ;
+   description = Increases maximum $HP. ;
+   icon = 21 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit11 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit11_pct ;
+         value = 1.02 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit11_pct ;
+         value = 1.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %switch_outfit11_pct:s $HP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = maxhealth ;
+            level = %switch_outfit11_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Scarlet's Touch ;
+   description = Increases chance for critical damage. ;
+   icon = 0 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = switch_outfit12 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit12_cri ;
+         value = 0.02 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit12_cri ;
+         value = 0.1 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %char_switch_outfit12_cri:p Chance ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = atk_critical ;
+            level = %switch_outfit12_cri ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit13 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit13_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit13_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit13_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %switch_outfit13_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Momentum ;
+   description = Gain momentum from melee combat faster. ;
+   icon = 10 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit21 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit21_pct ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit21_pct ;
+         value = 1.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %switch_outfit21_pct:s momentum rate ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = momentum ;
+            level = %switch_outfit21_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Probable Life ;
+   description = Gives a chance to resurrect fallen allies automatically. ;
+   icon = 23 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit22 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit22_pct ;
+         value = 0.1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit22_pct ;
+         value = 0.5 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %switch_outfit22_pct:p Chance to resurrect allies ;
+         powerup {
+         apply_ally = all ;
+         chance = %switch_outfit22_pct ;
+         class = resurrect ;
+         life = -1 ;
+         maxhealthpercent = 1 ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit23 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit23_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit23_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit23_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %switch_outfit23_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Hex Mastery ;
+   description = Increases the $DMG of all powers. ;
+   icon = 11 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = switch_outfit31 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit31_pct ;
+         value = 1.03 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit31_pct ;
+         value = 1.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %switch_outfit31_pct:s Power $DMG ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = atk_damage ;
+            level = %switch_outfit31_pct ;
+            scope_powers = true ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Chaos Magic ;
+   description = Boosts body, focus, and strike stats. ;
+   icon = 0 ;
+   icon_texture = textures/ui/scarletwitch_icons.png ;
+   name = switch_outfit32 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit32_pct ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit32_pct ;
+         value = 10 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit32_pct Body\n+%switch_outfit32_pct Focus\n+%switch_outfit32_pct Strike ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = traits ;
+            level = %switch_outfit32_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit33 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit33_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit33_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit33_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %switch_outfit33_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Energy Per Kill ;
+   description = Gain $EP per kill. ;
+   icon = 15 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit41 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit41_pct ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit41_pct ;
+         value = 25 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit41_pct $EP per kill ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = energy_per_kill ;
+            level = %switch_outfit41_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Dodge ;
+   description = Increases chance to dodge attacks. ;
+   icon = 9 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit42 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit42_pct ;
+         value = 0.03 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit42_pct ;
+         value = 0.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit42_pct:p Dodge chance ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = def_dodge ;
+            level = %switch_outfit42_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = switch_outfit43 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = switch_outfit43_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = switch_outfit43_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%switch_outfit43_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %switch_outfit43_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+}
+

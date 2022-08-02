@@ -1,0 +1,27 @@
+XMLB entities {
+   entity {
+   acteffect = char/jugger/p5_power ;
+   actonremove = true ;
+   actsound = char/njugg_m/p5_power ;
+   animstarton = true ;
+   classname = affectableharment ;
+   damage = 0 ;
+   dieontrigger = true ;
+   extent = -60 -60 0 60 60 60 ;
+   fade = false ;
+   informai = false ;
+   lifetime = 20 ;
+   model = effects/jugger_rune ;
+   name = runetrap ;
+   nogravity = true ;
+   nopickup = true ;
+   nopush = true ;
+   radiusdamage = true ;
+   randompickups = false ;
+   smartent = false ;
+   smartpulserate = 0.25 ;
+   stopprojectile = false ;
+   }
+
+}
+

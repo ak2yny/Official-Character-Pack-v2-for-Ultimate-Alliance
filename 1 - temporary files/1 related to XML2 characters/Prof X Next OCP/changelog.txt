@@ -1,0 +1,35 @@
+Information:
+P1=in OCP using XML1 icon instead of XML2 icon, but it's fine?
+P2=in OCP using XML1 icon instead of XML2 icon, but it's fine?
+P3=
+P4=
+P5=
+P6=
+
+Boost1=
+Boost2=
+Xtreme=
+in XML2, Prof X only has 5 usable powers (2 powers, 2 boost and 1 xtreme(Psychic Shock that ressurects ally) XML2 original conversion added powers from XML1 Prof X I think
+Powers description from the XML2 conversion are different than XML2 counterpart, but are fine
+Beffudle (Jean Grey power copycat?) is not in XML2 Prof X
+
+Changes made:
+- P1=Cleave, renamed from Psychic Hammer like in XML2
+- is_power = true ; added to powers
+- Skin update for the NPC with better texture by Bacon
+- Cleaned up animation files, removed fake anim, attack_trip1.igb (does not belong to ProfX as reported by Fr3ddy and does not fit him), duplicate anim, noticeably the unique attack_knockback is removed
+- befuddle power, added missing sound, added playspeed=1.4 for better synchronization and better timing for efffect. Fr3ddy reported and fixed this.
+- removed Iceman blocking animation, now use common blocking animation
+- power2(Crushing Ego) head effect - wrong orientation fixed changed origin from the third and fourth trail_element from XYZ to ZYX thx to ak2yny help, the small disc-like effect on his head. Fr3ddy report+fixes
+- power2(Crushing Ego) fixed victimeventtag2 code that is not working in MUA (victim effect was not working), replaced by the MUA coding equivalent thx to Outsider advice. Fr3ddy report.
+- Telepathic Link fixed by Fr3ddy :   1) activation effect (disc-like supposed to be on his head in the beginning when activated, not in the hand) +   2) primary effect (the yellow/white trail on his/teammates hands which stay on until powers fade off) 
+also fixed origin point of P"_power for the trail_elem second and third occurence
+- Prof XML1 icons quality update by Lars, XML2 by Bacon
+- New boost from Prof X Astral XML1 by Fr3ddy
+
+What remains?
+- Passive check : checking what fits the best per skin
+- all values from talent files to be checked
+- Prof X in XML2 has an unique atk_knockback, can be added if good charging anim are find
+- effect upgrade using MUA equivalent
+- Clairvoyance passive from XML2 maybe use as a costume passive for all costume

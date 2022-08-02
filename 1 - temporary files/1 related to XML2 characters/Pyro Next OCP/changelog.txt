@@ -1,0 +1,51 @@
+XML2 original powers info:
+
+P1=Burn (in OCP 2.4, it's missing)
+P2=Breath Of Fire (In OCP 2.4, it's named Flamethrower), in next OCP, it's still the same power, need to figure out how to backport the XML2 power properly
+P3=Fiery Charge (in OCP 2.4, it's missing) ; Icon also missing
+P4=Flaming Pillar (In OCP 2.4, it's named Pillar of Flame)
+P5=Fire Bats
+P6=Fire Blade (in OCP 2.4, it's missing)
+P7=Fire Blast
+Boost 1 won't use = XML2 Xtreme to be uysed as boost power=Fire It Up, makes Pyro invincible and increases his damage, too powerful as normal boost, won't be used 
+Boost 2 = Torch Fury
+Boost 3 = Flame Shield (in OCP 2.4, it's missing, seemingly replaced by Mercury Rising)
+Xtreme=Wildfire
+
+XML2 has 11 powers for Pyro
+All powers description are not 100% faithful to their XML2 counterpart, but they are more accurate so I kept them
+
+XML2 also has a npc Pyro with 2 unique animations if I recall, but I don't they think we can fit them with the new powerset that is already full
+XML2 also has an unique ea_attack_knockback2 anim, but it does fit well MUA knockback imo, so not used, though using Nick Fury attack_heavy1 with it could look ok
+
+
+Changes:
+Actors:
+216_pyro_hero:removed afakeanim
+216_pyro_hero_4_combat:added common combat blocking anim just to override fightstyle_default anim
+
+Powers:
+P1=Burn, power added as first unlocked power, swapped internal name of Burn & Breath Of Fire power to avoid changing the herostat, the reason is imo it was supposed to be the first power when you check skill order in XML2, true Flamethrower is listed as unlocked power in herostat, but I believe it is lazyness from dev when they copy pasted Sunfire coding
+P2=Breath Of Fire, renamed from "Flamethrower", it's still the same power, need to figure out how to backport the XML2 power properly(Human Torch and effect are using since OCP, but the effect does not come from forearms and does not follow it too), changing origin value did not work, talent value tweak
+removed    name = fire1_dmg_lh ; event, not used since the original power coding has been replaced by Human Torch coding
+P3=Fiery Charge, power added, icon added instead of the Fire it Up icons that is not used
+P4=Flaming Pillar, renamed from "Pillar of Flame"
+P5=Fire Bats, talent value tweak
+P6=Fire Blade, power added
+P7=Fire Blast, talent value tweak
+Boost 1 = Torch Fury, no change
+Boost 2 = Mercury Rising, no change
+Xtreme=Wildfire, now use the correct icon, previously was using the Burn icon
+Scorching Fire power replaced, it was a change from UMM adding a power used by Scorcher from MUA2 Wii, removed since not true to XML2 Pyro
+-   is_power = true ; added to powers
+- grab=added a sound trigger when the fire effect comes out, previously they were none making odd imo the fire spawn
+- Xtreme positioning effect fixed by Fr3ddy (p9_charge, another case of XML2 with XYZ value, instead of ZYX value)
+
+Herostat:
+Astonishing renamed to Modern using Bacon's skin, but has holes in the back (reported to Bacon), it's not a big problem
+
+What remains?
+-removing trail talent if possible
+-Passive check : checking what fits the best per skin
+-P2=Breath Of Fire, renamed from "Flamethrower", it's still the same power, need to figure out how to backport the XML2 power properly(Human Torch and effect are using since OCP, but the effect does not come from forearms and does not follow it too), changing origin value did not work, talent value tweak
+- The Talent file uses some Human Torch icons, unknow if that could cause issue

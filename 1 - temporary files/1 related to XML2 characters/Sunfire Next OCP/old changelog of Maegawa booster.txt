@@ -1,0 +1,183 @@
+************************************************************************
+* Sunfire Booster - v1.1                                               *
+*  - by Maegawa                                                        *
+*                                                                      *
+* By downloading this mod, you agree that:                             *
+* 1. You will NOT share this mod outside of MarvelMods.com. (You can   *
+*    invite people to the forum to download the mod though!)           *
+* 2. You will NOT sell this mod for money or any other form of         *
+*    privileges. (If you bought this mod, you have been cheated by a   *
+*    bastard!)                                                         *
+* 3. If you want to use ANY part of this mod in another mod, you MUST  *
+*    credit the people who worked on it.                               *
+*                                                                      *
+* Thank you for your cooperation!                                      *
+*                                                                      *
+************************************************************************
+
+Description:
+
+Ever since I first installed Sunfire's mod, I've always complained about
+how his skill list was drastically reduced in comparison to his XML2
+counterpart. I once stumbled across 12emre12's Sunfire booster that
+added his missing skills from XML2, but the download link wasn't
+working. Back then, my modding skills were rather limited, so there was
+nothing I could do about it. Recently, while playing XML2, I remembered
+about my issue with Sunfire, and decided to make this booster. Though
+the main goal of it is giving Sunfire his missing skills from XML2,
+there are other features I've added, which may or may not be listed...
+
+========================================================================
+
+Changes in v1.1:
+
+1. Minor tweaks to the herostat, powerstyle and talent files.
+-> There were some skills that built up the momentum bar and didn't make
+   combos, that's because I had forgotten to add the is_power = true
+   line to each entry, fixed now.
+
+========================================================================
+
+Notes for v1.0:
+
+1. The passives are only manageable through the 1st skin slot, but they
+   affect every skin. The 2nd passive is unlocked from the start (just
+   like the 1st skill).
+
+2. This mod replaces files and requires you to edit one or more files,
+   remember to backup any file you are replacing/editing, as I am NOT
+   responsible for the loss of any file.
+
+3. This mod requires the original Sunfire mod to be installed first.
+
+========================================================================
+
+Features:
+
+- All of Sunfire's skills from XML2. (with the exception of his 2nd
+  Xtreme, 10 powers in total)
+- Improvements to some powers.
+- Mannequin effect. (see the [Mannequin Effect] folder for info)
+- Minor changes to a few effects.
+- New ability: Radiation Immunity.
+- New Age of Apocalypse skin effect.
+- New herostat.
+- New knockback move.
+- Sound and new effect for grab smash.
+- XML2 style passives. (see note #1 for info)
+
+========================================================================
+
+Skills:
+
+1. Ignite: Bursts nearby enemies into flames.
+-> Now ignites enemies, just like Ghost Rider's Ravaging Flame. (power's
+   name was Ignite but it didn't ignite enemies, WTF?)
+-> The flaming hand effect was too rushed, so I delayed it a little.
+
+2. Flamethrower: Shoots flames from hands in a wide arc.
+-> New skill.
+-> The damage of each hit was 0, now causes what is said in the talent.
+-> The XML2 effect didn't work on MUA, and I wasn't able to fix it
+   either, so I took Human Torch's effect and edited it in order to
+   match the rest of Sunfire's effects.
+
+3. Atomic Charge: A radiated homing projectile.
+-> Used to cause 1 damage on impact, now causes what is said in the
+   talent.
+
+4. Fiery Geyser: Creates a column of flame that harms nearby enemies.
+-> New skill.
+-> Added screen shake effect.
+
+5. Blazing Barrage: Launches fireballs at targets.
+
+6. Flame Sword: Sweeping arc of fire that can hit multiple enemies.
+   Increased critical chance.
+
+7. Inferno: Launches a fireball that explodes on contact and harms
+   nearby enemies for a time.
+-> New skill.
+
+8. Flaming Fury: Adds $DMG_FIRE to melee attacks for self and allies.
+-> New skill.
+-> Added screen shake effect.
+-> It didn't actually add $DMG_FIRE to melee attacks, fixed it.
+-> Since the ATK trait doesn't exist in MUA, I removed that part of the
+   power.
+
+9. Ion Shield: Forms a shield of atomic particles that increases defense
+   and damages enemies.
+-> In XML2, it increases the DEF trait based on a percentage of the
+   hero's current DEF. However, in MUA, it works different, as the
+   hero's DEF trait is always 0, with the only way of increasing it
+   being throught the costume passives. So instead of increasing a
+   percentage of the trait, I made it add points to it.
+
+10.Super Nova: Mushroom cloud that causes $DMG_FIRE and $DMG_RADIATION.
+-> Both damages were triggered at the same time, causing only one of
+   them to actually hit the enemies, so I added index = 1 and index = 2
+   in order to make both of them hit the enemies. I also added harming
+   $DMG_RADIATION (just like the one from Atomic Charge) and massive
+   knockback (gosh, it is a freaking nuclear explosion!).
+
+========================================================================
+
+Passives:
+
+1. Fire Mastery: Increases damage and chance for criticals with
+   $DMG_FIRE.
+
+2. Elemental Combat: Adds additional $DMG_FIRE to melee attacks.
+
+3. Ionize: Increases all resistances.
+
+4. Mutant Master: Increases $EP regeneration rate.
+
+========================================================================
+
+Bugs:
+
+1. Some skills, when used while flying, allow free movement while they
+   are performed. I'm not sure whether this can be fixed or not, seeing
+   as it is probably an animation issue.
+
+========================================================================
+
+To install this booster, follow these steps:
+
+1. Move the folders (actors, data... ui) from the original Sunfire mod
+   to your MUA directory;
+
+2. Move the folders (actors, data... textures) from this booster to your
+   MUA directory;
+
+3. Decompile herostat.engb (located in the data folder of your MUA
+   directory) using the XMLBCUI program;
+
+4. Choose a character you want to replace (I recommend Ghost Rider or
+   Human Torch, as the mannequin effect is only compatible with their
+   spots) and replace his/her herostat entry with the one present in the
+   Herostat.txt file from this booster;
+
+5. Change the XX from the menulocation line with the one from the
+   character you just replaced;
+
+6. Save and compile it back;
+
+7. Place the new herostat.engb in the data folder your MUA directory;
+
+8. Start a new game using default statistics;
+
+9. Enjoy your new mod!
+
+========================================================================
+
+Credits:
+
+- BliZZ: original Sunfire mod.
+- Maegawa: effects, XML2 stuff conversion/adaptation.
+- Anyone else I forgot to credit.
+
+                             END OF READ ME
+------------------------------------------------------------------------

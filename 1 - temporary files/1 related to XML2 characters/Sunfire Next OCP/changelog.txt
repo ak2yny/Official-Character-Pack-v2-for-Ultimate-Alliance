@@ -1,0 +1,19 @@
+Maegawa booster used as based, but tweaked
+https://marvelmods.com/forum/index.php/topic,9124.msg182734.html#msg182734
+
+
+Changelog after installing Maegawa's booster:
+-cleaned up Maegawa herostat to match latest OCP herostat
+-Maegawa uses a technique to have the same passive for all skins, reverted this change with the old XML2 conversion
+-Maegawa uses 2 uniques talent, one for resist and one for radiation resist, reverted this with the old XML2 conversion (only fire resist via "sunfire_resist)
+-herostat renamed Classic skin to Original, because Bacon did this in his thread
+-herostat renamed Modern skin to 90s, because Bacon did this in his thread
+-   is_power = true ; added to powers (already done by Maegawa)
+- Added light1, 2, 3, popup from XML2 fightstyle_hero
+- Now use Human Torch knockback attack, fits better imo (was default in OCP, but Maegawa changed this)
+-moved flying stateffect to powerstyle
+
+What remains?
+-Maegawa modified some effect file, maybe causing incompability with other mod?
+-Passive check : checking what fits the best per skin
+-radiation immunity?

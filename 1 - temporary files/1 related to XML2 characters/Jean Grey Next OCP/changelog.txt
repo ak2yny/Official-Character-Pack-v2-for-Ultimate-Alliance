@@ -1,0 +1,20 @@
+Changes:
+-added missing boost from XML2
+-added missing Mental Guardian power
+-proper chain time value for melee atk
+- name = power8 ; fixed victimeventtag2 (haven't checked if working lol)
+- is_power = true ; added to powers
+- Mental Guardian offset position fix by Fr3ddy
+- adding pain_blocking to her animset, was missing previously causing the common_pain blocking playing instead of the Invisible Woman anim
+- Better timing for grab fix by Fr3ddy.
+
+What remains?
+-Mental Guardian talent value check (maybe value too high)
+-Passive check : checking what fits the best per skin
+
+Freddy blocking effet report:
+Jean Grey
+-blocking effect
+ Currently i think she is using effect from MUA2 ps2 version, which is a bad one, wrong color and wrong position too.
+ I cannot decide if she should use her effect from xml1's TK shield or completely newly modified from Invis Woman by myself here, 
+ which in correct colour/position and looks matched to her TK power effects. Both looks better than that MUA2 ps2.

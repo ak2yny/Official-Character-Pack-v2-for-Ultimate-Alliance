@@ -1,0 +1,1346 @@
+XMLB talents {
+   talent {
+   descname = Fire Immunity ;
+   description = 100% Immune to $DMG_FIRE. ;
+   name = sunfire_resist ;
+   type = ability ;
+      level {
+      count = 1 ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = def_damage_scope ;
+            damagetype = dmg_fire ;
+            level = 0 ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Ignite ;
+   description = Bursts nearby enemies into flames ;
+   descshort = Blast ;
+   icon = 0 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_ignite ;
+   power = power1 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_ignite_req ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = sun_ignite_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = sun_ignite_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sun_ignite_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_ignite_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = sun_ignite_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ignite_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ignite_dmg ;
+         value = 17 19 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ignite_dmg ;
+         value = 224 248 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ignite_pwr ;
+         value = 8 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ignite_pwr ;
+         value = 93 ;
+         }
+
+      }
+
+      level {
+      description = %sun_ignite_dmg $DMG_FIRE\n%sun_ignite_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_ignite_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Atomic Charge ;
+   description = A radiated homing projectile. ;
+   descshort = Projectile ;
+   icon = 2 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_atomcharge ;
+   power = power3 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_atomcharge_req ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = sun_atomcharge_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = sun_atomcharge_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sun_atomcharge_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_atomcharge_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = sun_atomcharge_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_atomcharge_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_atomcharge_dmg ;
+         value = 20 23 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_atomcharge_dmg ;
+         value = 132 147 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_atomcharge_pwr ;
+         value = 12 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_atomcharge_pwr ;
+         value = 62 ;
+         }
+
+      }
+
+      level {
+      description = %sun_atomcharge_dmg $DMG_RADIATION over 6 seconds\n%sun_atomcharge_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_atomcharge_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Blazing Barrage ;
+   description = Launch fire balls at targets. ;
+   descshort = Projectile ;
+   icon = 3 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_fireballs ;
+   power = power4 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_fireballs_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = sun_fireballs_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = sun_fireballs_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 7 ;
+         name = sun_fireballs_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = sun_fireballs_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 12 ;
+         name = sun_fireballs_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = sun_fireballs_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_fireballs_dmg ;
+         value = 17 19 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = sun_fireballs_dmg ;
+         value = 126 139 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_fireballs_pwr ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = sun_fireballs_pwr ;
+         value = 61 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_fireballs_num ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = sun_fireballs_num ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = sun_fireballs_num ;
+         value = 7 ;
+         }
+
+      }
+
+      level {
+      description = %sun_fireballs_dmg $DMG_FIRE\n%sun_fireballs_num fire ball(s)\n%sun_fireballs_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 3 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_fireballs_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Flame Sword ;
+   description = Sweeping arc of fire that can hit multiple enemies.  Increased critical chance. ;
+   descshort = Melee ;
+   icon = 5 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_flameswd ;
+   power = power6 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_flameswd_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = sun_flameswd_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = sun_flameswd_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sun_flameswd_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_flameswd_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_flameswd_dmg ;
+         value = 54 60 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_flameswd_dmg ;
+         value = 224 238 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_flameswd_pwr ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_flameswd_pwr ;
+         value = 40 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_flameswd_crit ;
+         value = 0.15 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = sun_flameswd_crit ;
+         value = 0.71 ;
+         }
+
+      }
+
+      level {
+      description = %sun_flameswd_dmg $DMG_FIRE\n+%sun_flameswd_crit:p critical chance\n%sun_flameswd_pwr $EP ;
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_flameswd_req ;
+         }
+
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = atk_critical ;
+            level = %sun_flameswd_crit ;
+            scope_node = sun_power6 ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Ion Shield ;
+   description = Forms shield of atomic particles that increases defense and damages enemies ;
+   descshort = Boost ;
+   icon = 7 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_ionshield ;
+   power = power8 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_ionshield_req ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = sun_ionshield_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = sun_ionshield_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sun_ionshield_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_ionshield_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = sun_ionshield_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ionshield_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ionshield_dr ;
+         value = 1.4 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ionshield_dr ;
+         value = 2.8 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ionshield_dmg ;
+         value = 3 5 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ionshield_dmg ;
+         value = 21 26 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ionshield_life ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ionshield_life ;
+         value = 180 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_ionshield_pwr ;
+         value = 32 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = sun_ionshield_pwr ;
+         value = 188 ;
+         }
+
+      }
+
+      level {
+      description = +%sun_ionshield_dr $DR\n%sun_ionshield_dmg $DMG_FIRE/sec\n%sun_ionshield_life seconds\n%sun_ionshield_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_ionshield_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Super Nova ;
+   description = Mushroom cloud that causes $DMG_FIRE and $DMG_RADIATION ;
+   descshort = Xtreme ;
+   icon = 8 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_nucblast ;
+   power = team_xtreme ;
+   type = team_xtreme ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_nucblast_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = sun_nucblast_req ;
+         value = 45 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_nucblast_fdmg ;
+         value = 23 25 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = sun_nucblast_fdmg ;
+         value = 75 83 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_nucblast_rdmg ;
+         value = 45 50 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = sun_nucblast_rdmg ;
+         value = 146 161 ;
+         }
+
+      }
+
+      level {
+      description = %sun_nucblast_fdmg $DMG_FIRE\n%sun_nucblast_rdmg $DMG_RADIATION ;
+         tier {
+         cost = 2 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 0 ;
+         count = 7 ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_nucblast_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Rising Sun ;
+   description = Increases Sunfire's damage and gives him a chance to ignore damage from enemy attacks. ;
+   descshort = Boost ;
+   icon = 4 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sun_rising ;
+   power = power11 ;
+   type = Boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sun_rising_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = sun_rising_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = sun_rising_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = sun_rising_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = sun_rising_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = sun_rising_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_rising_lif ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = sun_rising_lif ;
+         value = 45 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_rising_pwr ;
+         value = 64 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = sun_rising_pwr ;
+         value = 188 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_rising_def ;
+         value = 0.1 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = sun_rising_def ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sun_rising_atk ;
+         value = 1.25 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = sun_rising_atk ;
+         value = 2 ;
+         }
+
+      }
+
+      level {
+      description = %sun_rising_def:p chance to ignore attacks\n%sun_rising_atk:p increased $DMG\n%sun_rising_lif Seconds\n%sun_rising_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %sun_rising_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Max Health ;
+   description = Increases maximum $HP. ;
+   icon = 20 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit11 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit11_pct ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit11_pct ;
+         value = 1.25 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %sunf_outfit11_pct:s maximum $HP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = maxhealth ;
+            level = %sunf_outfit11_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Burn Out ;
+   description = Increases $DMG_FIRE. ;
+   icon = 10 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sunf_outfit12 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit12_pct ;
+         value = 1.03 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit12_pct ;
+         value = 1.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %sunf_outfit12_pct:s $DMG_FIRE ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = atk_damage ;
+            level = %sunf_outfit12_pct ;
+            scope_powers = true ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit13 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit13_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit13_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit13_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %sunf_outfit13_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Point Blank ;
+   description = Adds $DMG to any ranged attack that hits enemies within 6 feet of Sunfire. ;
+   icon = 1 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit21 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit21_pct ;
+         value = 0.04 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit21_pct ;
+         value = 0.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit21_pct:p Added $DMG ;
+         powerup {
+         class = add_attack ;
+         damagepercent = %sunf_outfit21_pct ;
+         life = -1 ;
+         max_distance = 72 ;
+            affecter {
+            attribute = powerup_scope ;
+            scope_attack = projectile ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Martial Arts ;
+   description = Increases the $DMG of all melee attacks. ;
+   icon = 5 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit22 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit22_pct ;
+         value = 1.04 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit22_pct ;
+         value = 1.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %sunf_outfit22_pct:s $DMG ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = atk_damage ;
+            level = %sunf_outfit22_pct ;
+            scope_damage = dmg_punch ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit23 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit23_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit23_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit23_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %sunf_outfit23_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Irradiate ;
+   description = Adds $DMG_RADIATION to melee attacks. ;
+   icon = 28 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit31 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit31_pct ;
+         value = 0.04 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit31_pct ;
+         value = 0.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit31_pct:p $DMG_RADIATION ;
+         powerup {
+         class = add_attack ;
+         damagepercent = %sunf_outfit31_pct ;
+         damagetype = dmg_radiation ;
+         life = -1 ;
+            affecter {
+            attribute = powerup_scope ;
+               scope {
+               scope_non_powers = true ;
+               }
+
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Ionize ;
+   description = Increases all resistances. ;
+   icon = 6 ;
+   icon_texture = textures/ui/sunfire_icons.png ;
+   name = sunf_outfit32 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit32_pct ;
+         value = 0.02 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit32_pct ;
+         value = 0.12 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit32_pctd ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit32_pctd ;
+         value = 12 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit32_pctd All Resistances ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = resist_all ;
+            level = %sunf_outfit32_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit33 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit33_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit33_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit33_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %sunf_outfit33_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = XP ;
+   description = Increases $XP earned. ;
+   icon = 6 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit41 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit41_pct ;
+         value = 1.02 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit41_pct ;
+         value = 1.1 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %sunf_outfit41_pct:s $XP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = xp ;
+            level = %sunf_outfit41_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Critical Strike ;
+   description = Increases critical strike chance. ;
+   icon = 1 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit42 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit42_pct ;
+         value = 0.02 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit42_pct ;
+         value = 0.1 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit42_pct:p Critical chance ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = atk_critical ;
+            level = %sunf_outfit42_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = sunf_outfit43 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = sunf_outfit43_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = sunf_outfit43_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%sunf_outfit43_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %sunf_outfit43_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+}
+

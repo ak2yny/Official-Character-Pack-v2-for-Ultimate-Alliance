@@ -1,0 +1,38 @@
+credits
+Bacon wiazrd for icons
+ak2yny for Xtreme fix, tools, global help
+Outsider, Julio
+Fr3ddy for report, help, fixing coding and effect
+
+Misc notes:
+ 1Hex bolt good
+ 2combustion good, haven't checked
+ 3realityy shift P3 (currently P4), need tweaks with strange
+ 4X hex locked does not exist
+ 5hex explosion P5, currently P3, should use proba siphon icon
+ 6X Boost Misfortune missing, but code is in here it seems
+8xBoost probab syphon does not exist, need icon
+amplify luck, need icon
+Boost Heal
+ 
+10Xtreme Anarchy Assault
+
+Changes made:
+-Added missing powers
+-fixed popup attribute that shrink ennemies (victimeventtag2 fix as reported by Fr3ddy)
+-new flying & blocking effect from Fr3ddy
+-passive:
+dodge icon removed (now use vanilla icon)
+Witch's Touch changed to "Scarlet's Touch" with Critical Strike attribute now like in XML2
+-Crate texture upscale with ersgan (thx MrK for sharing this), her power is a copy paste from Dr. Strange, which is itself based on Scarlet's power
+-   is_power = true ; added to powers
+-change passive icon of "Probable Life" to common resurect ally icons, previously was using revitalize icon, which is fine, but I needed to replace an icon for a missing power 
+-use her XML2 special_trail files, the one from MUA is different, because it adds trail effect, while in XML2 there is no such effects
+-POSITIONING NOT PERFECT Locked Hex (power4) actually got victim effect on the head (disc-like) horizontally, instead of vertically, report by Fr3ddy, fixed by editeing trail_elem+misc text origin value from p3_impact.xmlb
+-       sound = char/switch_v/laugh ; code, changed time to 0 so it always plays, otherwise the laught does not play or very rarely as reported by Fr3ddy
+
+What remains?
+- Passive check : checking what fits the best per skin
+- talent value check
+- removal of unique trail talent if possible from the herostat
+- adjust Crate power damage value to be more similar to Strange

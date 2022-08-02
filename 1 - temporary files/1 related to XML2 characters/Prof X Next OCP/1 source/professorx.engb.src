@@ -1,0 +1,1553 @@
+XMLB talents {
+   talent {
+   descname = Cleave ;
+   description = Swings an arc of mental enegy at opponents, with a chance for a Deadly Strike (1/3 instant $HP loss). ;
+   descshort = Melee ;
+   icon = 6 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_cleave ;
+   power = power1 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_cleave_req ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_cleave_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_cleave_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_cleave_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_cleave_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_cleave_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_cleave_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_cleave_pwr ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_cleave_pwr ;
+         value = 65 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_cleave_dmg ;
+         value = 1.5 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_cleave_dmg ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_cleave_pct ;
+         value = 0.16 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_cleave_pct ;
+         value = 0.3 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_cleave_ar ;
+         value = 1.4 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_cleave_ar ;
+         value = 2.52 ;
+         }
+
+      }
+
+      level {
+      description = %prof_cleave_dmg:x $DMG_PHYSICAL\n%prof_cleave_pct:p chance\n%prof_cleave_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_cleave_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Crushing Ego ;
+   description = Burst of mental energy that temporarily holds enemies. ;
+   descshort = Radial ;
+   icon = 10 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_hold ;
+   power = power2 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_hold_req ;
+         value = 5 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_hold_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_hold_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_hold_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_hold_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_hold_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_hold_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_hold_pwr ;
+         value = 12 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_hold_pwr ;
+         value = 75 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_hold_dmg ;
+         value = 17 19 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_hold_dmg ;
+         value = 34 38 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_hold_dmg ;
+         value = 48 53 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_hold_dmg ;
+         value = 65 71 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_hold_dmg ;
+         value = 85 94 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_hold_dmg ;
+         value = 132 147 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_hold_dmg ;
+         value = 190 210 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_hold_dm2 ;
+         value = 3 5 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_hold_dm2 ;
+         value = 34 40 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_hold_lif ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_hold_lif ;
+         value = 6 ;
+         }
+
+      }
+
+      level {
+      description = %prof_hold_dmg $DMG_MENTAL\n%prof_hold_dm2 Bleed $DMG over ^4 Seconds\n%prof_hold_lif Second hold\n%prof_hold_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_hold_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Befuddle ;
+   description = Telepathically confuses enemies and makes them flee. ;
+   descshort = Radial ;
+   icon = 11 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_fuddle ;
+   power = power7 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_fuddle_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 3 ;
+         name = prof_fuddle_req ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = prof_fuddle_req ;
+         value = 16 ;
+         }
+
+         talentvalue {
+         level = 7 ;
+         name = prof_fuddle_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = prof_fuddle_req ;
+         value = 28 ;
+         }
+
+         talentvalue {
+         level = 12 ;
+         name = prof_fuddle_req ;
+         value = 52 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = prof_fuddle_req ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_fuddle_pwr ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = prof_fuddle_pwr ;
+         value = 50 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_fuddle_dmg ;
+         value = 10 13 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = prof_fuddle_dmg ;
+         value = 24 31 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_fuddle_pct ;
+         value = 0.25 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = prof_fuddle_pct ;
+         value = 1 ;
+         }
+
+      }
+
+      level {
+      description = %prof_fuddle_dmg $DMG_MENTAL\n%prof_fuddle_pct:p chance to confuse\n%prof_fuddle_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 3 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_fuddle_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Psychic Storm ;
+   description = A psychic lightning attack shocks the systems of foes, dealing $DMG_MENTAL to the primary target and chaining to deal $DMG_ELECTRICITY to nearby enemies. ;
+   descshort = Special ;
+   icon = 3 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_storm ;
+   power = power4 ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_storm_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = prof_storm_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_storm_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_storm_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_storm_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_storm_pps ;
+         value = 20 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_storm_pps ;
+         value = 60 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_storm_dmg ;
+         value = 30 36 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = prof_storm_dmg ;
+         value = 82 93 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_storm_dm2 ;
+         value = 17 22 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = prof_storm_dm2 ;
+         value = 63 72 ;
+         }
+
+      }
+
+      level {
+      description = %prof_storm_dmg primary $DMG_MENTAL\n%prof_storm_dm2 chained $DMG_ELECTRICITY\n%prof_storm_pps $EP/sec\n\n ;
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_storm_req ;
+         }
+
+      }
+
+   }
+   
+   talent {
+   descname = Reveal Intent ;
+   description = Increases defense by mentally probing enemies' attack plans. ;
+   descshort = Boost ;
+   icon = 7 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_reveal ;
+   power = power8 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_reveal_req ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_reveal_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_reveal_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_reveal_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_reveal_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_reveal_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_reveal_req ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_reveal_life ;
+         value = 40 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_reveal_life ;
+         value = 65 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_reveal_life ;
+         value = 73 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_reveal_life ;
+         value = 95 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_reveal_life ;
+         value = 100 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_reveal_life ;
+         value = 120 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_reveal_life ;
+         value = 180 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_reveal_pwr ;
+         value = 32 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_reveal_pwr ;
+         value = 64 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_reveal_pwr ;
+         value = 68 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_reveal_pwr ;
+         value = 92 ;
+         }
+
+         talentvalue {
+         level = 10 ;
+         name = prof_reveal_pwr ;
+         value = 100 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_reveal_pwr ;
+         value = 152 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_reveal_pwr ;
+         value = 188 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_reveal_dr ;
+         value = 1.2 ;
+         }
+
+         talentvalue {
+         level = 15 ;
+         name = prof_reveal_dr ;
+         value = 2.2 ;
+         }
+
+      }
+
+      level {
+      description = %prof_reveal_dr:s $DR\n%prof_reveal_life seconds\n%prof_reveal_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 5 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_reveal_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Telepathic Link ;
+   description = Links to the minds of all teammates, increasing $AR and $DMG. ;
+   descshort = Boost ;
+   icon = 2 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_tele_link ;
+   power = power3 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_tele_link_req ;
+         value = 7 ;
+         }
+
+         talentvalue {
+         level = 4 ;
+         name = prof_tele_link_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_tele_link_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = prof_tele_link_req ;
+         value = 26 ;
+         }
+         
+         talentvalue {
+         level = 9 ;
+         name = prof_tele_link_req ;
+         value = 29 ;
+         }
+
+         talentvalue {
+         level = 13 ;
+         name = prof_tele_link_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_tele_link_req ;
+         value = 73 ;
+         }
+         
+         talentvalue {
+         level = 1 ;
+         name = prof_tele_link_pwr ;
+         value = 72 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_tele_link_pwr ;
+         value = 224 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_tele_link_dmg ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_tele_link_dmg ;
+         value = 1.33 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_tele_link_ar ;
+         value = 1.2 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_tele_link_ar ;
+         value = 2.6 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_tele_link_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 14 ;
+         name = prof_tele_link_lif ;
+         value = 55 ;
+         }
+
+      }
+
+      level {
+      description = %prof_tele_link_dmg:s $DMG for all attacks\n%prof_tele_link_ar:s $AR\n%prof_tele_link_lif Seconds\n%prof_tele_link_pwr $EP\n ;
+         tier {
+         cost = 1 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_tele_link_req ;
+         }
+
+      }
+
+   }
+
+
+
+   talent {
+   descname = Psychic Defense ;
+   description = Puts a Psychic Shield around self ;
+   descshort = Boost ;
+   icon = 9 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = profx_psychicdefense ;
+   power = power6 ;
+   type = boost ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_defense_req ;
+         value = 14 ;
+         }
+
+         talentvalue {
+         level = 2 ;
+         name = prof_defense_req ;
+         value = 17 ;
+         }
+
+         talentvalue {
+         level = 5 ;
+         name = prof_defense_req ;
+         value = 26 ;
+         }
+
+         talentvalue {
+         level = 6 ;
+         name = prof_defense_req ;
+         value = 29 ;
+         }
+         
+         talentvalue {
+         level = 10 ;
+         name = prof_defense_req ;
+         value = 53 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = prof_defense_req ;
+         value = 73 ;
+         }
+         
+         talentvalue {
+         level = 1 ;
+         name = prof_defense_pwr ;
+         value = 35 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = prof_defense_pwr ;
+         value = 115 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_defense_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 11 ;
+         name = prof_defense_lif ;
+         value = 55 ;
+         }
+
+      }
+
+      level {
+      description = %prof_defense_lif seconds\n%prof_defense_pwr $EP ;
+         tier {
+         cost = 1 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 2 ;
+         count = 4 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 3 ;
+         count = 4 ;
+         difficulty = hard ;
+         }
+
+         tier {
+         cost = 4 ;
+         count = 1 ;
+         difficulty = hard ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_defense_req ;
+         }
+
+      }
+
+   }
+   
+   talent {
+   descname = Psychic Shock ;
+   description = Resurrects nearby fallen allies and enemies. Resurrected enemies become allies for a time, then expire. ;
+   descshort = Xtreme ;
+   icon = 8 ;
+   icon_texture = textures/ui/professorx_icons.png ;
+   name = prof_resurrect ;
+   power = team_xtreme ;
+   skirmish_locked = true ;
+   type = team_xtreme ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_resurrect_req ;
+         value = 10 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = prof_resurrect_req ;
+         value = 25 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_resurrect_hlt ;
+         value = 0.15 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = prof_resurrect_hlt ;
+         value = 0.75 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_resurrect_lif ;
+         value = 13 ;
+         }
+
+         talentvalue {
+         level = 8 ;
+         name = prof_resurrect_lif ;
+         value = 33 ;
+         }
+
+      }
+
+      level {
+      description = %prof_resurrect_hlt:p of $HP restored\n%prof_resurrect_lif Seconds resurrected enemies ;
+         tier {
+         cost = 2 ;
+         count = 1 ;
+         }
+
+         tier {
+         cost = 0 ;
+         count = 7 ;
+         }
+
+         require {
+         cat = level ;
+         level = %prof_resurrect_req ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Astral Mastery ;
+   description = Professor X becomes more skilled at controlling his astral form, increasing his ability to evade attacks. ;
+   icon = 23 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit11 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit11_pct ;
+         value = 0.03 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit11_pct ;
+         value = 0.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit11_pct:p Dodge chance ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = def_dodge ;
+            level = %prof_outfit11_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Psychic Strike ;
+   description = Adds $DMG_MENTAL to melee attacks. ;
+   icon = 5 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit12 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit12_pct ;
+         value = 0.04 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit12_pct ;
+         value = 0.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit12_pct:p $DMG_MENTAL ;
+         powerup {
+         class = add_attack ;
+         damagepercent = %prof_outfit12_pct ;
+         damagetype = dmg_mental ;
+         life = -1 ;
+            affecter {
+            attribute = powerup_scope ;
+               scope {
+               scope_non_powers = true ;
+               }
+
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit13 ;
+   skin = 1 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit13_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit13_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit13_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %prof_outfit13_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Telepathic Mastery ;
+   description = Increases the $DMG_MENTAL of all psychic attacks. ;
+   icon = 27 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit21 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit21_pct ;
+         value = 1.03 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit21_pct ;
+         value = 1.15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %prof_outfit21_pct:s $DMG_MENTAL ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = atk_damage ;
+            level = %prof_outfit21_pct ;
+            scope_powers = true ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Mutant Mentor ;
+   description = Increase $DMG and $XP for all combo attacks. ;
+   icon = 29 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit22 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit22_com ;
+         value = 1.25 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit22_com ;
+         value = 2 ;
+         }
+
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit22_xp ;
+         value = 1.5 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit22_xp ;
+         value = 2.5 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %prof_outfit22_com:s Combo $DMG\n%prof_outfit22_xp:s Combo $XP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = combo_damage ;
+            level = %prof_outfit22_com ;
+            }
+
+            affecter {
+            affect_type = scale ;
+            attribute = combo_xp ;
+            level = %prof_outfit22_xp ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit23 ;
+   skin = 0 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit23_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit23_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit23_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %prof_outfit23_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Gifted ;
+   description = Increases maximum $EP. ;
+   icon = 21 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit31 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit31_pct ;
+         value = 1.04 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit31_pct ;
+         value = 1.2 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %prof_outfit31_pct:s maximum $EP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = maxenergy ;
+            level = %prof_outfit31_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Genetic Research ;
+   description = Professor X's study of mutant DNA increases his control over his abilities, offering a chance to execute powers at 1 rank higher than normal. ;
+   icon = 18 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit32 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit32_pct ;
+         value = 0.05 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit32_pct ;
+         value = 0.25 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %prof_outfit32_pct:p chance ;
+         powerup {
+         chance = %prof_outfit32_pct ;
+         class = skillincrease ;
+         level = 1 ;
+         life = -1 ;
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit33 ;
+   skin = 2 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit33_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit33_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%pho_outfit33_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %pho_outfit33_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Astral Combat ;
+   description = Professor X becomes more adept at combat in astral form, increasing his striking. ;
+   icon = 52 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit41 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit41_pct ;
+         value = 3 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit41_pct ;
+         value = 15 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit41_pct Striking ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = strength ;
+            level = %prof_outfit41_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Max Health ;
+   description = Increases maximum $HP. ;
+   icon = 20 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit42 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit42_pct ;
+         value = 1.05 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit42_pct ;
+         value = 1.25 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = %prof_outfit42_pct:s maximum $HP ;
+         powerup {
+         life = -1 ;
+            affecter {
+            affect_type = scale ;
+            attribute = maxhealth ;
+            level = %prof_outfit42_pct ;
+            }
+
+         }
+
+      }
+
+   }
+
+   talent {
+   descname = Defense ;
+   description = Increases $DR. ;
+   icon = 22 ;
+   icon_texture = textures/ui/talent_icons.png ;
+   name = prof_outfit43 ;
+   skin = 3 ;
+   type = passive ;
+      talentvalues {
+         talentvalue {
+         level = 1 ;
+         name = prof_outfit43_dr ;
+         value = 1 ;
+         }
+
+         talentvalue {
+         level = 9 ;
+         name = prof_outfit43_dr ;
+         value = 9 ;
+         }
+
+      }
+
+      level {
+      count = 9 ;
+      description = +%prof_outfit43_dr $DR ;
+         powerup {
+         life = -1 ;
+            affecter {
+            attribute = defense_rating ;
+            level = %prof_outfit43_dr ;
+            }
+
+         }
+
+      }
+
+   }
+
+}
+

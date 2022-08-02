@@ -1,0 +1,16 @@
+Info:
+-missing "Widowmaker power" (it's a stronger thunderous punch with same animation, but stunning in the end Juggernaut) and Path of Destruction (very strong Xtreme boost)
+Not sure if adding those powers are worthwhile, either way if it's decided to not add them, need to remove their fightmove in powerstyle if present for optimization.
+
+-Cannot use his XML1 animations, because he's using an unique skeleton too different (bigger) from the common one
+
+Changes:
+-added light1, 2 and 3, popup  from XML2 fightstyle_wrestling since Juggernaut uses that in this game+Power8 Crime Rage is supposed to use those wrestling animations
+-   is_power = true ; added to powers
+-Icons from texture file:changed Cyttorak's Folly icon to Widowmaker, since Widowmaker icons was not present and Path of Destruction unused
+-Path of Destruction not added, it's an Xtreme in MUA, too strong as normal boost, still can be added with tweak
+-Crimson rage power fix by ak2yny
+- Juggy's Arcane Fist - p2_impact file & also crack(decal) not in the right position, should be origin = 20 8 0 20 8 0 ; fix by Fr3ddy
+
+What remains?
+-Passive check : checking which passive and icon fit the best per skin
