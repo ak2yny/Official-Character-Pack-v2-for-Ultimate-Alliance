@@ -1,0 +1,258 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/ICEMAN_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/LAND",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": 37518240,
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/PAIN/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/PAIN/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/PAIN/***RANDOM***/2",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/THROW",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P1_CHARGE",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P1_IMPACT",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P2_IMPACT",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P2_CHARGE",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P2_EXPLODE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P3_CHARGE",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P3_CHARGE_LOOP",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P3_LOOP",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P3_IMPACT",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P3_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P8_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P4_CHARGE",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P5_CHARGE",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P4_IMPACT",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P5_IMPACT",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P6_CHARGE",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P6_POWER",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ICEMAN_M/P9_CHARGE",
+            "sample_index": 22,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "iceman_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\JUMP3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\LAND3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\PAIN6.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\PAIN7.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\THROW3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p2_explode.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p3_loop.wav",
+            "format": 106,
+            "sample_rate": 44100,
+            "flags": 1
+        },
+        {
+            "file": "iceman_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p4_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p5_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p6_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "iceman_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}

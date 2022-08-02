@@ -1,0 +1,392 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/VENOM_M/BEAR_HUG",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/DEATH",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/GRAB_SMASH",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/JUMP",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/LAND",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P1_POWER",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P2_CHARGE",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P2_POWER",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P3_ATTACK",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P3_END",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P3_POWER",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P3_PREBITE/***RANDOM***/0",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P3_PREBITE/***RANDOM***/1",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_CHARGE",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": 9438576,
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": 9438577,
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_POWER/***RANDOM***/0",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_POWER/***RANDOM***/1",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_POWER/***RANDOM***/2",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_RELEASE",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P4_FAIL",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P5_CHARGE",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P5_POWER",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P5_SHOOT",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P6_CHARGE",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P7_CHARGE",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P8_CHARGE",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P8_END",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/P8_POWER",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/PAIN/***RANDOM***/0",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/PAIN/***RANDOM***/1",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/SYMBIOTE_SWING/***RANDOM***/0",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/SYMBIOTE_SWING/***RANDOM***/1",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/SYMBIOTE_SWING/***RANDOM***/2",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/THROW",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/TIED_UP",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/YELL/***RANDOM***/0",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/YELL/***RANDOM***/1",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VENOM_M/YELL/***RANDOM***/2",
+            "sample_index": 37,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "venom_m\\bear_hug.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\DEATH1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\grab_smash.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p3_attack.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p3_end.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p3_prebite1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p3_prebite2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_impactc.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_powerb.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_powerc.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p4_release.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p5_shoot.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p6_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p7_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p8_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p8_end.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\PAIN1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\symbiote_swing1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\symbiote_swing2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\symbiote_swing3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\tied_up1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\YELL1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\YELL2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "venom_m\\YELL3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}

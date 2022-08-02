@@ -1,0 +1,350 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": 247228648,
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": 238055470,
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": 201212100,
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": 44933064,
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": 116111296,
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": 116149188,
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": 201500224,
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": 219324693,
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": 178497490,
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": 120284336,
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": 120284337,
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": 161720274,
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": 126729924,
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": 144943058,
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": 145636151,
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": 219324869,
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": 125730432,
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": 9232853,
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": 219324885,
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": 124681856,
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": 9232597,
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": 120022192,
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": 120022193,
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": 120022194,
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": 94611410,
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": 38059042,
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": 231506628,
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": 77834194,
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": 219324805,
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": 208920772,
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": 61056978,
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": 263123632,
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": 263123633,
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": 248260903,
+            "sample_index": 33,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "magnet_m\\DEATH1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\flybegin.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\flyend.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\grab_smash.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p2_grip.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p3_hold.wav",
+            "format": 106,
+            "sample_rate": 44100,
+            "flags": 1
+        },
+        {
+            "file": "magnet_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p3_throw.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p4_loop.wav",
+            "format": 106,
+            "sample_rate": 44100,
+            "flags": 1
+        },
+        {
+            "file": "magnet_m\\p4_release.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p5_loop.wav",
+            "format": 106,
+            "sample_rate": 44100,
+            "flags": 1
+        },
+        {
+            "file": "magnet_m\\p5_release.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p6_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p6_impactb.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p6_impactc.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p6_shield_appear.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p7_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p8_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p8_end.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\PAIN1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "magnet_m\\THROW1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}

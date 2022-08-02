@@ -1,0 +1,308 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/DRSTR_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/JUMP",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/LAND",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": 67260560,
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/PAIN/***RANDOM***/0",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/PAIN/***RANDOM***/1",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/PAIN/***RANDOM***/2",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/THROW",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/FLYBEGIN",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/FLYEND",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P10_POWER",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P10_TELEPORT_IN",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P10_TELEPORT_OUT",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P1_FIRE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P1_IMPACT/***RANDOM***/0",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P1_IMPACT/***RANDOM***/1",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P2_FIRE",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P2_START",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P3_CHARGE",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P3_IMPACT/***RANDOM***/0",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P3_IMPACT/***RANDOM***/1",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P4_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P5_CHARGE",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P5_HOLD",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P5_LOOP",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P5_THROW",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P6_POWER",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P7_POWER",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P8_POWER",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P8_POWER2",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P9_CHARGE",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DRSTR_M/P9_POWER",
+            "sample_index": 27,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "drstr_m\\DEATH4.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\LIFT.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\PAIN8.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\flybegin.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\flyend.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p10_teleport_in.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p10_teleport_out.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p1_fire.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p1_impactb.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p2_fire.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p2_start.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p5_hold.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p5_loop.wav",
+            "format": 106,
+            "sample_rate": 44100,
+            "flags": 1
+        },
+        {
+            "file": "drstr_m\\p5_throw.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p8_power2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "drstr_m\\p9_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}

@@ -1,0 +1,347 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/WOLV_M/DEATH/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/DEATH/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/JUMP/***RANDOM***/0",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/JUMP/***RANDOM***/1",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/JUMP/***RANDOM***/2",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/LAND/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/LAND/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/LAND/***RANDOM***/2",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": 90963824,
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": 90963825,
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/PAIN/***RANDOM***/0",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/PAIN/***RANDOM***/1",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/THROW/***RANDOM***/0",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/THROW/***RANDOM***/1",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/CLAW_IN",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/CLAW_OUT",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_ATTACK/***RANDOM***/0",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P2_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_ATTACK/***RANDOM***/1",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_ATTACK/***RANDOM***/3",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P2_ATTACK",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_ATTACK/***RANDOM***/2",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P3_IMPACT",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_IMPACT",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P10_POWER",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P11_POWER",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P1_POWER",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P2_END",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P3_POWERA",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P4_POWER/***RANDOM***/0",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P4_POWER/***RANDOM***/1",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P5_POWER",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P6_POWER",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P6_POWERB",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P7_POWER",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/WOLV_M/P8_POWER",
+            "sample_index": 31,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "wolv_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\DEATH2_D.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\JUMP3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\JUMP2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\LAND3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\LAND2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\PICKUP1.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\PICKUP2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\THROW3_A.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\claw_in.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\claw_out.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p2_attack.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p10_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p10_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p11_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p2_end.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p3_powerA.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p4_powerB.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p6_powerB.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "wolv_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}

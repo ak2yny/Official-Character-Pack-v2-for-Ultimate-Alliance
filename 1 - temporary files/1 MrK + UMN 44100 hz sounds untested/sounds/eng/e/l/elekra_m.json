@@ -1,0 +1,227 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/ELEKRA_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/JUMP",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/LAND",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": 36580656,
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/PAIN/***RANDOM***/0",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/PAIN/***RANDOM***/1",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/PAIN/***RANDOM***/2",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/THROW",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P10_POWER",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P1_CHARGE",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P1_IMPACT",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P1_POWER",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P2_POWER",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P3_CHARGE",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P3_IMPACT",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P3_POWER",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P4_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P5_CHARGING",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P5_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P6_POWER",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P7_POWER",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ELEKRA_M/P8_POWER",
+            "sample_index": 21,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "elekra_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\LAND4.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\PAIN7.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p10_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        },
+        {
+            "file": "elekra_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 44100
+        }
+    ]
+}
