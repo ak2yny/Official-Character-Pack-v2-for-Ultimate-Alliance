@@ -3,18 +3,15 @@
     Official Characters Pack 2 by MarvelMods.com
 </h1>
 <hr>
-<p align="center">
-    <img src="https://img.shields.io/github/repo-size/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance"> 
-    <img src="https://img.shields.io/github/stars/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?style=socialhttps://img.shields.io/tokei/lines/github/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?label=lines%20of%20code"> 
-    [<img src="https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases">](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases) 
-    <img src="https://img.shields.io/github/last-commit/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance">    
-</p>
-<p align="center">
-    [Forums Page](https://marvelmods.com/forum/index.php/topic,11037.0.html)
-    | [Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
-    | [To do list](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/issues)
-    | [Discussion](https://discord.com/channels/449510825385000960) 
-</p>
+<img src="https://img.shields.io/github/repo-size/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance"> 
+<img src="https://img.shields.io/github/stars/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?style=socialhttps://img.shields.io/tokei/lines/github/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?label=lines%20of%20code"> 
+[<img src="https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases">](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases) 
+<img src="https://img.shields.io/github/last-commit/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance">
+
+[Forums Page](https://marvelmods.com/forum/index.php/topic,11037.0.html)
+| [Changelog](https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs)
+| [To do list](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/issues)
+| [Discussion](https://discord.com/channels/449510825385000960) 
 
 
 Features:
