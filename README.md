@@ -1,3 +1,4 @@
+![Banner](https://cdn.discordapp.com/attachments/566058097463001088/884559439447851018/MM_Banner.png)
 <h1 align="center">
     Official Characters Pack 2 by MarvelMods.com
 </h1>
