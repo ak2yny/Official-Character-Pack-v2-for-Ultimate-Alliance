@@ -5,7 +5,6 @@
 <hr>
 
 [![latest release](https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases)](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases)
-
 [<img src="https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases" />](https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases) 
 
 
