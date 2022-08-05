@@ -140,7 +140,8 @@ Xbox 360 controllers:
 - MUA originally supports the 360 controller without any issues, so the only thing needed is getting the original textures from the "texs" folder back. If you followed the installation guide, you should have a backup.
 
 PS3/PS4 and other controllers:
-- Read the "readme.txt" in the "1 - More controller support" folder.
+- Use the Ultimate Controller Support mod (https://marvelmods.com/forum/index.php/topic,11191)
+  This mod comes with an EasyInstall.bat, which lets you fix the controls. These match the changes mentioned for the Xbox One controller, so it can be used instead of the last step.
 
 
 Credits:
