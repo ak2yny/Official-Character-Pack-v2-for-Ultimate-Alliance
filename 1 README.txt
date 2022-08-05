@@ -163,7 +163,7 @@ Official Character Pack 2
 -Krisan Thyme: for converting dlc sounds and fixing various scripts
 -Nowhereman: for the Hand Ninjas & JulioCabral for the SIM coding
 -Nicaras: for the Jean Grey fix
--BloodyMares: for the Hulk hud fixes
+-BloodyMares: for the Hulk hud, and Daredevil baton fixes
 -BaconWizard17: for the statues of Nightcrawler and Jean, XML skins, the Xbox One controller fix and instructions.
 -Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
 -ak2yny: for general fixes, assistance, gold sounds upgrade, Cyclops, conversion, XML icons upscale
