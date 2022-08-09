@@ -2001,17 +2001,11 @@
                 "level": 1
             },
             "trigger": {
-                "effect": "char/ddevil/p6_power",
-                "fxlevel": 1,
-                "name": "effect_sound",
-                "sound": "char/ddevil_m/p6_power",
-                "time": 0
-            },
-            "trigger": {
                 "bolt": "Bip01 R Hand",
                 "effect": "char/ddevil/p6_power",
                 "fxlevel": 2,
-                "name": "effect",
+                "name": "effect_sound",
+                "sound": "char/ddevil_m/p6_power",
                 "time": 0.23
             },
             "trigger": {
