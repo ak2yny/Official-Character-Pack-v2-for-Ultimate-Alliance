@@ -4,10 +4,10 @@
 </h1>
 <hr>
 <p align="center">
-    <a href="https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases"><img src="https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases"></a>
-    <img src="https://img.shields.io/github/repo-size/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance"> 
-    <img src="https://img.shields.io/github/stars/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?style=socialhttps://img.shields.io/tokei/lines/github/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?label=lines%20of%20code"> 
-    <img src="https://img.shields.io/github/last-commit/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance">    
+    <a href="https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/releases"><img src="https://img.shields.io/github/v/release/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?include_prereleases"></a> 
+    <a href=><img src="https://img.shields.io/github/repo-size/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance"></a> 
+    <a href=https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/stargazers><img src="https://img.shields.io/github/stars/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?style=socialhttps://img.shields.io/tokei/lines/github/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance?label=lines%20of%20code"></a> 
+    <a href=https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/commits/master><img src="https://img.shields.io/github/last-commit/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance"></a>
 </p>
 
 <p align="center">
