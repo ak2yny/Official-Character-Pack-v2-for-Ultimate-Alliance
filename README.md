@@ -13,6 +13,7 @@
 <p align="center">
     <a href="https://marvelmods.com/forum/index.php/topic,11037.0.html">Forums Page</a>
     | <a href="https://drive.google.com/drive/folders/12w2txp9mmM5cGlz2m33lxtOX3bXg3tDn">Pre-release download</a>
+    | <a href="https://github.com/TheRealPSV/OpenHeroSelect/tree/master/mua/xml">Herostats</a>
     | <a href="https://docs.google.com/spreadsheets/d/1q48Yh796rQZKbTQ1jJ7P-gJmcJBLdmOkbfJ5VEP-zjs">Changelog</a>
     | <a href="https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/issues">To do list</a>
     | <a href="https://discord.com/channels/449510825385000960/449511007811796993">Discussion</a>
