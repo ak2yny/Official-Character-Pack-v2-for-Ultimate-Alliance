@@ -1,1 +1,1 @@
-[Herostats split](https://github.com/TheRealPSV/OpenHeroSelect/tree/master/mua/xml)
+<a href="https://github.com/TheRealPSV/OpenHeroSelect/tree/master/mua/xml">Herostats split</a>
