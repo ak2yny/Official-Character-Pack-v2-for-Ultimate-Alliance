@@ -7,17 +7,13 @@ setAIActive("mephisto", "TRUE" )
 attackEntityWithType("mephisto", "_ACTIVE_HERO_", "ANY", "FALSE" )
 waittimed ( 0.100 )
 jeandead = getGameFlag("mephisto3", 2 )
-ncdead = getGameFlag("mephisto3", 1 )
 if jeandead == 1
      act("phoenix_spawner", "phoenix_spawner" )
      remove ( "nightcrawler_spawner", "nightcrawler_spawner" )
-elif ncdead == 1
+else
      act("nightcrawler_spawner", "nightcrawler_spawner" )
      remove ( "phoenix_spawner", "phoenix_spawner" )
-else
-     # Both X-Men are alive: do nothing for now
 endif
-
 waittimed ( 0.400 )
 cameraResetOldSchool( )
 

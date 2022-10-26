@@ -4,18 +4,6 @@
 wep = getHeldWeapon("_ACTIVATOR_" )
 if wep == "the_weapon"
      dropWeapon("_ACTIVATOR_", "FALSE" )
-
-     #special condition: make Mephisto lose life if NC and Jean alive
-     jeandead = getGameFlag("mephisto3", 2 )
-     ncdead = getGameFlag("mephisto3", 1 )
-     if jeandead == 0
-         if ncdead == 0
-     	     painthresh = getZoneVar("painthresh" )
-	     painthresh = isub(painthresh, 20 )
-	     setZoneVar("painthresh", painthresh )
-         endif
-     endif
-
      remove ( "hint_trigger", "hint_trigger" )
 endif
 # ( "see if he's holding some guy up and hurting him and make him stop" )
@@ -44,36 +32,9 @@ if hamt <= painthreshf
           setPatternSequence("mephisto", "mephisto_heal" )
           setZoneVar("laststage", 1 )
      else
-	  # if both heroes alive, display special ending:
-	  jeandead = getGameFlag("mephisto3", 2 )
-	  ncdead = getGameFlag("mephisto3", 1 )
-	  if jeandead == 0
-		if ncdead == 0
-		    setCombatNode("mephisto", "power_smash2" )
-		    act( "nightcrawler_spawner", "nightcrawler_spawner" )
-                    display ( "DEAD HERO" )
-                    setZoneVar("over", 1 )
-                    startCutScene("TRUE", "FALSE" )
-                    copyOriginAndAngles("mephisto", "mr_mephisto_spot02" )
-                    copyOriginAndAngles("dead_hero", "dead_hero_spot" )
-                    moveHeroesToEnt("outro_spot" )
-                    cameraMove(" 1150.750 -3518.930 -34.860 ", 0.000 )
-                    cameraPan(" 0.000 25.200 240.100 ", 0.000, "FALSE" )
-                    cameraFade(0.000, 0.500 )
-                    waittimed ( 0.500 )
-  		    startConversation("act2/mephisto/mephisto4/2_mephisto4_029" )
-		    remove ( "nightcrawler_spawner", "nightcrawler_spawner" )
-		    act("phoenix_spawner", "phoenix_spawner" )
-		else
-	          # ( "dead here" )
-        	  display ( "DEAD MEPHISTO" )
-	          setCombatNode("_OWNER_", "deathgen" )
-		endif
-	  else
-          	# ( "dead here" )
-          	display ( "DEAD MEPHISTO" )
-          	setCombatNode("_OWNER_", "deathgen" )
-	  endif
+          # ( "dead here" )
+          display ( "DEAD MEPHISTO" )
+          setCombatNode("_OWNER_", "deathgen" )
      endif
 endif
 
