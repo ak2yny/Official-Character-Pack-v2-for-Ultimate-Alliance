@@ -25,7 +25,5 @@ unlockCharacter("darkphoenix", "" )
 unlockCharacter("XMan", "" )
 unlockCharacter("sunfire", "" )
 unlockCharacter("Cannonball", "" )
-unlockCharacter("Phoenix", "" )
-unlockCharacter("nightcrawlerdlc", "" )
 loadMapStartGame()
 
