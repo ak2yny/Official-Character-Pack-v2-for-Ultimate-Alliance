@@ -6,15 +6,9 @@ setNoCollide("_OWNER_", "TRUE" )
 setInvulnerable("_OWNER_", "TRUE" )
 # ( "play anim" )
 jeandead = getGameFlag("mephisto3", 2 )
-ncdead = getGameFlag("mephisto3", 1 )
 if jeandead == 1
      playanim (  "EA_ZONE2", "_OWNER_", "STOP", "" )
-elif ncdead == 1
-     playanim (  "EA_ZONE1", "_OWNER_", "STOP", "" )
 else
-     # Both xmen alive: we need them for the cutscene
-     fade("_OWNER_", 1.000, 1.000, "TRUE" )
-     setAIActive("_OWNER_", "TRUE" )
-     setNoCollide("_OWNER_", "FALSE" )
-     setInvulnerable("_OWNER_", "FALSE" )
+     playanim (  "EA_ZONE1", "_OWNER_", "STOP", "" )
 endif
+

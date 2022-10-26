@@ -4,33 +4,31 @@
 pc_name = getID("_ACTIVATOR_" )
 # ( "****This passes the name of the player to the next script****" )
 setZoneVar("player", pc_name )
+# ( "***********************End get the name of Player**************************" )
+# ( "******************Script Fu******************" )
 # ( "The _OWNER_ in this script will be the _ACTIVATOR_ of the next script" )
 # ( "The second parm is the camera focus!!!!!!!!!!!" )
 act("conv_cam", "_OWNER_" )
 # ( "This wait need to be long enough to all the camera it get into position" )
 waittimed ( 1.000 )
+# ( "******************END Script Fu******************" )
+# ( "***********OLD script***********" )
+# ( "***********END OLD script***********" )
 # ( "**************This Picks the right conversation for the character**************" )
 bifrost_done = getObjective("bifrost_obj10", "COMPLETE" )
-xmen_alive = getGameFlag("valhalla1", 6)
 if bifrost_done == 1
      asgard_done = getObjective("asgard_obj40", "COMPLETE" )
      if asgard_done == 1
           # ( "part3" )
           startConversation("act3/valhalla/3_valhalla1_540" )
      else
-          # ( "This is unlocked from the start" )
-          if xmen_alive == 0
-             startConversation("act3/valhalla/3_valhalla1_040" )
-          else
-             startConversation("act3/valhalla/3_valhalla1_040m" )
-          endif
+          # ( "part1 and part2" )
+          # ( "This is unlocked from the started." )
+          startConversation("act3/valhalla/3_valhalla1_040" )
      endif
 else
-     # ( "This is unlocked from the start" )
-     if xmen_alive == 0
-        startConversation("act3/valhalla/3_valhalla1_040" )
-     else
-        startConversation("act3/valhalla/3_valhalla1_040m" )
-     endif
+     # ( "part1 and part2" )
+     # ( "This is unlocked from the started." )
+     startConversation("act3/valhalla/3_valhalla1_040" )
 endif
 

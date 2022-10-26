@@ -16,15 +16,10 @@ if beat == 0
      endif
      # ( "remove appropriate statues" )
      jeandead = getGameFlag("mephisto3", 2 )
-     ncdead = getGameFlag("mephisto3", 1 )
      if jeandead == 1
           remove ( "statue_nightcrawler", "statue_nightcrawler" )
-     elif ncdead == 1
-          remove ( "statue_phoenix", "statue_phoenix" )
      else
-	  # Both x-men are alive:
-	  remove ( "statue_nightcrawler", "statue_nightcrawler" )
-	  remove ( "statue_phoenix", "statue_phoenix" ) 
+          remove ( "statue_phoenix", "statue_phoenix" )
      endif
      waittimed ( 0.100 )
      if through == 0

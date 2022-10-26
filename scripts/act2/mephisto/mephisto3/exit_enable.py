@@ -6,15 +6,5 @@ waittimed ( 1.500 )
 act("fx_mephisto4", "fx_mephisto4" )
 setEnable("link_mephisto4", "TRUE" )
 waittimed ( 1.000 )
-
-jeandead = getGameFlag("mephisto3", 2 )
-ncdead = getGameFlag("mephisto3", 1 )
-if jeandead == 1
-	startConversation("act2/mephisto/mephisto3/2_mephisto3_060" )
-elif ncdead == 1
-	startConversation("act2/mephisto/mephisto3/2_mephisto3_060" )
-else
-     	# Both X-Men are alive
-	startConversation("act2/mephisto/mephisto3/2_mephisto3_060m" )
-endif
+startConversation("act2/mephisto/mephisto3/2_mephisto3_060" )
 
