@@ -144,12 +144,9 @@
         <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="06" zoneonly="false" />
     </stats>
     <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="17_deadpool" charactername="Deadpool" level="1" menulocation="11" mind="8" name="Deadpool" playable="true" powerstyle="ps_deadpool" scriptlevel="3" skin="1701" skin_01_name="Classic" skin_02="02" skin_02_name="Ultimate" skin_03="03" skin_03_name="Weapon X" skin_04="04" skin_04_name="Assassin" sounddir="dphero_m" strength="6" team="hero">
-        <Multipart health="0" hideskin="sword_l_back" />
-        <Multipart health="0" hideskin="sword_r_hand" />
-        <Multipart health="0" hideskin="sword_l_hand_reverse" />
-        <Multipart health="0" hideskin="guns" />
-        <Multipart health="0" nonmenuonly="true" showskin="sword_l_back" />
-        <Multipart health="0" hideskin="sword_l_hand" nonmenuonly="true" />
+        <Multipart health="0" hideskin="sword_l_back" hideskin2="sword_r_hand" />
+        <Multipart health="0" hideskin="sword_l_hand_reverse" hideskin2="guns" />
+        <Multipart health="0" hideskin="sword_l_hand" nonmenuonly="true" showskin="sword_l_back" />
         <talent level="1" name="dead_p1" />
         <talent level="1" name="dead_tele" />
         <talent level="1" name="healing_factor" />
@@ -157,15 +154,12 @@
         <talent level="1" name="melee_moves" />
     </stats>
     <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="12_elektra" charactername="Elektra" level="1" menulocation="9" mind="8" name="Elektra" playable="true" powerstyle="ps_elektra" scriptlevel="3" skin="1201" skin_01_name="Classic" skin_02="02" skin_02_name="Ultimate" skin_03="03" skin_03_name="Assassin" skin_04="04" skin_04_name="Stealth" sounddir="elekra_m" strength="6" team="hero">
-        <Multipart health="0" hideskin="1201_sai_left_segment" />
-        <Multipart health="0" hideskin="1201_sai_right_segment" />
-        <Multipart health="0" hideskin="1201_star_left_segment" />
-        <Multipart health="0" hideskin="1201_star_right_segment" />
-        <Multipart health="0" menuonly="true" showskin="1201_sai_left_segment" />
-        <Multipart health="0" menuonly="true" showskin="1201_sai_right_segment" />
+        <Multipart health="0" hideskin="1201_sai_left_segment" hideskin2="1201_sai_right_segment" />
+        <Multipart health="0" hideskin="1201_star_left_segment" hideskin2="1201_star_right_segment" />
         <talent level="1" name="elektra_p4" />
         <talent level="1" name="fightstyle_default" />
         <talent level="1" name="melee_moves" />
+        <Multipart health="0" menuonly="true" showskin="1201_sai_left_segment" showskin2="1201_sai_right_segment" />
     </stats>
     <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="15_ironman" charactername="Iron Man" level="1" menulocation="24" mind="8" moveset1="moveset_flying" name="Ironman" playable="true" powerstyle="ps_ironman" scriptlevel="3" skin="1502" skin_01_name="New Avenger" skin_02="05" skin_02_name="Classic" skin_03="03" skin_03_name="War Machine" skin_04="04" skin_04_name="Ultimate" sounddir="iron_m" strength="6" team="hero">
         <talent level="1" name="ironman_p1" />
@@ -182,8 +176,7 @@
         <talent level="1" name="might" />
     </stats>
     <stats ailevel="1" autospend="support" body="7" characteranims="21_nickfury" charactername="Nick Fury" level="1" menulocation="20" mind="8" name="NickFury" playable="true" powerstyle="ps_nickfury" scriptlevel="3" skin="2101" skin_01_name="Classic" skin_02="02" skin_02_name="Stealth" skin_03="03" skin_03_name="Ultimate" skin_04="04" skin_04_name="General Fury" sounddir="fury_m" strength="6" team="hero">
-        <Multipart health="0" hideskin="gun_left_segment" />
-        <Multipart health="0" hideskin="gun_right_segment" />
+        <Multipart health="0" hideskin="gun_left_segment" hideskin2="gun_right_segment" />
         <talent level="1" name="nickf_p1" />
         <talent level="1" name="melee_moves" />
         <talent level="1" name="fightstyle_default" />
@@ -195,17 +188,14 @@
         <talent level="1" name="melee_moves" />
     </stats>
     <stats ailevel="1" autospend="bruiser" body="7" characteranims="11_black_panther" charactername="Black Panther" level="1" menulocation="10" mind="4" name="BlackPanther" playable="true" powerstyle="ps_blackpanther" scriptlevel="3" skin="1101" skin_01_name="Modern" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Ceremonial" skin_04="04" skin_04_name="Holy Armor" sounddir="blackp_m" strength="10" team="hero">
-        <Multipart health="0" hideskin="dagger_l_segment" />
-        <Multipart health="0" hideskin="dagger_r_segment" />
+        <Multipart health="0" hideskin="dagger_l_segment" hideskin2="dagger_r_segment" />
         <talent level="1" name="panther_p1" />
         <talent level="1" name="fightstyle_default" />
         <talent level="1" name="melee_moves" />
     </stats>
     <stats ailevel="1" autospend="bruiser" body="7" characteranims="01_blade" charactername="Blade" level="1" menulocation="26" mind="4" name="Blade" playable="true" powerstyle="ps_blade" scriptlevel="3" skin="0101" skin_01_name="Ultimate" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Night Stalker" skin_04="04" skin_04_name="Daywalker" sounddir="blade_m" strength="10" team="hero">
-        <Multipart health="0" hideskin="0101_sword_back_segment" />
-        <Multipart health="0" hideskin="0101_gun_segment" />
-        <Multipart health="0" nonmenuonly="true" showskin="0101_sword_back_segment" />
-        <Multipart health="0" hideskin="0101_sword_segment" nonmenuonly="true" />
+        <Multipart health="0" hideskin="0101_sword_back_segment" hideskin2="0101_gun_segment" />
+        <Multipart health="0" hideskin="0101_sword_segment" nonmenuonly="true" showskin="0101_sword_back_segment" />
         <talent level="1" name="blade_p1" />
         <talent level="1" name="blade_regen" />
         <talent level="1" name="might" />
