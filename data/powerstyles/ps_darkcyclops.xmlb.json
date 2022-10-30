@@ -1,0 +1,79 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "aireusetime": 3,
+            "aitype": "beam",
+            "animenum": "ea_power1",
+            "lockangles": true,
+            "name": "power_attack",
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/dcyclp_m/p1_charge",
+                "time": 0.5
+            },
+            "trigger": {
+                "arc": 0,
+                "attack_bone_angles": "-83 -76 -13",
+                "attack_bone_pos": "-6 -5 56",
+                "attacktype": "beam",
+                "beambolt": "Bip01 Head",
+                "beameffect": "char/dcyclp/p1_power",
+                "damage": "%mdmg_high",
+                "damagelevel": 2,
+                "damagescale": "difficulty",
+                "damagetype": "dmg_energy",
+                "fxlevel": 1,
+                "hiteffect": "char/dcyclp/p1_impact",
+                "inherit": "beam",
+                "maxrange": 800,
+                "name": "optic_blast",
+                "time": 0.5
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 10,
+            "aitype": "aoe",
+            "animenum": "ea_power6",
+            "lockangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "trigger": {
+                "life": 2,
+                "name": "powerup",
+                "shared_tag": "shared_stunned",
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/dcyclp_m/p2_charge",
+                "time": 0.27
+            },
+            "trigger": {
+                "effect": "char/dcyclp/p6_power",
+                "name": "effect",
+                "time": 0.5
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "damagetype": "dmg_energy",
+                "fxlevel": 1,
+                "hiteffect": "char/dcyclp/p1_impact",
+                "maxrange": 144,
+                "name": "radial",
+                "time": 0.5,
+                "victimeventtag": 100
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        }
+    }
+}

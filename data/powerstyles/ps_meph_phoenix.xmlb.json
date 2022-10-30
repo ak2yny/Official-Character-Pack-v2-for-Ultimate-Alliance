@@ -1,0 +1,116 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "aireusetime": 5,
+            "aitype": "projectile",
+            "animenum": "ea_power1",
+            "lockangles": true,
+            "lockchaining": false,
+            "name": "power_attack",
+            "priority": 5,
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/phoenx/p1_charge",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/phoenx/p1_charge",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/mphnx_m/p1_charge",
+                "time": 0.3
+            },
+            "trigger": {
+                "arc": 0,
+                "attacktype": "projectile",
+                "center": true,
+                "count": 1,
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "damagetype": "dmg_telekinesis",
+                "entity": "p1_projectile",
+                "filename": "ents_meph_phoenix",
+                "maxrange": 800,
+                "name": "projectile",
+                "offset": "25 0 0",
+                "speed": 450,
+                "tag": 1,
+                "targetable": true,
+                "time": 0.48
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 4,
+            "aitype": "aoe",
+            "animenum": "ea_power3",
+            "lockangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/phoenx/p3_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/phoenx/p3_power",
+                "fxlevel": 1,
+                "name": "effect_sound",
+                "sound": "char/mphnx_m/p3_charge",
+                "time": 0
+            },
+            "event": {
+                "arc": 180,
+                "attacktype": "blast",
+                "damagescale": "difficulty",
+                "damagetype": "dmg_telekinesis",
+                "fxlevel": 1,
+                "hiteffect": "char/phoenx/p1_impact",
+                "inherit": "punch",
+                "name": "radial_punch"
+            },
+            "trigger": {
+                "effect": "char/phoenx/p3_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.5
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "maxrange": 80,
+                "name": "radial_punch",
+                "time": 0.5
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "maxrange": 110,
+                "name": "radial_punch",
+                "time": 0.59
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "maxrange": 144,
+                "name": "radial_punch",
+                "tag": 4,
+                "time": 0.6
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        }
+    }
+}

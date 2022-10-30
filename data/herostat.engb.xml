@@ -1,0 +1,253 @@
+<characters>
+    <stats ailevel="1" autospend="bruiser" body="7" characteranims="07_captamerica" charactername="Captain America" level="1" menulocation="18" mind="4" name="CaptainAmerica" playable="true" powerstyle="ps_captainamerica" scriptlevel="3" skin="0701" skin_01_name="Ultimate" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="U.S. Agent" skin_04="04" skin_04_name="World War II" sounddir="captam_m" strength="10" team="hero">
+        <Multipart showskin="shield_segment" weaponevent="true" />
+        <talent level="1" name="captam_p1" />
+        <talent level="1" name="leadership" />
+        <talent descname="Crucial Strike" icon="12" name="critical" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="09_spiderman" charactername="Spider-Man" level="1" menulocation="16" mind="8" name="Spiderman" playable="true" powerstyle="ps_spiderman" scriptlevel="3" skin="0901" skin_01_name="Classic" skin_02="02" skin_02_name="Symbiote" skin_03="03" skin_03_name="Scarlet Spider" skin_04="04" skin_04_name="Stark Armor" sounddir="spider_m" strength="6" team="hero">
+        <talent level="1" name="spider_p1" />
+        <talent level="1" name="spider_tied" />
+        <talent level="1" name="spider_zip" />
+        <talent level="1" name="might" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <StatEffect anim="menu_action" bolt="Bip01 L Hand" effect="char/spider/menu_idle" fxlevel="1" />
+        <StatEffect anim="menu_idle" bolt="Bip01 L Hand" effect="char/spider/menu_idle" fxlevel="2" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="10_thor" charactername="Thor" level="1" menulocation="21" mind="8" moveset1="moveset_flying" name="Thor" playable="true" powerstyle="ps_thor" scriptlevel="3" skin="1001" skin_01_name="Ultimate" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Beta Ray Bill" skin_04="04" skin_04_name="Asgardian Armor" sounddir="thor_m" strength="6" team="hero">
+        <talent level="1" name="thor_p1" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="melee_moves" />
+        <Multipart health="0" hideskin="hammer_segment" nonmenuonly="true" showskin="hammer_back_segment" />
+        <Multipart health="0" hideskin="hammer_segment" nonmenuonly="true" showskin="hammer_back_segment" weaponevent="true" />
+        <Multipart health="0" hideskin="hammer_back_segment" menuonly="true" showskin="hammer_segment" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" canbeallythrown="true" characteranims="03_wolverine" charactername="Wolverine" gen_charge_color="0.8 0.2 0.2 1" level="1" level_every_skill_reward="99" menulocation="7" mind="4" name="Wolverine" playable="true" powerstyle="ps_wolverine" scale_factor="1" scriptlevel="3" skin="0301" skin_01_name="Modern" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Astonishing" skin_04="04" skin_04_name="Ultimate" sounddir="wolv_m" strength="10" team="hero">
+        <BoltOn bolt="Bip01 L Hand" model="models/bolton/claw_left" slot="ebolton_clawleft" />
+        <BoltOn bolt="Bip01 R Hand" model="models/bolton/claw_right" slot="ebolton_clawright" />
+        <talent level="1" name="wolv_p1" />
+        <talent level="1" name="wolv_frenzy" />
+        <talent level="1" name="wolv_rage" />
+        <talent level="1" name="might" />
+        <talent level="1" name="healing_factor" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="173_captainmarvel" charactername="Captain Marvel" level="1" menulocation="8" mind="12" moveset1="moveset_flying" name="CaptainMarvel" playable="true" powerstyle="ps_captainmarvel" scriptlevel="3" skin="17304" skin_01_name="Ultimate" skin_02="01" skin_02_name="Genis-Vell" skin_03="02" skin_03_name="Genis" skin_04="03" skin_04_name="Captain Mar-Vell" sounddir="capmvl_m" strength="4" team="hero">
+        <talent level="1" name="captma_p1" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/captmarvel/special_aura" />
+        <StatEffect bolt="Bip01 L Hand" effect="char/captmarvel/special_aura_hand" />
+        <StatEffect bolt="Bip01 R Hand" effect="char/captmarvel/special_aura_hand" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="16_dr_strange" charactername="Doctor Strange" level="1" menulocation="96" mind="12" moveset1="moveset_flying" name="DrStrange" playable="true" powerstyle="ps_drstrange" scriptlevel="3" skin="1601" skin_01_name="Classic" skin_02="02" skin_02_name="Royal Seer" skin_03="03" skin_03_name="Blue Mage" skin_04="04" skin_04_name="Ultimate" sounddir="drstr_m" strength="4" team="hero">
+        <talent level="1" name="drstr_p1" />
+        <talent level="1" name="drstr_teleport" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="171_hawkeye" charactername="Hawkeye" dlchero="true" level="1" menulocation="2" mind="12" name="Hawkeye" playable="true" powerstyle="ps_hawkeye" scriptlevel="3" skin="17102" skin_01_name="Ultimate" skin_02="04" skin_02_name="Modern" skin_03="03" skin_03_name="Street Gear" skin_04="01" skin_04_name="Classic" sounddir="hwkeye_m" strength="4" team="hero">
+        <Multipart health="0" hideskin="20301_bow_back_segment" hideskin2="20301_bow_L_hand_mid_segment" />
+        <Multipart health="0" hideskin="20301_arrow_R_hand_segment" hideskin2="20301_ball_R_hand_segment" />
+        <Multipart health="0" hideskin="20301_ice_R_hand_segment" hideskin2="20301_glue_R_hand_segment" />
+        <Multipart health="0" hideskin="20301_missile_R_hand_segment" hideskin2="20301_bird_R_hand_segment" />
+        <Multipart health="0" hideskin="20301_bow_L_hand_segment" nonmenuonly="true" showskin="20301_bow_back_segment" />
+        <talent level="1" name="hawk_p1" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="13_humantorch" charactername="Human Torch" level="1" menulocation="17" mind="12" moveset1="moveset_flying" name="HumanTorch" playable="true" powerstyle="ps_humantorch" scriptlevel="3" skin="1301" skin_01_name="Ultimate" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Modern" skin_04="04" skin_04_name="Classic" sounddir="humant_m" strength="4" team="hero">
+        <talent level="1" name="humant_p1" />
+        <talent level="1" name="humant_resist" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <StatEffect bolt="fx01" effect="char/humant/special_burning" fxlevel="2" menuonly="true" zoneonly="false" />
+        <StatEffect bolt="fx02" effect="char/humant/special_burning" fxlevel="2" menuonly="true" zoneonly="false" />
+        <StatEffect bolt="Bip01 Head" effect="char/humant/special_burning" fxlevel="1" menuonly="false" skin="03" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/humant/special_burning" fxlevel="3" menuonly="true" skin="03" zoneonly="false" />
+        <StatEffect bolt="Bip01 L Hand" effect="char/humant/special_burning" fxlevel="2" menuonly="false" skin="03" zoneonly="true" />
+        <StatEffect bolt="Bip01 R Hand" effect="char/humant/special_burning" fxlevel="2" menuonly="false" skin="03" zoneonly="true" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="08_iceman" charactername="Iceman" level="1" menulocation="19" mind="12" name="Iceman" playable="true" powerstyle="ps_iceman" scriptlevel="3" skin="0801" skin_01_name="Classic" skin_02="03" skin_02_name="Spiky" skin_03="02" skin_03_name="Bobby Drake" skin_04="04" skin_04_name="Original" sounddir="iceman_m" strength="4" team="hero">
+        <talent level="1" name="iceman_p2" />
+        <talent level="1" name="iceman_resist" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/iceman/special_selfchill" fxlevel="1" skin="01" />
+        <StatEffect anim="menu_idle" bolt="Bip01 R Hand" effect="char/iceman/special_selfchill" fxlevel="2" menuonly="true" skin="03" zoneonly="false" />
+        <StatEffect anim="menu_idle" bolt="Bip01 L Hand" effect="char/iceman/special_selfchill" fxlevel="2" menuonly="true" skin="03" zoneonly="false" />
+        <StatEffect bolt="Bip01 R Hand" effect="char/iceman/special_selfchill" fxlevel="2" menuonly="false" skin="03" zoneonly="true" />
+        <StatEffect bolt="Bip01 L Hand" effect="char/iceman/special_selfchill" fxlevel="2" menuonly="false" skin="03" zoneonly="true" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/iceman/special_selfchill" fxlevel="1" skin="02" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/iceman/special_selfchill" fxlevel="1" skin="04" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/iceman/special_selfchill" fxlevel="1" skin="05" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/iceman/special_selfchill" fxlevel="1" skin="06" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="22_invisiblewoman" charactername="Invisible Woman" level="1" menulocation="14" mind="12" name="InvisibleWoman" playable="true" powerstyle="ps_invisiblewoman" scriptlevel="3" skin="2201" skin_01_name="Ultimate" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="New Marvel" skin_04="04" skin_04_name="Classic" sounddir="invisw_m" strength="4" team="hero">
+        <talent level="1" name="inviswm_p1" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="14_warbird" charactername="Ms. Marvel" level="1" menulocation="1" mind="12" moveset1="moveset_flying" name="Warbird" playable="true" powerstyle="ps_warbird" scriptlevel="3" skin="1401" skin_01_name="Warbird" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Ventura" skin_04="04" skin_04_name="Binary" sounddir="warbir_m" strength="4" team="hero">
+        <talent level="1" name="war_power4" />
+        <talent level="1" name="war_resist" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="80_silver_surfer" charactername="Silver Surfer" level="1" menulocation="13" mind="12" moveset1="moveset_flying" name="SilverSurfer" playable="true" powerstyle="ps_silversurfer" scriptlevel="3" skin="8001" skin_01_name="Classic" skin_02="02" skin_02_name="Captain Universe" skin_03="03" skin_03_name="The Keeper" skin_04="04" skin_04_name="Silver Savage" sounddir="silver_m" strength="4" team="hero">
+        <BoltOn bolt="Bip01 R Toe0" menuonly="true" model="models/bolton/silver_surfer_surfboard" slot="ebolton_clawleft" />
+        <talent level="1" name="silver_p1" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="5" characteranims="04_storm" charactername="Storm" level="1" menulocation="15" mind="12" moveset1="moveset_flying" name="Storm" playable="true" powerstyle="ps_storm" scriptlevel="3" skin="0401" skin_01_name="Astonishing" skin_02="02" skin_02_name="Retro" skin_03="03" skin_03_name="Ultimate" skin_04="04" skin_04_name="Classic" sounddir="storm_m" strength="4" team="hero">
+        <talent level="1" name="storm_strike" />
+        <talent level="1" name="storm_resist" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="leadership" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="06_ghostrider" charactername="Ghost Rider" level="1" menulocation="3" mind="8" name="GhostRider" playable="true" powerstyle="ps_ghostrider" scriptlevel="3" skin="0601" skin_01_name="Classic" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Vengeance" skin_04="04" skin_04_name="Western" sounddir="ghost_m" strength="6" team="hero">
+        <talent level="1" name="ghost_p1" />
+        <talent level="1" name="ghost_resist" />
+        <talent level="1" name="might" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" menuonly="false" skin="01" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="01" zoneonly="false" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" menuonly="false" skin="02" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="02" zoneonly="false" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" menuonly="false" skin="03" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="03" zoneonly="false" />
+        <StatEffect bolt="Bip01 Spine2" effect="char/ghostr/special_burninghead" fxlevel="3" skin="04" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" menuonly="false" skin="05" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="05" zoneonly="false" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" menuonly="false" skin="06" zoneonly="true" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="2" menuonly="true" skin="06" zoneonly="false" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="17_deadpool" charactername="Deadpool" level="1" menulocation="11" mind="8" name="Deadpool" playable="true" powerstyle="ps_deadpool" scriptlevel="3" skin="1701" skin_01_name="Classic" skin_02="02" skin_02_name="Ultimate" skin_03="03" skin_03_name="Weapon X" skin_04="04" skin_04_name="Assassin" sounddir="dphero_m" strength="6" team="hero">
+        <Multipart health="0" hideskin="sword_l_back" />
+        <Multipart health="0" hideskin="sword_r_hand" />
+        <Multipart health="0" hideskin="sword_l_hand_reverse" />
+        <Multipart health="0" hideskin="guns" />
+        <Multipart health="0" nonmenuonly="true" showskin="sword_l_back" />
+        <Multipart health="0" hideskin="sword_l_hand" nonmenuonly="true" />
+        <talent level="1" name="dead_p1" />
+        <talent level="1" name="dead_tele" />
+        <talent level="1" name="healing_factor" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="12_elektra" charactername="Elektra" level="1" menulocation="9" mind="8" name="Elektra" playable="true" powerstyle="ps_elektra" scriptlevel="3" skin="1201" skin_01_name="Classic" skin_02="02" skin_02_name="Ultimate" skin_03="03" skin_03_name="Assassin" skin_04="04" skin_04_name="Stealth" sounddir="elekra_m" strength="6" team="hero">
+        <Multipart health="0" hideskin="1201_sai_left_segment" />
+        <Multipart health="0" hideskin="1201_sai_right_segment" />
+        <Multipart health="0" hideskin="1201_star_left_segment" />
+        <Multipart health="0" hideskin="1201_star_right_segment" />
+        <Multipart health="0" menuonly="true" showskin="1201_sai_left_segment" />
+        <Multipart health="0" menuonly="true" showskin="1201_sai_right_segment" />
+        <talent level="1" name="elektra_p4" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="15_ironman" charactername="Iron Man" level="1" menulocation="24" mind="8" moveset1="moveset_flying" name="Ironman" playable="true" powerstyle="ps_ironman" scriptlevel="3" skin="1502" skin_01_name="New Avenger" skin_02="05" skin_02_name="Classic" skin_03="03" skin_03_name="War Machine" skin_04="04" skin_04_name="Ultimate" sounddir="iron_m" strength="6" team="hero">
+        <talent level="1" name="ironman_p1" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="41_moonknight" charactername="Moon Knight" level="1" menulocation="25" mind="8" name="MoonKnight" playable="true" powerstyle="ps_moonknight" scriptlevel="3" skin="4101" skin_01_name="Classic" skin_02="02" skin_02_name="Ultimate" skin_03="03" skin_03_name="Khonshu" skin_04="04" skin_04_name="Retro" sounddir="moon_m" strength="6" team="hero">
+        <BoltOn bolt="Bip01 L Hand" menuonly="true" model="models/bolton/moonknight_staff" slot="ebolton_clawleft" />
+        <talent level="1" name="moonk_p1" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="might" />
+    </stats>
+    <stats ailevel="1" autospend="support" body="7" characteranims="21_nickfury" charactername="Nick Fury" level="1" menulocation="20" mind="8" name="NickFury" playable="true" powerstyle="ps_nickfury" scriptlevel="3" skin="2101" skin_01_name="Classic" skin_02="02" skin_02_name="Stealth" skin_03="03" skin_03_name="Ultimate" skin_04="04" skin_04_name="General Fury" sounddir="fury_m" strength="6" team="hero">
+        <Multipart health="0" hideskin="gun_left_segment" />
+        <Multipart health="0" hideskin="gun_right_segment" />
+        <talent level="1" name="nickf_p1" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="38_spider_woman" charactername="Spider-Woman" level="1" menulocation="12" mind="8" moveset1="moveset_flying" name="SpiderWoman" playable="true" powerstyle="ps_spiderwoman" scriptlevel="3" skin="3801" skin_01_name="Classic" skin_02="02" skin_02_name="Agent of S.H.I.E.L.D." skin_03="03" skin_03_name="Secret Wars" skin_04="04" skin_04_name="Spider-Girl" sounddir="spidwm_m" strength="6" team="hero">
+        <talent level="1" name="spdwm_power1" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" characteranims="11_black_panther" charactername="Black Panther" level="1" menulocation="10" mind="4" name="BlackPanther" playable="true" powerstyle="ps_blackpanther" scriptlevel="3" skin="1101" skin_01_name="Modern" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Ceremonial" skin_04="04" skin_04_name="Holy Armor" sounddir="blackp_m" strength="10" team="hero">
+        <Multipart health="0" hideskin="dagger_l_segment" />
+        <Multipart health="0" hideskin="dagger_r_segment" />
+        <talent level="1" name="panther_p1" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" characteranims="01_blade" charactername="Blade" level="1" menulocation="26" mind="4" name="Blade" playable="true" powerstyle="ps_blade" scriptlevel="3" skin="0101" skin_01_name="Ultimate" skin_02="02" skin_02_name="Classic" skin_03="03" skin_03_name="Night Stalker" skin_04="04" skin_04_name="Daywalker" sounddir="blade_m" strength="10" team="hero">
+        <Multipart health="0" hideskin="0101_sword_back_segment" />
+        <Multipart health="0" hideskin="0101_gun_segment" />
+        <Multipart health="0" nonmenuonly="true" showskin="0101_sword_back_segment" />
+        <Multipart health="0" hideskin="0101_sword_segment" nonmenuonly="true" />
+        <talent level="1" name="blade_p1" />
+        <talent level="1" name="blade_regen" />
+        <talent level="1" name="might" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" canseestealthed="true" characteranims="02_daredevil" charactername="Daredevil" level="1" menulocation="4" mind="4" name="Daredevil" playable="true" powerstyle="ps_daredevil" scriptlevel="3" skin="0201" skin_01_name="Classic" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Armored" skin_04="04" skin_04_name="Marvel Knight" sounddir="ddevil_m" strength="10" team="hero">
+        <talent level="1" name="devil_p1" />
+        <talent level="1" name="devil_vision" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+        <Multipart health="0" hideskin="batons_segment" menuonly="true" />
+        <Multipart health="0" hideskin="baton_hand_segment" nonmenuonly="true" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser_light" body="7" characteranims="20_mrfantastic" charactername="Mr. Fantastic" level="1" menulocation="5" mind="8" name="MrFantastic" playable="true" powerstyle="ps_mrfantastic" scriptlevel="3" skin="2001" skin_01_name="Ultimate" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="New Marvel" skin_04="04" skin_04_name="Classic" sounddir="mrfan_m" strength="6" team="hero">
+        <talent level="1" name="mrfan_p3" />
+        <talent level="1" name="leadership" />
+        <talent level="1" name="melee_moves" />
+        <talent level="1" name="fightstyle_default" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" canthrowally="true" characteranims="170_Hulk" characteranimsclass="humanoid_large" charactername="Hulk" ignoreboundsscaling="true" level="1" menulocation="22" mind="4" name="Hulk" playable="true" powerstyle="ps_hulk" scale_factor="1.3" scriptlevel="3" skin="17001" skin_01_name="Classic" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Planet Hulk" skin_04="04" skin_04_name="Joe Fixit" sounddir="hulk_m" strength="12" team="hero">
+        <talent level="1" name="hulk_power1" />
+        <talent level="1" name="healing_factor" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" canthrowally="true" characteranims="157_luke_cage" charactername="Luke Cage" ignoreboundsscaling="true" level="1" menulocation="6" mind="4" name="LukeCage" playable="true" powerstyle="ps_lukecage" scale_factor="1.15" scaleattacks="true" scriptlevel="3" skin="15701" skin_01_name="New Avengers" skin_02="02" skin_02_name="Hero for Hire" skin_03="03" skin_03_name="Street" skin_04="04" skin_04_name="Modern" sounddir="lukeca_m" strength="10" team="hero">
+        <talent level="1" name="lukec_p1" />
+        <talent level="1" name="lukec_grabsma" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats ailevel="1" autospend="bruiser" body="7" canthrowally="true" characteranims="05_thing" characteranimsclass="humanoid_large" charactername="Thing" ignoreboundsscaling="true" level="1" menulocation="23" mind="4" name="Thing" playable="true" powerstyle="ps_thing" scale_factor="1.3" scriptlevel="3" skin="0501" skin_01_name="Modern" skin_02="02" skin_02_name="Original" skin_03="03" skin_03_name="Classic" skin_04="04" skin_04_name="Ultimate" sounddir="thing_m" strength="10" team="hero">
+        <talent level="1" name="thing_p1" />
+        <talent level="1" name="might" />
+        <talent level="1" name="no_grab" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="melee_moves" />
+    </stats>
+    <stats autospend="support" isteam="true" name="team_character" skin="0002" xpexempt="true" />
+</characters>

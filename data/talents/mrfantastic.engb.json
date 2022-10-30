@@ -1,0 +1,1475 @@
+{
+    "talents": {
+        "talent": {
+            "descname": "Pinball",
+            "description": "Roll up in a ball and bounce around. Press $GUARD to return to normal mode, and $ATTACK to dash. Damage is based on contact speed. Executing any other power will exit pinball mode.",
+            "descshort": "Special",
+            "icon": 0,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p1",
+            "power": "power1",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p1_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p1_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p1_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p1_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p1_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "bounce_roll_dmg",
+                    "value": "13 15",
+                    "value_charged": "34 38"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "bounce_roll_dmg",
+                    "value": "13 15",
+                    "value_charged": "44 49"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "bounce_roll_dmg",
+                    "value": "17 19",
+                    "value_charged": "58 64"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "bounce_roll_dmg",
+                    "value": "27 30",
+                    "value_charged": "92 101"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "bounce_roll_dmg",
+                    "value": "37 41",
+                    "value_charged": "132 147"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p1_pwr",
+                    "value": 11
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p1_pwr",
+                    "value": 15
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p1_pwr",
+                    "value": 15
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p1_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p1_pwr",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p1_scale",
+                    "value": 0,
+                    "value_charged": 1
+                }
+            },
+            "level": {
+                "description": "%bounce_roll_dmg contact $DMG_PHYSICAL\\n%mrfan_p1_pwr $EP/sec",
+                "tier": {
+                    "cost": 1,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p1_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Propeller Arms",
+            "description": "Walk forward spinning arms, popping up and damaging anything that gets in the way. $PT_HOLD",
+            "descshort": "Special",
+            "icon": 1,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p2",
+            "power": "power2",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p2_req",
+                    "value": 5
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p2_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p2_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p2_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p2_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p2_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p2_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p2_dmg",
+                    "value": "17 19"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p2_dmg",
+                    "value": "34 38"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p2_dmg",
+                    "value": "48 53"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p2_dmg",
+                    "value": "65 71"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p2_dmg",
+                    "value": "85 94"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p2_dmg",
+                    "value": "132 147"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p2_dmg",
+                    "value": "190 210"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p2_pwr",
+                    "value": 11
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p2_pwr",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p2_pwr",
+                    "value": 19
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p2_pwr",
+                    "value": 24
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p2_pwr",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p2_pwr",
+                    "value": 39
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p2_pwr",
+                    "value": 47
+                }
+            },
+            "level": {
+                "description": "%mrfan_p2_dmg $DMG_PHYSICAL/Sec\\n%mrfan_p2_pwr $EP/Sec",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p2_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Elastic Crush",
+            "description": "Slam fists into nearby victim. If victim is stunned, does 50% extra $DMG.",
+            "descshort": "Projectile",
+            "icon": 2,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p3",
+            "power": "power3",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p3_req",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p3_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p3_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p3_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p3_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p3_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p3_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p3_dmg",
+                    "value": "17 19"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p3_dmg",
+                    "value": "58 64"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p3_dmg",
+                    "value": "78 86"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p3_dmg",
+                    "value": "109 120"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p3_dmg",
+                    "value": "139 154"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p3_dmg",
+                    "value": "221 244"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p3_dmg",
+                    "value": "319 353"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p3_pwr",
+                    "value": 7
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p3_pwr",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p3_pwr",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p3_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p3_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p3_pwr",
+                    "value": 34
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p3_pwr",
+                    "value": 43
+                }
+            },
+            "level": {
+                "description": "%mrfan_p3_dmg $DMG_PHYSICAL\\n%mrfan_p3_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p3_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Drastic Elastic",
+            "description": "Swing arms in a huge arc. If fully charged, knocks down targets.  $PT_CHARGE\\n",
+            "descshort": "Radial",
+            "icon": 3,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p4",
+            "power": "power4",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p4_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p4_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p4_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "mrfan_p4_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p4_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "mrfan_p4_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "mrfan_p4_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p4_dmg",
+                    "value": "17 19",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p4_dmg",
+                    "value": "20 23",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p4_dmg",
+                    "value": "31 34",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "mrfan_p4_dmg",
+                    "value": "41 45",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p4_dmg",
+                    "value": "54 60",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "mrfan_p4_dmg",
+                    "value": "85 94",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "mrfan_p4_dmg",
+                    "value": "126 139",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p4_kb",
+                    "value": 190
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "mrfan_p4_kb",
+                    "value": 305
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p4_pwr",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p4_pwr",
+                    "value": 18
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p4_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "mrfan_p4_pwr",
+                    "value": 27
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p4_pwr",
+                    "value": 30
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "mrfan_p4_pwr",
+                    "value": 44
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "mrfan_p4_pwr",
+                    "value": 56
+                }
+            },
+            "level": {
+                "description": "%mrfan_p4_dmg $DMG_PHYSICAL\\n%mrfan_p4_kb $KB\\n%mrfan_p4_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 3
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p4_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Rubberband Recoil",
+            "description": "Jump into the air, coming down on enemies and knocking them back.  $PT_CHARGE",
+            "descshort": "Special",
+            "icon": 4,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p5",
+            "power": "power5",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p5_req",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p5_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p5_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p5_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p5_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p5_dmg",
+                    "value": "51 56",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p5_dmg",
+                    "value": "65 71",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p5_dmg",
+                    "value": "82 90",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p5_dmg",
+                    "value": "132 147",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p5_dmg",
+                    "value": "190 210",
+                    "value_charged_scale": 2.0
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p5_rng",
+                    "value": 36,
+                    "value_charged": 64
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p5_pwr",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "mrfan_p5_pwr",
+                    "value": 24
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "mrfan_p5_pwr",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p5_pwr",
+                    "value": 39
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p5_pwr",
+                    "value": 47
+                }
+            },
+            "level": {
+                "description": "%mrfan_p5_dmg $DMG_PHYSICAL\\n%mrfan_p5_rng:r feet radius\\n%mrfan_p5_pwr $EP",
+                "tier": {
+                    "cost": 2,
+                    "count": 3
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p5_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Fantastic Fists",
+            "description": "Size up Mr. Fantastic's fists, and do extra melee $DMG for a time, along with his chance for critical hits.",
+            "descshort": "Boost",
+            "icon": 5,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p6",
+            "power": "power6",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p6_req",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p6_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p6_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p6_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p6_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p6_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p6_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p6_dmg",
+                    "value": 1.1
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p6_dmg",
+                    "value": 1.5
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p6_pct",
+                    "value": 0.08
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p6_pct",
+                    "value": 1.15
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p6_lif",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p6_lif",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p6_lif",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p6_lif",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p6_lif",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p6_lif",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p6_lif",
+                    "value": 180
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p6_pwr",
+                    "value": 32
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p6_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p6_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_p6_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p6_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "mrfan_p6_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "mrfan_p6_pwr",
+                    "value": 172
+                }
+            },
+            "level": {
+                "description": "%mrfan_p6_dmg:s melee $DMG\\n%mrfan_p6_pct:p chance of Criticals\\n%mrfan_p6_lif Seconds\\n%mrfan_p6_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p6_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Elastic Evasion",
+            "description": "Temporarily increase the elasticity of Mr. Fantastic's skin, giving him the ability to deflect nearly all projectile and beam attacks.",
+            "descshort": "Boost",
+            "icon": 6,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p7",
+            "power": "power7",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p7_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "mrfan_p7_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p7_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p7_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p7_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "mrfan_p7_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p7_lif",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "mrfan_p7_lif",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p7_lif",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p7_lif",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p7_lif",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "mrfan_p7_lif",
+                    "value": 180
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p7_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "mrfan_p7_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "mrfan_p7_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "mrfan_p7_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "mrfan_p7_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "mrfan_p7_pwr",
+                    "value": 172
+                }
+            },
+            "level": {
+                "description": "%mrfan_p7_lif Seconds\\n%mrfan_p7_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p7_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Orbital Attack",
+            "description": "Call in an airstrike on nearby enemies. Increases $DMG done by other attacks in sequence, and greatly increases $XP earned as well.",
+            "descshort": "Xtreme",
+            "icon": 7,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfan_p8",
+            "power": "team_xtreme",
+            "type": "xtreme",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p8_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p8_req",
+                    "value": 45
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p8_dmg",
+                    "value": "51 56"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p8_dmg",
+                    "value": "204 225"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p8_dmgs",
+                    "value": 1.15
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p8_dmgs",
+                    "value": 1.5
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_p8_xp",
+                    "value": 3
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "mrfan_p8_xp",
+                    "value": 5
+                }
+            },
+            "level": {
+                "description": "%mrfan_p8_dmg $DMG\\n%mrfan_p8_dmgs:s $DMG by other powers in sequence\\n%mrfan_p8_xp:s $XP",
+                "tier": {
+                    "cost": 2,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 0,
+                    "count": 7
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%mrfan_p8_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Energy Regen",
+            "description": "Increases $EP regeneration.",
+            "icon": 31,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit11",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit11_pct",
+                    "value": 1.01
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit11_pct",
+                    "value": 1.05
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit11_shw",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit11_shw",
+                    "value": 5
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit11_shw:f% $EP regeneration",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "energy_regen",
+                        "level": "%mrfan_outfit11_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Power Damage",
+            "description": "Increase damage from powers.",
+            "icon": 5,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfanoutfit12",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit12_dmg",
+                    "value": 1.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit12_dmg",
+                    "value": 1.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%mrfan_outfit12_dmg:s $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "atk_damage",
+                        "level": "%mrfan_outfit12_dmg",
+                        "scope_powers": true
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit13",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit13_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit13_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit13_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%mrfan_outfit13_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Melee Damage",
+            "description": "Increases Melee $DMG.",
+            "icon": 5,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit21",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit21_pct",
+                    "value": 1.04
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit21_pct",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%mrfan_outfit21_pct:s $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "atk_damage",
+                        "level": "%mrfan_outfit21_pct",
+                        "scope_non_powers": true
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Max Health",
+            "description": "Increases maximum $HP.",
+            "icon": 20,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit22",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit22_pct",
+                    "value": 1.05
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit22_pct",
+                    "value": 1.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%mrfan_outfit22_pct:s maximum $HP",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "maxhealth",
+                        "level": "%mrfan_outfit22_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit23",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit23_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit23_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit23_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%mrfan_outfit23_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Combo Bonus XP",
+            "description": "Gives bonus $XP for combos.",
+            "icon": 6,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit31",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit31_pct",
+                    "value": 0.25
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit31_pct",
+                    "value": 1.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit31_pct:p $XP from combos",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "combo_xp",
+                        "level": "%mrfan_outfit31_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Power Damage",
+            "description": "Increase damage from powers.",
+            "icon": 5,
+            "icon_texture": "textures/ui/mrfantastic_icons.png",
+            "name": "mrfanoutfit32",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit32_dmg",
+                    "value": 1.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit32_dmg",
+                    "value": 1.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%mrfan_outfit32_dmg:s $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "atk_damage",
+                        "level": "%mrfan_outfit32_dmg",
+                        "scope_powers": true
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit33",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit33_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit33_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit33_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%mrfan_outfit33_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Reflect Damage",
+            "description": "Reflect some Melee $DMG back to the attacker.",
+            "icon": 19,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit41",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit41_pct",
+                    "value": 0.25
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit41_pct",
+                    "value": 1.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%mrfan_outfit41_pct:p $DMG reflected",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "reflect_damage",
+                        "level": "%mrfan_outfit41_pct",
+                        "scope_non_powers": true,
+                        "scope": {
+                            "scope_attack": "punch"
+                        },
+                        "scope": {
+                            "scope_attack": "kick"
+                        }
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Focus",
+            "description": "Increases focus.",
+            "icon": 24,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfanoutfit42",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit42_pct",
+                    "value": 3
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit42_pct",
+                    "value": 15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit42_pct Focus",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "mind",
+                        "level": "%mrfan_outfit42_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "mrfan_outfit43",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "mrfan_outfit43_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "mrfan_outfit43_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%mrfan_outfit43_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%mrfan_outfit43_dr"
+                    }
+                }
+            }
+        }
+    }
+}

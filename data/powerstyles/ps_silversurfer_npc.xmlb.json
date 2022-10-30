@@ -1,0 +1,271 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "airbornemovement": true,
+            "animenum": "ea_fly_idle",
+            "handler": "ch_flying",
+            "lockchaining": false,
+            "name": "flying",
+            "noncombat": true,
+            "powerup_tag": "flying",
+            "chain": {
+                "action": "idle",
+                "result": "flying"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_fly_idle",
+            "handler": "ch_idle",
+            "lockchaining": false,
+            "name": "idle",
+            "noncombat": true,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_fly_idle",
+            "handler": "ch_idle",
+            "lockchaining": false,
+            "name": "surferstand",
+            "noncombat": true,
+            "chain": {
+                "action": "idle",
+                "result": "surferstand"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power4",
+            "icon": 3,
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "attackheavy1",
+            "noautoaim": true,
+            "priority": 5,
+            "event": {
+                "arc": 0,
+                "attacktype": "beam",
+                "beameffect": "char/ssurfer/p4_power",
+                "damagescale": "none",
+                "damagetype": "dmg_energy",
+                "fulltargeting": true,
+                "fxlevel": 3,
+                "hiteffect": "char/ssurfer/p4_impact",
+                "inherit": "beam",
+                "maxrange": 800,
+                "name": "silver_beam_fx",
+                "targetable": true
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_charge",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/ssurfer/p4_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.24
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/ssurfer/p4_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.24
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/ssurfer/p4_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.24
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_power",
+                "time": 0.55
+            },
+            "trigger": {
+                "attack_bone_angles": "-87 -1 -1",
+                "attack_bone_pos": "32 -4 54",
+                "beambolt": "Bip01 R Hand",
+                "damage": "102 113",
+                "damagelevel": 10,
+                "name": "silver_beam_fx",
+                "time": 0.55
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "animenum": "ea_power5",
+            "icon": 4,
+            "lockangles": true,
+            "name": "attacklight1",
+            "priority": 5,
+            "event": {
+                "damage": "170 188",
+                "inherit": "radial",
+                "knockback": 305,
+                "maxrange": 60,
+                "name": "power5_hit"
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "effect": "char/ssurfer/p5_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.31
+            },
+            "trigger": {
+                "bolt": "Bip01 Pelvis",
+                "effect": "char/ssurfer/p5_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.31
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.345
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.379
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.414
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.448
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.483
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.517
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.552
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.586
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.621
+            },
+            "trigger": {
+                "name": "power5_hit",
+                "time": 0.655
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power6",
+            "blendtime": 0,
+            "lockchaining": true,
+            "name": "power8",
+            "noncombat": false,
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_charge",
+                "time": 0.15
+            },
+            "trigger": {
+                "bolt": "Bip01 R Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.256
+            },
+            "trigger": {
+                "bolt": "Bip01 L Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.256
+            },
+            "trigger": {
+                "bolt": "Bip01 R Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.256
+            },
+            "trigger": {
+                "bolt": "Bip01 L Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.256
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_power",
+                "time": 0.256
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_charge",
+                "time": 0.48
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_charge",
+                "time": 0.71
+            },
+            "trigger": {
+                "bolt": "Bip01 R Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.843
+            },
+            "trigger": {
+                "bolt": "Bip01 L Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.843
+            },
+            "trigger": {
+                "bolt": "Bip01 R Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.843
+            },
+            "trigger": {
+                "bolt": "Bip01 L Forearm",
+                "effect": "char/silver/galac_beam",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.843
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/ssurf_m/p4_power",
+                "time": 0.843
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "animenum": "ea_power1",
+            "lockangles": true,
+            "name": "power_attack",
+            "priority": 5,
+            "trigger": {
+                "donothing": true,
+                "life": 2,
+                "name": "hotspot",
+                "radius": 250,
+                "time": 0
+            },
+            "trigger": {
+                "jump": true,
+                "life": 0.5,
+                "name": "hotspot",
+                "radius": 250,
+                "time": 0.52
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/abot_m/p1_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/abot/p1_charge",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/abot/p1_charge",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/abot/p1_charge",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/abot/p1_power",
+                "name": "effect_sound",
+                "sound": "char/abot_m/p1_power",
+                "time": 0.53
+            },
+            "trigger": {
+                "arc": 180,
+                "attacktype": "punch",
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "knockback": 1200,
+                "maxrange": 250,
+                "name": "punch",
+                "offset": 55,
+                "time": 0.53,
+                "damageMod": {
+                    "name": "dmgmod_auto_knockback"
+                },
+                "damageMod": {
+                    "name": "dmgmod_popup"
+                },
+                "damageMod": {
+                    "name": "dmgmod_ground_only"
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "event": {
+            "attacktype": "beam",
+            "beambolt": "Bip01 L Hand",
+            "beameffect": "char/abot/p2_power",
+            "damage": "%mdmg_high",
+            "damagescale": "difficulty",
+            "hiteffect": "char/abot/p1_impact",
+            "inherit": "beam",
+            "knockback": 1200,
+            "name": "chain_gun",
+            "targetable": true,
+            "damageMod": {
+                "name": "dmgmod_auto_knockback"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power2",
+            "lockangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "trigger": {
+                "name": "stop",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/abot_m/p2_charge",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/abot_m/p2_power",
+                "time": 0.5
+            },
+            "trigger": {
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "74 -83 183",
+                "beambolt": "Bip01 R Hand",
+                "name": "chain_gun",
+                "time": 0.57
+            },
+            "trigger": {
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "55 81 186",
+                "name": "chain_gun",
+                "time": 0.57
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power3",
+            "blendtime": 0.2,
+            "handler": "ch_grab_hold_base",
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "start_challenge",
+            "priority": 5,
+            "trigger": {
+                "doslidemove": true,
+                "interaction": "data/fightstyles/interact_arcadebot_victim",
+                "name": "victim",
+                "nodename": "challenge_victim",
+                "offset": "3 -5 376",
+                "time": 0
+            },
+            "chain": {
+                "action": "idle",
+                "result": "null"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power4",
+            "blendtime": 0.2,
+            "handler": "ch_grab_hold_base",
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "win_challenge",
+            "priority": 5,
+            "trigger": {
+                "critical": true,
+                "name": "victim_release",
+                "ownertime": 1,
+                "time": 0.01
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "hero_challenges/arcade/arcade_win",
+                "time": 0.1
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power5",
+            "blendtime": 0.2,
+            "handler": "ch_grab_hold_base",
+            "lockangles": true,
+            "lockchaining": true,
+            "locktransitionangles": true,
+            "name": "lose_challenge",
+            "priority": 5,
+            "trigger": {
+                "critical": true,
+                "name": "victim_release",
+                "ownertime": 3,
+                "time": 0.01
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "name": "power_normalspeed",
+            "trigger": {
+                "name": "powerup",
+                "remove_tag": "_arcade_remove",
+                "tag": 70,
+                "time": 0
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        }
+    }
+}

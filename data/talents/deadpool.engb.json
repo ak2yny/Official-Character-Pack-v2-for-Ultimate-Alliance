@@ -1,0 +1,1519 @@
+{
+    "talents": {
+        "talent": {
+            "descname": "Assassin Strike",
+            "description": "Deadly multi-hit sword attack.",
+            "descshort": "Melee",
+            "icon": 0,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p1",
+            "power": "power1",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p1_req",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p1_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p1_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p1_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p1_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p1_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p1_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p1_pwr",
+                    "value": 7
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p1_pwr",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p1_pwr",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p1_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p1_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p1_pwr",
+                    "value": 34
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p1_pwr",
+                    "value": 43
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p1_dmg",
+                    "value": "11 13"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p1_dmg",
+                    "value": "31 34"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p1_dmg",
+                    "value": "44 49"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p1_dmg",
+                    "value": "61 68"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p1_dmg",
+                    "value": "82 90"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p1_dmg",
+                    "value": "129 143"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p1_dmg",
+                    "value": "190 210"
+                }
+            },
+            "level": {
+                "description": "%dead_p1_dmg $DMG_PHYSICAL\\n%dead_p1_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p1_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Dual Shot",
+            "description": "Pull out two pistols and shoot, chance to knock down enemies hit.  $PT_HOLD",
+            "descshort": "Projectile",
+            "icon": 1,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p2",
+            "power": "power2",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p2_req",
+                    "value": 5
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p2_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p2_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p2_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p2_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p2_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p2_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p2_pwr",
+                    "value": 6
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p2_pwr",
+                    "value": 9
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p2_pwr",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p2_pwr",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p2_pwr",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p2_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p2_pwr",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p2_dmg",
+                    "value": "10 12"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p2_dmg",
+                    "value": "17 19"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p2_dmg",
+                    "value": "24 26"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p2_dmg",
+                    "value": "34 38"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p2_dmg",
+                    "value": "48 53"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p2_dmg",
+                    "value": "75 83"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p2_dmg",
+                    "value": "109 120"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p2_tc",
+                    "value": 0.01
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p2_tc",
+                    "value": 0.2
+                }
+            },
+            "level": {
+                "description": "%dead_p2_dmg $DMG_PHYSICAL per bullet\\n%dead_p2_tc:p chance\\n%dead_p2_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p2_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Teleport Flurry",
+            "description": "Rapid teleport attack on several targets.",
+            "descshort": "Special",
+            "icon": 2,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p3",
+            "power": "power3",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p3_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p3_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "dead_p3_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p3_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "dead_p3_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_pwr",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p3_pwr",
+                    "value": 15
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p3_pwr",
+                    "value": 18
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "dead_p3_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p3_pwr",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "dead_p3_pwr",
+                    "value": 37
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_pwr",
+                    "value": 47
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_dmg",
+                    "value": "27 30"
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p3_dmg",
+                    "value": "31 34"
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p3_dmg",
+                    "value": "44 49"
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "dead_p3_dmg",
+                    "value": "61 68"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p3_dmg",
+                    "value": "82 90"
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "dead_p3_dmg",
+                    "value": "129 143"
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_dmg",
+                    "value": "190 210"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_rng",
+                    "value": 240
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_rng",
+                    "value": 600
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_num_att",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p3_num_att",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p3_num_att",
+                    "value": 3
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p3_num_att",
+                    "value": 3
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p3_num_att",
+                    "value": 4
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "dead_p3_num_att",
+                    "value": 4
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_num_att",
+                    "value": 5
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p3_stn_lif",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "dead_p3_stn_lif",
+                    "value": 8
+                }
+            },
+            "level": {
+                "description": "%dead_p3_dmg $DMG_PHYSICAL\\n%dead_p3_rng:r Feet\\n%dead_p3_num_att Attacks\\n%dead_p3_stn_lif Seconds stun\\n%dead_p3_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 3
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p3_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Blade Cyclone",
+            "description": "Radial sword spin attack. $PT_HOLD",
+            "descshort": "Radial",
+            "icon": 3,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p4",
+            "power": "power4",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p4_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p4_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p4_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p4_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p4_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p4_pwr",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p4_pwr",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p4_pwr",
+                    "value": 18
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p4_pwr",
+                    "value": 27
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p4_pwr",
+                    "value": 34
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p4_dmg",
+                    "value": "20 23"
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p4_dmg",
+                    "value": "31 34"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p4_dmg",
+                    "value": "37 41"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p4_dmg",
+                    "value": "61 68"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p4_dmg",
+                    "value": "88 98"
+                }
+            },
+            "level": {
+                "description": "%dead_p4_dmg $DMG_PHYSICAL/s\\n%dead_p4_pwr $EP/s",
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p4_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Grenade Toss",
+            "description": "Throws several grenades that explode when within 3 feet of an enemy or when time expires.",
+            "descshort": "Blast",
+            "icon": 4,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p5",
+            "power": "power5",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p5_req",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p5_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p5_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p5_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p5_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p5_pwr",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p5_pwr",
+                    "value": 24
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p5_pwr",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p5_pwr",
+                    "value": 39
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p5_pwr",
+                    "value": 47
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p5_dmg",
+                    "value": "54 60"
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "dead_p5_dmg",
+                    "value": "65 71"
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "dead_p5_dmg",
+                    "value": "85 94"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p5_dmg",
+                    "value": "132 147"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p5_dmg",
+                    "value": "190 210"
+                }
+            },
+            "level": {
+                "description": "%dead_p5_dmg $DMG_PHYSICAL\\n%dead_p5_pwr $EP",
+                "tier": {
+                    "cost": 2,
+                    "count": 3
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p5_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Wisecrack",
+            "description": "Taunts nearby enemies, lowering their defenses and causing them to attack.",
+            "descshort": "Debuff",
+            "icon": 5,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p6",
+            "power": "power6",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p6_req",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p6_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p6_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p6_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p6_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p6_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p6_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p6_pwr",
+                    "value": 32
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p6_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p6_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p6_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p6_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p6_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p6_pwr",
+                    "value": 172
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p6_life",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p6_life",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p6_life",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_p6_life",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p6_life",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "dead_p6_life",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p6_life",
+                    "value": 180
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p6_defdmg",
+                    "value": 1.1
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "dead_p6_defdmg",
+                    "value": 1.5
+                }
+            },
+            "level": {
+                "description": "%dead_p6_defdmg:s $DMG_PHYSICAL\\n%dead_p6_life Seconds\\n%dead_p6_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p6_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Battle Cry",
+            "description": "Boosts allies' attack speed and $DMG temporarily.",
+            "descshort": "Boost",
+            "icon": 6,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p7",
+            "power": "power7",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p7_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "dead_p7_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p7_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p7_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p7_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "dead_p7_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p7_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "dead_p7_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p7_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p7_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p7_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "dead_p7_pwr",
+                    "value": 172
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p7_life",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "dead_p7_life",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "dead_p7_life",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "dead_p7_life",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "dead_p7_life",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "dead_p7_life",
+                    "value": 180
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p7_spd",
+                    "value": 1.01
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "dead_p7_spd",
+                    "value": 1.15
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p7_dmg",
+                    "value": "10 12"
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "dead_p7_dmg",
+                    "value": "51 56"
+                }
+            },
+            "level": {
+                "description": "+%dead_p7_dmg $DMG\\n%dead_p7_spd:s Speed\\n%dead_p7_life Seconds\\n%dead_p7_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p7_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Merc's Revenge",
+            "description": "Jump in the air and do a 360 spin, taking down every enemy in sight.",
+            "descshort": "Xtreme",
+            "icon": 7,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_p8",
+            "power": "team_xtreme",
+            "type": "team_xtreme",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p8_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p8_req",
+                    "value": 45
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p8_dmg",
+                    "value": "51 56"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p8_dmg",
+                    "value": "204 225"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_p8_pct",
+                    "value": 0.25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "dead_p8_pct",
+                    "value": 0.33
+                }
+            },
+            "level": {
+                "description": "%dead_p8_dmg $DMG_PHYSICAL",
+                "tier": {
+                    "cost": 2,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 0,
+                    "count": 7
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%dead_p8_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Dodge",
+            "description": "Increases chance to dodge melee attacks.",
+            "icon": 9,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit11",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit11_pct",
+                    "value": 0.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit11_pct",
+                    "value": 0.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit11_pct:p Dodge chance",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "def_dodge",
+                        "level": "%dead_outfit11_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Melee Damage",
+            "description": "Increases the $DMG of all melee attacks.",
+            "icon": 5,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit12",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit12_pct",
+                    "value": 1.04
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit12_pct",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%dead_outfit12_pct:s $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "atk_damage",
+                        "level": "%dead_outfit12_pct",
+                        "scope_damage": "dmg_punch"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit13",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit13_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit13_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit13_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%dead_outfit13_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Max Energy",
+            "description": "Increases maximum $EP.",
+            "icon": 21,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit21",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit21_pct",
+                    "value": 1.04
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit21_pct",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%dead_outfit21_pct:s maximum $EP",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "maxenergy",
+                        "level": "%dead_outfit21_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Health Regen",
+            "description": "Increases health regeneration.",
+            "icon": 30,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit22",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit22_hlth",
+                    "value": 0.004
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit22_hlth",
+                    "value": 0.02
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit22_show",
+                    "value": 0.4
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit22_show",
+                    "value": 2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit22_show:f% Max $HP regenerated per second",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "health_regen_pct",
+                        "level": "%dead_outfit22_hlth"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit23",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit23_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit23_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit23_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%dead_outfit23_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Health Regen",
+            "description": "Increases health regeneration.",
+            "icon": 30,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit31",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit31_hlth",
+                    "value": 0.004
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit31_hlth",
+                    "value": 0.012
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit31_show",
+                    "value": 0.4
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit31_show",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit31_show:f% Max $HP regenerated per second",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "health_regen_pct",
+                        "level": "%dead_outfit31_hlth"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Critical Strike",
+            "description": "Increases critical strike chance.",
+            "icon": 1,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit32",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit32_pct",
+                    "value": 0.02
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit32_pct",
+                    "value": 0.1
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit32_pct:p Critical chance",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "atk_critical",
+                        "level": "%dead_outfit32_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit33",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit33_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit33_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit33_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%dead_outfit33_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Weapon Damage",
+            "description": "Increases the $DMG of Deadpool's weapons.",
+            "icon": 0,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit41",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit41_pct",
+                    "value": 1.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit41_pct",
+                    "value": 1.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%dead_outfit41_pct:s Weapon $DMG"
+            }
+        },
+        "talent": {
+            "descname": "Resist All",
+            "description": "Increases all resistances.",
+            "icon": 16,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit42",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit42_pct",
+                    "value": 0.02
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit42_pct",
+                    "value": 0.1
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit42_shw",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit42_shw",
+                    "value": 10
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit42_shw All resistances",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "resist_all",
+                        "level": "%dead_outfit42_pct"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Defense",
+            "description": "Increases $DR.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "dead_outfit43",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "dead_outfit43_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "dead_outfit43_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%dead_outfit43_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%dead_outfit43_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Teleport",
+            "description": "Jump twice to teleport.",
+            "descshort": "Ability",
+            "icon": 9,
+            "icon_texture": "textures/ui/deadpool_icons1.png",
+            "name": "dead_tele",
+            "type": "ability",
+            "level": {
+                "count": 1,
+                "description": "!BADREF:@HERO_DEAD@DEAD_TELE_LVL_DESC",
+                "require": {
+                    "category": "level",
+                    "level": "%dead_tele_req"
+                }
+            }
+        }
+    }
+}

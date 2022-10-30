@@ -1,0 +1,235 @@
+{
+    "PowerStyle": {
+        "event": {
+            "arc": 0,
+            "attacktype": "beam",
+            "beameffect": "char/spider/webbing_beam_shot",
+            "damagetype": "dmg_physical",
+            "fxlevel": 1,
+            "hiteffect": "char/spider/webbing_impact",
+            "inherit": "beam",
+            "knockback": 0,
+            "maxrange": 600,
+            "name": "webbing_shot",
+            "damageMod": {
+                "name": "dmgmod_no_pain"
+            },
+            "damageMod": {
+                "name": "dmgmod_no_damage"
+            }
+        },
+        "event": {
+            "count": 1,
+            "entity": "web_bullet",
+            "filename": "ents_darkspiderman",
+            "fulltargeting": true,
+            "inherit": "projectile",
+            "life": 0.75,
+            "name": "webbing_bullet",
+            "speed": 800,
+            "targetable": true
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "animenum": "ea_power1_start",
+            "is_power": true,
+            "lockangles": true,
+            "name": "power_attack",
+            "priority": 5,
+            "chain": {
+                "action": "Idle",
+                "result": "power1_loop"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power1_loop",
+            "blendtime": 0,
+            "is_power": true,
+            "lockangles": false,
+            "locktransitionangles": true,
+            "name": "power1_loop",
+            "noautoaim": true,
+            "turnrate": 0.2,
+            "event": {
+                "count": 1,
+                "entity": "web_bullet",
+                "filename": "ents_darkspiderman",
+                "fulltargeting": true,
+                "inherit": "projectile",
+                "life": 0.75,
+                "name": "webbing_bullet",
+                "speed": 800,
+                "targetable": true
+            },
+            "trigger": {
+                "effect": "char/spider/p1_power",
+                "fxlevel": 2,
+                "name": "effect_sound",
+                "sound": "char/dspide_m/p1_power",
+                "time": 0
+            },
+            "trigger": {
+                "actorbolt": "Bip01 R Hand",
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "40 -5 27",
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "name": "webbing_bullet",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/spider/p1_power",
+                "fxlevel": 2,
+                "name": "effect_sound",
+                "sound": "char/dspide_m/p1_power",
+                "time": 0.5
+            },
+            "trigger": {
+                "actorbolt": "Bip01 L Hand",
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "39 3 26",
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "name": "webbing_bullet",
+                "time": 0.5
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "samepowerclick",
+                "result": "power1_loop"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 8,
+            "aitype": "beam",
+            "animenum": "ea_power2",
+            "is_power": true,
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "trigger": {
+                "maxrange": 400,
+                "mustbeactor": true,
+                "mustbegrabbable": true,
+                "name": "victim_set",
+                "searchangle": 30,
+                "selfeventtag": 10,
+                "time": 0
+            },
+            "trigger": {
+                "attackerface": true,
+                "name": "victim",
+                "tag": 10,
+                "time": -1,
+                "victimface": false
+            },
+            "trigger": {
+                "attack_bone_angles": "-6 82 -126",
+                "attack_bone_pos": "20 -4 81",
+                "beambolt": "Bip01 L Hand",
+                "name": "webbing_shot",
+                "time": 0.35
+            },
+            "trigger": {
+                "attack_bone_angles": "-164 67 136",
+                "attack_bone_pos": "24 3 85",
+                "beambolt": "Bip01 R Hand",
+                "name": "webbing_shot",
+                "time": 0.35
+            },
+            "trigger": {
+                "fail_node": "null",
+                "name": "verify_victim_alive",
+                "passtag": 20,
+                "time": 0.35
+            },
+            "trigger": {
+                "loop_type": "start",
+                "name": "charsound",
+                "next_eventtag": 24,
+                "only_non_looped": true,
+                "play_sound_on_victim": true,
+                "sound": "snd_struggle",
+                "tag": 20,
+                "time": -1
+            },
+            "trigger": {
+                "execute_against": "victim",
+                "name": "otherevent",
+                "othertag": 21,
+                "othertag2": 22,
+                "tag": 24,
+                "time": -1
+            },
+            "trigger": {
+                "class": "tethered",
+                "life": 2,
+                "name": "powerup",
+                "no_shadow": true,
+                "remove_on_death": true,
+                "tag": 21,
+                "tether_length": 0,
+                "time": -1,
+                "special_fx": {
+                    "effect": "char/spider/webbing_freeze",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 L Hand",
+                    "bolt2": "Bip01 L Toe0",
+                    "effect": "char/spider/webbing_freeze",
+                    "fxlevel": 2,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 R Hand",
+                    "bolt2": "Bip01 R Toe0",
+                    "effect": "char/spider/webbing_freeze",
+                    "fxlevel": 2,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "trigger": {
+                "class": "interaction",
+                "cleartoidleondeactivate": true,
+                "life": 2,
+                "name": "powerup",
+                "remove_on_death": true,
+                "tag": 22,
+                "time": -1,
+                "InteractionEvent": {
+                    "event": "OnActivate",
+                    "interaction": "data/fightstyles/interact_spiderman_victim",
+                    "nodename": "hold_in_place_no_break"
+                },
+                "affecter": {
+                    "affect_type": "scale",
+                    "attribute": "def_grab",
+                    "level": 0
+                }
+            },
+            "trigger": {
+                "critical": true,
+                "interactionend": false,
+                "name": "victim_release",
+                "time": 0.37
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "special2",
+                "result": "idle"
+            }
+        }
+    }
+}

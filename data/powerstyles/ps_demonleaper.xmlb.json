@@ -1,0 +1,573 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "animenum": "ea_advance",
+            "handler": "ch_strafe",
+            "lockchaining": false,
+            "name": "advance",
+            "noncombat": true,
+            "playspeed": 1.25,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_retreat",
+            "handler": "ch_strafe",
+            "lockchaining": false,
+            "name": "retreat",
+            "noncombat": true,
+            "playspeed": 1.25,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_strafe_left",
+            "handler": "ch_strafe",
+            "lockchaining": false,
+            "name": "strafeleft",
+            "noncombat": true,
+            "playspeed": 1.25,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_strafe_right",
+            "handler": "ch_strafe",
+            "lockchaining": false,
+            "name": "straferight",
+            "noncombat": true,
+            "playspeed": 1.25,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_idle1",
+            "handler": "ch_idle",
+            "lockchaining": false,
+            "name": "idle",
+            "noncombat": true,
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_walk1",
+            "handler": "ch_move",
+            "lockchaining": false,
+            "name": "walk",
+            "noncombat": true,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_run1",
+            "handler": "ch_move",
+            "lockchaining": false,
+            "name": "run",
+            "noncombat": true,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_run1",
+            "handler": "ch_move",
+            "lockchaining": false,
+            "name": "sprint",
+            "noncombat": true,
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "walk",
+                "result": "walk"
+            },
+            "chain": {
+                "action": "run",
+                "result": "run"
+            },
+            "chain": {
+                "action": "sprint",
+                "result": "sprint"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "strafeleft"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "straferight"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "advance"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "retreat"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_pain_high1",
+            "handler": "ch_pain",
+            "lockangles": true,
+            "name": "pain",
+            "priority": "pain",
+            "priority_override": "pain",
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 3,
+            "aitype": "melee",
+            "animenum": "ea_power1",
+            "lockangles": true,
+            "name": "power_attack",
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/dmnm_m/p1_charge",
+                "time": 0
+            },
+            "trigger": {
+                "attacktype": "punch",
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "knockback": 245,
+                "name": "punch",
+                "tag": 2,
+                "time": 0.437
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 3,
+            "aitype": "melee",
+            "animenum": "ea_power2",
+            "lockangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "event": {
+                "attacker_loop_node": "power_smash_loop",
+                "bolt": "Bip01 Spine2",
+                "name": "attack_attempt",
+                "offset": "0 0 0",
+                "powerup_tag": "dl_victim_powerup",
+                "self_attach_event": 150,
+                "type": "ce_bolt_demon_leaper",
+                "victim_attach_event": 100
+            },
+            "event": {
+                "damage": "%mdmg_high",
+                "knockback": 190,
+                "name": "unbolt_event",
+                "powerup2_tag": "leaper_powerup",
+                "powerup_tag": "dl_victim_powerup",
+                "type": "ce_unbolt_demon_leaper"
+            },
+            "trigger": {
+                "button": "guard",
+                "button_hits_needed": 10,
+                "class": "button_tap_cnt",
+                "combat_node": "power_smash",
+                "event_tag": 200,
+                "force_stack": true,
+                "life": 30,
+                "name": "powerup",
+                "next_eventtag": 101,
+                "normalize_event": 250,
+                "tag": 100,
+                "tag_name": "dl_victim_powerup",
+                "time": -1,
+                "affecter": {
+                    "attribute": "def_grab"
+                }
+            },
+            "trigger": {
+                "attacks_per_second": 1,
+                "class": "harming",
+                "damage": "%mdmg_low",
+                "damage_scale": 0.25,
+                "hurt_ai": false,
+                "life": -1,
+                "name": "powerup",
+                "next_eventtag": 102,
+                "no_stack": true,
+                "tag": 101,
+                "tag_name": "leaper_bleed",
+                "time": -1
+            },
+            "trigger": {
+                "name": "sound",
+                "next_eventtag": 103,
+                "sound": "char/dmnm_m/p2_power",
+                "tag": 102,
+                "time": -1
+            },
+            "trigger": {
+                "end_interaction_on_idle": false,
+                "interaction": "data/fightstyles/interact_demonleaper_victim",
+                "name": "victim",
+                "nodename": "idle",
+                "tag": 103,
+                "time": -1,
+                "useeventvictim": true
+            },
+            "trigger": {
+                "class": "callevents",
+                "life": -1,
+                "name": "powerup",
+                "tag": 150,
+                "tag_name": "leaper_powerup",
+                "time": -1,
+                "functionevent": {
+                    "function": "death",
+                    "triggertag": 251
+                },
+                "functionevent": {
+                    "function": "hurt",
+                    "triggertag": 251
+                }
+            },
+            "trigger": {
+                "name": "unbolt_event",
+                "next_eventtag": 201,
+                "tag": 200,
+                "time": -1
+            },
+            "trigger": {
+                "delay": 0.01,
+                "event": 250,
+                "name": "schedule_event",
+                "next_eventtag": 202,
+                "tag": 201,
+                "time": -1
+            },
+            "trigger": {
+                "interaction": "data/fightstyles/interact_grabvictim",
+                "name": "victim_breakanim",
+                "next_eventtag": 203,
+                "nodename": "grabbreakvictim",
+                "setowners": false,
+                "tag": 202,
+                "time": -1,
+                "type": "ce_victim",
+                "useeventvictim": true
+            },
+            "trigger": {
+                "name": "powerup",
+                "remove_tag": "leaper_bleed",
+                "tag": 203,
+                "time": -1,
+                "time_to_wait_to_process": 0.1
+            },
+            "trigger": {
+                "interaction_name": "data/fightstyles/interact_demonleaper_victim",
+                "name": "end_interaction",
+                "tag": 250,
+                "time": -1,
+                "useeventvictim": true
+            },
+            "trigger": {
+                "detach_event": 201,
+                "name": "unbolt_event",
+                "tag": 251,
+                "time": -1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/dmnm_m/p2_charge",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/dmnm/p2_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.347
+            },
+            "trigger": {
+                "name": "attack_attempt",
+                "time": 0.608
+            },
+            "trigger": {
+                "effect": "char/dmnm/p2_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.739
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power2_loop",
+            "lockangles": true,
+            "name": "power_smash_loop",
+            "priority": "uninterruptable",
+            "priority_override": "uninterruptable",
+            "chain": {
+                "action": "Idle",
+                "result": "power_smash_loop"
+            }
+        }
+    }
+}

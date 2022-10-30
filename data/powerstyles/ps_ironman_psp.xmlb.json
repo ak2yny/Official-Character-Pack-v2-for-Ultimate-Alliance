@@ -1,0 +1,491 @@
+{
+    "PowerStyle": {
+        "FightMove": {
+            "animenum": "ea_power9",
+            "fallback": "grab_smash",
+            "handler": "ch_grab_hold_base",
+            "lockangles": true,
+            "lockspeed": true,
+            "name": "grab_smash",
+            "noautoaim": true,
+            "priority": 6,
+            "trigger": {
+                "attackerface": false,
+                "doslidemove": true,
+                "interaction": "data/fightstyles/interact_ironman_victim",
+                "name": "victim",
+                "nodename": "grabsmashvictim",
+                "offset": "22 0 0",
+                "time": 0,
+                "victimface": true
+            },
+            "trigger": {
+                "name": "stop",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Toe0",
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 4,
+                "name": "effect",
+                "time": 0.13
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 4,
+                "name": "effect",
+                "time": 0.13
+            },
+            "trigger": {
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 5,
+                "name": "effect",
+                "time": 0.13
+            },
+            "trigger": {
+                "damage": "%mdmg_low",
+                "damagescale": "difficulty",
+                "damagetype": "physical",
+                "index": 1,
+                "knockback": 120,
+                "maxrange": 64,
+                "name": "radial",
+                "time": 0.55,
+                "damagemod": {
+                    "name": "dmgmod_auto_knockback"
+                },
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "trigger": {
+                "name": "stop",
+                "time": 0.5
+            },
+            "trigger": {
+                "critical": true,
+                "name": "victim_release",
+                "ownertime": 0.5,
+                "time": 0.65
+            },
+            "trigger": {
+                "damage": "%mdmg_low",
+                "damagescale": "difficulty",
+                "index": 2,
+                "maxrange": 70,
+                "name": "punch",
+                "offset": -30,
+                "time": 0.65,
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 3,
+            "aitype": "melee",
+            "animenum": "ea_power3",
+            "lockangles": true,
+            "name": "power_attack",
+            "playspeed": 0.5,
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/iron_m/p3_charge",
+                "time": 0
+            },
+            "trigger": {
+                "life": -1,
+                "name": "powerup",
+                "tag_name": "dmiron_p1_link",
+                "time": 0,
+                "special_fx": {
+                    "bolt": "Bip01 R Hand",
+                    "effect": "char/dmiron/p1_power",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "power1_release"
+            }
+        },
+        "FightMove": {
+            "aitype": "melee",
+            "animenum": "ea_power13",
+            "lockangles": true,
+            "name": "power1_release",
+            "priority": 5,
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 3,
+                "name": "effect_sound",
+                "sound": "char/iron_m/p3_release",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Toe0",
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 4,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 4,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/dmiron/p1_power",
+                "fxlevel": 5,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "life": 0.3,
+                "movement": 0,
+                "name": "slide",
+                "targetdistance": 90,
+                "targetradius": 40,
+                "time": 0.18
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "dmiron_p1_link",
+                "time": 0.25
+            },
+            "trigger": {
+                "attacktype": "punch",
+                "damage": "%mdmg_high",
+                "damagescale": "difficulty",
+                "damagetype": "dmg_physical",
+                "knockback": 0,
+                "name": "punch",
+                "powerusage": 3,
+                "tag": 13,
+                "time": 0.25,
+                "damageMod": {
+                    "name": "dmgmod_popup"
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "jump"
+            }
+        },
+        "event": {
+            "damage": "%mdmg_high",
+            "damagelevel": 2,
+            "damagescale": "difficulty",
+            "damagetype": "dmg_energy",
+            "enemynumber": 0,
+            "fxlevel": 1,
+            "hiteffect": "char/dmiron/p2_impact",
+            "inherit": "blast",
+            "maxrange": 225,
+            "name": "strike_impact",
+            "radius": 60,
+            "random": true
+        },
+        "FightMove": {
+            "aireusetime": 15,
+            "aitype": "projectilenear",
+            "animenum": "ea_power8",
+            "lockangles": true,
+            "lockspeed": true,
+            "name": "power_smash",
+            "playspeed": 1,
+            "priority": 5,
+            "trigger": {
+                "name": "stop",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/iron_m/p8_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.214
+            },
+            "trigger": {
+                "bolt": "Bip01 L Toe0",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.214
+            },
+            "trigger": {
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.214
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "boltslot": "ebolton_cape",
+                "model": "models/effects/fx_ironman_p8",
+                "name": "bolton",
+                "time": 0.536
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "bolt_point": "preserve_fx01",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.536
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "bolt_point": "preserve_fx04",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.616
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "bolt_point": "preserve_fx05",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.656
+            },
+            "trigger": {
+                "bolt": "Motion",
+                "bolt_point": "preserve_fx08",
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.696
+            },
+            "trigger": {
+                "enemynumber": 0,
+                "name": "strike_impact",
+                "time": 0.7
+            },
+            "trigger": {
+                "enemynumber": 1,
+                "name": "strike_impact",
+                "time": 0.745
+            },
+            "trigger": {
+                "enemynumber": 2,
+                "name": "strike_impact",
+                "time": 0.76
+            },
+            "trigger": {
+                "enemynumber": 3,
+                "name": "strike_impact",
+                "time": 0.805
+            },
+            "trigger": {
+                "effect": "char/dmiron/p2_power",
+                "fxlevel": 5,
+                "name": "effect",
+                "time": 0.803
+            },
+            "trigger": {
+                "boltslot": "ebolton_cape",
+                "critical": true,
+                "name": "bolton",
+                "removebolton": true,
+                "time": 0.875
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "name": "powerup_freeze",
+            "trigger": {
+                "name": "powerup",
+                "remove_tag": "freeze",
+                "tag": 70,
+                "time": 0
+            },
+            "trigger": {
+                "class": "freeze",
+                "life": -1,
+                "name": "powerup",
+                "no_shatter_on_damage": true,
+                "tag": 73,
+                "tag_name": "freeze",
+                "time": 0
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 4,
+            "aitype": "projectile",
+            "animenum": "ea_power1",
+            "is_power": true,
+            "locktransitionangles": true,
+            "name": "power_boost",
+            "playspeed": 0.7,
+            "priority": 5,
+            "startchaintime": 0.6,
+            "turnrate": 0.5,
+            "trigger": {
+                "loop_timeout": 3,
+                "loop_type": "start",
+                "name": "sound",
+                "sound": "char/iron_m/p1_charge",
+                "time": 0
+            },
+            "trigger": {
+                "charge": 0,
+                "charge_time": 0.1,
+                "charged_eventtag": 100,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/iron/p1_power",
+                "fxlevel": 3,
+                "loop_type": "start",
+                "name": "effect_sound",
+                "next_eventtag": 101,
+                "sound": "char/iron_m/p1_charge_loop",
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/iron/p1_power",
+                "fxlevel": 3,
+                "name": "effect_sound",
+                "sound": "common/melee/kb_charge_done",
+                "tag": 101,
+                "time": -1
+            },
+            "trigger": {
+                "fx_chargeable": true,
+                "life": -1,
+                "name": "powerup",
+                "tag_name": "iron_p1_link",
+                "time": 0,
+                "special_fx": {
+                    "bolt": "Bip01 L Hand",
+                    "effect": "char/iron/p1_power",
+                    "fxlevel": 2,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 R Hand",
+                    "effect": "char/iron/p1_power",
+                    "fxlevel": 2,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "trigger": {
+                "charge_type": "stop",
+                "critical": true,
+                "name": "charge",
+                "time": -1
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "iron_p1_link",
+                "time": -1
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/iron_m/p1_charge",
+                "time": -1
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "power_boostR"
+            }
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "animenum": "ea_power1_end",
+            "is_power": true,
+            "name": "power_boostR",
+            "priority": 5,
+            "trigger": {
+                "charge_type": "stop",
+                "critical": true,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "iron_p1_link",
+                "time": 0.24
+            },
+            "trigger": {
+                "effect": "char/iron/p1_power",
+                "fxlevel": 4,
+                "name": "effect_sound",
+                "sound": "char/iron_m/p1_power",
+                "time": 0.24
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/iron_m/p1_charge_loop",
+                "time": 0.24
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/iron_m/p1_charge",
+                "time": 0.24
+            },
+            "trigger": {
+                "actorbolt": "Bip01 R Hand",
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "35 -4 47",
+                "attacktype": "projectile",
+                "damagescale": "none",
+                "damagetype": "dmg_energy",
+                "entity": "iron_p1_proj",
+                "explodedamage": "%mdmg_high",
+                "exploderadius": 90,
+                "filename": "ents_ironman",
+                "fulltargeting": true,
+                "name": "projectile",
+                "speed": 500,
+                "tag": 20,
+                "targetable": true,
+                "time": 0.24
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        }
+    }
+}

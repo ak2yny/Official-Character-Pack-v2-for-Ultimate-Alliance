@@ -1,0 +1,432 @@
+<PowerStyle iconfile="textures/ui/mrfantastic_icons.png">
+    <event inherit="skinsegment" name="arms_hide" show="false" show2="false" skinsegment="arm_left_segment" skinsegment2="arm_right_segment" />
+    <event inherit="skinsegment" name="arms_show" show="true" show2="true" skinsegment="arm_left_segment" skinsegment2="arm_right_segment" />
+    <event inherit="skinsegment" name="right_arm_hide" show="false" skinsegment="arm_right_segment" />
+    <event inherit="skinsegment" name="right_arm_show" show="true" skinsegment="arm_right_segment" />
+    <event inherit="skinsegment" name="left_arm_hide" show="false" skinsegment="arm_left_segment" />
+    <event inherit="skinsegment" name="left_arm_show" show="true" skinsegment="arm_left_segment" />
+    <event actorskin="2050" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2001" type="ce_bolton" />
+    <event actorskin="2051" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2001" type="ce_bolton" />
+    <event actorskin="2060" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2002" type="ce_bolton" />
+    <event actorskin="2061" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2002" type="ce_bolton" />
+    <event actorskin="2070" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2003" type="ce_bolton" />
+    <event actorskin="2071" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2003" type="ce_bolton" />
+    <event actorskin="2080" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2004" type="ce_bolton" />
+    <event actorskin="2081" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2004" type="ce_bolton" />
+    <event actorskin="2090" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2005" type="ce_bolton" />
+    <event actorskin="2091" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2005" type="ce_bolton" />
+    <event actorskin="2092" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2007" type="ce_bolton" />
+    <event actorskin="2093" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2007" type="ce_bolton" />
+    <event actorskin="2094" anim_set="20_mrfantastic_arm_left" bolt="Bip01 L UpperArm" ignoreanimmap="true" name="left_arm_bolton" replacecurrent="true" skin_filter="2008" type="ce_bolton" />
+    <event actorskin="2095" anim_set="20_mrfantastic_arm_right" bolt="Bip01 R UpperArm" ignoreanimmap="true" name="right_arm_bolton" replacecurrent="true" skin_filter="2008" type="ce_bolton" />
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" locktransitionangles="true" name="blocking" priority="6" startchaintime="0.2">
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.61">
+        <trigger name="right_arm_hide" time="0" />
+        <trigger anim="attack_light1" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger name="whoosh_light" time="0.31" />
+        <trigger maxrange="84" name="punch" time="0.38" />
+        <trigger critical="on_exit" name="right_arm_show" time="0.99" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.64">
+        <trigger name="arms_hide" time="0" />
+        <trigger anim="attack_light2" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="attack_light2" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger name="whoosh_light" time="0.28" />
+        <trigger maxrange="84" name="punch" time="0.35" />
+        <trigger critical="on_exit" name="arms_show" time="0.99" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" lockangles="true" name="attacklight3">
+        <trigger name="arms_hide" time="0" />
+        <trigger anim="attack_light3" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="attack_light3" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger name="whoosh_light" time="0.31" />
+        <trigger effect="char/mrfan/special_attack" fxlevel="1" name="effect" time="0.25" />
+        <trigger angle="-50" maxrange="75" name="punch" radius="35" time="0.42" />
+        <trigger angle="-20" maxrange="75" name="punch" radius="35" time="0.42" />
+        <trigger angle="20" maxrange="75" name="punch" radius="35" time="0.42" />
+        <trigger angle="50" maxrange="75" name="punch" radius="35" time="0.42" />
+        <trigger critical="on_exit" name="arms_show" time="0.99" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.8">
+        <trigger charge="1" name="charge" time="0" />
+        <trigger movement="20" name="slide" time="0.18" />
+        <trigger name="whoosh_heavy" time="0.23" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.35">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" lockangles="true" name="attacktrip2">
+        <event arc="67" inherit="kick" knockback="0" maxrange="72" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_hiteffect" />
+        </event>
+        <trigger name="right_arm_hide" time="0" />
+        <trigger anim="attack_trip1" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger effect="char/mrfan/attack_finisher" fxlevel="1" name="effect" time="0.37" />
+        <trigger name="whoosh_light" time="0.37" />
+        <trigger angle="60" height="-10" index="1" name="sweep" time="0.47" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.52" />
+        <trigger angle="-60" height="-10" index="1" name="sweep" time="0.57" />
+        <trigger critical="on_exit" name="right_arm_show" time="0.99" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/mrfan/attack_knockback" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Toe0" effect="char/mrfan/attack_knockback" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.08" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.08" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.08" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.08" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.12" />
+        <trigger damage="3 4" knockback="190" maxrange="100" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" maxrange="100" name="kick" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.12" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockspeed="true" name="grab_smash" noautoaim="true" priority="6" startchaintime="0.9" turnrate="0.5">
+        <trigger name="arms_hide" time="0" />
+        <trigger flag1="nopush" name="flags" time="0" type="ce_set_flags" />
+        <trigger anim="power_10" boltslot="ebolton_weapon" name="right_arm_bolton" tag="1" time="0" />
+        <trigger anim="power_10" boltslot="ebolton_altweapon" name="left_arm_bolton" tag="2" time="0" />
+        <trigger critical="true" name="arms_show" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" tag="3" time="-1" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" tag="4" time="-1" type="ce_bolton" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" knockback="120" maxrange="64" name="radial" offset="80" tag="5" time="0.68" />
+        <trigger name="verify_victim_alive" tag="6" time="0.7" />
+        <trigger critical="true" name="victim" nodename="getuponback" tag="12" time="-1" />
+        <trigger critical="true" name="victim_release" tag="13" time="-1" />
+        <trigger critical="true" flag1="nopush" name="flags" resetflags="true" tag="14" time="-1" type="ce_set_flags" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_mrfantastic_victim" name="victim" nodename="grabsmashvictim_start" offset="22 0 0" tag="10" time="0" victimface="true" />
+        <trigger count="set" name="count" tag="11" time="0" value="4" />
+        <chain action="idle" result="grab_smash_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power11" blendtime="0" fallback="grab_smash_end" inherit="grab_smash" locktransitionangles="true" name="grab_smash_loop">
+        <require cat="counter" level="1" />
+        <trigger anim="power_11" tag="1" />
+        <trigger anim="power_11" tag="2" />
+        <trigger name="verify_victim_alive" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/mrfan_m/p5_power" time="0" />
+        <trigger nodename="grabsmashvictim_loop" offset="90 0 0" tag="10" />
+        <trigger count="add" tag="11" time="0.5" value="-1" />
+        <trigger tag="5" time="0.8" />
+        <trigger tag="6" time="0.81" />
+        <chain action="smash" result="grab_smash_loop" />
+        <chain action="idle" result="grab_smash_end" />
+    </FightMove>
+    <FightMove inherit="grab_smash_loop" name="grab_smash_end" startchaintime="1">
+        <require reset="true" />
+        <trigger tag="12" time="0.45" />
+        <trigger tag="13" time="0.45" />
+        <trigger critical="on_exit" tag="3" time="0.99" />
+        <trigger critical="on_exit" tag="4" time="0.99" />
+        <trigger tag="14" time="0.99" />
+        <trigger name="verify_victim" time="0.5" />
+        <chain action="idle" result="idle" />
+        <chain action="smash" result="null" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" blendtime="0.1" handler="ch_fastball" lockangles="true" locktransitionangles="true" name="fastball">
+        <trigger arc="180" damage="%mrfan_p1_dmg" damagescale="none" knockback="305" name="punch" tag="1" time="-1">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="special2" result="power1_loop" />
+        <chain action="touch" result="power1_loop" />
+        <chain action="idle" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power1_start" combotextfinisher="Bounce" combotextstarter="Irresistible" icon="0" is_power="true" lockspeed="true" name="power1" noautoaim="true" priority="5">
+        <require cat="skill" item="mrfan_p1" level="1" />
+        <trigger name="sound" sound="char/mrfan_m/p1_power" time="0.5" />
+        <trigger name="powerusage" powerusage="%mrfan_p1_pwr" time="0" />
+        <trigger forward="0" name="velocity" time="0.99" up="150" />
+        <chain action="Idle" result="power1_loop" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power1_loop" blendtime="0" combotextfinisher="Bounce" combotextstarter="Irresistible" energypersecond="%mrfan_p1_pwr" handler="ch_bounce_roll" icon="0" is_power="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="mrfanp1" priority="5" turnrate="0.75">
+        <trigger name="sound" sound="char/mrfan_m/p1_impact" tag="2" time="-1" />
+        <trigger fx_size_scale="%mrfan_p1_scale" life="-1" name="powerup" only_non_looped="true" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 Pelvis" effect="char/mrfan/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="null" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="special" result="power1_end" />
+        <chain action="special2" result="power1_dash" />
+        <chain action="blocking" result="rollforward" />
+        <chain action="powers" result="powers" />
+        <chain action="samepowerclick" result="null" />
+    </FightMove>
+    <FightMove handler="ch_bounce_dash" inherit="power1_loop" name="power1_dash" powerup_tag="mrfanp1" turnrate="0.3">
+        <trigger effect="char/mrfan/p1_power" fxlevel="2" name="effect" time="0" />
+        <chain action="special2" result="power1_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" icon="0" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power1_end" noautoaim="true" priority="5">
+        <trigger name="sound" sound="char/mrfan_m/p1_end" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <Fightmove aitype="melee" animenum="ea_power2_loop" combotextfinisher="Force" combotextstarter="Whirling" icon="1" is_power="true" name="power2" powerup_tag="mrfan_p2" priority="5" turnrate="0.3">
+        <require cat="skill" item="mrfan_p2" level="1" />
+        <event arc="90" damage="0" damagetype="dmg_physical" inherit="radial" knockback="190" maxrange="64" name="arm_arc" victimeventtag="100">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger class="harming" damage="%mrfan_p2_dmg" life="1" name="powerup" tag="100" time="-1" use_tint="false" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%mrfan_p2_pwr" tag="1" time="0" />
+        <trigger name="arms_hide" tag="2" time="0" />
+        <trigger anim="power_2_loop" boltslot="ebolton_weapon" name="right_arm_bolton" tag="3" time="0" />
+        <trigger anim="power_2_loop" boltslot="ebolton_altweapon" name="left_arm_bolton" tag="4" time="0" />
+        <trigger name="sound" sound="char/mrfan_m/p2_charge" tag="5" time="0" />
+        <trigger loop_type="start" manual_loop_timer="0.3" name="sound" sound="char/mrfan_m/p2_power" time="0" />
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag="6" tag_name="mrfan_p2_link" time="0">
+            <special_fx effect="char/mrfan/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="arm_arc" time="0" />
+        <trigger name="arm_arc" time="0.15" />
+        <trigger critical="true" name="arms_show" tag="7" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" tag="8" time="-1" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" tag="9" time="-1" type="ce_bolton" />
+        <chain action="idle" result="power2_loop" />
+    </Fightmove>
+    <FightMove energypersecond="%mrfan_p2_pwr" inherit="power2" lockchaining="false" locktransitionangles="true" name="power2_loop">
+        <trigger tag="1" time="-1" />
+        <trigger tag="2" time="-1" />
+        <trigger tag="3" time="-1" />
+        <trigger tag="4" time="-1" />
+        <trigger tag="5" time="-1" />
+        <trigger critical="on_exit" remove_tag="mrfan_p2_link" tag="6" time="-1" />
+        <trigger critical="on_exit" tag="7" />
+        <trigger critical="on_exit" tag="8" />
+        <trigger critical="on_exit" tag="9" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove aitype="beam" animenum="ea_power3" combotextfinisher="Mash" combotextstarter="Dire" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="mrfan_p3" level="1" />
+        <event attack_bone_angles="0 0 0" attack_bone_pos="16 0 46" damage="%mrfan_p3_dmg" damagetype="dmg_physical" hiteffect="base/hit/hit_default" inherit="beam" knockback="190" name="p3_punch" radius="24" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_victimstunned="true" />
+        </trigger>
+        <trigger name="arms_hide" time="0" />
+        <trigger anim="power_3" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="power_3" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger maxrange="120" name="p3_punch" powerusage="%mrfan_p3_pwr" time="0.28" />
+        <trigger maxrange="300" name="p3_punch" time="0.38" />
+        <trigger name="sound" sound="char/mrfan_m/p3_power" time="0.28" />
+        <trigger critical="true" name="arms_show" time="0.95" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.95" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="0.95" type="ce_bolton" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power4" blendtime="0.05" icon="3" is_power="true" lockangles="true" name="power4" powerup_tag="mrfan_p4" priority="5">
+        <require cat="skill" item="mrfan_p4" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="arms_hide" time="0" />
+        <trigger anim="power_4" blendtime="0" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="power_4" blendtime="0" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="10" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mrfan/p4_power" fxlevel="2" name="effect_sound" next_eventtag="11" sound="common/melee/kb_charge_done" tag="10" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p4_power" fxlevel="2" name="effect_sound" tag="11" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" powerusage="%mrfan_p4_pwr" remove_on_node_end="true" tag_name="mrfan_p4_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/mrfan/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/mrfan/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/mrfan_m/p4_charge" time="0" />
+        <trigger critical="true" name="arms_show" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <chain action="samepowerhold" result="power4_loop" />
+        <chain action="Idle" result="power4_release" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" icon="3" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_loop" powerup_tag="mrfan_p4" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger anim="power_4_loop" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="power_4_loop" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger critical="true" name="arms_show" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" blendtime="0" combotextfinisher="Snare" combotextstarter="Unyielding" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" powerup_tag="mrfan_p4" priority="5" startchaintime="0.85" storepowerbuttons="true">
+        <event arc="50" damage="%mrfan_p4_dmg" damagemods_require_charge="true" damagetype="dmg_physical" inherit="radial" knockback="%mrfan_p4_kb" maxrange="120" name="chain_slash" tiles="true">
+            <damagemod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger anim="power_4_end" blendtime="0" boltslot="ebolton_weapon" name="right_arm_bolton" time="0" />
+        <trigger anim="power_4_end" blendtime="0" boltslot="ebolton_altweapon" name="left_arm_bolton" time="0" />
+        <trigger loop_type="stop" name="sound" sound="char/mrfan_m/p4_charge" time="0.37" />
+        <trigger effect="char/mrfan/p4_power" fxlevel="3" name="effect_sound" sound="char/mrfan_m/p4_power" time="0.37" />
+        <trigger angle="0" name="chain_slash" time="0.37" />
+        <trigger angle="-90" name="chain_slash" time="0.43" />
+        <trigger angle="180" name="chain_slash" time="0.5" />
+        <trigger angle="45" name="chain_slash" time="0.58" />
+        <trigger critical="true" name="powerup" remove_tag="mrfan_p4_link" time="0.66" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.97" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="0.97" type="ce_bolton" />
+        <trigger critical="true" name="arms_show" time="0.97" />
+        <chain action="Idle" result="idle" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_power5" handler="ch_hold_leap" icon="4" is_power="true" name="power5" priority="5" startchaintime="0.6" turnrate="0.6">
+        <trigger name="sound" sound="char/mrfan_m/p5_power" time="0" />
+        <require cat="skill" item="mrfan_p5" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%mrfan_p5_pwr" time="0" />
+        <trigger flag1="nogravity" name="flags" time="0" type="ce_set_flags" />
+        <trigger critical="true" flag1="nogravity" name="flags" resetflags="true" time="-1" type="ce_set_flags" />
+        <trigger charge="0" name="charge" time="0" />
+        <trigger effect="char/mrfan/p5_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger bolt="Bip01 L Toe0" effect="char/mrfan/p5_power" fxlevel="2" name="effect" time="0.4" />
+        <trigger bolt="Bip01 R Toe0" effect="char/mrfan/p5_power" fxlevel="2" name="effect" time="0.4" />
+        <chain action="idle" result="power5_end" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" combotextfinisher="Crash" combotextstarter="Elastic" handler="ch_hold_leap" is_power="true" locktransitionangles="true" name="power5_end" priority="5" turnrate="0.6">
+        <trigger name="slide" targetdistance="72" time="0" />
+        <trigger effect="char/mrfan/p5_power" fxlevel="3" name="effect" time="0.33" />
+        <trigger damage="%mrfan_p5_dmg" knockback="120" maxrange="%mrfan_p5_rng" name="radial" time="0.33">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger name="stop" time="0.33" />
+        <trigger critical="true" flag1="nogravity" name="flags" resetflags="true" time="0.99" type="ce_set_flags" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2001" name="bolt_left_fist" replacecurrent="true" skin_filter="2001" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2001" name="bolt_right_fist" replacecurrent="true" skin_filter="2001" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2002" name="bolt_left_fist" replacecurrent="true" skin_filter="2002" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2002" name="bolt_right_fist" replacecurrent="true" skin_filter="2002" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2003" name="bolt_left_fist" replacecurrent="true" skin_filter="2003" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2003" name="bolt_right_fist" replacecurrent="true" skin_filter="2003" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2004" name="bolt_left_fist" replacecurrent="true" skin_filter="2004" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2004" name="bolt_right_fist" replacecurrent="true" skin_filter="2004" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2005" name="bolt_left_fist" replacecurrent="true" skin_filter="2005" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2007" name="bolt_right_fist" replacecurrent="true" skin_filter="2007" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2007" name="bolt_left_fist" replacecurrent="true" skin_filter="2007" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2008" name="bolt_right_fist" replacecurrent="true" skin_filter="2008" type="ce_bolton" />
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/mr_fantastic_fist_left_2008" name="bolt_left_fist" replacecurrent="true" skin_filter="2008" type="ce_bolton" />
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawright" model="models/bolton/mr_fantastic_fist_right_2005" name="bolt_right_fist" replacecurrent="true" skin_filter="2005" type="ce_bolton" />
+    <FightMove animenum="ea_power6" combotextfinisher="Knuckles" combotextstarter="Pummeling" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="mrfan_p6" level="1" />
+        <trigger name="sound" sound="char/mrfan_m/p6_charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mrfan/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="bolt_left_fist" time="0.5" />
+        <trigger name="bolt_right_fist" time="0.5" />
+        <trigger boltslot="ebolton_clawleft" name="removebolton" next_eventtag="11" removebolton="true" tag="10" time="-1" type="ce_bolton" />
+        <trigger boltslot="ebolton_clawright" name="removebolton" removebolton="true" tag="11" time="-1" type="ce_bolton" />
+        <trigger class="callevents" inherit="powerup" life="%mrfan_p6_lif" name="powerup" powerusage="%mrfan_p6_pwr">
+            <functionevent function="deactivate" triggertag="10" />
+            <affecter attribute="atk_critical" level="%mrfan_p6_pct" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%mrfan_p6_dmg" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power17" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="mrfan_p7" level="1" />
+        <trigger life="%mrfan_p7_lif" name="powerup" powerusage="%mrfan_p7_pwr" time="0">
+            <affecter attribute="deflect_projectiles" level="1" />
+            <special_fx effect="char/mrfan/p7_power" fxlevel="2" how_used="primary" />
+            <special_fx effect="char/mrfan/p7_power" fxlevel="3" how_used="deactivation" />
+        </trigger>
+        <trigger name="sound" sound="char/mrfan_m/p7_charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mrfan/p7_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p7_power" fxlevel="1" name="effect" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="mrfan_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="1" time="0" />
+        <trigger apply_ally="all" class="remove_on_events" life="-1" name="powerup" next_eventtag="2" no_shadow="true" on_xtreme_end="true" tag="1" time="-1">
+            <affecter affect_type="scale" attribute="xp" level="%mrfan_p8_xp" />
+        </trigger>
+        <trigger apply_ally="all" apply_self="false" class="remove_on_events" life="-1" name="powerup" no_shadow="true" on_xtreme_end="true" tag="2" time="-1">
+            <affecter affect_type="scale" attribute="atk_damage" level="%mrfan_p8_dmgs" />
+        </trigger>
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <event damage="%mrfan_p8_dmg" damagelevel="2" damagetype="dmg_energy" enemynumber="0" fxlevel="1" hiteffect="char/mrfan/p8_impact" inherit="blast" maxrange="225" name="airstrike" radius="60" random="true" />
+    <FightMove animenum="ea_power8" combotextfinisher="Combat" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="5">
+        <require cat="skill" item="mrfan_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Orbital Attack" />
+        <trigger effect="char/mrfan/p8_power" fxlevel="1" name="effect_sound" sound="char/mrfan_m/p8_charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p8_power" fxlevel="2" name="effect" time="0.17" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p8_power" fxlevel="2" name="effect" time="0.28" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p8_power" fxlevel="2" name="effect" time="0.42" />
+        <trigger bolt="Bip01 R Hand" effect="char/mrfan/p8_power" fxlevel="3" name="effect_sound" sound="char/mrfan_m/p8_power" time="0.78" />
+        <trigger enemynumber="0" name="airstrike" time="0.78" />
+        <trigger enemynumber="1" name="airstrike" time="0.79" />
+        <trigger enemynumber="2" name="airstrike" time="0.8" />
+        <trigger enemynumber="3" name="airstrike" time="0.81" />
+        <trigger enemynumber="4" name="airstrike" time="0.82" />
+        <trigger enemynumber="5" name="airstrike" time="0.83" />
+        <trigger enemynumber="6" name="airstrike" time="0.84" />
+        <trigger enemynumber="7" name="airstrike" time="0.85" />
+        <trigger enemynumber="8" name="airstrike" time="0.86" />
+        <trigger enemynumber="9" name="airstrike" time="0.87" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

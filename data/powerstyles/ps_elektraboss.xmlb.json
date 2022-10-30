@@ -1,0 +1,1179 @@
+{
+    "PowerStyle": {
+        "event": {
+            "arc": 20,
+            "attacktype": "punch",
+            "damage": "3 4",
+            "damagetype": "dmg_blade",
+            "inherit": "punch",
+            "name": "SaiAttack"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "hide_sais",
+            "show": false,
+            "show2": false,
+            "skinsegment": "1201_sai_left_segment",
+            "skinsegment2": "1201_sai_right_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "show_sais",
+            "show": true,
+            "show2": true,
+            "skinsegment": "1201_sai_left_segment",
+            "skinsegment2": "1201_sai_right_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "show_left_sai",
+            "show": true,
+            "skinsegment": "1201_sai_left_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "show_right_sai",
+            "show": true,
+            "skinsegment": "1201_sai_right_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "hide_stars",
+            "show": false,
+            "show2": false,
+            "skinsegment": "1201_star_left_segment",
+            "skinsegment2": "1201_star_right_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "hide_right_star",
+            "show": false,
+            "skinsegment": "1201_star_right_segment"
+        },
+        "FightMove": {
+            "animenum": "ea_blocking",
+            "blendtime": 0.1,
+            "handler": "ch_block",
+            "icon": 2,
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "blocking",
+            "priority": 6,
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": -1
+            },
+            "chain": {
+                "action": "special",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "rollleft",
+                "result": "rollforward"
+            },
+            "chain": {
+                "action": "rollright",
+                "result": "rollforward"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "rollforward"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "rollforward"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light1",
+            "blendtime": 0,
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attacklight1",
+            "priority": 3,
+            "startchaintime": 0.58,
+            "trigger": {
+                "name": "sai_mastery",
+                "time": 0
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.25
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/elekra_m/A3_power",
+                "time": 0.25
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "fx04",
+                "life": 0.25,
+                "name": "trail",
+                "time": 0.23
+            },
+            "trigger": {
+                "damagetype": "dmg_blade",
+                "name": "punch",
+                "time": 0.33
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0.08
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 0.83
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight2"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack2"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "attackstun1"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light2",
+            "blendtime": 0,
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attacklight2",
+            "priority": 3,
+            "startchaintime": 0.57,
+            "trigger": {
+                "name": "sai_mastery",
+                "time": 0
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.21
+            },
+            "trigger": {
+                "movement": 10,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "life": 0.25,
+                "name": "trail",
+                "time": 0.16
+            },
+            "trigger": {
+                "bolt": "fx03",
+                "life": 0.21,
+                "name": "trail",
+                "time": 0.21
+            },
+            "trigger": {
+                "name": "kick",
+                "time": 0.29
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 0.8
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight3"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "popupattack2"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light3",
+            "blendtime": 0,
+            "lockangles": true,
+            "name": "attacklight3",
+            "priority": 3,
+            "trigger": {
+                "name": "sai_mastery",
+                "time": 0
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.3
+            },
+            "trigger": {
+                "movement": 20,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "life": 0.36,
+                "name": "trail",
+                "time": 0.2
+            },
+            "trigger": {
+                "bolt": "fx03",
+                "life": 0.21,
+                "name": "trail",
+                "time": 0.21
+            },
+            "trigger": {
+                "name": "kick",
+                "time": 0.4
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 0.71
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "null"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "null"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_popup",
+            "endchaintime": 1,
+            "handler": "ch_popup_attack",
+            "lockangles": true,
+            "name": "popupattack2",
+            "priority": 5,
+            "startchaintime": 0.52,
+            "trigger": {
+                "name": "whoosh_heavy",
+                "time": 0.17
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "charge": 1,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "knockback": 0,
+                "maxrange": 50,
+                "name": "punch_heavy",
+                "time": 0.3,
+                "damagemod": {
+                    "name": "dmgmod_popup"
+                },
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0.08
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 0.83
+            },
+            "trigger": {
+                "name": "whoosh_heavy",
+                "time": 0.176
+            },
+            "trigger": {
+                "movement": 20,
+                "name": "slide",
+                "time": 0.176
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "life": 0.75,
+                "name": "trail",
+                "time": 0.2
+            },
+            "trigger": {
+                "name": "punch",
+                "time": 0.35
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_stun1",
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attackstun1",
+            "priority": 3,
+            "startchaintime": 0.45,
+            "event": {
+                "inherit": "punch_heavy",
+                "knockback": 0,
+                "maxrange": 56,
+                "name": "backhand1"
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 1
+            },
+            "trigger": {
+                "name": "whoosh_heavy",
+                "time": 0
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "life": 0.2,
+                "name": "trail",
+                "time": 0.2
+            },
+            "trigger": {
+                "name": "backhand1",
+                "time": 0.4
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "attackstun_finish"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacktrip2"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_stun2",
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attackstun_finish",
+            "startchaintime": 0.5625,
+            "event": {
+                "damagetype": "dmg_blade",
+                "inherit": "punch_heavy",
+                "knockback": 0,
+                "maxrange": 56,
+                "name": "backhand1",
+                "damagemod": {
+                    "name": "dmgmod_stun"
+                },
+                "damagemod": {
+                    "name": "dmgmod_no_atk_roll"
+                }
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 1
+            },
+            "trigger": {
+                "name": "whoosh_heavy",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/elekra_m/A3_power",
+                "time": 0
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "fx03",
+                "life": 0.3,
+                "name": "trail",
+                "time": 0.2
+            },
+            "trigger": {
+                "bolt": "fx04",
+                "life": 0.3,
+                "name": "trail",
+                "time": 0.2
+            },
+            "trigger": {
+                "name": "backhand1",
+                "time": 0.4
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "null"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_heavy1",
+            "handler": "ch_hold_smash",
+            "lockangles": true,
+            "name": "attackheavy1",
+            "playspeed": 1,
+            "powerup_tag": "kbatk",
+            "startchaintime": 0.8,
+            "trigger": {
+                "loop_timeout": 3,
+                "loop_type": "start",
+                "name": "sound",
+                "sound": "common/melee/kb_charge",
+                "time": 0
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "charge": 0,
+                "charge_time": 1,
+                "charged_eventtag": 100,
+                "name": "charge",
+                "tag": 1,
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "base/hit/hit_knockback_charge",
+                "fxlevel": 2,
+                "name": "effect_sound",
+                "next_eventtag": 101,
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "base/hit/hit_knockback_charge",
+                "fxlevel": 2,
+                "name": "effect_sound",
+                "sound": "common/melee/kb_charge_done",
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "fx_chargeable": true,
+                "life": -1,
+                "name": "powerup",
+                "remove_on_node_end": true,
+                "tag": 2,
+                "tag_name": "knockback_link",
+                "time": 0,
+                "special_fx": {
+                    "bolt": "Bip01 R Hand",
+                    "effect": "base/hit/hit_knockback_charge",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 L Hand",
+                    "effect": "base/hit/hit_knockback_charge",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "chain": {
+                "action": "idle",
+                "result": "attackknockback2"
+            },
+            "chain": {
+                "action": "groundsmash",
+                "result": "groundattackknockback2"
+            },
+            "chain": {
+                "action": "special",
+                "result": "attack_knockback_charge"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_knockback1",
+            "handler": "ch_hold_smash",
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "attack_knockback_charge",
+            "noautoaim": true,
+            "powerup_tag": "kbatk",
+            "priority": 3,
+            "turnrate": 0.5,
+            "trigger": {
+                "loop_type": "update",
+                "name": "sound",
+                "sound": "common/melee/kb_charge_loop",
+                "tag": 10,
+                "time": -1
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": -1
+            },
+            "trigger": {
+                "min_charge": 1,
+                "name": "filter",
+                "only_non_looped": true,
+                "passtag": 20,
+                "time": 0.14
+            },
+            "trigger": {
+                "life": 0.25,
+                "name": "slide",
+                "tag": 20,
+                "targetdistance": 96,
+                "targetradius": 10,
+                "time": -1
+            },
+            "chain": {
+                "action": "idle",
+                "result": "attackknockback2"
+            },
+            "chain": {
+                "action": "groundsmash",
+                "result": "groundattackknockback2"
+            },
+            "chain": {
+                "action": "special",
+                "result": "attack_knockback_charge"
+            }
+        },
+        "FightMove": {
+            "aitype": "melee",
+            "animenum": "ea_attack_knockback2",
+            "blendtime": 0.1,
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attackknockback2",
+            "powerup_tag": "kbatk",
+            "priority": 5,
+            "startchaintime": 0.8,
+            "trigger": {
+                "charge_type": "stop",
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sai_mastery",
+                "time": 0
+            },
+            "trigger": {
+                "name": "show_sais",
+                "time": 0
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_sais",
+                "time": 0.75
+            },
+            "trigger": {
+                "bolt": "fx03",
+                "life": 0.5,
+                "name": "trail",
+                "time": 0.1
+            },
+            "trigger": {
+                "bolt": "fx04",
+                "life": 0.5,
+                "name": "trail",
+                "time": 0.1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "common/melee/dmg_knockback",
+                "time": 0.15
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "common/melee/kb_charge_loop",
+                "time": 0.15
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "common/melee/kb_charge",
+                "time": 0.15
+            },
+            "trigger": {
+                "movement": 20,
+                "name": "slide",
+                "targetdistance": 50,
+                "time": 0.1
+            },
+            "trigger": {
+                "failtag": 11,
+                "min_charge": 1,
+                "name": "filter",
+                "passtag": 10,
+                "time": 0.3
+            },
+            "trigger": {
+                "life": 0.25,
+                "name": "slide",
+                "tag": 20,
+                "targetdistance": 96,
+                "targetradius": 10,
+                "time": -1
+            },
+            "trigger": {
+                "damage": "3 4",
+                "knockback": 190,
+                "name": "punch",
+                "tag": 10,
+                "time": -1,
+                "damagemod": {
+                    "name": "dmgmod_auto_knockback"
+                },
+                "damagemod": {
+                    "name": "dmgmod_no_atk_roll"
+                },
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "trigger": {
+                "damage": "2 3",
+                "knockback": 190,
+                "name": "punch",
+                "tag": 11,
+                "time": -1
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "knockback_link",
+                "time": 0.25
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight1"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power9",
+            "endchaintime": 1,
+            "fallback": "grab_smash",
+            "handler": "ch_grab_hold_base",
+            "icon": 8,
+            "lockangles": true,
+            "lockspeed": true,
+            "name": "grab_smash",
+            "noautoaim": true,
+            "priority": "uninterruptable",
+            "startchaintime": 0.9,
+            "switch_dir_on_end": true,
+            "trigger": {
+                "name": "stop",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sai_mastery",
+                "time": 0
+            },
+            "trigger": {
+                "name": "show_right_sai",
+                "time": 0.15
+            },
+            "trigger": {
+                "attackerface": true,
+                "doslidemove": true,
+                "interaction": "data/fightstyles/interact_elektra_victim",
+                "name": "victim",
+                "nodename": "grabsmashvictim",
+                "targetdistance": 22,
+                "time": 0,
+                "victimface": true
+            },
+            "trigger": {
+                "damage": "4 5",
+                "damagetype": "dmg_bleed",
+                "knockback": 0,
+                "name": "SaiAttack",
+                "time": 0.45,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "class": "harming",
+                "damage": "4 5",
+                "life": 3,
+                "name": "powerup",
+                "tag": 1,
+                "time": -1,
+                "use_trait_scale": true
+            },
+            "trigger": {
+                "critical": true,
+                "name": "victim_release",
+                "ownertime": 0,
+                "time": 0.68
+            },
+            "trigger": {
+                "critical": true,
+                "name": "hide_sais",
+                "time": 0.88
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 5,
+            "aitype": "melee",
+            "animenum": "ea_power2",
+            "lockangles": true,
+            "name": "power_attack",
+            "priority": 5,
+            "trigger": {
+                "name": "show_sais",
+                "time": 0.04
+            },
+            "trigger": {
+                "effect": "char/elektra/p2_power",
+                "fxlevel": 1,
+                "name": "effect_sound",
+                "sound": "char/elekra_m/A2_power",
+                "time": 0.259
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "damagetype": "dmg_blade",
+                "index": 1,
+                "name": "SaiAttack",
+                "time": 0.296,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "effect": "char/elektra/p2_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.58
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "damagetype": "dmg_blade",
+                "index": 2,
+                "name": "SaiAttack",
+                "time": 0.58
+            },
+            "trigger": {
+                "critical": true,
+                "name": "hide_sais",
+                "time": 0.85
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 15,
+            "aitype": "melee",
+            "animenum": "ea_power4",
+            "icon": 3,
+            "is_power": true,
+            "lockangles": true,
+            "name": "power_smash",
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/elekra_m/A4_power",
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/elektra/p4_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.389
+            },
+            "trigger": {
+                "damage": 0,
+                "name": "SaiAttack",
+                "time": 0.395,
+                "victimeventtag": 1,
+                "damageMod": {
+                    "name": "dmgmod_no_damage"
+                }
+            },
+            "trigger": {
+                "life": 4,
+                "name": "powerup",
+                "next_eventtag": 2,
+                "shared_tag": "shared_stunned",
+                "tag": 1,
+                "time": -1
+            },
+            "trigger": {
+                "bolt": "Bip01 Neck",
+                "effect": "char/elektra/p4_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "tag": 2,
+                "time": -1
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aireusetime": 10,
+            "aitype": "melee",
+            "animenum": "ea_power5",
+            "icon": 4,
+            "is_power": true,
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "power_boost",
+            "powerup_tag": "power5_sequence",
+            "priority": 5,
+            "trigger": {
+                "loop_timeout": 3,
+                "loop_type": "start",
+                "name": "sound",
+                "sound": "char/elekra_m/A5_charging",
+                "time": 0
+            },
+            "trigger": {
+                "charge": 0,
+                "charge_time": 0.1,
+                "charged_eventtag": 100,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Toe0",
+                "effect": "char/elektra/p5_power",
+                "fxlevel": 2,
+                "loop_type": "start",
+                "name": "effect_sound",
+                "next_eventtag": 101,
+                "sound": "char/elekra_m/A1_charge_loop",
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "bolt": "Bip01 R Toe0",
+                "effect": "char/elektra/p5_power",
+                "fxlevel": 2,
+                "name": "effect_sound",
+                "next_eventtag": 102,
+                "sound": "char/elekra_m/A1_charge_done",
+                "tag": 101,
+                "time": -1
+            },
+            "trigger": {
+                "effect": "char/elektra/p5_power",
+                "fxlevel": 6,
+                "name": "effect",
+                "tag": 102,
+                "time": -1
+            },
+            "trigger": {
+                "fx_chargeable": true,
+                "life": -1,
+                "name": "powerup",
+                "remove_on_node_end": true,
+                "tag_name": "elek_p5_link",
+                "time": 0,
+                "special_fx": {
+                    "bolt": "Bip01 R Toe0",
+                    "effect": "char/elektra/p5_power",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 L Toe0",
+                    "effect": "char/elektra/p5_power",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "effect": "char/elektra/p5_power",
+                    "fxlevel": 5,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "power_boost1"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power4_loop",
+            "is_power": true,
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power_boost1",
+            "powerup_tag": "power5_sequence",
+            "priority": 5,
+            "trigger": {
+                "charge": 1,
+                "charge_type": "set",
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "loop_type": "update",
+                "name": "sound",
+                "sound": "char/elekra_m/A1_charge_loop",
+                "tag": 10,
+                "time": -1
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "power_boost2"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power5_end",
+            "is_power": true,
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "power_boost2",
+            "powerup_tag": "power5_sequence",
+            "priority": 5,
+            "startchaintime": 0.99,
+            "trigger": {
+                "charge_type": "stop",
+                "critical": true,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "elek_p5_link",
+                "time": 0.206
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/elekra_m/A5_power",
+                "time": 0.206
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/elekra_m/A5_charging",
+                "time": 0.206
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/elekra_m/A1_charge_loop",
+                "time": 0.206
+            },
+            "trigger": {
+                "failtag": 10,
+                "min_charge": 0,
+                "name": "filter",
+                "passtag": 1,
+                "time": 0.206
+            },
+            "trigger": {
+                "effect": "char/elektra/p5_power",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.824
+            },
+            "trigger": {
+                "chance": 0.12,
+                "failtag": 10,
+                "name": "otherevent",
+                "othertag": 20,
+                "othertag2": 10,
+                "tag": 1,
+                "time": -1
+            },
+            "trigger": {
+                "fx_size_scale": 1,
+                "name": "powerup",
+                "next_eventtag": 11,
+                "remove_on_node_end": true,
+                "tag": 10,
+                "time": -1,
+                "special_fx": {
+                    "effect": "char/elektra/p5_power",
+                    "fxlevel": 4,
+                    "how_used": "activation",
+                    "never_cycle": true
+                }
+            },
+            "trigger": {
+                "damage": "%mdmg_high",
+                "inherit": "radial",
+                "maxrange": 50,
+                "name": "spin_kick",
+                "tag": 11,
+                "time": -1
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        }
+    }
+}
