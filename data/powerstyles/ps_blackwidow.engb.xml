@@ -1,0 +1,380 @@
+<PowerStyle iconfile="textures/ui/blackwidow_icons.png">
+    <event inherit="skinsegment" name="draw_Mgun" show="false" show2="true" skinsegment="20102_Mgun_back_segment" skinsegment2="20102_Mgun_segment" />
+    <event inherit="skinsegment" name="holster_Mgun" show="true" show2="false" skinsegment="20102_Mgun_back_segment" skinsegment2="20102_Mgun_segment" />
+    <event inherit="skinsegment" name="draw_pistolleg" show="false" show2="true" skinsegment="20102_pistolleg_segment" skinsegment2="20102_pistol_segment" />
+    <event inherit="skinsegment" name="holster_pistolleg" show="true" show2="false" skinsegment="20102_pistolleg_segment" skinsegment2="20102_pistol_segment" />
+    <event inherit="skinsegment" name="draw_knifeleg" show="false" show2="true" skinsegment="20102_knife_leg_segment" skinsegment2="20102_knife_R_hand_segment" />
+    <event inherit="skinsegment" name="holster_knifeleg" show="true" show2="false" skinsegment="20102_knife_leg_segment" skinsegment2="20102_knife_R_hand_segment" />
+    <FightMove animenum="ea_idle1" handler="ch_idle" lockchaining="false" name="idle" noncombat="true">
+        <trigger critical="true" name="holster_knifeleg" time="0" />
+        <trigger critical="true" name="holster_pistolleg" time="0" />
+        <trigger critical="true" name="holster_Mgun" time="0" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="move" result="jump" />
+        <chain action="special" result="boredloop" />
+        <chain action="blocking" result="blocking" />
+        <chain action="powers" result="powers" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+    </FightMove>
+    <FightMove animenum="ea_power10" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_blackwidow_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger damage="4 5" damagescale="normal" knockback="0" maxrange="64" name="punch" offset="-20" time="0.75" />
+        <trigger name="victim_release" ownertime="2" time="0.75" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" name="attackheavy1" noautoaim="true" playspeed="1" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger name="whoosh_heavy" time="0.1" />
+        <trigger name="draw_knifeleg" time="0.1" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Forearm" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove always_target="true" animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger name="whoosh_heavy" time="0.15" />
+        <trigger movement="35" name="slide" targetdistance="55" time="0.1" />
+        <trigger bolt="fx01" life="0.3" name="trail" offsetend="12" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.15" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="on_exit" name="holster_knifeleg" time="0.8" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamloop" handler="ch_jump_smash" name="jumpsmash" playspeed="1" startchaintime="0.4" turnrate="0.5">
+        <trigger name="draw_Mgun" time="0" />
+        <trigger life="0.3" name="slide" targetdistance="75" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/js_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="jumpsmash_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="holster_Mgun" time="-1" />
+        <chain action="idle" result="jumpsmash_release" />
+        <chain action="special" result="jumpsmash_release2" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamland" fallback="jumpsmash_release" lockangles="true" name="jumpsmash_release" playspeed="1" startchaintime="0.8">
+        <event damage="1 2" damagescale="normal" inherit="radial" knockback="190" maxrange="35" name="smash_attack">
+            <damagemod name="dmgmod_trip" />
+        </event>
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger height="-36" name="smash_attack" tag="10" time="0.1" />
+        <trigger name="smash_attack" tag="11" time="0.26" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="jumpsmash_link" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger critical="on_exit" name="holster_Mgun" time="0.9" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove fallback="jumpsmash_release2" inherit="jumpsmash_release" name="jumpsmash_release2">
+        <trigger tag="10">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger maxrange="60" tag="11" />
+        <trigger effect="base/hit/hit_jumpsmash" name="effect" time="0.16" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="projectile" always_target="true" animenum="ea_power1" combotextfinisher="Burst" combotextstarter="Widow's" icon="0" is_power="true" name="power1" noautoaim="true" priority="5" target_only_actors="true" turnrate="0.8">
+        <require cat="skill" item="blackwidow_p1" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p1_pwr" time="0.01" />
+        <trigger name="draw_Mgun" time="0.22" />
+        <trigger name="sound" sound="char/bwidow_m/draw_rifle" time="0.22" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/bwidow_m/p1_charge" time="0.75" />
+        <trigger button="samepowerhold" name="button_hint" time="0.75" />
+        <trigger charge="0" charge_time="2.2" charged_eventtag="100" name="charge" time="0.75" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p1_charge" fxlevel="6" loop_type="start" name="effect_sound" sound="char/bwidow_m/p1_max" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="widow_p1_link" time="0.75">
+            <special_fx bolt="Bip01 R Hand" effect="char/blackwidow/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="widow_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_charge" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power12" icon="0" is_power="true" locktransitionangles="true" name="power1_charge" noautoaim="true" priority="5" startchaintime="0.2" target_only_actors="true" turnrate="0.6">
+        <require cat="skill" item="blackwidow_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger loop_type="start" name="sound" sound="char/bwidow_m/p1_charge_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <chain action="Idle" result="power1_release2" />
+        <chain action="samepowerhold" result="power1_charge" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power13" blendtime="0" combotextfinisher="Burst" combotextstarter="Widow's" icon="0" locktransitionangles="true" name="power1_release" noautoaim="true" playspeed="1.5" priority="5" target_only_actors="false" turnrate="0.3">
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="widow_p1_link" time="0.24" />
+        <trigger effect="char/blackwidow/p1_power" fxlevel="1" name="effect_sound" sound="char/bwidow_m/p1_power" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p1_charge_loop" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p1_charge" time="0.24" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="0 -5 53" attacktype="projectile" damage="%blackwidow_p1_dmg" damagetype="dmg_physical" entity="gunshot_fx1" filename="ents_blackwidow" name="projectile" speed="10000" time="0.01" />
+        <chain action="samepowerclick" result="power1_release_spend" />
+        <chain action="Idle" result="power1_end" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power12" combotextfinisher="Burst" combotextstarter="Widow's" icon="0" is_power="true" locktransitionangles="true" name="power1_release_spend" noautoaim="true" playspeed="10" priority="5" startchaintime="0.2" target_only_actors="true" turnrate="0.4">
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger name="powerusage" powerusage="%blackwidow_p1_pwr" time="0" />
+        <chain action="samepowerclick" result="power1_release" />
+        <chain action="Idle" result="power1_release" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power1_loop" combotextfinisher="Burst" combotextstarter="Widow's" locktransitionangles="true" name="power1_release2" noautoaim="true" priority="5" turnrate="0.3">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.3" />
+        <trigger critical="true" name="powerup" remove_tag="widow_p1_link" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p1_charge_loop" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p1_charge" time="0.24" />
+        <trigger failtag="200" min_charge="1" name="filter" passtag="100" time="0.24" />
+        <trigger name="sound" next_eventtag="101" sound="char/bwidow_m/p1_power_multi" tag="100" time="-1" />
+        <event damage="%blackwidow_p1_dmg" damagetype="dmg_physical" entity="gunshot_fx1" filename="ents_blackwidow" inherit="projectile" name="p1_shot" speed="10000" victimeventtag="1">
+            <damagemod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="0 5 53" index="1" name="p1_shot" next_eventtag="102" tag="101" time="-1" />
+        <trigger effect="char/blackwidow/p1_power" fxlevel="1" name="effect" next_eventtag="103" tag="102" time="-1" />
+        <trigger life="0.05" motor="rumble" name="rumble" next_eventtag="104" tag="103" time="-1" vibration="0.5" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="0 5 53" index="2" name="p1_shot" next_eventtag="105" tag="104" time="-1" />
+        <trigger effect="char/blackwidow/p1_power" fxlevel="1" name="effect" next_eventtag="106" tag="105" time="0.5" />
+        <trigger life="0.05" motor="rumble" name="rumble" next_eventtag="107" tag="106" time="0.5" vibration="0.5" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="0 5 53" index="3" name="p1_shot" next_eventtag="108" tag="107" time="-1" />
+        <trigger effect="char/blackwidow/p1_power" fxlevel="1" name="effect" next_eventtag="109" tag="108" time="0.8" />
+        <trigger life="0.05" motor="rumble" name="rumble" tag="109" time="0.8" vibration="0.2" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger is_stunned="true" name="filter" passtag="3" tag="2" />
+        <trigger chance="0.5" name="otherevent" othertag="5" tag="3" />
+        <trigger damage="1" index="2" name="killme" tag="5" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_kill" />
+        </trigger>
+        <trigger effect="char/blackwidow/p1_power" fxlevel="1" name="effect_sound" next_eventtag="201" sound="char/bwidow_m/p1_power" tag="200" time="-1" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="0 -5 53" attacktype="projectile" damage="%blackwidow_p1_dmg" damagetype="dmg_physical" entity="gunshot_fx1" filename="ents_blackwidow" name="projectile" speed="10000" tag="201" time="-1" />
+        <chain action="Samepowerclick" result="power1_release" />
+        <chain action="Idle" result="power1_end" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Burst" combotextstarter="Widow's" lockangles="true" name="power1_end" priority="5">
+        <trigger critical="on_exit" name="holster_Mgun" time="0.63" />
+        <trigger name="sound" sound="char/bwidow_m/holster_rifle" time="0.63" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="aoe" always_target="false" animenum="ea_power2" combotextfinisher="Tears" combotextstarter="Weeping" icon="1" is_power="true" lockangles="true" name="power2" playspeed="1" powerup_tag="blackwidow_p2" priority="5">
+        <require cat="skill" item="blackwidow_p2" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p2_pwr" time="0" />
+        <trigger name="sound" sound="char/bwidow_m/p2_intro" time="0.1" />
+        <trigger name="sound" sound="char/bwidow_m/p2_power" time="0.4" />
+        <trigger bolt="Bip01 R Forearm" effect="char/blackwidow/p2_power" name="effect" time="0.1" />
+        <trigger bolt="fx02" effect="char/blackwidow/p2_aura" fxlevel="2" name="effect" time="0.2" />
+        <trigger class="harming" damage="%blackwidow_p2_dmg2" damagetype="dmg_radiation" life="%blackwidow_p2_life" name="powerup" tag="209" time="-1" />
+        <trigger damage="%blackwidow_p2_dmg" damagetype="dmg_mental" maxrange="150" name="radial" time="0.6" victimeventtag1="209" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="aoe" animenum="ea_power3" combotextfinisher="Bang" combotextstarter="Flashing" icon="2" is_power="true" name="power3" powerup_tag="blackwidow_p3" priority="5">
+        <require cat="skill" item="blackwidow_p3" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p3_pwr" time="0" />
+        <event entity="blackwidow_p3" filename="ents_blackwidow" inherit="projectile" name="throw_grenade" speed="300" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <affecter attribute="atk_critical" level="0.5" scope_victimstunned="true" />
+        </trigger>
+        <trigger name="sound" sound="char/bwidow_m/p3_intro" time="0.05" />
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 -70 90" attack_bone_pos="1 2 73" name="throw_grenade" time="0.4" />
+        <trigger name="sound" sound="char/bwidow_m/p3_power" time="0.4" />
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 -75 180" attack_bone_pos="-1 1 70" name="throw_grenade" time="0.45" />
+        <trigger name="sound" sound="char/bwidow_m/p3_power" time="0.45" />
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 -80 -90" attack_bone_pos="-2 -2 72" name="throw_grenade" time="0.5" />
+        <trigger name="sound" sound="char/bwidow_m/p3_power" time="0.5" />
+        <trigger actorbolt="Bip01 R Hand" angoffset="15 -82 0" attack_bone_pos="2 -1 71" name="throw_grenade" time="0.55" />
+        <trigger name="sound" sound="char/bwidow_m/p3_power" time="0.55" />
+        <trigger damage="%blackwidow_p3_dmg" damagetype="dmg_physical" knockback="%blackwidow_p3_kb" maxrange="160" name="radial" time="0.75" victimeventtag="1" />
+        <trigger life="%blackwidow_p3_lif" name="powerup" shared_tag="shared_stunned" tag="1" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="projectile" animenum="ea_power4" combotextfinisher="Explosion" combotextstarter="Exploding" icon="3" is_power="true" name="power4" priority="5" startchaintime="0.8" turnrate="0.4">
+        <require cat="skill" item="blackwidow_p4" level="1" />
+        <trigger name="draw_knifeleg" time="0" />
+        <trigger name="powerusage" powerusage="%blackwidow_p4_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/bwidow_m/p4_charge" time="0.75" />
+        <trigger button="samepowerhold" name="button_hint" time="0.75" />
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0.75" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p4_charge" fxlevel="6" loop_type="start" name="effect_sound" sound="char/bwidow_m/p4_max" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="widow_p4_link" time="0.75">
+            <special_fx bolt="Bip01 R Hand" effect="char/blackwidow/p4_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="widow_p4_link" time="-1" />
+        <chain action="Idle" result="power4_end" />
+        <chain action="samepowerhold" result="power4_charge" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" icon="3" lockangles="false" lockchaining="false" locktransitionangles="true" name="power4_charge" noautoaim="true" playspeed="1.5" priority="5" turnrate="0.4">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger loop_type="start" name="sound" sound="char/bwidow_m/p4_charge_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge_loop" time="-1" />
+        <chain action="Idle" result="power4_end2" />
+        <chain action="samepowerhold" result="power4_charge" />
+    </FightMove>
+    <Fightmove animenum="ea_power4_end" combotextfinisher="Explosion" combotextstarter="Exploding" lockangles="true" name="power4_end2" noautoaim="true" playspeed="1.2" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.4" />
+        <trigger critical="true" name="powerup" remove_tag="widow_p4_link" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge_loop" time="0.24" />
+        <trigger name="effect_sound" sound="char/bwidow_m/p4_power" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p4_armtrail" name="effect" time="0" />
+        <trigger critical="on_exit" name="holster_knifeleg" time="0.35" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.35" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 35" attacktype="projectile" damagescale="none" entity="blackwidow_p4a" explodedamage="%blackwidow_p4_dmg" explodedamagetype="dmg_physical" explodeknockback="120" exploderadius="100" filename="ents_blackwidow" fulltargeting="true" maxrange="300" name="projectile" speed="500" tag="10" targetable="true" time="-1">
+            <damagemod name="dmgmod_popup" />
+        </trigger>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 35" attacktype="projectile" count="1" damage="%blackwidow_p4_dmg" damagescale="none" damagetype="dmg_physical" entity="blackwidow_p4" filename="ents_blackwidow" fulltargeting="true" knockback="120" maxrange="300" name="projectile" speed="800" tag="11" targetable="true" time="-1" />
+        <chain action="Idle" result="idle" />
+    </Fightmove>
+    <FightMove animenum="ea_power4_end" combotextfinisher="Explosion" combotextstarter="Exploding" lockangles="true" name="power4_end" playspeed="1.2" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="widow_p4_link" time="0.24" />
+        <trigger name="sound" sound="char/bwidow_m/p4_power" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge_loop" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p4_armtrail" name="effect" time="0" />
+        <trigger charge="0" charge_type="set" name="charge" time="0" />
+        <trigger critical="on_exit" name="holster_knifeleg" time="0.35" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 35" attacktype="projectile" count="1" damage="%blackwidow_p4_dmg" damagescale="none" damagetype="dmg_physical" entity="blackwidow_p4" filename="ents_blackwidow" fulltargeting="true" knockback="120" maxrange="300" name="projectile" speed="800" tag="1" targetable="true" time="0.35" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="projectile" animenum="ea_power5" combotextfinisher="Pheromones" combotextstarter="Charming" icon="4" is_power="true" name="power5" noautoaim="false" priority="5">
+        <require cat="skill" item="blackwidow_p5" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p5_pwr" time="0" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="5 7 25" attacktype="projectile" damage="5" entity="blackwidow_p5" filename="ents_blackwidow" fulltargeting="true" maxrange="800" name="projectile" speed="600" targetable="true" time="0.45" victimeventtag="10" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p5_spawn" fxlevel="1" name="effect" time="0.45" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="5 -3 25" attacktype="projectile" damage="5" entity="blackwidow_p5" filename="ents_blackwidow" fulltargeting="true" maxrange="800" name="projectile" speed="600" targetable="true" time="0.45" victimeventtag="10" />
+        <trigger name="sound" sound="char/bwidow_m/p5_power" time="0.25" />
+        <trigger bolt="Bip01 L Hand" effect="char/blackwidow/p5_spawn" fxlevel="1" name="effect" time="0.45" />
+        <trigger effect="char/blackwidow/p5_impact" fxlevel="1" name="effect_sound" next_eventtag="30" sound="char/bwidow_m/p5_impact" tag="10" time="-1" />
+        <trigger failtag="50" maxdangerrating="10" name="filter" noboss="true" passtag="40" tag="30" time="-1" />
+        <trigger class="callevents" life="%blackwidow_p5_life" name="powerup" tag="40" time="-1">
+            <affecter attribute="team_switch" level="1" />
+            <special_fx bolt="Bip01 Head" effect="char/blackwidow/p5_power" />
+        </trigger>
+        <trigger class="harming" damage="%blackwidow_p5_dmg" life="1" name="powerup" next_eventtag="60" tag="50" time="-1">
+            <special_fx effect="char/blackwidow/P5_impact" fxlevel="2" />
+        </trigger>
+        <trigger life="2" name="powerup" shared_tag="shared_stunned" tag="60" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="beam" animenum="ea_power5" combotextfinisher="Beam" combotextstarter="Widow's" icon="11" is_power="true" name="power8" noautoaim="false" priority="5">
+        <require cat="skill" item="blackwidow_p8" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/scorp/p1_power" fxlevel="3" loop_timeout="3" loop_type="start" name="effect_sound" sound="char/bwidow_m/p4_charge" time="0.15" />
+        <trigger bolt="Bip01 L Hand" effect="char/scorp/p1_power" fxlevel="3" name="effect" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/bwidow_m/p4_charge" time="0.45" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="5 7 25" attacktype="beam" beambolt="Bip01 R Hand" beameffect="char/scorp/p1_power" damage="%blackwidow_p8_dmg" damagescale="none" damagetype="dmg_electricity" fxlevel="1" knockback="400" hiteffect="char/scorp/p1_impact" maxrange="800" name="beam" powerusage="%blackwidow_p8_pwr" targetable="true" time="0.45">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger bolt="Bip01 R Hand" effect="char/scorp/p1_power" fxlevel="3" name="effect_sound" sound="char/bwidow_m/p3_throw" time="0.45" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="5 -3 25" attacktype="beam" beambolt="Bip01 L Hand" beameffect="char/scorp/p1_power" damage="0" fxlevel="1" knockback="400" hiteffect="char/scorp/p1_impact" maxrange="800" name="beam" targetable="true" time="0.45">
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger bolt="Bip01 L Hand" effect="char/scorp/p1_power" fxlevel="3" name="effect" time="0.45" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" powerup_tag="blackwidow_power6" priority="5">
+        <require cat="skill" item="blackwidow_p6" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p6_pwr" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/blackwidow/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/bwidow_m/p6_intro" time="0.1" />
+        <trigger name="sound" sound="char/bwidow_m/p6_power" time="0.45" />
+        <trigger life="%blackwidow_p6_lif" name="powerup" time="0.54">
+            <affecter affect_type="scale" attribute="atk_attack_rating" level="%blackwidow_p6_ar" />
+            <affecter affect_type="scale" attribute="damage" level="%blackwidow_p6_dmg">
+                <scope scope_attack="punch" />
+                <scope scope_attack="kick" />
+            </affecter>
+            <special_fx bolt="Bip01 R Hand" effect="char/blackwidow/p6_charge" fxlevel="1" />
+            <special_fx bolt="Bip01 L Hand" effect="char/blackwidow/p6_charge" fxlevel="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power7" icon="6" is_power="true" name="power7" priority="5">
+        <require cat="skill" item="blackwidow_p7" level="1" />
+        <trigger name="powerusage" powerusage="%blackwidow_p7_pwr" time="0" />
+        <trigger bolt="Bip01" effect="char/blackwidow/p7_trigger" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/bwidow_m/p7_power" time="0.1" />
+        <trigger life="%blackwidow_p7_life" name="powerup" time="0.7">
+            <affecter affect_type="scale" attribute="def_damage" level="%blackwidow_p7_dmg" />
+            <affecter attribute="def_defense_rating" level="%blackwidow_p7_def" />
+            <special_fx bolt="Bip01 Spine1" effect="char/blackwidow/p7_charge" fxlevel="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="blackwidow_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Fury" icon="8" lockangles="true" locktransitionangles="true" name="power9" playspeed="10" priority="5">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Die like the dogs you are!" name="team_xtreme_msg" time="0" title="Russian Fury" />
+        <trigger name="draw_Mgun" time="0.1" />
+        <trigger name="draw_pistolleg" time="0.1" />
+        <trigger name="sound" sound="char/bwidow_m/draw_rifle" time="0.1" />
+        <event animbased="true" arc="35" damage="%blackwidow_p9_dmg" inherit="radial" knockback="305" maxrange="350" name="xtremeblast">
+            <damagemod name="dmgmod_popup" />
+        </event>
+        <trigger bolt="Bip01 L Hand" effect="char/blackwidow/p9_power" name="effect" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/blackwidow/p9_power2" name="effect" time="0.24" />
+        <trigger angle="90" name="xtremeblast" time="0.24" />
+        <trigger angle="-90" name="xtremeblast" time="0.24" />
+        <trigger name="sound" sound="char/bwidow_m/P8_intro_loop" time="0.24" />
+        <trigger name="sound" sound="char/bwidow_m/p8_power" time="0.1" />
+        <trigger angle="30" name="xtremeblast" time="0.33" />
+        <trigger angle="-150" name="xtremeblast" time="0.33" />
+        <trigger name="sound" sound="char/bwidow_m/p8_power_loop" time="0.33" />
+        <trigger angle="-30" name="xtremeblast" time="0.42" />
+        <trigger angle="150" name="xtremeblast" time="0.42" />
+        <trigger name="sound" sound="char/bwidow_m/p8_power_end" time="0.64" />
+        <trigger critical="on_exit" name="holster_Mgun" time="0.9" />
+        <trigger name="sound" sound="char/bwidow_m/holster_rifle" time="0.9" />
+        <trigger critical="on_exit" name="holster_pistolleg" time="0.95" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

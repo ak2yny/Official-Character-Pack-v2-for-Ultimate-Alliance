@@ -1,0 +1,13 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/Fury/4_SKRULL1_010_010_NF_A" text="%NickFuryNPC%: Team, it appears you're near a set of Magnetic Shield Generators that Galactus uses. These devices convert the planet's magnetic field into a shield he uses to protect himself.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/Fury/4_SKRULL1_010_011_NF" text="%NickFuryNPC%: On the off chance you'll have to face Galactus, it'd be in your best interest to take down these generators.">
+                        <response chosenscriptfile="act4/skrull/skrull1/drill1_encounter" conversationend="true" text="%PLAYER%: Okay, Colonel Fury. We'll see what we can do." />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

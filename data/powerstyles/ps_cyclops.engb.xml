@@ -1,0 +1,400 @@
+<PowerStyle iconfile="textures/ui/cyclops_icons.png">
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" lockangles="true" name="attacklight3" priority="3">
+        <trigger movement="30" name="slide" time="0.15" />
+        <trigger bolt="Bip01 L Toe0" life="0.5" name="trail" time="0.0" />
+        <trigger name="whoosh_heavy" time="0.18" />
+        <trigger name="kick" time="0.31" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" endchaintime="1.0" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.75">
+        <trigger charge="1.0" name="charge" time="0.0" />
+        <trigger name="whoosh_light" time="0.13" />
+        <trigger name="sound" pitch_range="200" sound="char/cyclop_m/beam_shoot" time="0.33" />
+        <trigger bolt="Bip01 Head" effect="char/fury/special_attack" fxlevel="4" name="effect_sound" sound="char/cyclop_m/p3_power" time="0.33" />
+        <trigger arc="0" attack_bone_angles="0 0 0" attack_bone_pos="19 0 56" attacktype="beam" beambolt="Bip01 Head" beameffect="char/cyclops/fast_beam" damage="3 4" damagelevel="2" damagescale="normal" damagetype="dmg_energy" fxlevel="1" hiteffect="char/cyclops/p2_impact" inherit="beam" knockback="0" maxrange="100" name="optic_blast" powerup_tag="cyc_proj_power" spawneffect="char/cyclops/fast_beam" time="0.28">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="1.0">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect" next_eventtag="102" tag="101" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1.0" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0.0" />
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.1" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.12" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_ground1" endchaintime="1.0" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack" noautoaim="true" startchaintime="0.61">
+        <trigger name="sound" pitch_range="200" sound="char/cyclop_m/beam_shoot" time="0.33" />
+        <trigger bolt="Bip01 Head" effect="char/fury/special_attack" fxlevel="4" name="effect_sound" sound="char/cyclop_m/p3_power" time="0.33" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 Head" life="0.14" name="trail" time="0.1" />
+        <trigger arc="0" attack_bone_angles="0 0 0" attack_bone_pos="19 0 56" attacktype="beam" beambolt="Bip01 Head" beameffect="char/cyclops/fast_beam" damage="4 5" damagelevel="2" damagescale="normal" damagetype="dmg_energy" fxlevel="1" hiteffect="char/cyclops/p2_impact" inherit="beam" knockback="0" maxrange="125" name="optic_blast" powerup_tag="cyc_proj_power" spawneffect="char/cyclops/fast_beam" time="0.33">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger name="punch" time="0.34" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="attack" result="attacklight1" />
+    </FightMove>
+    <FightMove animenum="ea_attack_ground2" blendtime="0.0" endchaintime="1.0" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack2" noautoaim="true" startchaintime="0.61">
+        <trigger name="sound" pitch_range="200" sound="char/cyclop_m/beam_shoot" time="0.13" />
+        <trigger bolt="Bip01 Head" effect="char/fury/special_attack" fxlevel="4" name="effect_sound" sound="char/cyclop_m/p3_power" time="0.14" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.14" name="trail" time="0.38" />
+        <trigger arc="0" attack_bone_angles="0 0 0" attack_bone_pos="19 0 56" attacktype="beam" beambolt="Bip01 Head" beameffect="char/cyclops/fast_beam" damage="4 5" damagelevel="2" damagescale="normal" damagetype="dmg_energy" fxlevel="1" hiteffect="char/cyclops/p2_impact" inherit="beam" knockback="0" maxrange="125" name="optic_blast" powerup_tag="cyc_proj_power" spawneffect="char/cyclops/fast_beam" time="0.14">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger name="punch" time="0.15" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="attack" result="attacklight1" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
+        <trigger name="whoosh_heavy" time="0.2" />
+        <trigger bolt="Bip01 R Toe0" life="0.35" name="trail" time="0.15" />
+        <trigger knockback="0" maxrange="50" name="kick_heavy" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_grab_smash" endchaintime="1.0" handler="ch_grab_hold" lockangles="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" motion_track_offset="true" name="victim" nodename="grabsmashvictim" targetdistance="20" time="0" victimface="true" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="0" />
+        <trigger name="sound" sound="common/melee/kb_charge" tag="101" time="-1" />
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 L Hand" life="0.95" name="trail" time="0.1" />
+        <trigger name="whoosh_light" time="0.5" />
+        <trigger name="victim_release" time="0.5" />
+        <trigger arc="90" damage="4 5" damagescale="normal" damagetype="physical" index="1" knockback="190" maxrange="64" name="radial" time="0.6">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event damagetype="dmg_energy" inherit="punch" name="OpticBeam">
+        <damagemod name="dmgmod_auto_knockback" />
+        <damagemod name="dmgmod_ground" />
+    </event>
+    <FightMove aireusetime="30.0" aitype="aoe" animenum="ea_power1" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1" powerup_tag="cyc_proj_power" priority="5">
+        <require cat="skill" item="cyclops_power1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%cyclops_p1_pwr" time="0" />
+        <trigger name="sound" sound="char/cyclop_m/p1_charge" time="0" />
+        <trigger loop_timeout="1" loop_type="start" name="sound" sound="char/cyclop_m/p1_loop" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="2" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="cyclops_p1_link" time="0">
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power1_charging" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power1_loop" handler="ch_invis_wman_stick" icon="0" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power1_charging" powerup_tag="cyc_proj_power" priority="5" startchaintime="0.01">
+        <trigger loop_type="update" name="sound" sound="char/cyclop_m/p1_loop" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="7" name="effect" time="0.0" />
+        <chain action="samepowerhold" result="power1_charging" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="special2" result="power1_unfoc_release" />
+        <chain action="special" result="power1_foc_release" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power1_end" combotextfinisher="Beam" combotextstarter="Optic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_release" powerup_tag="cyc_proj_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger loop_type="update" name="sound" sound="char/cyclop_m/p1_loop" time="0.0" />
+        <trigger arc="30" damage="%cyclops_p1_reg_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="OpticBeam" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%cyclops_p1_lif" name="powerup" shared_tag="shared_stunned" tag="2" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p1_link" time="0.24" />
+        <trigger loop_type="stop" name="sound" sound="char/cyclop_m/p1_loop" time="0.24" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="3" name="effect_sound" sound="char/cyclop_m/p1_power" time="0.24" />
+        <trigger bolt="Bip01 L Hand" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="6" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power1_end" combotextfinisher="Beam" combotextstarter="Optic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_unfoc_release" powerup_tag="cyc_proj_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger arc="45" damage="%cyc_p1_unfoc_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="OpticBeam" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%cyclops_p1_lif" name="powerup" shared_tag="shared_stunned" tag="2" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p4_link" time="0.24" />
+        <trigger name="sound" pitch_range="100" sound="char/cyclop_m/beam_shoot" time="0.23" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="4" name="effect_sound" sound="char/cyclop_m/p1_power" time="0.24" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="6" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power1_end" combotextfinisher="Beam" combotextstarter="Optic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_foc_release" powerup_tag="cyc_proj_power" priority="5">
+        <trigger arc="15" damage="%cyclops_p1_foc_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="OpticBeam" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="0.33" selfonly="true" tag="2" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p1_link" time="0.24" />
+        <trigger name="sound" pitch_range="100" sound="char/cyclop_m/beam_shoot" time="0.23" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="5" name="effect_sound" sound="char/cyclop_m/p1_power" time="0.24" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p1_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger effect="char/cyclops/p1_power" fxlevel="6" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4.0" aitype="projectile" always_target="true" animenum="ea_power2" combotextfinisher="Blast" combotextstarter="Ricochet" icon="1" is_power="true" lockspeed="true" locktransitionangles="true" name="power2" noautoaim="true" powerup_tag="cyc_proj_power" priority="5" startchaintime="0.72" turnrate="0.5">
+        <require cat="skill" item="cyclops_p2" level="1" />
+        <event count="1" damage="%cyclops_p2_dmg" damagetype="dmg_energy" entity="cyclops_p2_proj" filename="ents_cyclops" inherit="projectile" knockback="40" life="%cyclops_p2_lif" name="laser_shot" numbounces="%cyclops_p2_bnc" pierce="true" speed="700" targetable="true" />
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p2_shot" fxlevel="8" name="effect" time="0.18" />
+        <trigger name="sound" pitch_range="200" sound="char/cyclop_m/beam_shoot" time="0.17" />
+        <trigger name="sound" pitch_range="300" sound="char/cyclop_m/beam_shoot" time="0.18" />
+        <trigger actorbolt="Bip01 Head" attack_bone_angles="0 0 0" attack_bone_pos="40 -2 50" name="laser_shot" powerusage="%cyclops_p2_pwr" time="0.18" />
+        <trigger name="sound" sound="char/cyclop_m/p2_power" time="0.54" />
+        <trigger actorbolt="Bip01 Head" attack_bone_angles="0 0 0" attack_bone_pos="40 -2 50" name="laser_shot" time="0.54" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerclick" result="power2" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power3" icon="2" is_power="true" lockspeed="true" name="power3" powerup_tag="cyc_proj_power" priority="5" startchaintime="0.7" turnrate="0.15">
+        <require cat="skill" item="cyclops_p3" level="1" />
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <trigger name="sound" sound="char/cyclop_m/p3_charge" time="0" />
+        <trigger name="powerusage" powerusage="%cyclops_p3_pwr" time="0" />
+        <trigger name="sound" pitch_range="100" sound="char/cyclop_m/beam_shoot" time="0.7" time_to_wait_to_process="0.4" />
+        <chain action="Idle" result="power3_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power3_loop" combotextfinisher="Stream" combotextstarter="Optic" energypersecond="%cyclops_p3_pwr" icon="2" is_power="true" lockchaining="true" lockspeed="true" locktransitionangles="true" name="power3_loop" noautoaim="true" powerup_tag="cyc_proj_power" priority="5" turnrate="0.25">
+        <event arc="0" attack_bone_angles="0 0 0" attack_bone_pos="19 0 56" attacktype="beam" beambolt="Bip01 Head" beameffect="char/cyclops/p3_power" damagelevel="2" damagescale="none" damagetype="dmg_energy" fxlevel="1" hiteffect="char/dcyclp/p1_impact" inherit="beam" knockback="190" maxrange="800" name="optic_dmg" victimeventtag="100">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger damage="0" damagetype="dmg_energy" name="hitme" tag="102" time="-1" type="ce_atk_self" />
+        <trigger failtag="120" filteractor="true" name="filter" passtag="101" tag="100" time="-1" />
+        <trigger class="harming" damage="%cyclops_p3_dmg" damagetype="dmg_energy" life="1.0" name="powerup" next_eventtag="102" tag="101" time="-1">
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger allow_non_actors="true" class="harming" damage="%cyclops_p3_dmg2" damagetype="dmg_energy" life="2.0" name="powerup" tag="120" time="-1">
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger name="unlock_loop_chaining" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" loop_timeout="1.88" loop_type="start" name="sound" sound="char/cyclop_m/p3_loop" time="0.15" />
+        <trigger index="1" name="optic_dmg" time="0.15" />
+        <trigger index="2" name="optic_dmg" time="0.3" />
+        <trigger index="3" name="optic_dmg" time="0.45" />
+        <trigger index="4" name="optic_dmg" time="0.6" />
+        <trigger index="5" name="optic_dmg" time="0.75" />
+        <trigger index="6" name="optic_dmg" time="0.9" />
+        <trigger critical="on_exit" loop_type="stop" name="sound" sound="char/cyclop_m/p3_loop" time="-1" />
+        <chain action="Idle" result="power3_end" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" icon="2" is_power="true" lockspeed="true" locktransitionangles="true" name="power3_end" noautoaim="true" priority="5" turnrate="0.2">
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <trigger critical="on_exit" loop_type="stop" name="sound" sound="char/cyclop_m/p3_loop" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30.0" aitype="aoe" animenum="ea_power4" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power4" powerup_tag="cyc_proj_power" priority="5">
+        <require cat="skill" item="cyclops_p3" level="1" />
+        <trigger name="powerusage" powerusage="%cyclops_p4_pwr" time="0" />
+        <trigger name="sound" sound="char/cyclop_m/p4_charge" time="0" />
+        <trigger loop_type="start" name="sound" sound="char/cyclop_m/p4_loop" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p4_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="cyclops_p4_link" time="0">
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/cyclops/p4_power" fxlevel="3" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power4_charging" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" icon="4" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_charging" playspeed="0.75" powerup_tag="cyc_proj_power" priority="5" startchaintime="0.01">
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_charging" />
+        <trigger loop_type="update" name="sound" sound="char/cyclop_m/p4_loop" time="0.0" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" combotextfinisher="Explosion" combotextstarter="Optic" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" playspeed="1.2" powerup_tag="cyc_proj_power" priority="5">
+        <trigger loop_type="update" name="sound" sound="char/cyclop_m/p4_loop" time="0.0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p4_link" time="0.38" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.38" />
+        <trigger damage="%cyclops_p4_dmg" damagescale="none" damagetype="dmg_energy" knockback="190" maxrange="120" name="radial" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="%cyclops_p4_dmg" damagescale="none" damagetype="dmg_energy" knockback="190" maxrange="120" name="radial" tag="11" time="-1" />
+        <trigger loop_type="stop" name="sound" sound="char/cyclop_m/p4_loop" time="0.38" />
+        <trigger name="sound" sound="char/cyclop_m/p4_power" time="0.15" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p4_power" fxlevel="4" name="effect" time="0.18" />
+        <trigger effect="char/cyclops/p4_power" fxlevel="5" name="effect" time="0.48" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power5" blendtime="0" icon="3" is_power="true" lockangles="true" name="power5" noflying="true" priority="5">
+        <require cat="skill" item="cyclops_p5" level="1" />
+        <trigger loop_timeout="1" loop_type="start" name="sound" sound="char/cyclop_m/p5_charge" time="0.0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%cyclops_p5_pwr" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/cyclops/p5_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="cyclops_p5_link" time="0.0">
+            <special_fx bolt="Bip01 R Toe0" effect="char/cyclops/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p5_link" time="-1" />
+        <chain action="Idle" result="power5_release" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power12" icon="3" is_power="true" lockchaining="false" locktransitionangles="true" name="power5_loop" noautoaim="true" noflying="true" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p5_link" time="-1" />
+        <chain action="Idle" result="power5_release2" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power14" combotextfinisher="Kick" combotextstarter="Roundhouse" icon="3" is_power="true" lockangles="true" name="power5_release" noflying="true" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/cyclops/p5_power" fxlevel="3" name="effect_sound" sound="char/cyclop_m/p5_power" tag="1" time="0.0" />
+        <trigger life="0.3" movement="75" name="slide" tag="2" targetdistance="90" targetradius="40" time="0.2" />
+        <trigger loop_type="update" name="sound" sound="char/cyclop_m/p5_charge" time="0.0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/cyclop_m/p5_charge" time="0.25" />
+        <trigger critical="true" name="powerup" remove_tag="cyclops_p5_link" time="0.25" />
+        <trigger arc="60" attacktype="punch" damage="%cyclops_p5_dmg" damagescale="none" damagetype="dmg_physical" maxrange="40" name="punch" offset="10" time="0.3">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power13" combotextfinisher="Kick" combotextstarter="Roundhouse" fallback="power5_release" icon="4" inherit="power5_release" is_power="true" name="power5_release2" noflying="true">
+        <trigger bolt="Bip01 L Toe0" effect="char/cyclops/p5_power" fxlevel="4" name="effect_sound" pitch_range="100" sound="char/cyclop_m/p5_release" time="0.0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/cyclops/p5_power" fxlevel="4" name="effect" time="0.0" />
+        <trigger effect="char/cyclops/p5_power" fxlevel="5" name="effect" time="0.0" />
+        <trigger tag="2" time="0" />
+        <trigger arc="60" attacktype="punch" damage="%cyclops_p5_dmg" damagescale="none" damagetype="dmg_physical" knockback="0" maxrange="40" name="punch" offset="10" time="0.3">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <trigger knockback="120" tag="13" time="0.13" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="cyclops_p6" level="1" />
+        <trigger name="sound" sound="char/cyclop_m/p6_power" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/cyclops/p6_power" fxlevel="1" name="effect" time="0.3" />
+        <trigger effect="char/cyclops/p6_power" fxlevel="2" name="effect" time="0.3" />
+        <trigger apply_ally="all" life="%cyclops_p6_lif" name="powerup" no_shadow="true" powerusage="%cyclops_p6_pwr" time="0.46">
+            <special_fx effect="char/cyclops/p6_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/cyclops/p6_aura" fxlevel="2" how_used="deactivate" />
+            <affecter affect_type="scale" attribute="def_damage" level="%cyclops_p6_dmg" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="buffself" animenum="ea_power7" icon="6" is_power="true" name="power7" priority="5">
+        <require cat="skill" item="cyclops_p7" level="1" />
+        <trigger name="powerusage" powerusage="%cyclops_p7_pwr" time="0" />
+        <trigger name="sound" sound="char/cyclop_m/p7_power" time="0.2" />
+        <trigger effect="char/cyclops/p7_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger class="feral_rage" life="%cyclops_p7_life" name="powerup" time="0.4">
+            <special_fx effect="char/cyclops/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 Head" effect="char/cyclops/p7_goggles" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/cyclops/p7_aura" fxlevel="2" how_used="deactivation" />
+            <special_fx effect="char/cyclops/p7_goggles" fxlevel="1" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="damage" level="%cyclops_p7_dmg" scope_node="cyc_proj_power" />
+            <affecter attribute="critical" level="%cyclops_p7_cri" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="cyclops_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="6" time="0.0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Incineration" icon="7" is_power="true" lockangles="true" name="power8" playspeed="3.0" powerup_tag="cyc_proj_power" priority="uninterruptable">
+        <event beambolt="Bip01 Head" damage="%cyclops_p8_dmg" damagetype="dmg_energy" fxlevel="1" impacteffect="char/cyclops/p8_impact" inherit="beam" knockdown="120" maxrange="600" name="optic_shot" spawneffect="char/cyclops/p8_power">
+            <damagemod name="dmgmod_auto_knockback" />
+        </event>
+        <event arc="20" damage="%cyclops_p8_dmg" damagelevel="1" damagescale="none" fxlevel="1" hiteffect="char/dcyclp/p1_impact" hitenemyeffect="char/dcyclp/p1_impact" inherit="punch" maxrange="350" name="optic_p8_dmg" radius="30">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="!BADREF:@HERO_CYCLOPS@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Optic Incineration" />
+        <trigger name="optic_shot" time="0.04" />
+        <trigger name="sound" pitch_range="100" sound="char/cyclop_m/beam_shoot" time="0.04" />
+        <trigger loop_type="start" name="sound" sound="char/cyclop_m/p8_loop" time="0.03" />
+        <trigger angle="-52" name="optic_p8_dmg" time="0.1" />
+        <trigger angle="-72" name="optic_p8_dmg" time="0.122" />
+        <trigger angle="-92" name="optic_p8_dmg" time="0.144" />
+        <trigger angle="-112" name="optic_p8_dmg" time="0.166" />
+        <trigger angle="-132" name="optic_p8_dmg" time="0.188" />
+        <trigger angle="-152" name="optic_p8_dmg" time="0.21" />
+        <trigger angle="-172" name="optic_p8_dmg" time="0.232" />
+        <trigger angle="168" name="optic_p8_dmg" time="0.254" />
+        <trigger angle="148" name="optic_p8_dmg" time="0.276" />
+        <trigger angle="128" name="optic_p8_dmg" time="0.298" />
+        <trigger angle="108" name="optic_p8_dmg" time="0.32" />
+        <trigger angle="88" name="optic_p8_dmg" time="0.342" />
+        <trigger angle="68" name="optic_p8_dmg" time="0.364" />
+        <trigger angle="48" name="optic_p8_dmg" time="0.386" />
+        <trigger angle="28" name="optic_p8_dmg" time="0.408" />
+        <trigger angle="8" name="optic_p8_dmg" time="0.43" />
+        <trigger angle="-12" name="optic_p8_dmg" time="0.452" />
+        <trigger angle="-32" name="optic_p8_dmg" time="0.474" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/cyclop_m/p8_loop" time="0.48" />
+        <trigger fxlevel="2" name="optic_shot" time="0.61" />
+        <trigger loop_type="start" name="sound" sound="char/cyclop_m/p8_power_loop" time="0.61" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/cyclop_m/p8_power_loop" time="0.83" />
+        <trigger name="sound" sound="char/cyclop_m/beam_shoot" time="0.84" />
+        <trigger bolt="Bip01 Head" effect="char/cyclops/p8_power" fxlevel="3" name="effect" time="0.9" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.8" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

@@ -1,0 +1,13 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line text="%PLAYER%: I believe that Elektra is now leading the secret, mystical sect of ninjas known as the Hand.">
+                <response text="%BLANK%">
+                    <line text="%PLAYER%: I've followed members of the Hand here, to S.H.I.E.L.D.'s Omega Base, to determine the truth. If Elektra is here, she will pay!">
+                        <response conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

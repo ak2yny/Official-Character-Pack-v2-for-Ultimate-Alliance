@@ -1,0 +1,550 @@
+<PowerStyle iconfile="textures/ui/ronin_icons.png">
+    <event inherit="skinsegment" name="show_sword" show="true" show2="false" skinsegment="sword_R_hand_segment" skinsegment2="sword_handles_segment" />
+    <event inherit="skinsegment" name="show_swordALT" show="true" show2="false" skinsegment="swordALT_R_hand_segment" skinsegment2="sword_handles_segment" />
+    <event inherit="skinsegment" name="show_knife_left" show="true" skinsegment="knife_L_hand_segment" />
+    <event inherit="skinsegment" name="show_knife_right" show="true" skinsegment="knife_R_hand_segment" />
+    <event inherit="skinsegment" name="draw_gun" show="true" skinsegment="pistol_segment" />
+    <event inherit="skinsegment" name="hide_sword" show="true" show2="false" skinsegment="sword_handles_segment" skinsegment2="sword_R_hand_segment" />
+    <event inherit="skinsegment" name="hide_swordALT" show="true" show2="false" skinsegment="sword_handles_segment" skinsegment2="swordALT_R_hand_segment" />
+    <event inherit="skinsegment" name="hide_knife_left" show="false" skinsegment="knife_L_hand_segment" />
+    <event inherit="skinsegment" name="hide_knife_right" show="false" skinsegment="knife_R_hand_segment" />
+    <event inherit="skinsegment" name="holster_gun" show="false" skinsegment="pistol_segment" />
+    <event actorbolt="Bip01 L Hand" attack_bone_angles="-110 -10 8" attack_bone_pos="37 4 56" count="3" damage="%ronin_p2_dam" entity="knife" filename="ents_ronin" fulltargeting="true" inherit="projectile" life="3" name="Knife" speed="800" targetable="true" />
+    <event arc="60" damage="13 15" damagelevel="1" damagetype="dmg_blade" inherit="punch_heavy" knockback="120" maxrange="72" name="power_sword" tiles="true" victimeventtag="50" />
+    <FightMove animenum="ea_idle1" handler="ch_idle" lockchaining="false" name="idle" noncombat="true">
+        <trigger name="hide_sword" time="0" />
+        <trigger name="hide_swordALT" time="0" />
+        <trigger name="hide_knife_left" time="0" />
+        <trigger name="hide_knife_right" time="0" />
+        <trigger name="holster_gun" time="0" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="move" result="jump" />
+        <chain action="special" result="boredloop" />
+        <chain action="powers" result="powers" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" playspeed="1" priority="3" startchaintime="0.58">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.25" />
+        <trigger name="show_sword" time="0.1" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0.1" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.2" name="trail" offsetend="12" time="0.25" />
+        <trigger damagetype="dmg_blade" name="punch" time="0.33" />
+        <trigger name="hide_sword" time="0.9" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.9" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.21" />
+        <trigger name="show_sword" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.3" name="trail" offsetend="12" time="0.18" />
+        <trigger damagetype="dmg_blade" name="punch" time="0.29" />
+        <trigger name="hide_sword" time="0.8" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" name="attacklight3">
+        <trigger name="whoosh_light" time="0.24" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.24" />
+        <trigger name="show_sword" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.3" name="trail" offsetend="12" time="0.22" />
+        <trigger damagetype="dmg_blade" name="punch" time="0.35" />
+        <trigger name="hide_sword" time="0.8" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
+        <trigger name="whoosh_heavy" time="0.1" />
+        <trigger name="show_sword" time="0" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0" />
+        <trigger loop_timeout="3.0" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" blendtime="0" handler="ch_hold_smash" lockangles="true" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="whoosh_heavy" time="0.15" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger movement="35" name="slide" targetdistance="55" time="0.1" />
+        <trigger bolt="fx01" life="0.6" name="trail" offsetend="12" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.15" />
+        <trigger damagetype="dmg_blade" damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger name="hide_sword" time="0.8" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger name="show_sword" time="0" />
+        <trigger name="hide_sword" time="0" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.24" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <trigger name="whoosh_heavy" time="0.17" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.17" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger damagetype="dmg_blade" knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger name="show_sword" time="0" />
+        <trigger name="hide_sword" time="0.85" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.85" />
+        <trigger movement="20" name="slide" time="0.176" />
+        <trigger bolt="fx01" life="0.3" name="trail" offsetend="12" time="0.176" />
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_ronin_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger name="sound" sound="char/ronin_m/p5_pool_pwr" time="0.2" />
+        <trigger execute_against="victim" name="otherevent" othertag="100" time="0.64" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" index="1" name="selfattack" tag="100" time="-1" type="ce_atk_self" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="0.8" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamloop" handler="ch_jump_smash" name="jumpsmash" playspeed="1" startchaintime="0.4" turnrate="0.5">
+        <trigger name="show_knife_left" time="0" />
+        <trigger name="show_knife_right" time="0" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0" />
+        <trigger life="0.3" name="slide" targetdistance="75" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/js_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="jumpsmash_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="hide_knife_left" time="-1" />
+        <trigger critical="true" name="hide_knife_right" time="-1" />
+        <chain action="idle" result="jumpsmash_release" />
+        <chain action="special" result="jumpsmash_release2" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamland" fallback="jumpsmash_release" lockangles="true" name="jumpsmash_release" playspeed="1" startchaintime="0.8">
+        <event damage="1 2" damagescale="normal" inherit="radial" knockback="190" maxrange="35" name="smash_attack">
+            <damagemod name="dmgmod_trip" />
+        </event>
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger height="-36" name="smash_attack" tag="10" time="0.1" />
+        <trigger name="smash_attack" tag="11" time="0.26" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="jumpsmash_link" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger critical="on_exit" name="hide_knife_left" time="0.99" />
+        <trigger critical="on_exit" name="hide_knife_right" time="0.99" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove fallback="jumpsmash_release2" inherit="jumpsmash_release" name="jumpsmash_release2">
+        <trigger tag="10">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger maxrange="60" tag="11" />
+        <trigger effect="base/hit/hit_jumpsmash" name="effect" time="0.16" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="aoe" animenum="ea_power1" combotextfinisher="Nunchaku" combotextstarter="Flying" icon="0" name="power1" priority="5" startchaintime="0.41">
+        <require cat="skill" item="ronin_p1" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p1_pwr" time="0" />
+        <trigger actorskin="17410" anim="power_1" anim_set="174_Ronin_baton" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" type="ce_bolton" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/ronin_m/p1_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/p1_charge" fxlevel="6" name="effect_sound" sound="char/ronin_m/p9_power" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="ronin_p1_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/ronin/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p1_charge" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_charged" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" combotextfinisher="Nunchaku" combotextstarter="Flying" icon="1" name="power1_charged" priority="5" startchaintime="0.01">
+        <require cat="skill" item="ronin_p1" level="1" />
+        <trigger actorskin="17410" anim="power_1_loop" anim_set="174_Ronin_baton" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" type="ce_bolton" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger name="sound" sound="char/ronin_m/p9_power" tag="10" time="-1" />
+        <trigger loop_type="start" name="sound" sound="char/ronin_m/p1_max_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p1_max_loop" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p1_charge" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_charged" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Nunchaku" combotextstarter="Flying" icon="1" name="power1_release" priority="5">
+        <require cat="skill" item="ronin_p1" level="1" />
+        <trigger actorskin="17410" anim="power_1_end" anim_set="174_Ronin_baton" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" type="ce_bolton" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p1_link" time="0.22" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/p1_release" fxlevel="%ronin_p1_fx1" name="effect_sound" sound="char/ronin_m/p1_release" time="0.22" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p1_max_loop" time="0.22" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p1_charge" time="0.22" />
+        <event damage="%ronin_p1_dmg" damagetype="dmg_blade" inherit="radial" maxrange="%ronin_p1_rad" name="blender" />
+        <trigger name="blender" time="0.3" />
+        <trigger name="blender" time="0.5" />
+        <trigger name="blender" time="0.7" />
+        <trigger boltslot="ebolton_weapon" name="removebolton" removebolton="true" time="1" type="ce_bolton" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="projectile" animenum="ea_power2" combotextfinisher="Shuriken" combotextstarter="Shining" icon="1" is_power="true" name="power2" priority="5">
+        <require cat="skill" item="ronin_p2" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p2_pwr" time="0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/ronin_m/p2_charge" time="0.38" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/p2_charge" fxlevel="6" name="effect_sound" next_eventtag="101" sound="char/ronin_m/p9_power" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="ronin_p2_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/ronin/p2_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0.2" />
+        <trigger name="show_knife_right" time="0.38" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p2_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p2_charge" time="-1" />
+        <trigger critical="true" name="hide_knife_right" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" combotextfinisher="Shuriken" combotextstarter="Shining" icon="1" is_power="true" name="power2_loop" priority="5" startchaintime="0.01">
+        <require cat="skill" item="ronin_p2" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger name="sound" sound="char/ronin_m/p9_power" tag="10" time="-1" />
+        <trigger loop_type="start" name="sound" sound="char/ronin_m/p2_max_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p2_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p2_max_loop" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p2_charge" time="-1" />
+        <trigger critical="true" name="hide_knife_right" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_end" combotextfinisher="Shuriken" combotextstarter="Shining" locktransitionangles="true" name="power2_release" priority="5" turnrate="0.3">
+        <require cat="skill" item="ronin_p2" level="1" />
+        <trigger name="hide_knife_right" time="0.05" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p2_link" time="0.05" />
+        <trigger name="effect_sound" sound="char/ronin_m/p2_release" time="0.05" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p2_max_loop" time="0.05" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ronin_m/p2_charge" time="0.05" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="-12 12 52" attacktype="projectile" count="%ronin_p2_cnt" damage="%ronin_p2_dmg" damagetype="dmg_physical" entity="knife" filename="ents_ronin" fulltargeting="true" maxrange="300" name="projectile" pierce="false" speed="800" targetable="true" time="0.05" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="melee" animenum="ea_power3" combotextfinisher="Tingler" combotextstarter="Teasing" handler="ch_lunge" icon="2" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="power3" playspeed="1" priority="5" targetable="true">
+        <require cat="skill" item="ronin_p3" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p3_pwr" time="0" />
+        <trigger name="sound" sound="char/ronin_m/p3_charge" time="0.2" />
+        <trigger name="otherevent" othertag="101" othertag2="102" tag="100" time="-1" />
+        <trigger attackerface="true" name="victim" nodename="knockbackstart" offset="-1 0 0" tag="101" time="-1" useeventvictim="true" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="50 0 1" tag="102" time="-1" useeventvictim="true" />
+        <trigger effect="char/ronin/p3_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger bolt="Bip01 L Hand" effect="char/ronin/p3_power" fxlevel="2" name="effect" time="0.4" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/p3_power" fxlevel="2" name="effect" time="0.4" />
+        <trigger name="show_swordALT" time="0.4" />
+        <trigger critical="true" name="hide_swordALT" time="-1" />
+        <chain action="idle" result="power3_end" />
+        <chain action="special" result="power3_knockdown" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" blendtime="0" combotextfinisher="Tingler" combotextstarter="Teasing" handler="ch_grab_hold_base" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3_knockdown" powerup_tag="ronin_power3" priority="5" startchaintime="1">
+        <require cat="skill" item="ronin_p3" level="1" />
+        <trigger name="show_swordALT" time="0" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <affecter attribute="atk_critical" level="0.75" />
+        </trigger>
+        <trigger name="sound" sound="char/ronin_m/p3_power" time="0.2" />
+        <trigger damage="%ronin_p3_dmg" damagetype="dmg_blade" inherit="radial" maxrange="18" name="sword" time="0.52" />
+        <trigger critical="true" name="hide_swordALT" time="0.95" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.95" />
+        <trigger critical="true" name="victim_release" ownertime="1" time="0.95" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power10" combotextfinisher="Tingler" combotextstarter="Teasing" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3_end" powerup_tag="ronin_power5" priority="5" startchaintime="1">
+        <require cat="skill" item="ronin_p3" level="1" />
+        <trigger damage="%ronin_p3_dmg" knockback="305" name="punch" time="0.2" />
+        <trigger critical="true" name="hide_swordALT" time="0.25" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="projectilenear" animenum="ea_power4" combotextfinisher="Slice" combotextstarter="Dicing" handler="ch_nightcrawlerboltons" icon="3" is_power="true" lockangles="true" name="power4" powerup_tag="ronin_power1" priority="5">
+        <require cat="skill" item="ronin_p4" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p4_pwr" time="0" />
+        <trigger name="show_sword" time="0.1" />
+        <trigger name="show_knife_left" time="0.1" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0.1" />
+        <trigger effect="char/ronin/p4_power" fxlevel="1" name="effect" time="0.26" />
+        <trigger arc="30" damage="%ronin_p4_dmg" damagetype="dmg_blade" knockback="190" maxrange="52" name="radial" time="0.3" victimeventtag="20" />
+        <trigger name="sound" sound="char/ronin_m/p4_power" time="0.3" />
+        <trigger effect="char/ronin/p4_power" fxlevel="2" name="effect" time="0.48" />
+        <trigger effect="char/ronin/p4_power" fxlevel="3" name="effect" time="0.54" />
+        <trigger arc="90" damage="%ronin_p4_dmg" damagetype="dmg_blade" knockback="190" maxrange="72" name="radial" time="0.56" victimeventtag="20" />
+        <trigger class="harming" damage="%ronin_p4_bld" life="%ronin_p4_lif" name="powerup" tag="20" time="-1" />
+        <trigger name="hide_knife_left" time="0.89" />
+        <trigger name="hide_sword" time="0.92" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.92" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5" animenum="ea_idle1" blendtime="0" combotextfinisher="Echo" combotextstarter="Random" icon="7" lockangles="true" name="power5" playspeed="1" priority="5">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p5_pwr" time="0.01" />
+        <trigger name="randomattack" tag0="10" tag1="20" tag2="30" tag3="40" time="0.2" type="ce_random_event" />
+        <trigger name="otherevent" othertag="11" tag="10" time="-1" />
+        <trigger combatnode="dare_p3" forcerestart="true" name="othernode" tag="11" time="-1" />
+        <trigger name="otherevent" othertag="21" tag="20" time="-1" />
+        <trigger combatnode="Power5_Elektra" forcerestart="true" name="othernode" tag="21" time="-1" />
+        <trigger name="otherevent" othertag="31" tag="30" time="-1" />
+        <trigger combatnode="power5_dead" forcerestart="true" name="othernode" tag="31" time="-1" />
+        <trigger name="otherevent" othertag="41" tag="40" time="-1" />
+        <trigger combatnode="blade_p4" forcerestart="true" name="othernode" tag="41" time="-1" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Echo" combotextstarter="Random" is_power="true" lockangles="true" name="dare_p3" priority="5">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger actorskin="17410" anim="power_8" anim_set="174_Ronin_baton" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" type="ce_bolton" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/p10_power" fxlevel="2" name="effect_sound" sound="char/ronin_m/p5_ddvil" time="0.05" />
+        <trigger damage="%ronin_p5_rdmg" damagetype="dmg_physical" knockback="k3" maxrange="120" name="radial" time="0.65" />
+        <trigger boltslot="ebolton_weapon" name="removebolton" removebolton="true" time="1" type="ce_bolton" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power12" combotextfinisher="Echo" combotextstarter="Random" name="Power5_Elektra" priority="5" startchaintime="0.95">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger charge="0" charge_type="set" name="charge" time="0" />
+        <trigger fx_size_scale="%ronin_p8_scale" life="-1" name="powerup" tag_name="ronin_p8_link" time="0">
+            <special_fx bolt="Bip01 R Toe0" effect="char/ronin/p11_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Toe0" effect="char/ronin/p11_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/ronin/p11_power" fxlevel="5" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/ronin_m/p3_charge" time="1" />
+        <chain action="Idle" result="power5_elekend" />
+        <chain action="samepowerhold" result="power5_elekloop" />
+    </FightMove>
+    <FightMove animenum="ea_power16" combotextfinisher="Echo" combotextstarter="Random" is_power="true" name="power5_elekloop" priority="5" startchaintime="0.95">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag="100" time="-1">
+            <special_fx bolt="Bip01 L Toe0" effect="char/ronin/p11_power" fxlevel="2" how_used="activation" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/ronin/p11_power" fxlevel="2" how_used="activation" never_cycle="true" />
+            <special_fx effect="char/ronin/p11_power" fxlevel="6" how_used="activation" never_cycle="true" />
+        </trigger>
+        <trigger life="0.45" motor="rumble" name="rumble" time="0" vibration="%ronin_p5_scale" />
+        <trigger charged="true" name="filter" passtag="100" time="0" />
+        <trigger charge="0.25" charge_type="add" name="charge" time="0.99" />
+        <chain action="Idle" result="power5_elekend" />
+        <chain action="samepowerhold" result="power5_elekloop" />
+    </FightMove>
+    <FightMove animenum="ea_power15" combotextfinisher="Echo" combotextstarter="Random" is_power="true" lockangles="true" name="power5_elekend" priority="5" startchaintime="0.99">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger critical="true" name="powerup" remove_tag="ronin_p8_link" time="0.206" />
+        <trigger name="sound" sound="char/ronin_m/p5_elk_pwr" time="0.206" />
+        <trigger charged="true" failtag="10" name="filter" passtag="1" time="0.206" />
+        <trigger effect="char/ronin/p11_power" fxlevel="3" name="effect" time="0.824" />
+        <trigger chance="%ron_p5_v_chance" failtag="10" name="otherevent" othertag="10" othertag2="20" tag="1" time="-1" />
+        <trigger name="otherevent" othertag="11" othertag2="12" tag="10" time="-1" />
+        <trigger fx_size_scale="%r_p5_rng_scale" name="powerup" remove_on_node_end="true" tag="11" time="-1">
+            <special_fx effect="char/ronin/p11_power" fxlevel="4" how_used="activation" never_cycle="true" />
+        </trigger>
+        <trigger damage="%ronin_p5_rdmg" inherit="radial" maxrange="%ronin_p5_rng" name="spin_kick" tag="12" time="-1" />
+        <trigger fx_size_scale="%r_p5_rng_scale" name="powerup" remove_on_node_end="true" tag="20" time="-1">
+            <affecter affect_type="scale" attribute="atk_vampire" level="%ronin_p5_vamp" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power13" combotextfinisher="Echo" combotextstarter="Random" handler="ch_nightcrawlerboltons" is_power="true" name="power5_dead" priority="5" startchaintime="0.95">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger name="sound" sound="char/ronin_m/p5_pool_pwr" time="0" />
+        <trigger name="show_sword" time="0.12" />
+        <trigger name="show_knife_left" time="0.12" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0.12" />
+        <trigger name="hide_sword" passtag="99" tag="100" time="-1" />
+        <trigger name="hide_knife_left" passtag="98" tag="99" time="-1" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" tag="98" time="-1" />
+        <chain action="idle" result="power5_deadloop" />
+    </FightMove>
+    <FightMove animenum="ea_power18" combotextfinisher="Echo" combotextstarter="Random" handler="ch_ngtmovingboltons" is_power="true" lockangles="false" name="power5_deadloop" playspeed="1.5" priority="5" startchaintime="0.99" turnrate="0.4">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger name="hide_sword" passtag="99" tag="100" time="-1" />
+        <trigger name="hide_knife_left" passtag="98" tag="99" time="-1" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" tag="98" time="-1" />
+        <trigger effect="char/ronin/p12_power" name="effect_sound" sound="char/ronin_m/p5_pool_pwr" time="0" />
+        <trigger damage="%ronin_p5_dmg" damagetype="dmg_blade" inherit="radial" knockback="120" maxrange="72" name="sword_rad" time="0.15" />
+        <chain action="idle" result="power5_deadend" />
+        <chain action="special" result="power5_deadloop" />
+    </FightMove>
+    <FightMove animenum="ea_power17" combotextfinisher="Echo" combotextstarter="Random" handler="ch_nightcrawlerboltons" is_power="true" lockchaining="false" name="power5_deadend" priority="5">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger loop_type="stop" name="sound" sound="char/ronin_m/p5_pool_pwr" time="0" />
+        <trigger name="hide_sword" time="0.75" />
+        <trigger name="hide_knife_left" time="0.75" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.75" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power14" combotextfinisher="Echo" combotextstarter="Random" lockangles="true" name="blade_p4" priority="5">
+        <require cat="skill" item="ronin_p5" level="1" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <affecter attribute="atk_critical" level="0.5" scope_victimstunned="true" />
+        </trigger>
+        <event arc="5" damage="%ronin_p5_dmg" damagetype="direct" fxlevel="1" hiteffect="char/ronin/p13_impact" inherit="radial" knockback="120" maxrange="500" name="p4shot">
+            <damagemod name="dmgmod_auto_knockback" />
+        </event>
+        <event actorbolt="Gun1" attacktype="projectile" count="1" entity="gunshot_fx" filename="ents_ronin" fulltargeting="false" inherit="projectile" maxrange="500" name="p4shot_fx" noautoaim="true" speed="1000" targetable="false" useboltangles="true">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger name="sound" sound="char/ronin_m/draw_gun" time="0.15" />
+        <trigger name="draw_gun" time="0.15" />
+        <trigger angle="15" name="p4shot" time="0.37" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="32 -2 57" name="p4shot_fx" time="0.37" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.37" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/ronin/p13_power" fxlevel="1" name="effect_sound" sound="char/ronin_m/p5_bld_shot" time="0.37" />
+        <trigger angle="5" name="p4shot" time="0.46" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="30 2 56" name="p4shot_fx" time="0.46" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.46" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/ronin/p13_power" fxlevel="1" name="effect_sound" sound="char/ronin_m/p5_bld_shot" time="0.46" />
+        <trigger angle="-5" name="p4shot" time="0.53" />
+        <trigger angle="-5" attack_bone_angles="0 0 0" attack_bone_pos="32 5 53" name="p4shot_fx" time="0.53" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.53" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/ronin/p13_power" fxlevel="1" name="effect_sound" sound="char/ronin_m/p5_bld_shot" time="0.53" />
+        <trigger name="sound" sound="char/ronin_m/holster_gun" time="0.82" />
+        <trigger name="holster_gun" time="0.82" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" powerup_tag="ronin_power6" priority="5">
+        <require cat="skill" item="ronin_p6" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p6_pwr" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/P6_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ronin/P6_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/ronin_m/special_unsheath" time="0.1" />
+        <trigger name="show_sword" time="0.11" />
+        <trigger name="sound" sound="char/ronin_m/P6_power" time="0.11" />
+        <trigger name="sound" sound="char/ronin_m/P6_charge" time="0.54" />
+        <trigger life="%ronin_p6_lif" name="powerup" time="0.54">
+            <affecter affect_type="scale" attribute="damage" level="%ronin_p6_dmg" />
+            <special_fx bolt="Bip01 R Hand" effect="char/ronin/p6_charge" fxlevel="1" />
+            <special_fx bolt="Bip01 L Hand" effect="char/ronin/p6_charge" fxlevel="1" />
+        </trigger>
+        <trigger name="sound" sound="char/ronin_m/P6_finish" time="0.9" />
+        <trigger name="hide_sword" time="0.92" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" powerup_tag="ronin_power7" priority="5">
+        <require cat="skill" item="ronin_p7" level="1" />
+        <trigger name="powerusage" powerusage="%ronin_p7_pwr" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ronin/P7_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ronin/P7_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/ronin_m/P7_power" time="0.2" />
+        <trigger life="%ronin_p7_lif" name="powerup" time="0.54">
+            <affecter affect_type="scale" attribute="move_attack" level="%ronin_p7_spe" />
+            <affecter affect_type="max" attribute="move_attack" level="2.5" />
+            <affecter affect_type="scale" attribute="atk_attack_rating" level="%ronin_p7_ar" />
+            <affecter affect_type="scale" attribute="defense_rating" level="%ronin_p7_def" />
+            <special_fx bolt="Bip01 R Hand" effect="char/ronin/p7_charge" fxlevel="1" />
+            <special_fx bolt="Bip01 L Hand" effect="char/ronin/p7_charge" fxlevel="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="4" is_power="true" lockchaining="false" name="team_xtreme" playspeed="5" priority="uninterruptable">
+        <require cat="skill" item="ronin_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power5" blendtime="0" combotextfinisher="Decimation" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power8" playspeed="10" priority="5" startchaintime="0.51">
+        <require cat="skill" item="ronin_p8" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Top Spin!" name="team_xtreme_msg" time="0" title="Power Strike" />
+        <trigger name="show_sword" time="0.1" />
+        <trigger name="sound" sound="char/ronin_m/P5_power" time="0.1" />
+        <trigger name="sound" sound="char/ronin_m/P8_charge_2" time="0.51" />
+        <trigger life="0.3" name="powerup" time="0.25">
+            <special_fx bolt="Bip01 R Hand" effect="char/ronin/p5_charge" fxlevel="2" how_used="primary" />
+        </trigger>
+        <trigger arc="120" damage="%ronin_p8_dmg" damagetype="wind" maxrange="300" name="radial" time="0.57" />
+        <trigger name="sound" sound="char/ronin_m/P8_power" time="0.9" />
+        <trigger effect="char/ronin/p5_release" fxlevel="2" name="effect" time="0.51" />
+        <trigger name="sound" sound="char/ronin_m/special_sheath" time="0.88" />
+        <trigger name="hide_sword" time="0.88" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.9" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

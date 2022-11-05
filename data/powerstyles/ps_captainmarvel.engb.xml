@@ -1,0 +1,251 @@
+<PowerStyle iconfile="textures/ui/captainmarvel_icons.png">
+    <FightMove animenum="ea_attack_jumpslamloop" handler="ch_jump_smash" name="jumpsmash" playspeed="1" powerup_tag="jmpsmsh" startchaintime="0.4" turnrate="0.5">
+        <trigger life="0.3" name="slide" targetdistance="75" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" sound="common/melee/js_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" sound=" " tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="jumpsmash_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="on_interrupt" name="charge" time="-1" />
+        <chain action="idle" result="jumpsmash_release_fall" />
+        <chain action="special" result="jumpsmash_release_fall" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslam" handler="ch_jump_smash_release" lockangles="true" name="jumpsmash_release_fall" playspeed="1" powerup_tag="jmpsmsh">
+        <trigger loop_type="update" name="sound" sound="common/melee/js_charge_loop" tag="10" time="-1" />
+        <chain action="special" result="jumpsmash_release_impact" />
+        <chain action="special2" result="jumpsmash_release_impact2" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamland" blendtime="0" lockangles="true" name="jumpsmash_release_impact" playspeed="1" powerup_tag="jmpsmsh" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger damage="2 3" damagescale="normal" inherit="radial" knockback="190" maxrange="35" name="ground_smash" offset="20" tag="1" time="0" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" time="0.05">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="jumpsmash_link" time="0.05" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove inherit="jumpsmash_release_impact" name="jumpsmash_release_impact2">
+        <trigger damage="3 4" maxrange="50" tag="1">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+    </FightMove>
+    <FightMove animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_captainmarvel_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger damage="3 4" damagescale="normal" damagetype="physical" index="1" knockback="120" maxrange="64" name="radial" time="0.55">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="stop" time="0.5" />
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.65" />
+        <trigger damage="3 4" damagescale="normal" index="2" maxrange="70" name="punch" offset="-30" time="0.65">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event arc="180" attacktype="punch" damagescale="none" damagetype="dmg_physical" inherit="punch" name="radial_punch" />
+    <event entity="captma_p5_target" filename="ents_captmarvel" inherit="relative_spawn" name="vortex_stun" relative="target" type="ce_atk_spawn_relative" />
+    <FightMove aireusetime="4" aitype="projectile" animenum="ea_power1" combotextfinisher="Burst" combotextstarter="Nebula" icon="0" is_power="true" locktransitionangles="true" name="power1" playspeed="0.7" priority="5" startchaintime="0.6" turnrate="0.5">
+        <require cat="skill" item="captma_p1" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p1_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/capmvl_m/p1_charge" time="0.2" />
+        <trigger button="samepowerhold" name="button_hint" time="0.2" />
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0.2" />
+        <trigger bolt="Bip01 L Hand" effect="char/captmarvel/p1_charge" fxlevel="6" loop_type="start" name="effect_sound" next_eventtag="101" sound="char/capmvl_m/p1_max" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/captmarvel/p1_charge" fxlevel="6" loop_type="start" name="effect_sound" sound="char/capmvl_m/p1_max" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="captma_p1_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/captmarvel/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/captmarvel/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" combotextfinisher="Burst" combotextstarter="Nebula" is_power="true" locktransitionangles="true" name="power1_loop" noautoaim="true" priority="5" startchaintime="0.01" turnrate="0.5">
+        <require cat="skill" item="captma_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p1_max" tag="10" time="-1" />
+        <trigger loop_type="start" name="sound" sound="char/capmvl_m/p1_charge_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p1_charge_loop" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_end" combotextfinisher="Burst" combotextstarter="Nebula" is_power="true" name="power1_release" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p1_link" time="0.24" />
+        <trigger bolt="Bip01 L Hand" effect="char/captmarvel/p1_release" name="effect_sound" sound="char/capmvl_m/p1_release" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/captmarvel/p1_release" name="effect" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p1_charge_loop" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p1_charge" time="0.24" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="35 -4 47" attacktype="projectile" damagescale="none" damagetype="dmg_energy" entity="captma_p1_proj" explodedamage="%captma_p1_dmg" exploderadius="%captma_p1_rad" filename="ents_captmarvel" fulltargeting="true" fxlevel="%captma_p1_fx" name="projectile" speed="700" tag="20" targetable="true" time="0.24" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerclick" result="power1" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power2" combotextfinisher="Nega-Bands" combotextstarter="Slamming" icon="1" is_power="true" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="captma_p2" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p2_pwr" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p2_intro" time="0.1" />
+        <trigger name="sound" sound="char/capmvl_m/p2_power" time="0.4" />
+        <trigger bolt="Bip01 L Hand" effect="char/captmarvel/p2_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger bolt="Bip01 R Hand" effect="char/captmarvel/p2_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger effect="char/captmarvel/p2_power" fxlevel="2" name="effect" time="0.4" />
+        <trigger damage="%captma_p2_dmg" damagetype="dmg_energy" hiteffect="char/captmarvel/p2_impact" knockback="%captma_p2_kb" maxrange="100" name="radial" time="0.4" victimeventtag="10">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="20" tag="10" time="-1" />
+        <trigger is_stunned="true" name="filter" passtag="30" tag="20" time="-1" />
+        <trigger chance="%captma_p2_chc" name="otherevent" othertag="40" tag="30" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="0.5" selfonly="true" tag="40" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="beam" animenum="ea_power3" combotextfinisher="Beam" combotextstarter="Celestial" icon="2" is_power="true" locktransitionangles="true" name="power3" priority="5" turnrate="0.5">
+        <require cat="skill" item="captma_p3" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p3_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/capmvl_m/p3_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 Spine2" effect="char/captmarvel/p3_charge" fxlevel="6" loop_type="start" name="effect_sound" sound="char/capmvl_m/p3_max" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="captma_p3_link" time="0">
+            <special_fx bolt="Bip01 Spine2" effect="char/captmarvel/p3_charge" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p3_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p3_charge" time="-1" />
+        <chain action="idle" result="power3_blast" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="beam" animenum="ea_power3_loop" blendtime="0" combotextfinisher="Beam" combotextstarter="Celestial" is_power="true" locktransitionangles="true" name="power3_loop" priority="5" startchaintime="0.01" turnrate="0.5">
+        <require cat="skill" item="captma_p3" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger min_charge="1" name="filter" passtag="10" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p3_max" tag="10" time="-1" />
+        <trigger loop_type="start" name="sound" sound="char/capmvl_m/p3_charge_loop" tag="10" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p3_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p3_charge_loop" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p3_charge" time="-1" />
+        <chain action="idle" result="power3_blast" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" combotextfinisher="Beam" combotextstarter="Celestial" is_power="true" lockangles="true" locktransitionangles="true" name="power3_blast" turnrate="0.1">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="captma_p3_link" time="0.24" />
+        <trigger name="sound" sound="char/capmvl_m/p3_release" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p3_charge_loop" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/capmvl_m/p3_charge" time="0.24" />
+        <trigger arc="0" attacktype="beam" beambolt="Bip01 Spine2" beameffect="char/captmarvel/p3_beam" damage="%captma_p3_dmg" damagetype="dmg_energy" fxlevel="%captma_p3_fx" hiteffect="char/captmarvel/p3_impact" knockback="40" maxrange="500" name="beam" spawneffect="char/captmarvel/p3_spawn" time="0.2" victimeventtag="110" />
+        <trigger name="sound" sound="char/capmvl_m/p3_impact" tag="110" time="-1" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event damage="%captma_p4_dmg" damagescale="none" damagetype="dmg_energy" inherit="radial" maxrange="120" name="captma_p4_atk" />
+    <FightMove animenum="ea_power4" combotextfinisher="Stars" combotextstarter="Cosmic" endchaintime="0.8" handler="ch_repeat_attack" icon="3" is_power="true" lockangles="true" lockchaining="true" name="power4" playspeed="1" priority="5" startchaintime="0.25" storepowerbuttons="true">
+        <require cat="skill" item="captma_p4" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p4_pwr" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/captmarvel/p4_charge" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/captmarvel/p4_charge" fxlevel="1" name="effect" time="0" />
+        <trigger effect="char/captmarvel/p4_charge" fxlevel="2" name="effect_sound" sound="char/capmvl_m/p4_charge" time="0" />
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger effect="char/captmarvel/p4_power" fxlevel="1" name="effect_sound" sound="char/capmvl_m/p4_power" time="0.2" />
+        <trigger name="captma_p4_atk" time="0.2" />
+        <trigger name="otherevent" othertag="101" othertag2="102" tag="100" time="-1" type="ce_otherevent" />
+        <trigger damage="%captma_p4_dmg2" name="captma_p4_atk" tag="101" time="-1" />
+        <trigger effect="char/captmarvel/p4_power" fxlevel="2" name="effect_sound" sound="char/capmvl_m/p4_stars" tag="102" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event damage="%captma_p5_dmg" damagetype="dmg_energy" enemynumber="0" fxlevel="1" inherit="blast" maxrange="180" name="hail_storm" radius="60" random="true" victimeventtag="205">
+        <damagemod name="dmgmod_popup" />
+    </event>
+    <FightMove aireusetime="10" aitype="aoe" animenum="ea_power9" combotextfinisher="Sky" combotextstarter="Falling" icon="8" is_power="true" lockangles="true" locktransitionangles="true" name="power5" priority="5">
+        <require cat="skill" item="captma_p5" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p5_pwr" time="0" />
+        <trigger effect="char/captmarvel/p9_charge" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p5_intro" time="0.1" />
+        <trigger name="sound" sound="char/capmvl_m/p5_power" time="0.35" />
+        <trigger life="%captma_p5_life" name="powerup" next_eventtag="210" tag="205" time="-1">
+            <special_fx effect="char/captmarvel/p9_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger effect="char/captmarvel/p9_impact" name="effect_sound" sound="char/capmvl_m/p5_impact" tag="210" time="-1" />
+        <trigger enemynumber="0" name="hail_storm" time="0.75" />
+        <trigger enemynumber="1" name="hail_storm" time="0.69" />
+        <trigger enemynumber="2" name="hail_storm" time="0.73" />
+        <trigger enemynumber="3" name="hail_storm" time="0.66" />
+        <trigger enemynumber="4" name="hail_storm" time="0.71" />
+        <trigger enemynumber="5" name="hail_storm" time="0.74" />
+        <trigger enemynumber="6" name="hail_storm" time="0.68" />
+        <trigger enemynumber="7" name="hail_storm" time="0.71" />
+        <trigger enemynumber="8" name="hail_storm" time="0.73" />
+        <trigger enemynumber="9" name="hail_storm" time="0.67" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="captma_p6" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p6_pwr" time="0" />
+        <trigger effect="char/captmarvel/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p6_power" time="0" />
+        <trigger life="%captma_p6_lif" name="powerup" time="0.54">
+            <affecter affect_type="scale" attribute="move_attack" level="%captma_p6_spe" />
+            <affecter affect_type="scale" attribute="atk_attack_rating" level="%captma_p6_ar" />
+            <affecter affect_type="scale" attribute="damage" level="%captma_p6_dmg" />
+            <scope scope_powers="true" />
+            <scope scope_damage="dmg_energy" />
+            <special_fx bolt="Bip01 R Hand" effect="char/captmarvel/p6_charge" fxlevel="1" />
+            <special_fx bolt="Bip01 L Hand" effect="char/captmarvel/p6_charge" fxlevel="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buffself" animenum="ea_power7" icon="6" is_power="true" name="power7" priority="5">
+        <require cat="skill" item="captma_p7" level="1" />
+        <trigger name="powerusage" powerusage="%captma_p7_pwr" time="0" />
+        <trigger add="cloaked" name="disapear" tag="10" time="-1" type="ce_renderfx" />
+        <trigger name="appear" remove="cloaked" tag="11" time="-1" type="ce_renderfx" />
+        <trigger effect="char/captmarvel/p7_power" fxlevel="1" name="effect" time="0.2" />
+        <trigger bolt="Bip01 L Toe0" effect="char/captmarvel/p7_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Toe0" effect="char/captmarvel/p7_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger effect="char/captmarvel/p7_power" fxlevel="3" name="effect_sound" sound="char/capmvl_m/p7_power" time="0.4" />
+        <trigger class="callevents" life="%captma_p7_lif" name="powerup" time="0.5">
+            <Functionevent function="activate" triggertag="10" />
+            <Functionevent function="deactivate" triggertag="11" />
+            <special_fx effect="char/captmarvel/p7_aura" fxlevel="1" how_used="primary" />
+            <affecter attribute="invisible" />
+            <affecter attribute="health_regen_pct" level="%captma_p7_regen" />
+        </trigger>
+        <trigger effect="char/captmarvel/p7_power" fxlevel="4" name="effect" time="0.5" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_team_xtreme" icon="7" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="captma_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Decimation" icon="7" is_power="true" locktransitionangles="true" name="power8" playspeed="10" priority="5" turnrate="0.5">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="I will blast you all to the negaverse!" name="team_xtreme_msg" time="0" title="Big Bang" />
+        <trigger bolt="Bip01 Spine2" effect="char/captmarvel/p8_power" how_used="primary" name="effect_sound" sound="char/capmvl_m/p8_power" time="0" />
+        <trigger name="set_visible" time="0.13" type="ce_force_visibility" visible="false" />
+        <trigger attacktype="direct" count="8" damage="%captma_p8_dmg" damagetype="dmg_energy" hiteffect="char/captmarvel/p8_impact" knockback="%captma_p8_kb" maxrange="300" name="radial" time="0.15">
+            <damagemod name="dmgmod_popup" />
+        </trigger>
+        <trigger bolt="Bip01 Spine2" effect="char/captmarvel/p8_form" how_used="primary" name="effect" time="0" />
+        <trigger name="sound" sound="char/capmvl_m/p8_charge" time="0.25" />
+        <trigger name="set_visible" time="0.68" type="ce_force_visibility" visible="true" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

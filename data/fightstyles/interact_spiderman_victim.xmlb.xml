@@ -1,0 +1,90 @@
+<FightingStyle>
+    <FightMove ainopush="true" animenum="ea_victim3" handler="ch_grab_victim_no_break" lockangles="true" lockspeed="true" name="Grab_Smash_Victim_Start" noncombat="true" powerup_tag="grabs_vic" priority="uninterruptable">
+        <trigger entity="cocoon" filename="ents_spiderman" name="projectile" offset="-10 0 500" time="0.33" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="cocoon_link" time="0.33">
+            <special_fx bolt="Bip01 Spine2" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="5" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Head" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Forearm" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Forearm" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger class="interaction" ignore_ondeactivate_if_dead="true" life="5" name="powerup" node_search_interaction_layer_only="true" time="0.33">
+            <InteractionEvent event="OnHurt" interaction="data/fightstyles/interact_spiderman_victim" nodename="Grab_Smash_Victim_Pain" />
+            <InteractionEvent event="OnDeactivate" interaction="data/fightstyles/interact_spiderman_victim" nodename="Grab_Smash_Victim_Exit" />
+            <InteractionEvent event="OnDeath" interaction="data/fightstyles/interact_spiderman_victim" nodename="Grab_Smash_Victim_Die" />
+            <affecter affect_type="scale" attribute="def_pain" level="0" />
+            <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+            <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        </trigger>
+        <chain action="Idle" result="Grab_Smash_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_victim7" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Grab_Smash_Victim_Idle" powerup_tag="grabs_vic" sequenced="true" startchaintime="0.99">
+        <chain action="Idle" result="Grab_Smash_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_victim4" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Grab_Smash_Victim_Pain" powerup_tag="grabs_vic" sequenced="true" startchaintime="0.99">
+        <chain action="Idle" result="Grab_Smash_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_popup_land" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Grab_Smash_Victim_Exit" powerup_tag="grabs_vic" priority="uninterruptable" sequenced="true" startchaintime="0.99">
+        <trigger critical="true" name="powerup" remove_tag="cocoon_link" time="0" />
+        <chain action="Idle" result="getuponfront" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_popup_land" death="true" lockangles="true" locktransitionangles="true" name="Grab_Smash_Victim_Die" priority="uninterruptable" />
+    <FightMove animenum="ea_victim5" lockangles="true" locktransitionangles="true" name="hold_in_place_no_break" priority="uninterruptable">
+        <trigger loop_type="start" name="charsound" only_non_looped="true" sound="snd_struggle" time="0" />
+        <trigger critical="on_interrupt" loop_type="stop" name="charsound" sound="snd_struggle" time="-1" />
+        <chain action="Idle" result="hold_in_place_no_break" />
+    </FightMove>
+    <FightMove animenum="ea_victim5" lockangles="true" locktransitionangles="true" name="hold_in_place_no_break_no_snd" priority="uninterruptable">
+        <chain action="Idle" result="hold_in_place_no_break_no_snd" />
+    </FightMove>
+    <FightMove animenum="ea_victim10" blendtime="0" handler="ch_require_owner" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3_victim_spinning" priority="uninterruptable" startchaintime="0.99">
+        <trigger name="stop" time="0" />
+        <trigger flag1="noclip" name="flags" time="0" type="ce_set_flags" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <affecter affect_type="scale" attribute="def_damage" level="0" />
+            <affecter affect_type="scale" attribute="def_knockback" level="0" />
+            <affecter affect_type="scale" attribute="def_pain" level="0" />
+            <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        </trigger>
+        <trigger flag1="noclip" name="flags" resetflags="true" time="1" type="ce_set_flags" />
+        <chain action="special" result="idle" />
+        <chain action="special2" result="idle" />
+        <chain action="Idle" result="power3_victim_spinning" />
+    </FightMove>
+    <FightMove animenum="ea_victim11" blendtime="0" lockangles="true" lockspeed="true" name="power3_victim_thrown" priority="uninterruptable" startchaintime="0.99">
+        <chain action="Idle" result="thrownbackloop" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" lockangles="true" locktransitionangles="true" name="victim_wait" priority="uninterruptable">
+        <trigger name="stop" time="0" />
+        <chain action="Idle" result="victim_wait" />
+    </FightMove>
+    <FightMove animenum="ea_victim8" handler="ch_grab_victim_no_break" lockangles="true" lockchaining="true" locktransitionangles="true" name="Team_Xtreme_Victim_Start" noautoaim="true" priority="uninterruptable" startchaintime="0.99">
+        <chain action="Idle" result="Team_Xtreme_Victim_Web_Start" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_victim9" handler="ch_grab_victim_no_break" lockangles="true" lockchaining="true" locktransitionangles="true" name="Team_Xtreme_Victim_Web_Start" noautoaim="true" playspeed="10" powerup_tag="xtreme_vic" priority="uninterruptable">
+        <trigger entity="cocoon" filename="ents_spiderman" name="projectile" offset="-10 0 500" time="0" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="cocoon_link" time="0">
+            <special_fx bolt="Bip01 Spine2" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="5" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Head" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Forearm" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Forearm" bolt2ent="cocoon" effect="char/spider/p10_charge" fxlevel="6" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger class="interaction" ignore_ondeactivate_if_dead="true" life="5" name="powerup" node_search_interaction_layer_only="true" time="0.95">
+            <InteractionEvent event="OnHurt" interaction="data/fightstyles/interact_spiderman_victim" nodename="Team_Xtreme_Victim_Pain" />
+            <InteractionEvent event="OnDeactivate" interaction="data/fightstyles/interact_spiderman_victim" nodename="Team_Xtreme_Victim_Exit" />
+            <InteractionEvent event="OnDeath" interaction="data/fightstyles/interact_spiderman_victim" nodename="Grab_Smash_Victim_Die" />
+            <affecter affect_type="scale" attribute="def_pain" level="0" />
+            <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+            <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        </trigger>
+        <chain action="Idle" result="Team_Xtreme_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_victim7" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Team_Xtreme_Victim_Idle" powerup_tag="xtreme_vic" sequenced="true" startchaintime="0.99">
+        <chain action="Idle" result="Team_Xtreme_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_victim4" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Team_Xtreme_Victim_Pain" powerup_tag="xtreme_vic" sequenced="true" startchaintime="0.99">
+        <chain action="Idle" result="Team_Xtreme_Victim_Idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_popup_land" handler="ch_grab_victim_no_break" lockangles="true" locktransitionangles="true" name="Team_Xtreme_Victim_Exit" priority="uninterruptable" sequenced="true" startchaintime="0.99">
+        <chain action="Idle" result="getuponfront" />
+    </FightMove>
+</FightingStyle>

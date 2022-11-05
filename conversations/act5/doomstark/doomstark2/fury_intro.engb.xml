@@ -1,0 +1,13 @@
+<conversation>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line text="UT: %NickFuryNPC%: When this is over, Stark and I are going to have a talk about that S.H.I.E.L.D. contract for these things. ">
+                <response text="%BLANK%">
+                    <line text="UT: %NickFuryNPC%: I can take care of myself, Go find Pym. We're going to need him if we want a chance to stop Doom.">
+                        <response chosenscriptfile="act5/doomstark/doomstark2/pym_intro_start" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>
