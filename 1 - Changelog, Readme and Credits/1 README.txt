@@ -152,6 +152,7 @@ Official Character Pack 2
  Additional original MUA credits: Blur Studio (cinematics), CRI Middleware (video), Four Bars Entertainment (music)
 -THX: for starting and hosting marvelmods.com
 -UltraMegaMagnus: His amazing efforts in putting together OCP2, upscaling files, fixing skins, adding packages, CSS, etc.
+-Rampage: Many fixes and improvements, since the OCP2 went to GitHub
 -Dark_Mark: Swordsman model, Super Skrull skin, converting Xbox 360 Gold Edition unique character conversations, Venom, Hulk's and Hawkeye's power sounds, revised power sounds for Dr. Doom, Cyclops, Ronin and Nightcrawler, Black Widow fixes, alternative Murderworld storyline, (his other work and models from OCP1 are not included in OCP2)
 -LarsAlexandersson: converting RE sounds for many official characters, Dark retexture, Ronin comic mission conversion, general help
 -nodoubt_jr: better Magma conversion for XML2, where the OCP2 Magma was updated from
@@ -164,7 +165,6 @@ Official Character Pack 2
 -Krisan Thyme: for converting dlc sounds and fixing various scripts
 -Nowhereman: for the Hand Ninjas & JulioCabral for the SIM coding
 -Nicaras: for the Jean Grey fix
--Rampage: Icon and description fixes
 -BloodyMares: for the Hulk hud, and Daredevil baton fixes
 -BaconWizard17: for the statues of Nightcrawler and Jean, XML skins, the Xbox One controller fix and instructions.
 -Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
