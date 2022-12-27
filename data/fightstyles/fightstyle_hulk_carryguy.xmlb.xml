@@ -1,0 +1,190 @@
+<FightingStyle>
+    <FightMove ainopush="true" animenum="ea_popup_start" handler="ch_popup" lockangles="true" lockchaining="false" lockspeed="true" name="popupstart" priority="pain" priority_override="pain" sequenced="true">
+        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01" />
+        <trigger name="set_weapon_visible" time="0" visible="false" />
+        <trigger bolt="Bip01 Spine2" life="0.5" name="trail" time="0" />
+        <chain action="special" result="popupland" />
+        <chain action="special2" result="popupbreak" />
+        <chain action="idle" result="popuploop" />
+    </FightMove>
+    <FightMove animenum="ea_trip" death="true" handler="ch_trip" lockangles="true" lockspeed="true" locktransitionangles="true" name="trip" priority="pain" priority_override="pain">
+        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01" />
+        <trigger name="body_sound" time="0.3" />
+        <trigger name="onground" onfront="true" onground="true" time="0.3" />
+        <chain action="idle" result="getuponfront" />
+    </FightMove>
+    <FightMove animenum="ea_thrown_back_loop" handler="ch_thrown" lockangles="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="knockbackstart" noblendanim="true" noncombat="true" priority="pain" priority_override="pain" sequenced="true">
+        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01" />
+        <chain action="special" result="thrownbackland" />
+        <chain action="special2" result="thrownbackhitwall" />
+    </FightMove>
+    <FightMove animenum="ea_thrown_fwd_loop" blendtime="0.1" handler="ch_thrown" lockangles="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="knockfwdstart" noncombat="true" sequenced="true">
+        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01" />
+        <chain action="attack" result="thrownfwdland" />
+        <chain action="special" result="thrownfwdland" />
+        <chain action="special2" result="thrownfwdhitwall" />
+    </FightMove>
+    <FightMove animenum="ea_power8_end" handler="ch_idle" lockchaining="false" name="idle" noncombat="true">
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="move" result="jump" />
+        <chain action="powers" result="powers" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power8_start" handler="ch_move" lockchaining="false" name="walk" noncombat="true">
+        <trigger animbased="true" name="footstep" time="0.25" volume="0.25" />
+        <trigger animbased="true" name="footstep" time="0.75" volume="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="move" result="jump" />
+        <chain action="powers" result="powers" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power8_loop" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <trigger name="victim" nodename="grabrun_victim" time="0" />
+        <trigger animbased="true" name="footstep" time="0.25" volume="1" />
+        <trigger animbased="true" name="footstep" time="0.75" volume="1" />
+        <trigger critical="on_exit" name="victim" nodename="grabidle_victim" time="-1" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="move" result="jump" />
+        <chain action="powers" result="powers" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_guard_decide" lockangles="true" lockchaining="false" lockspeed="true" name="guarddecide" noncombat="true" startchaintime="0.5">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="guard" result="grabstart" />
+        <chain action="special2" result="grabstart" />
+        <chain action="special" result="pickupobjectstart" />
+        <chain action="special3" result="attacklight1" />
+        <chain action="special4" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_grab_throw_ally" handler="ch_grab_hold" lockangles="true" locktransitionangles="true" name="throw_guy" noautoaim="true" priority="uninterruptable" startchaintime="0.99">
+        <trigger critical="on_exit" name="powerup" next_eventtag="2" remove_tag="carry_actor_as_weapon" tag="1" time="0.47" />
+        <trigger name="otherevent" othertag="3" othertag2="5" tag="2" time="-1" />
+        <trigger execute_against="victim" name="otherevent" othertag="4" tag="3" time="-1" />
+        <trigger flag1="no_actor_vfx" name="flags" resetflags="on_exit" tag="4" time="-1" type="ce_set_flags" />
+        <trigger clear_actor_as_weapon="true" name="unbolt_victim" next_eventtag="6" tag="5" time="-1" type="ce_return_victim_model" unbolt_self="false" />
+        <trigger facethrowdir="false" impactdamage="13 15" name="throw" ownertime="0.5" tag="6" throwdirection="Forward" thrownode="thrownbackloop" throwspeed="800" time="-1" />
+        <trigger name="sound" sound="char/hulk_m/p10_throw" time="0.47" />
+        <trigger critical="on_exit" interaction_name="parent" name="end_interaction" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_ko_head1" death="true" lockangles="true" name="deathgen" priority="uninterruptable" priority_override="uninterruptable">
+        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power12" lockangles="true" name="attacklight1" startchaintime="0.7">
+        <trigger bolt="Bip01 R Hand" bolt_point="preserve_effect" life="0.3" name="trail" time="0.35" />
+        <trigger name="whoosh_light" time="0.4" />
+        <trigger name="sound" sound="Weapons/1_hand_impact" time="0.49" />
+        <trigger arc="80" attack_bone_angles="55 3 -17" attack_bone_pos="30 -19 44" damage="2 3" knockback="120" maxrange="80" name="punch" tiles="true" time="0.49" />
+        <trigger name="victim" nodename="grabflail_victim" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power13" lockangles="true" name="attacklight2" startchaintime="0.7">
+        <trigger bolt="Bip01 R Hand" bolt_point="preserve_effect" life="0.35" name="trail" time="0.35" />
+        <trigger name="whoosh_light" time="0.45" />
+        <trigger name="sound" sound="Weapons/1_hand_impact" time="0.5" />
+        <trigger arc="80" attack_bone_angles="-102 29 -108" attack_bone_pos="18 -23 35" damage="2 3" knockback="120" maxrange="80" name="punch" tiles="true" time="0.5" />
+        <trigger name="victim" nodename="grabflail_victim" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power14" lockangles="true" name="attacklight3">
+        <trigger bolt="Bip01 R Hand" bolt_point="preserve_effect" life="0.25" name="trail" time="0.41" />
+        <trigger name="whoosh_heavy" time="0.5" />
+        <trigger name="sound" sound="Weapons/1_hand_impact" time="0.58" />
+        <trigger attack_bone_angles="55 2 -18" attack_bone_pos="30 -19 45" damage="3 4" damagescale="normal" knockback="120" maxrange="80" name="radial" tiles="true" time="0.58" />
+        <trigger name="victim" nodename="grabflail_victim" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power15" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.5">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove animenum="ea_power16" handler="ch_hold_smash" lockangles="true" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power17" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="on_exit" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="on_exit" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger bolt="Bip01 R Hand" bolt_point="fx" life="0.4" name="trail" time="0.15" />
+        <trigger movement="20" name="slide" targetdistance="75" time="0.2" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.35" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger arc="75" damage="3 4" knockback="120" maxrange="80" name="punch" next_eventtag="12" tag="11" tiles="true" time="-1">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="victim" nodename="grabflail_victim" tag="12" time="-1" />
+        <trigger critical="on_exit" name="powerup" remove_tag="knockback_link" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+        <chain action="special5" result="throw_guy" />
+    </FightMove>
+</FightingStyle>

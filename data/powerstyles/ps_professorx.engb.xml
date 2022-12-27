@@ -1,0 +1,258 @@
+<PowerStyle iconfile="textures/ui/professorx_icons.png">
+    <FightMove animenum="ea_grab_smash" endchaintime="1.0" handler="ch_grab_hold" lockangles="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" motion_track_offset="true" name="victim" nodename="grabsmashvictim" targetdistance="20" time="0" victimface="true" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="0" />
+        <trigger name="sound" sound="common/melee/kb_charge" tag="101" time="-1" />
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 L Hand" life="0.95" name="trail" time="0.1" />
+        <trigger name="whoosh_light" time="0.5" />
+        <trigger name="victim_release" time="0.5" />
+        <trigger arc="90" damage="3 4" damagescale="none" knockback="190" maxrange="64" name="radial" time="0.6">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event damagetype="dmg_energy" inherit="punch" name="OpticBeam">
+        <damagemod name="dmgmod_auto_knockback" />
+        <damagemod name="dmgmod_ground" />
+    </event>
+    <FightMove animenum="ea_attack_light1" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.17" name="trail" offsetend="12" time="0.25" />
+        <trigger name="punch" time="0.42" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="12" time="0.2" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight3" startchaintime="0.62">
+        <event inherit="punch_heavy" maxrange="50" name="backhand" />
+        <trigger name="whoosh_light" time="0" />
+        <trigger life="0.18" movement="0" name="slide" time="0.09" />
+        <trigger bolt="Bip01 L Hand" life="0.26" name="trail" time="0.19" />
+        <trigger name="backhand" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" fallback="attackheavy1" handler="ch_popup_attack" lockangles="true" name="popupattack2" startchaintime="0.6">
+        <event inherit="punch_heavy" knockback="0" maxrange="50" name="uppercut">
+            <damageMod name="dmgmod_popup" />
+        </event>
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.15" />
+        <trigger height="-10" name="uppercut" time="0.26" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="1.0">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect" next_eventtag="102" tag="101" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1.0" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0.0" />
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.1" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.12" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aireusetime="3" aitype="melee" animenum="ea_power1" combotextfinisher="Fury" combotextstarter="Masterful" icon="0" lockangles="true" name="power1" priority="5">
+        <require cat="skill" item="prof_cleave" level="1" />
+        <event arc="65" inherit="punch" maxrange="90" name="sword_slash" tiles="true" />
+        <trigger chance="%prof_cleave_pct" class="atk_instant_pct" life="-1" name="powerup" percent="0.33" remove_on_node_end="true" time="0">
+            <affecter affect_type="scale" attribute="atk_damage" level="%prof_cleave_dmg" />
+            <affecter affect_type="scale" attribute="atk_attack_rating" level="%prof_cleave_ar" />
+        </trigger>
+        <trigger name="slide" targetdistance="85" targetradius="50" time="0.2" />
+        <trigger effect="char/profx/p1_power" fxlevel="2" name="effect_sound" sound="char/profx_m/p1_charge" time="0.3" />
+        <trigger angle="45" name="sword_slash" powerusage="%prof_cleave_pwr" time="0.38" />
+        <trigger angle="0" name="sword_slash" time="0.42" />
+        <trigger angle="-45" name="sword_slash" time="0.46" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="7" aitype="aoe" animenum="ea_power2" combotextfinisher="Stasis" combotextstarter="Neural" icon="1" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="prof_hold" level="1" />
+        <trigger bolt="Bip01 Head" effect="char/profx/p2_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/profx/p2_power" fxlevel="4" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/profx/p2_power" fxlevel="4" name="effect" time="0" />
+        <trigger effect="char/profx/p2_power" fxlevel="2" name="effect_sound" sound="char/profx_m/p2_charge" time="0.36" />
+        <trigger damage="0" index="1" knockback="40" maxrange="120" name="radial" powerusage="%prof_hold_pwr" time="0.36">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger damage="1" damagetype="dmg_mental" index="2" maxrange="156" name="radial" time="0.65" victimeventtag="10" victimeventtag2="15" />
+        <trigger name="sound" sound="char/profx_m/p2_power" time="0.7" />
+        <trigger class="suspend" combatnode="suspended_victim" endvictimtag="20" life="%prof_hold_lif" minsuspendtime="2" name="powerup" tag="10" time="-1" />
+        <trigger attacks_per_second="3" class="harming" damage="%prof_hold_dm2" damagetype="dmg_mental" life="4" name="powerup" tag="15" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/profx/p2_power" fxlevel="3" />
+        </trigger>
+        <trigger damage="%prof_hold_dmg" damagetype="dmg_mental" name="attackself" tag="20" time="-1" type="ce_atk_self" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_psy_loop" lockangles="true" name="suspended_victim" playspeed="0.5" priority="uninterruptable" priority_override="uninterruptable">
+        <chain action="idle" result="suspended_victim" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="buff" animenum="ea_power3" icon="2" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="prof_tele_link" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/profx/p3_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/profx/p3_power" fxlevel="3" name="effect" time="0" />
+        <trigger name="sound" sound="char/profx_m/p3_charge" time="0.5" />
+        <trigger apply_ally="all" life="%prof_tele_link_lif" name="powerup" powerusage="%prof_tele_link_pwr" time="0.5">
+            <special_fx bolt="Bip01 Head" effect="char/profx/p3_power" fxlevel="2" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%prof_tele_link_dmg" />
+            <affecter affect_type="scale" attribute="atk_attack_rating" level="%prof_tele_link_ar" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="3" aitype="aoe" animenum="ea_power4" combotextfinisher="Tempest" combotextstarter="Mental" icon="3" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="prof_storm" level="1" />
+        <trigger name="powerusage" powerusage="%prof_storm_pps" time="0" />
+        <trigger name="sound" sound="char/profx_m/p2_charge" time="0.25" />
+        <chain action="Idle" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="3" aitype="aoe" animenum="ea_power4_loop" combotextfinisher="Tempest" combotextstarter="Synaptic" energypersecond="%prof_storm_pps" handler="ch_storm_chain_lightning" icon="3" locktransitionangles="true" name="power4_loop" priority="5" turnrate="0.2">
+        <require cat="skill" item="prof_storm" level="1" />
+        <trigger name="lightning_data" numtargets="2" tag="1" time="-1" type="ce_lightning_data" usebothhands="true" />
+        <trigger bolt="Bip01 R Hand" effect="char/profx/p4_charge" name="effect" time="0.25" />
+        <trigger bolt="Bip01 L Hand" effect="char/profx/p4_charge" loop_timeout="1" loop_type="start" name="effect_sound" sound="char/profx_m/p2_power" time="0.25" />
+        <trigger damage="0" name="attackme" tag="100" time="-1" type="ce_atk_self" victimeventtag="103">
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger allow_non_actors="true" attacks_per_second="3" class="harming" damage="%prof_storm_dmg" damagetype="dmg_mental" life="1" name="powerup" tag="103" time="-1">
+            <damageMod name="dmgmod_weld" remove="dmgmod_no_pain" />
+            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize" />
+        </trigger>
+        <trigger allow_non_actors="true" attacks_per_second="3" class="harming" damage="%prof_storm_dm2" damagetype="dmg_electricity" life="1" name="powerup" tag="101" time="-1">
+            <damageMod name="dmgmod_weld" remove="dmgmod_no_pain" />
+            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize" />
+        </trigger>
+        <trigger effect="char/profx/p4_chain" name="effect" tag="102" time="-1" />
+        <chain action="samepowerhold" result="power4_loop" />
+        <chain action="Idle" result="power4_end" />
+    </FightMove>
+    <FightMove aireusetime="3" aitype="aoe" animenum="ea_power4_end" combotextfinisher="Tempest" icon="3" lockangles="true" locktransitionangles="true" name="power4_end" priority="5">
+        <require cat="skill" item="prof_storm" level="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="prof_resurrect" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="4" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" description="Psychic Shock" icon="8" lockangles="true" name="power9" playspeed="10" priority="5">
+        <require cat="skill" item="prof_resurrect" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="New Text" name="team_xtreme_msg" time="0" title="PSYCHIC SHOCK" />
+        <require cat="xtreme" level="1" />
+        <trigger life="-1" name="xtreme_start" time="0" />
+        <trigger name="sound" sound="char/profx_m/p4_charge" time="0" />
+        <trigger effect="char/profx/p9_charge" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/profx/p9_charge" fxlevel="3" name="effect" time="0" />
+        <trigger name="sound" sound="char/profx_m/p4_power" time="0.3" />
+        <trigger foundallytag="20" maxrange="144" name="do_resurrect" numtoresurrect="-1" resurect_really_dead="ally" team_filter="both" time="0.3" type="ce_setup_ally_resurrect" />
+        <trigger maxdangerrating="10" name="filterevent" noboss="true" passtag="21" tag="20" time="-1" type="ce_filter_event" />
+        <trigger name="otherevents" othertag="22" othertag2="23" tag="21" time="-1" type="ce_otherevent" />
+        <trigger combatnode="prof_resurrect_v" maxhealthpercent="%prof_resurrect_hlt" name="resurrect_self" nonhumanoidnode="prof_resurrect_v_nh" self="true" tag="22" time="-1" type="ce_resurrect" />
+        <trigger name="filterevent" passtag="30" tag="23" team_filter="enemy" time="-1" type="ce_filter_event" />
+        <trigger attach_to_dead="true" class="callevents" life="%prof_resurrect_lif" name="powerup" tag="30" time="-1">
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted" />
+            <affecter attribute="team_switch" level="1" />
+            <FunctionEvent function="deactivate" triggertag="35" />
+        </trigger>
+        <trigger name="otherevent" othertag="36" othertag2="37" tag="35" time="-1" />
+        <trigger effect="char/profx/p9_charge" fxlevel="4" name="effect" tag="36" time="-1" />
+        <trigger instantkillonly="true" name="remove" nosponsor="true" tag="37" time="-1" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.8" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_resurrect_v" handler="ch_thrown_getup" lockangles="true" locktransitionangles="true" name="prof_resurrect_v" ongroundfront="true" playspeed="1">
+        <trigger effect="char/profx/p9_charge" fxlevel="2" name="effect" time="0" />
+        <trigger name="onground" onground="false" time="0.5" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_thrown_getup" lockangles="true" locktransitionangles="true" name="prof_resurrect_v_nh" ongroundfront="true" playspeed="1">
+        <trigger effect="char/profx/p9_charge" fxlevel="2" name="effect" time="0" />
+        <trigger name="onground" onground="false" time="0.5" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="buffself" animenum="ea_menu_action" icon="4" lockangles="true" name="power8" priority="5">
+        <require cat="skill" item="prof_reveal" level="1" />
+        <trigger name="sound" sound="char/profx_m/p2_charge" />
+        <trigger life="%prof_reveal_life" name="powerup" no_shadow="true" powerusage="%prof_reveal_pwr" time="0.5">
+            <special_fx bolt="Bip01 Head" effect="char/profx/p4_aura" fxlevel="1" how_used="primary" />
+            <affecter affect_type="scale" attribute="def_defense_rating" level="%prof_reveal_dr" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4" aitype="aoe" animenum="ea_power2" combotextfinisher="Stupor" combotextstarter="Bewildering" icon="11" lockangles="true" name="power7" powerup_tag="prof_power7" priority="5">
+        <require cat="skill" item="prof_fuddle" level="1" />
+        <trigger name="powerusage" powerusage="%prof_fuddle_pwr" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/phoenx/p3_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/phoenx/p3_power" fxlevel="1" name="effect_sound" sound="char/phoenx_m/p3_charge" time="0" />
+        <trigger apply_chance="%prof_fuddle_pct" life="10" name="powerup" tag="101" time="-1">
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_dazed" />
+            <affecter attribute="fear" level="1" />
+        </trigger>
+        <event arc="180" attacktype="blast" damage="%prof_fuddle_dmg" damagescale="none" damagetype="dmg_mental" fxlevel="1" hiteffect="char/phoenx/p1_impact" inherit="punch" name="radial_punch" victimeventtag="100" victimeventtag2="101">
+            <damageMod name="dmgmod_environment" />
+        </event>
+        <trigger effect="char/phoenx/p3_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger maxrange="80" name="radial_punch" time="0.5" />
+        <trigger maxrange="100" name="radial_punch" time="0.59" />
+        <trigger maxrange="120" name="radial_punch" tag="4" time="0.6" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

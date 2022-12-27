@@ -1,0 +1,379 @@
+<world>
+    <entity act="4" combatlocked="true" extent_max="886 897 120" extent_min="-896 -896 -10" level="26" name="world" nosave="true" partylight="0.67 0.58 0.76" soundfile="town4B" startblack="true" zonescript="act4/attilan/attilan2" />
+    <precache filename="act4/attilan/4_attilan2_010" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_020" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_022" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_030" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_040" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_050" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_052" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_060" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_310" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_320" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_330" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_332" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_340" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_342" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_350" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_360" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_362" type="conversation" />
+    <precache filename="act4/attilan/4_attilan2_370" type="conversation" />
+    <precache filename="map/atilan/blackbolt_chair" type="fx" />
+    <precache filename="models/bolton/blackbolt_throne" type="model" />
+    <precache filename="act4/attilan/intro_reset2" type="script" />
+    <precache filename="act4/attilan/intro_reset3" type="script" />
+    <precache filename="zone_shared/attilan/chair_hover" type="sound" />
+    <precache filename="zone_shared/attilan/chair_turn" type="sound" />
+    <entity actcountremove="1" character="MrFantasticSimple" checkteam="true" classname="monsterspawnerent" name="sp_mrfantasticsimple" nocollide="true" />
+    <entity actcountremove="1" character="AttilanCivilian" classname="monsterspawnerent" name="sp_attilancivilian" nocollide="true" />
+    <entity actcountremove="1" character="AttilanCivilian_b" classname="monsterspawnerent" name="sp_attilancivilian_b" nocollide="true" />
+    <entity actcountremove="1" character="AttilanCivilian_c" classname="monsterspawnerent" name="sp_attilancivilian_c" nocollide="true" />
+    <entity actcountremove="1" character="AttilanCivilian_d" classname="monsterspawnerent" name="sp_attilancivilian_d" nocollide="true" />
+    <entity actcountremove="1" character="BlackBolt" classname="monsterspawnerent" name="sp_blackbolt" nocollide="true" />
+    <entity actcountremove="1" character="Crystal" classname="monsterspawnerent" name="sp_crystal" nocollide="true" />
+    <entity actcountremove="1" character="DumDumDuganSimple" classname="monsterspawnerent" name="sp_dumdumdugansimple" nocollide="true" />
+    <entity actcountremove="1" character="Gorgon" classname="monsterspawnerent" name="sp_gorgon" nocollide="true" />
+    <entity actcountremove="1" character="Medusa" classname="monsterspawnerent" name="sp_medusa" nocollide="true" />
+    <entity actcountremove="1" character="Triton" classname="monsterspawnerent" name="sp_triton" nocollide="true" />
+    <entity camerafadeout="true" classname="physent" material="Glass" model="atilan/atilan_platform_sec_01_glass_e" name="atilan_platform_sec_01_glas_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Glass" model="atilan/atilan_platform_sec_02_glass_e" name="atilan_platform_sec_02_glas_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/column_20ft_ati_e" name="column_20ft_ati_e_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/flag_01_ati_e" name="flag_01_ati_e_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/flag_02_ati_e" name="flag_02_ati_e_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/flag_03_ati_e" name="flag_03_ati_e_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/flag_04_ati_e" name="flag_04_ati_e_at" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity animstarton="true" classname="physent" loopfx="effects/map/atilan/prison_medusa" loopfxstarton="true" material="solid_metal" model="atilan/prison_medusa_ati_a" name="prison_medusa_ati_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_dd',188,189)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" idnum="7" material="plastic" model="pickups/action_figure_daredevil" name="daredevil_actionfigure01" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/daredevil" structure="2" team="hero" variablename="r_af_dd" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMSUPERSKRULL')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="10" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_pspfour" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept27.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="27" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art27" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_dd',188,189)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" material="plastic" model="pickups/action_figure_daredevil" name="daredevil_actionfigure" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/daredevil" structure="2" team="hero" variablename="r_af_dd" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="actionent" name="loop_sound" nocollide="true" smartent="true" toggleonact="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity classname="physent" health="1" name="shoot_me" nocollide="true" nogravity="true" nopickup="true" structure="2" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_cover" nocollide="true" smartent="true" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entinst type="sp_mrfantasticsimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_mrfantasticsimple01" orient="0 0 1.5708" pos="-3.8453 -192.376 3.08803" />
+    </entinst>
+    <entinst type="sp_attilancivilian10">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian10" orient="0 0 -3.14159" pos="23.5184 126.395 3.99974" />
+    </entinst>
+    <entinst type="sp_meduagaurd01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_meduagaurd01" orient="0 0 0.0872663" pos="-360.751 -97.3408 3.99989" />
+        <inst extents="-12 -18 0 36 18 84" name="sp_meduagaurd02" orient="0 0 -0.174533" pos="-360.779 91.6101 3.99988" />
+    </entinst>
+    <entinst type="sp_attilancivilian02">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian02" orient="0 0 -3.14159" pos="446.362 -259.719 40.9383" />
+    </entinst>
+    <entinst type="sp_attilancivilian09">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian09" orient="0 0 -3.14159" pos="-208.322 -14.0523 3.99971" />
+    </entinst>
+    <entinst type="sp_attilancivilian05">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian05" orient="0 0 -3.14159" pos="86.9541 -91.5144 3.99975" />
+    </entinst>
+    <entinst type="sp_attilancivilian03">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian03" orient="0 0 -3.14159" pos="450.321 300.068 40.9383" />
+    </entinst>
+    <entinst type="sp_attilancivilian08">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian08" orient="0 0 -3.14159" pos="131.759 106.874 3.99976" />
+    </entinst>
+    <entinst type="sp_attilancivilian06">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian06" orient="0 0 -3.14159" pos="-86.8697 118.21 3.99972" />
+    </entinst>
+    <entinst type="sp_attilancivilian01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian01" orient="0 0 -3.14159" pos="304.75 -57.0131 3.99978" />
+    </entinst>
+    <entinst type="sp_attilancivilian07">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian07" orient="0 0 -3.14159" pos="221.27 -4.53877 3.99977" />
+    </entinst>
+    <entinst type="sp_attilancivilian04">
+        <inst extents="-12 -18 0 36 18 84" name="sp_attilancivilian04" orient="0 0 -3.14159" pos="-60.4182 -111.041 3.99973" />
+    </entinst>
+    <entinst type="sp_blackbolt01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_blackbolt01" pos="-6 0 131" />
+    </entinst>
+    <entinst type="sp_crystal01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_crystal01" orient="0 0 0.523599" pos="-222.237 -128.309 29.9622" />
+    </entinst>
+    <entinst type="sp_dumdumdugansimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_dumdumdugansimple01" orient="0 0 -1.74533" pos="46.3332 193.036 131" />
+    </entinst>
+    <entinst type="sp_gorgon01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_gorgon01" orient="0 0 -0.628678" pos="-188.124 114.517 4.93214" />
+    </entinst>
+    <entinst type="sp_medusa01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_medusa01" pos="-409.166 -1.20007 2" />
+    </entinst>
+    <entinst type="sp_triton01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_triton01" orient="0 0 1.04045" pos="-109.27 -189.982 6" />
+    </entinst>
+    <entinst type="atilan_platform_sec_01_glas_at01">
+        <inst name="atilan_platform_sec_01_glas_at01" pos="0 0 0" />
+    </entinst>
+    <entinst type="atilan_platform_sec_02_glas_at06">
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 -3.14159" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 2.35619" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 1.5708" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 0.785398" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 -0.785398" pos="0 0 0" />
+        <inst name="atilan_platform_sec_02_glas_at06" orient="0 0 -2.35619" pos="0 0 0" />
+    </entinst>
+    <entinst type="column_20ft_ati_e_at36">
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="169.344 -631.997 2.72827" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="462.655 -462.654 2.7283" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="631.998 -169.343 2.72828" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="631.998 169.343 2.72828" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="462.654 462.654 2.72841" />
+        <inst name="column_20ft_ati_e_at36" pos="169.343 631.997 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-169.343 631.997 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-462.654 462.654 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-631.997 169.343 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-631.997 -169.343 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-169.343 -631.997 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="-411.072 -110.147 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="-300.926 -300.926 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="-110.146 -411.072 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="110.147 -411.072 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="300.926 -300.926 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="411.073 -110.146 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="0 654.292 2.72828" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523599" pos="327.146 566.633 2.72841" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 2.09439" pos="566.633 327.146 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 1.0472" pos="572.733 -316.581 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.523599" pos="317.249 -572.347 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="0.000274658 -654.292 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -0.523598" pos="-318.88 -571.406 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -1.0472" pos="-572.854 -316.371 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -1.5708" pos="-654.292 -0.000488281 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -2.09439" pos="-566.634 327.145 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 -2.61799" pos="-327.146 566.633 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 1.309" pos="-411.072 110.147 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="-300.926 300.926 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="-110.146 411.072 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="110.147 411.072 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="300.926 300.926 2.72829" />
+        <inst name="column_20ft_ati_e_at36" orient="0.0 -1.74846e-007 0.645772" pos="411.072 110.147 2.72829" />
+        <inst name="column_20ft_ati_e_at36" pos="-462.654 -462.654 2.72829" />
+    </entinst>
+    <entinst type="flag_01_ati_e_at">
+        <inst name="flag_01_ati_e_at" orient="0 0 2.61799" pos="200.109 346.602 2.44681" />
+        <inst name="flag_01_ati_e_at" orient="0 0 -0.523599" pos="221.137 383.024 2.44681" />
+        <inst name="flag_01_ati_e_at" orient="0 0 -2.61799" pos="221.14 -383.022 2.44681" />
+        <inst name="flag_01_ati_e_at" orient="0 0 0.523599" pos="200.111 -346.6 2.44681" />
+    </entinst>
+    <entinst type="flag_02_ati_e_at01">
+        <inst name="flag_02_ati_e_at01" orient="0 0 1.0472" pos="346.602 -200.109 2.44681" />
+        <inst name="flag_02_ati_e_at01" orient="0 0 -0.523599" pos="-200.109 -346.602 2.44681" />
+        <inst name="flag_02_ati_e_at01" orient="0 0 -2.0944" pos="-346.602 200.109 2.44681" />
+        <inst name="flag_02_ati_e_at01" orient="0 0 -2.0944" pos="381.196 -220.082 2.44681" />
+        <inst name="flag_02_ati_e_at01" orient="0 0 2.61799" pos="-224.02 -388.017 2.44681" />
+        <inst name="flag_02_ati_e_at01" orient="0 0 1.0472" pos="-389.845 225.075 2.44681" />
+    </entinst>
+    <entinst type="flag_03_ati_e_at">
+        <inst name="flag_03_ati_e_at" pos="0.00212091 -400.22 2.44681" />
+        <inst name="flag_03_ati_e_at" orient="0 0 -3.14159" pos="0.00213623 -445.16 2.44681" />
+        <inst name="flag_03_ati_e_at" orient="0 0 -3.14159" pos="-0.00132966 400.22 2.44681" />
+        <inst name="flag_03_ati_e_at" pos="-0.00133705 445.16 2.44675" />
+    </entinst>
+    <entinst type="flag_04_ati_e_at">
+        <inst name="flag_04_ati_e_at" orient="0 0 -1.0472" pos="381.195 220.084 2.44681" />
+        <inst name="flag_04_ati_e_at" orient="0 0 -1.0472" pos="-346.6 -200.111 2.44681" />
+        <inst name="flag_04_ati_e_at" orient="0 0 2.0944" pos="-389.844 -225.078 2.44681" />
+        <inst name="flag_04_ati_e_at" orient="0 0 2.09439" pos="346.6 200.111 2.44681" />
+        <inst name="flag_04_ati_e_at" orient="0 0 0.523599" pos="-224.023 388.016 2.44681" />
+        <inst name="flag_04_ati_e_at" orient="0 0 -2.61799" pos="-200.112 346.6 2.44681" />
+    </entinst>
+    <entinst type="prison_medusa_ati_a01">
+        <inst name="prison_medusa_ati_a01" pos="-411.086 -1.2 0" />
+    </entinst>
+    <entinst type="comic_pspfour">
+        <inst name="comic_pspfour" pos="80 -280 0" />
+    </entinst>
+    <entinst type="concept_art27">
+        <inst name="concept_art27" pos="0.156296 798.835 4.22891" />
+    </entinst>
+    <entinst type="daredevil_actionfigure01">
+        <inst name="daredevil_actionfigure01" pos="-0.156296 -798.835 4.22891" />
+    </entinst>
+    <entinst type="loop_effect01">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect01" pos="0 0 2.11078" />
+    </entinst>
+    <entinst type="loop_sound01">
+        <inst extents="-6 -6 0 6 6 12" name="loop_sound01" pos="0 0 0" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 -3.14159" pos="733.137 1.63026e-006 10.0" />
+    </entinst>
+    <entinst type="intro_setup2">
+        <inst extents="-6 -6 0 6 6 12" name="intro_setup2" pos="52.8803 -92.1568 180" />
+    </entinst>
+    <entinst type="throne_spot">
+        <inst extents="-6 -6 0 6 6 12" name="throne_spot" pos="0 0 60" />
+        <inst extents="-6.0 -6.0 -3.57629e-007 6.0 6.0 12.0" name="seat1" orient="0 0 -1.5708" pos="-8.8689e-007 262.347 29.9622" />
+        <inst extents="-6.00001 -6.0 -1.78814e-007 5.99999 6.0 12.0" name="seat2" orient="0 0 -2.0944" pos="131.174 227.199 29.9622" />
+        <inst extents="-6.0 -6.0 1.78807e-007 6.0 6.0 12.0" name="seat3" orient="0 0 -2.61799" pos="227.199 131.174 29.9622" />
+        <inst extents="-5.99999 -6.0 6.67341e-007 6.00001 6.0 12.0" name="seat4" orient="0 0 2.61799" pos="227.199 -131.174 29.9622" />
+        <inst extents="-6.00001 -6.0 6.67341e-007 5.99999 6.0 12.0" name="seat5" orient="0 0 2.09439" pos="131.174 -227.199 29.9622" />
+        <inst extents="-6.0 -6.0 3.5764e-007 6.0 6.0 12.0" name="seat6" orient="0 0 1.5708" pos="-0.000213381 -260.141 29.9622" />
+    </entinst>
+    <entinst type="make_dugan_go">
+        <inst extents="-6 -6 0 6 6 12" name="make_dugan_go" pos="-55.4408 0.803001 240" />
+    </entinst>
+    <entinst type="make_triton_anim">
+        <inst extents="-6 -6 0 6 6 12" name="make_triton_anim" pos="-106.811 -185.938 240" />
+    </entinst>
+    <entinst type="bb_rand_look">
+        <inst extents="-6 -6 0 6 6 12" name="bb_rand_look" pos="-25.8239 0.803001 240" />
+    </entinst>
+    <entinst type="talk_to_medusa">
+        <inst extents="-42 -32 0 42 32 120" name="talk_to_medusa" pos="-400.518 -1.37617 0" />
+    </entinst>
+    <entinst type="trigger_use01">
+        <inst extents="-60 -60 0 60 60 120" name="trigger_use01" pos="0 0 4.64527" />
+    </entinst>
+    <entinst type="wp_reed01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed01" pos="-88.5234 -145.274 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed05" pos="-85.9513 148.872 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed06" pos="2.28882e-005 171.069 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed07" pos="86.3405 147.569 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed08" pos="148.872 85.9512 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed09" pos="145.274 -83.3612 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed03" pos="-170.829 7.62939e-005 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed11" pos="-0.000205994 -167.286 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed10" pos="86.3406 -147.569 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed02" pos="-148.872 -85.9512 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_reed04" pos="-145.274 83.361 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="mrfantastic_heroact" orient="0 0 1.48353" pos="7.95512 -100.037 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="mrfantastic_cam" orient="0 0 1.48353" pos="2.60961 -135.127 45" />
+        <inst extents="-6 -6 -6 6 6 6" name="dugan_heroact" orient="0 0 -1.39626" pos="9.2987 98.8544 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="dugan_cam" orient="0 0 -1.39626" pos="5.38008 134.757 45" />
+        <inst extents="-6 -6 -6 6 6 6" name="bb_cam" pos="72.9608 -114.305 80" />
+        <inst extents="-6 -6 -6 6 6 6" name="bb_heroact" orient="0 0 -3.14159" pos="156.798 8.92066 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="gorgon_heroact" pos="-94.5034 102.921 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="gorgon_cam" pos="-129.926 105.188 45" />
+        <inst extents="-6 -6 -6 6 6 6" name="common_herowait03" orient="0 0 2.61799" pos="194.873 -35.1172 8" />
+        <inst extents="-6 -6 -6 6 6 6" name="common_herowait02" orient="0 0 3.05433" pos="205.341 7.77395 8" />
+        <inst extents="-6 -6 -6 6 6 6" name="common_herowait01" orient="0 0 -2.96706" pos="194.135 44.8871 8" />
+        <inst extents="-6 -6 -6 6 6 6" name="triton_heroact" pos="-65.8454 -117.579 8" />
+        <inst extents="-6 -6 -6 6 6 6" name="triton_cam" pos="-82.1765 -145.614 45" />
+    </entinst>
+    <entinst type="wp_dugun_bb01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_dugun_bb01" orient="0 0 -1.0472" pos="-33.1944 43.8879 2.20971" />
+    </entinst>
+    <entinst type="wp_dugun_gorgon01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_dugun_gorgon01" orient="0 0 -2.35619" pos="-143.7 150.295 2.20971" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_dugun_triton01" orient="0 0 -0.610865" pos="-143.703 -165.383 2.20971" />
+    </entinst>
+    <entinst type="wp_dugun_crystal01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_dugun_crystal01" orient="0 0 -2.44346" pos="-179.099 -100.539 2.20971" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="crystal_heroact" orient="0 0 -2.44346" pos="-203.576 -50.3257 2.20971" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="crystal_cam" orient="0 0 -2.44346" pos="-208.585 -83.2581 45" />
+    </entinst>
+    <entinst type="wp_dugun_home01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_dugun_home01" pos="-118.452 1.19937 2.20971" />
+    </entinst>
+    <entinst type="crystal_cam01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="crystal_cam01" orient="0 0 0.523599" pos="-222.237 -128.309 24" />
+    </entinst>
+    <entinst type="wp_inner_circle02">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle02" pos="354.185 352.97 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle03" pos="142.945 487.436 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle04" pos="-136.578 483.806 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle05" pos="-355.819 357.467 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle06" pos="-484.107 155.646 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle07" pos="-490.556 -131.424 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle08" pos="-353.556 -363.394 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle09" pos="-123.129 -486.848 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle10" pos="142.147 -483.396 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle11" pos="362.381 -361.4 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle12" pos="485.684 -136.159 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle01" pos="562.439 -54.8186 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle02" pos="514.034 -274.247 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle03" pos="302.911 -493.608 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle04" pos="0.967468 -588.975 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle05" pos="-286.911 -506.109 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle06" pos="-500.416 -298.234 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle07" pos="-595.913 0.445831 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle08" pos="-501.474 287.313 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle09" pos="-291.541 489.14 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle10" pos="3.25662 595.377 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle11" pos="275.901 504.525 1.96484" />
+        <inst extents="-5.99997 -6 -6 6.00003 6 6" name="wp_outer_circle12" pos="508.22 309.913 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_outer_circle13" pos="565.909 83.3041 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="medusa_heroact" orient="0 0 3.14159" pos="-317.644 -0.816082 6" />
+        <inst extents="-6 -6 -6 6 6 6" name="medusa_cam" pos="-353.931 -0.816082 45" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="medusa_herowait01" orient="0 0 -2.96706" pos="-223.478 87.2879 6" />
+        <inst extents="-6 -6 -6 6 6 6" name="medusa_herowait02" orient="0 0 -2.96706" pos="-223.478 62.2944 6" />
+        <inst extents="-6 -6 -6 6 6 6" name="medusa_herowait03" orient="0 0 -2.96706" pos="-248.812 62.273 6" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle12" pos="296.918 -172.854 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle11" pos="172.983 -300.452 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle10" pos="0.646179 -336.019 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle09" pos="-171.731 -294.801 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle08" pos="-306.495 -169.695 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle07" pos="-276.075 -0.894958 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle06" pos="-295.366 185.635 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle05" pos="-163.537 303.82 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle04" pos="32.1368 340.583 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle03" pos="177.176 295.931 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle02" pos="303.424 172.128 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_royal_circle01" pos="336.535 0.000597608 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_inner_circle01" pos="498.234 54.3786 1.96484" />
+    </entinst>
+    <entinst type="peeping6">
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="peeping6" orient="0 0 1.22173" pos="-47.4405 -242.384 1.96484" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="peeping5" orient="0 0 1.91986" pos="91.7933 -231.147 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="peeping4" orient="0 0 2.35619" pos="182.705 -153.015 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="peeping3" orient="0 0 -2.53073" pos="176.855 156.549 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="peeping2" orient="0 0 -2.35619" pos="152.224 186.299 1.96484" />
+        <inst extents="-6 -6 -6 6 6 6" name="peeping1" orient="0 0 -1.8326" pos="37.6215 235.772 1.96484" />
+    </entinst>
+    <entinst type="link_attilan1">
+        <inst extents="-3 -100 0 3 100 120" name="link_attilan1" pos="830.694 -3.28465 -11.4651" />
+    </entinst>
+    <entity actcountremove="1" character="MrFantasticSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act4/attilan/talk_mrfantastic" monster_name="reed" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_mrfantasticsimple01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian" classname="monsterspawnerent" instantspawn="true" monster_name="inner_circle" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_attilancivilian02" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian" classname="monsterspawnerent" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_meduagaurd01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian" classname="monsterspawnerent" firstact="1.2" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian10" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_b" classname="monsterspawnerent" instantspawn="true" monster_name="outer_circle" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_attilancivilian03" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_b" classname="monsterspawnerent" firstact="0.2" monster_name="royal_circle" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian05" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_b" classname="monsterspawnerent" firstact="1" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian09" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_c" classname="monsterspawnerent" instantspawn="true" monster_name="royal_circle" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_attilancivilian01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_c" classname="monsterspawnerent" firstact="0.4" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian06" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_c" classname="monsterspawnerent" firstact="0.6" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian08" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_d" classname="monsterspawnerent" firstact="0.1" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian04" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AttilanCivilian_d" classname="monsterspawnerent" firstact="0.8" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_civilian" name="sp_attilancivilian07" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="BlackBolt" classname="monsterspawnerent" instantspawn="true" monster_name="blackbolt" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_blackbolt" name="sp_blackbolt01" nocollide="true" />
+    <entity actcountremove="1" character="Crystal" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act4/attilan/talk_crystal" monster_name="crystal" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_crystal" name="sp_crystal01" nocollide="true" />
+    <entity actcountremove="1" character="DumDumDuganSimple" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act4/attilan/talk_dugan" monster_name="dugan" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_dumdumdugansimple01" nocollide="true" />
+    <entity actcountremove="1" character="Gorgon" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act4/attilan/talk_gorgon" monster_name="gorgon" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_gorgon" name="sp_gorgon01" nocollide="true" />
+    <entity actcountremove="1" character="Medusa" classname="monsterspawnerent" monster_actonuse="true" monster_actscript="act4/attilan/talk_medusa" monster_name="medusa" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_medusa" name="sp_medusa01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="Triton" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act4/attilan/talk_triton" monster_name="triton" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act4/attilan/sc_triton" name="sp_triton01" nocollide="true" />
+    <entity camerafadeout="true" classname="physent" material="Glass" model="atilan/atilan_platform_sec_01_glass_e" name="atilan_platform_sec_01_glas_at01" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" smartent="false" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Glass" model="atilan/atilan_platform_sec_02_glass_e" name="atilan_platform_sec_02_glas_at06" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" smartent="false" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/column_20ft_ati_e" name="column_20ft_ati_e_at36" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="atilan/flag_02_ati_e" name="flag_02_ati_e_at01" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity animstarton="true" classname="physent" loopfx="effects/map/atilan/prison_medusa" loopfxstarton="true" material="solid_metal" model="atilan/prison_medusa_ati_a" name="prison_medusa_ati_a01" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/atilan/blackbolt_chair" loopfxstarton="true" name="loop_effect01" nocollide="true" smartent="true" />
+    <entity classname="actionent" firstact="0.1" name="loop_sound01" nocollide="true" smartent="true" spawnsoundloop="zone_shared/attilan/chair_hover" toggleonact="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all01" nocollide="true" prevlink="link_attilan2" prevzone="attilan1" />
+    <entity actscript="act4/attilan/blackbolt_look" classname="physent" health="1" name="bb_rand_look" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2" />
+    <entity actscript="act4/attilan/sc_triton" classname="physent" health="1" name="make_triton_anim" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2" />
+    <entity actscript="act4/attilan/dugan_goto_spot" classname="physent" firstact="5" health="1" name="make_dugan_go" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2" />
+    <entity classname="physent" health="1" name="throne_spot" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2" />
+    <entity actscript="act4/attilan/intro_setup2" classname="physent" health="1" name="intro_setup2" nocollide="true" nodistancecull="true" nogravity="true" nopickup="true" smartent="false" structure="2" />
+    <entity actonuse="true" actscript="act4/attilan/talk_blackbolt" boxcollision="true" classname="gameent" description="Talk to Black Bolt" hinttype="talk" name="trigger_use01" nocollide="true" quickuse="true" team="none" />
+    <entity actonuse="true" actscript="act('medusa','_ACTIVATOR_')" boxcollision="true" classname="gameent" description="Talk to Medusa" name="talk_to_medusa" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none" />
+    <entity classname="waypointent" name="crystal_cam01" nocollide="true" smartent="false" speed="0.3" />
+    <entity acttargets="make_dugan_go" beeline="true" classname="waypointent" name="wp_dugun_home01" nocollide="true" speed="0.3" />
+    <entity actscript="act4/attilan/talk_royals3" classname="waypointent" name="wp_dugun_crystal01" nocollide="true" speed="0.3" />
+    <entity actscript="act4/attilan/talk_royals" classname="waypointent" name="wp_dugun_gorgon01" nocollide="true" speed="0.3" />
+    <entity actscript="act4/attilan/talk_royals2" classname="waypointent" name="wp_dugun_bb01" nocollide="true" speed="0.3" />
+    <entity classname="waypointent" name="wp_reed01" nocollide="true" speed="0.3" />
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="peeping6" nocollide="true" smartent="false" />
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_inner_circle02" nocollide="true" smartent="false" speed="0.3" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Royal Library" name="link_attilan1" nextzone="attilan1" nocollide="false" team="hero" />
+</world>
