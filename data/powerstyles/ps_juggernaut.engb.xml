@@ -1,0 +1,363 @@
+<PowerStyle iconfile="textures/ui/juggernaut_icons.png">
+    <event arc="180" attacktype="punch" damagescale="none" damagetype="dmg_physical" inherit="punch" name="radial_punch"/>
+    <event inherit="radial_punch" name="radial_punch_knockback">
+        <damageMod name="dmgmod_auto_knockback"/>
+    </event>
+    <FightMove animenum="ea_idle1" lockangles="true" name="DropActorAsWeapon" noncombat="true">
+        <trigger name="powerup" next_eventtag="1" remove_tag="carry_actor_as_weapon" tag="254" time="-1"/>
+        <trigger clear_actor_as_weapon="true" name="unbolt_victim" next_eventtag="2" tag="1" time="-1" type="ce_return_victim_model" unbolt_self="false"/>
+        <trigger name="victim" next_eventtag="3" nodename="thrownbackloop" tag="2" time="-1"/>
+        <trigger name="victim_release" next_eventtag="4" tag="3" time="-1"/>
+        <trigger interaction_name="data/fightstyles/fightstyle_carryguy" name="end_interaction" tag="4" time="-1"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power10" lockangles="true" lockspeed="true" locktransitionangles="true" name="grabstart" noautoaim="true" priority="4" startchaintime="0.99">
+        <trigger attackerface="true" critical="true" doslidemove="false" interaction="data/fightstyles/interact_juggernaut_victim" motion_track_offset="true" name="victim" nodename="waitnochain_victim" targetdistance="70" time="0" victimface="true"/>
+        <trigger name="sound" sound="char/njugg_m/grab" time="0.24"/>
+        <trigger critical="true" filter_target="victim" is_alive="true" name="filter" passtag="89" time="0.24"/>
+        <trigger execute_against="victim" name="otherevent" next_eventtag="90" othertag="101" tag="89" time="-1"/>
+        <trigger flag1="no_actor_vfx" name="flags" resetflags="false" tag="101" time="-1" type="ce_set_flags"/>
+        <trigger class="carry_actor_as_weapon" life="-1" name="powerup" next_eventtag="91" ondamage_4_physents="true" tag="90" tag_name="carry_actor_as_weapon" time="-1"/>
+        <trigger attackerface="true" doslidemove="false" interaction="data/fightstyles/interact_juggernaut_victim" motion_track_offset="true" name="victim" next_eventtag="92" nodename="grabstart_victim" tag="91" targetdistance="70" time="-1" victimface="true"/>
+        <trigger actor_as_weapon="true" as_weapon="false" bolt="Bip01 R Hand" critical="true" name="bolt_victim" offset="0 0 0" remove_victim_ent="false" rotation="0 0 0" tag="92" time="-1" type="ce_bolt_victim_model"/>
+        <trigger critical="true" failtag="99" filter_target="victim" is_alive="true" name="filter" passtag="95" time="0.99"/>
+        <trigger critical="true" end_interaction_on_idle="false" interaction="data/fightstyles/fightstyle_carryguy" name="victim" setowners="false" tag="95" time="-1" useeventvictim="true"/>
+        <trigger name="victim_release" tag="99" time="-1"/>
+        <trigger critical="on_interrupt" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="-1"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.62">
+        <trigger name="whoosh_light" time="0.31"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 L Hand" life="0.31" name="trail" time="0.21"/>
+        <trigger name="punch" time="0.38"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.64">
+        <trigger name="whoosh_light" time="0.38"/>
+        <trigger movement="10" name="slide" time="0.21"/>
+        <trigger bolt="Bip01 R Hand" life="0.37" name="trail" time="0.21"/>
+        <trigger name="punch" time="0.41"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.23"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.12"/>
+        <trigger bolt="Bip01 R Hand" life="0.35" name="trail" time="0.17"/>
+        <trigger name="punch" time="0.32"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish" priority="3">
+        <trigger name="whoosh_heavy" time="0.28"/>
+        <trigger bolt="Bip01 L Hand" life="0.61" name="trail" time="0.11"/>
+        <trigger bolt="Bip01 R Hand" life="0.61" name="trail" time="0.11"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.44">
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.2" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.8">
+        <trigger charge="1" name="charge" time="0"/>
+        <trigger name="whoosh_heavy" time="0.27"/>
+        <trigger bolt="Bip01 R Hand" life="0.55" name="trail" time="0.18"/>
+        <trigger bolt="Bip01 L Hand" life="0.55" name="trail" time="0.18"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.36">
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger name="punch" time="0.41"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacktrip2" startchaintime="1">
+        <trigger delay="0.01" event="2" name="scheduleStop" tag="1" time="-1" type="ce_schedule_event"/>
+        <trigger name="stop" tag="2" time="-1"/>
+        <event inherit="kick" maxrange="40" name="sweep" victimeventtag="1">
+            <damagemod name="dmgmod_ground"/>
+            <damagemod name="dmgmod_auto_knockback"/>
+        </event>
+        <trigger name="whoosh_light" time="0.2"/>
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.2"/>
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28"/>
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3"/>
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_ground1" blendtime="0.2" endchaintime="1" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack" noautoaim="true" startchaintime="0.75">
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_no_atk_roll"/>
+        </event>
+        <trigger movement="12" name="slide" targetdistance="50" time="0"/>
+        <trigger name="whoosh_light" time="0.38"/>
+        <trigger bolt="Bip01 L Toe0" life="0.42" name="trail" time="0.17"/>
+        <trigger name="ground_attack" time="0.5"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="attack" result="attacklight1"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_ground2" blendtime="0.2" endchaintime="1" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack2" noautoaim="true" startchaintime="0.75">
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_no_atk_roll"/>
+        </event>
+        <trigger movement="12" name="slide" targetdistance="50" time="0"/>
+        <trigger name="whoosh_light" time="0.38"/>
+        <trigger bolt="Bip01 L Toe0" life="0.42" name="trail" time="0.17"/>
+        <trigger name="ground_attack" time="0.5"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="attack" result="attacklight1"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect" next_eventtag="102" tag="101" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0"/>
+        <trigger name="slide" targetdistance="50" time="0.1"/>
+        <trigger bolt="Bip01 R Hand" life="0.47" name="trail" time="0.1"/>
+        <trigger bolt="Bip01 L Hand" life="0.47" name="trail" time="0.1"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1"/>
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.37"/>
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power9" fallback="grab_smash" handler="ch_grab_hold_base" lockspeed="true" name="grab_smash" noautoaim="true" priority="6" turnrate="0.5">
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_juggernaut_victim" name="victim" nodename="grabsmashvictim_start" offset="29 0 0" time="0" victimface="true"/>
+        <trigger count="set" name="count" time="0" value="4"/>
+        <chain action="idle" result="grab_smash_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0" fallback="grab_smash_end" handler="ch_grab_hold_base" lockspeed="true" locktransitionangles="true" name="grab_smash_loop" noautoaim="true" powerup_tag="grab_smash" priority="6" turnrate="0.5">
+        <require cat="counter" level="1"/>
+        <trigger name="verify_victim_alive" time="0"/>
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_juggernaut_victim" name="victim" nodename="grabsmashvictim_loop" offset="29 0 0" time="0" victimface="true"/>
+        <trigger name="stop" time="0"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger name="sound" pitch_range="600" sound="char/thing_m/p1_release" time="0.45"/>
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" knockback="120" maxrange="64" name="radial" offset="36" time="0.45"/>
+        <trigger name="verify_victim_alive" time="0.45"/>
+        <trigger count="add" name="count" time="0.5" value="-1"/>
+        <chain action="smash" result="grab_smash_loop"/>
+        <chain action="idle" result="grab_smash_end"/>
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash_end" noautoaim="true" powerup_tag="grab_smash" priority="6">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_juggernaut_victim" name="victim" nodename="grabsmashvictim_loop" targetdistance="24" time="0" victimface="true"/>
+        <trigger name="stop" time="0"/>
+        <trigger damage="3 4" damagescale="normal" damagetype="physical" maxrange="64" name="radial" offset="36" time="0.45"/>
+        <trigger name="verify_victim_alive" time="0"/>
+        <trigger doslidemove="true" name="victim" nodename="getuponback" targetdistance="24" time="0.45" victimface="true"/>
+        <trigger name="victim_release" time="0.45"/>
+        <trigger name="verify_victim" time="0.5"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="4" aitype="melee" animenum="ea_power1" combotextfinisher="Thump" combotextstarter="Crushing" icon="0" lockangles="true" name="power1" powerup_tag="jug_power1" priority="5">
+        <require cat="skill" item="jug_smash" level="1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p1_charge" fxlevel="1" name="effect_sound" sound="char/njugg_m/p1_charge" time="0"/>
+        <trigger life="0.3" movement="0" name="slide" targetdistance="90" targetradius="40" time="0.2"/>
+        <trigger life="%jug_smash_life" name="powerup" shared_tag="shared_stunned" tag="100" time="-1"/>
+        <event attacktype="punch" damage="3 5" hiteffect="char/jugger/p1_impact" inherit="punch" name="jug_smash_punch" tiles="true" victimeventtag="100"/>
+        <trigger angle="40" height="20" name="jug_smash_punch" powerusage="%jug_smash_pwr" time="0.35"/>
+        <trigger angle="0" height="0" name="jug_smash_punch" time="0.4"/>
+        <trigger angle="-40" height="-20" name="jug_smash_punch" time="0.45"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="8" aitype="aoe" animenum="ea_power2" combotextfinisher="Crash" combotextstarter="Crystal" icon="1" lockangles="true" name="power2" powerup_tag="jug_power2" priority="5">
+        <require cat="skill" item="jug_slam" level="1"/>
+        <event arc="180" attacktype="blast" damage="%jug_slam_dmg" damagescale="none" damagetype="energy" inherit="punch" name="radial_punch" tiles="false"/>
+        <trigger name="stop" time="0"/>
+        <trigger name="powerusage" powerusage="%jug_slam_pwr" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p2_charge" fxlevel="1" name="effect_sound" sound="char/njugg_m/p2_charge" time="0"/>
+        <trigger effect="char/jugger/p2_impact" name="effect_sound" sound="char/njugg_m/p2_impact" time="0.5"/>
+        <trigger maxrange="80" name="radial_punch" time="0.5"/>
+        <trigger arc="45" maxrange="120" name="radial_punch" tiles="true" time="0.52"/>
+        <trigger maxrange="100" name="radial_punch" time="0.55"/>
+        <trigger maxrange="%jug_slam_rad" name="radial_punch" tag="4" time="0.58"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power3" combotextfinisher="Crash" combotextstarter="Raging" energypersecond="%jug_charge_pwr" fallback="jumploop" handler="ch_charge_move" icon="2" locktransitionangles="true" name="power3" noautoaim="true" powerup_tag="jug_power3" priority="5" startchaintime="0.95" turnrate="0.2">
+        <require cat="skill" item="jug_charge" level="1"/>
+        <trigger name="powerusage" only_non_looped="true" powerusage="%jug_charge_pwr" time="0"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger arc="180" damage="3 5" damagetype="physical" knockback="%jug_charge_kb" name="punch" tag="1" tiles="true" time="-1">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <trigger effect="char/jugger/p3_charge" name="effect" time="0"/>
+        <trigger loop_timeout="0.7" loop_type="start" name="sound" sound="char/njugg_m/p3_charge" time="0"/>
+        <trigger name="footstep" time="0.25" volume="1"/>
+        <trigger name="footstep" time="0.75" volume="1"/>
+        <chain action="samepowerhold" result="power3"/>
+        <chain action="touch" result="power3_break"/>
+        <chain action="idle" result="fastballland"/>
+    </FightMove>
+    <FightMove animenum="ea_grab_break" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3_break" noautoaim="true" playspeed="1" priority="5">
+        <trigger loop_type="stop" name="sound" sound="char/njugg_m/p3_charge" time="0"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="melee" animenum="ea_power5" blendtime="0.3" combotextfinisher="Spin" combotextstarter="Spinning" endchaintime="1" icon="4" lockangles="false" name="power5" powerup_tag="jug_power5" priority="5" startchaintime="0.8">
+        <require cat="skill" item="jug_spin_atk" level="1"/>
+        <event arc="61" damage="3 5" damagetype="dmg_physical" hiteffect="char/jugger/p5_impact" inherit="punch" maxrange="65" name="jug_spin_punch" tiles="true"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p5_charge" name="effect_sound" sound="char/njugg_m/p5_charge" time="0"/>
+        <trigger name="slide" targetdistance="70" time="0.2"/>
+        <trigger angle="0" name="jug_spin_punch" powerusage="%jug_spin_atk_pwr" time="0.35"/>
+        <trigger angle="-90" name="jug_spin_punch" time="0.4"/>
+        <trigger angle="180" name="jug_spin_punch" time="0.44"/>
+        <trigger angle="90" name="jug_spin_punch" time="0.5"/>
+        <chain action="Idle" result="idle"/>
+        <chain action="samepowerclick" result="power5"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="buffself" animenum="ea_power6" icon="5" lockangles="true" name="power6" powerup_tag="jug_power6" priority="5">
+        <require cat="skill" item="jug_cyttorak_shield" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/jugger/p6_charge" fxlevel="1" name="effect_sound" sound="char/njugg_m/p6_charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p6_charge" fxlevel="1" name="effect" time="0"/>
+        <trigger effect="char/jugger/p6_power" fxlevel="1" name="effect_sound" sound="char/njugg_m/p6_power" time="0.7"/>
+        <trigger apply_ally="all" life="%jug_shield_life" name="powerup" no_shadow="true" powerusage="%jug_shield_pwr" time="0.7">
+            <special_fx effect="char/jugger/p6_aura" fxlevel="1" how_used="primary"/>
+            <affecter attribute="powerup_scope">
+                <scope scope_damage="dmg_physical"/>
+            </affecter>
+            <affecter attribute="reflect_damage" level="%jug_shield_dmg_ref"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="buffself" animenum="ea_power6" icon="6" lockangles="true" name="power7" powerup_tag="jug_power7" priority="5">
+        <require cat="skill" item="jug_cyttorak_trans" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/jugger/p6_charge" fxlevel="2" name="effect_sound" sound="char/njugg_m/p6_charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p6_charge" fxlevel="2" name="effect" time="0"/>
+        <trigger effect="char/jugger/p6_power" fxlevel="2" name="effect_sound" sound="char/njugg_m/p6_power" time="0.7"/>
+        <trigger apply_ally="all" class="absorb" damagepercent="%jug_trans_dmg_pct" inflicted="true" life="%jug_trans_life" name="powerup" no_shadow="true" powerusage="%jug_trans_pwr" sponsor="true" time="0.7">
+            <special_fx effect="char/jugger/p6_aura" fxlevel="1" how_used="primary"/>
+            <special_fx bolt="Bip01 L Hand" effect="char/jugger/p7_aura" fxlevel="1" how_used="primary"/>
+            <special_fx bolt="Bip01 R Hand" effect="char/jugger/p7_aura" fxlevel="1" how_used="primary"/>
+            <affecter attribute="defense_rating" level="%jug_trans_def_inc"/>
+            <affecter attribute="strength" level="%jug_trans_str"/>
+            <affecter attribute="powerup_scope">
+                <scope scope_damage="dmg_energy"/>
+                <scope scope_damage="dmg_elemental"/>
+            </affecter>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <event class="scale_actor" force_stack="true" inherit="powerup" life="%jug_rage_lif" name="p8_powerup" scaledownrate="-2" scaleuprate="2">
+        <affecter affect_type="scale" attribute="atk_damage" level="%jug_rage_dm2"/>
+        <affecter affect_type="scale" attribute="atk_attack_rating" level="%jug_rage_ar2"/>
+        <affecter attribute="scale_factor" level="0.05"/>
+    </event>
+    <event inherit="powerup" life="%jug_rage_lif" name="p8_powerup2">
+        <special_fx bolt="Bip01 R Hand" effect="char/jugger/p8_aura" how_used="primary"/>
+        <special_fx bolt="Bip01 L Hand" effect="char/jugger/p8_aura" how_used="primary"/>
+    </event>
+    <FightMove aireusetime="5" aitype="melee" animenum="ea_attack_light1" combotextfinisher="Rage" combotextstarter="Crimson" endchaintime="0.95" icon="7" lockangles="true" name="power8" powerup_tag="jug_power8" priority="5" startchaintime="0.5">
+        <require cat="skill" item="jug_rage" level="1"/>
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint"/>
+        <trigger name="p8_powerup" tag="100" time="-1"/>
+        <trigger name="p8_powerup2" tag="101" time="-1"/>
+        <trigger damage="%jug_rage_dmg" damagescale="none" name="punch" powerusage="%jug_rage_pwr" selfeventtag="100" time="0.6"/>
+        <trigger name="whoosh_light" time="0"/>
+        <trigger movement="0" name="slide" targetdistance="90" targetradius="40" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/jugger/p8_charge" fxlevel="1" name="effect" time="0"/>
+        <trigger angle="-30" height="15" name="punch_heavy" selfeventtag="100" selfeventtag2="101" time="0.36"/>
+        <trigger angle="15" height="10" name="punch_heavy" selfeventtag="100" time="0.42"/>
+        <chain action="idle" result="idle"/>
+        <chain action="samepowerclick" result="power8_2"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="melee" animenum="ea_attack_light2" endchaintime="0.95" icon="7" lockangles="true" name="power8_2" powerup_tag="jug_power8" priority="5" startchaintime="0.5">
+        <require cat="skill" item="jug_rage" level="1"/>
+        <trigger name="p8_powerup" tag="100" time="-1"/>
+        <trigger name="p8_powerup2" tag="101" time="-1"/>
+        <trigger name="powerusage" powerusage="%jug_rage_pwr" time="0"/>
+        <trigger name="whoosh_light" time="0"/>
+        <trigger movement="0" name="slide" targetdistance="90" targetradius="40" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p8_charge" fxlevel="1" name="effect" time="0"/>
+        <trigger angle="0" height="10" name="punch_heavy" selfeventtag="100" selfeventtag2="101" time="0.32"/>
+        <chain action="samepowerclick" result="power8"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="jug_cosmos" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power9"/>
+    </FightMove>
+    <FightMove animenum="ea_power11" blendtime="0" combotextfinisher="Cosmos" description="CRIMSON DEVASTATION" icon="8" lockangles="true" name="power9" playspeed="10" powerup_tag="jug_power9" priority="5" startchaintime="0.4">
+        <require cat="skill" item="jug_cosmos" level="1"/>
+        <trigger always="true" name="camera_override" time="0"/>
+        <require cat="xtreme" level="1"/>
+        <trigger description="WOOT!" name="team_xtreme_msg" time="0" title="Crimson Devastation"/>
+        <trigger life="%jug_cosmos_lif" name="powerup" shared_tag="shared_stunned" tag="100" time="-1"/>
+        <event arc="180" attacktype="blast" damage="%jug_cosmos_dmg" damagescale="none" damagetype="dmg_energy" inherit="punch" name="radial_punch" tiles="true" victimeventtag="100"/>
+        <trigger life="-1" name="xtreme_start" time="0"/>
+        <trigger name="stop" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/jugger/p9_charge" name="effect_sound" sound="char/njugg_m/p9_charge" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/jugger/p9_charge" name="effect" time="0"/>
+        <trigger effect="char/jugger/p9_power" name="effect" time="0"/>
+        <trigger class="scale_actor" life="0.12" name="powerup" scaledownrate="-4" scaleuprate="3.5" time="0">
+            <affecter attribute="scale_factor" level="1.3"/>
+        </trigger>
+        <trigger effect="char/jugger/p9_impact" name="effect" time="0.47"/>
+        <trigger maxrange="100" name="radial_punch" time="0.47"/>
+        <trigger maxrange="200" name="radial_punch" time="0.5"/>
+        <trigger maxrange="300" name="radial_punch" tag="4" time="0.55"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+</PowerStyle>

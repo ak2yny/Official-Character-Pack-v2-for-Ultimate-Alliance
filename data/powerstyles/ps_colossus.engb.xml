@@ -1,322 +1,322 @@
 <PowerStyle iconfile="textures/ui/colossus_icons.png">
     <FightMove animenum="ea_lunge_land" lockangles="true" lockspeed="true" locktransitionangles="true" name="fastballland" startchaintime="0.7" takeimpactdamage="false">
-        <chain action="idle" result="idle" />
-        <chain action="walk" result="walk" />
-        <chain action="run" result="run" />
-        <chain action="sprint" result="sprint" />
+        <chain action="idle" result="idle"/>
+        <chain action="walk" result="walk"/>
+        <chain action="run" result="run"/>
+        <chain action="sprint" result="sprint"/>
     </FightMove>
     <FightMove animenum="ea_idle1" lockangles="true" name="DropActorAsWeapon" noncombat="true">
-        <trigger name="powerup" next_eventtag="1" remove_tag="carry_actor_as_weapon" tag="254" time="-1" />
-        <trigger clear_actor_as_weapon="true" name="unbolt_victim" next_eventtag="2" tag="1" time="-1" type="ce_return_victim_model" unbolt_self="false" />
-        <trigger name="victim" next_eventtag="3" nodename="thrownbackloop" tag="2" time="-1" />
-        <trigger name="victim_release" next_eventtag="4" tag="3" time="-1" />
-        <trigger interaction_name="data/fightstyles/fightstyle_colossus_carryguy" name="end_interaction" tag="4" time="-1" />
-        <chain action="idle" result="idle" />
+        <trigger name="powerup" next_eventtag="1" remove_tag="carry_actor_as_weapon" tag="254" time="-1"/>
+        <trigger clear_actor_as_weapon="true" name="unbolt_victim" next_eventtag="2" tag="1" time="-1" type="ce_return_victim_model" unbolt_self="false"/>
+        <trigger name="victim" next_eventtag="3" nodename="thrownbackloop" tag="2" time="-1"/>
+        <trigger name="victim_release" next_eventtag="4" tag="3" time="-1"/>
+        <trigger interaction_name="data/fightstyles/fightstyle_carryguy" name="end_interaction" tag="4" time="-1"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_power10" lockangles="true" lockspeed="true" locktransitionangles="true" name="grabstart" noautoaim="true" priority="4" startchaintime="0.99">
-        <trigger attackerface="true" critical="true" doslidemove="false" interaction="data/fightstyles/interact_colossus_victim" motion_track_offset="true" name="victim" nodename="waitnochain_victim" targetdistance="70" time="0" victimface="true" />
-        <trigger name="sound" sound="char/colos_m/grab" time="0.24" />
-        <trigger critical="true" filter_target="victim" is_alive="true" name="filter" passtag="89" time="0.24" />
-        <trigger execute_against="victim" name="otherevent" next_eventtag="90" othertag="101" tag="89" time="-1" />
-        <trigger flag1="no_actor_vfx" name="flags" resetflags="false" tag="101" time="-1" type="ce_set_flags" />
-        <trigger class="carry_actor_as_weapon" life="-1" name="powerup" next_eventtag="91" ondamage_4_physents="true" tag="90" tag_name="carry_actor_as_weapon" time="-1" />
-        <trigger attackerface="true" doslidemove="false" interaction="data/fightstyles/interact_colossus_victim" motion_track_offset="true" name="victim" next_eventtag="92" nodename="grabstart_victim" tag="91" targetdistance="70" time="-1" victimface="true" />
-        <trigger actor_as_weapon="true" as_weapon="false" bolt="Bip01 R Hand" critical="true" name="bolt_victim" offset="0 0 0" remove_victim_ent="false" rotation="0 0 0" tag="92" time="-1" type="ce_bolt_victim_model" />
-        <trigger critical="true" failtag="99" filter_target="victim" is_alive="true" name="filter" passtag="95" time="0.99" />
-        <trigger critical="true" end_interaction_on_idle="false" interaction="data/fightstyles/fightstyle_colossus_carryguy" name="victim" setowners="false" tag="95" time="-1" useeventvictim="true" />
-        <trigger name="victim_release" tag="99" time="-1" />
-        <trigger critical="on_interrupt" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="-1" />
-        <chain action="Idle" result="idle" />
+        <trigger attackerface="true" critical="true" doslidemove="false" interaction="data/fightstyles/interact_colossus_victim" motion_track_offset="true" name="victim" nodename="waitnochain_victim" targetdistance="70" time="0" victimface="true"/>
+        <trigger name="sound" sound="char/colos_m/grab" time="0.24"/>
+        <trigger critical="true" filter_target="victim" is_alive="true" name="filter" passtag="89" time="0.24"/>
+        <trigger execute_against="victim" name="otherevent" next_eventtag="90" othertag="101" tag="89" time="-1"/>
+        <trigger flag1="no_actor_vfx" name="flags" resetflags="false" tag="101" time="-1" type="ce_set_flags"/>
+        <trigger class="carry_actor_as_weapon" life="-1" name="powerup" next_eventtag="91" ondamage_4_physents="true" tag="90" tag_name="carry_actor_as_weapon" time="-1"/>
+        <trigger attackerface="true" doslidemove="false" interaction="data/fightstyles/interact_colossus_victim" motion_track_offset="true" name="victim" next_eventtag="92" nodename="grabstart_victim" tag="91" targetdistance="70" time="-1" victimface="true"/>
+        <trigger actor_as_weapon="true" as_weapon="false" bolt="Bip01 R Hand" critical="true" name="bolt_victim" offset="0 0 0" remove_victim_ent="false" rotation="0 0 0" tag="92" time="-1" type="ce_bolt_victim_model"/>
+        <trigger critical="true" failtag="99" filter_target="victim" is_alive="true" name="filter" passtag="95" time="0.99"/>
+        <trigger critical="true" end_interaction_on_idle="false" interaction="data/fightstyles/fightstyle_carryguy" name="victim" setowners="false" tag="95" time="-1" useeventvictim="true"/>
+        <trigger name="victim_release" tag="99" time="-1"/>
+        <trigger critical="on_interrupt" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="-1"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_attack_light1" lockangles="true" name="attacklight1" startchaintime="0.5">
-        <trigger movement="0" name="slide" time="0" />
-        <trigger name="whoosh_heavy" time="0.27" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="1" name="effect" time="0.27" />
-        <trigger name="punch" time="0.33" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight2" />
-        <chain action="groundattack" result="groundattack2" />
-        <chain action="smash" result="attackstun1" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger name="whoosh_heavy" time="0.27"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="1" name="effect" time="0.27"/>
+        <trigger name="punch" time="0.33"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light2" fallback="attacklight1" lockangles="true" name="attacklight2" startchaintime="0.5">
-        <trigger movement="0" name="slide" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="2" name="effect" time="0.22" />
-        <trigger name="whoosh_heavy" time="0.22" />
-        <trigger name="punch" time="0.33" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight3" />
-        <chain action="groundattack" result="groundattack" />
-        <chain action="smash" result="popupattack2" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="2" name="effect" time="0.22"/>
+        <trigger name="whoosh_heavy" time="0.22"/>
+        <trigger name="punch" time="0.33"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light3" fallback="attacklight2" lockangles="true" name="attacklight3">
-        <trigger movement="0" name="slide" time="0" />
-        <trigger name="whoosh_heavy" time="0.27" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="3" name="effect" time="0.27" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="3" name="effect" time="0.27" />
-        <trigger name="punch" time="0.36" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="null" />
-        <chain action="smash" result="null" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger name="whoosh_heavy" time="0.27"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="3" name="effect" time="0.27"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="3" name="effect" time="0.27"/>
+        <trigger name="punch" time="0.36"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_stun2" blendtime="0.05" lockangles="true" name="attackstun_finish">
-        <trigger name="whoosh_heavy" time="0.27" />
-        <trigger movement="12" name="slide" time="0.3" />
-        <trigger bolt="Bip01 Head" life="0.3" name="trail" time="0.17" />
+        <trigger name="whoosh_heavy" time="0.27"/>
+        <trigger movement="12" name="slide" time="0.3"/>
+        <trigger bolt="Bip01 Head" life="0.3" name="trail" time="0.17"/>
         <trigger knockback="0" name="kick_heavy" time="0.35">
-            <damagemod name="dmgmod_stun" />
-            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
         </trigger>
-        <chain action="idle" result="idle" />
-        <chain action="move" result="jump" />
-        <chain action="smash" result="null" />
-        <chain action="blocking" result="blocking" />
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.81">
-        <trigger charge="1" name="charge" time="0" />
-        <trigger name="whoosh_heavy" time="0.14" />
-        <trigger movement="20" name="slide" time="0.14" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="4" name="effect" time="0.14" />
+        <trigger charge="1" name="charge" time="0"/>
+        <trigger name="whoosh_heavy" time="0.14"/>
+        <trigger movement="20" name="slide" time="0.14"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/special_attack" fxlevel="4" name="effect" time="0.14"/>
         <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.23">
-            <damagemod name="dmgmod_popup" />
-            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_ground"/>
         </trigger>
-        <trigger name="punch" time="0.25" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="null" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="punch" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_trip1" blendtime="0.05" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacktrip2" startchaintime="1">
-        <trigger delay="0.01" event="2" name="scheduleStop" tag="1" time="-1" type="ce_schedule_event" />
-        <trigger name="stop" tag="2" time="-1" />
+        <trigger delay="0.01" event="2" name="scheduleStop" tag="1" time="-1" type="ce_schedule_event"/>
+        <trigger name="stop" tag="2" time="-1"/>
         <event inherit="kick" maxrange="40" name="sweep" victimeventtag="1">
-            <damagemod name="dmgmod_ground" />
-            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground"/>
+            <damagemod name="dmgmod_auto_knockback"/>
         </event>
-        <trigger name="whoosh_heavy" time="0.27" />
-        <trigger bolt="Bip01 R Hand" life="0.6" name="trail" time="0.13" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="2" name="effect" time="0.3" />
-        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.4" />
-        <trigger angle="0" height="-10" index="1" name="sweep" time="0.42" />
-        <trigger angle="30" height="-10" index="1" name="sweep" time="0.45" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_heavy" time="0.27"/>
+        <trigger bolt="Bip01 R Hand" life="0.6" name="trail" time="0.13"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/special_attack" fxlevel="2" name="effect" time="0.3"/>
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.4"/>
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.42"/>
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.45"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
-        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
-        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
-        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
-            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <chain action="idle" result="attackknockback2" />
-        <chain action="groundsmash" result="groundattackknockback2" />
-        <chain action="special" result="attack_knockback_charge" />
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
     </FightMove>
     <FightMove aitype="melee" animenum="ea_power1_start" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1" powerup_tag="colos_p1" priority="5">
-        <require cat="skill" item="colos_power1" level="1" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <require cat="skill" item="colos_power1" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" powerusage="%colos_p1_pwr" remove_on_node_end="true" tag_name="colos_p1_link" time="0">
-            <special_fx bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <trigger name="sound" sound="char/colos_m/windup" time="0.38" />
-        <chain action="Idle" result="power1_loop" />
+        <trigger name="sound" sound="char/colos_m/windup" time="0.38"/>
+        <chain action="Idle" result="power1_loop"/>
     </FightMove>
     <FightMove aitype="melee" animenum="ea_power1_loop" icon="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" powerup_tag="colos_p1" priority="5" turnrate="0.5">
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <chain action="samepowerhold" result="power1_loop" />
-        <chain action="Idle" result="power1_end" />
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <chain action="samepowerhold" result="power1_loop"/>
+        <chain action="Idle" result="power1_end"/>
     </FightMove>
     <FightMove aitype="melee" animenum="ea_power1_end" combotextfinisher="Blow" combotextstarter="Pulverizing" icon="0" is_power="true" lockangles="true" name="power1_end" playspeed="0.75" powerup_tag="colos_p1" priority="5">
-        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1" />
-        <trigger life="%colos_p1_life" name="powerup" shared_tag="shared_stunned" tag="21" time="-1" />
-        <trigger charge_type="stop" critical="true" name="charge" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="3" name="effect" time="0.05" />
-        <trigger name="whoosh_heavy" time="0.1" />
-        <trigger damage="%colos_p1_dmg" damagescale="none" maxrange="60" name="punch" time="0.14" victimeventtag="20" />
-        <trigger critical="true" name="powerup" remove_tag="colos_p1_link" time="0.14" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p1_power" fxlevel="3" name="effect" time="0.33" />
-        <trigger name="whoosh_heavy" time="0.38" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1"/>
+        <trigger life="%colos_p1_life" name="powerup" shared_tag="shared_stunned" tag="21" time="-1"/>
+        <trigger charge_type="stop" critical="true" name="charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p1_power" fxlevel="3" name="effect" time="0.05"/>
+        <trigger name="whoosh_heavy" time="0.1"/>
+        <trigger damage="%colos_p1_dmg" damagescale="none" maxrange="60" name="punch" time="0.14" victimeventtag="20"/>
+        <trigger critical="true" name="powerup" remove_tag="colos_p1_link" time="0.14"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p1_power" fxlevel="3" name="effect" time="0.33"/>
+        <trigger name="whoosh_heavy" time="0.38"/>
         <trigger damage="%colos_p1_dmg2" damagescale="none" index="2" knockback="190" maxrange="60" name="punch" time="0.48" victimeventtag="20">
-            <damageMod name="dmgmod_popup" />
+            <damageMod name="dmgmod_popup"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_power2" combotextfinisher="Quake" combotextstarter="Devastating" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2" priority="5">
-        <require cat="skill" item="colos_power2" level="1" />
-        <trigger button="samepowerclick" name="button_hint" time="0" />
-        <trigger count="set" name="count" time="0" value="10" />
-        <trigger charge="0" charge_type="set" name="charge" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.64" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.64" />
+        <require cat="skill" item="colos_power2" level="1"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger count="set" name="count" time="0" value="10"/>
+        <trigger charge="0" charge_type="set" name="charge" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.64"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.64"/>
         <trigger damage="%colos_p2_dmg" damagescale="none" knockback="120" maxrange="%colos_p2_rng" name="radial" powerusage="%colos_p2_pwr" time="0.79">
-            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_auto_knockback"/>
         </trigger>
-        <trigger effect="char/colossus/p2_power" fxlevel="2" name="effect_sound" sound="char/colos_m/slam_double" time="0.79" />
-        <trigger effect="char/colossus/p2_power" fxlevel="3" name="effect" size="%colos_p2_fxscale" time="0.79" />
-        <chain action="samepowerclick" result="power2_loop" />
-        <chain action="Idle" result="power2_end" />
+        <trigger effect="char/colossus/p2_power" fxlevel="2" name="effect_sound" sound="char/colos_m/slam_double" time="0.79"/>
+        <trigger effect="char/colossus/p2_power" fxlevel="3" name="effect" size="%colos_p2_fxscale" time="0.79"/>
+        <chain action="samepowerclick" result="power2_loop"/>
+        <chain action="Idle" result="power2_end"/>
     </FightMove>
     <FightMove aitype="aoe" animenum="ea_power2_loop" combotextfinisher="Quake" combotextstarter="Devastating" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2_loop" playspeed="%colos_p2_spd" priority="5">
-        <require cat="counter" level="1" />
-        <trigger count="add" name="count" time="0" value="-1" />
-        <trigger button="samepowerclick" name="button_hint" time="0" />
-        <trigger charge="0.2" charge_type="add" name="charge" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.53" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.6" />
-        <trigger effect="char/colossus/p2_power" fxlevel="3" name="effect_sound" size="%colos_p2_fxscale" sound="char/colos_m/slam_double" time="0.8" />
-        <trigger damage="%colos_p2_dmg2" damagescale="none" knockback="190" maxrange="%colos_p2_rng" name="radial" powerusage="%colos_p2_pwr" time="0.8" />
-        <chain action="samepowerclick" result="power2_loop" />
-        <chain action="idle" result="power2_end" />
+        <require cat="counter" level="1"/>
+        <trigger count="add" name="count" time="0" value="-1"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger charge="0.2" charge_type="add" name="charge" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.53"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p2_power" fxlevel="1" name="effect" time="0.6"/>
+        <trigger effect="char/colossus/p2_power" fxlevel="3" name="effect_sound" size="%colos_p2_fxscale" sound="char/colos_m/slam_double" time="0.8"/>
+        <trigger damage="%colos_p2_dmg2" damagescale="none" knockback="190" maxrange="%colos_p2_rng" name="radial" powerusage="%colos_p2_pwr" time="0.8"/>
+        <chain action="samepowerclick" result="power2_loop"/>
+        <chain action="idle" result="power2_end"/>
     </FightMove>
     <FightMove aitype="aoe" animenum="ea_power2_end" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2_end" priority="5">
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_power3" combotextfinisher="Bash" combotextstarter="Crushing" icon="2" is_power="true" lockangles="false" locktransitionangles="true" name="power3" priority="5" turnrate="0.4">
-        <require cat="skill" item="colos_power3" level="1" />
-        <trigger name="powerusage" powerusage="%colos_p3_pwr" time="-1" />
-        <trigger effect="char/colossus/p3_power" fxlevel="1" name="effect" time="0.5" />
-        <trigger bolt="Bip01 Pelvis" effect="char/colossus/p3_power" fxlevel="4" name="effect" time="0.5" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p3_power" fxlevel="2" name="effect" time="0.5" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p3_power" fxlevel="2" name="effect" time="0.5" />
-        <chain action="Idle" result="power3_end" />
+        <require cat="skill" item="colos_power3" level="1"/>
+        <trigger name="powerusage" powerusage="%colos_p3_pwr" time="-1"/>
+        <trigger effect="char/colossus/p3_power" fxlevel="1" name="effect" time="0.5"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/colossus/p3_power" fxlevel="4" name="effect" time="0.5"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p3_power" fxlevel="2" name="effect" time="0.5"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p3_power" fxlevel="2" name="effect" time="0.5"/>
+        <chain action="Idle" result="power3_end"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_power3_end" blendtime="0" combotextfinisher="Bash" combotextstarter="Crushing" icon="2" is_power="true" lockangles="false" name="power3_end" priority="5" turnrate="0.4">
-        <trigger name="sound" sound="char/colos_m/slam_single" time="0.21" />
-        <trigger effect="char/colossus/p3_power" fxlevel="3" name="effect" time="0.21" />
+        <trigger name="sound" sound="char/colos_m/slam_single" time="0.21"/>
+        <trigger effect="char/colossus/p3_power" fxlevel="3" name="effect" time="0.21"/>
         <trigger damage="%colos_p3_dmg" damagescale="none" maxrange="100" name="radial" powerusage="%colos_p3_pwr" time="0.21">
-            <damagemod name="dmgmod_ground" />
-            <damageMod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_popup"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="melee" animenum="ea_power4" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" powerup_tag="colos_p4" priority="5">
-        <require cat="skill" item="colos_power4" level="1" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger name="sound" sound="char/colos_m/takedown_start" time="0.99" />
+        <require cat="skill" item="colos_power4" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="sound" sound="char/colos_m/takedown_start" time="0.99"/>
         <trigger kill_fx_on_death="false" life="-1" name="powerup" powerusage="%colos_p4_pwr" remove_on_node_end="true" tag_name="colos_p4_link" time="0.99">
-            <special_fx effect="char/colossus/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
-            <special_fx bolt="Bip01 Spine1" effect="char/colossus/p4_power" fxlevel="4" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/colossus/p4_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 Spine1" effect="char/colossus/p4_power" fxlevel="4" how_used="primary" never_cycle="true"/>
         </trigger>
-        <chain action="Idle" result="power4_run" />
+        <chain action="Idle" result="power4_run"/>
     </FightMove>
     <FightMove aitype="melee" animenum="ea_power4_loop" combotextfinisher="Ruin" combotextstarter="Smashing" energypersecond="%colos_p4_pwr" handler="ch_charge_move" icon="3" is_power="true" locktransitionangles="true" name="power4_run" powerup_tag="colos_p4" priority="5" startchaintime="0.5" turnrate="0.4">
-        <trigger name="unlock_loop_chaining" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger effect="char/colossus/p4_power" fxlevel="2" name="effect" time="0.36" />
-        <trigger effect="char/colossus/p4_power" fxlevel="2" name="effect" time="0.86" />
+        <trigger name="unlock_loop_chaining"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger effect="char/colossus/p4_power" fxlevel="2" name="effect" time="0.36"/>
+        <trigger effect="char/colossus/p4_power" fxlevel="2" name="effect" time="0.86"/>
         <trigger arc="180" damage="%colos_p4_dmg" damagescale="none" knockback="120" name="punch" tag="1" tiles="true" time="-1">
-            <damageMod name="dmgmod_ground" />
-            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_auto_knockback"/>
         </trigger>
-        <chain action="samepowerhold" result="power4_run" />
-        <chain action="touch" result="grabbreak" />
-        <chain action="idle" result="fastballland" />
-        <chain action="special" result="power4_end" />
+        <chain action="samepowerhold" result="power4_run"/>
+        <chain action="touch" result="grabbreak"/>
+        <chain action="idle" result="fastballland"/>
+        <chain action="special" result="power4_end"/>
     </FightMove>
     <FightMove aitype="melee" animenum="ea_power4_end" combotextfinisher="Ruin" combotextstarter="Smashing" handler="ch_grab_hold_base" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_end" priority="5">
-        <trigger flags1="nopush" name="flags" time="0" type="ce_set_flags" />
-        <trigger critical="on_exit" flags1="nopush" name="flags" resetflags="true" time="0.99" type="ce_set_flags" />
-        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_colossus_victim" name="victim" nodename="power4_victim" offset="49 0 0" time="0" victimface="true" />
-        <trigger name="stop" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.29" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.34" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.45" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.65" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.65" />
-        <trigger name="sound" sound="char/colos_m/col_punch" time="0.32" />
-        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.32" />
+        <trigger flags1="nopush" name="flags" time="0" type="ce_set_flags"/>
+        <trigger critical="on_exit" flags1="nopush" name="flags" resetflags="true" time="0.99" type="ce_set_flags"/>
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_colossus_victim" name="victim" nodename="power4_victim" offset="49 0 0" time="0" victimface="true"/>
+        <trigger name="stop" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.29"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.34"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.45"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.65"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p4_power" fxlevel="3" name="effect" time="0.65"/>
+        <trigger name="sound" sound="char/colos_m/col_punch" time="0.32"/>
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.32"/>
         <trigger damage="%colos_p4_dmg2" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_no_hiteffect" />
+            <damagemod name="dmgmod_no_hiteffect"/>
         </trigger>
-        <trigger name="sound" sound="char/colos_m/col_punch" time="0.38" />
-        <trigger execute_against="victim" name="otherevent" othertag="21" time="0.38" />
+        <trigger name="sound" sound="char/colos_m/col_punch" time="0.38"/>
+        <trigger execute_against="victim" name="otherevent" othertag="21" time="0.38"/>
         <trigger damage="%colos_p4_dmg2" damagescale="none" index="3" name="selfattack" tag="21" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_no_hiteffect" />
+            <damagemod name="dmgmod_no_hiteffect"/>
         </trigger>
-        <trigger name="sound" sound="char/colos_m/col_punch" time="0.49" />
-        <trigger execute_against="victim" name="otherevent" othertag="31" time="0.49" />
+        <trigger name="sound" sound="char/colos_m/col_punch" time="0.49"/>
+        <trigger execute_against="victim" name="otherevent" othertag="31" time="0.49"/>
         <trigger damage="%colos_p4_dmg2" damagescale="none" index="4" name="selfattack" tag="31" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_no_hiteffect" />
+            <damagemod name="dmgmod_no_hiteffect"/>
         </trigger>
-        <trigger name="sound" sound="char/colos_m/col_punch" time="0.69" />
-        <trigger execute_against="victim" name="otherevent" othertag="41" time="0.69" />
+        <trigger name="sound" sound="char/colos_m/col_punch" time="0.69"/>
+        <trigger execute_against="victim" name="otherevent" othertag="41" time="0.69"/>
         <trigger damage="%colos_p4_dmg2" damagescale="none" index="5" name="selfattack" tag="41" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_no_hiteffect" />
+            <damagemod name="dmgmod_no_hiteffect"/>
         </trigger>
-        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="0.99" />
-        <chain action="Idle" result="idle" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="0.99"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="debuff" animenum="ea_power6" combotextfinisher="Rage" combotextstarter="Giant's" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
-        <require cat="skill" item="colos_power6" level="1" />
-        <trigger name="sound" sound="char/colos_m/slam_single" time="0.34" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p6_power" fxlevel="1" name="effect" time="0.4" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p6_power" fxlevel="4" name="effect" time="0.34" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p6_power" fxlevel="4" name="effect" time="0.34" />
-        <trigger effect="char/colossus/p6_power" fxlevel="2" name="effect" time="0.4" />
+        <require cat="skill" item="colos_power6" level="1"/>
+        <trigger name="sound" sound="char/colos_m/slam_single" time="0.34"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p6_power" fxlevel="1" name="effect" time="0.4"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p6_power" fxlevel="4" name="effect" time="0.34"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p6_power" fxlevel="4" name="effect" time="0.34"/>
+        <trigger effect="char/colossus/p6_power" fxlevel="2" name="effect" time="0.4"/>
         <trigger damage="1" maxrange="300" name="radial" powerusage="%colos_p6_pwr" time="0.43" victimeventtag="20">
-            <damagemod name="dmgmod_ground" />
-            <damagemod name="dmgmod_no_damage" />
+            <damagemod name="dmgmod_ground"/>
+            <damagemod name="dmgmod_no_damage"/>
         </trigger>
-        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1"/>
         <trigger life="%colos_p6_lif" name="powerup" renderfx="chilled" tag="21" time="-1">
-            <special_fx effect="char/colossus/p6_power" fxlevel="3" how_used="primary" />
-            <affecter affect_type="scale" attribute="move" level="0.8" />
-            <affecter attribute="fear" level="1" />
+            <special_fx effect="char/colossus/p6_power" fxlevel="3" how_used="primary"/>
+            <affecter affect_type="scale" attribute="move" level="0.8"/>
+            <affecter attribute="fear" level="1"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
-        <require cat="skill" item="colos_power7" level="1" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p7_power" fxlevel="2" name="effect" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p7_power" fxlevel="2" name="effect" time="0" />
-        <trigger effect="char/colossus/p7_power" fxlevel="1" name="effect_sound" sound="char/colos_m/thick_skin" time="0.38" />
+        <require cat="skill" item="colos_power7" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p7_power" fxlevel="2" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p7_power" fxlevel="2" name="effect" time="0"/>
+        <trigger effect="char/colossus/p7_power" fxlevel="1" name="effect_sound" sound="char/colos_m/thick_skin" time="0.38"/>
         <trigger apply_ally="all" life="%colos_p7_lif" name="powerup" powerusage="%colos_p7_pwr" time="0.38">
-            <special_fx effect="char/colossus/p7_power" fxlevel="3" how_used="primary" />
-            <special_fx effect="char/colossus/p7_power" fxlevel="4" how_used="deactivation" />
-            <affecter affect_type="scale" attribute="def_damage" level="%colos_p7_def" />
+            <special_fx effect="char/colossus/p7_power" fxlevel="3" how_used="primary"/>
+            <special_fx effect="char/colossus/p7_power" fxlevel="4" how_used="deactivation"/>
+            <affecter affect_type="scale" attribute="def_damage" level="%colos_p7_def"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
-        <require cat="skill" item="colos_power9" level="1" />
-        <require cat="xtreme" level="1" />
-        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0" />
-        <chain action="idle" result="team_xtreme" />
-        <chain action="special" result="power9" />
+        <require cat="skill" item="colos_power9" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power9"/>
     </FightMove>
     <FightMove animenum="ea_power9" combotextfinisher="Devastation" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" priority="uninterruptable">
-        <trigger always="true" name="camera_override" time="0" />
-        <trigger description="New Text" name="team_xtreme_msg" time="0" title="Colossal Crash" />
-        <trigger bolt="Bip01 L Hand" effect="char/colossus/p9_power" fxlevel="2" name="effect" time="0.05" />
-        <trigger bolt="Bip01 R Hand" effect="char/colossus/p9_power" fxlevel="2" name="effect" time="0.05" />
-        <trigger effect="char/colossus/p9_power" fxlevel="1" name="effect" time="0.3" />
-        <trigger effect="char/colossus/p9_power" fxlevel="3" name="effect" time="0.6" />
-        <trigger name="sound" sound="char/colos_m/xtreme_slam" time="0.58" />
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger description="New Text" name="team_xtreme_msg" time="0" title="Colossal Crash"/>
+        <trigger bolt="Bip01 L Hand" effect="char/colossus/p9_power" fxlevel="2" name="effect" time="0.05"/>
+        <trigger bolt="Bip01 R Hand" effect="char/colossus/p9_power" fxlevel="2" name="effect" time="0.05"/>
+        <trigger effect="char/colossus/p9_power" fxlevel="1" name="effect" time="0.3"/>
+        <trigger effect="char/colossus/p9_power" fxlevel="3" name="effect" time="0.6"/>
+        <trigger name="sound" sound="char/colos_m/xtreme_slam" time="0.58"/>
         <trigger damage="%colos_p9_dmg" knockback="245" maxrange="600" name="radial" time="0.6">
-            <damagemod name="dmgmod_ground" />
-            <damageMod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_popup"/>
         </trigger>
-        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
-        <chain action="Idle" result="idle" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
 </PowerStyle>
