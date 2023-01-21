@@ -1,0 +1,408 @@
+<talents>
+    <talent descname="Slayer Slash" description="Slash at enemies with Blade's katana.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/blade_icons.png" name="blade_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p1_req" value="1" />
+            <talentvalue level="5" name="blade_p1_req" value="13" />
+            <talentvalue level="6" name="blade_p1_req" value="16" />
+            <talentvalue level="9" name="blade_p1_req" value="25" />
+            <talentvalue level="10" name="blade_p1_req" value="28" />
+            <talentvalue level="14" name="blade_p1_req" value="52" />
+            <talentvalue level="15" name="blade_p1_req" value="72" />
+            <talentvalue level="1" name="blade_p1_pwr" value="8" />
+            <talentvalue level="5" name="blade_p1_pwr" value="17" />
+            <talentvalue level="6" name="blade_p1_pwr" value="19" />
+            <talentvalue level="9" name="blade_p1_pwr" value="26" />
+            <talentvalue level="10" name="blade_p1_pwr" value="28" />
+            <talentvalue level="14" name="blade_p1_pwr" value="44" />
+            <talentvalue level="15" name="blade_p1_pwr" value="55" />
+            <talentvalue level="1" name="blade_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="blade_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="blade_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="blade_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="blade_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="blade_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="blade_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="blade_p1_arc" value="15" value_charged="45" />
+            <talentvalue level="15" name="blade_p1_arc" value="30" value_charged="90" />
+            <talentvalue level="1" name="blade_p1_fx1" value="3" value_charged="4" />
+        </talentvalues>
+        <level description="%blade_p1_dmg $DMG_PHYSICAL\n%blade_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Circle of Death" description="Spin with katana, causing damage to all enemies within a given distance.  $PT_CHARGE" descshort="Radial" icon="1" icon_texture="textures/ui/blade_icons.png" name="blade_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p2_req" value="17" />
+            <talentvalue level="4" name="blade_p2_req" value="26" />
+            <talentvalue level="5" name="blade_p2_req" value="29" />
+            <talentvalue level="9" name="blade_p2_req" value="53" />
+            <talentvalue level="10" name="blade_p2_req" value="73" />
+            <talentvalue level="1" name="blade_p2_pwr" value="16" />
+            <talentvalue level="4" name="blade_p2_pwr" value="21" />
+            <talentvalue level="5" name="blade_p2_pwr" value="23" />
+            <talentvalue level="9" name="blade_p2_pwr" value="35" />
+            <talentvalue level="10" name="blade_p2_pwr" value="44" />
+            <talentvalue level="1" name="blade_p2_dmg" value="20 23" value_charged_scale="2.0" />
+            <talentvalue level="4" name="blade_p2_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="5" name="blade_p2_dmg" value="37 41" value_charged_scale="2.0" />
+            <talentvalue level="9" name="blade_p2_dmg" value="61 68" value_charged_scale="2.0" />
+            <talentvalue level="10" name="blade_p2_dmg" value="88 98" value_charged_scale="2.0" />
+            <talentvalue level="1" name="blade_p2_rad" value="36" value_charged="72" />
+            <talentvalue level="1" name="blade_p2_fx1" value="1" value_charged="2" />
+            <talentvalue level="1" name="blade_p2_fxscale" value="0.5" value_charged="1" />
+        </talentvalues>
+        <level description="%blade_p2_dmg $DMG_PHYSICAL\n%blade_p2_rad:r Feet\n%blade_p2_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Glaive Strike" description="Throws Blade's Glaive at enemies." descshort="Projectile" icon="2" icon_texture="textures/ui/blade_icons.png" name="blade_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p3_req" value="10" />
+            <talentvalue level="3" name="blade_p3_req" value="13" />
+            <talentvalue level="4" name="blade_p3_req" value="16" />
+            <talentvalue level="7" name="blade_p3_req" value="25" />
+            <talentvalue level="8" name="blade_p3_req" value="28" />
+            <talentvalue level="12" name="blade_p3_req" value="52" />
+            <talentvalue level="13" name="blade_p3_req" value="72" />
+            <talentvalue level="1" name="blade_p3_pwr" value="17" />
+            <talentvalue level="3" name="blade_p3_pwr" value="19" />
+            <talentvalue level="4" name="blade_p3_pwr" value="21" />
+            <talentvalue level="7" name="blade_p3_pwr" value="29" />
+            <talentvalue level="8" name="blade_p3_pwr" value="31" />
+            <talentvalue level="12" name="blade_p3_pwr" value="48" />
+            <talentvalue level="13" name="blade_p3_pwr" value="61" />
+            <talentvalue level="1" name="blade_p3_dmg" value="27 30" />
+            <talentvalue level="3" name="blade_p3_dmg" value="34 38" />
+            <talentvalue level="4" name="blade_p3_dmg" value="44 49" />
+            <talentvalue level="7" name="blade_p3_dmg" value="65 71" />
+            <talentvalue level="8" name="blade_p3_dmg" value="82 90" />
+            <talentvalue level="12" name="blade_p3_dmg" value="129 143" />
+            <talentvalue level="13" name="blade_p3_dmg" value="190 210" />
+        </talentvalues>
+        <level description="%blade_p3_dmg $DMG_PHYSICAL\n%blade_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Gun Blast" description="Fires 4 shots causing $DMG_PHYSICAL and $KB to enemies hit.  +50% chance of critical hit if the enemy is stunned when hit by the attack." descshort="Projectile" icon="3" icon_texture="textures/ui/blade_icons.png" name="blade_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p4_req" value="5" />
+            <talentvalue level="5" name="blade_p4_req" value="14" />
+            <talentvalue level="6" name="blade_p4_req" value="17" />
+            <talentvalue level="9" name="blade_p4_req" value="26" />
+            <talentvalue level="10" name="blade_p4_req" value="29" />
+            <talentvalue level="14" name="blade_p4_req" value="53" />
+            <talentvalue level="15" name="blade_p4_req" value="73" />
+            <talentvalue level="1" name="blade_p4_pwr" value="12" />
+            <talentvalue level="5" name="blade_p4_pwr" value="20" />
+            <talentvalue level="6" name="blade_p4_pwr" value="22" />
+            <talentvalue level="9" name="blade_p4_pwr" value="30" />
+            <talentvalue level="10" name="blade_p4_pwr" value="32" />
+            <talentvalue level="14" name="blade_p4_pwr" value="50" />
+            <talentvalue level="15" name="blade_p4_pwr" value="62" />
+            <talentvalue level="1" name="blade_p4_dmg" value="17 19" />
+            <talentvalue level="5" name="blade_p4_dmg" value="34 38" />
+            <talentvalue level="6" name="blade_p4_dmg" value="48 53" />
+            <talentvalue level="9" name="blade_p4_dmg" value="65 71" />
+            <talentvalue level="10" name="blade_p4_dmg" value="85 94" />
+            <talentvalue level="14" name="blade_p4_dmg" value="132 147" />
+            <talentvalue level="15" name="blade_p4_dmg" value="190 210" />
+        </talentvalues>
+        <level description="%blade_p4_dmg $DMG_PHYSICAL\n%blade_p4_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Spike of Destruction" description="Throws an explosive spike that will explode and damage all enemies within a given radius.  $PT_CHARGE" descshort="Projectile" icon="4" icon_texture="textures/ui/blade_icons.png" name="blade_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p5_req" value="20" />
+            <talentvalue level="3" name="blade_p5_req" value="26" />
+            <talentvalue level="4" name="blade_p5_req" value="29" />
+            <talentvalue level="8" name="blade_p5_req" value="53" />
+            <talentvalue level="9" name="blade_p5_req" value="73" />
+            <talentvalue level="1" name="blade_p5_pwr" value="22" />
+            <talentvalue level="3" name="blade_p5_pwr" value="27" />
+            <talentvalue level="4" name="blade_p5_pwr" value="29" />
+            <talentvalue level="8" name="blade_p5_pwr" value="45" />
+            <talentvalue level="9" name="blade_p5_pwr" value="56" />
+            <talentvalue level="1" name="blade_p5_dmg" value="92 101" value_charged_scale="2.0" />
+            <talentvalue level="3" name="blade_p5_dmg" value="112 124" value_charged_scale="2.0" />
+            <talentvalue level="4" name="blade_p5_dmg" value="143 157" value_charged_scale="2.0" />
+            <talentvalue level="8" name="blade_p5_dmg" value="224 248" value_charged_scale="2.0" />
+            <talentvalue level="9" name="blade_p5_dmg" value="322 356" value_charged_scale="2.0" />
+            <talentvalue level="1" name="blade_p5_expdmg" value="11 13" />
+            <talentvalue level="3" name="blade_p5_expdmg" value="15 17" />
+            <talentvalue level="4" name="blade_p5_expdmg" value="24 26" />
+            <talentvalue level="8" name="blade_p5_expdmg" value="37 41" />
+            <talentvalue level="9" name="blade_p5_expdmg" value="54 60" />
+            <talentvalue level="1" name="blade_p5_rad" value="60" />
+            <talentvalue level="9" name="blade_p5_rad" value="120" />
+            <talentvalue level="1" name="blade_p5_kb" value="40" />
+            <talentvalue level="9" name="blade_p5_kb" value="555" />
+            <talentvalue level="1" name="blade_p5_lif" value="3" />
+        </talentvalues>
+        <level description="%blade_p5_dmg $DMG_PHYSICAL\n%blade_p5_expdmg exploding $DMG_PHYSICAL\n%blade_p5_rad:r feet\n%blade_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Flash Bomb" description="Throws a flash bomb to the ground that will stun enemies and lowers their damage output." descshort="Debuff" icon="5" icon_texture="textures/ui/blade_icons.png" name="blade_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p6_req" value="14" />
+            <talentvalue level="2" name="blade_p6_req" value="17" />
+            <talentvalue level="5" name="blade_p6_req" value="26" />
+            <talentvalue level="6" name="blade_p6_req" value="29" />
+            <talentvalue level="10" name="blade_p6_req" value="53" />
+            <talentvalue level="11" name="blade_p6_req" value="73" />
+            <talentvalue level="1" name="blade_p6_pwr" value="72" />
+            <talentvalue level="2" name="blade_p6_pwr" value="80" />
+            <talentvalue level="5" name="blade_p6_pwr" value="108" />
+            <talentvalue level="6" name="blade_p6_pwr" value="116" />
+            <talentvalue level="10" name="blade_p6_pwr" value="180" />
+            <talentvalue level="11" name="blade_p6_pwr" value="224" />
+            <talentvalue level="1" name="blade_p6_dmglif" value="40" />
+            <talentvalue level="2" name="blade_p6_dmglif" value="50" />
+            <talentvalue level="5" name="blade_p6_dmglif" value="65" />
+            <talentvalue level="6" name="blade_p6_dmglif" value="80" />
+            <talentvalue level="10" name="blade_p6_dmglif" value="120" />
+            <talentvalue level="11" name="blade_p6_dmglif" value="180" />
+            <talentvalue level="1" name="blade_p6_atkdmg" value="0.96" />
+            <talentvalue level="2" name="blade_p6_atkdmg" value="0.94" />
+            <talentvalue level="5" name="blade_p6_atkdmg" value="0.94" />
+            <talentvalue level="6" name="blade_p6_atkdmg" value="0.92" />
+            <talentvalue level="10" name="blade_p6_atkdmg" value="0.92" />
+            <talentvalue level="11" name="blade_p6_atkdmg" value="0.9" />
+            <talentvalue level="1" name="blade_p6_stnlif" value="4" />
+            <talentvalue level="11" name="blade_p6_stnlif" value="7" />
+        </talentvalues>
+        <level description="%blade_p6_atkdmg:s $DMG_PHYSICAL\n%blade_p6_stnlif Seconds stun\n%blade_p6_dmglif Seconds\n%blade_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Blood of the Warrior" description="Increases damage taken, but adds $HP regen and attack abilities." descshort="Boost" icon="6" icon_texture="textures/ui/blade_icons.png" name="blade_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p7_req" value="2" />
+            <talentvalue level="5" name="blade_p7_req" value="14" />
+            <talentvalue level="6" name="blade_p7_req" value="17" />
+            <talentvalue level="9" name="blade_p7_req" value="26" />
+            <talentvalue level="10" name="blade_p7_req" value="29" />
+            <talentvalue level="14" name="blade_p7_req" value="53" />
+            <talentvalue level="15" name="blade_p7_req" value="73" />
+            <talentvalue level="1" name="blade_p7_pwr" value="32" />
+            <talentvalue level="5" name="blade_p7_pwr" value="72" />
+            <talentvalue level="6" name="blade_p7_pwr" value="80" />
+            <talentvalue level="9" name="blade_p7_pwr" value="108" />
+            <talentvalue level="10" name="blade_p7_pwr" value="116" />
+            <talentvalue level="14" name="blade_p7_pwr" value="180" />
+            <talentvalue level="15" name="blade_p7_pwr" value="224" />
+            <talentvalue level="1" name="blade_p7_lif" value="20" />
+            <talentvalue level="5" name="blade_p7_lif" value="40" />
+            <talentvalue level="6" name="blade_p7_lif" value="50" />
+            <talentvalue level="9" name="blade_p7_lif" value="65" />
+            <talentvalue level="10" name="blade_p7_lif" value="80" />
+            <talentvalue level="14" name="blade_p7_lif" value="120" />
+            <talentvalue level="15" name="blade_p7_lif" value="180" />
+            <talentvalue level="1" name="blade_p7_spd" value="1.2" />
+            <talentvalue level="5" name="blade_p7_spd" value="1.2" />
+            <talentvalue level="6" name="blade_p7_spd" value="1.25" />
+            <talentvalue level="9" name="blade_p7_spd" value="1.25" />
+            <talentvalue level="10" name="blade_p7_spd" value="1.3" />
+            <talentvalue level="14" name="blade_p7_spd" value="1.3" />
+            <talentvalue level="15" name="blade_p7_spd" value="1.4" />
+            <talentvalue level="1" name="blade_p7_rgn" value="0.01" />
+            <talentvalue level="1" name="blade_p7_str" value="1" />
+            <talentvalue level="15" name="blade_p7_str" value="5" />
+            <talentvalue level="1" name="blade_p7_defdmg" value="1.05" />
+            <talentvalue level="5" name="blade_p7_defdmg" value="1.06" />
+            <talentvalue level="6" name="blade_p7_defdmg" value="1.07" />
+            <talentvalue level="9" name="blade_p7_defdmg" value="1.08" />
+            <talentvalue level="10" name="blade_p7_defdmg" value="1.09" />
+            <talentvalue level="14" name="blade_p7_defdmg" value="1.1" />
+            <talentvalue level="15" name="blade_p7_defdmg" value="1.11" />
+        </talentvalues>
+        <level description="%blade_p7_defdmg:s $DMG_PHYSICAL  %blade_p7_spd:s Speed\n+%blade_p7_str Striking  %blade_p7_rgn:p $HP/sec\n%blade_p7_lif Seconds\n%blade_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blade_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Blood Haze" description="Throw multiple bottles of serum into the air, then blast them with pistols, raining destruction down on all nearby foes." descshort="Xtreme" icon="10" icon_texture="textures/ui/blade_icons.png" name="blade_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="blade_p9_req" value="10" />
+            <talentvalue level="8" name="blade_p9_req" value="45" />
+            <talentvalue level="1" name="blade_p9_dmg" value="85 94" />
+            <talentvalue level="8" name="blade_p9_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%blade_p9_dmg $DMG_RADIATION">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%blade_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Health Regen" description="Increases $HP regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit11_hlth" value="0.004" />
+            <talentvalue level="9" name="blade_outfit11_hlth" value="0.012" />
+            <talentvalue level="1" name="blade_outfit11_show" value="0.4" />
+            <talentvalue level="9" name="blade_outfit11_show" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%blade_outfit11_show:f% Max $HP Regenerated Per Second">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit11_hlth" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Striking" description="Increases striking." icon="1" icon_texture="textures/ui/talent_icons.png" name="blade_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit12_strk" value="3" />
+            <talentvalue level="9" name="blade_outfit12_strk" value="15" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit12_strk Strike">
+            <powerup life="-1">
+                <affecter attribute="strength" level="%blade_outfit12_strk" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit13_dr" value="1" />
+            <talentvalue level="9" name="blade_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%blade_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance for melee." icon="1" icon_texture="textures/ui/talent_icons.png" name="blade_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit21_crit" value="0.02" />
+            <talentvalue level="9" name="blade_outfit21_crit" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit21_crit:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%blade_outfit21_crit" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="blade_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit22_pct" value="1.04" />
+            <talentvalue level="9" name="blade_outfit22_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%blade_outfit22_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%blade_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit23_dr" value="1" />
+            <talentvalue level="9" name="blade_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%blade_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Weapon Damage" description="Increases the amount of $DMG done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="blade_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="blade_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%blade_outfit31_pct:s Weapon $DMG">
+            <powerup class="weapon_powerup" life="-1">
+                <powerup life="-1">
+                    <affecter affect_type="scale" attribute="atk_damage" level="%blade_outfit31_pct" />
+                </powerup>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Regen" description="Increases $HP regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit32_hlth" value="0.004" />
+            <talentvalue level="9" name="blade_outfit32_hlth" value="0.012" />
+            <talentvalue level="1" name="blade_outfit32_show" value="0.4" />
+            <talentvalue level="9" name="blade_outfit32_show" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%blade_outfit32_show:f% Max $HP Regenerated Per Second">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit32_hlth" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit33_dr" value="1" />
+            <talentvalue level="9" name="blade_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%blade_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases Melee $DMG." icon="1" icon_texture="textures/ui/talent_icons.png" name="blade_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit41_pct" value="1.04" />
+            <talentvalue level="9" name="blade_outfit41_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%blade_outfit41_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter attribute="atk_dmg" level="%blade_outfit41_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Per Kill" description="Regain $HP per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="blade_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit42_hlth" value="6" />
+            <talentvalue level="9" name="blade_outfit42_hlth" value="30" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit42_hlth $HP per kill">
+            <powerup life="-1">
+                <affecter attribute="health_per_kill" level="%blade_outfit42_hlth" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="blade_outfit43_dr" value="1" />
+            <talentvalue level="9" name="blade_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%blade_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%blade_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

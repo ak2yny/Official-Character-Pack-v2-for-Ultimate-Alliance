@@ -1,0 +1,469 @@
+<talents>
+    <talent descname="Energy Immunity" description="Bishop absorbs all $DMG_ENERGY, a percentage into $EP." name="bishop_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_energy" level="0" />
+            </powerup>
+            <powerup life="-1">
+                <affecter attribute="def_absorb_energy" level="%bish_shield_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bio Beam" description="Channels energy through his hands to blast foes with a beam of focused power." descshort="Beam" icon="0" icon_texture="textures/ui/bishop_icons1.png" name="bishop_beam" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="bish_beam_req" value="1" />
+            <talentvalue level="5" name="bish_beam_req" value="13" />
+            <talentvalue level="6" name="bish_beam_req" value="16" />
+            <talentvalue level="9" name="bish_beam_req" value="25" />
+            <talentvalue level="10" name="bish_beam_req" value="28" />
+            <talentvalue level="14" name="bish_beam_req" value="52" />
+            <talentvalue level="15" name="bish_beam_req" value="72" />
+            <talentvalue level="1" name="bish_beam_dmg" value="17 19" />
+            <talentvalue level="5" name="bish_beam_dmg" value="58 64" />
+            <talentvalue level="6" name="bish_beam_dmg" value="78 86" />
+            <talentvalue level="9" name="bish_beam_dmg" value="109 120" />
+            <talentvalue level="10" name="bish_beam_dmg" value="139 154" />
+            <talentvalue level="14" name="bish_beam_dmg" value="221 244" />
+            <talentvalue level="15" name="bish_beam_dmg" value="319 353" />
+            <talentvalue level="1" name="bish_beam_pwr" value="7" />
+            <talentvalue level="5" name="bish_beam_pwr" value="15" />
+            <talentvalue level="6" name="bish_beam_pwr" value="17" />
+            <talentvalue level="9" name="bish_beam_pwr" value="22" />
+            <talentvalue level="10" name="bish_beam_pwr" value="24" />
+            <talentvalue level="14" name="bish_beam_pwr" value="37" />
+            <talentvalue level="15" name="bish_beam_pwr" value="47" />
+        </talentvalues>
+        <level description="%bish_beam_dmg $DMG_ENERGY\n%bish_beam_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_beam_req" />
+        </level>
+    </talent>
+    <talent descname="Plasma Blaster" description="Uses guns to fire projectiles that stun enemies.  $PT_HOLD" descshort="Projectile" icon="4" icon_texture="textures/ui/bishop_icons1.png" name="bishop_stun" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="bish_stun_req" value="2" />
+            <talentvalue level="5" name="bish_stun_req" value="14" />
+            <talentvalue level="6" name="bish_stun_req" value="17" />
+            <talentvalue level="9" name="bish_stun_req" value="26" />
+            <talentvalue level="10" name="bish_stun_req" value="29" />
+            <talentvalue level="14" name="bish_stun_req" value="53" />
+            <talentvalue level="15" name="bish_stun_req" value="73" />
+            <talentvalue level="1" name="bish_stun_dmg" value="10 12" />
+            <talentvalue level="5" name="bish_stun_dmg" value="17 19" />
+            <talentvalue level="6" name="bish_stun_dmg" value="24 26" />
+            <talentvalue level="9" name="bish_stun_dmg" value="34 38" />
+            <talentvalue level="10" name="bish_stun_dmg" value="48 53" />
+            <talentvalue level="14" name="bish_stun_dmg" value="75 83" />
+            <talentvalue level="15" name="bish_stun_dmg" value="109 120" />
+            <talentvalue level="1" name="bish_stun_life" value="1" />
+            <talentvalue level="15" name="bish_stun_life" value="4" />
+            <talentvalue level="1" name="bish_stun_pwr" value="8" />
+            <talentvalue level="5" name="bish_stun_pwr" value="18" />
+            <talentvalue level="6" name="bish_stun_pwr" value="20" />
+            <talentvalue level="9" name="bish_stun_pwr" value="26" />
+            <talentvalue level="10" name="bish_stun_pwr" value="28" />
+            <talentvalue level="14" name="bish_stun_pwr" value="43" />
+            <talentvalue level="15" name="bish_stun_pwr" value="54" />
+        </talentvalues>
+        <level description="%bish_stun_dmg $DMG_ENERGY\n%bish_stun_life Second(s) stun\n%bish_stun_pwr $EP/s">
+            <tier cost="1" count="5" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_stun_req" />
+        </level>
+    </talent>
+    <talent descname="Sapping Strike" description="Melee attack that reduces damage victims do by 50% for a time." descshort="Melee" icon="3" icon_texture="textures/ui/bishop_icons1.png" name="bishop_drain" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="bish_drain_req" value="5" />
+            <talentvalue level="5" name="bish_drain_req" value="14" />
+            <talentvalue level="6" name="bish_drain_req" value="17" />
+            <talentvalue level="9" name="bish_drain_req" value="26" />
+            <talentvalue level="10" name="bish_drain_req" value="29" />
+            <talentvalue level="14" name="bish_drain_req" value="53" />
+            <talentvalue level="15" name="bish_drain_req" value="73" />
+            <talentvalue level="1" name="bish_drain_dmg" value="31 34" />
+            <talentvalue level="5" name="bish_drain_dmg" value="61 68" />
+            <talentvalue level="6" name="bish_drain_dmg" value="82 90" />
+            <talentvalue level="9" name="bish_drain_dmg" value="112 124" />
+            <talentvalue level="10" name="bish_drain_dmg" value="143 157" />
+            <talentvalue level="14" name="bish_drain_dmg" value="224 248" />
+            <talentvalue level="15" name="bish_drain_dmg" value="322 356" />
+            <talentvalue level="1" name="bish_drain_life" value="2" />
+            <talentvalue level="15" name="bish_drain_life" value="6" />
+            <talentvalue level="1" name="bish_drain_pwr" value="10" />
+            <talentvalue level="5" name="bish_drain_pwr" value="16" />
+            <talentvalue level="6" name="bish_drain_pwr" value="17" />
+            <talentvalue level="9" name="bish_drain_pwr" value="23" />
+            <talentvalue level="10" name="bish_drain_pwr" value="25" />
+            <talentvalue level="14" name="bish_drain_pwr" value="38" />
+            <talentvalue level="15" name="bish_drain_pwr" value="47" />
+        </talentvalues>
+        <level description="%bish_drain_dmg $DMG_ENERGY\n%bish_drain_life Seconds\n%bish_drain_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_drain_req" />
+        </level>
+    </talent>
+    <talent descname="Full Auto" description="Fires both guns in a spray of bullets causing $DMG_RADIATION, occasionally knocking victims down.  $PT_TAP" descshort="Projectile" icon="5" icon_texture="textures/ui/bishop_icons1.png" name="bishop_double" power="power6">
+        <talentvalues>
+            <talentvalue level="1" name="bish_double_req" value="10" />
+            <talentvalue level="3" name="bish_double_req" value="13" />
+            <talentvalue level="4" name="bish_double_req" value="16" />
+            <talentvalue level="7" name="bish_double_req" value="25" />
+            <talentvalue level="8" name="bish_double_req" value="28" />
+            <talentvalue level="12" name="bish_double_req" value="52" />
+            <talentvalue level="13" name="bish_double_req" value="72" />
+            <talentvalue level="1" name="bish_double_radmg" value="13 15" />
+            <talentvalue level="3" name="bish_double_radmg" value="17 19" />
+            <talentvalue level="4" name="bish_double_radmg" value="24 26" />
+            <talentvalue level="7" name="bish_double_radmg" value="34 38" />
+            <talentvalue level="8" name="bish_double_radmg" value="44 49" />
+            <talentvalue level="12" name="bish_double_radmg" value="75 83" />
+            <talentvalue level="13" name="bish_double_radmg" value="109 120" />
+            <talentvalue level="1" name="bish_double_pwr" value="8" />
+            <talentvalue level="3" name="bish_double_pwr" value="9" />
+            <talentvalue level="4" name="bish_double_pwr" value="10" />
+            <talentvalue level="7" name="bish_double_pwr" value="13" />
+            <talentvalue level="8" name="bish_double_pwr" value="14" />
+            <talentvalue level="12" name="bish_double_pwr" value="22" />
+            <talentvalue level="13" name="bish_double_pwr" value="28" />
+        </talentvalues>
+        <level description="%bish_double_radmg $DMG_RADIATION\n%bish_double_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_double_req" />
+        </level>
+    </talent>
+    <talent descname="Rapid Fire" description="Fires both guns in broad sweeps with explosive rounds, doing massive $KB to enemies caught in the blast." descshort="Projectile" icon="6" icon_texture="textures/ui/bishop_icons1.png" name="bishop_shootout" power="power7">
+        <talentvalues>
+            <talentvalue level="1" name="bish_shootout_req" value="14" />
+            <talentvalue level="2" name="bish_shootout_req" value="17" />
+            <talentvalue level="5" name="bish_shootout_req" value="26" />
+            <talentvalue level="6" name="bish_shootout_req" value="29" />
+            <talentvalue level="10" name="bish_shootout_req" value="53" />
+            <talentvalue level="11" name="bish_shootout_req" value="73" />
+            <talentvalue level="1" name="bish_shootout_dmg" value="11 13" />
+            <talentvalue level="2" name="bish_shootout_dmg" value="15 17" />
+            <talentvalue level="5" name="bish_shootout_dmg" value="31 34" />
+            <talentvalue level="6" name="bish_shootout_dmg" value="34 38" />
+            <talentvalue level="10" name="bish_shootout_dmg" value="54 60" />
+            <talentvalue level="11" name="bish_shootout_dmg" value="65 71" />
+            <talentvalue level="1" name="bish_shootout_kb" value="190" />
+            <talentvalue level="11" name="bish_shootout_kb" value="305" />
+            <talentvalue level="1" name="bish_shootout_pwr" value="16" />
+            <talentvalue level="2" name="bish_shootout_pwr" value="17" />
+            <talentvalue level="5" name="bish_shootout_pwr" value="23" />
+            <talentvalue level="6" name="bish_shootout_pwr" value="25" />
+            <talentvalue level="10" name="bish_shootout_pwr" value="38" />
+            <talentvalue level="11" name="bish_shootout_pwr" value="47" />
+        </talentvalues>
+        <level description="%bish_shootout_dmg $DMG_ENERGY\n%bish_shootout_kb $KB\n%bish_shootout_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_shootout_req" />
+        </level>
+    </talent>
+    <talent descname="Bombardment" description="Fires several incendiary rounds into the air. They then crash down, smashing into enemies and surrounding objects." descshort="Radial" icon="11" icon_texture="textures/ui/bishop_icons1.png" name="bishop_peacemaker" power="power10">
+        <talentvalues>
+            <talentvalue level="1" name="bish_pm_req" value="17" />
+            <talentvalue level="4" name="bish_pm_req" value="26" />
+            <talentvalue level="5" name="bish_pm_req" value="29" />
+            <talentvalue level="9" name="bish_pm_req" value="53" />
+            <talentvalue level="10" name="bish_pm_req" value="73" />
+            <talentvalue level="1" name="bish_pm_dmg" value="48 53" />
+            <talentvalue level="4" name="bish_pm_dmg" value="65 71" />
+            <talentvalue level="5" name="bish_pm_dmg" value="82 90" />
+            <talentvalue level="9" name="bish_pm_dmg" value="132 147" />
+            <talentvalue level="10" name="bish_pm_dmg" value="190 210" />
+            <talentvalue level="1" name="bish_pm_sdmg" value="20 23" />
+            <talentvalue level="10" name="bish_pm_sdmg" value="95 105" />
+            <talentvalue level="1" name="bish_pm_pwr" value="19" />
+            <talentvalue level="4" name="bish_pm_pwr" value="25" />
+            <talentvalue level="5" name="bish_pm_pwr" value="29" />
+            <talentvalue level="9" name="bish_pm_pwr" value="42" />
+            <talentvalue level="10" name="bish_pm_pwr" value="52" />
+        </talentvalues>
+        <level description="%bish_pm_dmg $DMG_FIRE\n+%bish_pm_sdmg burning $DMG_FIRE\n%bish_pm_pwr $EP">
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_pm_req" />
+        </level>
+    </talent>
+    <talent descname="Bio Blast" description="Radial energy attack that damages enemies and has a chance of doing a Deadly Strike (33% instant $HP loss)." descshort="Radial" icon="2" icon_texture="textures/ui/bishop_icons1.png" name="bishop_pulse" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="bish_pulse_req" value="20" />
+            <talentvalue level="3" name="bish_pulse_req" value="26" />
+            <talentvalue level="4" name="bish_pulse_req" value="29" />
+            <talentvalue level="8" name="bish_pulse_req" value="53" />
+            <talentvalue level="9" name="bish_pulse_req" value="73" />
+            <talentvalue level="1" name="bish_pulse_dmg" value="34 38" />
+            <talentvalue level="3" name="bish_pulse_dmg" value="44 49" />
+            <talentvalue level="4" name="bish_pulse_dmg" value="54 60" />
+            <talentvalue level="8" name="bish_pulse_dmg" value="88 98" />
+            <talentvalue level="9" name="bish_pulse_dmg" value="126 139" />
+            <talentvalue level="1" name="bish_pulse_chance" value="0.05" />
+            <talentvalue level="9" name="bish_pulse_chance" value="0.19" />
+            <talentvalue level="1" name="bish_pulse_rng" value="120" />
+            <talentvalue level="9" name="bish_pulse_rng" value="144" />
+            <talentvalue level="1" name="bish_pulse_pwr" value="25" />
+            <talentvalue level="3" name="bish_pulse_pwr" value="30" />
+            <talentvalue level="4" name="bish_pulse_pwr" value="33" />
+            <talentvalue level="8" name="bish_pulse_pwr" value="49" />
+            <talentvalue level="9" name="bish_pulse_pwr" value="61" />
+        </talentvalues>
+        <level description="%bish_pulse_dmg $DMG_ENERGY\n%bish_pulse_chance:p Deadly Strike chance\n%bish_pulse_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_pulse_req" />
+            <powerup chance="%bish_pulse_chance" class="atk_instant_pct" life="-1" percent="0.33">
+                <affecter attribute="powerup_scope" scope_node="bish_power3" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Absorption" description="Absorbs a percentage of $DMG_ENERGY as $HP gain and boosts Physical Resistance." descshort="Boost" icon="1" icon_texture="textures/ui/bishop_icons1.png" name="bishop_shield" power="power2" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="bish_shield_req" value="2" />
+            <talentvalue level="5" name="bish_shield_req" value="14" />
+            <talentvalue level="6" name="bish_shield_req" value="17" />
+            <talentvalue level="9" name="bish_shield_req" value="26" />
+            <talentvalue level="10" name="bish_shield_req" value="29" />
+            <talentvalue level="14" name="bish_shield_req" value="53" />
+            <talentvalue level="15" name="bish_shield_req" value="73" />
+            <talentvalue level="1" name="bish_shield_life" value="20" />
+            <talentvalue level="5" name="bish_shield_life" value="40" />
+            <talentvalue level="6" name="bish_shield_life" value="50" />
+            <talentvalue level="9" name="bish_shield_life" value="65" />
+            <talentvalue level="10" name="bish_shield_life" value="80" />
+            <talentvalue level="14" name="bish_shield_life" value="120" />
+            <talentvalue level="15" name="bish_shield_life" value="180" />
+            <talentvalue level="1" name="bish_shield_pct" value="0.45" />
+            <talentvalue level="15" name="bish_shield_pct" value="0.5" />
+            <talentvalue level="1" name="bish_shield_dr" value="1" />
+            <talentvalue level="15" name="bish_shield_dr" value="15" />
+            <talentvalue level="1" name="bish_shield_dam" value="0.1" />
+            <talentvalue level="15" name="bish_shield_dam" value="0.2" />
+            <talentvalue level="1" name="bish_shield_pwr" value="32" />
+            <talentvalue level="5" name="bish_shield_pwr" value="64" />
+            <talentvalue level="6" name="bish_shield_pwr" value="68" />
+            <talentvalue level="9" name="bish_shield_pwr" value="92" />
+            <talentvalue level="10" name="bish_shield_pwr" value="100" />
+            <talentvalue level="14" name="bish_shield_pwr" value="152" />
+            <talentvalue level="15" name="bish_shield_pwr" value="188" />
+        </talentvalues>
+        <level description="%bish_shield_pct:p $DMG_ENERGY as $HP gain\n+%bish_shield_dr $DR, +%bish_shield_dam:p $RES_PHYSICAL\n%bish_shield_life Seconds\n%bish_shield_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_shield_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Fury" description="Gives bonus $DMG_ENERGY to melee attacks for self and allies for a time." descshort="Boost" icon="7" icon_texture="textures/ui/bishop_icons1.png" name="bishop_fury" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="bish_fury_req" value="14" />
+            <talentvalue level="2" name="bish_fury_req" value="17" />
+            <talentvalue level="5" name="bish_fury_req" value="26" />
+            <talentvalue level="6" name="bish_fury_req" value="29" />
+            <talentvalue level="10" name="bish_fury_req" value="53" />
+            <talentvalue level="11" name="bish_fury_req" value="73" />
+            <talentvalue level="1" name="bish_fury_dmg" value="0.05" />
+            <talentvalue level="11" name="bish_fury_dmg" value="0.47" />
+            <talentvalue level="1" name="bish_fury_life" value="40" />
+            <talentvalue level="2" name="bish_fury_life" value="50" />
+            <talentvalue level="5" name="bish_fury_life" value="65" />
+            <talentvalue level="6" name="bish_fury_life" value="80" />
+            <talentvalue level="10" name="bish_fury_life" value="120" />
+            <talentvalue level="11" name="bish_fury_life" value="180" />
+            <talentvalue level="1" name="bish_fury_pwr" value="64" />
+            <talentvalue level="2" name="bish_fury_pwr" value="68" />
+            <talentvalue level="5" name="bish_fury_pwr" value="92" />
+            <talentvalue level="6" name="bish_fury_pwr" value="100" />
+            <talentvalue level="10" name="bish_fury_pwr" value="152" />
+            <talentvalue level="11" name="bish_fury_pwr" value="188" />
+        </talentvalues>
+        <level description="+%bish_fury_dmg:p Melee $DMG as $DMG_ENERGY\n%bish_fury_life Seconds\n%bish_fury_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" />
+            <tier cost="1" count="1" />
+            <tier cost="1" count="4" difficulty="hard" />
+            <tier cost="1" count="1" difficulty="hard" />
+            <require cat="level" level="%bish_fury_req" />
+        </level>
+    </talent>
+    <talent descname="Superconductor" description="Sucks in surrounding energy releasing it in a violent explosion of power, nullifying enemy powers. A percentage of damage inflicted will come back as $EP for active party members." descshort="Xtreme" icon="8" icon_texture="textures/ui/bishop_icons1.png" name="bishop_xtreme" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="bish_xtreme_req" value="10" />
+            <talentvalue level="8" name="bish_xtreme_req" value="45" />
+            <talentvalue level="1" name="bish_xtreme_nrgy" value="0.3" />
+            <talentvalue level="8" name="bish_xtreme_nrgy" value="0.7" />
+            <talentvalue level="1" name="bish_xtreme_dmg" value="68 75" />
+            <talentvalue level="8" name="bish_xtreme_dmg" value="221 244" />
+            <talentvalue level="1" name="bish_xtreme_life" value="2" />
+            <talentvalue level="8" name="bish_xtreme_life" value="6" />
+        </talentvalues>
+        <level description="%bish_xtreme_dmg $DMG_ENERGY\n%bish_xtreme_life Seconds nullify\n%bish_xtreme_nrgy:p $DMG as $EP gain">
+            <tier cost="1" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%bish_xtreme_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Combat" description="Adds $DMG_ENERGY to all melee attacks." icon="10" icon_texture="textures/ui/bishop_icons1.png" name="bish_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit11_pct" value="0.04" />
+            <talentvalue level="9" name="bish_outfit11_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit11_pct:p Added $DMG_ENERGY">
+            <powerup class="add_attack" damagepercent="%bish_outfit11_pct" damagetype="dmg_energy" life="-1">
+                <special_fx effect="char/bishop/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Reflection" description="Absorbs and reflects some $DMG back to melee attackers." icon="1" icon_texture="textures/ui/bishop_icons1.png" name="bish_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit12_pct" value="0.25" />
+            <talentvalue level="9" name="bish_outfit12_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%bish_outfit12_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%bish_outfit12_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="bish_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit13_dr" value="1" />
+            <talentvalue level="9" name="bish_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%bish_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Hardened Warrior" description="Boosts body, focus, and strike stats." icon="11" icon_texture="textures/ui/bishop_icons1.png" name="bish_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit21_pct" value="2" />
+            <talentvalue level="9" name="bish_outfit21_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit21_pct Body\n+%bish_outfit21_pct Focus\n+%bish_outfit21_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%bish_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Point Blank" description="Adds $DMG to all powers that hit enemies within 6 feet of Bishop." icon="9" icon_texture="textures/ui/bishop_icons1.png" name="bish_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit22_pct" value="0.04" />
+            <talentvalue level="9" name="bish_outfit22_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit22_pct:p Added $DMG">
+            <powerup class="add_attack" damagepercent="%bish_outfit22_pct" life="-1" max_distance="72">
+                <affecter attribute="powerup_scope" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="bish_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit23_dr" value="1" />
+            <talentvalue level="9" name="bish_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%bish_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="bish_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="bish_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%bish_outfit31_pct:s Momentum Rate">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%bish_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="bish_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit32_pct" value="0.02" />
+            <talentvalue level="9" name="bish_outfit32_pct" value="0.1" />
+            <talentvalue level="1" name="bish_outfit32_shw" value="2" />
+            <talentvalue level="9" name="bish_outfit32_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit32_shw Resist all">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%bish_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="bish_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit33_dr" value="1" />
+            <talentvalue level="9" name="bish_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%bish_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="bish_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit41_pct" value="1.04" />
+            <talentvalue level="9" name="bish_outfit41_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%bish_outfit41_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%bish_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Trip" description="Increases the $DMG of powers." icon="6" icon_texture="textures/ui/bishop_icons1.png" name="bish_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit42_pct" value="1.03" />
+            <talentvalue level="9" name="bish_outfit42_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%bish_outfit42_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%bish_outfit42_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="bish_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="bish_outfit43_dr" value="1" />
+            <talentvalue level="9" name="bish_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%bish_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%bish_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

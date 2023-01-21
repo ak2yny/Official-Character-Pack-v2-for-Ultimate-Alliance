@@ -1,0 +1,336 @@
+<talents>
+    <talent descname="Fear" description="Has a chance to cause foes to flee in terror." descshort="Radial" icon="0" icon_texture="textures/ui/frost_icons.png" name="frost_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p1_req" value="1" />
+            <talentvalue level="5" name="frost_p1_req" value="13" />
+            <talentvalue level="6" name="frost_p1_req" value="16" />
+            <talentvalue level="9" name="frost_p1_req" value="25" />
+            <talentvalue level="10" name="frost_p1_req" value="28" />
+            <talentvalue level="14" name="frost_p1_req" value="52" />
+            <talentvalue level="15" name="frost_p1_req" value="72" />
+            <talentvalue level="1" name="frost_p1_pwr" value="5" />
+            <talentvalue level="5" name="frost_p1_pwr" value="11" />
+            <talentvalue level="6" name="frost_p1_pwr" value="13" />
+            <talentvalue level="9" name="frost_p1_pwr" value="17" />
+            <talentvalue level="10" name="frost_p1_pwr" value="18" />
+            <talentvalue level="14" name="frost_p1_pwr" value="29" />
+            <talentvalue level="15" name="frost_p1_pwr" value="36" />
+            <talentvalue level="1" name="frost_p1_chance" value="0.51" />
+            <talentvalue level="15" name="frost_p1_chance" value="1.0" />
+        </talentvalues>
+        <level description="%frost_p1_pwr $EP\n%frost_p1_chance:p Chance">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Pain" description="Deals $DMG_MENTAL and pops enemies into the air." descshort="Radial" icon="1" icon_texture="textures/ui/frost_icons.png" name="frost_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p2_req" value="5" />
+            <talentvalue level="5" name="frost_p2_req" value="14" />
+            <talentvalue level="6" name="frost_p2_req" value="17" />
+            <talentvalue level="9" name="frost_p2_req" value="26" />
+            <talentvalue level="10" name="frost_p2_req" value="29" />
+            <talentvalue level="14" name="frost_p2_req" value="53" />
+            <talentvalue level="15" name="frost_p2_req" value="73" />
+            <talentvalue level="1" name="frost_p2_dmg" value="13 15" />
+            <talentvalue level="5" name="frost_p2_dmg" value="34 38" />
+            <talentvalue level="6" name="frost_p2_dmg" value="44 49" />
+            <talentvalue level="9" name="frost_p2_dmg" value="65 71" />
+            <talentvalue level="10" name="frost_p2_dmg" value="82 90" />
+            <talentvalue level="14" name="frost_p2_dmg" value="129 143" />
+            <talentvalue level="15" name="frost_p2_dmg" value="190 210" />
+            <talentvalue level="1" name="frost_p2_pwr" value="10" />
+            <talentvalue level="5" name="frost_p2_pwr" value="22" />
+            <talentvalue level="6" name="frost_p2_pwr" value="26" />
+            <talentvalue level="9" name="frost_p2_pwr" value="34" />
+            <talentvalue level="10" name="frost_p2_pwr" value="36" />
+            <talentvalue level="14" name="frost_p2_pwr" value="58" />
+            <talentvalue level="15" name="frost_p2_pwr" value="72" />
+        </talentvalues>
+        <level description="%frost_p2_dmg $DMG_MENTAL\n%frost_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Stun" description="Stuns enemies for a time." descshort="Radial" icon="2" icon_texture="textures/ui/frost_icons.png" name="frost_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p3_req" value="10" />
+            <talentvalue level="3" name="frost_p3_req" value="13" />
+            <talentvalue level="4" name="frost_p3_req" value="16" />
+            <talentvalue level="7" name="frost_p3_req" value="25" />
+            <talentvalue level="8" name="frost_p3_req" value="28" />
+            <talentvalue level="12" name="frost_p3_req" value="52" />
+            <talentvalue level="13" name="frost_p3_req" value="72" />
+            <talentvalue level="1" name="frost_p3_pwr" value="12" />
+            <talentvalue level="3" name="frost_p3_pwr" value="16" />
+            <talentvalue level="4" name="frost_p3_pwr" value="19" />
+            <talentvalue level="7" name="frost_p3_pwr" value="23" />
+            <talentvalue level="8" name="frost_p3_pwr" value="27" />
+            <talentvalue level="12" name="frost_p3_pwr" value="37" />
+            <talentvalue level="13" name="frost_p3_pwr" value="54" />
+            <talentvalue level="1" name="frost_p3_life" value="3" />
+            <talentvalue level="2" name="frost_p3_life" value="4" />
+            <talentvalue level="4" name="frost_p3_life" value="5" />
+            <talentvalue level="6" name="frost_p3_life" value="6" />
+            <talentvalue level="8" name="frost_p3_life" value="7" />
+            <talentvalue level="10" name="frost_p3_life" value="8" />
+            <talentvalue level="12" name="frost_p3_life" value="9" />
+            <talentvalue level="13" name="frost_p3_life" value="10" />
+        </talentvalues>
+        <level description="%frost_p3_pwr $EP\n%frost_p3_life Second Stun">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Command" description="Has a chance to convert enemy onto your side for a time." descshort="Radial" icon="3" icon_texture="textures/ui/frost_icons.png" name="frost_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p4_req" value="17" />
+            <talentvalue level="4" name="frost_p4_req" value="26" />
+            <talentvalue level="5" name="frost_p4_req" value="29" />
+            <talentvalue level="9" name="frost_p4_req" value="53" />
+            <talentvalue level="10" name="frost_p4_req" value="73" />
+            <talentvalue level="1" name="frost_p4_pwr" value="13" />
+            <talentvalue level="4" name="frost_p4_pwr" value="17" />
+            <talentvalue level="5" name="frost_p4_pwr" value="18" />
+            <talentvalue level="9" name="frost_p4_pwr" value="29" />
+            <talentvalue level="10" name="frost_p4_pwr" value="36" />
+            <talentvalue level="1" name="frost_p4_chance" value="0.685" />
+            <talentvalue level="10" name="frost_p4_chance" value="1.0" />
+        </talentvalues>
+        <level description="%frost_p4_pwr $EP\n%frost_p4_chance:p Chance">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Camouflage" description="Masks presence from enemies, decreasing $DMG taken. Will also mask allies that come into range." descshort="Buff" icon="4" icon_texture="textures/ui/frost_icons.png" name="frost_p5" power="power5" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p5_req" value="2" />
+            <talentvalue level="5" name="frost_p5_req" value="14" />
+            <talentvalue level="6" name="frost_p5_req" value="17" />
+            <talentvalue level="9" name="frost_p5_req" value="26" />
+            <talentvalue level="10" name="frost_p5_req" value="29" />
+            <talentvalue level="14" name="frost_p5_req" value="53" />
+            <talentvalue level="15" name="frost_p5_req" value="73" />
+            <talentvalue level="1" name="frost_p5_pwr" value="32" />
+            <talentvalue level="5" name="frost_p5_pwr" value="72" />
+            <talentvalue level="6" name="frost_p5_pwr" value="80" />
+            <talentvalue level="9" name="frost_p5_pwr" value="108" />
+            <talentvalue level="10" name="frost_p5_pwr" value="116" />
+            <talentvalue level="14" name="frost_p5_pwr" value="180" />
+            <talentvalue level="15" name="frost_p5_pwr" value="224" />
+            <talentvalue level="1" name="frost_p5_lif" value="20" />
+            <talentvalue level="5" name="frost_p5_lif" value="40" />
+            <talentvalue level="6" name="frost_p5_lif" value="50" />
+            <talentvalue level="9" name="frost_p5_lif" value="65" />
+            <talentvalue level="10" name="frost_p5_lif" value="80" />
+            <talentvalue level="14" name="frost_p5_lif" value="120" />
+            <talentvalue level="15" name="frost_p5_lif" value="180" />
+            <talentvalue level="1" name="frost_p5_def" value="0.94" />
+            <talentvalue level="15" name="frost_p5_def" value="0.85" />
+        </talentvalues>
+        <level description="%frost_p5_lif Seconds\n%frost_p5_def:s $DMG taken\n%frost_p5_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Diamond Form" description="Changes into a solid Diamond, nullifying all mutant powers for the duration. Raises Defense and Strike significantly. Block to deactivate." descshort="Boost" icon="5" icon_texture="textures/ui/frost_icons.png" name="frost_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p6_req" value="14" />
+            <talentvalue level="2" name="frost_p6_req" value="17" />
+            <talentvalue level="5" name="frost_p6_req" value="26" />
+            <talentvalue level="6" name="frost_p6_req" value="29" />
+            <talentvalue level="10" name="frost_p6_req" value="53" />
+            <talentvalue level="11" name="frost_p6_req" value="73" />
+            <talentvalue level="1" name="frost_p6_pwr" value="72" />
+            <talentvalue level="2" name="frost_p6_pwr" value="80" />
+            <talentvalue level="5" name="frost_p6_pwr" value="108" />
+            <talentvalue level="6" name="frost_p6_pwr" value="116" />
+            <talentvalue level="10" name="frost_p6_pwr" value="180" />
+            <talentvalue level="11" name="frost_p6_pwr" value="224" />
+            <talentvalue level="1" name="frost_p6_str" value="1.5" />
+            <talentvalue level="11" name="frost_p6_str" value="2.5" />
+            <talentvalue level="1" name="frost_p6_def" value="1" />
+            <talentvalue level="11" name="frost_p6_def" value="11" />
+        </talentvalues>
+        <level description="+%frost_p6_def $DR\n%frost_p6_str:s Striking\n%frost_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%frost_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Psychic Bedlam" description="Xtreme radial attack dealing mental damage with a chance to convert enemies." descshort="Xtreme" icon="6" icon_texture="textures/ui/frost_icons.png" name="frost_p7" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="frost_p7_req" value="10" />
+            <talentvalue level="8" name="frost_p7_req" value="45" />
+            <talentvalue level="1" name="frost_p7_chance" value="0.2" />
+            <talentvalue level="8" name="frost_p7_chance" value="0.55" />
+            <talentvalue level="1" name="frost_p7_dmg" value="51 56" />
+            <talentvalue level="8" name="frost_p7_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%frost_p7_dmg $DMG_MENTAL\n%frost_p7_chance:p Chance">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%frost_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Leadership" description="Increase $DMG and $XP for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="frost_outfit11" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit11_com" value="1.25" />
+            <talentvalue level="9" name="frost_outfit11_com" value="2.25" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit11_com:s Combo $DMG\n%frost_outfit11_com:s Combo $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="combo_damage" level="%frost_outfit11_com" />
+                <affecter affect_type="scale" attribute="combo_xp" level="%frost_outfit11_com" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="frost_outfit12" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit12_pct" value="1.05" />
+            <talentvalue level="9" name="frost_outfit12_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit12_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%frost_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit13" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit13_dr" value="1" />
+            <talentvalue level="9" name="frost_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%frost_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="frost_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit21_pct" value="1.01" />
+            <talentvalue level="9" name="frost_outfit21_pct" value="1.05" />
+            <talentvalue level="1" name="frost_outfit21_shw" value="1" />
+            <talentvalue level="9" name="frost_outfit21_shw" value="5" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit21_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%frost_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="frost_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit22_pct" value="1.04" />
+            <talentvalue level="9" name="frost_outfit22_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit22_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%frost_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit23_dr" value="1" />
+            <talentvalue level="9" name="frost_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%frost_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Momentum" description="Increases momentum gained." icon="10" icon_texture="textures/ui/talent_icons.png" name="frost_outfit31" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit31_pct" value="1.04" />
+            <talentvalue level="9" name="frost_outfit31_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit31_pct:s Momentum">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%frost_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Rock Hard" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="frost_outfit32" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit32_pct" value="0.25" />
+            <talentvalue level="9" name="frost_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit32_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%frost_outfit32_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit33" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit33_dr" value="1" />
+            <talentvalue level="9" name="frost_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%frost_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="frost_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit41_pct" value="0.02" />
+            <talentvalue level="9" name="frost_outfit41_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit41_pct:p Resist All">
+            <powerup life="-1">
+                <affecter affect_type="sum" attribute="resist_all" level="%frost_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="frost_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit42_pct" value="1.04" />
+            <talentvalue level="9" name="frost_outfit42_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%frost_outfit42_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%frost_outfit42_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="frost_outfit43_dr" value="1" />
+            <talentvalue level="9" name="frost_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%frost_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%frost_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

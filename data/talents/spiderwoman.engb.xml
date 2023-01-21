@@ -1,0 +1,388 @@
+<talents>
+    <talent descname="Venom Blast" description="Shoots a bioelectric beam that will pierce multiple enemies if fully charged.  $PT_CHARGE" descshort="Beam" icon="0" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p1_req" value="1" />
+            <talentvalue level="5" name="spdwm_p1_req" value="13" />
+            <talentvalue level="6" name="spdwm_p1_req" value="16" />
+            <talentvalue level="9" name="spdwm_p1_req" value="25" />
+            <talentvalue level="10" name="spdwm_p1_req" value="28" />
+            <talentvalue level="14" name="spdwm_p1_req" value="52" />
+            <talentvalue level="15" name="spdwm_p1_req" value="72" />
+            <talentvalue level="1" name="spdwm_p1_pwr" value="7" />
+            <talentvalue level="5" name="spdwm_p1_pwr" value="15" />
+            <talentvalue level="6" name="spdwm_p1_pwr" value="17" />
+            <talentvalue level="9" name="spdwm_p1_pwr" value="22" />
+            <talentvalue level="10" name="spdwm_p1_pwr" value="24" />
+            <talentvalue level="14" name="spdwm_p1_pwr" value="37" />
+            <talentvalue level="15" name="spdwm_p1_pwr" value="47" />
+            <talentvalue level="1" name="spdwm_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="spdwm_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="spdwm_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="spdwm_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="spdwm_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="spdwm_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="spdwm_p1_dmg" value="319 353" value_charged_scale="2.0" />
+        </talentvalues>
+        <level description="%spdwm_p1_dmg $DMG_ENERGY\n%spdwm_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Ensnare" description="Throws out several incapacitating traps that for a time will deliver $DMG_ENERGY to the enemies caught in them." descshort="Special" icon="1" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p2_req" value="5" />
+            <talentvalue level="5" name="spdwm_p2_req" value="14" />
+            <talentvalue level="6" name="spdwm_p2_req" value="17" />
+            <talentvalue level="9" name="spdwm_p2_req" value="26" />
+            <talentvalue level="10" name="spdwm_p2_req" value="29" />
+            <talentvalue level="14" name="spdwm_p2_req" value="53" />
+            <talentvalue level="15" name="spdwm_p2_req" value="73" />
+            <talentvalue level="1" name="spdwm_p2_pwr" value="11" />
+            <talentvalue level="5" name="spdwm_p2_pwr" value="18" />
+            <talentvalue level="6" name="spdwm_p2_pwr" value="19" />
+            <talentvalue level="9" name="spdwm_p2_pwr" value="25" />
+            <talentvalue level="10" name="spdwm_p2_pwr" value="28" />
+            <talentvalue level="14" name="spdwm_p2_pwr" value="42" />
+            <talentvalue level="15" name="spdwm_p2_pwr" value="52" />
+            <talentvalue level="1" name="spdwm_p2_dmg" value="17 19" />
+            <talentvalue level="5" name="spdwm_p2_dmg" value="34 38" />
+            <talentvalue level="6" name="spdwm_p2_dmg" value="48 53" />
+            <talentvalue level="9" name="spdwm_p2_dmg" value="65 71" />
+            <talentvalue level="10" name="spdwm_p2_dmg" value="85 94" />
+            <talentvalue level="14" name="spdwm_p2_dmg" value="132 147" />
+            <talentvalue level="15" name="spdwm_p2_dmg" value="190 210" />
+            <talentvalue level="1" name="spdwm_p2_lif" value="7" />
+            <talentvalue level="5" name="spdwm_p2_lif" value="11" />
+            <talentvalue level="6" name="spdwm_p2_lif" value="13" />
+            <talentvalue level="9" name="spdwm_p2_lif" value="16" />
+            <talentvalue level="10" name="spdwm_p2_lif" value="18" />
+            <talentvalue level="14" name="spdwm_p2_lif" value="23" />
+            <talentvalue level="15" name="spdwm_p2_lif" value="25" />
+            <talentvalue level="1" name="spdwm_p2_balls" value="1" />
+            <talentvalue level="5" name="spdwm_p2_balls" value="2" />
+            <talentvalue level="6" name="spdwm_p2_balls" value="2" />
+            <talentvalue level="9" name="spdwm_p2_balls" value="4" />
+            <talentvalue level="10" name="spdwm_p2_balls" value="5" />
+            <talentvalue level="14" name="spdwm_p2_balls" value="5" />
+            <talentvalue level="15" name="spdwm_p2_balls" value="6" />
+        </talentvalues>
+        <level description="%spdwm_p2_dmg $DMG_ENERGY/s\n%spdwm_p2_balls Trap(s)\n%spdwm_p2_lif Seconds\n%spdwm_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Spider's Blood" description="Throws a bouncing projectile that will cause $DMG_ENERGY and have a 50% chance to stun." descshort="Projectile" icon="2" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p3_req" value="10" />
+            <talentvalue level="3" name="spdwm_p3_req" value="13" />
+            <talentvalue level="4" name="spdwm_p3_req" value="16" />
+            <talentvalue level="5" name="spdwm_p3_req" value="25" />
+            <talentvalue level="8" name="spdwm_p3_req" value="28" />
+            <talentvalue level="12" name="spdwm_p3_req" value="52" />
+            <talentvalue level="13" name="spdwm_p3_req" value="72" />
+            <talentvalue level="1" name="spdwm_p3_pwr" value="14" />
+            <talentvalue level="3" name="spdwm_p3_pwr" value="17" />
+            <talentvalue level="4" name="spdwm_p3_pwr" value="19" />
+            <talentvalue level="7" name="spdwm_p3_pwr" value="24" />
+            <talentvalue level="8" name="spdwm_p3_pwr" value="26" />
+            <talentvalue level="12" name="spdwm_p3_pwr" value="41" />
+            <talentvalue level="13" name="spdwm_p3_pwr" value="52" />
+            <talentvalue level="1" name="spdwm_p3_dmg" value="27 30" />
+            <talentvalue level="3" name="spdwm_p3_dmg" value="34 38" />
+            <talentvalue level="4" name="spdwm_p3_dmg" value="44 49" />
+            <talentvalue level="7" name="spdwm_p3_dmg" value="65 71" />
+            <talentvalue level="8" name="spdwm_p3_dmg" value="82 90" />
+            <talentvalue level="12" name="spdwm_p3_dmg" value="129 143" />
+            <talentvalue level="13" name="spdwm_p3_dmg" value="190 210" />
+            <talentvalue level="1" name="spdwm_p3_lif" value="10" />
+            <talentvalue level="3" name="spdwm_p3_lif" value="13" />
+            <talentvalue level="4" name="spdwm_p3_lif" value="15" />
+            <talentvalue level="7" name="spdwm_p3_lif" value="19" />
+            <talentvalue level="8" name="spdwm_p3_lif" value="21" />
+            <talentvalue level="12" name="spdwm_p3_lif" value="25" />
+            <talentvalue level="13" name="spdwm_p3_lif" value="30" />
+        </talentvalues>
+        <level description="%spdwm_p3_dmg $DMG_ENERGY\n%spdwm_p3_lif Seconds\n%spdwm_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Bio-Electric Surge" description="Releases a powerful radial blast causing $DMG_ENERGY and $KB." descshort="Radial" icon="3" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p4_req" value="17" />
+            <talentvalue level="4" name="spdwm_p4_req" value="26" />
+            <talentvalue level="5" name="spdwm_p4_req" value="29" />
+            <talentvalue level="9" name="spdwm_p4_req" value="53" />
+            <talentvalue level="10" name="spdwm_p4_req" value="73" />
+            <talentvalue level="1" name="spdwm_p4_pwr" value="22" />
+            <talentvalue level="4" name="spdwm_p4_pwr" value="30" />
+            <talentvalue level="5" name="spdwm_p4_pwr" value="33" />
+            <talentvalue level="9" name="spdwm_p4_pwr" value="49" />
+            <talentvalue level="10" name="spdwm_p4_pwr" value="61" />
+            <talentvalue level="1" name="spdwm_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="spdwm_p4_dmg" value="44 49" />
+            <talentvalue level="5" name="spdwm_p4_dmg" value="54 60" />
+            <talentvalue level="9" name="spdwm_p4_dmg" value="88 98" />
+            <talentvalue level="10" name="spdwm_p4_dmg" value="126 139" />
+        </talentvalues>
+        <level description="%spdwm_p4_dmg $DMG_ENERGY\n%spdwm_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Spider's Bite" description="Spawns several energy balls from both her feet and hands causing $DMG_ENERGY." descshort="Special" icon="4" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p5_req" value="20" />
+            <talentvalue level="3" name="spdwm_p5_req" value="26" />
+            <talentvalue level="4" name="spdwm_p5_req" value="29" />
+            <talentvalue level="8" name="spdwm_p5_req" value="53" />
+            <talentvalue level="9" name="spdwm_p5_req" value="73" />
+            <talentvalue level="1" name="spdwm_p5_pwr" value="21" />
+            <talentvalue level="3" name="spdwm_p5_pwr" value="25" />
+            <talentvalue level="4" name="spdwm_p5_pwr" value="28" />
+            <talentvalue level="8" name="spdwm_p5_pwr" value="42" />
+            <talentvalue level="9" name="spdwm_p5_pwr" value="52" />
+            <talentvalue level="1" name="spdwm_p5_dmg" value="54 60" />
+            <talentvalue level="3" name="spdwm_p5_dmg" value="65 71" />
+            <talentvalue level="4" name="spdwm_p5_dmg" value="85 94" />
+            <talentvalue level="8" name="spdwm_p5_dmg" value="132 147" />
+            <talentvalue level="9" name="spdwm_p5_dmg" value="190 210" />
+        </talentvalues>
+        <level description="%spdwm_p5_dmg $DMG_ENERGY ball\n%spdwm_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="1" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Attract" description="Uses a pheromone that will cause enemies near Spider-Woman to focus on her.  Also gives her a 50% ongoing resistance to the last damage type that hit her." descshort="Boost" icon="5" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p6_req" value="2" />
+            <talentvalue level="5" name="spdwm_p6_req" value="14" />
+            <talentvalue level="6" name="spdwm_p6_req" value="17" />
+            <talentvalue level="9" name="spdwm_p6_req" value="26" />
+            <talentvalue level="10" name="spdwm_p6_req" value="29" />
+            <talentvalue level="14" name="spdwm_p6_req" value="53" />
+            <talentvalue level="15" name="spdwm_p6_req" value="73" />
+            <talentvalue level="1" name="spdwm_p6_pwr" value="32" />
+            <talentvalue level="5" name="spdwm_p6_pwr" value="64" />
+            <talentvalue level="6" name="spdwm_p6_pwr" value="68" />
+            <talentvalue level="9" name="spdwm_p6_pwr" value="92" />
+            <talentvalue level="10" name="spdwm_p6_pwr" value="100" />
+            <talentvalue level="14" name="spdwm_p6_pwr" value="152" />
+            <talentvalue level="15" name="spdwm_p6_pwr" value="188" />
+            <talentvalue level="1" name="spdwm_p6_lif" value="20" />
+            <talentvalue level="5" name="spdwm_p6_lif" value="40" />
+            <talentvalue level="6" name="spdwm_p6_lif" value="50" />
+            <talentvalue level="9" name="spdwm_p6_lif" value="65" />
+            <talentvalue level="10" name="spdwm_p6_lif" value="80" />
+            <talentvalue level="14" name="spdwm_p6_lif" value="120" />
+            <talentvalue level="15" name="spdwm_p6_lif" value="180" />
+        </talentvalues>
+        <level description="%spdwm_p6_lif Seconds\n%spdwm_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Metabolic Aura" description="Surrounds Spider-Woman with a healing aura that will also heal allies that come into range." descshort="Boost" icon="6" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p7_req" value="14" />
+            <talentvalue level="2" name="spdwm_p7_req" value="17" />
+            <talentvalue level="5" name="spdwm_p7_req" value="26" />
+            <talentvalue level="6" name="spdwm_p7_req" value="29" />
+            <talentvalue level="10" name="spdwm_p7_req" value="53" />
+            <talentvalue level="11" name="spdwm_p7_req" value="73" />
+            <talentvalue level="1" name="spdwm_p7_pwr" value="64" />
+            <talentvalue level="2" name="spdwm_p7_pwr" value="68" />
+            <talentvalue level="5" name="spdwm_p7_pwr" value="92" />
+            <talentvalue level="6" name="spdwm_p7_pwr" value="100" />
+            <talentvalue level="10" name="spdwm_p7_pwr" value="152" />
+            <talentvalue level="11" name="spdwm_p7_pwr" value="188" />
+            <talentvalue level="1" name="spdwm_p7_lif" value="30" />
+            <talentvalue level="2" name="spdwm_p7_lif" value="35" />
+            <talentvalue level="5" name="spdwm_p7_lif" value="44" />
+            <talentvalue level="6" name="spdwm_p7_lif" value="50" />
+            <talentvalue level="10" name="spdwm_p7_lif" value="62" />
+            <talentvalue level="11" name="spdwm_p7_lif" value="70" />
+            <talentvalue level="1" name="spdwm_p7_hlth" value="0.02" />
+        </talentvalues>
+        <level description="%spdwm_p7_hlth:p $HP/s\n%spdwm_p7_lif Seconds\n%spdwm_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spdwm_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Bio Web" description="Weaves a bio-electric web that will break causing heavy $DMG_ENERGY and has a chance to turn enemies into allies for a time.  Once time expires, the enemies affected will instantly be killed." descshort="Xtreme" icon="7" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_power8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_p8_req" value="10" />
+            <talentvalue level="8" name="spdwm_p8_req" value="45" />
+            <talentvalue level="1" name="spdwm_p8_dmg" value="68 75" />
+            <talentvalue level="8" name="spdwm_p8_dmg" value="221 244" />
+            <talentvalue level="1" name="spdwm_p8_kb" value="245" />
+            <talentvalue level="1" name="spdwm_p8_lif" value="10" />
+            <talentvalue level="1" name="spdwm_p8_chan" value="0.2" />
+            <talentvalue level="8" name="spdwm_p8_chan" value="0.34" />
+        </talentvalues>
+        <level description="%spdwm_p8_dmg $DMG_ENERGY\n%spdwm_p8_chan:p Chance\n%spdwm_p8_lif Seconds">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%spdwm_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit11_pct" value="0.02" />
+            <talentvalue level="9" name="spdwm_outfit11_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%spdwm_outfit11_pct:p All Resistances">
+            <powerup life="-1">
+                <affecter affect_type="sum" attribute="resist_all" level="%spdwm_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bio Energy Mastery" description="Increases $DMG_ENERGY done by all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit12_pct" value="1.03" />
+            <talentvalue level="9" name="spdwm_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit12_pct:s $DMG_ENERGY">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%spdwm_outfit12_pct" scope_damage="dmg_energy" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit13_dr" value="1" />
+            <talentvalue level="9" name="spdwm_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spdwm_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spdwm_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit21_pct" value="1.04" />
+            <talentvalue level="9" name="spdwm_outfit21_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit21_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%spdwm_outfit21_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge Melee Attacks" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit22_pct" value="0.03" />
+            <talentvalue level="9" name="spdwm_outfit22_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit22_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%spdwm_outfit22_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit23_dr" value="1" />
+            <talentvalue level="9" name="spdwm_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spdwm_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spdwm_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Rank Increase" description="Adds a chance to temporarily increase the skill level of all powers by 1 when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit31_chan" value="0.05" />
+            <talentvalue level="9" name="spdwm_outfit31_chan" value="0.25" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit31_chan:p Chance">
+            <powerup chance="%spdwm_outfit31_chan" class="skillincrease" level="1" life="-1" />
+        </level>
+    </talent>
+    <talent descname="Max $HP" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit32_scl" value="1.05" />
+            <talentvalue level="9" name="spdwm_outfit32_scl" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit32_scl:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%spdwm_outfit32_scl" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit33_dr" value="1" />
+            <talentvalue level="9" name="spdwm_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spdwm_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spdwm_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bio Energy Mastery" description="Increases $DMG_ENERGY done by all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit41_pct" value="1.03" />
+            <talentvalue level="9" name="spdwm_outfit41_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit41_pct:s $DMG_ENERGY">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%spdwm_outfit41_pct" scope_damage="dmg_energy" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost $XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit42_pct" value="1.02" />
+            <talentvalue level="9" name="spdwm_outfit42_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%spdwm_outfit42_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%spdwm_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spdwm_outfit43_dr" value="1" />
+            <talentvalue level="9" name="spdwm_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spdwm_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spdwm_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

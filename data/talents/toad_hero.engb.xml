@@ -1,0 +1,421 @@
+<talents>
+    <talent descname="Hammer Kick" description="A quick kick. Lowers enemy's defenses." descshort="Melee" icon="0" icon_texture="textures/ui/toad_icons.png" name="toa_donkey_kick" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="toa_donkey_kick_req" value="1" />
+            <talentvalue level="5" name="toa_donkey_kick_req" value="13" />
+            <talentvalue level="6" name="toa_donkey_kick_req" value="16" />
+            <talentvalue level="9" name="toa_donkey_kick_req" value="25" />
+            <talentvalue level="10" name="toa_donkey_kick_req" value="28" />
+            <talentvalue level="14" name="toa_donkey_kick_req" value="52" />
+            <talentvalue level="15" name="toa_donkey_kick_req" value="72" />
+            <talentvalue level="1" name="toa_donkey_kick_pwr" value="7" />
+            <talentvalue level="5" name="toa_donkey_kick_pwr" value="14" />
+            <talentvalue level="6" name="toa_donkey_kick_pwr" value="16" />
+            <talentvalue level="9" name="toa_donkey_kick_pwr" value="21" />
+            <talentvalue level="10" name="toa_donkey_kick_pwr" value="23" />
+            <talentvalue level="14" name="toa_donkey_kick_pwr" value="34" />
+            <talentvalue level="15" name="toa_donkey_kick_pwr" value="43" />
+            <talentvalue level="1" name="toa_donkey_kick_dmg" value="17 19" />
+            <talentvalue level="5" name="toa_donkey_kick_dmg" value="58 64" />
+            <talentvalue level="6" name="toa_donkey_kick_dmg" value="78 86" />
+            <talentvalue level="9" name="toa_donkey_kick_dmg" value="109 120" />
+            <talentvalue level="10" name="toa_donkey_kick_dmg" value="139 154" />
+            <talentvalue level="14" name="toa_donkey_kick_dmg" value="221 244" />
+            <talentvalue level="15" name="toa_donkey_kick_dmg" value="319 353" />
+            <talentvalue level="1" name="toa_donkey_kick_def" value="1.05" />
+            <talentvalue level="15" name="toa_donkey_kick_def" value="1.19" />
+            <talentvalue level="1" name="toa_donkey_kick_lif" value="3" />
+            <talentvalue level="15" name="toa_donkey_kick_lif" value="7" />
+        </talentvalues>
+        <level description="%toa_donkey_kick_dmg $DMG_PHYSICAL\n%toa_donkey_kick_def:s $DMG to enemy hit for %toa_donkey_kick_lif seconds\n%toa_donkey_kick_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_donkey_kick_req" />
+        </level>
+    </talent>
+    <talent descname="Tongue Strike" description="A quick tongue stab. Stuns victims." descshort="Melee" icon="4" icon_texture="textures/ui/toad_icons.png" name="toa_tongue_str" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="toa_tongue_str_req" value="5" />
+            <talentvalue level="5" name="toa_tongue_str_req" value="14" />
+            <talentvalue level="6" name="toa_tongue_str_req" value="17" />
+            <talentvalue level="9" name="toa_tongue_str_req" value="26" />
+            <talentvalue level="10" name="toa_tongue_str_req" value="29" />
+            <talentvalue level="14" name="toa_tongue_str_req" value="53" />
+            <talentvalue level="15" name="toa_tongue_str_req" value="73" />
+            <talentvalue level="1" name="toa_tongue_str_pwr" value="11" />
+            <talentvalue level="5" name="toa_tongue_str_pwr" value="17" />
+            <talentvalue level="6" name="toa_tongue_str_pwr" value="19" />
+            <talentvalue level="9" name="toa_tongue_str_pwr" value="24" />
+            <talentvalue level="10" name="toa_tongue_str_pwr" value="25" />
+            <talentvalue level="14" name="toa_tongue_str_pwr" value="39" />
+            <talentvalue level="15" name="toa_tongue_str_pwr" value="47" />
+            <talentvalue level="1" name="toa_tongue_str_dmg" value="17 19" />
+            <talentvalue level="5" name="toa_tongue_str_dmg" value="34 38" />
+            <talentvalue level="6" name="toa_tongue_str_dmg" value="48 53" />
+            <talentvalue level="9" name="toa_tongue_str_dmg" value="65 71" />
+            <talentvalue level="10" name="toa_tongue_str_dmg" value="85 94" />
+            <talentvalue level="14" name="toa_tongue_str_dmg" value="132 147" />
+            <talentvalue level="15" name="toa_tongue_str_dmg" value="190 210" />
+            <talentvalue level="1" name="toa_tongue_str_lif" value="1" />
+            <talentvalue level="15" name="toa_tongue_str_lif" value="4" />
+        </talentvalues>
+        <level description="%toa_tongue_str_dmg $DMG_PHYSICAL\n%toa_tongue_str_lif Second(s) stun\n%toa_tongue_str_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_tongue_str_req" />
+        </level>
+    </talent>
+    <talent descname="Mucous Spit" description="An explosive bile projectile, leaving a sticky substance on the ground that traps enemies for a time." descshort="Trap" icon="2" icon_texture="textures/ui/toad_icons.png" name="toa_sticky_spit" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="toa_sticky_spit_req" value="10" />
+            <talentvalue level="3" name="toa_sticky_spit_req" value="13" />
+            <talentvalue level="4" name="toa_sticky_spit_req" value="16" />
+            <talentvalue level="7" name="toa_sticky_spit_req" value="25" />
+            <talentvalue level="8" name="toa_sticky_spit_req" value="28" />
+            <talentvalue level="12" name="toa_sticky_spit_req" value="52" />
+            <talentvalue level="13" name="toa_sticky_spit_req" value="72" />
+            <talentvalue level="1" name="toa_sticky_spit_pwr" value="17" />
+            <talentvalue level="3" name="toa_sticky_spit_pwr" value="18" />
+            <talentvalue level="4" name="toa_sticky_spit_pwr" value="21" />
+            <talentvalue level="7" name="toa_sticky_spit_pwr" value="27" />
+            <talentvalue level="8" name="toa_sticky_spit_pwr" value="30" />
+            <talentvalue level="12" name="toa_sticky_spit_pwr" value="44" />
+            <talentvalue level="13" name="toa_sticky_spit_pwr" value="56" />
+            <talentvalue level="1" name="toa_sticky_spit_dmg" value="17 19" />
+            <talentvalue level="3" name="toa_sticky_spit_dmg" value="20 23" />
+            <talentvalue level="4" name="toa_sticky_spit_dmg" value="31 34" />
+            <talentvalue level="7" name="toa_sticky_spit_dmg" value="41 45" />
+            <talentvalue level="8" name="toa_sticky_spit_dmg" value="54 60" />
+            <talentvalue level="12" name="toa_sticky_spit_dmg" value="85 94" />
+            <talentvalue level="13" name="toa_sticky_spit_dmg" value="126 139" />
+            <talentvalue level="1" name="toa_sticky_spit_lif" value="4" />
+            <talentvalue level="13" name="toa_sticky_spit_lif" value="8" />
+        </talentvalues>
+        <level description="%toa_sticky_spit_dmg $DMG_PHYSICAL\n%toa_sticky_spit_lif Seconds\n%toa_sticky_spit_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_sticky_spit_req" />
+        </level>
+    </talent>
+    <talent descname="Tongue Lash" description="Wider tongue attack. Strikes several enemies and causes trip." descshort="Melee" icon="5" icon_texture="textures/ui/toad_icons.png" name="toa_tongue_lash" power="power6">
+        <talentvalues>
+            <talentvalue level="1" name="toa_tongue_lash_req" value="14" />
+            <talentvalue level="2" name="toa_tongue_lash_req" value="17" />
+            <talentvalue level="5" name="toa_tongue_lash_req" value="26" />
+            <talentvalue level="6" name="toa_tongue_lash_req" value="29" />
+            <talentvalue level="10" name="toa_tongue_lash_req" value="53" />
+            <talentvalue level="11" name="toa_tongue_lash_req" value="73" />
+            <talentvalue level="1" name="toa_tongue_lash_pwr" value="18" />
+            <talentvalue level="2" name="toa_tongue_lash_pwr" value="21" />
+            <talentvalue level="5" name="toa_tongue_lash_pwr" value="27" />
+            <talentvalue level="6" name="toa_tongue_lash_pwr" value="30" />
+            <talentvalue level="10" name="toa_tongue_lash_pwr" value="44" />
+            <talentvalue level="11" name="toa_tongue_lash_pwr" value="56" />
+            <talentvalue level="1" name="toa_tongue_lash_dmg" value="20 23" />
+            <talentvalue level="2" name="toa_tongue_lash_dmg" value="31 34" />
+            <talentvalue level="5" name="toa_tongue_lash_dmg" value="41 45" />
+            <talentvalue level="6" name="toa_tongue_lash_dmg" value="54 60" />
+            <talentvalue level="10" name="toa_tongue_lash_dmg" value="85 94" />
+            <talentvalue level="11" name="toa_tongue_lash_dmg" value="126 139" />
+        </talentvalues>
+        <level description="%toa_tongue_lash_dmg $DMG_PHYSICAL\n%toa_tongue_lash_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_tongue_lash_req" />
+        </level>
+    </talent>
+    <talent descname="Noxious Spew" description="A poisonous bile projectile doing $DMG_RADIATION on impact, and splitting off to hit more than one enemy." descshort="Projectile" icon="3" icon_texture="textures/ui/toad_icons.png" name="toa_toxic_spit" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="toa_toxic_spit_req" value="17" />
+            <talentvalue level="4" name="toa_toxic_spit_req" value="26" />
+            <talentvalue level="5" name="toa_toxic_spit_req" value="29" />
+            <talentvalue level="9" name="toa_toxic_spit_req" value="53" />
+            <talentvalue level="10" name="toa_toxic_spit_req" value="73" />
+            <talentvalue level="1" name="toa_toxic_spit_pwr" value="22" />
+            <talentvalue level="4" name="toa_toxic_spit_pwr" value="29" />
+            <talentvalue level="5" name="toa_toxic_spit_pwr" value="30" />
+            <talentvalue level="9" name="toa_toxic_spit_pwr" value="46" />
+            <talentvalue level="10" name="toa_toxic_spit_pwr" value="56" />
+            <talentvalue level="1" name="toa_toxic_spit_dm1" value="31 34" />
+            <talentvalue level="4" name="toa_toxic_spit_dm1" value="44 49" />
+            <talentvalue level="5" name="toa_toxic_spit_dm1" value="54 60" />
+            <talentvalue level="9" name="toa_toxic_spit_dm1" value="88 98" />
+            <talentvalue level="10" name="toa_toxic_spit_dm1" value="126 139" />
+            <talentvalue level="1" name="toa_toxic_spit_dm2" value="20 23" />
+            <talentvalue level="10" name="toa_toxic_spit_dm2" value="95 105" />
+        </talentvalues>
+        <level description="%toa_toxic_spit_dm1 $DMG_RADIATION\n%toa_toxic_spit_dm2 splitting $DMG_PHYSICAL\n%toa_toxic_spit_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_toxic_spit_req" />
+        </level>
+    </talent>
+    <talent descname="Leap Attack" description="Leaps at targets, doing radial damage on impact." descshort="Radial" icon="6" icon_texture="textures/ui/toad_icons.png" name="toa_leap_attack" power="power7">
+        <talentvalues>
+            <talentvalue level="1" name="toa_leap_attack_req" value="20" />
+            <talentvalue level="3" name="toa_leap_attack_req" value="26" />
+            <talentvalue level="4" name="toa_leap_attack_req" value="29" />
+            <talentvalue level="8" name="toa_leap_attack_req" value="53" />
+            <talentvalue level="9" name="toa_leap_attack_req" value="73" />
+            <talentvalue level="1" name="toa_leap_attack_pwr" value="20" />
+            <talentvalue level="3" name="toa_leap_attack_pwr" value="24" />
+            <talentvalue level="4" name="toa_leap_attack_pwr" value="25" />
+            <talentvalue level="8" name="toa_leap_attack_pwr" value="39" />
+            <talentvalue level="9" name="toa_leap_attack_pwr" value="47" />
+            <talentvalue level="1" name="toa_leap_attack_dmg" value="51 56" />
+            <talentvalue level="3" name="toa_leap_attack_dmg" value="65 71" />
+            <talentvalue level="4" name="toa_leap_attack_dmg" value="82 90" />
+            <talentvalue level="8" name="toa_leap_attack_dmg" value="132 147" />
+            <talentvalue level="9" name="toa_leap_attack_dmg" value="190 210" />
+            <talentvalue level="1" name="toa_leap_attack_kb" value="40" />
+            <talentvalue level="9" name="toa_leap_attack_kb" value="620" />
+        </talentvalues>
+        <level description="%toa_leap_attack_dmg $DMG_PHYSICAL\n%toa_leap_attack_kb $KB\n%toa_leap_attack_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_leap_attack_req" />
+        </level>
+    </talent>
+    <talent descname="Secretion" description="Secretes pheromones that enhance party speed and increase Melee $DMG." descshort="Boost" icon="1" icon_texture="textures/ui/toad_icons.png" name="toa_secretion" power="power2" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="toa_secretion_req" value="2" />
+            <talentvalue level="5" name="toa_secretion_req" value="14" />
+            <talentvalue level="6" name="toa_secretion_req" value="17" />
+            <talentvalue level="9" name="toa_secretion_req" value="26" />
+            <talentvalue level="10" name="toa_secretion_req" value="29" />
+            <talentvalue level="14" name="toa_secretion_req" value="53" />
+            <talentvalue level="15" name="toa_secretion_req" value="73" />
+            <talentvalue level="1" name="toa_secretion_pwr" value="32" />
+            <talentvalue level="5" name="toa_secretion_pwr" value="60" />
+            <talentvalue level="6" name="toa_secretion_pwr" value="68" />
+            <talentvalue level="9" name="toa_secretion_pwr" value="88" />
+            <talentvalue level="10" name="toa_secretion_pwr" value="92" />
+            <talentvalue level="14" name="toa_secretion_pwr" value="140" />
+            <talentvalue level="15" name="toa_secretion_pwr" value="172" />
+            <talentvalue level="1" name="toa_secretion_spd" value="1.1" />
+            <talentvalue level="15" name="toa_secretion_spd" value="1.52" />
+            <talentvalue level="1" name="toa_secretion_dmg" value="1.3" />
+            <talentvalue level="15" name="toa_secretion_dmg" value="1.86" />
+            <talentvalue level="15" name="toa_secretion_pct" value="1.15" />
+            <talentvalue level="1" name="toa_secretion_lif" value="20" />
+            <talentvalue level="5" name="toa_secretion_lif" value="40" />
+            <talentvalue level="6" name="toa_secretion_lif" value="50" />
+            <talentvalue level="9" name="toa_secretion_lif" value="65" />
+            <talentvalue level="10" name="toa_secretion_lif" value="80" />
+            <talentvalue level="14" name="toa_secretion_lif" value="120" />
+            <talentvalue level="15" name="toa_secretion_lif" value="180" />
+        </talentvalues>
+        <level description="%toa_secretion_spd:s Speed\n%toa_secretion_dmg:s Melee $DMG\n%toa_secretion_lif Seconds\n%toa_secretion_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_secretion_req" />
+        </level>
+    </talent>
+    <talent descname="Taunt" description="Insults enemies, causing them to attack and reducing their stats." descshort="Debuff" icon="7" icon_texture="textures/ui/toad_icons.png" name="toa_taunt" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="toa_taunt_req" value="14" />
+            <talentvalue level="2" name="toa_taunt_req" value="17" />
+            <talentvalue level="5" name="toa_taunt_req" value="26" />
+            <talentvalue level="6" name="toa_taunt_req" value="29" />
+            <talentvalue level="10" name="toa_taunt_req" value="53" />
+            <talentvalue level="11" name="toa_taunt_req" value="73" />
+            <talentvalue level="1" name="toa_taunt_pwr" value="60" />
+            <talentvalue level="2" name="toa_taunt_pwr" value="68" />
+            <talentvalue level="5" name="toa_taunt_pwr" value="88" />
+            <talentvalue level="6" name="toa_taunt_pwr" value="92" />
+            <talentvalue level="10" name="toa_taunt_pwr" value="140" />
+            <talentvalue level="11" name="toa_taunt_pwr" value="172" />
+            <talentvalue level="1" name="toa_taunt_def" value="1.1" />
+            <talentvalue level="11" name="toa_taunt_def" value="1.52" />
+            <talentvalue level="1" name="toa_taunt_dmg" value="0.9" />
+            <talentvalue level="11" name="toa_taunt_dmg" value="0.48" />
+            <talentvalue level="1" name="toa_taunt_lif" value="40" />
+            <talentvalue level="2" name="toa_taunt_lif" value="50" />
+            <talentvalue level="5" name="toa_taunt_lif" value="65" />
+            <talentvalue level="6" name="toa_taunt_lif" value="80" />
+            <talentvalue level="10" name="toa_taunt_lif" value="120" />
+            <talentvalue level="11" name="toa_taunt_lif" value="180" />
+        </talentvalues>
+        <level description="%toa_taunt_def:s $DMG to taunted enemies\n%toa_taunt_dmg:s $DMG by taunted enemies\n%toa_taunt_lif Seconds\n%toa_taunt_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%toa_taunt_req" />
+        </level>
+    </talent>
+    <talent descname="Tongue Whip" description="360 degree tongue strike. Increases Shield Credit dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/toad_icons.png" name="toa_extreme" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="toa_extreme_req" value="10" />
+            <talentvalue level="8" name="toa_extreme_req" value="45" />
+            <talentvalue level="1" name="toa_extreme_dmg" value="51 56" />
+            <talentvalue level="8" name="toa_extreme_dmg" value="204 225" />
+            <talentvalue level="1" name="toa_extreme_mon" value="4" />
+            <talentvalue level="8" name="toa_extreme_mon" value="6" />
+        </talentvalues>
+        <level description="%toa_extreme_dmg $DMG_PHYSICAL\n%toa_extreme_mon:s Shield Credit from enemies">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%toa_extreme_req" />
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="toa_outfit21" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit21_pct" value="0.02" />
+            <talentvalue level="9" name="toa_outfit21_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit21_pct:p Resist All">
+            <powerup life="-1">
+                <affecter affect_type="sum" attribute="resist_all" level="%toa_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge Melee Attacks" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="toa_outfit22" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit22_pct" value="0.03" />
+            <talentvalue level="9" name="toa_outfit22_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="%toa_outfit22_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%toa_outfit22_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit23" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit23_dr" value="1" />
+            <talentvalue level="9" name="toa_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%toa_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Radioactive Combat" description="Adds $DMG_RADIATION to melee attacks." icon="3" icon_texture="textures/ui/toad_icons.png" name="toa_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit11_pct" value="0.04" />
+            <talentvalue level="9" name="toa_outfit11_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit11_pct:p $DMG_RADIATION">
+            <powerup class="add_attack" damagepercent="%toa_outfit11_pct" damagetype="dmg_radiation" life="-1">
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Radioactive Mastery" description="Increases $DMG_RADIATION done by all attacks." icon="10" icon_texture="textures/ui/toad_icons.png" name="toa_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit12_pct" value="1.03" />
+            <talentvalue level="9" name="toa_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%toa_outfit12_pct:s $DMG_RADIATION">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%toa_outfit12_pct" scope_damage="dmg_radiation" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit13_dr" value="1" />
+            <talentvalue level="9" name="toa_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%toa_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Radioactive Combat" description="Adds $DMG_RADIATION to melee attacks." icon="3" icon_texture="textures/ui/toad_icons.png" name="toa_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit31_pct" value="0.04" />
+            <talentvalue level="9" name="toa_outfit31_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit31_pct:p $DMG_RADIATION">
+            <powerup class="add_attack" damagepercent="%toa_outfit31_pct" damagetype="dmg_radiation" life="-1">
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max $HP" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="toa_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit32_scl" value="1.05" />
+            <talentvalue level="9" name="toa_outfit32_scl" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%toa_outfit32_scl:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%toa_outfit32_scl" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit33_dr" value="1" />
+            <talentvalue level="9" name="toa_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%toa_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max $EP" description="Increase max $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="toa_outfit41" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit41_ep" value="1.04" />
+            <talentvalue level="9" name="toa_outfit41_ep" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%toa_outfit41_ep:s Max $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%toa_outfit41_ep" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Plunder" description="Increases Shield Credit drops." icon="9" icon_texture="textures/ui/toad_icons.png" name="toa_outfit42" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit42_mon" value="1.2" />
+            <talentvalue level="9" name="toa_outfit42_mon" value="2.0" />
+        </talentvalues>
+        <level count="9" description="%toa_outfit42_mon:s Shield Credits">
+            <powerup time="-1">
+                <affecter affect_type="scale" attribute="extra_money" level="%toa_outfit42_mon" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increase $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit43" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="toa_outfit43_dr" value="1" />
+            <talentvalue level="9" name="toa_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%toa_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%toa_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

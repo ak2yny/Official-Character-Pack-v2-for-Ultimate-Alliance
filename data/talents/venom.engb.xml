@@ -1,0 +1,415 @@
+<talents>
+    <talent hidden="true" name="venom_tied" type="ability">
+        <talentvalues>
+            <talentvalue level="1" name="venom_tied_dmg" value="15 17" />
+            <talentvalue level="1" name="venom_tied_dur" value="3" />
+        </talentvalues>
+        <level count="1" />
+    </talent>
+    <talent descname="Tendril Zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/venom_icons.png" name="venom_zip" type="ability">
+        <talentvalues>
+            <talentvalue level="1" name="venom_zip_req" value="1" />
+            <talentvalue level="1" name="venom_zip_dmg" value="13 15" />
+            <talentvalue level="1" name="venom_zip_kb" value="245" />
+        </talentvalues>
+        <level count="1" />
+    </talent>
+    <talent descname="Venom Thrust" description="Venom throws out his tendrils, stretching them to a great distance, damaging all enemies in the way." descshort="Projectile" icon="0" icon_texture="textures/ui/venom_icons.png" name="venom_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p1_req" value="1" />
+            <talentvalue level="5" name="venom_p1_req" value="13" />
+            <talentvalue level="6" name="venom_p1_req" value="16" />
+            <talentvalue level="9" name="venom_p1_req" value="25" />
+            <talentvalue level="10" name="venom_p1_req" value="28" />
+            <talentvalue level="14" name="venom_p1_req" value="52" />
+            <talentvalue level="15" name="venom_p1_req" value="72" />
+            <talentvalue level="1" name="venom_p1_dmg" value="17 19" />
+            <talentvalue level="5" name="venom_p1_dmg" value="58 64" />
+            <talentvalue level="6" name="venom_p1_dmg" value="78 86" />
+            <talentvalue level="9" name="venom_p1_dmg" value="109 120" />
+            <talentvalue level="10" name="venom_p1_dmg" value="139 154" />
+            <talentvalue level="14" name="venom_p1_dmg" value="221 244" />
+            <talentvalue level="15" name="venom_p1_dmg" value="319 353" />
+            <talentvalue level="1" name="venom_p1_pwr" value="7" />
+            <talentvalue level="5" name="venom_p1_pwr" value="14" />
+            <talentvalue level="6" name="venom_p1_pwr" value="16" />
+            <talentvalue level="9" name="venom_p1_pwr" value="21" />
+            <talentvalue level="10" name="venom_p1_pwr" value="23" />
+            <talentvalue level="14" name="venom_p1_pwr" value="34" />
+            <talentvalue level="15" name="venom_p1_pwr" value="43" />
+        </talentvalues>
+        <level description="%venom_p1_dmg $DMG_PHYSICAL\n%venom_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Symbiote Flail" description="Venom's tendrils flail out in a radial attack damaging all surrounding enemies." descshort="Radial" icon="1" icon_texture="textures/ui/venom_icons.png" name="venom_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p2_req" value="5" />
+            <talentvalue level="4" name="venom_p2_req" value="14" />
+            <talentvalue level="5" name="venom_p2_req" value="17" />
+            <talentvalue level="8" name="venom_p2_req" value="26" />
+            <talentvalue level="9" name="venom_p2_req" value="29" />
+            <talentvalue level="13" name="venom_p2_req" value="53" />
+            <talentvalue level="15" name="venom_p2_req" value="73" />
+            <talentvalue level="1" name="venom_p2_dmg" value="11 13" value_charged_scale="2.0" />
+            <talentvalue level="4" name="venom_p2_dmg" value="34 38" value_charged_scale="2.0" />
+            <talentvalue level="5" name="venom_p2_dmg" value="48 53" value_charged_scale="2.0" />
+            <talentvalue level="8" name="venom_p2_dmg" value="65 71" value_charged_scale="2.0" />
+            <talentvalue level="9" name="venom_p2_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="13" name="venom_p2_dmg" value="132 147" value_charged_scale="2.0" />
+            <talentvalue level="15" name="venom_p2_dmg" value="190 210" value_charged_scale="2.0" />
+            <talentvalue level="1" name="venom_p2_dmg2" value="1" />
+            <talentvalue level="4" name="venom_p2_dmg2" value="4" />
+            <talentvalue level="5" name="venom_p2_dmg2" value="5" />
+            <talentvalue level="8" name="venom_p2_dmg2" value="8" />
+            <talentvalue level="9" name="venom_p2_dmg2" value="9" />
+            <talentvalue level="13" name="venom_p2_dmg2" value="13" />
+            <talentvalue level="15" name="venom_p2_dmg2" value="15" />
+            <talentvalue level="1" name="venom_p2_num" value="2" />
+            <talentvalue level="9" name="venom_p2_num" value="6" />
+            <talentvalue level="1" name="venom_p2_kb" value="190" />
+            <talentvalue level="15" name="venom_p2_kb" value="305" />
+            <talentvalue level="1" name="venom_p2_pwr" value="13" />
+            <talentvalue level="4" name="venom_p2_pwr" value="20" />
+            <talentvalue level="5" name="venom_p2_pwr" value="22" />
+            <talentvalue level="8" name="venom_p2_pwr" value="29" />
+            <talentvalue level="9" name="venom_p2_pwr" value="30" />
+            <talentvalue level="13" name="venom_p2_pwr" value="46" />
+            <talentvalue level="15" name="venom_p2_pwr" value="56" />
+            <talentvalue level="1" name="venom_p2_pwr2" value="4" />
+            <talentvalue level="4" name="venom_p2_pwr2" value="5" />
+            <talentvalue level="5" name="venom_p2_pwr2" value="6" />
+            <talentvalue level="8" name="venom_p2_pwr2" value="7" />
+            <talentvalue level="9" name="venom_p2_pwr2" value="8" />
+            <talentvalue level="13" name="venom_p2_pwr2" value="11" />
+            <talentvalue level="15" name="venom_p2_pwr2" value="13" />
+        </talentvalues>
+        <level description="%venom_p2_num target(s).\n%venom_p2_dmg2 chained $DMG_PHYSICAL per tap\n%venom_p2_pwr $EP\n">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Symbiote Bite" description="Venom lunges forward knocking down an enemy and biting him multiple times." descshort="Special" icon="2" icon_texture="textures/ui/venom_icons.png" name="venom_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p3_req" value="20" />
+            <talentvalue level="3" name="venom_p3_req" value="26" />
+            <talentvalue level="4" name="venom_p3_req" value="29" />
+            <talentvalue level="8" name="venom_p3_req" value="53" />
+            <talentvalue level="9" name="venom_p3_req" value="73" />
+            <talentvalue level="1" name="venom_p3_dmg" value="92 101" />
+            <talentvalue level="3" name="venom_p3_dmg" value="112 124" />
+            <talentvalue level="4" name="venom_p3_dmg" value="143 157" />
+            <talentvalue level="8" name="venom_p3_dmg" value="224 248" />
+            <talentvalue level="9" name="venom_p3_dmg" value="322 356" />
+            <talentvalue level="1" name="venom_p3_kb" value="620" />
+            <talentvalue level="9" name="venom_p3_kb" value="620" />
+            <talentvalue level="1" name="venom_p3_rage" value="2.0" />
+            <talentvalue level="9" name="venom_p3_rage" value="2.0" />
+            <talentvalue level="1" name="venom_p3_pwr" value="18" />
+            <talentvalue level="3" name="venom_p3_pwr" value="22" />
+            <talentvalue level="4" name="venom_p3_pwr" value="23" />
+            <talentvalue level="8" name="venom_p3_pwr" value="35" />
+            <talentvalue level="9" name="venom_p3_pwr" value="43" />
+        </talentvalues>
+        <level description="%venom_p3_dmg $DMG_PHYSICAL\n%venom_p3_pwr $EP\n">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Venom Swing" description="Grab an enemy with Venom's tendrils and swing him around doing damage to all in the way.   When enemy is released, enemy goes flying." descshort="Radial" icon="3" icon_texture="textures/ui/venom_icons.png" name="venom_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p4_req" value="10" />
+            <talentvalue level="2" name="venom_p4_req" value="13" />
+            <talentvalue level="3" name="venom_p4_req" value="16" />
+            <talentvalue level="6" name="venom_p4_req" value="25" />
+            <talentvalue level="7" name="venom_p4_req" value="28" />
+            <talentvalue level="11" name="venom_p4_req" value="52" />
+            <talentvalue level="13" name="venom_p4_req" value="72" />
+            <talentvalue level="1" name="venom_p4_dmg" value="17 19" />
+            <talentvalue level="2" name="venom_p4_dmg" value="20 23" />
+            <talentvalue level="3" name="venom_p4_dmg" value="27 30" />
+            <talentvalue level="6" name="venom_p4_dmg" value="41 45" />
+            <talentvalue level="7" name="venom_p4_dmg" value="51 56" />
+            <talentvalue level="11" name="venom_p4_dmg" value="85 94" />
+            <talentvalue level="13" name="venom_p4_dmg" value="126 139" />
+            <talentvalue level="1" name="venom_p4_pwr" value="17" />
+            <talentvalue level="2" name="venom_p4_pwr" value="18" />
+            <talentvalue level="3" name="venom_p4_pwr" value="21" />
+            <talentvalue level="6" name="venom_p4_pwr" value="27" />
+            <talentvalue level="7" name="venom_p4_pwr" value="30" />
+            <talentvalue level="11" name="venom_p4_pwr" value="44" />
+            <talentvalue level="13" name="venom_p4_pwr" value="56" />
+        </talentvalues>
+        <level description="%venom_p4_dmg $DMG_PHYSICAL\n%venom_p4_pwr $EP/sec">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Venom Heave" description="Venom throws his tendrils at an enemy and can then heave him high into the air." descshort="Special" icon="4" icon_texture="textures/ui/venom_icons.png" name="venom_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p5_req" value="17" />
+            <talentvalue level="4" name="venom_p5_req" value="26" />
+            <talentvalue level="5" name="venom_p5_req" value="29" />
+            <talentvalue level="9" name="venom_p5_req" value="53" />
+            <talentvalue level="10" name="venom_p5_req" value="73" />
+            <talentvalue level="1" name="venom_p5_dmg" value="54 60" />
+            <talentvalue level="4" name="venom_p5_dmg" value="75 83" />
+            <talentvalue level="5" name="venom_p5_dmg" value="99 109" />
+            <talentvalue level="9" name="venom_p5_dmg" value="153 169" />
+            <talentvalue level="10" name="venom_p5_dmg" value="224 248" />
+            <talentvalue level="1" name="venom_p5_pwr" value="10" />
+            <talentvalue level="4" name="venom_p5_pwr" value="13" />
+            <talentvalue level="5" name="venom_p5_pwr" value="14" />
+            <talentvalue level="9" name="venom_p5_pwr" value="21" />
+            <talentvalue level="10" name="venom_p5_pwr" value="26" />
+            <talentvalue level="1" name="venom_p5_throw_spd" value="100.0" value_charged="1000.0" />
+        </talentvalues>
+        <level description="%venom_p5_dmg $DMG_PHYSICAL\n%venom_p5_pwr $EP\n">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Claw" description="Venom's hands turn into the shape of claws. All venom's attacks have increased damage." descshort="Boost" icon="5" icon_texture="textures/ui/venom_icons.png" name="venom_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p6_req" value="2" />
+            <talentvalue level="5" name="venom_p6_req" value="14" />
+            <talentvalue level="6" name="venom_p6_req" value="17" />
+            <talentvalue level="9" name="venom_p6_req" value="26" />
+            <talentvalue level="10" name="venom_p6_req" value="29" />
+            <talentvalue level="14" name="venom_p6_req" value="53" />
+            <talentvalue level="15" name="venom_p6_req" value="73" />
+            <talentvalue level="1" name="venom_p6_dmg" value="1.1" />
+            <talentvalue level="15" name="venom_p6_dmg" value="1.5" />
+            <talentvalue level="1" name="venom_p6_pct" value="0.08" />
+            <talentvalue level="15" name="venom_p6_pct" value="0.15" />
+            <talentvalue level="1" name="venom_p6_lif" value="20" />
+            <talentvalue level="5" name="venom_p6_lif" value="40" />
+            <talentvalue level="6" name="venom_p6_lif" value="50" />
+            <talentvalue level="9" name="venom_p6_lif" value="65" />
+            <talentvalue level="10" name="venom_p6_lif" value="80" />
+            <talentvalue level="14" name="venom_p6_lif" value="120" />
+            <talentvalue level="15" name="venom_p6_lif" value="180" />
+            <talentvalue level="1" name="venom_p6_pwr" value="32" />
+            <talentvalue level="5" name="venom_p6_pwr" value="60" />
+            <talentvalue level="6" name="venom_p6_pwr" value="68" />
+            <talentvalue level="9" name="venom_p6_pwr" value="88" />
+            <talentvalue level="10" name="venom_p6_pwr" value="92" />
+            <talentvalue level="14" name="venom_p6_pwr" value="140" />
+            <talentvalue level="15" name="venom_p6_pwr" value="172" />
+        </talentvalues>
+        <level description="%venom_p6_lif Seconds\n%venom_p6_dmg:s $DMG\n+%venom_p6_pct:p Critical chance\n%venom_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Terror" description="Venom terrorizes nearby enemies and increase his defense against physical damage." descshort="Debuff" icon="6" icon_texture="textures/ui/venom_icons.png" name="venom_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p7_req" value="14" />
+            <talentvalue level="2" name="venom_p7_req" value="17" />
+            <talentvalue level="5" name="venom_p7_req" value="26" />
+            <talentvalue level="6" name="venom_p7_req" value="29" />
+            <talentvalue level="10" name="venom_p7_req" value="53" />
+            <talentvalue level="11" name="venom_p7_req" value="73" />
+            <talentvalue level="1" name="venom_p7_pwr" value="60" />
+            <talentvalue level="2" name="venom_p7_pwr" value="68" />
+            <talentvalue level="5" name="venom_p7_pwr" value="88" />
+            <talentvalue level="6" name="venom_p7_pwr" value="92" />
+            <talentvalue level="10" name="venom_p7_pwr" value="140" />
+            <talentvalue level="11" name="venom_p7_pwr" value="172" />
+            <talentvalue level="1" name="venom_p7_lif" value="40" />
+            <talentvalue level="2" name="venom_p7_lif" value="60" />
+            <talentvalue level="5" name="venom_p7_lif" value="80" />
+            <talentvalue level="6" name="venom_p7_lif" value="100" />
+            <talentvalue level="10" name="venom_p7_lif" value="140" />
+            <talentvalue level="11" name="venom_p7_lif" value="180" />
+            <talentvalue level="1" name="venom_p7_pdmg" value="0.65" />
+            <talentvalue level="11" name="venom_p7_pdmg" value="0.35" />
+        </talentvalues>
+        <level description="%venom_p7_lif Seconds\n%venom_p7_pdmg:s Physical Damage\n%venom_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%venom_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Symbiote Sludge" description="Venom sends off pieces of his symbiote self and adheres his adversaries to the ground." descshort="Xtreme" icon="7" icon_texture="textures/ui/venom_icons.png" name="venom_p8" power="team_xtreme" type="xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="venom_p8_req" value="10" />
+            <talentvalue level="8" name="venom_p8_req" value="45" />
+            <talentvalue level="1" name="venom_p8_dmg" value="17 19" />
+            <talentvalue level="8" name="venom_p8_dmg" value="34 38" />
+            <talentvalue level="1" name="venom_p8_lif" value="5.0" />
+            <talentvalue level="8" name="venom_p8_lif" value="10.0" />
+            <talentvalue level="1" name="venom_p8_dmgs" value="1.25" />
+            <talentvalue level="8" name="venom_p8_dmgs" value="1.6" />
+        </talentvalues>
+        <level description="%venom_p8_dmg $DMG/sec\n%venom_p8_dmgs:s $DMG increase">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%venom_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Melee" description="Reflects a percentage of melee $DMG back at attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="venom_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="venom_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%venom_outfit11_pct:p Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%venom_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Tendril Damage" description="Increases the amount of damage done with tendril attacks." icon="8" icon_texture="textures/ui/venom_icons.png" name="venom_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit12_pct" value="1.05" />
+            <talentvalue level="9" name="venom_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%venom_outfit12_pct:s Tendril $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%venom_outfit12_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit13_dr" value="1" />
+            <talentvalue level="9" name="venom_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%venom_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Tendril Damage" description="Increases the amount of damage done with tendril attacks." icon="8" icon_texture="textures/ui/venom_icons.png" name="venom_outfit31" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="venom_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%venom_outfit31_pct:s Tendril $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%venom_outfit31_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="venom_outfit32" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="venom_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%venom_outfit32_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%venom_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit33" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit33_dr" value="1" />
+            <talentvalue level="9" name="venom_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%venom_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Evade" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="venom_outfit41" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit41_pct" value="0.05" />
+            <talentvalue level="9" name="venom_outfit41_pct" value="0.13" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit41_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%venom_outfit41_pct">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Striking" description="Gives a striking bonus." icon="25" icon_texture="textures/ui/talent_icons.png" name="venom_outfit42" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit42_pct" value="3" />
+            <talentvalue level="9" name="venom_outfit42_pct" value="15" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit42_pct Striking">
+            <powerup life="-1">
+                <affecter attribute="strength" level="%venom_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit43" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit43_dr" value="1" />
+            <talentvalue level="9" name="venom_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%venom_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="venom_outfit21" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit21_pct" value="1.04" />
+            <talentvalue level="9" name="venom_outfit21_pct" value="1.24" />
+        </talentvalues>
+        <level count="9" description="%venom_outfit21_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%venom_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="venom_outfit22" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit22_pct" value="0.02" />
+            <talentvalue level="9" name="venom_outfit22_pct" value="0.11" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit22_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%venom_outfit22_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit23" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="venom_outfit23_dr" value="1" />
+            <talentvalue level="9" name="venom_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%venom_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%venom_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

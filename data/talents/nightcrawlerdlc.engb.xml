@@ -1,0 +1,425 @@
+<talents>
+    <talent descname="Teleport" description="Jump twice to teleport." descshort="Ability" icon="9" icon_texture="textures/ui/nightcrawler_icons.png" name="night_tele" type="ability">
+        <level count="1" description="!BADREF:@HERO_NIGHTCRAWLER@TELE_LVL">
+            <require category="level" level="%night_tele_req" />
+        </level>
+    </talent>
+    <talent descname="Acrobatic Kick" description="Nightcrawler teleports forward and delivers an acrobatic kick combo to his enemies with a chance to stun them for a brief time.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="night_p1_req" value="1" />
+            <talentvalue level="5" name="night_p1_req" value="13" />
+            <talentvalue level="6" name="night_p1_req" value="16" />
+            <talentvalue level="9" name="night_p1_req" value="25" />
+            <talentvalue level="10" name="night_p1_req" value="28" />
+            <talentvalue level="14" name="night_p1_req" value="52" />
+            <talentvalue level="15" name="night_p1_req" value="72" />
+            <talentvalue level="1" name="night_p1_pwr" value="8" />
+            <talentvalue level="5" name="night_p1_pwr" value="17" />
+            <talentvalue level="6" name="night_p1_pwr" value="19" />
+            <talentvalue level="9" name="night_p1_pwr" value="26" />
+            <talentvalue level="10" name="night_p1_pwr" value="28" />
+            <talentvalue level="14" name="night_p1_pwr" value="44" />
+            <talentvalue level="15" name="night_p1_pwr" value="55" />
+            <talentvalue level="1" name="night_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="night_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="night_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="night_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="night_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="night_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="night_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="night_p1_dmg2" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="5" name="night_p1_dmg2" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="6" name="night_p1_dmg2" value="20 23" value_charged_scale="2.0" />
+            <talentvalue level="9" name="night_p1_dmg2" value="27 30" value_charged_scale="2.0" />
+            <talentvalue level="10" name="night_p1_dmg2" value="37 41" value_charged_scale="2.0" />
+            <talentvalue level="14" name="night_p1_dmg2" value="61 68" value_charged_scale="2.0" />
+            <talentvalue level="15" name="night_p1_dmg2" value="92 101" value_charged_scale="2.0" />
+            <talentvalue level="1" name="night_p1_life" value="3.0" />
+            <talentvalue level="15" name="night_p1_life" value="20.0" />
+        </talentvalues>
+        <level description="%night_p1_dmg $DMG_PHYSICAL\n%night_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%night_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Sword Mastery" description="Nightcrawler wields his two swords with ninja mastery." descshort="Melee" icon="1" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="night_p2_req" value="5" />
+            <talentvalue level="4" name="night_p2_req" value="14" />
+            <talentvalue level="5" name="night_p2_req" value="17" />
+            <talentvalue level="8" name="night_p2_req" value="26" />
+            <talentvalue level="9" name="night_p2_req" value="29" />
+            <talentvalue level="13" name="night_p2_req" value="53" />
+            <talentvalue level="15" name="night_p2_req" value="73" />
+            <talentvalue level="1" name="night_p2_dam" value="11 13" />
+            <talentvalue level="4" name="night_p2_dam" value="20 23" />
+            <talentvalue level="5" name="night_p2_dam" value="31 34" />
+            <talentvalue level="8" name="night_p2_dam" value="41 45" />
+            <talentvalue level="9" name="night_p2_dam" value="54 60" />
+            <talentvalue level="13" name="night_p2_dam" value="85 94" />
+            <talentvalue level="15" name="night_p2_dam" value="126 139" />
+            <talentvalue level="1" name="night_p2_atk_bonus" value="1.15" />
+            <talentvalue level="4" name="night_p2_atk_bonus" value="1.25" />
+            <talentvalue level="5" name="night_p2_atk_bonus" value="1.35" />
+            <talentvalue level="8" name="night_p2_atk_bonus" value="1.45" />
+            <talentvalue level="9" name="night_p2_atk_bonus" value="1.55" />
+            <talentvalue level="13" name="night_p2_atk_bonus" value="1.65" />
+            <talentvalue level="15" name="night_p2_atk_bonus" value="1.75" />
+            <talentvalue level="1" name="night_p2_pwr" value="10" />
+            <talentvalue level="4" name="night_p2_pwr" value="25" />
+            <talentvalue level="5" name="night_p2_pwr" value="40" />
+            <talentvalue level="8" name="night_p2_pwr" value="55" />
+            <talentvalue level="9" name="night_p2_pwr" value="70" />
+            <talentvalue level="13" name="night_p2_pwr" value="85" />
+            <talentvalue level="15" name="night_p2_pwr" value="100" />
+        </talentvalues>
+        <level description="%night_p2_dam $DMG_PHYSICAL\n%night_p2_pwr $EP">
+            <require cat="level" level="%night_p2_req" />
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_attack_rating" level="%night_p2_atk_bonus" scope_node="ngt_power1" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bamf Flurry" description="Nightcrawler bamfs to multiple nearby enemies and does one attack against each enemy." descshort="Special" icon="2" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="night_p3_req" value="10" />
+            <talentvalue level="2" name="night_p3_req" value="13" />
+            <talentvalue level="3" name="night_p3_req" value="16" />
+            <talentvalue level="6" name="night_p3_req" value="25" />
+            <talentvalue level="7" name="night_p3_req" value="28" />
+            <talentvalue level="11" name="night_p3_req" value="52" />
+            <talentvalue level="13" name="night_p3_req" value="72" />
+            <talentvalue level="1" name="night_p3_pwr" value="14" />
+            <talentvalue level="2" name="night_p3_pwr" value="15" />
+            <talentvalue level="3" name="night_p3_pwr" value="18" />
+            <talentvalue level="6" name="night_p3_pwr" value="23" />
+            <talentvalue level="7" name="night_p3_pwr" value="25" />
+            <talentvalue level="11" name="night_p3_pwr" value="37" />
+            <talentvalue level="13" name="night_p3_pwr" value="47" />
+            <talentvalue level="1" name="night_p3_dmg" value="27 30" />
+            <talentvalue level="2" name="night_p3_dmg" value="31 34" />
+            <talentvalue level="3" name="night_p3_dmg" value="44 49" />
+            <talentvalue level="6" name="night_p3_dmg" value="61 68" />
+            <talentvalue level="7" name="night_p3_dmg" value="82 90" />
+            <talentvalue level="11" name="night_p3_dmg" value="129 143" />
+            <talentvalue level="13" name="night_p3_dmg" value="190 210" />
+            <talentvalue level="1" name="night_p3_rng" value="240" />
+            <talentvalue level="13" name="night_p3_rng" value="600" />
+            <talentvalue level="1" name="night_p3_num_att" value="2" />
+            <talentvalue level="2" name="night_p3_num_att" value="2" />
+            <talentvalue level="3" name="night_p3_num_att" value="3" />
+            <talentvalue level="6" name="night_p3_num_att" value="3" />
+            <talentvalue level="7" name="night_p3_num_att" value="4" />
+            <talentvalue level="11" name="night_p3_num_att" value="4" />
+            <talentvalue level="13" name="night_p3_num_att" value="5" />
+            <talentvalue level="1" name="night_p3_stn_lif" value="1" />
+            <talentvalue level="13" name="night_p3_stn_lif" value="8" />
+        </talentvalues>
+        <level description="%night_p3_dmg $DMG_PHYSICAL\n%night_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%night_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Sword Whirlwind" description="Nightcrawler does an acrobatic wide radius attack by slashing out with his swords while spinning on his legs and tail.  $PT_HOLD" descshort="Melee" icon="3" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="night_p4_req" value="17" />
+            <talentvalue level="4" name="night_p4_req" value="26" />
+            <talentvalue level="5" name="night_p4_req" value="29" />
+            <talentvalue level="9" name="night_p4_req" value="53" />
+            <talentvalue level="10" name="night_p4_req" value="73" />
+            <talentvalue level="1" name="night_p4_dam" value="20 23" />
+            <talentvalue level="4" name="night_p4_dam" value="31 34" />
+            <talentvalue level="5" name="night_p4_dam" value="37 41" />
+            <talentvalue level="9" name="night_p4_dam" value="61 68" />
+            <talentvalue level="10" name="night_p4_dam" value="88 98" />
+            <talentvalue level="1" name="night_p4_atk_bonus" value="1.1" />
+            <talentvalue level="4" name="night_p4_atk_bonus" value="1.4" />
+            <talentvalue level="5" name="night_p4_atk_bonus" value="1.5" />
+            <talentvalue level="9" name="night_p4_atk_bonus" value="1.9" />
+            <talentvalue level="10" name="night_p4_atk_bonus" value="2.0" />
+            <talentvalue level="1" name="night_p4_pwr" value="13" />
+            <talentvalue level="4" name="night_p4_pwr" value="17" />
+            <talentvalue level="5" name="night_p4_pwr" value="18" />
+            <talentvalue level="9" name="night_p4_pwr" value="27" />
+            <talentvalue level="10" name="night_p4_pwr" value="34" />
+            <talentvalue level="1" name="night_p4_pwr_sec" value="40" />
+            <talentvalue level="10" name="night_p4_pwr_sec" value="180" />
+        </talentvalues>
+        <level description="%night_p4_dam $DMG_PHYSICAL/sec\n%night_p4_pwr $EP/sec">
+            <require cat="level" level="%night_p4_req" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_attack_rating" level="%night_p4_atk_bonus" scope_node="night_power4" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bamfing Blitz" description="Nightcrawler bamfs around a singular enemy multiple times unleashing kicks and punches.  $PT_TAP" descshort="Special" icon="4" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="night_p5_req" value="20" />
+            <talentvalue level="3" name="night_p5_req" value="26" />
+            <talentvalue level="4" name="night_p5_req" value="29" />
+            <talentvalue level="8" name="night_p5_req" value="53" />
+            <talentvalue level="9" name="night_p5_req" value="73" />
+            <talentvalue level="1" name="night_p5_pwr" value="20" />
+            <talentvalue level="3" name="night_p5_pwr" value="24" />
+            <talentvalue level="4" name="night_p5_pwr" value="25" />
+            <talentvalue level="8" name="night_p5_pwr" value="39" />
+            <talentvalue level="9" name="night_p5_pwr" value="47" />
+            <talentvalue level="1" name="night_p5_dmg" value="51 56" />
+            <talentvalue level="3" name="night_p5_dmg" value="65 71" />
+            <talentvalue level="4" name="night_p5_dmg" value="82 90" />
+            <talentvalue level="8" name="night_p5_dmg" value="132 147" />
+            <talentvalue level="9" name="night_p5_dmg" value="190 210" />
+            <talentvalue level="1" name="night_p5_rng" value="240" />
+            <talentvalue level="9" name="night_p5_rng" value="600" />
+            <talentvalue level="1" name="night_p5_num_att" value="1" />
+            <talentvalue level="4" name="night_p5_num_att" value="2" />
+            <talentvalue level="9" name="night_p5_num_att" value="3" />
+            <talentvalue level="1" name="night_p5_stn_lif" value="1" />
+            <talentvalue level="9" name="night_p5_stn_lif" value="8" />
+            <talentvalue level="1" name="night_p5_spd1" value="1.5" value_charged="1.5" />
+            <talentvalue level="1" name="night_p5_spd2" value="1.5" value_charged="1.5" />
+            <talentvalue level="1" name="night_p5_spd3" value="2.0" value_charged="2.0" />
+            <talentvalue level="1" name="night_p5_spd4" value="2.0" value_charged="2.0" />
+        </talentvalues>
+        <level description="%night_p5_dmg $DMG_PHYSICAL\n%night_p5_pwr $EP\n%night_p5_num_att Attacks\n">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%night_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Shadow Crawl" description="Nightcrawler hides in the shadows becoming invisible to most enemies and has critical hit chance increased." descshort="Special" icon="5" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="night_p6_req" value="2" />
+            <talentvalue level="5" name="night_p6_req" value="14" />
+            <talentvalue level="6" name="night_p6_req" value="17" />
+            <talentvalue level="9" name="night_p6_req" value="26" />
+            <talentvalue level="10" name="night_p6_req" value="29" />
+            <talentvalue level="14" name="night_p6_req" value="53" />
+            <talentvalue level="15" name="night_p6_req" value="73" />
+            <talentvalue level="1" name="night_p6_pwr" value="32" />
+            <talentvalue level="5" name="night_p6_pwr" value="60" />
+            <talentvalue level="6" name="night_p6_pwr" value="68" />
+            <talentvalue level="9" name="night_p6_pwr" value="88" />
+            <talentvalue level="10" name="night_p6_pwr" value="92" />
+            <talentvalue level="14" name="night_p6_pwr" value="140" />
+            <talentvalue level="15" name="night_p6_pwr" value="172" />
+            <talentvalue level="1" name="night_p6_lif" value="20" />
+            <talentvalue level="5" name="night_p6_lif" value="40" />
+            <talentvalue level="6" name="night_p6_lif" value="50" />
+            <talentvalue level="9" name="night_p6_lif" value="65" />
+            <talentvalue level="10" name="night_p6_lif" value="80" />
+            <talentvalue level="14" name="night_p6_lif" value="120" />
+            <talentvalue level="15" name="night_p6_lif" value="180" />
+            <talentvalue level="1" name="night_p6_cri" value="0.05" />
+            <talentvalue level="15" name="night_p6_cri" value="0.15" />
+        </talentvalues>
+        <level description="%night_p6_lif Seconds\n%night_p6_pwr $EP\n+%night_p6_cri:p Critical chance">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%night_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Sword Combat" description="Nightcrawler wields his swords with devastating effectiveness." descshort="Boost" icon="6" icon_texture="textures/ui/nightcrawler_icons.png" name="night_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="night_p7_req" value="14" />
+            <talentvalue level="2" name="night_p7_req" value="17" />
+            <talentvalue level="5" name="night_p7_req" value="26" />
+            <talentvalue level="6" name="night_p7_req" value="29" />
+            <talentvalue level="10" name="night_p7_req" value="53" />
+            <talentvalue level="11" name="night_p7_req" value="73" />
+            <talentvalue level="1" name="night_p7_lif" value="20" />
+            <talentvalue level="2" name="night_p7_lif" value="40" />
+            <talentvalue level="5" name="night_p7_lif" value="50" />
+            <talentvalue level="6" name="night_p7_lif" value="65" />
+            <talentvalue level="10" name="night_p7_lif" value="80" />
+            <talentvalue level="11" name="night_p7_lif" value="120" />
+            <talentvalue level="1" name="night_p7_dmg" value="1.2" />
+            <talentvalue level="11" name="night_p7_dmg" value="1.5" />
+            <talentvalue level="1" name="night_p7_pwr" value="60" />
+            <talentvalue level="2" name="night_p7_pwr" value="68" />
+            <talentvalue level="5" name="night_p7_pwr" value="88" />
+            <talentvalue level="6" name="night_p7_pwr" value="92" />
+            <talentvalue level="10" name="night_p7_pwr" value="140" />
+            <talentvalue level="11" name="night_p7_pwr" value="172" />
+        </talentvalues>
+        <level description="%night_p7_dmg:s $DMG_PHYSICAL\n%night_p7_lif Seconds\n%night_p7_pwr $EP\n">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%night_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Bamf Unleashed" description="Nightcrawler bamfs around multiple enemies unleashing multiple attacks, culminating in a blast attack." descshort="Special" icon="7" icon_texture="textures/ui/nightcrawler_icons.png" name="night_power8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="night_p8_req" value="10" />
+            <talentvalue level="8" name="night_p8_req" value="45" />
+            <talentvalue level="1" name="night_p8_dmgc" value="17 19" />
+            <talentvalue level="8" name="night_p8_dmgc" value="68 75" />
+            <talentvalue level="1" name="night_p8_dmg" value="51 56" />
+            <talentvalue level="8" name="night_p8_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%night_p8_dmgc $DMG_PHYSICAL per enemy\n%night_p8_dmg Explosive $DMG">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%night_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit11" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit11_pct" value="1.04" />
+            <talentvalue level="9" name="night_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%night_outfit11_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%night_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="night_outfit12" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="night_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%night_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit13" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit13_dr" value="1" />
+            <talentvalue level="9" name="night_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%night_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit21" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit21_dmg" value="1.04" />
+            <talentvalue level="9" name="night_outfit21_dmg" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%night_outfit21_dmg:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%night_outfit21_dmg" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Protective Forces" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="night_outfit22" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit22_pct" value="0.02" />
+            <talentvalue level="9" name="night_outfit22_pct" value="0.1" />
+            <talentvalue level="1" name="night_outfit22_shw" value="2" />
+            <talentvalue level="9" name="night_outfit22_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit22_shw All Resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%night_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit23" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit23_dr" value="1" />
+            <talentvalue level="9" name="night_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%night_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit31" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit31_dmg" value="1.04" />
+            <talentvalue level="9" name="night_outfit31_dmg" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%night_outfit31_dmg:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%night_outfit31_dmg" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit32" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="night_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%night_outfit32_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%night_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit33" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit33_dr" value="1" />
+            <talentvalue level="9" name="night_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%night_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="night_outfit41" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit41_hlt" value="1.05" />
+            <talentvalue level="9" name="night_outfit41_hlt" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%night_outfit41_hlt:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%night_outfit41_hlt" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the damage of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="night_outfit42" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit42_dmg" value="1.03" />
+            <talentvalue level="9" name="night_outfit42_dmg" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%night_outfit42_dmg:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%night_outfit42_dmg" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit43" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="night_outfit43_dr" value="1" />
+            <talentvalue level="9" name="night_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%night_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%night_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

@@ -1,0 +1,420 @@
+<talents>
+    <talent descname="Cold Immunity" description="100% immune to $DMG_COLD." name="iceman_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_cold" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Blizzard" description="Create an ice storm, inflicting $DMG_COLD to enemies in a radius.  $PT_TAP" descshort="Radial" icon="0" icon_texture="textures/ui/iceman_icons.png" name="iceman_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p1_req" value="20" />
+            <talentvalue level="3" name="iceman_p1_req" value="26" />
+            <talentvalue level="4" name="iceman_p1_req" value="29" />
+            <talentvalue level="8" name="iceman_p1_req" value="53" />
+            <talentvalue level="9" name="iceman_p1_req" value="73" />
+            <talentvalue level="1" name="iceman_p1_dmg" value="51 56" />
+            <talentvalue level="3" name="iceman_p1_dmg" value="65 71" />
+            <talentvalue level="4" name="iceman_p1_dmg" value="82 90" />
+            <talentvalue level="8" name="iceman_p1_dmg" value="132 147" />
+            <talentvalue level="9" name="iceman_p1_dmg" value="190 210" />
+            <talentvalue level="1" name="iceman_p1_dmg2" value="13 15" />
+            <talentvalue level="3" name="iceman_p1_dmg2" value="17 19" />
+            <talentvalue level="4" name="iceman_p1_dmg2" value="20 23" />
+            <talentvalue level="8" name="iceman_p1_dmg2" value="37 41" />
+            <talentvalue level="9" name="iceman_p1_dmg2" value="54 60" />
+            <talentvalue level="1" name="iceman_p1_pwr" value="21" />
+            <talentvalue level="3" name="iceman_p1_pwr" value="25" />
+            <talentvalue level="4" name="iceman_p1_pwr" value="28" />
+            <talentvalue level="8" name="iceman_p1_pwr" value="42" />
+            <talentvalue level="9" name="iceman_p1_pwr" value="52" />
+        </talentvalues>
+        <level description="%iceman_p1_dmg initial $DMG\n%iceman_p1_dmg2 extra $DMG per button tap\n%iceman_p1_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Ice Shards" description="Throws shards of ice at enemies, inflicting $DMG_COLD. Chance to slow enemies to 50% speed.  $PT_TAP" descshort="Projectile" icon="1" icon_texture="textures/ui/iceman_icons.png" name="iceman_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p2_req" value="1" />
+            <talentvalue level="5" name="iceman_p2_req" value="13" />
+            <talentvalue level="6" name="iceman_p2_req" value="16" />
+            <talentvalue level="9" name="iceman_p2_req" value="25" />
+            <talentvalue level="10" name="iceman_p2_req" value="28" />
+            <talentvalue level="14" name="iceman_p2_req" value="52" />
+            <talentvalue level="15" name="iceman_p2_req" value="72" />
+            <talentvalue level="1" name="iceman_p2_dmg" value="10 12" />
+            <talentvalue level="5" name="iceman_p2_dmg" value="17 19" />
+            <talentvalue level="6" name="iceman_p2_dmg" value="24 26" />
+            <talentvalue level="9" name="iceman_p2_dmg" value="34 38" />
+            <talentvalue level="10" name="iceman_p2_dmg" value="44 49" />
+            <talentvalue level="14" name="iceman_p2_dmg" value="75 83" />
+            <talentvalue level="15" name="iceman_p2_dmg" value="109 120" />
+            <talentvalue level="1" name="iceman_p2_pct" value="0.15" />
+            <talentvalue level="15" name="iceman_p2_pct" value="0.5" />
+            <talentvalue level="1" name="iceman_p2_lif" value="3" />
+            <talentvalue level="15" name="iceman_p2_lif" value="7" />
+            <talentvalue level="1" name="iceman_p2_pwr" value="4" />
+            <talentvalue level="5" name="iceman_p2_pwr" value="9" />
+            <talentvalue level="6" name="iceman_p2_pwr" value="10" />
+            <talentvalue level="9" name="iceman_p2_pwr" value="13" />
+            <talentvalue level="10" name="iceman_p2_pwr" value="14" />
+            <talentvalue level="14" name="iceman_p2_pwr" value="22" />
+            <talentvalue level="15" name="iceman_p2_pwr" value="28" />
+        </talentvalues>
+        <level description="%iceman_p2_dmg $DMG_COLD\n%iceman_p2_pct:p chance\n%iceman_p2_lif:f second slow\n%iceman_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Polar Explosion" description="Charge a particle and throw it at enemies, inflicting $DMG_COLD and slowing enemies for a time.  $PT_CHARGE" descshort="Projectile" icon="2" icon_texture="textures/ui/iceman_icons.png" name="iceman_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p3_req" value="10" />
+            <talentvalue level="3" name="iceman_p3_req" value="13" />
+            <talentvalue level="4" name="iceman_p3_req" value="16" />
+            <talentvalue level="7" name="iceman_p3_req" value="25" />
+            <talentvalue level="8" name="iceman_p3_req" value="28" />
+            <talentvalue level="12" name="iceman_p3_req" value="52" />
+            <talentvalue level="13" name="iceman_p3_req" value="72" />
+            <talentvalue level="1" name="iceman_p3_dmg" value="27 30" value_charged_scale="2.0" />
+            <talentvalue level="3" name="iceman_p3_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="4" name="iceman_p3_dmg" value="44 49" value_charged_scale="2.0" />
+            <talentvalue level="7" name="iceman_p3_dmg" value="61 68" value_charged_scale="2.0" />
+            <talentvalue level="8" name="iceman_p3_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="12" name="iceman_p3_dmg" value="129 143" value_charged_scale="2.0" />
+            <talentvalue level="13" name="iceman_p3_dmg" value="190 210" value_charged_scale="2.0" />
+            <talentvalue level="1" name="iceman_p3_lif" value="3" value_charged="5" />
+            <talentvalue level="13" name="iceman_p3_lif" value="6" value_charged="8" />
+            <talentvalue level="1" name="iceman_p3_spd" value="0.5" />
+            <talentvalue level="13" name="iceman_p3_spd" value="0.3" />
+            <talentvalue level="1" name="iceman_p3_rng" value="72" value_charged="120" />
+            <talentvalue level="1" name="iceman_p3_scale" value="0.6" value_charged="1" />
+            <talentvalue level="1" name="iceman_p3_pwr" value="14" />
+            <talentvalue level="3" name="iceman_p3_pwr" value="17" />
+            <talentvalue level="4" name="iceman_p3_pwr" value="19" />
+            <talentvalue level="7" name="iceman_p3_pwr" value="24" />
+            <talentvalue level="8" name="iceman_p3_pwr" value="26" />
+            <talentvalue level="12" name="iceman_p3_pwr" value="41" />
+            <talentvalue level="13" name="iceman_p3_pwr" value="52" />
+        </talentvalues>
+        <level description="%iceman_p3_dmg $DMG_COLD\n%iceman_p3_rng:r feet blast radius\n%iceman_p3_spd:s speed, %iceman_p3_lif:f Second slow\n%iceman_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Ice Slide" description="Slides on an ice sled, damaging and knocking back enemies.  $PT_HOLD" descshort="Charge" icon="3" icon_texture="textures/ui/iceman_icons.png" name="iceman_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p4_req" value="17" />
+            <talentvalue level="4" name="iceman_p4_req" value="26" />
+            <talentvalue level="5" name="iceman_p4_req" value="29" />
+            <talentvalue level="9" name="iceman_p4_req" value="53" />
+            <talentvalue level="10" name="iceman_p4_req" value="73" />
+            <talentvalue level="1" name="iceman_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="iceman_p4_dmg" value="44 49" />
+            <talentvalue level="5" name="iceman_p4_dmg" value="58 64" />
+            <talentvalue level="9" name="iceman_p4_dmg" value="92 101" />
+            <talentvalue level="10" name="iceman_p4_dmg" value="132 147" />
+            <talentvalue level="1" name="iceman_p4_kb" value="120" />
+            <talentvalue level="10" name="iceman_p4_kb" value="305" />
+            <talentvalue level="1" name="iceman_p4_pwr" value="11" />
+            <talentvalue level="4" name="iceman_p4_pwr" value="15" />
+            <talentvalue level="5" name="iceman_p4_pwr" value="17" />
+            <talentvalue level="9" name="iceman_p4_pwr" value="25" />
+            <talentvalue level="10" name="iceman_p4_pwr" value="31" />
+        </talentvalues>
+        <level description="%iceman_p4_dmg $DMG_COLD\n%iceman_p4_pwr $EP/s">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Freeze Beam" description="Sends out a beam, freezing enemies for a time. If the frozen enemy receives a Critical hit, enemy will shatter." descshort="Beam" icon="4" icon_texture="textures/ui/iceman_icons.png" name="iceman_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p5_req" value="5" />
+            <talentvalue level="5" name="iceman_p5_req" value="14" />
+            <talentvalue level="6" name="iceman_p5_req" value="17" />
+            <talentvalue level="9" name="iceman_p5_req" value="26" />
+            <talentvalue level="10" name="iceman_p5_req" value="29" />
+            <talentvalue level="14" name="iceman_p5_req" value="53" />
+            <talentvalue level="15" name="iceman_p5_req" value="73" />
+            <talentvalue level="1" name="iceman_p5_lif" value="3" />
+            <talentvalue level="15" name="iceman_p5_lif" value="8" />
+            <talentvalue level="1" name="iceman_p5_dmg" value="13 15" />
+            <talentvalue level="5" name="iceman_p5_dmg" value="27 30" />
+            <talentvalue level="6" name="iceman_p5_dmg" value="37 41" />
+            <talentvalue level="9" name="iceman_p5_dmg" value="54 60" />
+            <talentvalue level="10" name="iceman_p5_dmg" value="68 75" />
+            <talentvalue level="14" name="iceman_p5_dmg" value="109 120" />
+            <talentvalue level="15" name="iceman_p5_dmg" value="160 176" />
+            <talentvalue level="1" name="iceman_p5_pwr" value="10" />
+            <talentvalue level="5" name="iceman_p5_pwr" value="16" />
+            <talentvalue level="6" name="iceman_p5_pwr" value="17" />
+            <talentvalue level="9" name="iceman_p5_pwr" value="23" />
+            <talentvalue level="10" name="iceman_p5_pwr" value="25" />
+            <talentvalue level="14" name="iceman_p5_pwr" value="38" />
+            <talentvalue level="15" name="iceman_p5_pwr" value="47" />
+        </talentvalues>
+        <level description="%iceman_p5_dmg $DMG_COLD\n%iceman_p5_lif:f seconds\n%iceman_p5_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Frigid Aura" description="Create a shield of cold around Iceman, slowing and damaging enemies in radius." descshort="Boost" icon="5" icon_texture="textures/ui/iceman_icons.png" name="iceman_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p6_req" value="14" />
+            <talentvalue level="2" name="iceman_p6_req" value="17" />
+            <talentvalue level="5" name="iceman_p6_req" value="26" />
+            <talentvalue level="6" name="iceman_p6_req" value="29" />
+            <talentvalue level="10" name="iceman_p6_req" value="53" />
+            <talentvalue level="11" name="iceman_p6_req" value="73" />
+            <talentvalue level="1" name="iceman_p6_lif" value="40" />
+            <talentvalue level="2" name="iceman_p6_lif" value="50" />
+            <talentvalue level="5" name="iceman_p6_lif" value="65" />
+            <talentvalue level="6" name="iceman_p6_lif" value="80" />
+            <talentvalue level="10" name="iceman_p6_lif" value="180" />
+            <talentvalue level="11" name="iceman_p6_lif" value="180" />
+            <talentvalue level="1" name="iceman_p6_spd" value="0.75" />
+            <talentvalue level="11" name="iceman_p6_spd" value="0.5" />
+            <talentvalue level="1" name="iceman_p6_dmg" value="11 13" />
+            <talentvalue level="2" name="iceman_p6_dmg" value="13 15" />
+            <talentvalue level="5" name="iceman_p6_dmg" value="15 17" />
+            <talentvalue level="6" name="iceman_p6_dmg" value="17 19" />
+            <talentvalue level="10" name="iceman_p6_dmg" value="24 26" />
+            <talentvalue level="11" name="iceman_p6_dmg" value="37 41" />
+            <talentvalue level="1" name="iceman_p6_pwr" value="64" />
+            <talentvalue level="2" name="iceman_p6_pwr" value="68" />
+            <talentvalue level="5" name="iceman_p6_pwr" value="92" />
+            <talentvalue level="6" name="iceman_p6_pwr" value="100" />
+            <talentvalue level="10" name="iceman_p6_pwr" value="152" />
+            <talentvalue level="11" name="iceman_p6_pwr" value="188" />
+        </talentvalues>
+        <level description="%iceman_p6_lif Seconds\n%iceman_p6_dmg $DMG_COLD/Second\n%iceman_p6_spd:p speed\n%iceman_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Frost Bite" description="Gives entire party ice gloves for a time, adding $DMG_COLD to melee attacks with a chance to slow enemies by 50%." descshort="Boost" icon="6" icon_texture="textures/ui/iceman_icons.png" name="iceman_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p7_req" value="2" />
+            <talentvalue level="5" name="iceman_p7_req" value="14" />
+            <talentvalue level="6" name="iceman_p7_req" value="17" />
+            <talentvalue level="9" name="iceman_p7_req" value="26" />
+            <talentvalue level="10" name="iceman_p7_req" value="29" />
+            <talentvalue level="14" name="iceman_p7_req" value="53" />
+            <talentvalue level="15" name="iceman_p7_req" value="73" />
+            <talentvalue level="1" name="iceman_p7_dmg" value="0.1" />
+            <talentvalue level="15" name="iceman_p7_dmg" value="0.25" />
+            <talentvalue level="1" name="iceman_p7_pct" value="0.05" />
+            <talentvalue level="15" name="iceman_p7_pct" value="0.2" />
+            <talentvalue level="1" name="iceman_p7_tim" value="3" />
+            <talentvalue level="15" name="iceman_p7_tim" value="7" />
+            <talentvalue level="1" name="iceman_p7_lif" value="20" />
+            <talentvalue level="5" name="iceman_p7_lif" value="40" />
+            <talentvalue level="6" name="iceman_p7_lif" value="50" />
+            <talentvalue level="9" name="iceman_p7_lif" value="65" />
+            <talentvalue level="10" name="iceman_p7_lif" value="80" />
+            <talentvalue level="14" name="iceman_p7_lif" value="120" />
+            <talentvalue level="15" name="iceman_p7_lif" value="180" />
+            <talentvalue level="1" name="iceman_p7_pwr" value="32" />
+            <talentvalue level="5" name="iceman_p7_pwr" value="64" />
+            <talentvalue level="6" name="iceman_p7_pwr" value="68" />
+            <talentvalue level="9" name="iceman_p7_pwr" value="92" />
+            <talentvalue level="10" name="iceman_p7_pwr" value="100" />
+            <talentvalue level="14" name="iceman_p7_pwr" value="152" />
+            <talentvalue level="15" name="iceman_p7_pwr" value="188" />
+        </talentvalues>
+        <level description="+%iceman_p7_dmg:p $DMG_COLD\n%iceman_p7_pct:p chance\n%iceman_p7_tim:f second slow\n%iceman_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%iceman_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Deep Freeze" description="Massive cold blast, damages and slows all enemies with a chance to freeze." descshort="Xtreme" icon="8" icon_texture="textures/ui/iceman_icons.png" name="iceman_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_p9_req" value="10" />
+            <talentvalue level="8" name="iceman_p9_req" value="45" />
+            <talentvalue level="1" name="iceman_p9_lif" value="5" />
+            <talentvalue level="8" name="iceman_p9_lif" value="10" />
+            <talentvalue level="1" name="iceman_p9_lif2" value="7" />
+            <talentvalue level="8" name="iceman_p9_lif2" value="12" />
+            <talentvalue level="1" name="iceman_p9_spd" value="0.25" />
+            <talentvalue level="8" name="iceman_p9_spd" value="0.25" />
+            <talentvalue level="1" name="iceman_p9_dmg" value="51 56" />
+            <talentvalue level="8" name="iceman_p9_dmg" value="204 225" />
+            <talentvalue level="1" name="iceman_p9_pct" value="0.5" />
+            <talentvalue level="8" name="iceman_p9_pct" value="0.64" />
+        </talentvalues>
+        <level description="%iceman_p9_dmg $DMG_COLD\n%iceman_p9_spd:p speed for %iceman_p9_lif:f seconds\n%iceman_p9_pct:p chance to freeze\n">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%iceman_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Icy Touch" description="Adds $DMG_COLD to melee attacks." icon="2" icon_texture="textures/ui/iceman_icons.png" name="iceman_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit11_pct" value="0.04" />
+            <talentvalue level="9" name="iceman_outfit11_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit11_pct:p Added $DMG_COLD">
+            <powerup class="add_attack" damagepercent="%iceman_outfit11_pct" damagetype="dmg_cold" life="-1">
+                <special_fx effect="char/iceman/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit12_pct" value="1.05" />
+            <talentvalue level="9" name="iceman_outfit12_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit12_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%iceman_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit13_dr" value="1" />
+            <talentvalue level="9" name="iceman_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iceman_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Cold Mastery" description="Increases $DMG_COLD." icon="2" icon_texture="textures/ui/iceman_icons.png" name="iceman_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit21_pct" value="1.03" />
+            <talentvalue level="9" name="iceman_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit21_pct:s $DMG_COLD">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%iceman_outfit21_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit22_pct" value="1.02" />
+            <talentvalue level="9" name="iceman_outfit22_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit22_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%iceman_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit23_dr" value="1" />
+            <talentvalue level="9" name="iceman_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iceman_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit31_pct" value="1.04" />
+            <talentvalue level="9" name="iceman_outfit31_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit31_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%iceman_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Cold Mastery" description="Increases $DMG_COLD." icon="2" icon_texture="textures/ui/iceman_icons.png" name="iceman_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit32_pct" value="1.03" />
+            <talentvalue level="9" name="iceman_outfit32_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit32_pct:s $DMG_COLD">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%iceman_outfit32_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit33_dr" value="1" />
+            <talentvalue level="9" name="iceman_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iceman_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Point Blank" description="Adds $DMG_COLD to all ranged attacks that hit enemies within 8 feet of Iceman." icon="1" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit41_pct" value="0.1" />
+            <talentvalue level="9" name="iceman_outfit41_pct" value="0.5" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit41_pct:p Added $DMG_COLD">
+            <powerup class="add_attack" damagepercent="%iceman_outfit41_pct" damagetype="dmg_cold" life="-1">
+                <affecter attribute="powerup_scope">
+                    <scope scope_attack="projectile" />
+                    <scope scope_attack="beam" />
+                    <scope scope_attack="blast" />
+                    <scope scope_attackdistance="96" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Frost Bite" description="Reflects $DMG back to attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit42_pct" value="0.25" />
+            <talentvalue level="9" name="iceman_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%iceman_outfit42_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%iceman_outfit42_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="iceman_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iceman_outfit43_dr" value="1" />
+            <talentvalue level="9" name="iceman_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iceman_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iceman_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

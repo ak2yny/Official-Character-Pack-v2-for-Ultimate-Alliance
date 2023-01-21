@@ -1,0 +1,438 @@
+<talents>
+    <talent descname="Energy Immunity" description="100% Immune to $DMG_ENERGY." name="gam_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_energy" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Charged Throw" description="Charges thrown enemies." name="gam_throw" type="ability" />
+    <talent descname="Card Shuffle" description="Multiple card projectile attack." descshort="Projectile" icon="0" icon_texture="textures/ui/gambit_icons.png" name="gam_card_shuffle" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="gam_shuffle_req" value="1" />
+            <talentvalue level="5" name="gam_shuffle_req" value="13" />
+            <talentvalue level="6" name="gam_shuffle_req" value="16" />
+            <talentvalue level="9" name="gam_shuffle_req" value="25" />
+            <talentvalue level="10" name="gam_shuffle_req" value="28" />
+            <talentvalue level="14" name="gam_shuffle_req" value="52" />
+            <talentvalue level="15" name="gam_shuffle_req" value="72" />
+            <talentvalue level="1" name="gam_shuffle_dmg" value="10 12" />
+            <talentvalue level="5" name="gam_shuffle_dmg" value="17 19" />
+            <talentvalue level="6" name="gam_shuffle_dmg" value="17 19" />
+            <talentvalue level="9" name="gam_shuffle_dmg" value="27 30" />
+            <talentvalue level="10" name="gam_shuffle_dmg" value="27 30" />
+            <talentvalue level="14" name="gam_shuffle_dmg" value="41 45" />
+            <talentvalue level="15" name="gam_shuffle_dmg" value="41 45" />
+            <talentvalue interpolate="false" level="1" name="gam_shuffle_num" value="1" />
+            <talentvalue interpolate="false" level="3" name="gam_shuffle_num" value="2" />
+            <talentvalue interpolate="false" level="5" name="gam_shuffle_num" value="3" />
+            <talentvalue interpolate="false" level="8" name="gam_shuffle_num" value="4" />
+            <talentvalue interpolate="false" level="10" name="gam_shuffle_num" value="5" />
+            <talentvalue interpolate="false" level="12" name="gam_shuffle_num" value="6" />
+            <talentvalue interpolate="false" level="15" name="gam_shuffle_num" value="7" />
+            <talentvalue level="1" name="gam_shuffle_pwr" value="8" />
+            <talentvalue level="5" name="gam_shuffle_pwr" value="17" />
+            <talentvalue level="6" name="gam_shuffle_pwr" value="19" />
+            <talentvalue level="9" name="gam_shuffle_pwr" value="24" />
+            <talentvalue level="10" name="gam_shuffle_pwr" value="26" />
+            <talentvalue level="14" name="gam_shuffle_pwr" value="41" />
+            <talentvalue level="15" name="gam_shuffle_pwr" value="52" />
+        </talentvalues>
+        <level description="%gam_shuffle_dmg $DMG_ENERGY per card\n%gam_shuffle_num Card(s)\n%gam_shuffle_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_shuffle_req" />
+        </level>
+    </talent>
+    <talent descname="Staff Assault" description="Multiple staff melee attacks in quick succession.  $PT_TAP" descshort="Melee" icon="2" icon_texture="textures/ui/gambit_icons.png" name="gam_staff_parry" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="gam_parry_req" value="5" />
+            <talentvalue level="5" name="gam_parry_req" value="14" />
+            <talentvalue level="6" name="gam_parry_req" value="17" />
+            <talentvalue level="9" name="gam_parry_req" value="26" />
+            <talentvalue level="10" name="gam_parry_req" value="29" />
+            <talentvalue level="14" name="gam_parry_req" value="53" />
+            <talentvalue level="15" name="gam_parry_req" value="73" />
+            <talentvalue level="1" name="gam_parry_dmg" value="11 13" />
+            <talentvalue level="5" name="gam_parry_dmg" value="20 23" />
+            <talentvalue level="6" name="gam_parry_dmg" value="31 34" />
+            <talentvalue level="9" name="gam_parry_dmg" value="41 45" />
+            <talentvalue level="10" name="gam_parry_dmg" value="54 60" />
+            <talentvalue level="14" name="gam_parry_dmg" value="85 94" />
+            <talentvalue level="15" name="gam_parry_dmg" value="126 139" />
+            <talentvalue level="1" name="gam_parry_pwr" value="13" />
+            <talentvalue level="5" name="gam_parry_pwr" value="21" />
+            <talentvalue level="6" name="gam_parry_pwr" value="22" />
+            <talentvalue level="9" name="gam_parry_pwr" value="30" />
+            <talentvalue level="10" name="gam_parry_pwr" value="33" />
+            <talentvalue level="14" name="gam_parry_pwr" value="49" />
+            <talentvalue level="15" name="gam_parry_pwr" value="61" />
+        </talentvalues>
+        <level description="%gam_parry_dmg $DMG_ENERGY per attack\n%gam_parry_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_parry_req" />
+        </level>
+    </talent>
+    <talent descname="Ace of Spades" description="Gambit throws down cards in front of him that will blow up when enemies approach them, causing $DMG_RADIATION." descshort="Trap" icon="3" icon_texture="textures/ui/gambit_icons.png" name="gam_ace_spades" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="gam_spades_req" value="10" />
+            <talentvalue level="3" name="gam_spades_req" value="13" />
+            <talentvalue level="4" name="gam_spades_req" value="16" />
+            <talentvalue level="7" name="gam_spades_req" value="25" />
+            <talentvalue level="8" name="gam_spades_req" value="28" />
+            <talentvalue level="12" name="gam_spades_req" value="52" />
+            <talentvalue level="13" name="gam_spades_req" value="72" />
+            <talentvalue level="1" name="gam_spades_dmg" value="27 30" />
+            <talentvalue level="3" name="gam_spades_dmg" value="31 34" />
+            <talentvalue level="4" name="gam_spades_dmg" value="44 49" />
+            <talentvalue level="7" name="gam_spades_dmg" value="61 68" />
+            <talentvalue level="8" name="gam_spades_dmg" value="82 90" />
+            <talentvalue level="12" name="gam_spades_dmg" value="129 143" />
+            <talentvalue level="13" name="gam_spades_dmg" value="190 210" />
+            <talentvalue interpolate="false" level="1" name="gam_spades_num" value="1" />
+            <talentvalue interpolate="false" level="4" name="gam_spades_num" value="2" />
+            <talentvalue interpolate="false" level="8" name="gam_spades_num" value="3" />
+            <talentvalue interpolate="false" level="10" name="gam_spades_num" value="4" />
+            <talentvalue interpolate="false" level="13" name="gam_spades_num" value="5" />
+            <talentvalue level="1" name="gam_spades_pwr" value="14" />
+            <talentvalue level="3" name="gam_spades_pwr" value="17" />
+            <talentvalue level="4" name="gam_spades_pwr" value="19" />
+            <talentvalue level="7" name="gam_spades_pwr" value="24" />
+            <talentvalue level="8" name="gam_spades_pwr" value="26" />
+            <talentvalue level="12" name="gam_spades_pwr" value="41" />
+            <talentvalue level="13" name="gam_spades_pwr" value="52" />
+        </talentvalues>
+        <level description="%gam_spades_dmg $DMG_RADIATION per card\n%gam_spades_num Card(s)\n%gam_spades_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_spades_req" />
+        </level>
+    </talent>
+    <talent descname="Staff Slam" description="Radial energy attack." descshort="Radial" icon="1" icon_texture="textures/ui/gambit_icons.png" name="gam_staff_slam" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="gam_slam_req" value="14" />
+            <talentvalue level="2" name="gam_slam_req" value="17" />
+            <talentvalue level="5" name="gam_slam_req" value="26" />
+            <talentvalue level="6" name="gam_slam_req" value="29" />
+            <talentvalue level="10" name="gam_slam_req" value="53" />
+            <talentvalue level="11" name="gam_slam_req" value="73" />
+            <talentvalue level="1" name="gam_slam_dmg" value="20 23" />
+            <talentvalue level="2" name="gam_slam_dmg" value="31 34" />
+            <talentvalue level="5" name="gam_slam_dmg" value="41 45" />
+            <talentvalue level="6" name="gam_slam_dmg" value="54 60" />
+            <talentvalue level="10" name="gam_slam_dmg" value="85 94" />
+            <talentvalue level="11" name="gam_slam_dmg" value="126 139" />
+            <talentvalue level="1" name="gam_slam_range" value="120" />
+            <talentvalue level="11" name="gam_slam_range" value="144" />
+            <talentvalue level="1" name="gam_slam_pwr" value="19" />
+            <talentvalue level="2" name="gam_slam_pwr" value="21" />
+            <talentvalue level="5" name="gam_slam_pwr" value="22" />
+            <talentvalue level="6" name="gam_slam_pwr" value="30" />
+            <talentvalue level="10" name="gam_slam_pwr" value="33" />
+            <talentvalue level="11" name="gam_slam_pwr" value="49" />
+        </talentvalues>
+        <level description="%gam_slam_dmg $DMG_ENERGY\n%gam_slam_range:r Feet range\n%gam_slam_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_slam_req" />
+        </level>
+    </talent>
+    <talent descname="Full House" description="Gambit throws down cards in front of him that will blow up when enemies approach them, causing popup." descshort="Trap" icon="4" icon_texture="textures/ui/gambit_icons.png" name="gam_full_house" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="gam_house_req" value="17" />
+            <talentvalue level="4" name="gam_house_req" value="26" />
+            <talentvalue level="5" name="gam_house_req" value="29" />
+            <talentvalue level="9" name="gam_house_req" value="53" />
+            <talentvalue level="10" name="gam_house_req" value="73" />
+            <talentvalue level="1" name="gam_house_dmg" value="20 23" />
+            <talentvalue level="4" name="gam_house_dmg" value="31 34" />
+            <talentvalue level="5" name="gam_house_dmg" value="37 41" />
+            <talentvalue level="9" name="gam_house_dmg" value="65 71" />
+            <talentvalue level="10" name="gam_house_dmg" value="92 101" />
+            <talentvalue interpolate="false" level="1" name="gam_house_num" value="2" />
+            <talentvalue interpolate="false" level="3" name="gam_house_num" value="3" />
+            <talentvalue interpolate="false" level="5" name="gam_house_num" value="4" />
+            <talentvalue interpolate="false" level="7" name="gam_house_num" value="5" />
+            <talentvalue interpolate="false" level="10" name="gam_house_num" value="6" />
+            <talentvalue level="1" name="gam_house_pwr" value="19" />
+            <talentvalue level="4" name="gam_house_pwr" value="25" />
+            <talentvalue level="5" name="gam_house_pwr" value="28" />
+            <talentvalue level="9" name="gam_house_pwr" value="42" />
+            <talentvalue level="10" name="gam_house_pwr" value="52" />
+        </talentvalues>
+        <level description="%gam_house_dmg $DMG_ENERGY per card\n%gam_house_num Cards\n%gam_house_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_house_req" />
+        </level>
+    </talent>
+    <talent descname="Detonation" description="Charges an enemy, causing massive $KB on explosion." descshort="Special" icon="5" icon_texture="textures/ui/gambit_icons.png" name="gam_detonation" power="power6">
+        <talentvalues>
+            <talentvalue level="1" name="gam_deton_req" value="20" />
+            <talentvalue level="3" name="gam_deton_req" value="29" />
+            <talentvalue level="4" name="gam_deton_req" value="32" />
+            <talentvalue level="8" name="gam_deton_req" value="56" />
+            <talentvalue level="9" name="gam_deton_req" value="76" />
+            <talentvalue level="1" name="gam_deton_dmg" value="24 27" />
+            <talentvalue level="3" name="gam_deton_dmg" value="31 34" />
+            <talentvalue level="4" name="gam_deton_dmg" value="41 45" />
+            <talentvalue level="8" name="gam_deton_dmg" value="65 71" />
+            <talentvalue level="9" name="gam_deton_dmg" value="95 105" />
+            <talentvalue level="1" name="gam_deton_dmg2" value="61 68" />
+            <talentvalue level="3" name="gam_deton_dmg2" value="75 83" />
+            <talentvalue level="4" name="gam_deton_dmg2" value="99 109" />
+            <talentvalue level="8" name="gam_deton_dmg2" value="153 169" />
+            <talentvalue level="9" name="gam_deton_dmg2" value="224 248" />
+            <talentvalue level="1" name="gam_deton_kb" value="190" />
+            <talentvalue level="9" name="gam_deton_kb" value="430" />
+            <talentvalue level="1" name="gam_deton_pwr" value="20" />
+            <talentvalue level="3" name="gam_deton_pwr" value="24" />
+            <talentvalue level="4" name="gam_deton_pwr" value="25" />
+            <talentvalue level="8" name="gam_deton_pwr" value="39" />
+            <talentvalue level="9" name="gam_deton_pwr" value="47" />
+        </talentvalues>
+        <level description="%gam_deton_dmg $DMG_ENERGY\n%gam_deton_dmg2 exploding $DMG_ENERGY\n%gam_deton_kb $KB\n%gam_deton_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_deton_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Form" description="Turns parts of Gambit's body into energy, improving defense and speed." descshort="Boost" icon="6" icon_texture="textures/ui/gambit_icons.png" name="gam_energy_form" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="gam_form_req" value="2" />
+            <talentvalue level="5" name="gam_form_req" value="14" />
+            <talentvalue level="6" name="gam_form_req" value="17" />
+            <talentvalue level="9" name="gam_form_req" value="26" />
+            <talentvalue level="10" name="gam_form_req" value="29" />
+            <talentvalue level="14" name="gam_form_req" value="53" />
+            <talentvalue level="15" name="gam_form_req" value="73" />
+            <talentvalue level="1" name="gam_form_def_boost" value="1" />
+            <talentvalue level="15" name="gam_form_def_boost" value="15" />
+            <talentvalue level="1" name="gam_form_move_scale" value="1.25" />
+            <talentvalue level="15" name="gam_form_move_scale" value="2.09" />
+            <talentvalue level="1" name="gam_form_time" value="20" />
+            <talentvalue level="5" name="gam_form_time" value="40" />
+            <talentvalue level="6" name="gam_form_time" value="50" />
+            <talentvalue level="9" name="gam_form_time" value="65" />
+            <talentvalue level="10" name="gam_form_time" value="80" />
+            <talentvalue level="14" name="gam_form_time" value="120" />
+            <talentvalue level="15" name="gam_form_time" value="180" />
+            <talentvalue level="1" name="gam_form_pwr" value="32" />
+            <talentvalue level="5" name="gam_form_pwr" value="64" />
+            <talentvalue level="6" name="gam_form_pwr" value="68" />
+            <talentvalue level="9" name="gam_form_pwr" value="92" />
+            <talentvalue level="10" name="gam_form_pwr" value="100" />
+            <talentvalue level="14" name="gam_form_pwr" value="152" />
+            <talentvalue level="15" name="gam_form_pwr" value="188" />
+        </talentvalues>
+        <level description="+%gam_form_def_boost $DR\n%gam_form_move_scale:s Speed\n%gam_form_time Seconds\n%gam_form_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_form_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Fury" description="Gives nearby allies and self $DMG_ENERGY on all melee attacks." descshort="Boost" icon="7" icon_texture="textures/ui/gambit_icons.png" name="gam_energy_fury" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="gam_fury_req" value="14" />
+            <talentvalue level="2" name="gam_fury_req" value="17" />
+            <talentvalue level="5" name="gam_fury_req" value="26" />
+            <talentvalue level="6" name="gam_fury_req" value="29" />
+            <talentvalue level="10" name="gam_fury_req" value="53" />
+            <talentvalue level="11" name="gam_fury_req" value="73" />
+            <talentvalue level="1" name="gam_fury_dam_boost" value="0.05" />
+            <talentvalue level="11" name="gam_fury_dam_boost" value="0.47" />
+            <talentvalue level="1" name="gam_fury_time" value="40" />
+            <talentvalue level="2" name="gam_fury_time" value="50" />
+            <talentvalue level="5" name="gam_fury_time" value="65" />
+            <talentvalue level="6" name="gam_fury_time" value="80" />
+            <talentvalue level="10" name="gam_fury_time" value="120" />
+            <talentvalue level="11" name="gam_fury_time" value="180" />
+            <talentvalue level="1" name="gam_fury_pwr" value="64" />
+            <talentvalue level="2" name="gam_fury_pwr" value="68" />
+            <talentvalue level="5" name="gam_fury_pwr" value="92" />
+            <talentvalue level="6" name="gam_fury_pwr" value="100" />
+            <talentvalue level="10" name="gam_fury_pwr" value="152" />
+            <talentvalue level="11" name="gam_fury_pwr" value="188" />
+        </talentvalues>
+        <level description="+%gam_fury_dam_boost:p Melee $DMG as $DMG_ENERGY\n%gam_fury_time Seconds\n%gam_fury_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%gam_fury_req" />
+        </level>
+    </talent>
+    <talent descname="52 Pickup" description="Throws cards into the air which rain down $DMG_ENERGY. Also increases Shield Credit dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/gambit_icons.png" name="gam_52_pickup" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="gam_pickup_req" value="10" />
+            <talentvalue level="8" name="gam_pickup_req" value="45" />
+            <talentvalue level="1" name="gam_pickup_damage" value="85 94" />
+            <talentvalue level="8" name="gam_pickup_damage" value="339 375" />
+            <talentvalue level="1" name="gam_pickup_money" value="4" />
+            <talentvalue level="8" name="gam_pickup_money" value="6" />
+        </talentvalues>
+        <level description="%gam_pickup_damage $DMG_ENERGY\n%gam_pickup_money:s Shield Credit from enemies">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%gam_pickup_req" />
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases $DMG of powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit11_pct" value="1.03" />
+            <talentvalue level="9" name="gam_outfit11_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%gam_outfit11_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%gam_outfit11_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="gam_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit12_pct" value="1.01" />
+            <talentvalue level="9" name="gam_outfit12_pct" value="1.05" />
+            <talentvalue level="1" name="gam_outfit12_shw" value="1" />
+            <talentvalue level="9" name="gam_outfit12_shw" value="5" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit12_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%gam_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit13_dr" value="1" />
+            <talentvalue level="9" name="gam_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%gam_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Increased Reflexes" description="Increases chance to dodge attacks." icon="11" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit21_pct" value="0.03" />
+            <talentvalue level="9" name="gam_outfit21_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit21_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%gam_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Charged Fists" description="Adds $DMG_ENERGY to all melee attacks." icon="10" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit22_pct" value="0.04" />
+            <talentvalue level="9" name="gam_outfit22_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit22_pct:p Added $DMG_ENERGY">
+            <powerup class="add_attack" damagepercent="%gam_outfit22_pct" damagetype="dmg_energy" life="-1">
+                <special_fx effect="char/gambit/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit23_dr" value="1" />
+            <talentvalue level="9" name="gam_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%gam_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="gam_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit31_dmg" value="1.04" />
+            <talentvalue level="9" name="gam_outfit31_dmg" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%gam_outfit31_dmg:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%gam_outfit31_dmg" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="gam_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit32_hlt" value="1.05" />
+            <talentvalue level="9" name="gam_outfit32_hlt" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%gam_outfit32_hlt:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%gam_outfit32_hlt" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit33_dr" value="1" />
+            <talentvalue level="9" name="gam_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%gam_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="gam_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit41_pct" value="0.02" />
+            <talentvalue level="9" name="gam_outfit41_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit41_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%gam_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Ace of Spades" description="Boosts body, focus, and strike stats." icon="3" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit42_pct" value="2" />
+            <talentvalue level="9" name="gam_outfit42_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit42_pct Body\n+%gam_outfit42_pct Focus\n+%gam_outfit42_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%gam_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="gam_outfit43_dr" value="1" />
+            <talentvalue level="9" name="gam_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%gam_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%gam_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

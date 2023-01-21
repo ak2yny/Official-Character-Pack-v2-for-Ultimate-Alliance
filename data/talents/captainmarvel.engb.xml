@@ -1,0 +1,395 @@
+<talents>
+    <talent descname="Nebula Beam" description="Tapping into cosmic energies Captain Marvel is able to release a blast of energy that will explode dealing damage to all enemies caught in the radius. $PT_CHARGE" descshort="Projectile" icon="0" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p1_req" value="1" />
+            <talentvalue level="5" name="captma_p1_req" value="13" />
+            <talentvalue level="6" name="captma_p1_req" value="16" />
+            <talentvalue level="9" name="captma_p1_req" value="25" />
+            <talentvalue level="10" name="captma_p1_req" value="28" />
+            <talentvalue level="14" name="captma_p1_req" value="52" />
+            <talentvalue level="15" name="captma_p1_req" value="72" />
+            <talentvalue level="1" name="captma_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="captma_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="captma_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="captma_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="captma_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="captma_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="captma_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="captma_p1_pwr" value="7" />
+            <talentvalue level="5" name="captma_p1_pwr" value="15" />
+            <talentvalue level="6" name="captma_p1_pwr" value="17" />
+            <talentvalue level="9" name="captma_p1_pwr" value="22" />
+            <talentvalue level="10" name="captma_p1_pwr" value="24" />
+            <talentvalue level="14" name="captma_p1_pwr" value="37" />
+            <talentvalue level="15" name="captma_p1_pwr" value="47" />
+            <talentvalue level="1" name="captma_p1_rad" value="45" value_charged="60" />
+            <talentvalue level="15" name="captma_p1_rad" value="90" value_charged="120" />
+            <talentvalue level="1" name="captma_p1_fx" value="1" value_charged="2" />
+        </talentvalues>
+        <level description="%captma_p1_dmg $DMG \n%captma_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Negablast" description="Slamming the Nega-Bands together creates a shockwave knocking back and damaging enemies, there is a chance to take 50% of a stunned enemies health." descshort="Radial" icon="1" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p2_req" value="5" />
+            <talentvalue level="4" name="captma_p2_req" value="14" />
+            <talentvalue level="5" name="captma_p2_req" value="17" />
+            <talentvalue level="8" name="captma_p2_req" value="26" />
+            <talentvalue level="9" name="captma_p2_req" value="29" />
+            <talentvalue level="13" name="captma_p2_req" value="53" />
+            <talentvalue level="14" name="captma_p2_req" value="73" />
+            <talentvalue level="1" name="captma_p2_dmg" value="13 15" />
+            <talentvalue level="4" name="captma_p2_dmg" value="24 26" />
+            <talentvalue level="5" name="captma_p2_dmg" value="31 34" />
+            <talentvalue level="8" name="captma_p2_dmg" value="44 49" />
+            <talentvalue level="9" name="captma_p2_dmg" value="54 60" />
+            <talentvalue level="13" name="captma_p2_dmg" value="88 98" />
+            <talentvalue level="14" name="captma_p2_dmg" value="126 139" />
+            <talentvalue level="1" name="captma_p2_pwr" value="13" />
+            <talentvalue level="4" name="captma_p2_pwr" value="21" />
+            <talentvalue level="5" name="captma_p2_pwr" value="22" />
+            <talentvalue level="8" name="captma_p2_pwr" value="30" />
+            <talentvalue level="9" name="captma_p2_pwr" value="33" />
+            <talentvalue level="13" name="captma_p2_pwr" value="49" />
+            <talentvalue level="14" name="captma_p2_pwr" value="61" />
+            <talentvalue level="1" name="captma_p2_chc" value="0.25" />
+            <talentvalue level="14" name="captma_p2_chc" value="0.75" />
+            <talentvalue level="1" name="captma_p2_kb" value="120" />
+            <talentvalue level="14" name="captma_p2_kb" value="245" />
+        </talentvalues>
+        <level description="%captma_p2_dmg $DMG \n%captma_p2_pwr $EP \n%captma_p2_chc:P of taking 50% of stunned enemies health">
+            <tier cost="1" count="4" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Star Beam" description="An energy beam attack that can be charged to do even more damage. $PT_CHARGE" descshort="Projectile" icon="2" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p3_req" value="10" />
+            <talentvalue level="2" name="captma_p3_req" value="13" />
+            <talentvalue level="3" name="captma_p3_req" value="16" />
+            <talentvalue level="6" name="captma_p3_req" value="25" />
+            <talentvalue level="7" name="captma_p3_req" value="28" />
+            <talentvalue level="11" name="captma_p3_req" value="52" />
+            <talentvalue level="12" name="captma_p3_req" value="72" />
+            <talentvalue level="1" name="captma_p3_dmg" value="48 53" value_charged_scale="2.0" />
+            <talentvalue level="2" name="captma_p3_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="3" name="captma_p3_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="6" name="captma_p3_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="7" name="captma_p3_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="11" name="captma_p3_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="12" name="captma_p3_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="captma_p3_pwr" value="15" />
+            <talentvalue level="2" name="captma_p3_pwr" value="17" />
+            <talentvalue level="3" name="captma_p3_pwr" value="19" />
+            <talentvalue level="6" name="captma_p3_pwr" value="26" />
+            <talentvalue level="7" name="captma_p3_pwr" value="28" />
+            <talentvalue level="11" name="captma_p3_pwr" value="44" />
+            <talentvalue level="12" name="captma_p3_pwr" value="55" />
+            <talentvalue level="1" name="captma_p3_fx" value="1" value_charged="2" />
+        </talentvalues>
+        <level description="%captma_p3_dmg $DMG \n%captma_p3_pwr $EP">
+            <tier cost="1" count="2" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Shooting Stars" description="An energy blast that fires out shooting stars doing damage, tap for additional shooting stars. $PT_TAP" descshort="Radial" icon="3" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p4_req" value="17" />
+            <talentvalue level="4" name="captma_p4_req" value="26" />
+            <talentvalue level="5" name="captma_p4_req" value="29" />
+            <talentvalue level="9" name="captma_p4_req" value="53" />
+            <talentvalue level="10" name="captma_p4_req" value="73" />
+            <talentvalue level="1" name="captma_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="captma_p4_dmg" value="44 49" />
+            <talentvalue level="5" name="captma_p4_dmg" value="54 60" />
+            <talentvalue level="9" name="captma_p4_dmg" value="88 98" />
+            <talentvalue level="10" name="captma_p4_dmg" value="126 139" />
+            <talentvalue level="1" name="captma_p4_dmg2" value="13 15" />
+            <talentvalue level="4" name="captma_p4_dmg2" value="13 15" />
+            <talentvalue level="5" name="captma_p4_dmg2" value="17 19" />
+            <talentvalue level="9" name="captma_p4_dmg2" value="24 26" />
+            <talentvalue level="10" name="captma_p4_dmg2" value="37 41" />
+            <talentvalue level="1" name="captma_p4_pwr" value="22" />
+            <talentvalue level="4" name="captma_p4_pwr" value="30" />
+            <talentvalue level="5" name="captma_p4_pwr" value="33" />
+            <talentvalue level="9" name="captma_p4_pwr" value="49" />
+            <talentvalue level="10" name="captma_p4_pwr" value="61" />
+        </talentvalues>
+        <level description="%captma_p4_dmg $DMG for intial blast costing %captma_p4_pwr $EP \n%captma_p4_dmg2 $DMG per shooting star costing %captma_p4_pwr2 $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Star Fall" description="Energy rains down and rips through enemies." descshort="Radial" icon="8" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p5_req" value="20" />
+            <talentvalue level="3" name="captma_p5_req" value="26" />
+            <talentvalue level="4" name="captma_p5_req" value="29" />
+            <talentvalue level="8" name="captma_p5_req" value="53" />
+            <talentvalue level="9" name="captma_p5_req" value="73" />
+            <talentvalue level="1" name="captma_p5_pwr" value="21" />
+            <talentvalue level="3" name="captma_p5_pwr" value="25" />
+            <talentvalue level="4" name="captma_p5_pwr" value="28" />
+            <talentvalue level="8" name="captma_p5_pwr" value="42" />
+            <talentvalue level="9" name="captma_p5_pwr" value="52" />
+            <talentvalue level="1" name="captma_p5_dmg" value="54 60" />
+            <talentvalue level="3" name="captma_p5_dmg" value="65 71" />
+            <talentvalue level="4" name="captma_p5_dmg" value="85 94" />
+            <talentvalue level="8" name="captma_p5_dmg" value="132 147" />
+            <talentvalue level="9" name="captma_p5_dmg" value="190 210" />
+            <talentvalue level="1" name="captma_p5_life" value="3" />
+            <talentvalue level="9" name="captma_p5_life" value="5" />
+        </talentvalues>
+        <level description="%captma_p5_dmg $DMG \n%captma_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Cosmic Rage" description="Draws in power from the cosmos and boosts his speed and damage output for a short period of time" descshort="Boost" icon="5" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p6_req" value="2" />
+            <talentvalue level="5" name="captma_p6_req" value="14" />
+            <talentvalue level="6" name="captma_p6_req" value="17" />
+            <talentvalue level="9" name="captma_p6_req" value="26" />
+            <talentvalue level="10" name="captma_p6_req" value="29" />
+            <talentvalue level="14" name="captma_p6_req" value="53" />
+            <talentvalue level="15" name="captma_p6_req" value="73" />
+            <talentvalue level="1" name="captma_p6_pwr" value="32" />
+            <talentvalue level="5" name="captma_p6_pwr" value="64" />
+            <talentvalue level="6" name="captma_p6_pwr" value="68" />
+            <talentvalue level="9" name="captma_p6_pwr" value="92" />
+            <talentvalue level="10" name="captma_p6_pwr" value="100" />
+            <talentvalue level="14" name="captma_p6_pwr" value="152" />
+            <talentvalue level="15" name="captma_p6_pwr" value="188" />
+            <talentvalue level="1" name="captma_p6_dmg" value="1.05" />
+            <talentvalue level="5" name="captma_p6_dmg" value="1.08" />
+            <talentvalue level="6" name="captma_p6_dmg" value="1.1" />
+            <talentvalue level="9" name="captma_p6_dmg" value="1.11" />
+            <talentvalue level="10" name="captma_p6_dmg" value="1.13" />
+            <talentvalue level="14" name="captma_p6_dmg" value="1.2" />
+            <talentvalue level="15" name="captma_p6_dmg" value="1.25" />
+            <talentvalue level="1" name="captma_p6_ar" value="1.2" />
+            <talentvalue level="15" name="captma_p6_ar" value="1.6" />
+            <talentvalue level="1" name="captma_p6_spe" value="1.1" />
+            <talentvalue level="15" name="captma_p6_spe" value="1.6" />
+            <talentvalue level="1" name="captma_p6_lif" value="32" />
+            <talentvalue level="5" name="captma_p6_lif" value="60" />
+            <talentvalue level="6" name="captma_p6_lif" value="68" />
+            <talentvalue level="9" name="captma_p6_lif" value="88" />
+            <talentvalue level="10" name="captma_p6_lif" value="92" />
+            <talentvalue level="14" name="captma_p6_lif" value="140" />
+            <talentvalue level="15" name="captma_p6_lif" value="172" />
+        </talentvalues>
+        <level description="%captma_p6_spe:p Attack Speed\n%captma_p6_dmg:p melee $DMG\n%captma_p6_ar:p $AR\n%captma_p6_lif Sec.\n%captma_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Nega-Phase" description="Phasing partially back into the negative dimension to heal and becomes invisible for a short period of time." descshort="Boost" icon="6" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p7_req" value="14" />
+            <talentvalue level="2" name="captma_p7_req" value="17" />
+            <talentvalue level="4" name="captma_p7_req" value="26" />
+            <talentvalue level="5" name="captma_p7_req" value="29" />
+            <talentvalue level="10" name="captma_p7_req" value="53" />
+            <talentvalue level="11" name="captma_p7_req" value="73" />
+            <talentvalue level="1" name="captma_p7_lif" value="14" />
+            <talentvalue level="2" name="captma_p7_lif" value="18" />
+            <talentvalue level="4" name="captma_p7_lif" value="25" />
+            <talentvalue level="5" name="captma_p7_lif" value="30" />
+            <talentvalue level="10" name="captma_p7_lif" value="50" />
+            <talentvalue level="11" name="captma_p7_lif" value="56" />
+            <talentvalue level="1" name="captma_p7_def" value="3" />
+            <talentvalue level="11" name="captma_p7_def" value="30" />
+            <talentvalue level="1" name="captma_p7_pwr" value="64" />
+            <talentvalue level="2" name="captma_p7_pwr" value="68" />
+            <talentvalue level="4" name="captma_p7_pwr" value="92" />
+            <talentvalue level="5" name="captma_p7_pwr" value="100" />
+            <talentvalue level="10" name="captma_p7_pwr" value="152" />
+            <talentvalue level="11" name="captma_p7_pwr" value="188" />
+            <talentvalue level="1" name="captma_p7_regen" value="0.05" />
+            <talentvalue level="11" name="captma_p7_regen" value="0.1" />
+        </talentvalues>
+        <level description="Effect lasts %captma_p7_lif seconds with a healing rate increase of %captma_p7_regen:p">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%captma_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Big Bang" description="Pulling in the power of the cosmos which explodes doing massive damage to all enemies in range." descshort="Xtreme" icon="7" icon_texture="textures/ui/captainmarvel_icons.png" name="captma_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="captma_p8_req" value="10" />
+            <talentvalue level="4" name="captma_p8_req" value="25" />
+            <talentvalue level="5" name="captma_p8_req" value="30" />
+            <talentvalue level="8" name="captma_p8_req" value="48" />
+            <talentvalue level="1" name="captma_p8_dmg" value="85 94" />
+            <talentvalue level="8" name="captma_p8_dmg" value="339 375" />
+            <talentvalue level="1" name="captma_p8_kb" value="120" />
+            <talentvalue level="6" name="captma_p8_kb" value="245" />
+        </talentvalues>
+        <level description="%captma_p8_dmg $DMG">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%captma_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects a percentage of damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit11" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="marvel_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit11_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter attribute="reflect_damage" level="%marvel_outfit11_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit12" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="marvel_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit12_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%marvel_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit13" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit13_dr" value="1" />
+            <talentvalue level="9" name="marvel_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%marvel_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%marvel_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP" icon="20" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit21" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit21_pct" value="1.05" />
+            <talentvalue level="9" name="marvel_outfit21_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit21_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%marvel_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Mastery" description="Increases damage done with energy attacks." icon="9" icon_texture="textures/ui/captainmarvel_icons.png" name="marvel_outfit22" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit22_pct" value="1.03" />
+            <talentvalue level="9" name="marvel_outfit22_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit22_pct:p $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%marvel_outfit22_pct" scope_attack="energy" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit23" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit23_dr" value="1" />
+            <talentvalue level="9" name="marvel_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%marvel_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%marvel_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Gain Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit31" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="marvel_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit31_pct:s Momentum Rate">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%marvel_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resist All" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit32" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit32_pct" value="0.02" />
+            <talentvalue level="9" name="marvel_outfit32_pct" value="0.1" />
+            <talentvalue level="1" name="marvel_outfit32_shw" value="2" />
+            <talentvalue level="9" name="marvel_outfit32_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%marvel_outfit32_pct:p All resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%marvel_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit33" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit33_dr" value="1" />
+            <talentvalue level="9" name="marvel_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%marvel_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%marvel_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Mind Increase" description="Increases mind attribute." icon="12" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit41" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit41_pct" value="3" />
+            <talentvalue level="9" name="marvel_outfit41_pct" value="15" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit41_pct">
+            <powerup life="-1">
+                <affecter attribute="mind" level="%marvel_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Skill Boost" description="Chance to execute powers at 1 rank higher than normal." icon="18" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit42" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit42_pct" value="0.05" />
+            <talentvalue level="9" name="marvel_outfit42_pct" value="0.25" />
+        </talentvalues>
+        <level count="9" description="%marvel_outfit42_pct:p Chance">
+            <powerup chance="%marvel_outfit42_pct" class="skillincrease" level="1" life="-1" />
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit43" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="marvel_outfit43_dr" value="1" />
+            <talentvalue level="9" name="marvel_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%marvel_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%marvel_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

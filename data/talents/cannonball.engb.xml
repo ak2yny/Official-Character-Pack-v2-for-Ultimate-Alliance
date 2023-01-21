@@ -1,0 +1,351 @@
+<talents>
+    <talent descname="Rocket Attack" description="Blasts forward damaging and stunning enemies in a short range." descshort="Melee" icon="0" icon_texture="textures/ui/cannonball_icons.png" name="can_rocket" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="can_rocket_req" value="1" />
+            <talentvalue level="5" name="can_rocket_req" value="8" />
+            <talentvalue level="6" name="can_rocket_req" value="15" />
+            <talentvalue level="9" name="can_rocket_req" value="28" />
+            <talentvalue level="10" name="can_rocket_req" value="32" />
+            <talentvalue level="14" name="can_rocket_req" value="48" />
+            <talentvalue level="15" name="can_rocket_req" value="58" />
+            <talentvalue level="1" name="can_rocket_pdmg" value="8 12" />
+            <talentvalue level="5" name="can_rocket_pdmg" value="16 21" />
+            <talentvalue level="6" name="can_rocket_pdmg" value="27 33" />
+            <talentvalue level="9" name="can_rocket_pdmg" value="45 52" />
+            <talentvalue level="10" name="can_rocket_pdmg" value="54 62" />
+            <talentvalue level="14" name="can_rocket_pdmg" value="75 84" />
+            <talentvalue level="15" name="can_rocket_pdmg" value="90 100" />
+            <talentvalue level="1" name="can_rocket_pwr" value="10" />
+            <talentvalue level="15" name="can_rocket_pwr" value="110" />
+        </talentvalues>
+        <level description="%can_rocket_pdmg $DMG_FIRE\n%can_rocket_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_rocket_req" />
+        </level>
+    </talent>
+    <talent descname="Personal Shield" description="Damage is reduced when Cannonball is charged and ready for combat." descshort="Boost" icon="8" icon_texture="textures/ui/cannonball_icons.png" name="can_shield" power="power2" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="can_shield_req" value="1" />
+            <talentvalue level="5" name="can_shield_req" value="14" />
+            <talentvalue level="6" name="can_shield_req" value="17" />
+            <talentvalue level="9" name="can_shield_req" value="26" />
+            <talentvalue level="10" name="can_shield_req" value="31" />
+            <talentvalue level="14" name="can_shield_req" value="39" />
+            <talentvalue level="15" name="can_shield_req" value="45" />
+            <talentvalue level="1" name="can_shield_res" value="120" />
+            <talentvalue level="15" name="can_shield_res" value="300" />
+            <talentvalue level="1" name="can_shield_pwr" value="20" />
+            <talentvalue level="15" name="can_shield_pwr" value="200" />
+        </talentvalues>
+        <level description="%can_shield_res $DMG_PHYSICAL absorbed\n%can_shield_pwr $EP">
+            <tier cost="1" count="4" />
+            <tier cost="2" count="5" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_shield_req" />
+        </level>
+    </talent>
+    <talent descname="Hand Blast" description="A powerful frontal attack, with a large amount of damage." descshort="Melee" icon="2" icon_texture="textures/ui/cannonball_icons.png" name="can_blast" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="can_blast_req" value="1" />
+            <talentvalue level="3" name="can_blast_req" value="19" />
+            <talentvalue level="4" name="can_blast_req" value="24" />
+            <talentvalue level="7" name="can_blast_req" value="35" />
+            <talentvalue level="8" name="can_blast_req" value="40" />
+            <talentvalue level="12" name="can_blast_req" value="55" />
+            <talentvalue level="13" name="can_blast_req" value="62" />
+            <talentvalue level="15" name="can_blast_req" value="72" />
+            <talentvalue level="1" name="can_blast_dmg" value="3.5" />
+            <talentvalue level="20" name="can_blast_dmg" value="9.2" />
+            <talentvalue level="1" name="can_blast_pwr" value="15" />
+            <talentvalue level="3" name="can_blast_pwr" value="25" />
+            <talentvalue level="4" name="can_blast_pwr" value="29" />
+            <talentvalue level="7" name="can_blast_pwr" value="39" />
+            <talentvalue level="8" name="can_blast_pwr" value="44" />
+            <talentvalue level="12" name="can_blast_pwr" value="65" />
+            <talentvalue level="13" name="can_blast_pwr" value="71" />
+            <talentvalue level="15" name="can_blast_pwr" value="86" />
+        </talentvalues>
+        <level description="%can_blast_dmg:s $DMG_FIRE  (%can_blast_dmg:x)\n%can_blast_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_blast_req" />
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%can_blast_dmg" scope_node="can_power3" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Multi Hand Blast" description="Multiple punches that damage and stun enemies, hold button down for several punches." descshort="Melee" icon="3" icon_texture="textures/ui/cannonball_icons.png" name="can_multi" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="can_multi_req" value="14" />
+            <talentvalue level="4" name="can_multi_req" value="25" />
+            <talentvalue level="5" name="can_multi_req" value="29" />
+            <talentvalue level="9" name="can_multi_req" value="45" />
+            <talentvalue level="10" name="can_multi_req" value="51" />
+            <talentvalue level="15" name="can_multi_req" value="69" />
+            <talentvalue level="1" name="can_multi_dmg" value="2" />
+            <talentvalue level="15" name="can_multi_dmg" value="8" />
+            <talentvalue level="1" name="can_multi_dmgp" value="1" />
+            <talentvalue level="15" name="can_multi_dmgp" value="7" />
+            <talentvalue level="1" name="can_multi_pwr" value="10" />
+            <talentvalue level="4" name="can_multi_pwr" value="20" />
+            <talentvalue level="5" name="can_multi_pwr" value="25" />
+            <talentvalue level="9" name="can_multi_pwr" value="39" />
+            <talentvalue level="10" name="can_multi_pwr" value="46" />
+            <talentvalue level="15" name="can_multi_pwr" value="72" />
+        </talentvalues>
+        <level description="%can_multi_dmg:s $DMG first blow  (%can_multi_dmg:x)\n%can_multi_dmgp:s additional blows  (%can_multi_dmgp:x)\n%can_multi_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="2" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_multi_req" />
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%can_multi_dmg" scope_node="can_power4" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Explosive Blows" description="Charging his body, Cannonball does more damage with each attack." descshort="Boost" icon="4" icon_texture="textures/ui/cannonball_icons.png" name="can_explosive" power="power5" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="can_explosive_req" value="20" />
+            <talentvalue level="15" name="can_explosive_req" value="60" />
+            <talentvalue level="1" name="can_explosive_life" value="10" />
+            <talentvalue level="15" name="can_explosive_life" value="25" />
+            <talentvalue level="1" name="can_explosive_res" value="1.2" />
+            <talentvalue level="15" name="can_explosive_res" value="2.6" />
+            <talentvalue level="1" name="can_explosive_dmg" value="0.05" />
+            <talentvalue level="15" name="can_explosive_dmg" value="0.47" />
+            <talentvalue level="1" name="can_explosive_pwr" value="8" />
+            <talentvalue level="15" name="can_explosive_pwr" value="76" />
+        </talentvalues>
+        <level description="%can_explosive_res:p $DMG_ENERGY\n%can_explosive_life seconds\n%can_explosive_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="2" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_explosive_req" />
+        </level>
+    </talent>
+    <talent descname="Party Shield" description="The party is immune to $DMG_PHYSICAL for a short period of time." descshort="Boost" icon="4" icon_texture="textures/ui/cannonball_icons.png" name="can_party" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="can_party_req" value="14" />
+            <talentvalue level="15" name="can_party_req" value="59" />
+            <talentvalue level="1" name="can_party_lif" value="5" />
+            <talentvalue level="15" name="can_party_lif" value="10" />
+            <talentvalue level="1" name="can_party_pwr" value="80" />
+            <talentvalue level="15" name="can_party_pwr" value="400" />
+        </talentvalues>
+        <level description="%can_party_lif seconds\n%can_party_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="3" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_party_req" />
+        </level>
+    </talent>
+    <talent descname="Shock Waves" description="Cannoball slamms into the ground damaging most enemies in the area and knocking them off their feet." descshort="XTreme" icon="6" icon_texture="textures/ui/cannonball_icons.png" name="can_shock" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="can_shock_req" value="14" />
+            <talentvalue level="15" name="can_shock_req" value="50" />
+            <talentvalue level="1" name="can_shock_life" value="1" />
+            <talentvalue level="15" name="can_shock_life" value="3" />
+            <talentvalue level="1" name="can_shock_res" value="0.05" />
+            <talentvalue level="15" name="can_shock_res" value="0.47" />
+            <talentvalue level="1" name="can_shock_dmg" value="117 132" />
+            <talentvalue level="15" name="can_shock_dmg" value="311 342" />
+            <talentvalue level="1" name="can_shock_pwr" value="22" />
+            <talentvalue level="15" name="can_shock_pwr" value="32" />
+        </talentvalues>
+        <level description="%can_shock_dmg $DMG_FIRE">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%can_shock_req" />
+        </level>
+    </talent>
+    <talent descname="Cannonball Strike" description="Blasts forward a long distance knocking enemies back." descshort="Charge" icon="7" icon_texture="textures/ui/cannonball_icons.png" name="can_torpedo" power="power8">
+        <talentvalues>
+            <talentvalue level="1" name="can_torpedo_req" value="14" />
+            <talentvalue level="14" name="can_torpedo_req" value="70" />
+            <talentvalue level="1" name="can_torpedo_dmg" value="5.5" />
+            <talentvalue level="14" name="can_torpedo_dmg" value="9.5" />
+            <talentvalue level="1" name="can_torpedo_ar" value="1.5" />
+            <talentvalue level="14" name="can_torpedo_ar" value="2.76" />
+            <talentvalue level="1" name="can_torpedo_pwr" value="28" />
+            <talentvalue level="14" name="can_torpedo_pwr" value="80" />
+        </talentvalues>
+        <level description="%can_torpedo_dmg:s $DMG_PHYSICAL (%can_torpedo_dmg:x)\n%can_torpedo_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="2" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_torpedo_req" />
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%can_torpedo_dmg" scope_node="rog_power10" />
+                <affecter attribute="atk_attack_rating" level="%can_torpedo_ar" scope_node="rog_power10" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Outward Blast" description="Cannonball expands his blast field out to knockback enemies." descshort="Blast" icon="1" icon_texture="textures/ui/cannonball_icons.png" name="can_release" power="power9">
+        <talentvalues>
+            <talentvalue level="1" name="can_release_req" value="7" />
+            <talentvalue level="18" name="can_release_req" value="58" />
+            <talentvalue level="1" name="can_release_dmg" value="30 36" />
+            <talentvalue level="18" name="can_release_dmg" value="195 217" />
+            <talentvalue level="1" name="can_release_pwr" value="24" />
+            <talentvalue level="18" name="can_release_pwr" value="128" />
+        </talentvalues>
+        <level description="%can_release_dmg $DMG_PHYSICAL\n%can_release_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%can_release_req" />
+        </level>
+    </talent>
+    <talent descname="Ignition Strike" description="Adds $DMG_FIRE to melee attacks." icon="2" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit11_pct" value="0.04" />
+            <talentvalue level="9" name="can_outfit11_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit11_pct:p $DMG_FIRE">
+            <powerup class="add_attack" damagepercent="%can_outfit11_pct" damagetype="dmg_fire" life="-1">
+                <special_fx effect="char/humant/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="can_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="can_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%can_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="can_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit13_dr" value="1" />
+            <talentvalue level="9" name="can_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%can_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Point Blank" description="Adds $DMG to any ranged attack that hits enemies within 6 feet of Cannonball." icon="1" icon_texture="textures/ui/talent_icons.png" name="can_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit21_pct" value="0.04" />
+            <talentvalue level="9" name="can_outfit21_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit21_pct:p Added $DMG">
+            <powerup class="add_attack" damagepercent="%can_outfit21_pct" life="-1" max_distance="72">
+                <affecter attribute="powerup_scope" scope_attack="projectile" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="can_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit22_pct" value="2" />
+            <talentvalue level="9" name="can_outfit22_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit22_pct Body\n+%can_outfit22_pct Focus\n+%can_outfit22_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%can_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="can_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit23_dr" value="1" />
+            <talentvalue level="9" name="can_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%can_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="can_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit31_pct" value="1.01" />
+            <talentvalue level="9" name="can_outfit31_pct" value="1.05" />
+            <talentvalue level="1" name="can_outfit31_shw" value="1" />
+            <talentvalue level="9" name="can_outfit31_shw" value="5" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit31_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%can_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Blast Mastery" description="Increases the $DMG of powers." icon="7" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="can_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%can_outfit31_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%can_outfit31_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="can_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit33_dr" value="1" />
+            <talentvalue level="9" name="can_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%can_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="can_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit21_pct" value="1.05" />
+            <talentvalue level="9" name="can_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%can_outfit21_pct:s Momentum Rate">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%can_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="can_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="can_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%can_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%can_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="can_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="can_outfit43_dr" value="1" />
+            <talentvalue level="9" name="can_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%can_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%can_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

@@ -1,0 +1,387 @@
+<talents>
+    <talent descname="Probability Syphon" description="Adjusting probabilities causes increased $DMG and chance of critical hits." descshort="Boost" icon="7" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_amplify" power="power2" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="scar_amplify_req" value="2" />
+            <talentvalue level="5" name="scar_amplify_req" value="14" />
+            <talentvalue level="6" name="scar_amplify_req" value="17" />
+            <talentvalue level="9" name="scar_amplify_req" value="26" />
+            <talentvalue level="10" name="scar_amplify_req" value="29" />
+            <talentvalue level="14" name="scar_amplify_req" value="53" />
+            <talentvalue level="15" name="scar_amplify_req" value="73" />
+            <talentvalue level="1" name="scar_amplify_pwr" value="32" />
+            <talentvalue level="5" name="scar_amplify_pwr" value="64" />
+            <talentvalue level="6" name="scar_amplify_pwr" value="68" />
+            <talentvalue level="9" name="scar_amplify_pwr" value="92" />
+            <talentvalue level="10" name="scar_amplify_pwr" value="100" />
+            <talentvalue level="14" name="scar_amplify_pwr" value="152" />
+            <talentvalue level="15" name="scar_amplify_pwr" value="188" />
+            <talentvalue level="1" name="scar_amplify_dmg" value="1.05" />
+            <talentvalue level="15" name="scar_amplify_dmg" value="1.19" />
+            <talentvalue level="1" name="scar_amplify_cri" value="1.05" />
+            <talentvalue level="15" name="scar_amplify_cri" value="1.12" />
+            <talentvalue level="1" name="scar_amplify_lif" value="20" />
+            <talentvalue level="14" name="scar_amplify_lif" value="120" />
+            <talentvalue level="15" name="scar_amplify_lif" value="180" />
+        </talentvalues>
+        <level description="%scar_amplify_dmg:s $DMG\n%scar_amplify_cri:s chance of critical hit\n%scar_amplify_lif seconds\n%scar_amplify_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_amplify_req" />
+        </level>
+    </talent>
+    <talent descname="Combustion" description="Uses probability to spontaneously combust surrounding enemies and objects." descshort="Radial" icon="2" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_combustion" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="scar_combustion_req" value="5" />
+            <talentvalue level="5" name="scar_combustion_req" value="14" />
+            <talentvalue level="6" name="scar_combustion_req" value="17" />
+            <talentvalue level="9" name="scar_combustion_req" value="26" />
+            <talentvalue level="10" name="scar_combustion_req" value="29" />
+            <talentvalue level="14" name="scar_combustion_req" value="53" />
+            <talentvalue level="15" name="scar_combustion_req" value="73" />
+            <talentvalue level="1" name="scar_combustion_dmg" value="21 23" />
+            <talentvalue level="3" name="scar_combustion_dmg" value="41 46" />
+            <talentvalue level="6" name="scar_combustion_dmg" value="71 79" />
+            <talentvalue level="8" name="scar_combustion_dmg" value="97 104" />
+            <talentvalue level="10" name="scar_combustion_dmg" value="128 135" />
+            <talentvalue level="14" name="scar_combustion_dmg" value="174 181" />
+            <talentvalue level="15" name="scar_combustion_dmg" value="193 209" />
+            <talentvalue level="1" name="scar_combustion_pwr" value="17" />
+            <talentvalue level="3" name="scar_combustion_pwr" value="20" />
+            <talentvalue level="6" name="scar_combustion_pwr" value="26" />
+            <talentvalue level="8" name="scar_combustion_pwr" value="31" />
+            <talentvalue level="10" name="scar_combustion_pwr" value="35" />
+            <talentvalue level="14" name="scar_combustion_pwr" value="51" />
+            <talentvalue level="15" name="scar_combustion_pwr" value="65" />
+            <talentvalue level="1" name="scar_combustion_rad" value="120" />
+            <talentvalue level="15" name="scar_combustion_rad" value="144" />
+        </talentvalues>
+        <level description="%scar_combustion_dmg $DMG_FIRE\n%scar_combustion_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_combustion_req" />
+        </level>
+    </talent>
+    <talent descname="Reality Shift" description="Fires a spread of guided Hex bolts that deal wildly variable $DMG, and each has a growing chance of turning enemies into crates." descshort="Projectile" icon="4" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_shift" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="scar_shift_req" value="17" />
+            <talentvalue level="4" name="scar_shift_req" value="26" />
+            <talentvalue level="5" name="scar_shift_req" value="29" />
+            <talentvalue level="9" name="scar_shift_req" value="53" />
+            <talentvalue level="10" name="scar_shift_req" value="73" />
+            <talentvalue level="1" name="scar_shift_pwr" value="18" />
+            <talentvalue level="4" name="scar_shift_pwr" value="24" />
+            <talentvalue level="5" name="scar_shift_pwr" value="27" />
+            <talentvalue level="9" name="scar_shift_pwr" value="40" />
+            <talentvalue level="10" name="scar_shift_pwr" value="48" />
+            <talentvalue level="1" name="scar_shift_dmg" value="5 50" />
+            <talentvalue level="4" name="scar_shift_dmg" value="7 70" />
+            <talentvalue level="5" name="scar_shift_dmg" value="8 80" />
+            <talentvalue level="9" name="scar_shift_dmg" value="10 100" />
+            <talentvalue level="10" name="scar_shift_dmg" value="15 150" />
+            <talentvalue level="1" name="scar_shift_pct" value="0.05" />
+            <talentvalue level="10" name="scar_shift_pct" value="0.33" />
+            <talentvalue level="1" name="scar_shift_num" value="5" />
+            <talentvalue level="10" name="scar_shift_num" value="15" />
+        </talentvalues>
+        <level description="%scar_shift_num Hex Bolts\n%scar_shift_pct:p chance of conversion \n%scar_shift_dmg $DMG_ENERGY each\n%scar_shift_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_shift_req" />
+        </level>
+    </talent>
+    <talent descname="Heal" description="Gives party regenerative healing for a time." descshort="Boost" icon="5" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_heal" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="scar_heal_req" value="14" />
+            <talentvalue level="2" name="scar_heal_req" value="17" />
+            <talentvalue level="5" name="scar_heal_req" value="26" />
+            <talentvalue level="6" name="scar_heal_req" value="29" />
+            <talentvalue level="10" name="scar_heal_req" value="53" />
+            <talentvalue level="11" name="scar_heal_req" value="73" />
+            <talentvalue level="1" name="scar_heal_pwr" value="64" />
+            <talentvalue level="2" name="scar_heal_pwr" value="68" />
+            <talentvalue level="5" name="scar_heal_pwr" value="92" />
+            <talentvalue level="6" name="scar_heal_pwr" value="100" />
+            <talentvalue level="10" name="scar_heal_pwr" value="152" />
+            <talentvalue level="11" name="scar_heal_pwr" value="188" />
+            <talentvalue level="1" name="scar_heal_lif" value="30" />
+            <talentvalue level="2" name="scar_heal_lif" value="35" />
+            <talentvalue level="5" name="scar_heal_lif" value="44" />
+            <talentvalue level="6" name="scar_heal_lif" value="50" />
+            <talentvalue level="10" name="scar_heal_lif" value="62" />
+            <talentvalue level="11" name="scar_heal_lif" value="70" />
+            <talentvalue level="1" name="scar_heal_pct" value="0.02" />
+        </talentvalues>
+        <level description="%scar_heal_pct:p $HP/sec\n%scar_heal_pwr $EP\n%scar_heal_lif Seconds">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_heal_req" />
+        </level>
+    </talent>
+    <talent descname="Hex Bolts" description="Fires a spread of Hex-Bolts." descshort="Projectile" icon="3" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_hex_locked" power="power7">
+        <talentvalues>
+            <talentvalue level="1" name="scar_hex_locked_req" value="1" />
+            <talentvalue level="5" name="scar_hex_locked_req" value="13" />
+            <talentvalue level="6" name="scar_hex_locked_req" value="16" />
+            <talentvalue level="9" name="scar_hex_locked_req" value="25" />
+            <talentvalue level="10" name="scar_hex_locked_req" value="28" />
+            <talentvalue level="14" name="scar_hex_locked_req" value="52" />
+            <talentvalue level="15" name="scar_hex_locked_req" value="72" />
+            <talentvalue level="1" name="scar_hex_locked_dmg" value="13 15" />
+            <talentvalue level="5" name="scar_hex_locked_dmg" value="34 38" />
+            <talentvalue level="6" name="scar_hex_locked_dmg" value="44 49" />
+            <talentvalue level="9" name="scar_hex_locked_dmg" value="65 71" />
+            <talentvalue level="10" name="scar_hex_locked_dmg" value="82 90" />
+            <talentvalue level="14" name="scar_hex_locked_dmg" value="129 143" />
+            <talentvalue level="15" name="scar_hex_locked_dmg" value="190 210" />
+            <talentvalue level="1" name="scar_hex_locked_pwr" value="13" />
+            <talentvalue level="5" name="scar_hex_locked_pwr" value="25" />
+            <talentvalue level="6" name="scar_hex_locked_pwr" value="27" />
+            <talentvalue level="9" name="scar_hex_locked_pwr" value="32" />
+            <talentvalue level="10" name="scar_hex_locked_pwr" value="35" />
+            <talentvalue level="14" name="scar_hex_locked_pwr" value="49" />
+            <talentvalue level="15" name="scar_hex_locked_pwr" value="61" />
+            <talentvalue level="1" name="scar_hex_locked_num" value="1" />
+            <talentvalue level="15" name="scar_hex_locked_num" value="15" />
+        </talentvalues>
+        <level description="%scar_hex_locked_num Hex-Bolts\n%scar_hex_locked_dmg $DMG_ENERGY\n%scar_hex_locked_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_hex_locked_req" />
+        </level>
+    </talent>
+    <talent descname="Hex Explosion" description="Fires a Hex-Bolt which causes nearby objects to explode violently." descshort="Projectile" icon="6" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_hex_explos" power="power8">
+        <talentvalues>
+            <talentvalue level="1" name="scar_hex_explos_req" value="10" />
+            <talentvalue level="3" name="scar_hex_explos_req" value="13" />
+            <talentvalue level="4" name="scar_hex_explos_req" value="16" />
+            <talentvalue level="7" name="scar_hex_explos_req" value="25" />
+            <talentvalue level="8" name="scar_hex_explos_req" value="28" />
+            <talentvalue level="12" name="scar_hex_explos_req" value="52" />
+            <talentvalue level="13" name="scar_hex_explos_req" value="72" />
+            <talentvalue level="1" name="scar_hex_explos_pwr" value="17" />
+            <talentvalue level="3" name="scar_hex_explos_pwr" value="19" />
+            <talentvalue level="4" name="scar_hex_explos_pwr" value="21" />
+            <talentvalue level="7" name="scar_hex_explos_pwr" value="29" />
+            <talentvalue level="8" name="scar_hex_explos_pwr" value="31" />
+            <talentvalue level="12" name="scar_hex_explos_pwr" value="48" />
+            <talentvalue level="13" name="scar_hex_explos_pwr" value="61" />
+            <talentvalue level="1" name="scar_hex_explos_dm1" value="69 79" />
+            <talentvalue level="13" name="scar_hex_explos_dm1" value="265 278" />
+            <talentvalue level="1" name="scar_hex_explos_dm2" value="37 43" />
+            <talentvalue level="13" name="scar_hex_explos_dm2" value="132 145" />
+        </talentvalues>
+        <level description="%scar_hex_explos_dm1 initial $DMG_ENERGY\n%scar_hex_explos_dm2 explosion $DMG_ENERGY\n%scar_hex_explos_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_hex_explos_req" />
+        </level>
+    </talent>
+    <talent descname="Anarchy Assault" description="Unleash Magic bursts with a random $DMG type, with a chance of converting enemies for a time." descshort="Xtreme" icon="8" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_chthonic" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="scar_chthonic_req" value="10" />
+            <talentvalue level="8" name="scar_chthonic_req" value="45" />
+            <talentvalue level="1" name="scar_chthonic_pct" value="0.2" />
+            <talentvalue level="8" name="scar_chthonic_pct" value="0.34" />
+            <talentvalue level="1" name="scar_chthonic_dmg" value="51 56" />
+            <talentvalue level="8" name="scar_chthonic_dmg" value="204 225" />
+            <talentvalue level="1" name="scar_chthonic_lif" value="20" />
+            <talentvalue level="8" name="scar_chthonic_lif" value="34" />
+        </talentvalues>
+        <level description="%scar_chthonic_dmg $DMG\n%scar_chthonic_pct:p chance to convert\n%scar_chthonic_lif second conversion">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%scar_chthonic_req" />
+        </level>
+    </talent>
+    <talent descname="Misfortune" description="Causes enemy attacks to backfire, reflecting a percentage of damage back on themselves." descshort="Special" icon="9" icon_texture="textures/ui/scarletwitch_icons.png" name="scar_misfortune" power="power10">
+        <talentvalues>
+            <talentvalue level="1" name="scar_misfortune_req" value="20" />
+            <talentvalue level="3" name="scar_misfortune_req" value="26" />
+            <talentvalue level="4" name="scar_misfortune_req" value="29" />
+            <talentvalue level="8" name="scar_misfortune_req" value="53" />
+            <talentvalue level="9" name="scar_misfortune_req" value="73" />
+            <talentvalue level="1" name="scar_misfortune_pwr" value="40" />
+            <talentvalue level="3" name="scar_misfortune_pwr" value="47" />
+            <talentvalue level="4" name="scar_misfortune_pwr" value="50" />
+            <talentvalue level="8" name="scar_misfortune_pwr" value="68" />
+            <talentvalue level="9" name="scar_misfortune_pwr" value="76" />
+            <talentvalue level="1" name="scar_misfortune_dmg" value="34 38" />
+            <talentvalue level="2" name="scar_misfortune_dmg" value="39 43" />
+            <talentvalue level="3" name="scar_misfortune_dmg" value="44 49" />
+            <talentvalue level="4" name="scar_misfortune_dmg" value="54 60" />
+            <talentvalue level="5" name="scar_misfortune_dmg" value="64 68" />
+            <talentvalue level="6" name="scar_misfortune_dmg" value="69 73" />
+            <talentvalue level="7" name="scar_misfortune_dmg" value="76 83" />
+            <talentvalue level="8" name="scar_misfortune_dmg" value="88 98" />
+            <talentvalue level="9" name="scar_misfortune_dmg" value="126 139" />
+            <talentvalue level="1" name="scar_misfortune_pct" value="0.55 0.6" />
+            <talentvalue level="2" name="scar_misfortune_pct" value="0.6 0.65" />
+            <talentvalue level="3" name="scar_misfortune_pct" value="0.65 0.7" />
+            <talentvalue level="4" name="scar_misfortune_pct" value="0.7 0.75" />
+            <talentvalue level="5" name="scar_misfortune_pct" value="0.75 0.8" />
+            <talentvalue level="6" name="scar_misfortune_pct" value="0.8 0.85" />
+            <talentvalue level="7" name="scar_misfortune_pct" value="0.85 0.9" />
+            <talentvalue level="8" name="scar_misfortune_pct" value="0.9 0.95" />
+            <talentvalue level="9" name="scar_misfortune_pct" value="1 1.05" />
+            <talentvalue level="1" name="scar_misfortune_lif" value="12" />
+            <talentvalue level="3" name="scar_misfortune_lif" value="24" />
+            <talentvalue level="4" name="scar_misfortune_lif" value="30" />
+            <talentvalue level="8" name="scar_misfortune_lif" value="54" />
+            <talentvalue level="9" name="scar_misfortune_lif" value="60" />
+        </talentvalues>
+        <level description="%scar_misfortune_dmg $DMG_PHYSICAL\n%scar_misfortune_pct:p $DMG reflected\n%scar_misfortune_lif Second Duration\n%scar_misfortune_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%scar_misfortune_req" />
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $HP." icon="21" icon_texture="textures/ui/talent_icons.png" name="switch_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit11_pct" value="1.02" />
+            <talentvalue level="9" name="switch_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%switch_outfit11_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%switch_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Witch's Touch" description="Increase melee $DMG." icon="49" icon_texture="textures/ui/talent_icons.png" name="switch_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit12_dmg" value="1.04" />
+            <talentvalue level="9" name="switch_outfit12_dmg" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%switch_outfit12_dmg:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%switch_outfit12_dmg" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit13_dr" value="1" />
+            <talentvalue level="9" name="switch_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%switch_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="switch_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit21_pct" value="1.05" />
+            <talentvalue level="9" name="switch_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%switch_outfit21_pct:s Momentum Rate">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%switch_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Probable Life" description="Gives a chance to resurrect fallen allies automatically." icon="1" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit22_pct" value="0.1" />
+            <talentvalue level="9" name="switch_outfit22_pct" value="0.5" />
+        </talentvalues>
+        <level count="9" description="%switch_outfit22_pct:p Chance to resurrect allies">
+            <powerup apply_ally="all" chance="%switch_outfit22_pct" class="resurrect" life="-1" maxhealthpercent="1" />
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit23_dr" value="1" />
+            <talentvalue level="9" name="switch_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%switch_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Hex Mastery" description="Increases the $DMG of powers." icon="11" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="switch_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%switch_outfit31_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%switch_outfit31_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Chaos Magic" description="Boosts body, focus, and strike stats." icon="0" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit32_pct" value="2" />
+            <talentvalue level="9" name="switch_outfit32_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit32_pct Body\n+%switch_outfit32_pct Focus\n+%switch_outfit32_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%switch_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit33_dr" value="1" />
+            <talentvalue level="9" name="switch_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%switch_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Per Kill" description="Gain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="switch_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit41_pct" value="5" />
+            <talentvalue level="9" name="switch_outfit41_pct" value="25" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit41_pct $EP per kill">
+            <powerup life="-1">
+                <affecter attribute="energy_per_kill" level="%switch_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge" description="Increases chance to dodge attacks." icon="10" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit42_pct" value="0.03" />
+            <talentvalue level="9" name="switch_outfit42_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit42_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%switch_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="switch_outfit43_dr" value="1" />
+            <talentvalue level="9" name="switch_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%switch_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%switch_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

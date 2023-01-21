@@ -1,0 +1,401 @@
+<talents>
+    <talent descname="Doom Blast" description="Explosive shot that emanates from Doom's hands and explodes on contact. $PT_CHARGE" descshort="Projectile" icon="0" icon_texture="textures/ui/doom_icons.png" name="doom_power1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p1_req" value="1" />
+            <talentvalue level="5" name="doom_p1_req" value="13" />
+            <talentvalue level="6" name="doom_p1_req" value="16" />
+            <talentvalue level="9" name="doom_p1_req" value="25" />
+            <talentvalue level="10" name="doom_p1_req" value="28" />
+            <talentvalue level="14" name="doom_p1_req" value="52" />
+            <talentvalue level="15" name="doom_p1_req" value="72" />
+            <talentvalue level="1" name="doom_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="doom_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="doom_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="doom_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="doom_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="doom_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="doom_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="doom_p1_pwr" value="7" />
+            <talentvalue level="5" name="doom_p1_pwr" value="14" />
+            <talentvalue level="6" name="doom_p1_pwr" value="16" />
+            <talentvalue level="9" name="doom_p1_pwr" value="21" />
+            <talentvalue level="10" name="doom_p1_pwr" value="23" />
+            <talentvalue level="14" name="doom_p1_pwr" value="34" />
+            <talentvalue level="15" name="doom_p1_pwr" value="43" />
+            <talentvalue level="1" name="doom_p1_rad" value="12" value_charged="36" />
+            <talentvalue level="15" name="doom_p1_rad" value="36" value_charged="72" />
+        </talentvalues>
+        <level description="%doom_p1_dmg $DMG_ENERGY\n%doom_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Mask of Doom" description="Instant blast that originates from Dr. Doom's face mask and deals damage to enemy struck by laser." descshort="Laser Beams" icon="1" icon_texture="textures/ui/doom_icons.png" name="doom_power2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p2_req" value="5" />
+            <talentvalue level="4" name="doom_p2_req" value="14" />
+            <talentvalue level="5" name="doom_p2_req" value="17" />
+            <talentvalue level="8" name="doom_p2_req" value="26" />
+            <talentvalue level="9" name="doom_p2_req" value="29" />
+            <talentvalue level="13" name="doom_p2_req" value="53" />
+            <talentvalue level="15" name="doom_p2_req" value="73" />
+            <talentvalue level="1" name="doom_p2_dmg" value="31 34" />
+            <talentvalue level="4" name="doom_p2_dmg" value="61 68" />
+            <talentvalue level="5" name="doom_p2_dmg" value="82 90" />
+            <talentvalue level="8" name="doom_p2_dmg" value="112 124" />
+            <talentvalue level="9" name="doom_p2_dmg" value="143 157" />
+            <talentvalue level="13" name="doom_p2_dmg" value="224 248" />
+            <talentvalue level="15" name="doom_p2_dmg" value="322 356" />
+            <talentvalue level="1" name="doom_p2_pwr" value="10" />
+            <talentvalue level="4" name="doom_p2_pwr" value="15" />
+            <talentvalue level="5" name="doom_p2_pwr" value="17" />
+            <talentvalue level="8" name="doom_p2_pwr" value="22" />
+            <talentvalue level="9" name="doom_p2_pwr" value="23" />
+            <talentvalue level="13" name="doom_p2_pwr" value="35" />
+            <talentvalue level="15" name="doom_p2_pwr" value="43" />
+            <talentvalue level="1" name="doom_p2_chnc" value="0.05" />
+            <talentvalue level="15" name="doom_p2_chnc" value="0.15" />
+        </talentvalues>
+        <level description="%doom_p2_dmg $DMG_ENERGY\n%doom_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Doom Detonation" description="Doctor Doom unleashes an explosion which damages all nearby enemies." descshort="Radial" icon="4" icon_texture="textures/ui/doom_icons.png" name="doom_power5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p5_req" value="10" />
+            <talentvalue level="2" name="doom_p5_req" value="13" />
+            <talentvalue level="3" name="doom_p5_req" value="16" />
+            <talentvalue level="6" name="doom_p5_req" value="25" />
+            <talentvalue level="7" name="doom_p5_req" value="28" />
+            <talentvalue level="11" name="doom_p5_req" value="52" />
+            <talentvalue level="13" name="doom_p5_req" value="72" />
+            <talentvalue level="1" name="doom_p5_dmg" value="24 26" />
+            <talentvalue level="2" name="doom_p5_dmg" value="31 34" />
+            <talentvalue level="3" name="doom_p5_dmg" value="44 49" />
+            <talentvalue level="6" name="doom_p5_dmg" value="61 68" />
+            <talentvalue level="7" name="doom_p5_dmg" value="75 83" />
+            <talentvalue level="11" name="doom_p5_dmg" value="109 120" />
+            <talentvalue level="13" name="doom_p5_dmg" value="153 169" />
+            <talentvalue level="1" name="doom_p5_pwr" value="17" />
+            <talentvalue level="2" name="doom_p5_pwr" value="18" />
+            <talentvalue level="3" name="doom_p5_pwr" value="21" />
+            <talentvalue level="6" name="doom_p5_pwr" value="27" />
+            <talentvalue level="7" name="doom_p5_pwr" value="30" />
+            <talentvalue level="11" name="doom_p5_pwr" value="44" />
+            <talentvalue level="13" name="doom_p5_pwr" value="56" />
+        </talentvalues>
+        <level description="%doom_p5_dmg  $DMG_ENERGY\n%doom_p5_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Doom Arc" description="Electric blast that spreads to multiple enemies." descshort="Special" icon="3" icon_texture="textures/ui/doom_icons.png" name="doom_power4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p4_req" value="17" />
+            <talentvalue level="4" name="doom_p4_req" value="26" />
+            <talentvalue level="5" name="doom_p4_req" value="29" />
+            <talentvalue level="9" name="doom_p4_req" value="53" />
+            <talentvalue level="10" name="doom_p4_req" value="73" />
+            <talentvalue level="1" name="doom_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="doom_p4_dmg" value="44 49" />
+            <talentvalue level="5" name="doom_p4_dmg" value="58 64" />
+            <talentvalue level="9" name="doom_p4_dmg" value="92 101" />
+            <talentvalue level="10" name="doom_p4_dmg" value="132 147" />
+            <talentvalue level="1" name="doom_p4_dmgc" value="15 17" />
+            <talentvalue level="3" name="doom_p4_dmgc" value="20 23" />
+            <talentvalue level="4" name="doom_p4_dmgc" value="24 26" />
+            <talentvalue level="7" name="doom_p4_dmgc" value="31 34" />
+            <talentvalue level="10" name="doom_p4_dmgc" value="37 41" />
+            <talentvalue level="1" name="doom_p4_pwr" value="11" />
+            <talentvalue level="4" name="doom_p4_pwr" value="15" />
+            <talentvalue level="5" name="doom_p4_pwr" value="15" />
+            <talentvalue level="9" name="doom_p4_pwr" value="23" />
+            <talentvalue level="10" name="doom_p4_pwr" value="28" />
+            <talentvalue level="1" name="doom_p4_num_att" value="2" />
+            <talentvalue level="13" name="doom_p4_num_att" value="9" />
+            <talentvalue level="1" name="doom_p4_pps" value="9" />
+            <talentvalue level="3" name="doom_p4_pps" value="10" />
+            <talentvalue level="4" name="doom_p4_pps" value="11" />
+            <talentvalue level="7" name="doom_p4_pps" value="15" />
+            <talentvalue level="8" name="doom_p4_pps" value="16" />
+            <talentvalue level="12" name="doom_p4_pps" value="24" />
+            <talentvalue level="13" name="doom_p4_pps" value="31" />
+        </talentvalues>
+        <level description="%doom_p4_dmg Electrical $DMG\n%doom_p4_dmgc Electrical $DMG/enemy\n%doom_p4_num_att Enemies\n%doom_p4_pwr $EP/sec\n">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Curse of Doom" description="Bolt of energy that emanates from the sky striking a random enemy." descshort="Special" icon="2" icon_texture="textures/ui/doom_icons.png" name="doom_power3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p3_req" value="20" />
+            <talentvalue level="3" name="doom_p3_req" value="26" />
+            <talentvalue level="4" name="doom_p3_req" value="29" />
+            <talentvalue level="8" name="doom_p3_req" value="53" />
+            <talentvalue level="9" name="doom_p3_req" value="73" />
+            <talentvalue level="1" name="doom_p3_dmg" value="92 101" />
+            <talentvalue level="3" name="doom_p3_dmg" value="112 124" />
+            <talentvalue level="4" name="doom_p3_dmg" value="143 157" />
+            <talentvalue level="8" name="doom_p3_dmg" value="224 248" />
+            <talentvalue level="9" name="doom_p3_dmg" value="322 356" />
+            <talentvalue level="1" name="doom_p3_pwr" value="19" />
+            <talentvalue level="3" name="doom_p3_pwr" value="23" />
+            <talentvalue level="4" name="doom_p3_pwr" value="25" />
+            <talentvalue level="8" name="doom_p3_pwr" value="38" />
+            <talentvalue level="9" name="doom_p3_pwr" value="47" />
+            <talentvalue level="1" name="doom_p3_dot_dmg" value="5" />
+            <talentvalue level="1" name="doom_p3_dot_lif" value="15" />
+            <talentvalue level="1" name="doom_p4_num" value="4" />
+        </talentvalues>
+        <level description="%doom_p3_dmg $DMG_ENERGY\n%doom_p3_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Aura of Doom" description="Increases critical strike percentage for Doom and gives a chance of striking fear into nearby enemies when activated." descshort="Boost" icon="6" icon_texture="textures/ui/doom_icons.png" name="doom_power7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p7_req" value="2" />
+            <talentvalue level="5" name="doom_p7_req" value="14" />
+            <talentvalue level="6" name="doom_p7_req" value="17" />
+            <talentvalue level="9" name="doom_p7_req" value="26" />
+            <talentvalue level="10" name="doom_p7_req" value="29" />
+            <talentvalue level="14" name="doom_p7_req" value="53" />
+            <talentvalue level="15" name="doom_p7_req" value="73" />
+            <talentvalue level="1" name="doom_p7_life" value="40.0" />
+            <talentvalue level="5" name="doom_p7_life" value="50.0" />
+            <talentvalue level="6" name="doom_p7_life" value="65.0" />
+            <talentvalue level="9" name="doom_p7_life" value="80.0" />
+            <talentvalue level="10" name="doom_p7_life" value="120.0" />
+            <talentvalue level="14" name="doom_p7_life" value="180.0" />
+            <talentvalue level="15" name="doom_p7_life" value="180.0" />
+            <talentvalue level="1" name="doom_p7_pwr" value="32" />
+            <talentvalue level="5" name="doom_p7_pwr" value="60" />
+            <talentvalue level="6" name="doom_p7_pwr" value="68" />
+            <talentvalue level="9" name="doom_p7_pwr" value="88" />
+            <talentvalue level="10" name="doom_p7_pwr" value="92" />
+            <talentvalue level="14" name="doom_p7_pwr" value="140" />
+            <talentvalue level="15" name="doom_p7_pwr" value="172" />
+            <talentvalue level="1" name="doom_p7_cri" value="0.05" />
+            <talentvalue level="15" name="doom_p7_cri" value="0.15" />
+        </talentvalues>
+        <level description="+%doom_p7_cri:p Critical chance\n%doom_p7_life seconds\n%doom_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Doom Shield" description="A protective shield surrounds Doom deflecting all projectiles and damaging all melee attackers." descshort="Boost" icon="5" icon_texture="textures/ui/doom_icons.png" name="doom_power6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p6_req" value="14" />
+            <talentvalue level="2" name="doom_p6_req" value="17" />
+            <talentvalue level="5" name="doom_p6_req" value="26" />
+            <talentvalue level="6" name="doom_p6_req" value="29" />
+            <talentvalue level="10" name="doom_p6_req" value="53" />
+            <talentvalue level="11" name="doom_p6_req" value="73" />
+            <talentvalue level="1" name="doom_p6_pwr" value="60" />
+            <talentvalue level="2" name="doom_p6_pwr" value="68" />
+            <talentvalue level="5" name="doom_p6_pwr" value="88" />
+            <talentvalue level="6" name="doom_p6_pwr" value="92" />
+            <talentvalue level="10" name="doom_p6_pwr" value="140" />
+            <talentvalue level="11" name="doom_p6_pwr" value="172" />
+            <talentvalue level="1" name="doom_p6_life" value="40.0" />
+            <talentvalue level="2" name="doom_p6_life" value="50.0" />
+            <talentvalue level="5" name="doom_p6_life" value="65.0" />
+            <talentvalue level="6" name="doom_p6_life" value="80.0" />
+            <talentvalue level="10" name="doom_p6_life" value="120.0" />
+            <talentvalue level="11" name="doom_p6_life" value="180.0" />
+            <talentvalue level="1" name="doom_p6_size" value="0.7" />
+            <talentvalue level="2" name="doom_p6_size" value="0.7" />
+            <talentvalue level="5" name="doom_p6_size" value="0.85" />
+            <talentvalue level="6" name="doom_p6_size" value="0.85" />
+            <talentvalue level="10" name="doom_p6_size" value="1.0" />
+            <talentvalue level="11" name="doom_p6_size" value="1.0" />
+            <talentvalue level="1" name="doom_p6_dmg" value="10 12" />
+            <talentvalue level="2" name="doom_p6_dmg" value="11 13" />
+            <talentvalue level="5" name="doom_p6_dmg" value="15 17" />
+            <talentvalue level="6" name="doom_p6_dmg" value="20 23" />
+            <talentvalue level="10" name="doom_p6_dmg" value="27 30" />
+            <talentvalue level="11" name="doom_p6_dmg" value="34 38" />
+        </talentvalues>
+        <level description="%doom_p6_dmg shocking Electricity $DMG/sec\n%doom_p6_life seconds\n%doom_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%doom_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Doomsday" description="A massive explosion that damages all enemies in the vicinity" descshort="Xtreme" icon="7" icon_texture="textures/ui/doom_icons.png" name="doom_power8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="doom_p8_req" value="10" />
+            <talentvalue level="8" name="doom_p8_req" value="45" />
+            <talentvalue level="1" name="doom_p8_dmg" value="51 56" />
+            <talentvalue level="8" name="doom_p8_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%doom_p8_dmg $DMG_ENERGY">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%doom_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects $DMG back to melee attackers.\n" icon="19" icon_texture="textures/ui/talent_icons.png" name="doom_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="doom_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%doom_outfit11_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%doom_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Focus" description="Increases focus stat" icon="24" icon_texture="textures/ui/talent_icons.png" name="doom_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit12_pct" value="3" />
+            <talentvalue level="9" name="doom_outfit12_pct" value="15" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit12_pct Focus">
+            <powerup life="-1">
+                <affecter attribute="mind" level="%doom_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="doom_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit13_dr" value="1" />
+            <talentvalue level="9" name="doom_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%doom_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="doom_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit21_pct" value="1.01" />
+            <talentvalue level="9" name="doom_outfit21_pct" value="1.05" />
+            <talentvalue level="1" name="doom_outfit21_shw" value="1.0" />
+            <talentvalue level="9" name="doom_outfit21_shw" value="5.0" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit21_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%doom_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases $DMG from powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="doom_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit22_dmg" value="1.03" />
+            <talentvalue level="9" name="doom_outfit22_dmg" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%doom_outfit22_dmg:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%doom_outfit22_dmg" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="doom_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit23_dr" value="1" />
+            <talentvalue level="9" name="doom_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%doom_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the damage of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="doom_outfit31" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit31_pct" value="1.04" />
+            <talentvalue level="9" name="doom_outfit31_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%doom_outfit31_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%doom_outfit31_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="doom_outfit32" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit32_pct" value="1.05" />
+            <talentvalue level="9" name="doom_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%doom_outfit32_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%doom_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="doom_outfit33" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit33_dr" value="1" />
+            <talentvalue level="9" name="doom_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%doom_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Combo Bonus XP" description="Gives bonus $XP for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="doom_outfit41" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit41_pct" value="0.25" />
+            <talentvalue level="9" name="doom_outfit41_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit41_pct:p $XP from combos">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="combo_xp" level="%doom_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases $DMG from powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="doom_outfit42" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit42_dmg" value="1.03" />
+            <talentvalue level="9" name="doom_outfit42_dmg" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%doom_outfit42_dmg:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%doom_outfit42_dmg" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="doom_outfit43" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="doom_outfit43_dr" value="1" />
+            <talentvalue level="9" name="doom_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%doom_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%doom_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

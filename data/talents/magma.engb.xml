@@ -1,0 +1,396 @@
+<talents>
+    <talent descname="Fire Immunity" description="100% immune to $DMG_FIRE." name="magma_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Fiery Blast" description="Launch lava balls at targets." descshort="Projectile" icon="0" icon_texture="textures/ui/magma_icons.png" name="magma_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p1_req" value="1" />
+            <talentvalue level="5" name="magma_p1_req" value="13" />
+            <talentvalue level="6" name="magma_p1_req" value="16" />
+            <talentvalue level="9" name="magma_p1_req" value="25" />
+            <talentvalue level="10" name="magma_p1_req" value="28" />
+            <talentvalue level="14" name="magma_p1_req" value="52" />
+            <talentvalue level="15" name="magma_p1_req" value="72" />
+            <talentvalue level="1" name="magma_p1_dmg" value="10 12" />
+            <talentvalue level="5" name="magma_p1_dmg" value="17 19" />
+            <talentvalue level="6" name="magma_p1_dmg" value="17 19" />
+            <talentvalue level="9" name="magma_p1_dmg" value="27 30" />
+            <talentvalue level="10" name="magma_p1_dmg" value="27 30" />
+            <talentvalue level="14" name="magma_p1_dmg" value="41 45" />
+            <talentvalue level="15" name="magma_p1_dmg" value="49 56" />
+            <talentvalue level="1" name="magma_p1_num" value="2" />
+            <talentvalue level="2" name="magma_p1_num" value="3" />
+            <talentvalue level="6" name="magma_p1_num" value="4" />
+            <talentvalue level="10" name="magma_p1_num" value="5" />
+            <talentvalue level="14" name="magma_p1_num" value="6" />
+            <talentvalue level="15" name="magma_p1_num" value="7" />
+            <talentvalue level="1" name="magma_p1_pwr" value="8" />
+            <talentvalue level="5" name="magma_p1_pwr" value="17" />
+            <talentvalue level="6" name="magma_p1_pwr" value="19" />
+            <talentvalue level="9" name="magma_p1_pwr" value="24" />
+            <talentvalue level="10" name="magma_p1_pwr" value="26" />
+            <talentvalue level="14" name="magma_p1_pwr" value="41" />
+            <talentvalue level="15" name="magma_p1_pwr" value="52" />
+        </talentvalues>
+        <level description="%magma_p1_dmg $DMG_FIRE\n%magma_p1_num Balls\n%magma_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Pyrokinesis" description="Enemy bursts into flame. Ignites enemies if fully charged, dealing extra burning $DMG.  $PT_CHARGE" descshort="Blast" icon="1" icon_texture="textures/ui/magma_icons.png" name="magma_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p2_req" value="5" />
+            <talentvalue level="5" name="magma_p2_req" value="14" />
+            <talentvalue level="6" name="magma_p2_req" value="17" />
+            <talentvalue level="9" name="magma_p2_req" value="26" />
+            <talentvalue level="10" name="magma_p2_req" value="29" />
+            <talentvalue level="14" name="magma_p2_req" value="53" />
+            <talentvalue level="15" name="magma_p2_req" value="73" />
+            <talentvalue level="1" name="magma_p2_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="magma_p2_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="magma_p2_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="magma_p2_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="magma_p2_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="magma_p2_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="magma_p2_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="magma_p2_dmg2" value="11 13" />
+            <talentvalue level="15" name="magma_p2_dmg2" value="95 105" />
+            <talentvalue level="1" name="magma_p2_lif" value="5" />
+            <talentvalue level="1" name="magma_p2_pwr" value="7" />
+            <talentvalue level="5" name="magma_p2_pwr" value="14" />
+            <talentvalue level="6" name="magma_p2_pwr" value="16" />
+            <talentvalue level="9" name="magma_p2_pwr" value="21" />
+            <talentvalue level="10" name="magma_p2_pwr" value="23" />
+            <talentvalue level="14" name="magma_p2_pwr" value="34" />
+            <talentvalue level="15" name="magma_p2_pwr" value="43" />
+        </talentvalues>
+        <level description="%magma_p2_dmg  $DMG_FIRE\n+%magma_p2_dmg2 burning $DMG \n%magma_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Lava Fissure" description="Molten rock erupts from the ground." descshort="Special" icon="2" icon_texture="textures/ui/magma_icons.png" name="magma_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p3_req" value="10" />
+            <talentvalue level="3" name="magma_p3_req" value="13" />
+            <talentvalue level="4" name="magma_p3_req" value="16" />
+            <talentvalue level="7" name="magma_p3_req" value="25" />
+            <talentvalue level="8" name="magma_p3_req" value="28" />
+            <talentvalue level="12" name="magma_p3_req" value="52" />
+            <talentvalue level="13" name="magma_p3_req" value="72" />
+            <talentvalue level="1" name="magma_p3_dmg" value="31 34" />
+            <talentvalue level="3" name="magma_p3_dmg" value="41 48" />
+            <talentvalue level="4" name="magma_p3_dmg" value="52 60" />
+            <talentvalue level="7" name="magma_p3_dmg" value="82 94" />
+            <talentvalue level="8" name="magma_p3_dmg" value="103 112" />
+            <talentvalue level="12" name="magma_p3_dmg" value="164 188" />
+            <talentvalue level="13" name="magma_p3_dmg" value="202 236" />
+            <talentvalue level="1" name="magma_p3_pwr" value="10" />
+            <talentvalue level="5" name="magma_p3_pwr" value="16" />
+            <talentvalue level="6" name="magma_p3_pwr" value="17" />
+            <talentvalue level="9" name="magma_p3_pwr" value="23" />
+            <talentvalue level="10" name="magma_p3_pwr" value="25" />
+            <talentvalue level="12" name="magma_p3_pwr" value="32" />
+            <talentvalue level="13" name="magma_p3_pwr" value="42" />
+        </talentvalues>
+        <level description="%magma_p3_dmg $DMG_FIRE\n%magma_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Lava Tracks" description="Slides on an lava sled, damaging and knocking back enemies.  $PT_HOLD" descshort="Charge" icon="3" icon_texture="textures/ui/magma_icons.png" name="magma_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p4_req" value="17" />
+            <talentvalue level="4" name="magma_p4_req" value="26" />
+            <talentvalue level="5" name="magma_p4_req" value="29" />
+            <talentvalue level="9" name="magma_p4_req" value="53" />
+            <talentvalue level="10" name="magma_p4_req" value="73" />
+            <talentvalue level="1" name="magma_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="magma_p4_dmg" value="44 49" />
+            <talentvalue level="5" name="magma_p4_dmg" value="58 64" />
+            <talentvalue level="9" name="magma_p4_dmg" value="92 101" />
+            <talentvalue level="10" name="magma_p4_dmg" value="132 147" />
+            <talentvalue level="1" name="magma_p4_kb" value="120" />
+            <talentvalue level="10" name="magma_p4_kb" value="245" />
+            <talentvalue level="1" name="magma_p4_pwr" value="11" />
+            <talentvalue level="4" name="magma_p4_pwr" value="15" />
+            <talentvalue level="5" name="magma_p4_pwr" value="17" />
+            <talentvalue level="9" name="magma_p4_pwr" value="25" />
+            <talentvalue level="10" name="magma_p4_pwr" value="31" />
+        </talentvalues>
+        <level description="%magma_p4_dmg $DMG_FIRE\n%magma_p4_kb $KB\n%magma_p4_pwr $EP/s">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Flamethrower" description="Launch a continuous stream of fire towards enemies, doing $DMG_FIRE.  $PT_HOLD" descshort="Special" icon="4" icon_texture="textures/ui/magma_icons.png" name="magma_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p5_req" value="20" />
+            <talentvalue level="3" name="magma_p5_req" value="29" />
+            <talentvalue level="4" name="magma_p5_req" value="32" />
+            <talentvalue level="8" name="magma_p5_req" value="56" />
+            <talentvalue level="9" name="magma_p5_req" value="76" />
+            <talentvalue level="1" name="magma_p5_dmg" value="10 12" />
+            <talentvalue level="2" name="magma_p5_dmg" value="16 21" />
+            <talentvalue level="3" name="magma_p5_dmg" value="27 32" />
+            <talentvalue level="4" name="magma_p5_dmg" value="38 42" />
+            <talentvalue level="5" name="magma_p5_dmg" value="48 54" />
+            <talentvalue level="6" name="magma_p5_dmg" value="61 73" />
+            <talentvalue level="7" name="magma_p5_dmg" value="83 95" />
+            <talentvalue level="8" name="magma_p5_dmg" value="98 107" />
+            <talentvalue level="9" name="magma_p5_dmg" value="129 143" />
+            <talentvalue level="1" name="magma_p5_dmg2" value="24 26" />
+            <talentvalue level="9" name="magma_p5_dmg2" value="217 240" />
+            <talentvalue level="1" name="magma_p5_pwr" value="5" />
+            <talentvalue level="2" name="magma_p5_pwr" value="10" />
+            <talentvalue level="3" name="magma_p5_pwr" value="15" />
+            <talentvalue level="4" name="magma_p5_pwr" value="20" />
+            <talentvalue level="5" name="magma_p5_pwr" value="25" />
+            <talentvalue level="6" name="magma_p5_pwr" value="30" />
+            <talentvalue level="7" name="magma_p5_pwr" value="35" />
+            <talentvalue level="8" name="magma_p5_pwr" value="40" />
+            <talentvalue level="9" name="magma_p5_pwr" value="50" />
+        </talentvalues>
+        <level description="%magma_p5_dmg $DMG_FIRE\n%magma_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="4" />
+            <tier cost="3" count="1" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Magma Form" description="Engulfs body in flame. Adds additional $DMG to all attacks for the duration." descshort="Special" icon="5" icon_texture="textures/ui/magma_icons.png" name="magma_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p6_req" value="2" />
+            <talentvalue level="5" name="magma_p6_req" value="14" />
+            <talentvalue level="6" name="magma_p6_req" value="17" />
+            <talentvalue level="9" name="magma_p6_req" value="26" />
+            <talentvalue level="10" name="magma_p6_req" value="29" />
+            <talentvalue level="14" name="magma_p6_req" value="53" />
+            <talentvalue level="15" name="magma_p6_req" value="73" />
+            <talentvalue level="1" name="magma_p6_lif" value="20" />
+            <talentvalue level="5" name="magma_p6_lif" value="40" />
+            <talentvalue level="6" name="magma_p6_lif" value="50" />
+            <talentvalue level="9" name="magma_p6_lif" value="65" />
+            <talentvalue level="10" name="magma_p6_lif" value="80" />
+            <talentvalue level="14" name="magma_p6_lif" value="120" />
+            <talentvalue level="15" name="magma_p6_lif" value="180" />
+            <talentvalue level="1" name="magma_p6_pwr" value="32" />
+            <talentvalue level="5" name="magma_p6_pwr" value="64" />
+            <talentvalue level="6" name="magma_p6_pwr" value="68" />
+            <talentvalue level="9" name="magma_p6_pwr" value="92" />
+            <talentvalue level="10" name="magma_p6_pwr" value="100" />
+            <talentvalue level="14" name="magma_p6_pwr" value="152" />
+            <talentvalue level="15" name="magma_p6_pwr" value="188" />
+            <talentvalue level="1" name="magma_p6_dmg" value="1 4" />
+            <talentvalue level="15" name="magma_p6_dmg" value="25 28" />
+        </talentvalues>
+        <level description="+%magma_p6_dmg $DMG\n%magma_p6_lif Seconds\n%magma_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Fiery Fists" description="Gives entire party lava gloves for a time, adding $DMG_FIRE to melee attacks." descshort="Boost" icon="6" icon_texture="textures/ui/magma_icons.png" name="magma_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p7_req" value="14" />
+            <talentvalue level="2" name="magma_p7_req" value="17" />
+            <talentvalue level="5" name="magma_p7_req" value="26" />
+            <talentvalue level="6" name="magma_p7_req" value="29" />
+            <talentvalue level="10" name="magma_p7_req" value="53" />
+            <talentvalue level="11" name="magma_p7_req" value="73" />
+            <talentvalue level="1" name="magma_p7_dmg" value="0.1" />
+            <talentvalue level="11" name="magma_p7_dmg" value="0.25" />
+            <talentvalue level="1" name="magma_p7_tim" value="40" />
+            <talentvalue level="2" name="magma_p7_tim" value="50" />
+            <talentvalue level="5" name="magma_p7_tim" value="65" />
+            <talentvalue level="6" name="magma_p7_tim" value="80" />
+            <talentvalue level="10" name="magma_p7_tim" value="120" />
+            <talentvalue level="11" name="magma_p7_tim" value="180" />
+            <talentvalue level="1" name="magma_p7_pwr" value="32" />
+            <talentvalue level="5" name="magma_p7_pwr" value="64" />
+            <talentvalue level="6" name="magma_p7_pwr" value="68" />
+            <talentvalue level="9" name="magma_p7_pwr" value="92" />
+            <talentvalue level="10" name="magma_p7_pwr" value="100" />
+            <talentvalue level="11" name="magma_p7_pwr" value="152" />
+        </talentvalues>
+        <level description="+%magma_p7_dmg:p $DMG_FIRE\n%magma_p7_tim Seconds\n%magma_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%magma_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Volcano" description="A volcano erupts and rains molten rocks." descshort="Xtreme" icon="7" icon_texture="textures/ui/magma_icons.png" name="magma_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="magma_p8_req" value="10" />
+            <talentvalue level="8" name="magma_p8_req" value="45" />
+            <talentvalue level="1" name="magma_p8_dmg" value="85 94" />
+            <talentvalue level="8" name="magma_p8_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%magma_p8_dmg $DMG_FIRE">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%magma_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="magma_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="magma_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%magma_outfit11_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%magma_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="magma_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="magma_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%magma_outfit12_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%magma_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit13_dr" value="1" />
+            <talentvalue level="9" name="magma_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%magma_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="magma_outfit21" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit21_crit" value="0.02" />
+            <talentvalue level="9" name="magma_outfit21_crit" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit21_crit:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%magma_outfit21_crit" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="9" icon_texture="textures/ui/magma_icons.png" name="magma_outfit22" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit22_pct" value="2" />
+            <talentvalue level="9" name="magma_outfit22_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit22_pct Body\n+%magma_outfit22_pct Focus\n+%magma_outfit22_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%magma_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit23" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit23_dr" value="1" />
+            <talentvalue level="9" name="magma_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%magma_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="magma_outfit31" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit31_pct" value="0.03" />
+            <talentvalue level="9" name="magma_outfit31_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit31_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%magma_outfit31_pct" scope_damage="dmg_physical" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Magma Mastery" description="Increases the $DMG of powers." icon="8" icon_texture="textures/ui/magma_icons.png" name="magma_outfit32" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit32_pct" value="1.03" />
+            <talentvalue level="9" name="magma_outfit32_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%magma_outfit32_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%magma_outfit32_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit33" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit33_dr" value="1" />
+            <talentvalue level="9" name="magma_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%magma_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="magma_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit41_pct" value="1.02" />
+            <talentvalue level="9" name="magma_outfit41_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%magma_outfit41_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%magma_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="magma_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="magma_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%magma_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%magma_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="magma_outfit43_dr" value="1" />
+            <talentvalue level="9" name="magma_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%magma_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%magma_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

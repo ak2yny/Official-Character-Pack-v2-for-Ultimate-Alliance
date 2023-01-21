@@ -1,0 +1,438 @@
+<talents>
+    <talent descname="Concussion Blast" description="A powerful force blast.  Push the $LEFT_STICK forward to cause more damage, back to cause less to a wider area.  $PT_CHARGE" descshort="Projectile" icon="0" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p1_req" value="1" />
+            <talentvalue level="5" name="inviswm_p1_req" value="13" />
+            <talentvalue level="6" name="inviswm_p1_req" value="16" />
+            <talentvalue level="9" name="inviswm_p1_req" value="25" />
+            <talentvalue level="10" name="inviswm_p1_req" value="28" />
+            <talentvalue level="14" name="inviswm_p1_req" value="52" />
+            <talentvalue level="15" name="inviswm_p1_req" value="72" />
+            <talentvalue level="1" name="inviswm_p1_pwr" value="8" />
+            <talentvalue level="5" name="inviswm_p1_pwr" value="17" />
+            <talentvalue level="6" name="inviswm_p1_pwr" value="19" />
+            <talentvalue level="9" name="inviswm_p1_pwr" value="24" />
+            <talentvalue level="10" name="inviswm_p1_pwr" value="26" />
+            <talentvalue level="14" name="inviswm_p1_pwr" value="41" />
+            <talentvalue level="15" name="inviswm_p1_pwr" value="52" />
+            <talentvalue level="1" name="inviswm_p1ufoc_dmg" value="10 12" value_charged_scale="2.0" />
+            <talentvalue level="5" name="inviswm_p1ufoc_dmg" value="13 15" value_charged_scale="2.0" />
+            <talentvalue level="6" name="inviswm_p1ufoc_dmg" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="9" name="inviswm_p1ufoc_dmg" value="20 23" value_charged_scale="2.0" />
+            <talentvalue level="10" name="inviswm_p1ufoc_dmg" value="27 30" value_charged_scale="2.0" />
+            <talentvalue level="14" name="inviswm_p1ufoc_dmg" value="41 45" value_charged_scale="2.0" />
+            <talentvalue level="15" name="inviswm_p1ufoc_dmg" value="51 56" value_charged_scale="2.0" />
+            <talentvalue level="1" name="inviswm_p1reg_dmg" value="10 12" value_charged_scale="2.0" />
+            <talentvalue level="5" name="inviswm_p1reg_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="6" name="inviswm_p1reg_dmg" value="24 26" value_charged_scale="2.0" />
+            <talentvalue level="9" name="inviswm_p1reg_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="10" name="inviswm_p1reg_dmg" value="41 45" value_charged_scale="2.0" />
+            <talentvalue level="14" name="inviswm_p1reg_dmg" value="65 71" value_charged_scale="2.0" />
+            <talentvalue level="15" name="inviswm_p1reg_dmg" value="95 105" value_charged_scale="2.0" />
+            <talentvalue level="1" name="inviswm_p1foc_dmg" value="13 15" value_charged_scale="2.0" />
+            <talentvalue level="5" name="inviswm_p1foc_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="6" name="inviswm_p1foc_dmg" value="44 49" value_charged_scale="2.0" />
+            <talentvalue level="9" name="inviswm_p1foc_dmg" value="61 68" value_charged_scale="2.0" />
+            <talentvalue level="10" name="inviswm_p1foc_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="14" name="inviswm_p1foc_dmg" value="129 143" value_charged_scale="2.0" />
+            <talentvalue level="15" name="inviswm_p1foc_dmg" value="190 210" value_charged_scale="2.0" />
+            <talentvalue level="1" name="inviswm_p1_scale" value="0" value_charged="1" />
+        </talentvalues>
+        <level description="%inviswm_p1ufoc_dmg $DMG_PHYSICAL (unfocused)\n%inviswm_p1foc_dmg $DMG_PHYSICAL (focused)\n%inviswm_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="3" />
+            <tier cost="3" count="2" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Kinetic Bolts" description="Fires kinetic bolts at enemies.  $PT_TAP" descshort="Projectile" icon="1" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p2_req" value="10" />
+            <talentvalue level="3" name="inviswm_p2_req" value="13" />
+            <talentvalue level="4" name="inviswm_p2_req" value="16" />
+            <talentvalue level="7" name="inviswm_p2_req" value="25" />
+            <talentvalue level="8" name="inviswm_p2_req" value="28" />
+            <talentvalue level="12" name="inviswm_p2_req" value="52" />
+            <talentvalue level="13" name="inviswm_p2_req" value="72" />
+            <talentvalue level="1" name="inviswm_p2_dmg" value="13 15" />
+            <talentvalue level="3" name="inviswm_p2_dmg" value="17 19" />
+            <talentvalue level="4" name="inviswm_p2_dmg" value="24 26" />
+            <talentvalue level="7" name="inviswm_p2_dmg" value="34 38" />
+            <talentvalue level="8" name="inviswm_p2_dmg" value="44 49" />
+            <talentvalue level="12" name="inviswm_p2_dmg" value="75 83" />
+            <talentvalue level="13" name="inviswm_p2_dmg" value="109 120" />
+            <talentvalue level="1" name="inviswm_p2_pwr" value="8" />
+            <talentvalue level="3" name="inviswm_p2_pwr" value="9" />
+            <talentvalue level="4" name="inviswm_p2_pwr" value="10" />
+            <talentvalue level="7" name="inviswm_p2_pwr" value="13" />
+            <talentvalue level="8" name="inviswm_p2_pwr" value="14" />
+            <talentvalue level="12" name="inviswm_p2_pwr" value="22" />
+            <talentvalue level="13" name="inviswm_p2_pwr" value="28" />
+        </talentvalues>
+        <level description="%inviswm_p2_dmg $DMG_PHYSICAL\n%inviswm_p2_pwr $EP/s">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Kinetic Surge" description="Releases a powerful wave of kinetic energy causing $DMG_PHYSICAL.  $PT_HOLD" descshort="Projectile" icon="2" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p3_req" value="17" />
+            <talentvalue level="4" name="inviswm_p3_req" value="26" />
+            <talentvalue level="5" name="inviswm_p3_req" value="29" />
+            <talentvalue level="9" name="inviswm_p3_req" value="53" />
+            <talentvalue level="10" name="inviswm_p3_req" value="73" />
+            <talentvalue level="1" name="inviswm_p3_dmg" value="20 23" />
+            <talentvalue level="4" name="inviswm_p3_dmg" value="27 30" />
+            <talentvalue level="5" name="inviswm_p3_dmg" value="37 41" />
+            <talentvalue level="9" name="inviswm_p3_dmg" value="58 64" />
+            <talentvalue level="10" name="inviswm_p3_dmg" value="85 94" />
+            <talentvalue level="1" name="inviswm_p3_pwr" value="13" />
+            <talentvalue level="4" name="inviswm_p3_pwr" value="18" />
+            <talentvalue level="5" name="inviswm_p3_pwr" value="20" />
+            <talentvalue level="9" name="inviswm_p3_pwr" value="30" />
+            <talentvalue level="10" name="inviswm_p3_pwr" value="37" />
+            <talentvalue level="1" name="inviswm_p3_rng" value="50" value_charged="150" />
+            <talentvalue level="1" name="inviswm_p3_fxscale" value="0.33" value_charged="1" />
+        </talentvalues>
+        <level description="%inviswm_p3_dmg $DMG_PHYSICAL\n%inviswm_p3_pwr $EP/s">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Telekinesis" description="Levitates enemies and objects.  $PT_HOLD" descshort="Special" icon="3" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p4_req" value="5" />
+            <talentvalue level="5" name="inviswm_p4_req" value="14" />
+            <talentvalue level="6" name="inviswm_p4_req" value="17" />
+            <talentvalue level="9" name="inviswm_p4_req" value="26" />
+            <talentvalue level="10" name="inviswm_p4_req" value="29" />
+            <talentvalue level="14" name="inviswm_p4_req" value="53" />
+            <talentvalue level="15" name="inviswm_p4_req" value="73" />
+            <talentvalue level="1" name="inviswm_p4_dmg" value="20 23" />
+            <talentvalue level="5" name="inviswm_p4_dmg" value="41 45" />
+            <talentvalue level="6" name="inviswm_p4_dmg" value="54 60" />
+            <talentvalue level="9" name="inviswm_p4_dmg" value="75 83" />
+            <talentvalue level="10" name="inviswm_p4_dmg" value="99 109" />
+            <talentvalue level="14" name="inviswm_p4_dmg" value="153 169" />
+            <talentvalue level="15" name="inviswm_p4_dmg" value="224 248" />
+            <talentvalue level="1" name="inviswm_p4_dmg2" value="10 12" />
+            <talentvalue level="5" name="inviswm_p4_dmg2" value="10 12" />
+            <talentvalue level="6" name="inviswm_p4_dmg2" value="13 15" />
+            <talentvalue level="9" name="inviswm_p4_dmg2" value="20 23" />
+            <talentvalue level="10" name="inviswm_p4_dmg2" value="27 30" />
+            <talentvalue level="14" name="inviswm_p4_dmg2" value="44 49" />
+            <talentvalue level="15" name="inviswm_p4_dmg2" value="65 71" />
+            <talentvalue level="1" name="inviswm_p4_hvy" value="1" />
+            <talentvalue level="9" name="inviswm_p4_hvy" value="2" />
+            <talentvalue level="15" name="inviswm_p4_hvy" value="2" />
+            <talentvalue level="1" name="inviswm_p4_pwr" value="21" />
+            <talentvalue level="5" name="inviswm_p4_pwr" value="33" />
+            <talentvalue level="6" name="inviswm_p4_pwr" value="33" />
+            <talentvalue level="9" name="inviswm_p4_pwr" value="45" />
+            <talentvalue level="10" name="inviswm_p4_pwr" value="51" />
+            <talentvalue level="14" name="inviswm_p4_pwr" value="75" />
+            <talentvalue level="15" name="inviswm_p4_pwr" value="93" />
+            <talentvalue level="1" name="inviswm_p4_pps" value="7" />
+            <talentvalue level="5" name="inviswm_p4_pps" value="11" />
+            <talentvalue level="6" name="inviswm_p4_pps" value="11" />
+            <talentvalue level="9" name="inviswm_p4_pps" value="15" />
+            <talentvalue level="10" name="inviswm_p4_pps" value="17" />
+            <talentvalue level="14" name="inviswm_p4_pps" value="25" />
+            <talentvalue level="15" name="inviswm_p4_pps" value="31" />
+        </talentvalues>
+        <level description="%inviswm_p4_dmg $DMG_PHYSICAL\n%inviswm_p4_dmg2 $DMG_PHYSICAL when thrown\n^Light objects\n%inviswm_p4_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="3" />
+            <require cat="level" level="%inviswm_p4_req" />
+        </level>
+        <level description="%inviswm_p4_dmg $DMG_PHYSICAL\n%inviswm_p4_dmg2 $DMG_PHYSICAL when thrown\n^Heavy objects\n%inviswm_p4_pwr $EP">
+            <tier cost="2" count="1" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Kinetic Snare" description="Spins target in a kinetic sphere causing crushing damage." descshort="Special" icon="4" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p5_req" value="17" />
+            <talentvalue level="4" name="inviswm_p5_req" value="26" />
+            <talentvalue level="5" name="inviswm_p5_req" value="29" />
+            <talentvalue level="9" name="inviswm_p5_req" value="53" />
+            <talentvalue level="10" name="inviswm_p5_req" value="73" />
+            <talentvalue level="1" name="inviswm_p5_pwr" value="13" />
+            <talentvalue level="4" name="inviswm_p5_pwr" value="18" />
+            <talentvalue level="5" name="inviswm_p5_pwr" value="20" />
+            <talentvalue level="9" name="inviswm_p5_pwr" value="30" />
+            <talentvalue level="10" name="inviswm_p5_pwr" value="37" />
+            <talentvalue level="1" name="inviswm_p5_life" value="2" />
+            <talentvalue level="4" name="inviswm_p5_life" value="5" />
+            <talentvalue level="5" name="inviswm_p5_life" value="7" />
+            <talentvalue level="9" name="inviswm_p5_life" value="11" />
+            <talentvalue level="10" name="inviswm_p5_life" value="13" />
+            <talentvalue level="1" name="invwm_p5_crush_dmg" value="20 23" />
+            <talentvalue level="4" name="invwm_p5_crush_dmg" value="27 30" />
+            <talentvalue level="5" name="invwm_p5_crush_dmg" value="37 41" />
+            <talentvalue level="9" name="invwm_p5_crush_dmg" value="58 64" />
+            <talentvalue level="10" name="invwm_p5_crush_dmg" value="85 94" />
+            <talentvalue level="1" name="invwm_p5_expl_dmg" value="10 12" />
+            <talentvalue level="4" name="invwm_p5_expl_dmg" value="10 12" />
+            <talentvalue level="5" name="invwm_p5_expl_dmg" value="10 12" />
+            <talentvalue level="9" name="invwm_p5_expl_dmg" value="15 17" />
+            <talentvalue level="10" name="invwm_p5_expl_dmg" value="24 26" />
+            <talentvalue level="1" name="invwm_p5_expl_kb" value="120" />
+            <talentvalue level="10" name="invwm_p5_expl_kb" value="245" />
+        </talentvalues>
+        <level description="%invwm_p5_crush_dmg $DMG_CRUSH/s\n%invwm_p5_expl_dmg $DMG_PHYSICAL\n%inviswm_p5_life seconds\n%inviswm_p5_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Fantastic Shield" description="Creates a large shield that will deflect projectile attacks." descshort="Boost" icon="5" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p6_req" value="14" />
+            <talentvalue level="2" name="inviswm_p6_req" value="17" />
+            <talentvalue level="5" name="inviswm_p6_req" value="26" />
+            <talentvalue level="6" name="inviswm_p6_req" value="29" />
+            <talentvalue level="10" name="inviswm_p6_req" value="53" />
+            <talentvalue level="11" name="inviswm_p6_req" value="73" />
+            <talentvalue level="1" name="inviswm_p6_pwr" value="64" />
+            <talentvalue level="2" name="inviswm_p6_pwr" value="68" />
+            <talentvalue level="5" name="inviswm_p6_pwr" value="92" />
+            <talentvalue level="6" name="inviswm_p6_pwr" value="100" />
+            <talentvalue level="10" name="inviswm_p6_pwr" value="152" />
+            <talentvalue level="11" name="inviswm_p6_pwr" value="188" />
+            <talentvalue level="1" name="inviswm_p6_life" value="40" />
+            <talentvalue level="2" name="inviswm_p6_life" value="50" />
+            <talentvalue level="5" name="inviswm_p6_life" value="65" />
+            <talentvalue level="6" name="inviswm_p6_life" value="80" />
+            <talentvalue level="10" name="inviswm_p6_life" value="120" />
+            <talentvalue level="11" name="inviswm_p6_life" value="180" />
+            <talentvalue level="1" name="inviswm_p6_size" value="0.7" />
+            <talentvalue level="2" name="inviswm_p6_size" value="0.7" />
+            <talentvalue level="5" name="inviswm_p6_size" value="0.85" />
+            <talentvalue level="6" name="inviswm_p6_size" value="0.85" />
+            <talentvalue level="10" name="inviswm_p6_size" value="1" />
+            <talentvalue level="11" name="inviswm_p6_size" value="1" />
+        </talentvalues>
+        <level description="%inviswm_p6_life seconds\n%inviswm_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Invisiblity" description="Become invisible to enemies, raises her chance of getting a critical hit, and stuns enemies hit by critical attacks." descshort="Boost" icon="6" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p7_req" value="2" />
+            <talentvalue level="5" name="inviswm_p7_req" value="14" />
+            <talentvalue level="6" name="inviswm_p7_req" value="17" />
+            <talentvalue level="9" name="inviswm_p7_req" value="26" />
+            <talentvalue level="10" name="inviswm_p7_req" value="29" />
+            <talentvalue level="14" name="inviswm_p7_req" value="53" />
+            <talentvalue level="15" name="inviswm_p7_req" value="73" />
+            <talentvalue level="1" name="inviswm_p7_life" value="20" />
+            <talentvalue level="5" name="inviswm_p7_life" value="40" />
+            <talentvalue level="6" name="inviswm_p7_life" value="50" />
+            <talentvalue level="9" name="inviswm_p7_life" value="65" />
+            <talentvalue level="10" name="inviswm_p7_life" value="80" />
+            <talentvalue level="14" name="inviswm_p7_life" value="120" />
+            <talentvalue level="15" name="inviswm_p7_life" value="180" />
+            <talentvalue level="1" name="inviswm_p7_crit" value="0.05" />
+            <talentvalue level="5" name="inviswm_p7_crit" value="0.06" />
+            <talentvalue level="6" name="inviswm_p7_crit" value="0.07" />
+            <talentvalue level="9" name="inviswm_p7_crit" value="0.08" />
+            <talentvalue level="10" name="inviswm_p7_crit" value="0.09" />
+            <talentvalue level="14" name="inviswm_p7_crit" value="0.1" />
+            <talentvalue level="15" name="inviswm_p7_crit" value="0.11" />
+            <talentvalue level="1" name="inviswm_p7_stun" value="14" />
+            <talentvalue level="5" name="inviswm_p7_stun" value="20" />
+            <talentvalue level="6" name="inviswm_p7_stun" value="22" />
+            <talentvalue level="9" name="inviswm_p7_stun" value="30" />
+            <talentvalue level="10" name="inviswm_p7_stun" value="32" />
+            <talentvalue level="14" name="inviswm_p7_stun" value="46" />
+            <talentvalue level="15" name="inviswm_p7_stun" value="56" />
+            <talentvalue level="1" name="inviswm_p7_pwr" value="32" />
+            <talentvalue level="5" name="inviswm_p7_pwr" value="64" />
+            <talentvalue level="6" name="inviswm_p7_pwr" value="68" />
+            <talentvalue level="9" name="inviswm_p7_pwr" value="92" />
+            <talentvalue level="10" name="inviswm_p7_pwr" value="100" />
+            <talentvalue level="14" name="inviswm_p7_pwr" value="152" />
+            <talentvalue level="15" name="inviswm_p7_pwr" value="188" />
+        </talentvalues>
+        <level description="%inviswm_p7_life seconds\n%inviswm_p7_crit:p chance\n%inviswm_p7_stun seconds stunned\n%inviswm_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%inviswm_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Ultimate Overload" description="Creates a large arc of energy that will damage all enemies on the screen and stun them.  If the enemy is already stunned, then the arc will critically hit for 50% of their life." descshort="Xtreme" icon="7" icon_texture="textures/ui/invisiblewoman_icons.png" name="inviswm_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="inviswm_p8_req" value="10" />
+            <talentvalue level="8" name="inviswm_p8_req" value="45" />
+            <talentvalue level="1" name="inviswm_p8_dmg" value="51 56" />
+            <talentvalue level="8" name="inviswm_p8_dmg" value="204 225" />
+            <talentvalue level="1" name="inviswm_p8_life" value="20" />
+            <talentvalue level="8" name="inviswm_p8_life" value="55" />
+        </talentvalues>
+        <level description="%inviswm_p8_dmg $DMG_PHYSICAL\n%inviswm_p8_life Seconds">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%inviswm_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="invis_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit11_pct" value="1.04" />
+            <talentvalue level="9" name="invis_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%invis_outfit11_pct:s maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%invis_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="invis_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="invis_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%invis_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit13_dr" value="1" />
+            <talentvalue level="9" name="invis_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%invis_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Concussive Mastery" description="Increases the $DMG of concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit21_pct" value="1.03" />
+            <talentvalue level="9" name="invis_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%invis_outfit21_pct:s Concussive $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%invis_outfit21_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Unstoppable Force" description="Reflects $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="invis_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit22_pct" value="0.25" />
+            <talentvalue level="9" name="invis_outfit22_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%invis_outfit22_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%invis_outfit22_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit23_dr" value="1" />
+            <talentvalue level="9" name="invis_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%invis_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Concussive Mastery" description="Increases the $DMG of concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="invis_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%invis_outfit31_pct:s Concussive $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%invis_outfit31_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Protective Forces" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="invis_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit32_pct" value="0.02" />
+            <talentvalue level="9" name="invis_outfit32_pct" value="0.1" />
+            <talentvalue level="1" name="invis_outfit32_shw" value="2" />
+            <talentvalue level="9" name="invis_outfit32_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit32_shw All Resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%invis_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit33_dr" value="1" />
+            <talentvalue level="9" name="invis_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%invis_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Elusiveness" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="invis_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit41_pct" value="0.03" />
+            <talentvalue level="9" name="invis_outfit41_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit41_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%invis_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="invis_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit42_pct" value="2" />
+            <talentvalue level="9" name="invis_outfit42_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit42_pct Body\n+%invis_outfit42_pct Focus\n+%invis_outfit42_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%invis_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit43_dr" value="1" />
+            <talentvalue level="9" name="invis_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%invis_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

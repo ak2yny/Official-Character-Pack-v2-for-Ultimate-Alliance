@@ -1,0 +1,397 @@
+<talents>
+    <talent descname="Unstoppable Strength" description="Mental resist, immunity to Knockback, Grabs, Stuns and Finishers." name="jugger_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+                <affecter affect_type="scale" attribute="def_knockback" level="0" />
+                <affecter attribute="def_grab" />
+                <affecter affect_type="scale" attribute="def_finisher" level="0" />
+                <affecter attribute="atk_critical" level="0.2" />
+                <affecter attribute="resist_mental" level="0.1" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Thunder Punch" description="Increased melee attack with stun." descshort="Melee" icon="0" icon_texture="textures/ui/juggernaut_icons.png" name="jug_smash" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="jug_smash_req" value="1" />
+            <talentvalue level="5" name="jug_smash_req" value="13" />
+            <talentvalue level="6" name="jug_smash_req" value="16" />
+            <talentvalue level="9" name="jug_smash_req" value="25" />
+            <talentvalue level="10" name="jug_smash_req" value="28" />
+            <talentvalue level="14" name="jug_smash_req" value="52" />
+            <talentvalue level="15" name="jug_smash_req" value="72" />
+            <talentvalue level="1" name="jug_smash_pwr" value="7" />
+            <talentvalue level="5" name="jug_smash_pwr" value="14" />
+            <talentvalue level="6" name="jug_smash_pwr" value="16" />
+            <talentvalue level="9" name="jug_smash_pwr" value="21" />
+            <talentvalue level="10" name="jug_smash_pwr" value="23" />
+            <talentvalue level="14" name="jug_smash_pwr" value="34" />
+            <talentvalue level="15" name="jug_smash_pwr" value="43" />
+            <talentvalue level="1" name="jug_smash_dmg" value="13 15" />
+            <talentvalue level="5" name="jug_smash_dmg" value="34 37" />
+            <talentvalue level="6" name="jug_smash_dmg" value="49 54" />
+            <talentvalue level="9" name="jug_smash_dmg" value="68 75" />
+            <talentvalue level="10" name="jug_smash_dmg" value="90 98" />
+            <talentvalue level="14" name="jug_smash_dmg" value="143 159" />
+            <talentvalue level="15" name="jug_smash_dmg" value="210 240" />
+            <talentvalue level="1" name="jug_smash_life" value="1" />
+            <talentvalue level="15" name="jug_smash_life" value="4" />
+        </talentvalues>
+        <level description="%jug_smash_dmg $DMG_PHYSICAL\n%jug_smash_life second stun\n%jug_smash_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_smash_req" />
+        </level>
+    </talent>
+    <talent descname="Arcane Fist" description="A crystal-powered ground slam that sends out a radial blast of damage." descshort="Radial" icon="1" icon_texture="textures/ui/juggernaut_icons.png" name="jug_slam" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="jug_slam_req" value="5" />
+            <talentvalue level="5" name="jug_slam_req" value="14" />
+            <talentvalue level="6" name="jug_slam_req" value="17" />
+            <talentvalue level="9" name="jug_slam_req" value="26" />
+            <talentvalue level="10" name="jug_slam_req" value="29" />
+            <talentvalue level="14" name="jug_slam_req" value="53" />
+            <talentvalue level="15" name="jug_slam_req" value="73" />
+            <talentvalue level="1" name="jug_slam_dmg" value="17 19" />
+            <talentvalue level="5" name="jug_slam_dmg" value="34 38" />
+            <talentvalue level="6" name="jug_slam_dmg" value="48 53" />
+            <talentvalue level="9" name="jug_slam_dmg" value="65 71" />
+            <talentvalue level="10" name="jug_slam_dmg" value="82 90" />
+            <talentvalue level="14" name="jug_slam_dmg" value="132 147" />
+            <talentvalue level="15" name="jug_slam_dmg" value="190 210" />
+            <talentvalue level="1" name="jug_slam_pwr" value="12" />
+            <talentvalue level="5" name="jug_slam_pwr" value="20" />
+            <talentvalue level="6" name="jug_slam_pwr" value="22" />
+            <talentvalue level="9" name="jug_slam_pwr" value="30" />
+            <talentvalue level="10" name="jug_slam_pwr" value="32" />
+            <talentvalue level="14" name="jug_slam_pwr" value="50" />
+            <talentvalue level="15" name="jug_slam_pwr" value="62" />
+            <talentvalue level="1" name="jug_slam_rad" value="120" />
+            <talentvalue level="15" name="jug_slam_rad" value="144" />
+        </talentvalues>
+        <level description="%jug_slam_dmg $DMG_ENERGY\n%jug_slam_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_slam_req" />
+        </level>
+    </talent>
+    <talent descname="Bullrush" description="Charge against enemies, and objects, knocking them back. $PT_HOLD" descshort="Charge" icon="2" icon_texture="textures/ui/juggernaut_icons.png" name="jug_charge" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="jug_charge_req" value="17" />
+            <talentvalue level="4" name="jug_charge_req" value="26" />
+            <talentvalue level="5" name="jug_charge_req" value="29" />
+            <talentvalue level="9" name="jug_charge_req" value="53" />
+            <talentvalue level="10" name="jug_charge_req" value="73" />
+            <talentvalue level="1" name="jug_charge_dmg" value="34 38" />
+            <talentvalue level="4" name="jug_charge_dmg" value="44 49" />
+            <talentvalue level="5" name="jug_charge_dmg" value="58 64" />
+            <talentvalue level="9" name="jug_charge_dmg" value="92 101" />
+            <talentvalue level="10" name="jug_charge_dmg" value="132 147" />
+            <talentvalue level="1" name="jug_charge_pwr" value="13" />
+            <talentvalue level="4" name="jug_charge_pwr" value="18" />
+            <talentvalue level="5" name="jug_charge_pwr" value="19" />
+            <talentvalue level="9" name="jug_charge_pwr" value="30" />
+            <talentvalue level="10" name="jug_charge_pwr" value="37" />
+            <talentvalue level="1" name="jug_charge_kb" value="245" />
+            <talentvalue level="10" name="jug_charge_kb" value="620" />
+        </talentvalues>
+        <level description="%jug_charge_dmg $DMG_PHYSICAL\n%jug_charge_kb $KB\n%jug_charge_pwr $EP/s">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_charge_req" />
+        </level>
+    </talent>
+    <talent descname="Brutal Blitz" description="Spins around and hits surrounding enemies." descshort="Melee" icon="4" icon_texture="textures/ui/juggernaut_icons.png" name="jug_spin_atk" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="jug_spin_atk_req" value="10" />
+            <talentvalue level="3" name="jug_spin_atk_req" value="13" />
+            <talentvalue level="4" name="jug_spin_atk_req" value="16" />
+            <talentvalue level="7" name="jug_spin_atk_req" value="25" />
+            <talentvalue level="8" name="jug_spin_atk_req" value="28" />
+            <talentvalue level="12" name="jug_spin_atk_req" value="52" />
+            <talentvalue level="13" name="jug_spin_atk_req" value="72" />
+            <talentvalue level="1" name="jug_spin_atk_dmg" value="17 19" />
+            <talentvalue level="3" name="jug_spin_atk_dmg" value="20 23" />
+            <talentvalue level="4" name="jug_spin_atk_dmg" value="31 34" />
+            <talentvalue level="7" name="jug_spin_atk_dmg" value="41 45" />
+            <talentvalue level="8" name="jug_spin_atk_dmg" value="54 60" />
+            <talentvalue level="12" name="jug_spin_atk_dmg" value="85 94" />
+            <talentvalue level="13" name="jug_spin_atk_dmg" value="126 139" />
+            <talentvalue level="1" name="jug_spin_atk_pwr" value="20" />
+            <talentvalue level="3" name="jug_spin_atk_pwr" value="22" />
+            <talentvalue level="4" name="jug_spin_atk_pwr" value="25" />
+            <talentvalue level="7" name="jug_spin_atk_pwr" value="34" />
+            <talentvalue level="8" name="jug_spin_atk_pwr" value="36" />
+            <talentvalue level="12" name="jug_spin_atk_pwr" value="57" />
+            <talentvalue level="13" name="jug_spin_atk_pwr" value="72" />
+        </talentvalues>
+        <level description="%jug_spin_atk_dmg $DMG_PHYSICAL\n%jug_spin_atk_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_spin_atk_req" />
+        </level>
+    </talent>
+    <talent descname="Cyttorak Shield" description="All party members gain an energy shield, reflecting some melee $DMG back at attackers." descshort="Boost" icon="5" icon_texture="textures/ui/juggernaut_icons.png" name="jug_cyttorak_shield" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="jug_shield_req" value="2" />
+            <talentvalue level="5" name="jug_shield_req" value="14" />
+            <talentvalue level="6" name="jug_shield_req" value="17" />
+            <talentvalue level="9" name="jug_shield_req" value="26" />
+            <talentvalue level="10" name="jug_shield_req" value="29" />
+            <talentvalue level="14" name="jug_shield_req" value="53" />
+            <talentvalue level="15" name="jug_shield_req" value="73" />
+            <talentvalue level="1" name="jug_shield_life" value="20" />
+            <talentvalue level="15" name="jug_shield_life" value="180" />
+            <talentvalue level="1" name="jug_shield_pwr" value="32" />
+            <talentvalue level="5" name="jug_shield_pwr" value="72" />
+            <talentvalue level="6" name="jug_shield_pwr" value="80" />
+            <talentvalue level="9" name="jug_shield_pwr" value="108" />
+            <talentvalue level="10" name="jug_shield_pwr" value="116" />
+            <talentvalue level="14" name="jug_shield_pwr" value="180" />
+            <talentvalue level="15" name="jug_shield_pwr" value="224" />
+            <talentvalue level="1" name="jug_shield_dmg_ref" value="0.15" />
+            <talentvalue level="20" name="jug_shield_dmg_ref" value="0.57" />
+        </talentvalues>
+        <level description="%jug_shield_dmg_ref:p $DMG_MELEE\n%jug_shield_life seconds\n%jug_shield_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_shield_req" />
+        </level>
+    </talent>
+    <talent descname="Cyttorak Transfer" description="All party members convert inflicted $DMG_ENERGY into $HP for Juggernaut. Other party members also recieve $DR and Strike bonus." descshort="Boost" icon="6" icon_texture="textures/ui/juggernaut_icons.png" name="jug_cyttorak_trans" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="jug_trans_req" value="14" />
+            <talentvalue level="2" name="jug_trans_req" value="17" />
+            <talentvalue level="5" name="jug_trans_req" value="26" />
+            <talentvalue level="6" name="jug_trans_req" value="29" />
+            <talentvalue level="10" name="jug_trans_req" value="53" />
+            <talentvalue level="11" name="jug_trans_req" value="73" />
+            <talentvalue level="1" name="jug_trans_life" value="40" />
+            <talentvalue level="2" name="jug_trans_life" value="50" />
+            <talentvalue level="5" name="jug_trans_life" value="65" />
+            <talentvalue level="6" name="jug_trans_life" value="80" />
+            <talentvalue level="10" name="jug_trans_life" value="120" />
+            <talentvalue level="11" name="jug_trans_life" value="180" />
+            <talentvalue level="1" name="jug_trans_pwr" value="72" />
+            <talentvalue level="2" name="jug_trans_pwr" value="80" />
+            <talentvalue level="5" name="jug_trans_pwr" value="108" />
+            <talentvalue level="6" name="jug_trans_pwr" value="116" />
+            <talentvalue level="10" name="jug_trans_pwr" value="180" />
+            <talentvalue level="11" name="jug_trans_pwr" value="224" />
+            <talentvalue level="1" name="jug_trans_dmg_pct" value="0.07" />
+            <talentvalue level="11" name="jug_trans_dmg_pct" value="0.49" />
+            <talentvalue level="1" name="jug_trans_def" value="1.05" />
+            <talentvalue level="11" name="jug_trans_def" value="1.19" />
+            <talentvalue level="1" name="jug_trans_str" value="6" />
+            <talentvalue level="11" name="jug_trans_str" value="20" />
+        </talentvalues>
+        <level description="%jug_trans_dmg_pct:p $DMG transfered\n%jug_trans_def:s $DR, +%jug_trans_str Strike\n%jug_trans_life seconds\n%jug_trans_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_trans_req" />
+        </level>
+    </talent>
+    <talent descname="Crimson Rage" description="Multiple punch attack, building up $DMG with each hit. $PT_TAP" descshort="Melee" icon="7" icon_texture="textures/ui/juggernaut_icons.png" name="jug_rage" power="power8">
+        <talentvalues>
+            <talentvalue level="1" name="jug_rage_req" value="20" />
+            <talentvalue level="3" name="jug_rage_req" value="29" />
+            <talentvalue level="4" name="jug_rage_req" value="32" />
+            <talentvalue level="8" name="jug_rage_req" value="56" />
+            <talentvalue level="9" name="jug_rage_req" value="76" />
+            <talentvalue level="1" name="jug_rage_lif" value="3" />
+            <talentvalue level="9" name="jug_rage_lif" value="7" />
+            <talentvalue level="1" name="jug_rage_dmg" value="61 68" />
+            <talentvalue level="3" name="jug_rage_dmg" value="75 83" />
+            <talentvalue level="4" name="jug_rage_dmg" value="99 109" />
+            <talentvalue level="8" name="jug_rage_dmg" value="153 169" />
+            <talentvalue level="9" name="jug_rage_dmg" value="224 248" />
+            <talentvalue level="1" name="jug_rage_dm2" value="1.05" />
+            <talentvalue level="9" name="jug_rage_dm2" value="1.09" />
+            <talentvalue level="1" name="jug_rage_ar" value="1.5" />
+            <talentvalue level="9" name="jug_rage_ar" value="2.76" />
+            <talentvalue level="1" name="jug_rage_ar2" value="1.05" />
+            <talentvalue level="9" name="jug_rage_ar2" value="1.09" />
+            <talentvalue level="1" name="jug_rage_pwr" value="21" />
+            <talentvalue level="3" name="jug_rage_pwr" value="25" />
+            <talentvalue level="4" name="jug_rage_pwr" value="28" />
+            <talentvalue level="8" name="jug_rage_pwr" value="40" />
+            <talentvalue level="9" name="jug_rage_pwr" value="48" />
+        </talentvalues>
+        <level description="%jug_rage_dmg $DMG_PHYSICAL\n%jug_rage_dm2:s Additional $DMG_PHYSICAL Per Hit\n%jug_rage_lif seconds\n%jug_rage_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%jug_rage_req" />
+        </level>
+    </talent>
+    <talent descname="Crimson Devastation" description="Juggernaut rips open a portal to the Crimson Cosmos, flooding enemies with $DMG_ENERGY and stunning them." descshort="Xtreme" icon="8" icon_texture="textures/ui/juggernaut_icons.png" name="jug_cosmos" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="jug_cosmos_req" value="10" />
+            <talentvalue level="8" name="jug_cosmos_req" value="54" />
+            <talentvalue level="1" name="jug_cosmos_dmg" value="85 96" />
+            <talentvalue level="8" name="jug_cosmos_dmg" value="279 309" />
+            <talentvalue level="1" name="jug_cosmos_lif" value="2" />
+            <talentvalue level="8" name="jug_cosmos_lif" value="6" />
+        </talentvalues>
+        <level description="%jug_cosmos_dmg $DMG_ENERGY\n%jug_cosmos_lif second stun">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%jug_cosmos_req" />
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit11_pct" value="1.02" />
+            <talentvalue level="9" name="jugger_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%jugger_outfit11_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%jugger_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases Melee $DMG." icon="3" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="jugger_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%jugger_outfit12_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%jugger_outfit12_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit13_dr" value="1" />
+            <talentvalue level="9" name="jugger_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%jugger_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the $DMG from powers." icon="11" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit21_dmg" value="1.03" />
+            <talentvalue level="9" name="jugger_outfit21_dmg" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%jugger_outfit21_dmg:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%jugger_outfit21_dmg" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit22_pct" value="0.02" />
+            <talentvalue level="9" name="jugger_outfit22_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit22_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%jugger_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit23_dr" value="1" />
+            <talentvalue level="9" name="jugger_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%jugger_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit31_pct" value="1.01" />
+            <talentvalue level="9" name="jugger_outfit31_pct" value="1.05" />
+            <talentvalue level="1" name="jugger_outfit31_shw" value="1" />
+            <talentvalue level="9" name="jugger_outfit31_shw" value="5" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit31_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%jugger_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Balanced Form" description="Boosts body, focus, and strike stats." icon="10" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit32_pct" value="2" />
+            <talentvalue level="9" name="jugger_outfit32_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit32_pct Body\n+%jugger_outfit32_pct Focus\n+%jugger_outfit32_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%jugger_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit33_dr" value="1" />
+            <talentvalue level="9" name="jugger_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%jugger_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit41_pct" value="0.25" />
+            <talentvalue level="9" name="jugger_outfit41_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%jugger_outfit41_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%jugger_outfit41_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="jugger_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%jugger_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%jugger_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="jugger_outfit43_dr" value="1" />
+            <talentvalue level="9" name="jugger_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%jugger_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%jugger_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

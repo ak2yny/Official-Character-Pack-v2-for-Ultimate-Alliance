@@ -1,0 +1,400 @@
+<talents>
+    <talent descname="Fire Immunity" description="100% Immune to $DMG_FIRE." name="humant_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Flame Thrower" description="Launch a continuous stream of fire towards enemies, doing $DMG_FIRE.  $PT_HOLD" descshort="Special" icon="0" icon_texture="textures/ui/humantorch_icons.png" name="humant_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p1_req" value="1" />
+            <talentvalue level="5" name="humant_p1_req" value="13" />
+            <talentvalue level="6" name="humant_p1_req" value="16" />
+            <talentvalue level="9" name="humant_p1_req" value="25" />
+            <talentvalue level="10" name="humant_p1_req" value="28" />
+            <talentvalue level="14" name="humant_p1_req" value="52" />
+            <talentvalue level="15" name="humant_p1_req" value="72" />
+            <talentvalue level="1" name="humant_p1_dmg" value="10 12" />
+            <talentvalue level="5" name="humant_p1_dmg" value="20 23" />
+            <talentvalue level="6" name="humant_p1_dmg" value="31 34" />
+            <talentvalue level="9" name="humant_p1_dmg" value="41 45" />
+            <talentvalue level="10" name="humant_p1_dmg" value="54 60" />
+            <talentvalue level="14" name="humant_p1_dmg" value="88 98" />
+            <talentvalue level="15" name="humant_p1_dmg" value="129 143" />
+            <talentvalue level="1" name="humant_p1_dmg2" value="24 26" />
+            <talentvalue level="15" name="humant_p1_dmg2" value="217 240" />
+            <talentvalue level="1" name="humant_p1_pwr" value="5" />
+            <talentvalue level="5" name="humant_p1_pwr" value="10" />
+            <talentvalue level="6" name="humant_p1_pwr" value="11" />
+            <talentvalue level="9" name="humant_p1_pwr" value="15" />
+            <talentvalue level="10" name="humant_p1_pwr" value="16" />
+            <talentvalue level="14" name="humant_p1_pwr" value="24" />
+            <talentvalue level="15" name="humant_p1_pwr" value="31" />
+        </talentvalues>
+        <level description="%humant_p1_dmg $DMG_FIRE\n%humant_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Fire Storm" description="Create a charged fireball that creates a fire on the ground. Stuns enemies when fully charged, holding them in the fire longer.  $PT_CHARGE" descshort="Projectile" icon="1" icon_texture="textures/ui/humantorch_icons.png" name="humant_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p2_req" value="20" />
+            <talentvalue level="3" name="humant_p2_req" value="26" />
+            <talentvalue level="4" name="humant_p2_req" value="29" />
+            <talentvalue level="8" name="humant_p2_req" value="53" />
+            <talentvalue level="9" name="humant_p2_req" value="73" />
+            <talentvalue level="1" name="humant_p2_dmg" value="92 101" value_charged_scale="2.0" />
+            <talentvalue level="4" name="humant_p2_dmg" value="112 124" value_charged_scale="2.0" />
+            <talentvalue level="5" name="humant_p2_dmg" value="143 157" value_charged_scale="2.0" />
+            <talentvalue level="9" name="humant_p2_dmg" value="224 248" value_charged_scale="2.0" />
+            <talentvalue level="10" name="humant_p2_dmg" value="322 356" value_charged_scale="2.0" />
+            <talentvalue level="1" name="humant_p2_size" value="0.5" value_charged="1" />
+            <talentvalue level="1" name="humant_p2_dmg2" value="27 30" />
+            <talentvalue level="15" name="humant_p2_dmg2" value="95 105" />
+            <talentvalue level="1" name="humant_p2_pwr" value="19" />
+            <talentvalue level="4" name="humant_p2_pwr" value="23" />
+            <talentvalue level="5" name="humant_p2_pwr" value="25" />
+            <talentvalue level="9" name="humant_p2_pwr" value="38" />
+            <talentvalue level="10" name="humant_p2_pwr" value="47" />
+        </talentvalues>
+        <level description="%humant_p2_dmg contact $DMG_FIRE\n%humant_p2_dmg2 burning $DMG_FIRE\n%humant_p2_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Inferno" description="Creates a quick blast under enemies, popping them up." descshort="Blast" icon="2" icon_texture="textures/ui/humantorch_icons.png" name="humant_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p3_req" value="5" />
+            <talentvalue level="5" name="humant_p3_req" value="14" />
+            <talentvalue level="6" name="humant_p3_req" value="17" />
+            <talentvalue level="9" name="humant_p3_req" value="26" />
+            <talentvalue level="10" name="humant_p3_req" value="29" />
+            <talentvalue level="14" name="humant_p3_req" value="53" />
+            <talentvalue level="15" name="humant_p3_req" value="73" />
+            <talentvalue level="1" name="humant_p3_dmg" value="31 34" />
+            <talentvalue level="5" name="humant_p3_dmg" value="61 68" />
+            <talentvalue level="6" name="humant_p3_dmg" value="82 90" />
+            <talentvalue level="9" name="humant_p3_dmg" value="112 124" />
+            <talentvalue level="10" name="humant_p3_dmg" value="143 157" />
+            <talentvalue level="14" name="humant_p3_dmg" value="224 248" />
+            <talentvalue level="15" name="humant_p3_dmg" value="322 356" />
+            <talentvalue level="1" name="humant_p3_pwr" value="10" />
+            <talentvalue level="5" name="humant_p3_pwr" value="16" />
+            <talentvalue level="6" name="humant_p3_pwr" value="17" />
+            <talentvalue level="9" name="humant_p3_pwr" value="23" />
+            <talentvalue level="10" name="humant_p3_pwr" value="25" />
+            <talentvalue level="14" name="humant_p3_pwr" value="38" />
+            <talentvalue level="15" name="humant_p3_pwr" value="47" />
+        </talentvalues>
+        <level description="%humant_p3_dmg $DMG_FIRE\n%humant_p3_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Fireballs" description="Rapidly launch fireballs at enemies, doing $DMG_FIRE and keeping popped up enemies in the air longer.  $PT_TAP\n" descshort="Projectile" icon="3" icon_texture="textures/ui/humantorch_icons.png" name="humant_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p4_req" value="17" />
+            <talentvalue level="4" name="humant_p4_req" value="26" />
+            <talentvalue level="5" name="humant_p4_req" value="29" />
+            <talentvalue level="9" name="humant_p4_req" value="53" />
+            <talentvalue level="10" name="humant_p4_req" value="73" />
+            <talentvalue level="1" name="humant_p4_dmg" value="24 26" />
+            <talentvalue level="4" name="humant_p4_dmg" value="34 38" />
+            <talentvalue level="5" name="humant_p4_dmg" value="48 53" />
+            <talentvalue level="9" name="humant_p4_dmg" value="75 83" />
+            <talentvalue level="10" name="humant_p4_dmg" value="109 120" />
+            <talentvalue level="1" name="humant_p4_pwr" value="10" />
+            <talentvalue level="4" name="humant_p4_pwr" value="14" />
+            <talentvalue level="5" name="humant_p4_pwr" value="15" />
+            <talentvalue level="9" name="humant_p4_pwr" value="23" />
+            <talentvalue level="10" name="humant_p4_pwr" value="28" />
+        </talentvalues>
+        <level description="%humant_p4_dmg $DMG_FIRE\n%humant_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Wildfire" description="Create an outward blast of flame, damaging enemies in a radius." descshort="Radial" icon="4" icon_texture="textures/ui/humantorch_icons.png" name="humant_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p5_req" value="10" />
+            <talentvalue level="3" name="humant_p5_req" value="13" />
+            <talentvalue level="4" name="humant_p5_req" value="16" />
+            <talentvalue level="7" name="humant_p5_req" value="25" />
+            <talentvalue level="8" name="humant_p5_req" value="28" />
+            <talentvalue level="12" name="humant_p5_req" value="52" />
+            <talentvalue level="13" name="humant_p5_req" value="72" />
+            <talentvalue level="1" name="humant_p5_dmg" value="17 19" />
+            <talentvalue level="3" name="humant_p5_dmg" value="20 23" />
+            <talentvalue level="4" name="humant_p5_dmg" value="31 34" />
+            <talentvalue level="7" name="humant_p5_dmg" value="41 45" />
+            <talentvalue level="8" name="humant_p5_dmg" value="54 60" />
+            <talentvalue level="12" name="humant_p5_dmg" value="85 94" />
+            <talentvalue level="13" name="humant_p5_dmg" value="126 139" />
+            <talentvalue level="1" name="humant_p5_pwr" value="17" />
+            <talentvalue level="3" name="humant_p5_pwr" value="20" />
+            <talentvalue level="4" name="humant_p5_pwr" value="22" />
+            <talentvalue level="7" name="humant_p5_pwr" value="29" />
+            <talentvalue level="8" name="humant_p5_pwr" value="31" />
+            <talentvalue level="12" name="humant_p5_pwr" value="48" />
+            <talentvalue level="13" name="humant_p5_pwr" value="61" />
+        </talentvalues>
+        <level description="%humant_p5_dmg $DMG_FIRE\n%humant_p5_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Nova Blast" description="Flames around the Human Torch increase, damaging enemies who come in range. Also adds $DMG_FIRE to melee attacks." descshort="Special" icon="5" icon_texture="textures/ui/humantorch_icons.png" name="humant_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p6_req" value="2" />
+            <talentvalue level="5" name="humant_p6_req" value="14" />
+            <talentvalue level="6" name="humant_p6_req" value="17" />
+            <talentvalue level="9" name="humant_p6_req" value="26" />
+            <talentvalue level="10" name="humant_p6_req" value="29" />
+            <talentvalue level="14" name="humant_p6_req" value="53" />
+            <talentvalue level="15" name="humant_p6_req" value="73" />
+            <talentvalue level="1" name="humant_p6_dmg" value="10 12" />
+            <talentvalue level="5" name="humant_p6_dmg" value="11 13" />
+            <talentvalue level="6" name="humant_p6_dmg" value="13 15" />
+            <talentvalue level="9" name="humant_p6_dmg" value="15 17" />
+            <talentvalue level="10" name="humant_p6_dmg" value="17 19" />
+            <talentvalue level="14" name="humant_p6_dmg" value="24 26" />
+            <talentvalue level="15" name="humant_p6_dmg" value="37 41" />
+            <talentvalue level="1" name="humant_p6_dmg2" value="0.1" />
+            <talentvalue level="15" name="humant_p6_dmg2" value="0.5" />
+            <talentvalue level="1" name="humant_p6_lif" value="20" />
+            <talentvalue level="5" name="humant_p6_lif" value="40" />
+            <talentvalue level="6" name="humant_p6_lif" value="50" />
+            <talentvalue level="9" name="humant_p6_lif" value="65" />
+            <talentvalue level="10" name="humant_p6_lif" value="80" />
+            <talentvalue level="14" name="humant_p6_lif" value="120" />
+            <talentvalue level="15" name="humant_p6_lif" value="180" />
+            <talentvalue level="1" name="humant_p6_pwr" value="32" />
+            <talentvalue level="5" name="humant_p6_pwr" value="64" />
+            <talentvalue level="6" name="humant_p6_pwr" value="68" />
+            <talentvalue level="9" name="humant_p6_pwr" value="92" />
+            <talentvalue level="10" name="humant_p6_pwr" value="100" />
+            <talentvalue level="14" name="humant_p6_pwr" value="152" />
+            <talentvalue level="15" name="humant_p6_pwr" value="188" />
+        </talentvalues>
+        <level description="%humant_p6_dmg burning $DMG_FIRE/sec\n%humant_p6_dmg2:p melee $DMG_FIRE\n%humant_p6_lif Seconds\n%humant_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Ring of Fire" description="Team Boost. Give each team member a chance to ignite enemies with melee attacks, and also decreases $DMG taken." descshort="Boost" icon="6" icon_texture="textures/ui/humantorch_icons.png" name="humant_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p7_req" value="14" />
+            <talentvalue level="2" name="humant_p7_req" value="17" />
+            <talentvalue level="5" name="humant_p7_req" value="26" />
+            <talentvalue level="6" name="humant_p7_req" value="29" />
+            <talentvalue level="10" name="humant_p7_req" value="53" />
+            <talentvalue level="11" name="humant_p7_req" value="73" />
+            <talentvalue level="1" name="humant_p7_dmg" value="34 38" />
+            <talentvalue level="2" name="humant_p7_dmg" value="68 75" />
+            <talentvalue level="1" name="humant_p7_lif" value="40" />
+            <talentvalue level="2" name="humant_p7_lif" value="50" />
+            <talentvalue level="5" name="humant_p7_lif" value="65" />
+            <talentvalue level="6" name="humant_p7_lif" value="80" />
+            <talentvalue level="10" name="humant_p7_lif" value="120" />
+            <talentvalue level="11" name="humant_p7_lif" value="180" />
+            <talentvalue level="1" name="humant_p7_def" value="0.94" />
+            <talentvalue level="15" name="humant_p7_def" value="0.85" />
+            <talentvalue level="1" name="humant_p7_pct" value="0.1" />
+            <talentvalue level="15" name="humant_p7_pct" value="0.2" />
+            <talentvalue level="1" name="humant_p7_pwr" value="64" />
+            <talentvalue level="2" name="humant_p7_pwr" value="68" />
+            <talentvalue level="5" name="humant_p7_pwr" value="92" />
+            <talentvalue level="6" name="humant_p7_pwr" value="100" />
+            <talentvalue level="10" name="humant_p7_pwr" value="152" />
+            <talentvalue level="11" name="humant_p7_pwr" value="188" />
+        </talentvalues>
+        <level description="%humant_p7_pct:p chance, %humant_p7_dmg $DMG_FIRE\n%humant_p7_def:s $DMG taken\n%humant_p7_lif Seconds\n%humant_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%humant_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Fantastic Fire" description="Team Xtreme - brings down meteors from the sky, pummeling all nearby enemies with $DMG_FIRE." descshort="Xtreme" icon="8" icon_texture="textures/ui/humantorch_icons.png" name="humant_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="humant_p9_req" value="10" />
+            <talentvalue level="8" name="humant_p9_req" value="48" />
+            <talentvalue level="1" name="humant_p9_dmg" value="85 94" />
+            <talentvalue level="8" name="humant_p9_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%humant_p9_dmg $DMG_FIRE">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%humant_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Flaming Fist" description="Adds $DMG_FIRE to melee attacks." icon="7" icon_texture="textures/ui/humantorch_icons.png" name="humant_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit11_pct" value="0.04" />
+            <talentvalue level="9" name="humant_outfit11_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit11_pct:p $DMG_FIRE">
+            <powerup class="add_attack" damagepercent="%humant_outfit11_pct" damagetype="dmg_fire" life="-1">
+                <special_fx effect="char/humant/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="humant_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="humant_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%humant_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit13_dr" value="1" />
+            <talentvalue level="9" name="humant_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%humant_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Point Blank" description="Adds $DMG to any ranged attack that hits enemies within 6 feet of Human Torch." icon="1" icon_texture="textures/ui/talent_icons.png" name="humant_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit21_pct" value="0.04" />
+            <talentvalue level="9" name="humant_outfit21_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit21_pct:p Added $DMG">
+            <powerup class="add_attack" damagepercent="%humant_outfit21_pct" life="-1" max_distance="72">
+                <affecter attribute="powerup_scope" scope_attack="projectile" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="humant_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit22_pct" value="2" />
+            <talentvalue level="9" name="humant_outfit22_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit22_pct Body\n+%humant_outfit22_pct Focus\n+%humant_outfit22_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%humant_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit23_dr" value="1" />
+            <talentvalue level="9" name="humant_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%humant_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="humant_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit31_pct" value="1.01" />
+            <talentvalue level="9" name="humant_outfit31_pct" value="1.05" />
+            <talentvalue level="1" name="humant_outfit31_shw" value="1" />
+            <talentvalue level="9" name="humant_outfit31_shw" value="5" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit31_shw:f% $EP regeneration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="energy_regen" level="%humant_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Fire Damage" description="Increases $DMG_FIRE." icon="9" icon_texture="textures/ui/humantorch_icons.png" name="humant_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit32_pct" value="1.03" />
+            <talentvalue level="9" name="humant_outfit32_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%humant_outfit32_pct:s $DMG_FIRE">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%humant_outfit32_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit33_dr" value="1" />
+            <talentvalue level="9" name="humant_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%humant_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Burning Sensation" description="Chance to set enemies on fire with melee attacks." icon="11" icon_texture="textures/ui/humantorch_icons.png" name="humant_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit41_pct" value="0.05" />
+            <talentvalue level="9" name="humant_outfit41_pct" value="0.25" />
+            <talentvalue level="1" name="humant_outfit41_dmg" value="17 19" />
+            <talentvalue level="9" name="humant_outfit41_dmg" value="34 38" />
+            <talentvalue level="1" name="humant_outfit41_lif" value="5" />
+            <talentvalue level="9" name="humant_outfit41_lif" value="5" />
+        </talentvalues>
+        <level count="9" description="%humant_outfit41_pct:p Chance\n%humant_outfit41_dmg $DMG_FIRE\n%humant_outfit41_lif Secs">
+            <powerup chance="%humant_outfit41_pct" class="add_harming" damage="%humant_outfit41_dmg" harming_powerup_tag="shared_burn" life="-1" time="%humant_outfit41_lif">
+                <affecter attribute="powerup_scope">
+                    <scope scope_damage="dmg_punch" />
+                    <scope scope_damage="dmg_kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="humant_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="humant_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%humant_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%humant_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="humant_outfit43_dr" value="1" />
+            <talentvalue level="9" name="humant_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%humant_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%humant_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

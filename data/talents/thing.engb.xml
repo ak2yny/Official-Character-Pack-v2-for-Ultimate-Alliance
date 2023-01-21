@@ -1,0 +1,359 @@
+<talents>
+    <talent descname="Uppercut" description="A massive uppercut.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/thing_icons.png" name="thing_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p1_req" value="1" />
+            <talentvalue level="5" name="thing_p1_req" value="13" />
+            <talentvalue level="6" name="thing_p1_req" value="16" />
+            <talentvalue level="9" name="thing_p1_req" value="25" />
+            <talentvalue level="10" name="thing_p1_req" value="28" />
+            <talentvalue level="14" name="thing_p1_req" value="52" />
+            <talentvalue level="15" name="thing_p1_req" value="72" />
+            <talentvalue level="1" name="thing_p1_dmg" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="5" name="thing_p1_dmg" value="54 60" value_charged_scale="2.0" />
+            <talentvalue level="6" name="thing_p1_dmg" value="75 83" value_charged_scale="2.0" />
+            <talentvalue level="9" name="thing_p1_dmg" value="105 116" value_charged_scale="2.0" />
+            <talentvalue level="10" name="thing_p1_dmg" value="136 150" value_charged_scale="2.0" />
+            <talentvalue level="14" name="thing_p1_dmg" value="217 240" value_charged_scale="2.0" />
+            <talentvalue level="15" name="thing_p1_dmg" value="316 349" value_charged_scale="2.0" />
+            <talentvalue level="1" name="thing_p1_kb" value="40" value_charged="190" />
+            <talentvalue level="15" name="thing_p1_kb" value="305" value_charged="620" />
+            <talentvalue level="1" name="thing_p1_pwr" value="8" />
+            <talentvalue level="5" name="thing_p1_pwr" value="17" />
+            <talentvalue level="6" name="thing_p1_pwr" value="19" />
+            <talentvalue level="9" name="thing_p1_pwr" value="26" />
+            <talentvalue level="10" name="thing_p1_pwr" value="28" />
+            <talentvalue level="14" name="thing_p1_pwr" value="44" />
+            <talentvalue level="15" name="thing_p1_pwr" value="55" />
+        </talentvalues>
+        <level description="%thing_p1_dmg $DMG_PHYSICAL\n%thing_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Hand Clap" description="With thunderous might, Thing claps his hands together and creates a concussive wave that blasts and stuns enemies in front of him." descshort="Radial" icon="1" icon_texture="textures/ui/thing_icons.png" name="thing_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p2_req" value="5" />
+            <talentvalue level="5" name="thing_p2_req" value="14" />
+            <talentvalue level="6" name="thing_p2_req" value="17" />
+            <talentvalue level="9" name="thing_p2_req" value="26" />
+            <talentvalue level="10" name="thing_p2_req" value="29" />
+            <talentvalue level="14" name="thing_p2_req" value="53" />
+            <talentvalue level="15" name="thing_p2_req" value="73" />
+            <talentvalue level="1" name="thing_p2_dmg" value="17 19" />
+            <talentvalue level="5" name="thing_p2_dmg" value="34 38" />
+            <talentvalue level="6" name="thing_p2_dmg" value="48 53" />
+            <talentvalue level="9" name="thing_p2_dmg" value="65 71" />
+            <talentvalue level="10" name="thing_p2_dmg" value="85 94" />
+            <talentvalue level="14" name="thing_p2_dmg" value="132 147" />
+            <talentvalue level="15" name="thing_p2_dmg" value="190 210" />
+            <talentvalue level="1" name="thing_p2_pwr" value="12" />
+            <talentvalue level="5" name="thing_p2_pwr" value="20" />
+            <talentvalue level="6" name="thing_p2_pwr" value="22" />
+            <talentvalue level="9" name="thing_p2_pwr" value="30" />
+            <talentvalue level="10" name="thing_p2_pwr" value="32" />
+            <talentvalue level="14" name="thing_p2_pwr" value="50" />
+            <talentvalue level="15" name="thing_p2_pwr" value="62" />
+            <talentvalue level="1" name="thing_p2_stun" value="2" />
+            <talentvalue level="15" name="thing_p2_stun" value="6" />
+            <talentvalue level="1" name="thing_p2_kb" value="120" />
+            <talentvalue level="15" name="thing_p2_kb" value="305" />
+        </talentvalues>
+        <level description="%thing_p2_dmg $DMG_PHYSICAL\n%thing_p2_stun second stun\n%thing_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Earthclobber" description="Using both fists, Thing smashes the ground causing huge ripples in the earth, knocking enemies off their feet. Does double $DMG to enemies lying on ground.  $PT_CHARGE" descshort="Radial" icon="2" icon_texture="textures/ui/thing_icons.png" name="thing_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p3_req" value="10" />
+            <talentvalue level="3" name="thing_p3_req" value="13" />
+            <talentvalue level="4" name="thing_p3_req" value="16" />
+            <talentvalue level="7" name="thing_p3_req" value="25" />
+            <talentvalue level="8" name="thing_p3_req" value="28" />
+            <talentvalue level="12" name="thing_p3_req" value="52" />
+            <talentvalue level="13" name="thing_p3_req" value="72" />
+            <talentvalue level="1" name="thing_p3_dmg" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="3" name="thing_p3_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="4" name="thing_p3_dmg" value="27 30" value_charged_scale="2.0" />
+            <talentvalue level="7" name="thing_p3_dmg" value="37 41" value_charged_scale="2.0" />
+            <talentvalue level="8" name="thing_p3_dmg" value="51 56" value_charged_scale="2.0" />
+            <talentvalue level="12" name="thing_p3_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="13" name="thing_p3_dmg" value="122 135" value_charged_scale="2.0" />
+            <talentvalue level="1" name="thing_p3_pwr" value="20" />
+            <talentvalue level="3" name="thing_p3_pwr" value="22" />
+            <talentvalue level="4" name="thing_p3_pwr" value="25" />
+            <talentvalue level="7" name="thing_p3_pwr" value="34" />
+            <talentvalue level="8" name="thing_p3_pwr" value="36" />
+            <talentvalue level="12" name="thing_p3_pwr" value="57" />
+            <talentvalue level="13" name="thing_p3_pwr" value="72" />
+            <talentvalue level="1" name="thing_p3_kb" value="120" />
+            <talentvalue level="13" name="thing_p3_kb" value="245" />
+            <talentvalue level="1" name="thing_p3_rng" value="90" value_charged="120" />
+            <talentvalue level="1" name="thing_p3_fxscale" value="0.75" value_charged="1" />
+        </talentvalues>
+        <level description="%thing_p3_dmg $DMG_PHYSICAL\n%thing_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Bullrush" description="Charges forward destroying everything in his path.  Sends enemies flying out of the way." descshort="Charge" icon="3" icon_texture="textures/ui/thing_icons.png" name="thing_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p4_req" value="17" />
+            <talentvalue level="4" name="thing_p4_req" value="26" />
+            <talentvalue level="5" name="thing_p4_req" value="29" />
+            <talentvalue level="9" name="thing_p4_req" value="53" />
+            <talentvalue level="10" name="thing_p4_req" value="73" />
+            <talentvalue level="1" name="thing_p4_dmg" value="54 60" />
+            <talentvalue level="4" name="thing_p4_dmg" value="78 86" />
+            <talentvalue level="5" name="thing_p4_dmg" value="99 109" />
+            <talentvalue level="9" name="thing_p4_dmg" value="156 173" />
+            <talentvalue level="10" name="thing_p4_dmg" value="224 248" />
+            <talentvalue level="1" name="thing_p4_pwr" value="12" />
+            <talentvalue level="4" name="thing_p4_pwr" value="16" />
+            <talentvalue level="5" name="thing_p4_pwr" value="17" />
+            <talentvalue level="9" name="thing_p4_pwr" value="27" />
+            <talentvalue level="10" name="thing_p4_pwr" value="34" />
+        </talentvalues>
+        <level description="%thing_p4_dmg $DMG_PHYSICAL\n%thing_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Tough Skin" description="Mutates skin into ${Q}spiky${Q} rock plating, resisting all $DMG, especially from melee attacks." descshort="Boost" icon="4" icon_texture="textures/ui/thing_icons.png" name="thing_p5" power="power5" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p5_req" value="2" />
+            <talentvalue level="5" name="thing_p5_req" value="14" />
+            <talentvalue level="6" name="thing_p5_req" value="17" />
+            <talentvalue level="9" name="thing_p5_req" value="26" />
+            <talentvalue level="10" name="thing_p5_req" value="29" />
+            <talentvalue level="14" name="thing_p5_req" value="53" />
+            <talentvalue level="15" name="thing_p5_req" value="73" />
+            <talentvalue level="1" name="thing_p5_pdmg" value="0.6" />
+            <talentvalue level="15" name="thing_p5_pdmg" value="0.3" />
+            <talentvalue level="1" name="thing_p5_dmg" value="0.9" />
+            <talentvalue level="15" name="thing_p5_dmg" value="0.85" />
+            <talentvalue level="1" name="thing_p5_life" value="15" />
+            <talentvalue level="5" name="thing_p5_life" value="30" />
+            <talentvalue level="6" name="thing_p5_life" value="38" />
+            <talentvalue level="9" name="thing_p5_life" value="50" />
+            <talentvalue level="10" name="thing_p5_life" value="60" />
+            <talentvalue level="14" name="thing_p5_life" value="90" />
+            <talentvalue level="15" name="thing_p5_life" value="135" />
+            <talentvalue level="1" name="thing_p5_pwr" value="32" />
+            <talentvalue level="5" name="thing_p5_pwr" value="72" />
+            <talentvalue level="6" name="thing_p5_pwr" value="80" />
+            <talentvalue level="9" name="thing_p5_pwr" value="108" />
+            <talentvalue level="10" name="thing_p5_pwr" value="116" />
+            <talentvalue level="14" name="thing_p5_pwr" value="180" />
+            <talentvalue level="15" name="thing_p5_pwr" value="224" />
+        </talentvalues>
+        <level description="%thing_p5_pdmg:s received melee $DMG\n%thing_p5_dmg:s received non-melee $DMG\n%thing_p5_life Seconds\n%thing_p5_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Die Hard" description="Makes all party members resistant to melee $DMG, but more vulnerable to other types of attacks." descshort="Boost" icon="5" icon_texture="textures/ui/thing_icons.png" name="thing_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p6_req" value="14" />
+            <talentvalue level="2" name="thing_p6_req" value="17" />
+            <talentvalue level="5" name="thing_p6_req" value="26" />
+            <talentvalue level="6" name="thing_p6_req" value="29" />
+            <talentvalue level="10" name="thing_p6_req" value="53" />
+            <talentvalue level="11" name="thing_p6_req" value="73" />
+            <talentvalue level="1" name="thing_p6_mel" value="0.6" />
+            <talentvalue level="11" name="thing_p6_mel" value="0.3" />
+            <talentvalue level="1" name="thing_p6_dmg2" value="1.1" />
+            <talentvalue level="1" name="thing_p6_lif" value="20" />
+            <talentvalue level="2" name="thing_p6_lif" value="25" />
+            <talentvalue level="5" name="thing_p6_lif" value="32" />
+            <talentvalue level="6" name="thing_p6_lif" value="40" />
+            <talentvalue level="10" name="thing_p6_lif" value="60" />
+            <talentvalue level="11" name="thing_p6_lif" value="90" />
+            <talentvalue level="1" name="thing_p6_pwr" value="72" />
+            <talentvalue level="2" name="thing_p6_pwr" value="80" />
+            <talentvalue level="5" name="thing_p6_pwr" value="108" />
+            <talentvalue level="6" name="thing_p6_pwr" value="116" />
+            <talentvalue level="10" name="thing_p6_pwr" value="180" />
+            <talentvalue level="11" name="thing_p6_pwr" value="224" />
+        </talentvalues>
+        <level description="%thing_p6_mel:s received melee $DMG\n%thing_p6_dmg2:s received non-melee $DMG\n%thing_p6_lif Seconds\n%thing_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thing_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Rock and Roll" description="Slams into ground, dealing massive $DMG_PHYSICAL to all nearby enemies with a chance to slow them for a time." descshort="Xtreme" icon="7" icon_texture="textures/ui/thing_icons.png" name="thing_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="thing_p8_req" value="10" />
+            <talentvalue level="8" name="thing_p8_req" value="25" />
+            <talentvalue level="1" name="thing_p8_dmg" value="102 113" />
+            <talentvalue level="8" name="thing_p8_dmg" value="305 338" />
+            <talentvalue level="1" name="thing_p8_chan" value="0.2" />
+            <talentvalue level="8" name="thing_p8_chan" value="0.34" />
+            <talentvalue level="1" name="thing_p8_lif" value="20" />
+            <talentvalue level="8" name="thing_p8_lif" value="55" />
+        </talentvalues>
+        <level description="%thing_p8_dmg $DMG_PHYSICAL\n%thing_p8_chan:p Chance\n%thing_p8_lif Seconds">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%thing_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="thing_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit11_pct" value="0.02" />
+            <talentvalue level="9" name="thing_outfit11_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit11_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%thing_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Rock Hard" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="thing_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit12_pct" value="0.25" />
+            <talentvalue level="9" name="thing_outfit12_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit12_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%thing_outfit12_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit13_dr" value="1" />
+            <talentvalue level="9" name="thing_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thing_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="thing_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit21_pct" value="1.02" />
+            <talentvalue level="9" name="thing_outfit21_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit21_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%thing_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="thing_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit22_pct" value="2" />
+            <talentvalue level="9" name="thing_outfit22_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit22_pct Body\n+%thing_outfit22_pct Focus\n+%thing_outfit22_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%thing_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit23_dr" value="1" />
+            <talentvalue level="9" name="thing_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thing_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="thing_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit31_pct" value="1.04" />
+            <talentvalue level="9" name="thing_outfit31_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit31_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit31_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit32_pct" value="1.03" />
+            <talentvalue level="9" name="thing_outfit32_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit32_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit32_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit33_dr" value="1" />
+            <talentvalue level="9" name="thing_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thing_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit41_pct" value="1.03" />
+            <talentvalue level="9" name="thing_outfit41_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit41_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit41_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="thing_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="thing_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%thing_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%thing_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thing_outfit43_dr" value="1" />
+            <talentvalue level="9" name="thing_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thing_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thing_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

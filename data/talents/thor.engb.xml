@@ -1,0 +1,383 @@
+<talents>
+    <talent descname="Mjolnir's Might" description="Hammer attack. When fully charged, has chance to instant-kill stunned enemies.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/thor_icons.png" name="thor_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p1_req" value="1" />
+            <talentvalue level="5" name="thor_p1_req" value="13" />
+            <talentvalue level="6" name="thor_p1_req" value="16" />
+            <talentvalue level="9" name="thor_p1_req" value="25" />
+            <talentvalue level="10" name="thor_p1_req" value="28" />
+            <talentvalue level="14" name="thor_p1_req" value="52" />
+            <talentvalue level="15" name="thor_p1_req" value="72" />
+            <talentvalue level="1" name="thor_p1_pwr" value="7" value_charged="8" />
+            <talentvalue level="5" name="thor_p1_pwr" value="14" value_charged="15" />
+            <talentvalue level="6" name="thor_p1_pwr" value="16" value_charged="17" />
+            <talentvalue level="9" name="thor_p1_pwr" value="21" value_charged="22" />
+            <talentvalue level="10" name="thor_p1_pwr" value="23" value_charged="24" />
+            <talentvalue level="14" name="thor_p1_pwr" value="34" value_charged="35" />
+            <talentvalue level="15" name="thor_p1_pwr" value="43" value_charged="44" />
+            <talentvalue level="1" name="thor_p1_pct" value="0.05" />
+            <talentvalue level="15" name="thor_p1_pct" value="0.1" />
+            <talentvalue level="1" name="thor_p1_dmg" value="15 17" value_charged_scale="2.0" />
+            <talentvalue level="5" name="thor_p1_dmg" value="54 60" value_charged_scale="2.0" />
+            <talentvalue level="6" name="thor_p1_dmg" value="75 83" value_charged_scale="2.0" />
+            <talentvalue level="9" name="thor_p1_dmg" value="105 116" value_charged_scale="2.0" />
+            <talentvalue level="10" name="thor_p1_dmg" value="136 150" value_charged_scale="2.0" />
+            <talentvalue level="14" name="thor_p1_dmg" value="217 240" value_charged_scale="2.0" />
+            <talentvalue level="15" name="thor_p1_dmg" value="316 349" value_charged_scale="2.0" />
+        </talentvalues>
+        <level description="%thor_p1_dmg $DMG_PHYSICAL.\n%thor_p1_pct:p Instant-kill chance.\n%thor_p1_pwr $EP\n">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Mjolnir Slam" description="Massive hammer slam." descshort="Melee" icon="1" icon_texture="textures/ui/thor_icons.png" name="thor_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p2_req" value="5" />
+            <talentvalue level="5" name="thor_p2_req" value="14" />
+            <talentvalue level="6" name="thor_p2_req" value="17" />
+            <talentvalue level="9" name="thor_p2_req" value="26" />
+            <talentvalue level="10" name="thor_p2_req" value="29" />
+            <talentvalue level="14" name="thor_p2_req" value="53" />
+            <talentvalue level="15" name="thor_p2_req" value="73" />
+            <talentvalue level="1" name="thor_p2_dmg" value="13 15" />
+            <talentvalue level="5" name="thor_p2_dmg" value="24 26" />
+            <talentvalue level="6" name="thor_p2_dmg" value="31 34" />
+            <talentvalue level="9" name="thor_p2_dmg" value="44 49" />
+            <talentvalue level="10" name="thor_p2_dmg" value="54 60" />
+            <talentvalue level="14" name="thor_p2_dmg" value="88 98" />
+            <talentvalue level="15" name="thor_p2_dmg" value="126 139" />
+            <talentvalue level="1" name="thor_p2_rad" value="36" />
+            <talentvalue level="15" name="thor_p2_rad" value="48" />
+            <talentvalue level="1" name="thor_p2_pwr" value="13" />
+            <talentvalue level="5" name="thor_p2_pwr" value="20" />
+            <talentvalue level="6" name="thor_p2_pwr" value="22" />
+            <talentvalue level="9" name="thor_p2_pwr" value="29" />
+            <talentvalue level="10" name="thor_p2_pwr" value="30" />
+            <talentvalue level="14" name="thor_p2_pwr" value="46" />
+            <talentvalue level="15" name="thor_p2_pwr" value="56" />
+        </talentvalues>
+        <level description="%thor_p2_dmg $DMG_ELECTRICITY.\n%thor_p2_rad:r feet damage radius\n%thor_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Thor's Rage" description="Summons lightning down on victim. Can chain to more victims at higher levels with rapid tapping.  $PT_TAP" descshort="Special" icon="2" icon_texture="textures/ui/thor_icons.png" name="thor_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p3_req" value="20" />
+            <talentvalue level="3" name="thor_p3_req" value="29" />
+            <talentvalue level="4" name="thor_p3_req" value="32" />
+            <talentvalue level="8" name="thor_p3_req" value="56" />
+            <talentvalue level="9" name="thor_p3_req" value="76" />
+            <talentvalue level="1" name="thor_p3_dmg" value="51 56" />
+            <talentvalue level="3" name="thor_p3_dmg" value="65 71" />
+            <talentvalue level="4" name="thor_p3_dmg" value="82 90" />
+            <talentvalue level="8" name="thor_p3_dmg" value="132 147" />
+            <talentvalue level="9" name="thor_p3_dmg" value="190 210" />
+            <talentvalue level="1" name="thor_p3_dmg2" value="5" />
+            <talentvalue level="9" name="thor_p3_dmg2" value="20" />
+            <talentvalue level="1" name="thor_p3_num" value="1" />
+            <talentvalue level="9" name="thor_p3_num" value="6" />
+            <talentvalue level="1" name="thor_p3_pwr" value="20" />
+            <talentvalue level="3" name="thor_p3_pwr" value="24" />
+            <talentvalue level="4" name="thor_p3_pwr" value="25" />
+            <talentvalue level="8" name="thor_p3_pwr" value="39" />
+            <talentvalue level="9" name="thor_p3_pwr" value="47" />
+        </talentvalues>
+        <level description="%thor_p3_dmg initial $DMG_ELECTRICITY.\n%thor_p3_num target(s).\n%thor_p3_dmg2 chained $DMG_ELECTRICITY per tap.\n%thor_p3_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="4" />
+            <tier cost="3" count="1" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p3_req" />
+        </level>
+    </talent>
+    <talent descname="North Winds" description="Swing magical hammer in a circle to create a massive whirlwind. Hold and rotate the $LEFT_STICK to increase radius. $PT_CHARGE" descshort="Special" icon="3" icon_texture="textures/ui/thor_icons.png" name="thor_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p4_req" value="17" />
+            <talentvalue level="4" name="thor_p4_req" value="26" />
+            <talentvalue level="5" name="thor_p4_req" value="29" />
+            <talentvalue level="9" name="thor_p4_req" value="53" />
+            <talentvalue level="10" name="thor_p4_req" value="73" />
+            <talentvalue level="1" name="thor_p4_scale" value="0.3" value_charged="1" />
+            <talentvalue level="1" name="thor_p4_dmg" value="31 34" />
+            <talentvalue level="4" name="thor_p4_dmg" value="41 45" />
+            <talentvalue level="5" name="thor_p4_dmg" value="54 60" />
+            <talentvalue level="9" name="thor_p4_dmg" value="88 98" />
+            <talentvalue level="10" name="thor_p4_dmg" value="129 143" />
+            <talentvalue level="1" name="thor_p4_lif" value="2" />
+            <talentvalue level="10" name="thor_p4_lif" value="5" />
+            <talentvalue level="1" name="thor_p4_pwr" value="11" />
+            <talentvalue level="4" name="thor_p4_pwr" value="15" />
+            <talentvalue level="5" name="thor_p4_pwr" value="15" />
+            <talentvalue level="9" name="thor_p4_pwr" value="23" />
+            <talentvalue level="10" name="thor_p4_pwr" value="28" />
+        </talentvalues>
+        <level description="%thor_p4_dmg $DMG_WIND/Sec\n%thor_p4_pwr $EP/Sec">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="4" />
+            <tier cost="3" count="1" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Hammer Toss" description="Throws hammer, stunning enemies." descshort="Projectile" icon="4" icon_texture="textures/ui/thor_icons.png" name="thor_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p5_req" value="10" />
+            <talentvalue level="3" name="thor_p5_req" value="13" />
+            <talentvalue level="4" name="thor_p5_req" value="16" />
+            <talentvalue level="7" name="thor_p5_req" value="25" />
+            <talentvalue level="8" name="thor_p5_req" value="28" />
+            <talentvalue level="12" name="thor_p5_req" value="52" />
+            <talentvalue level="13" name="thor_p5_req" value="72" />
+            <talentvalue level="1" name="thor_p5_dmg" value="27 30" />
+            <talentvalue level="3" name="thor_p5_dmg" value="31 34" />
+            <talentvalue level="4" name="thor_p5_dmg" value="44 49" />
+            <talentvalue level="7" name="thor_p5_dmg" value="61 68" />
+            <talentvalue level="8" name="thor_p5_dmg" value="82 90" />
+            <talentvalue level="12" name="thor_p5_dmg" value="129 143" />
+            <talentvalue level="13" name="thor_p5_dmg" value="190 210" />
+            <talentvalue level="1" name="thor_p5_pwr" value="14" />
+            <talentvalue level="3" name="thor_p5_pwr" value="15" />
+            <talentvalue level="4" name="thor_p5_pwr" value="18" />
+            <talentvalue level="7" name="thor_p5_pwr" value="23" />
+            <talentvalue level="8" name="thor_p5_pwr" value="25" />
+            <talentvalue level="12" name="thor_p5_pwr" value="37" />
+            <talentvalue level="13" name="thor_p5_pwr" value="47" />
+        </talentvalues>
+        <level description="%thor_p5_dmg $DMG_PHYSICAL\n%thor_p5_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="4" />
+            <tier cost="3" count="1" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p5_req" />
+        </level>
+    </talent>
+    <talent descname="God Speed" description="Increases the speed of standard attacks." descshort="Boost" icon="5" icon_texture="textures/ui/thor_icons.png" name="thor_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p6_req" value="2" />
+            <talentvalue level="5" name="thor_p6_req" value="14" />
+            <talentvalue level="6" name="thor_p6_req" value="17" />
+            <talentvalue level="9" name="thor_p6_req" value="26" />
+            <talentvalue level="10" name="thor_p6_req" value="29" />
+            <talentvalue level="14" name="thor_p6_req" value="53" />
+            <talentvalue level="15" name="thor_p6_req" value="73" />
+            <talentvalue level="1" name="thor_p6_spd" value="1.5" />
+            <talentvalue level="15" name="thor_p6_spd" value="2" />
+            <talentvalue level="1" name="thor_p6_lif" value="20" />
+            <talentvalue level="5" name="thor_p6_lif" value="40" />
+            <talentvalue level="6" name="thor_p6_lif" value="50" />
+            <talentvalue level="9" name="thor_p6_lif" value="65" />
+            <talentvalue level="10" name="thor_p6_lif" value="80" />
+            <talentvalue level="14" name="thor_p6_lif" value="120" />
+            <talentvalue level="15" name="thor_p6_lif" value="180" />
+            <talentvalue level="1" name="thor_p6_pwr" value="32" />
+            <talentvalue level="5" name="thor_p6_pwr" value="60" />
+            <talentvalue level="6" name="thor_p6_pwr" value="68" />
+            <talentvalue level="9" name="thor_p6_pwr" value="88" />
+            <talentvalue level="10" name="thor_p6_pwr" value="92" />
+            <talentvalue level="14" name="thor_p6_pwr" value="140" />
+            <talentvalue level="15" name="thor_p6_pwr" value="172" />
+        </talentvalues>
+        <level description="%thor_p6_spd:s Speed increase\n%thor_p6_lif seconds.\n%thor_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Asgard's Blessing" description="Increases skill ranks for entire team temporarily." descshort="Boost" icon="6" icon_texture="textures/ui/thor_icons.png" name="thor_p7" power="power7" type="boost" value_priority="1">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p7_req" value="14" />
+            <talentvalue level="2" name="thor_p7_req" value="17" />
+            <talentvalue level="5" name="thor_p7_req" value="26" />
+            <talentvalue level="6" name="thor_p7_req" value="29" />
+            <talentvalue level="10" name="thor_p7_req" value="53" />
+            <talentvalue level="11" name="thor_p7_req" value="73" />
+            <talentvalue level="1" name="thor_p7_ski" value="1" />
+            <talentvalue level="11" name="thor_p7_ski" value="3" />
+            <talentvalue level="1" name="thor_p7_lif" value="40" />
+            <talentvalue level="2" name="thor_p7_lif" value="50" />
+            <talentvalue level="5" name="thor_p7_lif" value="65" />
+            <talentvalue level="6" name="thor_p7_lif" value="80" />
+            <talentvalue level="10" name="thor_p7_lif" value="120" />
+            <talentvalue level="11" name="thor_p7_lif" value="180" />
+            <talentvalue level="1" name="thor_p7_pwr" value="60" />
+            <talentvalue level="2" name="thor_p7_pwr" value="68" />
+            <talentvalue level="5" name="thor_p7_pwr" value="88" />
+            <talentvalue level="6" name="thor_p7_pwr" value="92" />
+            <talentvalue level="10" name="thor_p7_pwr" value="140" />
+            <talentvalue level="11" name="thor_p7_pwr" value="172" />
+        </talentvalues>
+        <level description="+%thor_p7_ski points to skills.\n%thor_p7_lif Seconds.\n%thor_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="4" />
+            <tier cost="3" count="1" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%thor_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Wrath of the Gods" description="Bring down lightning from the sky, dealing $DMG_ELECTRICITY to all nearby enemies. Also restores energy to entire party." descshort="Xtreme" icon="8" icon_texture="textures/ui/thor_icons.png" name="thor_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="thor_p9_req" value="10" />
+            <talentvalue level="8" name="thor_p9_req" value="45" />
+            <talentvalue level="1" name="thor_p9_hlt" value="0.3" />
+            <talentvalue level="8" name="thor_p9_hlt" value="0.7" />
+            <talentvalue level="1" name="thor_p9_dmg" value="85 94" />
+            <talentvalue level="8" name="thor_p9_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%thor_p9_dmg $DMG_ELECTRICITY\n%thor_p9_hlt:p $EP restored">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%thor_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Hammer Damage" description="Increases the amount of $DMG done with hammer attacks." icon="7" icon_texture="textures/ui/thor_icons.png" name="thor_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit11_pct" value="1.05" />
+            <talentvalue level="9" name="thor_outfit11_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit11_pct:s Hammer $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%thor_outfit11_pct" scope_node="thor_hammer" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="thor_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit12_pct" value="1.02" />
+            <talentvalue level="9" name="thor_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit12_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%thor_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thor_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit13_dr" value="1" />
+            <talentvalue level="9" name="thor_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thor_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thor_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Elemental Damage" description="Increases the amount of damage done with lightning attacks." icon="10" icon_texture="textures/ui/thor_icons.png" name="thor_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit21_pct" value="1.05" />
+            <talentvalue level="9" name="thor_outfit21_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit21_pct:s $DMG_ELECTRICITY">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%thor_outfit21_pct" scope_damage="dmg_electricity" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the amount of damage done with melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="thor_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit22_pct" value="1.02" />
+            <talentvalue level="9" name="thor_outfit22_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit22_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%thor_outfit22_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thor_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit23_dr" value="1" />
+            <talentvalue level="9" name="thor_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thor_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thor_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="thor_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit31_pct" value="0.02" />
+            <talentvalue level="9" name="thor_outfit31_pct" value="0.12" />
+            <talentvalue level="1" name="thor_outfit31_pctd" value="2" />
+            <talentvalue level="9" name="thor_outfit31_pctd" value="12" />
+        </talentvalues>
+        <level count="9" description="+%thor_outfit31_pctd All Resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%thor_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Hammer Damage" description="Increases the amount of $DMG done with hammer attacks." icon="7" icon_texture="textures/ui/thor_icons.png" name="thor_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit32_pct" value="1.05" />
+            <talentvalue level="9" name="thor_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit32_pct:s Hammer $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%thor_outfit32_pct" scope_node="thor_hammer" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thor_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit33_dr" value="1" />
+            <talentvalue level="9" name="thor_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thor_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thor_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="thor_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit41_pct" value="1.04" />
+            <talentvalue level="9" name="thor_outfit41_pct" value="1.24" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit41_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%thor_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Elemental Damage" description="Increases the amount of damage done with lightning attacks." icon="10" icon_texture="textures/ui/thor_icons.png" name="thor_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="thor_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%thor_outfit42_pct:s $DMG_ELECTRICITY">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%thor_outfit42_pct" scope_damage="dmg_electricity" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="thor_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="thor_outfit43_dr" value="1" />
+            <talentvalue level="9" name="thor_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%thor_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%thor_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

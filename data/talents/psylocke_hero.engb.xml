@@ -1,0 +1,354 @@
+<talents>
+    <talent descname="Mental Immunity" description="Immunity to all mind controlling effects and mental damage." icon="27" icon_texture="textures/ui/talent_icons.png" name="mental_immune" type="ability">
+        <level count="1" description="None">
+            <powerup life="-1" remove_on_death="true">
+                <affecter attribute="resist_mental" level="1" />
+                <affecter affect_type="scale" attribute="def_mind_control" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Triple Jump" description="Uses reflexes to jump an additional time in the air. ($MOVE, $MOVE, $MOVE)" icon="11" icon_texture="textures/ui/talent_icons.png" name="ninja_jump" type="ability" />
+    <talent descname="Cerebral Bolt" description="Shoots out a burst of telekinetic energy in the form of a butterfly. Stuns ennemies." descshort="Projectile" icon="0" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p1_req" value="1" />
+            <talentvalue level="15" name="psyl_p1_req" value="73" />
+            <talentvalue level="1" name="psyl_p1_pow" value="8" />
+            <talentvalue level="15" name="psyl_p1_pow" value="55" />
+            <talentvalue level="1" name="psyl_p1_dam" value="17 19" />
+            <talentvalue level="15" name="psyl_p1_dam" value="72 76" />
+        </talentvalues>
+        <level description="%psyl_p1_dam Telekinetic Damage\n%psyl_p1_pow $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Kinetic Drill" description="Psylocke hurls forward while surrounding herself in a torrent of psionic energy, finishing with a powerful drop kick." descshort="Charge" icon="4" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p2_req" value="5" />
+            <talentvalue level="10" name="psyl_p2_req" value="73" />
+            <talentvalue level="1" name="psyl_p2_pow" value="18" />
+            <talentvalue level="10" name="psyl_p2_pow" value="56" />
+            <talentvalue level="1" name="psyl_p2_dam" value="41 43" />
+            <talentvalue level="10" name="psyl_p2_dam" value="114 118" />
+            <talentvalue level="1" name="psyl_p2_dam2" value="61 63" />
+            <talentvalue level="10" name="psyl_p2_dam2" value="169 176" />
+        </talentvalues>
+        <level description="%psyl_p2_dam Telekinetic Damage\n%psyl_p2_pow $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Telekinetic Explosion" description="Releases a furious explosion of telekinetic energy to all enemies in a short range, knocking them back." descshort="Radial" icon="3" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p3_req" value="10" />
+            <talentvalue level="11" name="psyl_p3_req" value="73" />
+            <talentvalue level="1" name="psyl_p3_dam" value="31 35" />
+            <talentvalue level="11" name="psyl_p3_dam" value="102 106" />
+            <talentvalue level="1" name="psyl_p3_pow" value="21" />
+            <talentvalue level="11" name="psyl_p3_pow" value="56" />
+        </talentvalues>
+        <level description="%psyl_p3_dam Telekinetic Damage\n%psyl_p3_pow $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Psychic Knives" description="Throws multiple psychic bolts in an arc at enemies." descshort="Projectile" icon="2" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p4_req" value="15" />
+            <talentvalue level="13" name="psyl_p4_req" value="72" />
+            <talentvalue level="1" name="psyl_p4_dmg" value="16 20" />
+            <talentvalue level="13" name="psyl_p4_dmg" value="92 95" />
+            <talentvalue level="1" name="psyl_p4_num" value="3" />
+            <talentvalue level="13" name="psyl_p4_num" value="6" />
+            <talentvalue level="1" name="psyl_p4_pwr" value="15" />
+            <talentvalue level="13" name="psyl_p4_pwr" value="68" />
+        </talentvalues>
+        <level description="%psyl_p4_dmg $DMG_MENTAL\n%psyl_p4_num bolt(s)\n%psyl_p4_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Butterfly Swarm" description="Psylocke generates swarms of telepathic energy that seek out enemy targets and burst upon impact, stunning them briefly." descshort="Projectile" icon="5" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p5_req" value="17" />
+            <talentvalue level="9" name="psyl_p5_req" value="74" />
+            <talentvalue level="1" name="psyl_p5_pow" value="27" />
+            <talentvalue level="9" name="psyl_p5_pow" value="57" />
+            <talentvalue level="1" name="psyl_p5_dam" value="31 34" />
+            <talentvalue level="9" name="psyl_p5_dam" value="52 58" />
+            <talentvalue interpolate="false" level="1" name="psyl_p5_num_butts" value="2" />
+            <talentvalue interpolate="false" level="2" name="psyl_p5_num_butts" value="3" />
+            <talentvalue interpolate="false" level="3" name="psyl_p5_num_butts" value="4" />
+            <talentvalue interpolate="false" level="4" name="psyl_p5_num_butts" value="5" />
+        </talentvalues>
+        <level description="%psyl_p5_dam Telekinetic Damage Each\n%psyl_p5_num_butts Butterflies\n%psyl_p5_pow $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Shatter Psyche" description=" Attack the enemy's nervous system with a Psy-Blade, stunning them." descshort="Melee" icon="1" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p6" power="power6">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p6_req" value="20" />
+            <talentvalue level="15" name="psyl_p6_req" value="73" />
+            <talentvalue level="1" name="psyl_p6_pwr" value="11" />
+            <talentvalue level="15" name="psyl_p6_pwr" value="65" />
+            <talentvalue level="1" name="psyl_p6_dmg" value="11 12" />
+            <talentvalue level="15" name="psyl_p6_dmg" value="41 43" />
+            <talentvalue level="1" name="psyl_p6_dmg2" value="22 24" />
+            <talentvalue level="15" name="psyl_p6_dmg2" value="82 86" />
+            <talentvalue level="1" name="psyl_p6_stn" value="1" />
+            <talentvalue level="15" name="psyl_p6_stn" value="19" />
+            <talentvalue level="1" name="psyl_p6_lif" value="2" />
+            <talentvalue level="15" name="psyl_p6_lif" value="38" />
+        </talentvalues>
+        <level description="%psyl_p6_dmg2 $DMG_MENTAL\n%psyl_p6_stn second stun\n%psyl_p6_lif seconds slow movement\n%psyl_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Telekinesis" description="Gives Psylocke the ability to lift and throw objects and enemies.\n(~41Press And Hold~~)" descshort="Special" icon="8" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p7" power="power7">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p7_req" value="23" />
+            <talentvalue level="5" name="psyl_p7_req" value="24" />
+            <talentvalue level="6" name="psyl_p7_req" value="25" />
+            <talentvalue level="9" name="psyl_p7_req" value="26" />
+            <talentvalue level="10" name="psyl_p7_req" value="28" />
+            <talentvalue level="14" name="psyl_p7_req" value="52" />
+            <talentvalue level="15" name="psyl_p7_req" value="72" />
+            <talentvalue level="1" name="psyl_p7_pwr" value="5" />
+            <talentvalue level="15" name="psyl_p7_pwr" value="47" />
+            <talentvalue level="1" name="psyl_p7_dm1" value="11 15" />
+            <talentvalue level="15" name="psyl_p7_dm1" value="195 217" />
+            <talentvalue level="1" name="psyl_p7_dm2" value="8 11" />
+            <talentvalue level="15" name="psyl_p7_dm2" value="79 89" />
+            <talentvalue interpolate="false" level="1" name="psyl_p7_hvy" value="1" />
+            <talentvalue interpolate="false" level="9" name="psyl_p7_hvy" value="2" />
+            <talentvalue interpolate="false" level="15" name="psyl_p7_hvy" value="2" />
+        </talentvalues>
+        <level description="^Heavy objects\n%psyl_p7_dm1 $DMG_MENTAL at lift\n%psyl_p7_dm2 $DMG_PHYSICAL at impact\n%psyl_p7_pwr $EP/sec">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="3" />
+            <require cat="level" level="%psyl_p7_req" />
+        </level>
+        <level description="^Massive objects\n%psyl_p7_dm1 $DMG_MENTAL at lift\n%psyl_p7_dm2 $DMG_PHYSICAL at impact\n%psyl_p7_pwr $EP/s">
+            <tier cost="2" count="1" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Mental Shroud" description="Hides from the minds of others, allowing her better chance to strike a critical location. Occasionally causes instant KO." descshort="Boost" icon="7" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p8" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p8_req" value="2" />
+            <talentvalue level="11" name="psyl_p8_req" value="73" />
+            <talentvalue level="1" name="psyl_p8_crit" value="0.25" />
+            <talentvalue level="11" name="psyl_p8_crit" value="0.75" />
+            <talentvalue level="1" name="psyl_p8_kill" value="0.15" />
+            <talentvalue level="11" name="psyl_p8_kill" value="0.25" />
+            <talentvalue level="1" name="psyl_p8_pwr" value="64" />
+            <talentvalue level="11" name="psyl_p8_pwr" value="158" />
+            <talentvalue level="1" name="psyl_p8_lif" value="40" />
+            <talentvalue level="11" name="psyl_p8_lif" value="180" />
+        </talentvalues>
+        <level description="%psyl_p8_crit:p Critical Chance\n%psyl_p8_kill:p Chance to Instant KO\n%psyl_p8_lif Seconds\n%psyl_p8_pwr $EP/s">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Psychic Defense" description="Reduces damage and shields allies from mental attacks." descshort="Boost" icon="11" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p9" power="power9" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p9_req" value="14" />
+            <talentvalue level="9" name="psyl_p9_req" value="73" />
+            <talentvalue level="1" name="psyl_p9_dmg" value="0.76" />
+            <talentvalue level="9" name="psyl_p9_dmg" value="0.38" />
+            <talentvalue level="1" name="psyl_p9_lif" value="40" />
+            <talentvalue level="9" name="psyl_p9_lif" value="180" />
+            <talentvalue level="1" name="psyl_p9_pwr" value="48" />
+            <talentvalue level="9" name="psyl_p9_pwr" value="130" />
+        </talentvalues>
+        <level description="%psyl_p9_dmg:s $DMG\n%psyl_p9_lif seconds\n%psyl_p9_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%psyl_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Psychic Onslaught" description="Rains psychic blades down on enemies dealing massive $DMG_MENTAL and stunning them." descshort="Xtreme" icon="9" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_p10" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="psyl_p10_req" value="10" />
+            <talentvalue level="8" name="psyl_p10_req" value="45" />
+            <talentvalue level="1" name="psyl_p10_dmg" value="88 128" />
+            <talentvalue level="8" name="psyl_p10_dmg" value="282 313" />
+            <talentvalue level="1" name="psyl_p10_stn" value="20" />
+            <talentvalue level="8" name="psyl_p10_stn" value="55" />
+        </talentvalues>
+        <level description="%psyl_p10_dmg $DMG_MENTAL\n%psyl_p10_stn seconds stun">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%psyl_p10_req" />
+        </level>
+    </talent>
+    <talent descname="Telekinetic Reflexes" description="Increases chance to dodge melee and projectile attacks." icon="11" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit11_pct" value="0.03" />
+            <talentvalue level="9" name="psyloc_outfit11_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit11_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%psyloc_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="psylocke_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="psyloc_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%psyloc_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="psylocke_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit13_dr" value="1" />
+            <talentvalue level="9" name="psyloc_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%psyloc_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Telekinetic Enhancement" description="Increases Attack speed." icon="10" icon_texture="textures/ui/psylocke_icons.png" name="psyloc_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit21_spd" value="1.05" />
+            <talentvalue level="9" name="psyloc_outfit21_spd" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%psyloc_outfit21_spd:s Attack Speed">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="move_attack" level="%psyloc_outfit21_spd" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="psyloc_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit22_all" value="2" />
+            <talentvalue level="9" name="psyloc_outfit22_all" value="10" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit22_all Body\n+%psyloc_outfit22_all Focus\n+%psyloc_outfit22_all Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%psyloc_outfit22_all" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="psylocke_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit23_dr" value="1" />
+            <talentvalue level="9" name="psyloc_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%psyloc_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Blade Mastery" description="Increases Melee $DMG." icon="1" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit31_pct" value="1.04" />
+            <talentvalue level="9" name="psyloc_outfit31_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%psyloc_outfit31_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%psyloc_outfit31_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="psyloc_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit32_pct" value="1.05" />
+            <talentvalue level="9" name="psyloc_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%psyloc_outfit32_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%psyloc_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="psylocke_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit33_dr" value="1" />
+            <talentvalue level="9" name="psyloc_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%psyloc_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Mental Mastery" description="Increases the $DMG of mental attacks." icon="0" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit41_pct" value="1.03" />
+            <talentvalue level="9" name="psyloc_outfit41_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%psyloc_outfit41_pct:s Mental $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%psyloc_outfit41_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Telepathic Backlash" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="psyloc_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit42_pct" value="0.25" />
+            <talentvalue level="9" name="psyloc_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%psyloc_outfit42_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%psyloc_outfit422_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="psylocke_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="psyloc_outfit43_dr" value="1" />
+            <talentvalue level="9" name="psyloc_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%psyloc_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%psyloc_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

@@ -1,0 +1,366 @@
+<talents>
+    <talent descname="Bowling Ball" description="Curling into a ball, Beast propels himself forward, knocking his opponents down as he goes." descshort="Special" icon="0" icon_texture="textures/ui/beast_icons.png" name="beast_pinball" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="beast_pinball_req" value="1" />
+            <talentvalue level="5" name="beast_pinball_req" value="13" />
+            <talentvalue level="6" name="beast_pinball_req" value="16" />
+            <talentvalue level="9" name="beast_pinball_req" value="25" />
+            <talentvalue level="10" name="beast_pinball_req" value="28" />
+            <talentvalue level="14" name="beast_pinball_req" value="52" />
+            <talentvalue level="15" name="beast_pinball_req" value="72" />
+            <talentvalue level="1" name="beast_pinball_kb" value="15" />
+            <talentvalue level="15" name="beast_pinball_kb" value="15" />
+            <talentvalue level="1" name="beast_pinball_dmg" value="32 38" />
+            <talentvalue level="4" name="beast_pinball_dmg" value="65 74" />
+            <talentvalue level="5" name="beast_pinball_dmg" value="78 86" />
+            <talentvalue level="9" name="beast_pinball_dmg" value="145 160" />
+            <talentvalue level="10" name="beast_pinball_dmg" value="164 181" />
+            <talentvalue level="14" name="beast_pinball_dmg" value="212 230" />
+            <talentvalue level="15" name="beast_pinball_dmg" value="258 279" />
+            <talentvalue level="1" name="beast_pinball_pwr" value="8" />
+            <talentvalue level="15" name="beast_pinball_pwr" value="65" />
+        </talentvalues>
+        <level description="%beast_pinball_dmg $DMG_PHYSICAL per hit\n%beast_pinball_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_pinball_req" />
+        </level>
+    </talent>
+    <talent descname="Propeller Kick" description="Spins legs around kicking any enemies within range with a chance of a Deadly Strike (33% instant $HP loss)" descshort="Radial" icon="1" icon_texture="textures/ui/beast_icons.png" name="beast_propeller" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="beast_propeller_req" value="5" />
+            <talentvalue level="5" name="beast_propeller_req" value="14" />
+            <talentvalue level="6" name="beast_propeller_req" value="17" />
+            <talentvalue level="9" name="beast_propeller_req" value="26" />
+            <talentvalue level="10" name="beast_propeller_req" value="29" />
+            <talentvalue level="14" name="beast_propeller_req" value="53" />
+            <talentvalue level="15" name="beast_propeller_req" value="73" />
+            <talentvalue level="1" name="beast_propeller_kb" value="15" />
+            <talentvalue level="15" name="beast_propeller_kb" value="15" />
+            <talentvalue level="1" name="beast_propeller_dmg" value="19 21" />
+            <talentvalue level="3" name="beast_propeller_dmg" value="23 26" />
+            <talentvalue level="4" name="beast_propeller_dmg" value="34 37" />
+            <talentvalue level="7" name="beast_propeller_dmg" value="45 49" />
+            <talentvalue level="8" name="beast_propeller_dmg" value="60 66" />
+            <talentvalue level="12" name="beast_propeller_dmg" value="94 103" />
+            <talentvalue level="13" name="beast_propeller_dmg" value="119 132" />
+            <talentvalue level="14" name="beast_propeller_dmg" value="144 159" />
+            <talentvalue level="15" name="beast_propeller_dmg" value="199 228" />
+            <talentvalue level="1" name="beast_propeller_chc" value="0.05" />
+            <talentvalue level="15" name="beast_propeller_chc" value="0.19" />
+            <talentvalue level="1" name="beast_propeller_rng" value="120" />
+            <talentvalue level="15" name="beast_propeller_rng" value="144" />
+            <talentvalue level="1" name="beast_propeller_pwr" value="20" />
+            <talentvalue level="3" name="beast_propeller_pwr" value="22" />
+            <talentvalue level="4" name="beast_propeller_pwr" value="25" />
+            <talentvalue level="7" name="beast_propeller_pwr" value="34" />
+            <talentvalue level="8" name="beast_propeller_pwr" value="36" />
+            <talentvalue level="12" name="beast_propeller_pwr" value="57" />
+            <talentvalue level="13" name="beast_propeller_pwr" value="62" />
+            <talentvalue level="14" name="beast_propeller_pwr" value="66" />
+            <talentvalue level="15" name="beast_propeller_pwr" value="72" />
+        </talentvalues>
+        <level description="%beast_propeller_dmg $DMG_ENERGY \n%beast_propeller_chc:p chance for Deadly Strike\n%beast_propeller_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_propeller_req" />
+        </level>
+    </talent>
+    <talent descname="Beastial Soul" description="Mentally focuses body and mind to decrease reaction time." descshort="Boost" icon="4" icon_texture="textures/ui/beast_icons.png" name="beast_soul" power="power3" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="beast_soul_req" value="2" />
+            <talentvalue level="5" name="beast_soul_req" value="14" />
+            <talentvalue level="6" name="beast_soul_req" value="17" />
+            <talentvalue level="9" name="beast_soul_req" value="26" />
+            <talentvalue level="10" name="beast_soul_req" value="29" />
+            <talentvalue level="14" name="beast_soul_req" value="53" />
+            <talentvalue level="15" name="beast_soul_req" value="73" />
+            <talentvalue level="1" name="beast_soul_life" value="20" />
+            <talentvalue level="15" name="beast_soul_life" value="180" />
+            <talentvalue level="1" name="beast_soul_pct" value="0.4" />
+            <talentvalue level="14" name="beast_soul_pct" value="0.7" />
+            <talentvalue level="15" name="beast_soul_pct" value="0.8" />
+            <talentvalue level="1" name="beast_soul_dr" value="1.2" />
+            <talentvalue level="15" name="beast_soul_dr" value="2.6" />
+            <talentvalue level="1" name="beast_soul_dam" value="0.1" />
+            <talentvalue level="15" name="beast_soul_dam" value="0.2" />
+            <talentvalue level="1" name="beast_soul_pwr" value="32" />
+            <talentvalue level="5" name="beast_soul_pwr" value="72" />
+            <talentvalue level="6" name="beast_soul_pwr" value="80" />
+            <talentvalue level="9" name="beast_soul_pwr" value="108" />
+            <talentvalue level="10" name="beast_soul_pwr" value="116" />
+            <talentvalue level="14" name="beast_soul_pwr" value="180" />
+            <talentvalue level="15" name="beast_soul_pwr" value="224" />
+        </talentvalues>
+        <level description="%beast_soul_pct:p $DMG_ENERGY as $HP gain\n%beast_soul_dr:s $DR, %beast_soul_dam:p $RES_PHYSICAL\n%beast_soul_life seconds\n%beast_soul_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_soul_req" />
+        </level>
+    </talent>
+    <talent descname="Tempest Claws" description="Spin around with claws extended, damaging nearby enemies with an additional chance of doing $DMG_BLEED." descshort="Radial" icon="3" icon_texture="textures/ui/beast_icons.png" name="beast_claws" power="power4" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="beast_claws_req" value="10" />
+            <talentvalue level="3" name="beast_claws_req" value="13" />
+            <talentvalue level="4" name="beast_claws_req" value="16" />
+            <talentvalue level="7" name="beast_claws_req" value="25" />
+            <talentvalue level="8" name="beast_claws_req" value="28" />
+            <talentvalue level="12" name="beast_claws_req" value="52" />
+            <talentvalue level="13" name="beast_claws_req" value="72" />
+            <talentvalue level="1" name="beast_claws_pwr" value="20" />
+            <talentvalue level="3" name="beast_claws_pwr" value="22" />
+            <talentvalue level="4" name="beast_claws_pwr" value="25" />
+            <talentvalue level="7" name="beast_claws_pwr" value="34" />
+            <talentvalue level="8" name="beast_claws_pwr" value="36" />
+            <talentvalue level="12" name="beast_claws_pwr" value="57" />
+            <talentvalue level="13" name="beast_claws_pwr" value="72" />
+            <talentvalue level="1" name="beast_claws_dmg" value="17 19" />
+            <talentvalue level="3" name="beast_claws_dmg" value="20 23" />
+            <talentvalue level="4" name="beast_claws_dmg" value="31 34" />
+            <talentvalue level="7" name="beast_claws_dmg" value="41 45" />
+            <talentvalue level="8" name="beast_claws_dmg" value="54 60" />
+            <talentvalue level="12" name="beast_claws_dmg" value="85 94" />
+            <talentvalue level="13" name="beast_claws_dmg" value="126 139" />
+            <talentvalue level="1" name="beast_claws_bld" value="11 13" />
+            <talentvalue level="3" name="beast_claws_bld" value="11 13" />
+            <talentvalue level="4" name="beast_claws_bld" value="11 13" />
+            <talentvalue level="7" name="beast_claws_bld" value="13 15" />
+            <talentvalue level="8" name="beast_claws_bld" value="15 17" />
+            <talentvalue level="12" name="beast_claws_bld" value="24 26" />
+            <talentvalue level="13" name="beast_claws_bld" value="37 41" />
+            <talentvalue level="1" name="beast_claws_chnc" value="0.1" />
+            <talentvalue level="13" name="beast_claws_chnc" value="0.5" />
+        </talentvalues>
+        <level description="%beast_claws_dmg $DMG_PHYSICAL\n%beast_claws_chnc:p Chance\n%beast_claws_bld $DMG_BLEED\n%beast_claws_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_claws_req" />
+        </level>
+    </talent>
+    <talent descname="Tackle" description="Tackle an enemy and stab them multiple times." descshort="Melee" icon="2" icon_texture="textures/ui/beast_icons.png" name="beast_tackle" power="power6" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="beast_tackle_req" value="17" />
+            <talentvalue level="4" name="beast_tackle_req" value="26" />
+            <talentvalue level="5" name="beast_tackle_req" value="29" />
+            <talentvalue level="9" name="beast_tackle_req" value="53" />
+            <talentvalue level="10" name="beast_tackle_req" value="73" />
+            <talentvalue level="1" name="beast_tackle_pwr" value="24" />
+            <talentvalue level="3" name="beast_tackle_pwr" value="30" />
+            <talentvalue level="4" name="beast_tackle_pwr" value="32" />
+            <talentvalue level="8" name="beast_tackle_pwr" value="50" />
+            <talentvalue level="9" name="beast_tackle_pwr" value="56" />
+            <talentvalue level="10" name="beast_tackle_pwr" value="62" />
+            <talentvalue level="1" name="beast_tackle_dmg" value="51 56" />
+            <talentvalue level="3" name="beast_tackle_dmg" value="65 71" />
+            <talentvalue level="4" name="beast_tackle_dmg" value="82 90" />
+            <talentvalue level="8" name="beast_tackle_dmg" value="132 147" />
+            <talentvalue level="8" name="beast_tackle_dmg" value="165 185" />
+            <talentvalue level="9" name="beast_tackle_dmg" value="210 240" />
+            <talentvalue level="1" name="beast_tackle_kb" value="620" />
+            <talentvalue level="10" name="beast_tackle_kb" value="620" />
+        </talentvalues>
+        <level description="%beast_tackle_dmg $DMG_PHYSICAL\n%beast_tackle_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_tackle_req" />
+        </level>
+    </talent>
+    <talent descname="Roar of the Beast" description="Increases team's attack speed and defense from projectiles." descshort="Boost" icon="5" icon_texture="textures/ui/beast_icons.png" name="beast_roar" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="beast_roar_req" value="14" />
+            <talentvalue level="2" name="beast_roar_req" value="17" />
+            <talentvalue level="5" name="beast_roar_req" value="26" />
+            <talentvalue level="6" name="beast_roar_req" value="29" />
+            <talentvalue level="10" name="beast_roar_req" value="53" />
+            <talentvalue level="11" name="beast_roar_req" value="73" />
+            <talentvalue level="1" name="beast_roar_pwr" value="72" />
+            <talentvalue level="2" name="beast_roar_pwr" value="80" />
+            <talentvalue level="5" name="beast_roar_pwr" value="108" />
+            <talentvalue level="6" name="beast_roar_pwr" value="116" />
+            <talentvalue level="10" name="beast_roar_pwr" value="180" />
+            <talentvalue level="11" name="beast_roar_pwr" value="224" />
+            <talentvalue level="1" name="beast_roar_spd" value="1.2" />
+            <talentvalue level="15" name="beast_roar_spd" value="1.4" />
+            <talentvalue level="1" name="beast_roar_lif" value="40" />
+            <talentvalue level="2" name="beast_roar_lif" value="50" />
+            <talentvalue level="5" name="beast_roar_lif" value="65" />
+            <talentvalue level="6" name="beast_roar_lif" value="80" />
+            <talentvalue level="10" name="beast_roar_lif" value="120" />
+            <talentvalue level="11" name="beast_roar_lif" value="180" />
+            <talentvalue level="1" name="beast_roar_def" value="10" />
+            <talentvalue level="11" name="beast_roar_def" value="100" />
+        </talentvalues>
+        <level description="+%beast_roar_def Defense\n%beast_roar_spd:s Attack Speed\n%beast_roar_lif Seconds\n%beast_roar_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%beast_roar_req" />
+        </level>
+    </talent>
+    <talent descname="Orbital Bombardment" description="Calls powerful lasers down to smite enemies." descshort="Xtreme" icon="6" icon_texture="textures/ui/beast_icons.png" name="beast_xtreme" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="beast_xtreme_req" value="10" />
+            <talentvalue level="8" name="beast_xtreme_req" value="45" />
+            <talentvalue level="1" name="beast_xtreme_dmg" value="51 56" />
+            <talentvalue level="8" name="beast_xtreme_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%beast_xtreme_dmg $DMG_ENERGY">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%beast_xtreme_req" />
+        </level>
+    </talent>
+    <talent descname="Animal Agility" description="Increases chance to dodge attacks." icon="8" icon_texture="textures/ui/beast_icons.png" name="beast_outfit11" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit11_pct" value="0.03" />
+            <talentvalue level="9" name="beast_outfit11_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit11_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%beast_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="beast_outfit12" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit12_pct" value="0.02" />
+            <talentvalue level="9" name="beast_outfit12_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit12_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%beast_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="invis_outfit13_dr" value="1" />
+            <talentvalue level="9" name="invis_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%invis_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%invis_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="beast_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit21_pct" value="1.04" />
+            <talentvalue level="9" name="beast_outfit21_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%beast_outfit21_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%beast_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense Grid" description="Increases all resistances." icon="10" icon_texture="textures/ui/beast_icons.png" name="beast_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit22_pct" value="0.02" />
+            <talentvalue level="9" name="beast_outfit22_pct" value="0.1" />
+            <talentvalue level="1" name="beast_outfit22_shw" value="2" />
+            <talentvalue level="9" name="beast_outfit22_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit22_shw Resist all">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%beast_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit23_dr" value="1" />
+            <talentvalue level="9" name="beast_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%beast_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases Max Health." icon="20" icon_texture="textures/ui/talent_icons.png" name="beast_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="beast_outfit31_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%beast_outfit31_pct:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%beast_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Special Serum" description="Boosts body, focus, and strike stats." icon="9" icon_texture="textures/ui/beast_icons.png" name="beast_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit32_pct" value="2" />
+            <talentvalue level="9" name="beast_outfit32_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit32_pct Body\n+%beast_outfit32_pct Focus\n+%beast_outfit32_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%beast_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit33_dr" value="1" />
+            <talentvalue level="9" name="beast_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%beast_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Simian Rage" description="Increases the $DMG of powers." icon="7" icon_texture="textures/ui/beast_icons.png" name="beast_outfit41" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit41_pct" value="1.03" />
+            <talentvalue level="9" name="beast_outfit41_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%beast_outfit41_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%beast_outfit41_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Reflect Melee" description="Reflects $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="beast_outfit42" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit42_pct" value="0.25" />
+            <talentvalue level="9" name="beast_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%beast_outfit42_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%beast_outfit42_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit43" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="beast_outfit43_dr" value="1" />
+            <talentvalue level="9" name="beast_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%beast_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%beast_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

@@ -1,0 +1,364 @@
+<talents>
+    <talent descname="Plasma Disc" description="A single projectile with an explosion radius.  $PT_CHARGE" descshort="Projectile" icon="0" icon_texture="textures/ui/ironman_icons.png" name="ironman_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p1_req" value="1" />
+            <talentvalue level="5" name="ironman_p1_req" value="13" />
+            <talentvalue level="6" name="ironman_p1_req" value="16" />
+            <talentvalue level="9" name="ironman_p1_req" value="25" />
+            <talentvalue level="10" name="ironman_p1_req" value="28" />
+            <talentvalue level="14" name="ironman_p1_req" value="52" />
+            <talentvalue level="15" name="ironman_p1_req" value="72" />
+            <talentvalue level="1" name="ironman_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="ironman_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="ironman_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="ironman_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="ironman_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="ironman_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="ironman_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="ironman_p1_pwr" value="7" />
+            <talentvalue level="5" name="ironman_p1_pwr" value="14" />
+            <talentvalue level="6" name="ironman_p1_pwr" value="16" />
+            <talentvalue level="9" name="ironman_p1_pwr" value="21" />
+            <talentvalue level="10" name="ironman_p1_pwr" value="23" />
+            <talentvalue level="14" name="ironman_p1_pwr" value="34" />
+            <talentvalue level="15" name="ironman_p1_pwr" value="43" />
+            <talentvalue level="1" name="ironman_p1_rad" value="12" value_charged="36" />
+            <talentvalue level="15" name="ironman_p1_rad" value="36" value_charged="72" />
+        </talentvalues>
+        <level description="%ironman_p1_dmg $DMG\n%ironman_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Uni-Beam" description="Rapidly fire off a stream of lasers, which repeatedly bounce off walls at higher levels.  $PT_TAP" descshort="Projectile" icon="1" icon_texture="textures/ui/ironman_icons.png" name="ironman_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p2_req" value="17" />
+            <talentvalue level="4" name="ironman_p2_req" value="26" />
+            <talentvalue level="5" name="ironman_p2_req" value="29" />
+            <talentvalue level="9" name="ironman_p2_req" value="53" />
+            <talentvalue level="10" name="ironman_p2_req" value="73" />
+            <talentvalue level="1" name="ironman_p2_dmg" value="24 26" />
+            <talentvalue level="4" name="ironman_p2_dmg" value="34 38" />
+            <talentvalue level="5" name="ironman_p2_dmg" value="48 53" />
+            <talentvalue level="9" name="ironman_p2_dmg" value="75 83" />
+            <talentvalue level="10" name="ironman_p2_dmg" value="109 120" />
+            <talentvalue level="1" name="ironman_p2_pwr" value="10" />
+            <talentvalue level="4" name="ironman_p2_pwr" value="13" />
+            <talentvalue level="5" name="ironman_p2_pwr" value="14" />
+            <talentvalue level="9" name="ironman_p2_pwr" value="21" />
+            <talentvalue level="10" name="ironman_p2_pwr" value="26" />
+            <talentvalue level="1" name="ironman_p2_bnc" value="1" />
+            <talentvalue level="10" name="ironman_p2_bnc" value="4" />
+            <talentvalue level="1" name="ironman_p2_lif" value="2" />
+            <talentvalue level="15" name="ironman_p2_lif" value="4" />
+        </talentvalues>
+        <level description="%ironman_p2_dmg $DMG\n%ironman_p2_pwr $EP\n%ironman_p2_bnc Bounces">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Rocket Uppercut" description="Massive melee punch that sends enemies flying.  $PT_CHARGE" descshort="Melee" icon="2" icon_texture="textures/ui/ironman_icons.png" name="ironman_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p3_req" value="5" />
+            <talentvalue level="5" name="ironman_p3_req" value="14" />
+            <talentvalue level="6" name="ironman_p3_req" value="17" />
+            <talentvalue level="9" name="ironman_p3_req" value="26" />
+            <talentvalue level="10" name="ironman_p3_req" value="29" />
+            <talentvalue level="14" name="ironman_p3_req" value="53" />
+            <talentvalue level="15" name="ironman_p3_req" value="73" />
+            <talentvalue level="1" name="ironman_p3_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="5" name="ironman_p3_dmg" value="61 68" value_charged_scale="2.0" />
+            <talentvalue level="6" name="ironman_p3_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="9" name="ironman_p3_dmg" value="112 124" value_charged_scale="2.0" />
+            <talentvalue level="10" name="ironman_p3_dmg" value="143 157" value_charged_scale="2.0" />
+            <talentvalue level="14" name="ironman_p3_dmg" value="224 248" value_charged_scale="2.0" />
+            <talentvalue level="15" name="ironman_p3_dmg" value="322 356" value_charged_scale="2.0" />
+            <talentvalue level="1" name="ironman_p3_pwr" value="10" />
+            <talentvalue level="5" name="ironman_p3_pwr" value="15" />
+            <talentvalue level="6" name="ironman_p3_pwr" value="17" />
+            <talentvalue level="9" name="ironman_p3_pwr" value="22" />
+            <talentvalue level="10" name="ironman_p3_pwr" value="23" />
+            <talentvalue level="14" name="ironman_p3_pwr" value="35" />
+            <talentvalue level="15" name="ironman_p3_pwr" value="43" />
+            <talentvalue level="1" name="ironman_p3_fxl" value="1" value_charged="2" />
+        </talentvalues>
+        <level description="%ironman_p3_dmg $DMG\n%ironman_p3_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Nano Assault" description="Radial energy shockwave, with smaller secondary shockwaves. $PT_TAP" descshort="Radial" icon="3" icon_texture="textures/ui/ironman_icons.png" name="ironman_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p4_req" value="10" />
+            <talentvalue level="3" name="ironman_p4_req" value="13" />
+            <talentvalue level="4" name="ironman_p4_req" value="16" />
+            <talentvalue level="7" name="ironman_p4_req" value="25" />
+            <talentvalue level="8" name="ironman_p4_req" value="28" />
+            <talentvalue level="12" name="ironman_p4_req" value="52" />
+            <talentvalue level="13" name="ironman_p4_req" value="72" />
+            <talentvalue level="1" name="ironman_p4_dmg" value="17 19" />
+            <talentvalue level="3" name="ironman_p4_dmg" value="20 23" />
+            <talentvalue level="4" name="ironman_p4_dmg" value="31 34" />
+            <talentvalue level="7" name="ironman_p4_dmg" value="41 45" />
+            <talentvalue level="8" name="ironman_p4_dmg" value="54 60" />
+            <talentvalue level="12" name="ironman_p4_dmg" value="85 94" />
+            <talentvalue level="13" name="ironman_p4_dmg" value="126 139" />
+            <talentvalue level="1" name="ironman_p4_dmg2" value="2" />
+            <talentvalue level="13" name="ironman_p4_dmg2" value="12" />
+            <talentvalue level="1" name="ironman_p4_pwr" value="17" />
+            <talentvalue level="3" name="ironman_p4_pwr" value="18" />
+            <talentvalue level="4" name="ironman_p4_pwr" value="21" />
+            <talentvalue level="7" name="ironman_p4_pwr" value="27" />
+            <talentvalue level="8" name="ironman_p4_pwr" value="30" />
+            <talentvalue level="12" name="ironman_p4_pwr" value="44" />
+            <talentvalue level="13" name="ironman_p4_pwr" value="56" />
+        </talentvalues>
+        <level description="%ironman_p4_dmg $DMG\n%ironman_p4_dmg2 Secondary $DMG/Tap\n%ironman_p4_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Speed Overdrive" description="Gives Iron Man's suit a burst of energy, temporarily increasing his attack speed and damage." descshort="Boost" icon="4" icon_texture="textures/ui/ironman_icons.png" name="ironman_p5" power="power5" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p5_req" value="2" />
+            <talentvalue level="5" name="ironman_p5_req" value="14" />
+            <talentvalue level="6" name="ironman_p5_req" value="17" />
+            <talentvalue level="9" name="ironman_p5_req" value="26" />
+            <talentvalue level="10" name="ironman_p5_req" value="29" />
+            <talentvalue level="14" name="ironman_p5_req" value="53" />
+            <talentvalue level="15" name="ironman_p5_req" value="73" />
+            <talentvalue level="1" name="ironman_p5_dmg" value="1.05" />
+            <talentvalue level="5" name="ironman_p5_dmg" value="1.06" />
+            <talentvalue level="6" name="ironman_p5_dmg" value="1.07" />
+            <talentvalue level="9" name="ironman_p5_dmg" value="1.08" />
+            <talentvalue level="10" name="ironman_p5_dmg" value="1.09" />
+            <talentvalue level="14" name="ironman_p5_dmg" value="1.1" />
+            <talentvalue level="15" name="ironman_p5_dmg" value="1.11" />
+            <talentvalue level="1" name="ironman_p5_spe" value="1.2" />
+            <talentvalue level="5" name="ironman_p5_spe" value="1.2" />
+            <talentvalue level="6" name="ironman_p5_spe" value="1.25" />
+            <talentvalue level="9" name="ironman_p5_spe" value="1.25" />
+            <talentvalue level="10" name="ironman_p5_spe" value="1.3" />
+            <talentvalue level="14" name="ironman_p5_spe" value="1.3" />
+            <talentvalue level="15" name="ironman_p5_spe" value="1.4" />
+            <talentvalue level="1" name="ironman_p5_lif" value="20" />
+            <talentvalue level="5" name="ironman_p5_lif" value="40" />
+            <talentvalue level="6" name="ironman_p5_lif" value="50" />
+            <talentvalue level="9" name="ironman_p5_lif" value="65" />
+            <talentvalue level="10" name="ironman_p5_lif" value="80" />
+            <talentvalue level="14" name="ironman_p5_lif" value="120" />
+            <talentvalue level="15" name="ironman_p5_lif" value="180" />
+            <talentvalue level="1" name="ironman_p5_pwr" value="32" />
+            <talentvalue level="5" name="ironman_p5_pwr" value="60" />
+            <talentvalue level="6" name="ironman_p5_pwr" value="68" />
+            <talentvalue level="9" name="ironman_p5_pwr" value="88" />
+            <talentvalue level="10" name="ironman_p5_pwr" value="92" />
+            <talentvalue level="14" name="ironman_p5_pwr" value="140" />
+            <talentvalue level="15" name="ironman_p5_pwr" value="172" />
+        </talentvalues>
+        <level description="%ironman_p5_spe:s Attack Speed\n%ironman_p5_dmg:s melee $DMG\n%ironman_p5_lif Sec.\n%ironman_p5_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Reroute" description="Greatly decrease energy spending for entire party for a time." descshort="Boost" icon="5" icon_texture="textures/ui/ironman_icons.png" name="ironman_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p6_req" value="14" />
+            <talentvalue level="2" name="ironman_p6_req" value="17" />
+            <talentvalue level="5" name="ironman_p6_req" value="26" />
+            <talentvalue level="6" name="ironman_p6_req" value="29" />
+            <talentvalue level="10" name="ironman_p6_req" value="53" />
+            <talentvalue level="11" name="ironman_p6_req" value="73" />
+            <talentvalue level="1" name="ironman_p6_cost" value="0.3" />
+            <talentvalue level="11" name="ironman_p6_cost" value="0.5" />
+            <talentvalue level="1" name="ironman_p6_lif" value="40" />
+            <talentvalue level="2" name="ironman_p6_lif" value="50" />
+            <talentvalue level="5" name="ironman_p6_lif" value="65" />
+            <talentvalue level="6" name="ironman_p6_lif" value="80" />
+            <talentvalue level="10" name="ironman_p6_lif" value="120" />
+            <talentvalue level="11" name="ironman_p6_lif" value="180" />
+            <talentvalue level="1" name="ironman_p6_pwr" value="60" />
+            <talentvalue level="2" name="ironman_p6_pwr" value="68" />
+            <talentvalue level="5" name="ironman_p6_pwr" value="88" />
+            <talentvalue level="6" name="ironman_p6_pwr" value="92" />
+            <talentvalue level="10" name="ironman_p6_pwr" value="140" />
+            <talentvalue level="11" name="ironman_p6_pwr" value="172" />
+        </talentvalues>
+        <level description="%ironman_p6_cost:p $EP cost\n%ironman_p6_lif Seconds\n%ironman_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ironman_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Air Strike" description="Launch a flurry of missiles into the air, dealing massive $DMG_ENERGY to all enemies in the area." descshort="Xtreme" icon="7" icon_texture="textures/ui/ironman_icons.png" name="ironman_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="ironman_p8_req" value="10" />
+            <talentvalue level="8" name="ironman_p8_req" value="45" />
+            <talentvalue level="1" name="ironman_p8_dmg" value="85 94" />
+            <talentvalue level="8" name="ironman_p8_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%ironman_p8_dmg $DMG_ENERGY">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%ironman_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit11_pct" value="1.02" />
+            <talentvalue level="9" name="iron_outfit11_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit11_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%iron_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases Power $DMG." icon="0" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit12_pct" value="1.03" />
+            <talentvalue level="9" name="iron_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit12_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%iron_outfit12_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit13_dr" value="1" />
+            <talentvalue level="9" name="iron_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iron_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases Power $DMG." icon="0" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit21_pct" value="1.03" />
+            <talentvalue level="9" name="iron_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit21_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%iron_outfit21_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Momentum" description="Increases momentum gained." icon="10" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit22_pct" value="1.04" />
+            <talentvalue level="9" name="iron_outfit22_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit22_pct:s Momentum">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="momentum" level="%iron_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit23_dr" value="1" />
+            <talentvalue level="9" name="iron_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iron_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit31_pct" value="0.02" />
+            <talentvalue level="9" name="iron_outfit31_pct" value="0.1" />
+            <talentvalue level="1" name="iron_outfit31_shw" value="2" />
+            <talentvalue level="9" name="iron_outfit31_shw" value="10" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit31_shw All Resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%iron_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases Melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="iron_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit32_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%iron_outfit32_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit33_dr" value="1" />
+            <talentvalue level="9" name="iron_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iron_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Regen" description="Regenerates $HP over time." icon="30" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit41_pct" value="0.004" />
+            <talentvalue level="9" name="iron_outfit41_pct" value="0.012" />
+            <talentvalue level="1" name="iron_outfit41_shw" value="0.4" />
+            <talentvalue level="9" name="iron_outfit41_shw" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%iron_outfit41_shw:f% Max $HP Regenerated Per Second">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%iron_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="5" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit42_pct" value="0.02" />
+            <talentvalue level="9" name="iron_outfit42_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit42_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%iron_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ironman_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="iron_outfit43_dr" value="1" />
+            <talentvalue level="9" name="iron_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%iron_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%iron_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

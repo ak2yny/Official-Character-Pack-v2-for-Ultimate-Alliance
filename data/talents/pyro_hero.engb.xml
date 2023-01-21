@@ -1,0 +1,389 @@
+<talents>
+    <talent hidden="true" name="pyr_trail">
+        <level count="1">
+            <powerup class="trail_replace" life="-1">
+                <special_fx effect="char/pyro/special_trail" how_used="custom" />
+                <affecter attribute="powerup_scope">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Fire Immunity" description="100% immune to $DMG_FIRE." name="pyro_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Flamethrower" description="Shoots a continuous stream of flame, doing $DMG_FIRE.  $PT_HOLD" descshort="Special" icon="1" icon_texture="textures/ui/pyro_icons.png" name="pyr_flmthrow" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_flmthrow_req" value="1" />
+            <talentvalue level="5" name="pyr_flmthrow_req" value="13" />
+            <talentvalue level="6" name="pyr_flmthrow_req" value="16" />
+            <talentvalue level="9" name="pyr_flmthrow_req" value="25" />
+            <talentvalue level="10" name="pyr_flmthrow_req" value="28" />
+            <talentvalue level="14" name="pyr_flmthrow_req" value="52" />
+            <talentvalue level="15" name="pyr_flmthrow_req" value="72" />
+            <talentvalue level="1" name="pyr_flmthrow_dmg" value="10 14" />
+            <talentvalue level="5" name="pyr_flmthrow_dmg" value="20 25" />
+            <talentvalue level="6" name="pyr_flmthrow_dmg" value="31 36" />
+            <talentvalue level="9" name="pyr_flmthrow_dmg" value="41 47" />
+            <talentvalue level="10" name="pyr_flmthrow_dmg" value="54 62" />
+            <talentvalue level="14" name="pyr_flmthrow_dmg" value="88 100" />
+            <talentvalue level="15" name="pyr_flmthrow_dmg" value="129 145" />
+            <talentvalue level="1" name="pyr_flmthrow_dmg2" value="24 28" />
+            <talentvalue level="15" name="pyr_flmthrow_dmg2" value="217 242" />
+            <talentvalue level="1" name="pyr_flmthrow_pwr" value="6" />
+            <talentvalue level="5" name="pyr_flmthrow_pwr" value="11" />
+            <talentvalue level="6" name="pyr_flmthrow_pwr" value="12" />
+            <talentvalue level="9" name="pyr_flmthrow_pwr" value="16" />
+            <talentvalue level="10" name="pyr_flmthrow_pwr" value="17" />
+            <talentvalue level="14" name="pyr_flmthrow_pwr" value="25" />
+            <talentvalue level="15" name="pyr_flmthrow_pwr" value="32" />
+        </talentvalues>
+        <level description="%pyr_flmthrow_dmg $DMG_FIRE\n%pyr_flmthrow_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_flmthrow_req" />
+        </level>
+    </talent>
+    <talent descname="Fire Bats" description="Shape flames into Fire Bats which seek out foes." descshort="Projectile" icon="3" icon_texture="textures/ui/pyro_icons.png" name="pyr_fireballs" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_fireballs_req" value="10" />
+            <talentvalue level="3" name="pyr_fireballs_req" value="13" />
+            <talentvalue level="4" name="pyr_fireballs_req" value="16" />
+            <talentvalue level="7" name="pyr_fireballs_req" value="25" />
+            <talentvalue level="8" name="pyr_fireballs_req" value="28" />
+            <talentvalue level="12" name="pyr_fireballs_req" value="52" />
+            <talentvalue level="13" name="pyr_fireballs_req" value="72" />
+            <talentvalue level="1" name="pyr_fireballs_dmg" value="27 30" />
+            <talentvalue level="3" name="pyr_fireballs_dmg" value="39 44" />
+            <talentvalue level="4" name="pyr_fireballs_dmg" value="45 51" />
+            <talentvalue level="7" name="pyr_fireballs_dmg" value="63 72" />
+            <talentvalue level="8" name="pyr_fireballs_dmg" value="69 79" />
+            <talentvalue level="12" name="pyr_fireballs_dmg" value="93 107" />
+            <talentvalue level="13" name="pyr_fireballs_dmg" value="120 138" />
+            <talentvalue level="1" name="pyr_fireballs_pwr" value="16" />
+            <talentvalue level="3" name="pyr_fireballs_pwr" value="20" />
+            <talentvalue level="4" name="pyr_fireballs_pwr" value="22" />
+            <talentvalue level="7" name="pyr_fireballs_pwr" value="30" />
+            <talentvalue level="8" name="pyr_fireballs_pwr" value="32" />
+            <talentvalue level="12" name="pyr_fireballs_pwr" value="40" />
+            <talentvalue level="13" name="pyr_fireballs_pwr" value="42" />
+            <talentvalue level="1" name="pyr_fireballs_num" value="1" />
+            <talentvalue level="3" name="pyr_fireballs_num" value="2" />
+            <talentvalue level="4" name="pyr_fireballs_num" value="2" />
+            <talentvalue level="7" name="pyr_fireballs_num" value="4" />
+            <talentvalue level="8" name="pyr_fireballs_num" value="5" />
+            <talentvalue level="12" name="pyr_fireballs_num" value="6" />
+            <talentvalue level="13" name="pyr_fireballs_num" value="7" />
+        </talentvalues>
+        <level description="%pyr_fireballs_dmg $DMG_FIRE\n%pyr_fireballs_num fire bat(s)\n%pyr_fireballs_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_fireballs_req" />
+        </level>
+    </talent>
+    <talent descname="Fire Blast" description="Launch a fireball that explodes on contact and harms nearby enemies for a time." descshort="Projectile" icon="4" icon_texture="textures/ui/pyro_icons.png" name="pyr_fireblast" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_fireblast_req" value="17" />
+            <talentvalue level="4" name="pyr_fireblast_req" value="26" />
+            <talentvalue level="5" name="pyr_fireblast_req" value="29" />
+            <talentvalue level="9" name="pyr_fireblast_req" value="53" />
+            <talentvalue level="10" name="pyr_fireblast_req" value="73" />
+            <talentvalue level="1" name="pyr_fireblast_dmg" value="90 100" />
+            <talentvalue level="4" name="pyr_fireblast_dmg" value="110 125" />
+            <talentvalue level="5" name="pyr_fireblast_dmg" value="120 140" />
+            <talentvalue level="9" name="pyr_fireblast_dmg" value="170 215" />
+            <talentvalue level="10" name="pyr_fireblast_dmg" value="200 255" />
+            <talentvalue level="1" name="pyr_fireblast_sdmg" value="3 5" />
+            <talentvalue level="10" name="pyr_fireblast_sdmg" value="15 25" />
+            <talentvalue level="1" name="pyr_fireblast_pwr" value="23" />
+            <talentvalue level="10" name="pyr_fireblast_pwr" value="38" />
+            <talentvalue level="1" name="pyr_fireblast_life" value="3" />
+            <talentvalue level="4" name="pyr_fireblast_life" value="4" />
+            <talentvalue level="5" name="pyr_fireblast_life" value="4" />
+            <talentvalue level="9" name="pyr_fireblast_life" value="6" />
+            <talentvalue level="10" name="pyr_fireblast_life" value="7" />
+        </talentvalues>
+        <level description="%pyr_fireblast_dmg $DMG_FIRE\n%pyr_fireblast_sdmg $DMG_FIRE/sec\n%pyr_fireblast_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_fireblast_req" />
+        </level>
+    </talent>
+    <talent descname="Scorching Fire" description="Sets enemies ablaze in a large radius, causing them to burn." descshort="Special" icon="10" icon_texture="textures/ui/pyro_icons.png" name="pyr_rage" power="pyr_rage">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_rage_req" value="20" />
+            <talentvalue level="3" name="pyr_rage_req" value="29" />
+            <talentvalue level="4" name="pyr_rage_req" value="32" />
+            <talentvalue level="8" name="pyr_rage_req" value="56" />
+            <talentvalue level="9" name="pyr_rage_req" value="76" />
+            <talentvalue level="1" name="pyr_rage_dmg" value="92 101" />
+            <talentvalue level="3" name="pyr_rage_dmg" value="122 135" />
+            <talentvalue level="4" name="pyr_rage_dmg" value="153 169" />
+            <talentvalue level="8" name="pyr_rage_dmg" value="234 259" />
+            <talentvalue level="9" name="pyr_rage_dmg" value="333 368" />
+            <talentvalue level="1" name="pyr_rage_pwr" value="18" />
+            <talentvalue level="3" name="pyr_rage_pwr" value="23" />
+            <talentvalue level="4" name="pyr_rage_pwr" value="25" />
+            <talentvalue level="8" name="pyr_rage_pwr" value="36" />
+            <talentvalue level="9" name="pyr_rage_pwr" value="44" />
+        </talentvalues>
+        <level description="%pyr_rage_dmg $DMG_FIRE\n%pyr_rage_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_rage_req" />
+        </level>
+    </talent>
+    <talent descname="Torch Fury" description="Adds $DMG_FIRE to melee attacks for self and allies." descshort="Boost" icon="6" icon_texture="textures/ui/pyro_icons.png" name="pyr_flamefury" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_flamefury_req" value="2" />
+            <talentvalue level="5" name="pyr_flamefury_req" value="14" />
+            <talentvalue level="6" name="pyr_flamefury_req" value="17" />
+            <talentvalue level="9" name="pyr_flamefury_req" value="26" />
+            <talentvalue level="10" name="pyr_flamefury_req" value="29" />
+            <talentvalue level="14" name="pyr_flamefury_req" value="53" />
+            <talentvalue level="15" name="pyr_flamefury_req" value="73" />
+            <talentvalue level="1" name="pyr_flamefury_pdmg" value="0.05" />
+            <talentvalue level="10" name="pyr_flamefury_pdmg" value="0.33" />
+            <talentvalue level="15" name="pyr_flamefury_pdmg" value="0.47" />
+            <talentvalue level="1" name="pyr_flamefury_pwr" value="65" />
+            <talentvalue level="10" name="pyr_flamefury_pwr" value="85" />
+            <talentvalue level="15" name="pyr_flamefury_pwr" value="100" />
+            <talentvalue level="1" name="pyr_flamefury_life" value="35" />
+            <talentvalue level="10" name="pyr_flamefury_life" value="75" />
+            <talentvalue level="15" name="pyr_flamefury_life" value="90" />
+        </talentvalues>
+        <level description="+%pyr_flamefury_pdmg:p $DMG_FIRE\n%pyr_flamefury_life seconds\n%pyr_flamefury_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_flamefury_req" />
+        </level>
+    </talent>
+    <talent descname="Mercury Rising" description="Creates a localized fire of intense heat that reduces enemies' combat effectiveness, limiting their $DMG." descshort="Debuff" icon="7" icon_texture="textures/ui/pyro_icons.png" name="pyr_mercury" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_mercury_req" value="14" />
+            <talentvalue level="2" name="pyr_mercury_req" value="17" />
+            <talentvalue level="5" name="pyr_mercury_req" value="26" />
+            <talentvalue level="6" name="pyr_mercury_req" value="29" />
+            <talentvalue level="10" name="pyr_mercury_req" value="53" />
+            <talentvalue level="11" name="pyr_mercury_req" value="73" />
+            <talentvalue level="1" name="pyr_mercury_pwr" value="52" />
+            <talentvalue level="2" name="pyr_mercury_pwr" value="61" />
+            <talentvalue level="5" name="pyr_mercury_pwr" value="80" />
+            <talentvalue level="6" name="pyr_mercury_pwr" value="92" />
+            <talentvalue level="10" name="pyr_mercury_pwr" value="120" />
+            <talentvalue level="11" name="pyr_mercury_pwr" value="145" />
+            <talentvalue level="1" name="pyr_mercury_lif" value="30" />
+            <talentvalue level="11" name="pyr_mercury_lif" value="108" />
+            <talentvalue level="1" name="pyr_mercury_def" value="0.85" />
+            <talentvalue level="11" name="pyr_mercury_def" value="0.77" />
+        </talentvalues>
+        <level description="%pyr_mercury_def:s $DMG taken\n%pyr_mercury_lif Seconds\n%pyr_mercury_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_mercury_req" />
+        </level>
+    </talent>
+    <talent descname="Wildfire" description="Intense fire attack that delivers widely varying $DMG_FIRE to enemies." descshort="Xtreme" icon="0" icon_texture="textures/ui/pyro_icons.png" name="pyr_nucblast" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_nucblast_req" value="10" />
+            <talentvalue level="8" name="pyr_nucblast_req" value="48" />
+            <talentvalue level="1" name="pyr_nucblast_fdmg" value="32 96" />
+            <talentvalue level="8" name="pyr_nucblast_fdmg" value="102 348" />
+        </talentvalues>
+        <level description="%pyr_nucblast_fdmg $DMG_FIRE">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%pyr_nucblast_req" />
+        </level>
+    </talent>
+    <talent descname="Pillar of Flame" description="Creates a column of surging flame that harms nearby enemies and knocks them back." descshort="Radial" icon="9" icon_texture="textures/ui/pyro_icons.png" name="pyr_flamecol" power="power10">
+        <talentvalues>
+            <talentvalue level="1" name="pyr_flamecol_req" value="5" />
+            <talentvalue level="5" name="pyr_flamecol_req" value="14" />
+            <talentvalue level="6" name="pyr_flamecol_req" value="17" />
+            <talentvalue level="9" name="pyr_flamecol_req" value="26" />
+            <talentvalue level="10" name="pyr_flamecol_req" value="29" />
+            <talentvalue level="14" name="pyr_flamecol_req" value="53" />
+            <talentvalue level="15" name="pyr_flamecol_req" value="73" />
+            <talentvalue level="1" name="pyr_flamecol_dmg" value="14 16" />
+            <talentvalue level="10" name="pyr_flamecol_dmg" value="85 94" />
+            <talentvalue level="15" name="pyr_flamecol_dmg" value="115 129" />
+            <talentvalue level="1" name="pyr_flamecol_kb" value="370" />
+            <talentvalue level="10" name="pyr_flamecol_kb" value="530" />
+            <talentvalue level="15" name="pyr_flamecol_kb" value="620" />
+            <talentvalue level="1" name="pyr_flamecol_pwr" value="12" />
+            <talentvalue level="10" name="pyr_flamecol_pwr" value="32" />
+            <talentvalue level="15" name="pyr_flamecol_pwr" value="42" />
+        </talentvalues>
+        <level description="%pyr_flamecol_dmg $DMG_FIRE\n%pyr_flamecol_kb $KB\n%pyr_flamecol_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%pyr_flamecol_req" />
+        </level>
+    </talent>
+    <talent descname="Kerosene Tank" description="Increases maximum $EP." icon="32" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit11_pct" value="1.04" />
+            <talentvalue level="9" name="pyro_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%pyro_outfit11_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%pyro_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="St. John's Fire" description="Increases $DMG_FIRE." icon="9" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit12_pct" value="1.03" />
+            <talentvalue level="9" name="pyro_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%pyro_outfit12_pct:s $DMG_FIRE">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%pyro_outfit12_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit13_dr" value="1" />
+            <talentvalue level="9" name="pyro_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%pyro_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit21_pct" value="1.04" />
+            <talentvalue level="9" name="pyro_outfit21_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%pyro_outfit21_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%pyro_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Firestarter" description="Chance to set enemies on fire with melee attacks." icon="9" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit22_pct" value="0.05" />
+            <talentvalue level="9" name="pyro_outfit22_pct" value="0.25" />
+            <talentvalue level="1" name="pyro_outfit22_dmg" value="17 19" />
+            <talentvalue level="9&quot;" name="pyro_outfit22_dmg" value="34 38" />
+            <talentvalue level="1" name="pyro_outfit22_lif" value="5" />
+            <talentvalue level="9" name="pyro_outfit22_lif" value="5" />
+        </talentvalues>
+        <level count="9" description="%pyro_outfit22_pct:p Chance\n%pyro_outfit22_dmg $DMG_FIRE\n%pyro_outfit22_lif Secs">
+            <powerup chance="%pyro_outfit22_pct" class="add_harming" damage="%pyro_outfit221_dmg" harming_powerup_tag="shared_burn" life="-1" time="%pyro_outfit22_lif">
+                <affecter attribute="powerup_scope">
+                    <scope scope_damage="dmg_punch" />
+                    <scope scope_damage="dmg_kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit23_dr" value="1" />
+            <talentvalue level="9" name="pyro_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%pyro_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Scorch" description="Adds $DMG to any ranged attack that hits enemies within 6 feet of Pyro." icon="11" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit31_pct" value="0.04" />
+            <talentvalue level="9" name="pyro_outfit31_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit31_pct:p Added $DMG">
+            <powerup class="add_attack" damagepercent="%pyro_outfit31_pct" life="-1" max_distance="72">
+                <affecter attribute="powerup_scope" scope_attack="projectile" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases Max Health." icon="20" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit32_pct" value="1.05" />
+            <talentvalue level="9" name="pyro_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%pyro_outfit32_pct:s Max $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%pyro_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit33_dr" value="1" />
+            <talentvalue level="9" name="pyro_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%pyro_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Flaming Fist" description="Adds $DMG_FIRE to melee attacks." icon="7" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit41_pct" value="0.04" />
+            <talentvalue level="9" name="pyro_outfit41_pct" value="0.2" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit41_pct:p $DMG_FIRE">
+            <powerup class="add_attack" damagepercent="%pyro_outfit41_pct" damagetype="dmg_fire" life="-1">
+                <affecter attribute="powerup_scope">
+                    <scope scope_non_powers="true" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Fuel for the Fire" description="Gain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit42_pct" value="5" />
+            <talentvalue level="9" name="pyro_outfit42_pct" value="25" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit42_pct $EP per kill">
+            <powerup life="-1">
+                <affecter attribute="energy_per_kill" level="%pyro_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pyro_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="pyro_outfit43_dr" value="1" />
+            <talentvalue level="9" name="pyro_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%pyro_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%pyro_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

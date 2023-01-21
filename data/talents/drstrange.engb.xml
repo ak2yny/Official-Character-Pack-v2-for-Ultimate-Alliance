@@ -1,0 +1,433 @@
+<talents>
+    <talent descname="Mystic Bolts" description="Fires mystical bolts at enemies.  $PT_TAP" descshort="Projectile" icon="0" icon_texture="textures/ui/drstr_icons.png" name="drstr_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p1_req" value="1" />
+            <talentvalue level="5" name="drstr_p1_req" value="13" />
+            <talentvalue level="6" name="drstr_p1_req" value="16" />
+            <talentvalue level="9" name="drstr_p1_req" value="25" />
+            <talentvalue level="10" name="drstr_p1_req" value="28" />
+            <talentvalue level="14" name="drstr_p1_req" value="52" />
+            <talentvalue level="15" name="drstr_p1_req" value="72" />
+            <talentvalue level="1" name="drstr_p1_pwr" value="4" />
+            <talentvalue level="5" name="drstr_p1_pwr" value="9" />
+            <talentvalue level="6" name="drstr_p1_pwr" value="10" />
+            <talentvalue level="9" name="drstr_p1_pwr" value="13" />
+            <talentvalue level="10" name="drstr_p1_pwr" value="14" />
+            <talentvalue level="14" name="drstr_p1_pwr" value="22" />
+            <talentvalue level="15" name="drstr_p1_pwr" value="28" />
+            <talentvalue level="1" name="drstr_p1_dmg" value="10 12" />
+            <talentvalue level="5" name="drstr_p1_dmg" value="17 19" />
+            <talentvalue level="6" name="drstr_p1_dmg" value="24 26" />
+            <talentvalue level="9" name="drstr_p1_dmg" value="34 38" />
+            <talentvalue level="10" name="drstr_p1_dmg" value="44 49" />
+            <talentvalue level="14" name="drstr_p1_dmg" value="75 83" />
+            <talentvalue level="15" name="drstr_p1_dmg" value="109 120" />
+        </talentvalues>
+        <level description="%drstr_p1_dmg $DMG\n%drstr_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Falteen Flame" description="Radial attack.  Rapidly tapping the attack will steal $HP from enemies.  $PT_TAP" descshort="Radial" icon="1" icon_texture="textures/ui/drstr_icons.png" name="drstr_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p2_req" value="10" />
+            <talentvalue level="3" name="drstr_p2_req" value="13" />
+            <talentvalue level="4" name="drstr_p2_req" value="16" />
+            <talentvalue level="7" name="drstr_p2_req" value="25" />
+            <talentvalue level="8" name="drstr_p2_req" value="28" />
+            <talentvalue level="12" name="drstr_p2_req" value="52" />
+            <talentvalue level="13" name="drstr_p2_req" value="72" />
+            <talentvalue level="1" name="drstr_p2_pwr" value="17" />
+            <talentvalue level="3" name="drstr_p2_pwr" value="20" />
+            <talentvalue level="4" name="drstr_p2_pwr" value="22" />
+            <talentvalue level="7" name="drstr_p2_pwr" value="29" />
+            <talentvalue level="8" name="drstr_p2_pwr" value="31" />
+            <talentvalue level="12" name="drstr_p2_pwr" value="48" />
+            <talentvalue level="13" name="drstr_p2_pwr" value="61" />
+            <talentvalue level="1" name="drstr_p2_dmg" value="17 19" />
+            <talentvalue level="3" name="drstr_p2_dmg" value="20 23" />
+            <talentvalue level="4" name="drstr_p2_dmg" value="31 34" />
+            <talentvalue level="7" name="drstr_p2_dmg" value="41 45" />
+            <talentvalue level="7" name="drstr_p2_dmg" value="54 60" />
+            <talentvalue level="12" name="drstr_p2_dmg" value="85 94" />
+            <talentvalue level="13" name="drstr_p2_dmg" value="126 139" />
+            <talentvalue level="1" name="drstr_p2_dmg2" value="2" />
+            <talentvalue level="13" name="drstr_p2_dmg2" value="12" />
+            <talentvalue level="1" name="drstr_p2_vamp_perc" value="0.03" />
+            <talentvalue level="13" name="drstr_p2_vamp_perc" value="0.2" />
+        </talentvalues>
+        <level description="%drstr_p2_dmg $DMG\n%drstr_p2_vamp_perc:p $DMG as $HP\n%drstr_p2_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Black Magic" description="Throws a ball of energy toward an enemy resulting in $DMG_PHYSICAL and a chance of turning the enemy into a crate." descshort="Special" icon="2" icon_texture="textures/ui/drstr_icons.png" name="drstr_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p3_req" value="17" />
+            <talentvalue level="4" name="drstr_p3_req" value="26" />
+            <talentvalue level="5" name="drstr_p3_req" value="29" />
+            <talentvalue level="9" name="drstr_p3_req" value="53" />
+            <talentvalue level="10" name="drstr_p3_req" value="73" />
+            <talentvalue level="1" name="drstr_p3_pwr" value="17" />
+            <talentvalue level="4" name="drstr_p3_pwr" value="23" />
+            <talentvalue level="5" name="drstr_p3_pwr" value="25" />
+            <talentvalue level="9" name="drstr_p3_pwr" value="38" />
+            <talentvalue level="10" name="drstr_p3_pwr" value="47" />
+            <talentvalue level="1" name="drstr_p3_dmg" value="82 90" />
+            <talentvalue level="4" name="drstr_p3_dmg" value="112 124" />
+            <talentvalue level="5" name="drstr_p3_dmg" value="143 157" />
+            <talentvalue level="9" name="drstr_p3_dmg" value="224 248" />
+            <talentvalue level="10" name="drstr_p3_dmg" value="322 356" />
+            <talentvalue level="1" name="drstr_p3_chance" value="0.26" />
+            <talentvalue level="4" name="drstr_p3_chance" value="0.32" />
+            <talentvalue level="5" name="drstr_p3_chance" value="0.36" />
+            <talentvalue level="9" name="drstr_p3_chance" value="0.44" />
+            <talentvalue level="10" name="drstr_p3_chance" value="0.55" />
+        </talentvalues>
+        <level description="%drstr_p3_dmg $DMG_PHYSICAL\n%drstr_p3_chance:p Chance\n%drstr_p3_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Mind Wipe" description="Mind controls enemies, switching them to your team." descshort="Special" icon="3" icon_texture="textures/ui/drstr_icons.png" name="drstr_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p4_req" value="20" />
+            <talentvalue level="3" name="drstr_p4_req" value="26" />
+            <talentvalue level="4" name="drstr_p4_req" value="29" />
+            <talentvalue level="8" name="drstr_p4_req" value="53" />
+            <talentvalue level="9" name="drstr_p4_req" value="73" />
+            <talentvalue level="1" name="drstr_p4_pwr" value="25" />
+            <talentvalue level="3" name="drstr_p4_pwr" value="30" />
+            <talentvalue level="4" name="drstr_p4_pwr" value="33" />
+            <talentvalue level="8" name="drstr_p4_pwr" value="49" />
+            <talentvalue level="9" name="drstr_p4_pwr" value="61" />
+            <talentvalue level="1" name="drstr_p4_dur" value="2" />
+            <talentvalue level="3" name="drstr_p4_dur" value="5" />
+            <talentvalue level="4" name="drstr_p4_dur" value="6" />
+            <talentvalue level="8" name="drstr_p4_dur" value="8" />
+            <talentvalue level="9" name="drstr_p4_dur" value="10" />
+            <talentvalue level="1" name="drstr_p4_dmg" value="34 38" />
+            <talentvalue level="3" name="drstr_p4_dmg" value="44 49" />
+            <talentvalue level="4" name="drstr_p4_dmg" value="54 60" />
+            <talentvalue level="8" name="drstr_p4_dmg" value="88 98" />
+            <talentvalue level="9" name="drstr_p4_dmg" value="126 139" />
+        </talentvalues>
+        <level description="%drstr_p4_dmg $DMG_PHYSICAL\n%drstr_p4_dur Seconds\n%drstr_p4_pwr: $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Levitation" description="Levitates enemies and objects.  $PT_HOLD" descshort="Special" icon="4" icon_texture="textures/ui/drstr_icons.png" name="drstr_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p5_req" value="5" />
+            <talentvalue level="5" name="drstr_p5_req" value="14" />
+            <talentvalue level="6" name="drstr_p5_req" value="17" />
+            <talentvalue level="9" name="drstr_p5_req" value="26" />
+            <talentvalue level="10" name="drstr_p5_req" value="29" />
+            <talentvalue level="14" name="drstr_p5_req" value="53" />
+            <talentvalue level="15" name="drstr_p5_req" value="73" />
+            <talentvalue level="1" name="drstr_p5_power" value="21" />
+            <talentvalue level="5" name="drstr_p5_power" value="33" />
+            <talentvalue level="6" name="drstr_p5_power" value="33" />
+            <talentvalue level="9" name="drstr_p5_power" value="45" />
+            <talentvalue level="10" name="drstr_p5_power" value="51" />
+            <talentvalue level="14" name="drstr_p5_power" value="75" />
+            <talentvalue level="15" name="drstr_p5_power" value="93" />
+            <talentvalue level="1" name="drstr_p5_pps" value="7" />
+            <talentvalue level="5" name="drstr_p5_pps" value="11" />
+            <talentvalue level="6" name="drstr_p5_pps" value="11" />
+            <talentvalue level="9" name="drstr_p5_pps" value="15" />
+            <talentvalue level="10" name="drstr_p5_pps" value="17" />
+            <talentvalue level="14" name="drstr_p5_pps" value="25" />
+            <talentvalue level="15" name="drstr_p5_pps" value="31" />
+            <talentvalue level="1" name="drstr_p5_dm1" value="13 15" />
+            <talentvalue level="5" name="drstr_p5_dm1" value="24 26" />
+            <talentvalue level="6" name="drstr_p5_dm1" value="34 38" />
+            <talentvalue level="9" name="drstr_p5_dm1" value="44 49" />
+            <talentvalue level="10" name="drstr_p5_dm1" value="58 64" />
+            <talentvalue level="14" name="drstr_p5_dm1" value="92 101" />
+            <talentvalue level="15" name="drstr_p5_dm1" value="132 147" />
+            <talentvalue level="1" name="drstr_p5_dm2" value="10 12" />
+            <talentvalue level="5" name="drstr_p5_dm2" value="11 13" />
+            <talentvalue level="6" name="drstr_p5_dm2" value="13 15" />
+            <talentvalue level="9" name="drstr_p5_dm2" value="13 15" />
+            <talentvalue level="10" name="drstr_p5_dm2" value="17 19" />
+            <talentvalue level="14" name="drstr_p5_dm2" value="27 30" />
+            <talentvalue level="15" name="drstr_p5_dm2" value="37 41" />
+            <talentvalue interpolate="false" level="1" name="drstr_p5_hvy" value="1" />
+            <talentvalue interpolate="false" level="8" name="drstr_p5_hvy" value="2" />
+            <talentvalue interpolate="false" level="15" name="drstr_p5_hvy" value="2" />
+        </talentvalues>
+        <level description="%drstr_p5_dm1 $DMG_PHYSICAL\n%drstr_p5_dm2 $DMG_PHYSICAL when thrown\n^Light objects\n%drstr_p5_power $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="2" />
+            <require cat="level" level="%drstr_p5_req" />
+        </level>
+        <level description="%drstr_p5_dm1 $DMG_PHYSICAL\n%drstr_p5_dm2 $DMG_PHYSICAL when thrown\n^Heavy objects\n%drstr_p5_power $EP">
+            <tier cost="2" count="2" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Eye of Agamotto" description="Raises $HP regeneration rates for party and removes status ailments from allies within range.  Costs a percent of Dr. Strange's max $HP." descshort="Boost" icon="5" icon_texture="textures/ui/drstr_icons.png" name="drstr_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p6_req" value="2" />
+            <talentvalue level="5" name="drstr_p6_req" value="14" />
+            <talentvalue level="6" name="drstr_p6_req" value="17" />
+            <talentvalue level="9" name="drstr_p6_req" value="26" />
+            <talentvalue level="10" name="drstr_p6_req" value="29" />
+            <talentvalue level="14" name="drstr_p6_req" value="53" />
+            <talentvalue level="15" name="drstr_p6_req" value="73" />
+            <talentvalue level="1" name="drstr_p6_hlth_los" value="0.1" />
+            <talentvalue level="15" name="drstr_p6_hlth_los" value="0.1" />
+            <talentvalue level="1" name="drstr_p6_life" value="20" />
+            <talentvalue level="5" name="drstr_p6_life" value="40" />
+            <talentvalue level="6" name="drstr_p6_life" value="50" />
+            <talentvalue level="9" name="drstr_p6_life" value="65" />
+            <talentvalue level="10" name="drstr_p6_life" value="80" />
+            <talentvalue level="14" name="drstr_p6_life" value="120" />
+            <talentvalue level="15" name="drstr_p6_life" value="180" />
+            <talentvalue level="1" name="drstr_p6_regen" value="0.02" />
+        </talentvalues>
+        <level description="%drstr_p6_regen:p $HP/s regeneration\n%drstr_p6_life Seconds\n-%drstr_p6_hlth_los:p $HP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Eldritch Aura" description="Conjures pixies that will follow Dr. Strange and swarm any enemy that comes nearby." descshort="Special" icon="6" icon_texture="textures/ui/drstr_icons.png" name="drstr_p7" power="power7">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p7_req" value="14" />
+            <talentvalue level="2" name="drstr_p7_req" value="17" />
+            <talentvalue level="5" name="drstr_p7_req" value="26" />
+            <talentvalue level="6" name="drstr_p7_req" value="29" />
+            <talentvalue level="10" name="drstr_p7_req" value="53" />
+            <talentvalue level="11" name="drstr_p7_req" value="73" />
+            <talentvalue level="1" name="drstr_p7_pwr" value="64" />
+            <talentvalue level="2" name="drstr_p7_pwr" value="68" />
+            <talentvalue level="5" name="drstr_p7_pwr" value="92" />
+            <talentvalue level="6" name="drstr_p7_pwr" value="100" />
+            <talentvalue level="10" name="drstr_p7_pwr" value="152" />
+            <talentvalue level="11" name="drstr_p7_pwr" value="188" />
+            <talentvalue level="1" name="drstr_p7_dam" value="11 13" />
+            <talentvalue level="2" name="drstr_p7_dam" value="15 17" />
+            <talentvalue level="5" name="drstr_p7_dam" value="31 34" />
+            <talentvalue level="6" name="drstr_p7_dam" value="34 38" />
+            <talentvalue level="10" name="drstr_p7_dam" value="54 60" />
+            <talentvalue level="11" name="drstr_p7_dam" value="65 71" />
+            <talentvalue level="1" name="drstr_p7_life" value="5" />
+            <talentvalue level="2" name="drstr_p7_life" value="8" />
+            <talentvalue level="5" name="drstr_p7_life" value="13" />
+            <talentvalue level="6" name="drstr_p7_life" value="16" />
+            <talentvalue level="10" name="drstr_p7_life" value="20" />
+            <talentvalue level="11" name="drstr_p7_life" value="25" />
+        </talentvalues>
+        <level description="%drstr_p7_dam $DMG\n%drstr_p7_life Seconds\n%drstr_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Mystic Maelstrom" description="Damages enemies onscreen with a chance to change all stunned, frozen, or slowed enemies into Xtreme Pips." descshort="Xtreme" icon="8" icon_texture="textures/ui/drstr_icons.png" name="drstr_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p9_req" value="10" />
+            <talentvalue level="8" name="drstr_p9_req" value="45" />
+            <talentvalue level="1" name="drstr_p9_chance" value="0.2" />
+            <talentvalue level="8" name="drstr_p9_chance" value="0.55" />
+            <talentvalue level="1" name="drstr_p9_dmg" value="51 56" />
+            <talentvalue level="8" name="drstr_p9_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%drstr_p9_dmg $DMG_MENTAL\n%drstr_p9_chance:p Chance">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%drstr_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Teleport" description="Ability to teleport within a given range.  If an ally is directly infront of you, they will teleport with you.  Damages enemies at the destination following the end of the teleport." descshort="Special" icon="9" icon_texture="textures/ui/drstr_icons.png" name="drstr_teleport" power="TeleportBegin" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_p10_req" value="1" />
+            <talentvalue level="5" name="drstr_p10_req" value="13" />
+            <talentvalue level="6" name="drstr_p10_req" value="16" />
+            <talentvalue level="9" name="drstr_p10_req" value="25" />
+            <talentvalue level="10" name="drstr_p10_req" value="28" />
+            <talentvalue level="14" name="drstr_p10_req" value="52" />
+            <talentvalue level="15" name="drstr_p10_req" value="72" />
+            <talentvalue level="1" name="drstr_p10_pwr" value="5" />
+            <talentvalue level="5" name="drstr_p10_pwr" value="10" />
+            <talentvalue level="6" name="drstr_p10_pwr" value="11" />
+            <talentvalue level="9" name="drstr_p10_pwr" value="15" />
+            <talentvalue level="10" name="drstr_p10_pwr" value="16" />
+            <talentvalue level="14" name="drstr_p10_pwr" value="24" />
+            <talentvalue level="15" name="drstr_p10_pwr" value="31" />
+            <talentvalue level="1" name="drstr_p10_dmg" value="11 13" />
+            <talentvalue level="5" name="drstr_p10_dmg" value="24 26" />
+            <talentvalue level="6" name="drstr_p10_dmg" value="31 34" />
+            <talentvalue level="9" name="drstr_p10_dmg" value="44 49" />
+            <talentvalue level="10" name="drstr_p10_dmg" value="58 64" />
+            <talentvalue level="14" name="drstr_p10_dmg" value="92 101" />
+            <talentvalue level="15" name="drstr_p10_dmg" value="132 147" />
+            <talentvalue level="1" name="drstr_p10_rng" value="240" />
+            <talentvalue level="15" name="drstr_p10_rng" value="600" />
+        </talentvalues>
+        <level description="%drstr_p10_rng Range\n%drstr_p10_dmg $DMG\n%drstr_p10_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%drstr_p10_req" />
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit11_pct" value="1.04" />
+            <talentvalue level="9" name="drstr_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%drstr_outfit11_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%drstr_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Magic Damage" description="Increases the $DMG of magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit12_pct" value="1.03" />
+            <talentvalue level="9" name="drstr_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%drstr_outfit12_pct:s Magic $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%drstr_outfit12_pct" scope_node="DrS_MagicAttack" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit13_dr" value="1" />
+            <talentvalue level="9" name="drstr_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%drstr_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit21_pct" value="0.02" />
+            <talentvalue level="9" name="drstr_outfit21_pct" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit21_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%drstr_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Per Kill" description="Regain $HP per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit22_hlth" value="6" />
+            <talentvalue level="9" name="drstr_outfit22_hlth" value="30" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit22_hlth $HP per kill">
+            <powerup life="-1">
+                <affecter attribute="health_per_kill" level="%drstr_outfit22_hlth" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit23_dr" value="1" />
+            <talentvalue level="9" name="drstr_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%drstr_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Magic Damage" description="Increases the $DMG of magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="drstr_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%drstr_outfit31_pct:s Magic $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%drstr_outfit31_pct" scope_node="DrS_MagicAttack" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit32_pct" value="1.02" />
+            <talentvalue level="9" name="drstr_outfit32_pct" value="1.1" />
+        </talentvalues>
+        <level count="9" description="%drstr_outfit32_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%drstr_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit33_dr" value="1" />
+            <talentvalue level="9" name="drstr_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%drstr_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Skill Increase" description="Chance for powers to be temporarily increased 1 level when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit41_pct" value="0.05" />
+            <talentvalue level="9" name="drstr_outfit41_pct" value="0.25" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit41_pct:p Chance">
+            <powerup chance="%drstr_outfit41_pct" class="skillincrease" level="1" life="-1" />
+        </level>
+    </talent>
+    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit42_pct" value="2" />
+            <talentvalue level="9" name="drstr_outfit42_pct" value="10" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit42_pct Body\n+%drstr_outfit42_pct Focus\n+%drstr_outfit42_pct Strike">
+            <powerup life="-1">
+                <affecter attribute="traits" level="%drstr_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="drstr_outfit43_dr" value="1" />
+            <talentvalue level="9" name="drstr_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%drstr_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%drstr_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

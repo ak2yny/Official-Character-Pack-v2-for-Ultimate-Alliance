@@ -1,0 +1,388 @@
+<talents>
+    <talent descname="Smash" description="Increased melee punch with $KB." descshort="Melee" icon="0" icon_texture="textures/ui/rogue_icons.png" name="rogue_smash" power="power1" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="rog_smash_req" value="1" />
+            <talentvalue level="5" name="rog_smash_req" value="13" />
+            <talentvalue level="6" name="rog_smash_req" value="16" />
+            <talentvalue level="9" name="rog_smash_req" value="25" />
+            <talentvalue level="10" name="rog_smash_req" value="28" />
+            <talentvalue level="14" name="rog_smash_req" value="52" />
+            <talentvalue level="15" name="rog_smash_req" value="72" />
+            <talentvalue level="1" name="rog_smash_pwr" value="8" />
+            <talentvalue level="5" name="rog_smash_pwr" value="17" />
+            <talentvalue level="6" name="rog_smash_pwr" value="19" />
+            <talentvalue level="9" name="rog_smash_pwr" value="26" />
+            <talentvalue level="10" name="rog_smash_pwr" value="28" />
+            <talentvalue level="14" name="rog_smash_pwr" value="44" />
+            <talentvalue level="15" name="rog_smash_pwr" value="55" />
+            <talentvalue level="1" name="rog_smash_dmg" value="19 31" />
+            <talentvalue level="5" name="rog_smash_dmg" value="64 70" />
+            <talentvalue level="6" name="rog_smash_dmg" value="86 95" />
+            <talentvalue level="9" name="rog_smash_dmg" value="120 131" />
+            <talentvalue level="10" name="rog_smash_dmg" value="154 169" />
+            <talentvalue level="14" name="rog_smash_dmg" value="244 267" />
+            <talentvalue level="15" name="rog_smash_dmg" value="353 387" />
+            <talentvalue level="1" name="rog_smash_kb" value="40" />
+            <talentvalue level="15" name="rog_smash_kb" value="620" />
+        </talentvalues>
+        <level description="%rog_smash_dmg $DMG_PHYSICAL \n%rog_smash_kb $KB\n%rog_smash_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_smash_req" />
+        </level>
+    </talent>
+    <talent descname="Life Theft" description="Drains life from the target and stuns them." descshort="Special" icon="1" icon_texture="textures/ui/rogue_icons.png" name="rogue_ability" power="power2" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="rog_ability_req" value="5" />
+            <talentvalue level="5" name="rog_ability_req" value="14" />
+            <talentvalue level="6" name="rog_ability_req" value="17" />
+            <talentvalue level="9" name="rog_ability_req" value="26" />
+            <talentvalue level="10" name="rog_ability_req" value="29" />
+            <talentvalue level="14" name="rog_ability_req" value="53" />
+            <talentvalue level="15" name="rog_ability_req" value="73" />
+            <talentvalue level="1" name="rog_ability_pwr" value="12" />
+            <talentvalue level="5" name="rog_ability_pwr" value="20" />
+            <talentvalue level="6" name="rog_ability_pwr" value="22" />
+            <talentvalue level="9" name="rog_ability_pwr" value="30" />
+            <talentvalue level="10" name="rog_ability_pwr" value="32" />
+            <talentvalue level="14" name="rog_ability_pwr" value="50" />
+            <talentvalue level="15" name="rog_ability_pwr" value="62" />
+            <talentvalue level="1" name="rog_ability_dmg" value="17 19" />
+            <talentvalue level="5" name="rog_ability_dmg" value="34 38" />
+            <talentvalue level="6" name="rog_ability_dmg" value="48 53" />
+            <talentvalue level="9" name="rog_ability_dmg" value="65 71" />
+            <talentvalue level="10" name="rog_ability_dmg" value="85 94" />
+            <talentvalue level="14" name="rog_ability_dmg" value="132 147" />
+            <talentvalue level="15" name="rog_ability_dmg" value="190 210" />
+            <talentvalue level="1" name="rog_ability_life" value="15" />
+            <talentvalue level="15" name="rog_ability_life" value="60" />
+            <talentvalue level="1" name="rog_ability_slife" value="1" />
+            <talentvalue level="15" name="rog_ability_slife" value="5" />
+        </talentvalues>
+        <level description="%rog_ability_dmg stolen power damage\n%rog_ability_life second steal\n%rog_ability_slife second stun\n%rog_ability_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_ability_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Overflow" description="Releases built up energy in a 180 degree forward arc." descshort="Radial" icon="4" icon_texture="textures/ui/rogue_icons.png" name="rogue_vortex" power="power5" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="rog_vortex_req" value="10" />
+            <talentvalue level="3" name="rog_vortex_req" value="13" />
+            <talentvalue level="4" name="rog_vortex_req" value="16" />
+            <talentvalue level="7" name="rog_vortex_req" value="25" />
+            <talentvalue level="8" name="rog_vortex_req" value="28" />
+            <talentvalue level="12" name="rog_vortex_req" value="52" />
+            <talentvalue level="13" name="rog_vortex_req" value="72" />
+            <talentvalue level="1" name="rog_vortex_pwr" value="20" />
+            <talentvalue level="3" name="rog_vortex_pwr" value="22" />
+            <talentvalue level="4" name="rog_vortex_pwr" value="25" />
+            <talentvalue level="7" name="rog_vortex_pwr" value="34" />
+            <talentvalue level="8" name="rog_vortex_pwr" value="36" />
+            <talentvalue level="12" name="rog_vortex_pwr" value="57" />
+            <talentvalue level="13" name="rog_vortex_pwr" value="72" />
+            <talentvalue level="1" name="rog_vortex_dmg" value="17 19" />
+            <talentvalue level="3" name="rog_vortex_dmg" value="23 26" />
+            <talentvalue level="4" name="rog_vortex_dmg" value="42 49" />
+            <talentvalue level="7" name="rog_vortex_dmg" value="86 95" />
+            <talentvalue level="8" name="rog_vortex_dmg" value="112 128" />
+            <talentvalue level="12" name="rog_vortex_dmg" value="175 192" />
+            <talentvalue level="13" name="rog_vortex_dmg" value="244 265" />
+        </talentvalues>
+        <level description="%rog_vortex_dmg $DMG_ENERGY\n%rog_vortex_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_vortex_req" />
+        </level>
+    </talent>
+    <talent descname="Tremor" description="Leaps into the air and comes down hard with a smash attack." descshort="Melee" icon="7" icon_texture="textures/ui/rogue_icons.png" name="rogue_tremor" power="power8" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="rog_tremor_req" value="17" />
+            <talentvalue level="4" name="rog_tremor_req" value="26" />
+            <talentvalue level="5" name="rog_tremor_req" value="29" />
+            <talentvalue level="9" name="rog_tremor_req" value="53" />
+            <talentvalue level="10" name="rog_tremor_req" value="73" />
+            <talentvalue level="1" name="rog_tremor_pwr" value="20" />
+            <talentvalue level="4" name="rog_tremor_pwr" value="27" />
+            <talentvalue level="5" name="rog_tremor_pwr" value="29" />
+            <talentvalue level="9" name="rog_tremor_pwr" value="45" />
+            <talentvalue level="10" name="rog_tremor_pwr" value="56" />
+            <talentvalue level="1" name="rog_tremor_dmg" value="65 82" />
+            <talentvalue level="4" name="rog_tremor_dmg" value="99 111" />
+            <talentvalue level="5" name="rog_tremor_dmg" value="124 143" />
+            <talentvalue level="9" name="rog_tremor_dmg" value="198 221" />
+            <talentvalue level="10" name="rog_tremor_dmg" value="285 321" />
+            <talentvalue level="1" name="rog_tremor_life" value="1" />
+            <talentvalue level="10" name="rog_tremor_life" value="5" />
+        </talentvalues>
+        <level description="%rog_tremor_dmg $DMG_PHYSICAL \n%rog_tremor_life second stun\n%rog_tremor_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_tremor_req" />
+        </level>
+    </talent>
+    <talent descname="Torpedo Strike" description="Lunges forward and attacks in a torpedo fashion knocking enemies back." descshort="Melee" icon="9" icon_texture="textures/ui/rogue_icons.png" name="rogue_torpedo" power="power10" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="rog_torpedo_req" value="20" />
+            <talentvalue level="3" name="rog_torpedo_req" value="26" />
+            <talentvalue level="4" name="rog_torpedo_req" value="29" />
+            <talentvalue level="8" name="rog_torpedo_req" value="53" />
+            <talentvalue level="9" name="rog_torpedo_req" value="73" />
+            <talentvalue level="1" name="rog_torpedo_pwr" value="25" />
+            <talentvalue level="3" name="rog_torpedo_pwr" value="30" />
+            <talentvalue level="4" name="rog_torpedo_pwr" value="33" />
+            <talentvalue level="8" name="rog_torpedo_pwr" value="49" />
+            <talentvalue level="9" name="rog_torpedo_pwr" value="61" />
+            <talentvalue level="1" name="rog_torpedo_dmg" value="51 56" />
+            <talentvalue level="3" name="rog_torpedo_dmg" value="65 71" />
+            <talentvalue level="4" name="rog_torpedo_dmg" value="82 90" />
+            <talentvalue level="8" name="rog_torpedo_dmg" value="132 147" />
+            <talentvalue level="9" name="rog_torpedo_dmg" value="190 210" />
+        </talentvalues>
+        <level description="%rog_torpedo_dmg $DMG_PHYSICAL \n%rog_torpedo_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_torpedo_req" />
+        </level>
+    </talent>
+    <talent descname="Bedazzle" description="Baits nearby enemies into attacking you while lowering their fighting abilities for a time." descshort="Debuff" icon="2" icon_texture="textures/ui/rogue_icons.png" name="rogue_taunt" power="power3" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="rog_taunt_req" value="2" />
+            <talentvalue level="5" name="rog_taunt_req" value="14" />
+            <talentvalue level="6" name="rog_taunt_req" value="17" />
+            <talentvalue level="9" name="rog_taunt_req" value="26" />
+            <talentvalue level="10" name="rog_taunt_req" value="29" />
+            <talentvalue level="14" name="rog_taunt_req" value="53" />
+            <talentvalue level="15" name="rog_taunt_req" value="73" />
+            <talentvalue level="1" name="rog_taunt_pwr" value="32" />
+            <talentvalue level="5" name="rog_taunt_pwr" value="72" />
+            <talentvalue level="6" name="rog_taunt_pwr" value="80" />
+            <talentvalue level="9" name="rog_taunt_pwr" value="108" />
+            <talentvalue level="10" name="rog_taunt_pwr" value="116" />
+            <talentvalue level="14" name="rog_taunt_pwr" value="180" />
+            <talentvalue level="15" name="rog_taunt_pwr" value="224" />
+            <talentvalue level="1" name="rog_taunt_life" value="8" />
+            <talentvalue level="5" name="rog_taunt_life" value="13" />
+            <talentvalue level="6" name="rog_taunt_life" value="15" />
+            <talentvalue level="9" name="rog_taunt_life" value="18" />
+            <talentvalue level="10" name="rog_taunt_life" value="20" />
+            <talentvalue level="14" name="rog_taunt_life" value="25" />
+            <talentvalue level="15" name="rog_taunt_life" value="30" />
+            <talentvalue level="1" name="rog_taunt_ar" value="0.9" />
+            <talentvalue level="15" name="rog_taunt_ar" value="0.48" />
+            <talentvalue level="1" name="rog_taunt_dr" value="0.9" />
+            <talentvalue level="15" name="rog_taunt_dr" value="0.48" />
+        </talentvalues>
+        <level description="%rog_taunt_ar $AR\n%rog_taunt_dr $DR\n%rog_taunt_life seconds\n%rog_taunt_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_taunt_req" />
+        </level>
+    </talent>
+    <talent descname="Southern Shout" description="Increases $HP and $EP maximums of entire team for a time." descshort="Boost" icon="3" icon_texture="textures/ui/rogue_icons.png" name="rogue_shout" power="power4" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="rog_shout_req" value="14" />
+            <talentvalue level="2" name="rog_shout_req" value="17" />
+            <talentvalue level="5" name="rog_shout_req" value="26" />
+            <talentvalue level="6" name="rog_shout_req" value="29" />
+            <talentvalue level="10" name="rog_shout_req" value="53" />
+            <talentvalue level="11" name="rog_shout_req" value="73" />
+            <talentvalue level="1" name="rog_shout_pwr" value="72" />
+            <talentvalue level="2" name="rog_shout_pwr" value="80" />
+            <talentvalue level="5" name="rog_shout_pwr" value="108" />
+            <talentvalue level="6" name="rog_shout_pwr" value="116" />
+            <talentvalue level="10" name="rog_shout_pwr" value="180" />
+            <talentvalue level="11" name="rog_shout_pwr" value="224" />
+            <talentvalue level="1" name="rog_shout_life" value="40" />
+            <talentvalue level="2" name="rog_shout_life" value="50" />
+            <talentvalue level="5" name="rog_shout_life" value="65" />
+            <talentvalue level="6" name="rog_shout_life" value="80" />
+            <talentvalue level="10" name="rog_shout_life" value="120" />
+            <talentvalue level="11" name="rog_shout_life" value="180" />
+            <talentvalue level="1" name="rog_shout_health" value="1.2" />
+            <talentvalue level="11" name="rog_shout_health" value="1.28" />
+            <talentvalue level="1" name="rog_shout_energy" value="1.2" />
+            <talentvalue level="11" name="rog_shout_energy" value="1.28" />
+        </talentvalues>
+        <level description="%rog_shout_health:s Max $HP\n%rog_shout_energy:s Max $EP\n%rog_shout_life seconds\n%rog_shout_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%rog_shout_req" />
+        </level>
+    </talent>
+    <talent descname="Manic Slam" description="Saps $EP from all enemies, stuns them, and prevents them from using their powers for a time." descshort="Xtreme" icon="8" icon_texture="textures/ui/rogue_icons.png" name="rogue_xtreme" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="rog_xtreme_req" value="15" />
+            <talentvalue level="8" name="rog_xtreme_req" value="45" />
+            <talentvalue level="1" name="rog_xtreme_pct" value="0.25" />
+            <talentvalue level="8" name="rog_xtreme_pct" value="1" />
+            <talentvalue level="1" name="rog_xtreme_dmg" value="85 96" />
+            <talentvalue level="8" name="rog_xtreme_dmg" value="279 309" />
+            <talentvalue level="1" name="rog_xtreme_slife" value="5" />
+            <talentvalue level="8" name="rog_xtreme_slife" value="15" />
+            <talentvalue level="1" name="rog_xtreme_nlife" value="5" />
+            <talentvalue level="8" name="rog_xtreme_nlife" value="10" />
+        </talentvalues>
+        <level description="%rog_xtreme_dmg $DMG_PHYSICAL\n%rog_xtreme_pct:p of damage as $EP\n%rog_xtreme_slife second stun\n%rog_xtreme_nlife seconds without powers">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%rog_xtreme_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="panther_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="panth_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit11_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%panth_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="panther_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="panth_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit12_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%panth_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit13_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="panther_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit21_crit" value="0.02" />
+            <talentvalue level="9" name="panth_outfit21_crit" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit21_crit:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%panth_outfit21_crit" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Increased Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit22_pct" value="1.03" />
+            <talentvalue level="9" name="panth_outfit22_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit22_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%panth_outfit22_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit23_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="panther_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit31_pct" value="0.03" />
+            <talentvalue level="9" name="panth_outfit31_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit31_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%panth_outfit31_pct" scope_damage="dmg_physical" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="panth_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit32_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%panth_outfit32_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit33_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bleed Damage" description="Adds a chance to cause $DMG_BLEED to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="panther_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit41_dmg" value="0.03" />
+            <talentvalue level="9" name="panth_outfit41_dmg" value="0.15" />
+            <talentvalue level="1" name="panth_outfit41_pct" value="0.03" />
+            <talentvalue level="9" name="panth_outfit41_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit41_pct:p Chance\n+%panth_outfit41_dmg:p as $DMG_BLEED">
+            <powerup chance="%panth_outfit41_pct" class="add_harming" damagepercent="%panth_outfit41_dmg" life="-1">
+                <affecter attribute="powerup_scope" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="panther_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="panth_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit42_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%panth_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit43_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

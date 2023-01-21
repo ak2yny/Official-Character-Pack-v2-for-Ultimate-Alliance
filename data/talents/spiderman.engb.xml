@@ -1,0 +1,410 @@
+<talents>
+    <talent hidden="true" name="spider_tied" type="ability">
+        <talentvalues>
+            <talentvalue level="1" name="spider_tied_dmg" value="15 17" />
+            <talentvalue level="1" name="spider_tied_dur" value="3" />
+        </talentvalues>
+        <level count="1" />
+    </talent>
+    <talent descname="Web Zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/spiderman_icons.png" name="spider_zip" type="ability">
+        <talentvalues>
+            <talentvalue level="1" name="spider_zip_req" value="1" />
+            <talentvalue level="1" name="spider_zip_dmg" value="13 15" />
+            <talentvalue level="1" name="spider_zip_kb" value="245" />
+        </talentvalues>
+        <level count="1" />
+    </talent>
+    <talent descname="Web Bullets" description="Shoots projectiles of impact webbing.  $PT_TAP" descshort="Projectile" icon="0" icon_texture="textures/ui/spiderman_icons.png" name="spider_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p1_req" value="1" />
+            <talentvalue level="5" name="spider_p1_req" value="13" />
+            <talentvalue level="6" name="spider_p1_req" value="16" />
+            <talentvalue level="9" name="spider_p1_req" value="25" />
+            <talentvalue level="10" name="spider_p1_req" value="28" />
+            <talentvalue level="14" name="spider_p1_req" value="52" />
+            <talentvalue level="15" name="spider_p1_req" value="72" />
+            <talentvalue level="1" name="spider_p1_dmg" value="10 12" />
+            <talentvalue level="5" name="spider_p1_dmg" value="17 19" />
+            <talentvalue level="6" name="spider_p1_dmg" value="24 26" />
+            <talentvalue level="9" name="spider_p1_dmg" value="34 38" />
+            <talentvalue level="10" name="spider_p1_dmg" value="44 49" />
+            <talentvalue level="14" name="spider_p1_dmg" value="75 83" />
+            <talentvalue level="15" name="spider_p1_dmg" value="109 120" />
+            <talentvalue level="1" name="spider_p1_pwr" value="4" />
+            <talentvalue level="5" name="spider_p1_pwr" value="8" />
+            <talentvalue level="6" name="spider_p1_pwr" value="10" />
+            <talentvalue level="9" name="spider_p1_pwr" value="13" />
+            <talentvalue level="10" name="spider_p1_pwr" value="14" />
+            <talentvalue level="14" name="spider_p1_pwr" value="20" />
+            <talentvalue level="15" name="spider_p1_pwr" value="26" />
+        </talentvalues>
+        <level description="%spider_p1_dmg $DMG_PHYSICAL\n%spider_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Web Snare" description="Uses webs to freeze an enemy in his tracks, and deals damage." descshort="Projectile" icon="1" icon_texture="textures/ui/spiderman_icons.png" name="spider_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p2_req" value="5" />
+            <talentvalue level="5" name="spider_p2_req" value="14" />
+            <talentvalue level="6" name="spider_p2_req" value="17" />
+            <talentvalue level="9" name="spider_p2_req" value="26" />
+            <talentvalue level="10" name="spider_p2_req" value="29" />
+            <talentvalue level="14" name="spider_p2_req" value="53" />
+            <talentvalue level="15" name="spider_p2_req" value="73" />
+            <talentvalue level="1" name="spider_p2_life" value="5" />
+            <talentvalue level="5" name="spider_p2_life" value="9" />
+            <talentvalue level="6" name="spider_p2_life" value="11" />
+            <talentvalue level="9" name="spider_p2_life" value="14" />
+            <talentvalue level="10" name="spider_p2_life" value="16" />
+            <talentvalue level="14" name="spider_p2_life" value="20" />
+            <talentvalue level="15" name="spider_p2_life" value="25" />
+            <talentvalue level="1" name="spider_p2_dmg" value="13 15" />
+            <talentvalue level="5" name="spider_p2_dmg" value="27 30" />
+            <talentvalue level="6" name="spider_p2_dmg" value="37 41" />
+            <talentvalue level="9" name="spider_p2_dmg" value="54 60" />
+            <talentvalue level="10" name="spider_p2_dmg" value="68 75" />
+            <talentvalue level="14" name="spider_p2_dmg" value="109 120" />
+            <talentvalue level="15" name="spider_p2_dmg" value="160 176" />
+            <talentvalue level="1" name="spider_p2_pwr" value="10" />
+            <talentvalue level="5" name="spider_p2_pwr" value="15" />
+            <talentvalue level="6" name="spider_p2_pwr" value="17" />
+            <talentvalue level="9" name="spider_p2_pwr" value="22" />
+            <talentvalue level="10" name="spider_p2_pwr" value="23" />
+            <talentvalue level="14" name="spider_p2_pwr" value="35" />
+            <talentvalue level="15" name="spider_p2_pwr" value="43" />
+            <talentvalue level="1" name="spider_p2_fx" value="1" value_charged="2" />
+        </talentvalues>
+        <level description="%spider_p2_life Seconds\n%spider_p2_dmg $DMG_PHYSICAL\n%spider_p2_pwr $EP/s\n">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Web Throw" description="Grabs an enemy and swings him around, doing radial damage to enemies nearby.  $PT_CHARGE" descshort="Radial" icon="2" icon_texture="textures/ui/spiderman_icons.png" name="spider_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p3_req" value="10" />
+            <talentvalue level="3" name="spider_p3_req" value="13" />
+            <talentvalue level="4" name="spider_p3_req" value="16" />
+            <talentvalue level="7" name="spider_p3_req" value="25" />
+            <talentvalue level="8" name="spider_p3_req" value="28" />
+            <talentvalue level="12" name="spider_p3_req" value="52" />
+            <talentvalue level="13" name="spider_p3_req" value="72" />
+            <talentvalue level="1" name="spider_p3_dmg" value="13 15" />
+            <talentvalue level="3" name="spider_p3_dmg" value="15 17" />
+            <talentvalue level="4" name="spider_p3_dmg" value="20 23" />
+            <talentvalue level="7" name="spider_p3_dmg" value="27 30" />
+            <talentvalue level="8" name="spider_p3_dmg" value="37 41" />
+            <talentvalue level="12" name="spider_p3_dmg" value="61 68" />
+            <talentvalue level="13" name="spider_p3_dmg" value="88 98" />
+            <talentvalue level="1" name="spider_p3_pwr" value="10" />
+            <talentvalue level="3" name="spider_p3_pwr" value="11" />
+            <talentvalue level="4" name="spider_p3_pwr" value="12" />
+            <talentvalue level="7" name="spider_p3_pwr" value="16" />
+            <talentvalue level="8" name="spider_p3_pwr" value="18" />
+            <talentvalue level="12" name="spider_p3_pwr" value="27" />
+            <talentvalue level="13" name="spider_p3_pwr" value="34" />
+        </talentvalues>
+        <level description="%spider_p3_dmg $DMG_PHYSICAL\n%spider_p3_pwr $EP/s\n">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Slingshot" description="Propels himself forward by using webbing as a slingshot.  $PT_CHARGE" descshort="Melee" icon="3" icon_texture="textures/ui/spiderman_icons.png" name="spider_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p4_req" value="17" />
+            <talentvalue level="4" name="spider_p4_req" value="26" />
+            <talentvalue level="5" name="spider_p4_req" value="29" />
+            <talentvalue level="9" name="spider_p4_req" value="53" />
+            <talentvalue level="10" name="spider_p4_req" value="73" />
+            <talentvalue level="1" name="spider_p4_dmg" value="24 26" value_charged_scale="2.0" />
+            <talentvalue level="4" name="spider_p4_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="5" name="spider_p4_dmg" value="41 45" value_charged_scale="2.0" />
+            <talentvalue level="9" name="spider_p4_dmg" value="65 71" value_charged_scale="2.0" />
+            <talentvalue level="10" name="spider_p4_dmg" value="95 105" value_charged_scale="2.0" />
+            <talentvalue level="1" name="spider_p4_pwr" value="17" />
+            <talentvalue level="4" name="spider_p4_pwr" value="22" />
+            <talentvalue level="5" name="spider_p4_pwr" value="23" />
+            <talentvalue level="9" name="spider_p4_pwr" value="35" />
+            <talentvalue level="10" name="spider_p4_pwr" value="43" />
+            <talentvalue level="1" name="spider_p4_kb" value="40" />
+            <talentvalue level="10" name="spider_p4_kb" value="190" />
+        </talentvalues>
+        <level description="%spider_p4_dmg $DMG_PHYSICAL\n%spider_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Web Warrior" description="Uses webs to fling an enemy into the air.  Charge longer to increase the distance the enemy will soar." descshort="Special" icon="4" icon_texture="textures/ui/spiderman_icons.png" name="spider_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p5_req" value="20" />
+            <talentvalue level="3" name="spider_p5_req" value="29" />
+            <talentvalue level="4" name="spider_p5_req" value="32" />
+            <talentvalue level="8" name="spider_p5_req" value="56" />
+            <talentvalue level="9" name="spider_p5_req" value="76" />
+            <talentvalue level="1" name="spider_p5_dmg" value="92 101" />
+            <talentvalue level="3" name="spider_p5_dmg" value="122 135" />
+            <talentvalue level="4" name="spider_p5_dmg" value="153 169" />
+            <talentvalue level="8" name="spider_p5_dmg" value="234 259" />
+            <talentvalue level="9" name="spider_p5_dmg" value="333 368" />
+            <talentvalue level="1" name="spider_p5_pwr" value="18" />
+            <talentvalue level="3" name="spider_p5_pwr" value="23" />
+            <talentvalue level="4" name="spider_p5_pwr" value="25" />
+            <talentvalue level="8" name="spider_p5_pwr" value="36" />
+            <talentvalue level="9" name="spider_p5_pwr" value="44" />
+            <talentvalue level="1" name="spider_p5_throw_spd" value="100" value_charged="1000" />
+        </talentvalues>
+        <level description="%spider_p5_dmg $DMG_PHYSICAL\n%spider_p5_pwr $EP\n">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Spidey Sense" description="Time slows down for Spider-Man and his allies allowing them to react to events much more quickly." descshort="Boost" icon="5" icon_texture="textures/ui/spiderman_icons.png" name="spider_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p6_req" value="14" />
+            <talentvalue level="2" name="spider_p6_req" value="17" />
+            <talentvalue level="5" name="spider_p6_req" value="26" />
+            <talentvalue level="6" name="spider_p6_req" value="29" />
+            <talentvalue level="10" name="spider_p6_req" value="53" />
+            <talentvalue level="11" name="spider_p6_req" value="73" />
+            <talentvalue level="1" name="spider_p6_pwr" value="60" />
+            <talentvalue level="2" name="spider_p6_pwr" value="68" />
+            <talentvalue level="5" name="spider_p6_pwr" value="88" />
+            <talentvalue level="6" name="spider_p6_pwr" value="92" />
+            <talentvalue level="10" name="spider_p6_pwr" value="140" />
+            <talentvalue level="11" name="spider_p6_pwr" value="172" />
+            <talentvalue level="1" name="spider_p6_life" value="5" />
+            <talentvalue level="2" name="spider_p6_life" value="6" />
+            <talentvalue level="5" name="spider_p6_life" value="7.5" />
+            <talentvalue level="6" name="spider_p6_life" value="8" />
+            <talentvalue level="10" name="spider_p6_life" value="10" />
+            <talentvalue level="11" name="spider_p6_life" value="12" />
+            <talentvalue level="1" name="spider_p6_life2" value="10" />
+            <talentvalue level="2" name="spider_p6_life2" value="12" />
+            <talentvalue level="5" name="spider_p6_life2" value="15" />
+            <talentvalue level="6" name="spider_p6_life2" value="16" />
+            <talentvalue level="10" name="spider_p6_life2" value="20" />
+            <talentvalue level="11" name="spider_p6_life2" value="24" />
+            <talentvalue name="spider_p6_world" value="0.5" />
+            <talentvalue name="spider_p6_speed" value="2" />
+        </talentvalues>
+        <level description="%spider_p6_world:p Speed scale \n%spider_p6_life2 Seconds\n%spider_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Web Shield" description="Creates a Web Shield that has a chance to block all attacks." descshort="Boost" icon="6" icon_texture="textures/ui/spiderman_icons.png" name="spider_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p7_req" value="2" />
+            <talentvalue level="5" name="spider_p7_req" value="14" />
+            <talentvalue level="6" name="spider_p7_req" value="17" />
+            <talentvalue level="9" name="spider_p7_req" value="26" />
+            <talentvalue level="10" name="spider_p7_req" value="29" />
+            <talentvalue level="14" name="spider_p7_req" value="53" />
+            <talentvalue level="15" name="spider_p7_req" value="73" />
+            <talentvalue level="1" name="spider_p7_pwr" value="32" />
+            <talentvalue level="5" name="spider_p7_pwr" value="60" />
+            <talentvalue level="6" name="spider_p7_pwr" value="68" />
+            <talentvalue level="9" name="spider_p7_pwr" value="88" />
+            <talentvalue level="10" name="spider_p7_pwr" value="92" />
+            <talentvalue level="14" name="spider_p7_pwr" value="140" />
+            <talentvalue level="15" name="spider_p7_pwr" value="172" />
+            <talentvalue level="1" name="spider_p7_life" value="20" />
+            <talentvalue level="5" name="spider_p7_life" value="40" />
+            <talentvalue level="6" name="spider_p7_life" value="50" />
+            <talentvalue level="9" name="spider_p7_life" value="65" />
+            <talentvalue level="10" name="spider_p7_life" value="80" />
+            <talentvalue level="14" name="spider_p7_life" value="120" />
+            <talentvalue level="15" name="spider_p7_life" value="180" />
+            <talentvalue level="1" name="spider_p7_chance" value="0.1" />
+            <talentvalue level="5" name="spider_p7_chance" value="0.3" />
+            <talentvalue level="6" name="spider_p7_chance" value="0.4" />
+            <talentvalue level="9" name="spider_p7_chance" value="0.55" />
+            <talentvalue level="10" name="spider_p7_chance" value="0.7" />
+            <talentvalue level="14" name="spider_p7_chance" value="0.9" />
+            <talentvalue level="15" name="spider_p7_chance" value="1" />
+        </talentvalues>
+        <level description="%spider_p7_chance:p Block chance\n%spider_p7_life Seconds\n%spider_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%spider_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Bungee Bash" description="Team Xtreme attack that will grab enemies and spin them onto web sacks." descshort="Xtreme" icon="10" icon_texture="textures/ui/spiderman_icons.png" name="spider_p10" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="spider_p10_req" value="10" />
+            <talentvalue level="8" name="spider_p10_req" value="45" />
+            <talentvalue level="1" name="spider_p10_life" value="10" />
+            <talentvalue level="8" name="spider_p10_life" value="45" />
+            <talentvalue level="1" name="spider_p10_dmg" value="85 94" />
+            <talentvalue level="8" name="spider_p10_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%spider_p10_dmg $DMG_PHYSICAL\n%spider_p10_life Seconds">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%spider_p10_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Melee" description="Reflects a percentage of melee $DMG back at attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="spider_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="spider_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%spider_outfit11_pct:p Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%spider_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Web Damage" description="Increases the amount of damage done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit12_pct" value="1.05" />
+            <talentvalue level="9" name="spider_outfit12_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%spider_outfit12_pct:s Web $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%spider_outfit12_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit13_dr" value="1" />
+            <talentvalue level="9" name="spider_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spider_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="spider_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit21_pct" value="1.04" />
+            <talentvalue level="9" name="spider_outfit21_pct" value="1.24" />
+        </talentvalues>
+        <level count="9" description="%spider_outfit21_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%spider_outfit21_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Web" description="Increases critical hit chance with web attacks." icon="11" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit22_pct" value="0.02" />
+            <talentvalue level="9" name="spider_outfit22_pct" value="0.11" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit22_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%spider_outfit22_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit23_dr" value="1" />
+            <talentvalue level="9" name="spider_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spider_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Web Damage" description="Increases the amount of damage done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="spider_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%spider_outfit31_pct:s Web $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%spider_outfit31_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost XP" description="Increases the amount of $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spider_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="spider_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%spider_outfit32_pct:s $XP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="xp" level="%spider_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit33_dr" value="1" />
+            <talentvalue level="9" name="spider_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spider_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Evade" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spider_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit41_pct" value="0.05" />
+            <talentvalue level="9" name="spider_outfit41_pct" value="0.13" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit41_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%spider_outfit41_pct">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Striking" description="Gives a striking bonus." icon="25" icon_texture="textures/ui/talent_icons.png" name="spider_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit42_pct" value="3" />
+            <talentvalue level="9" name="spider_outfit42_pct" value="15" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit42_pct Striking">
+            <powerup life="-1">
+                <affecter attribute="strength" level="%spider_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="spider_outfit43_dr" value="1" />
+            <talentvalue level="9" name="spider_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%spider_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%spider_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

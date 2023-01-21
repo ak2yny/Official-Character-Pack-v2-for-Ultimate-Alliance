@@ -1,0 +1,432 @@
+<talents>
+    <talent descname="Controlled Burst" description="A sniper rifle attack of extreme precision. Fully charged, this attack has a 50% chance of killing a stunned enemy, tapping allows for a rapid fire mode. $PT_CHARGE" descshort="Special" icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p1_req" value="1" />
+            <talentvalue level="5" name="blackwidow_p1_req" value="13" />
+            <talentvalue level="6" name="blackwidow_p1_req" value="16" />
+            <talentvalue level="9" name="blackwidow_p1_req" value="25" />
+            <talentvalue level="10" name="blackwidow_p1_req" value="28" />
+            <talentvalue level="14" name="blackwidow_p1_req" value="52" />
+            <talentvalue level="15" name="blackwidow_p1_req" value="72" />
+            <talentvalue level="1" name="blackwidow_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="blackwidow_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="blackwidow_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="blackwidow_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="blackwidow_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="blackwidow_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="blackwidow_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="blackwidow_p1_pwr" value="7" value_charged="8" />
+            <talentvalue level="5" name="blackwidow_p1_pwr" value="14" value_charged="15" />
+            <talentvalue level="6" name="blackwidow_p1_pwr" value="16" value_charged="17" />
+            <talentvalue level="9" name="blackwidow_p1_pwr" value="21" value_charged="22" />
+            <talentvalue level="10" name="blackwidow_p1_pwr" value="23" value_charged="24" />
+            <talentvalue level="14" name="blackwidow_p1_pwr" value="34" value_charged="35" />
+            <talentvalue level="15" name="blackwidow_p1_pwr" value="43" value_charged="44" />
+            <talentvalue level="1" name="blackwidow_gs_dmg" value="4 5" />
+            <talentvalue level="4" name="blackwidow_gs_dmg" value="16 17" />
+            <talentvalue level="7" name="blackwidow_gs_dmg" value="28 29" />
+            <talentvalue level="10" name="blackwidow_gs_dmg" value="40 42" />
+            <talentvalue level="13" name="blackwidow_gs_dmg" value="52 53" />
+        </talentvalues>
+        <level description="%blackwidow_p1_dmg $DMG \n%blackwidow_p1_pwr $EP \nGrab Smash: %blackwidow_gs_dmg $DMG">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Weeping Widow" description="Blasting out a tear gas that will inflict initial $DMG and also a small amount of $DMG over time" descshort="Radial" icon="1" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p2_req" value="5" />
+            <talentvalue level="4" name="blackwidow_p2_req" value="14" />
+            <talentvalue level="5" name="blackwidow_p2_req" value="17" />
+            <talentvalue level="8" name="blackwidow_p2_req" value="26" />
+            <talentvalue level="9" name="blackwidow_p2_req" value="29" />
+            <talentvalue level="13" name="blackwidow_p2_req" value="53" />
+            <talentvalue level="14" name="blackwidow_p2_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p2_dmg" value="13 15" />
+            <talentvalue level="4" name="blackwidow_p2_dmg" value="24 26" />
+            <talentvalue level="5" name="blackwidow_p2_dmg" value="31 34" />
+            <talentvalue level="8" name="blackwidow_p2_dmg" value="44 49" />
+            <talentvalue level="9" name="blackwidow_p2_dmg" value="54 60" />
+            <talentvalue level="13" name="blackwidow_p2_dmg" value="88 98" />
+            <talentvalue level="14" name="blackwidow_p2_dmg" value="126 139" />
+            <talentvalue level="1" name="blackwidow_p2_dmg2" value="10 12" />
+            <talentvalue level="4" name="blackwidow_p2_dmg2" value="11 13" />
+            <talentvalue level="5" name="blackwidow_p2_dmg2" value="13 15" />
+            <talentvalue level="8" name="blackwidow_p2_dmg2" value="13 15" />
+            <talentvalue level="9" name="blackwidow_p2_dmg2" value="17 19" />
+            <talentvalue level="13" name="blackwidow_p2_dmg2" value="24 26" />
+            <talentvalue level="14" name="blackwidow_p2_dmg2" value="37 41" />
+            <talentvalue level="1" name="blackwidow_p2_pwr" value="13" />
+            <talentvalue level="4" name="blackwidow_p2_pwr" value="20" />
+            <talentvalue level="5" name="blackwidow_p2_pwr" value="22" />
+            <talentvalue level="8" name="blackwidow_p2_pwr" value="29" />
+            <talentvalue level="9" name="blackwidow_p2_pwr" value="30" />
+            <talentvalue level="13" name="blackwidow_p2_pwr" value="46" />
+            <talentvalue level="14" name="blackwidow_p2_pwr" value="56" />
+            <talentvalue level="1" name="blackwidow_p2_life" value="2" />
+            <talentvalue level="14" name="blackwidow_p2_life" value="6" />
+        </talentvalues>
+        <level description="%blackwidow_p2_dmg $DMG \n%blackwidow_p2_dmg2 $DMG for %blackwidow_p2_life Seconds \n%blackwidow_p2_pwr $EP">
+            <tier cost="1" count="4" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Flash Bang" description="Spinning around, Black Widow unleashes a bunch of stun grenades that will knockback, damage and stun all enemies around her." descshort="Radial" icon="2" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p3_req" value="10" />
+            <talentvalue level="3" name="blackwidow_p3_req" value="13" />
+            <talentvalue level="4" name="blackwidow_p3_req" value="13" />
+            <talentvalue level="7" name="blackwidow_p3_req" value="25" />
+            <talentvalue level="8" name="blackwidow_p3_req" value="28" />
+            <talentvalue level="12" name="blackwidow_p3_req" value="52" />
+            <talentvalue level="13" name="blackwidow_p3_req" value="72" />
+            <talentvalue level="1" name="blackwidow_p3_dmg" value="17 19" />
+            <talentvalue level="3" name="blackwidow_p3_dmg" value="25 28" />
+            <talentvalue level="4" name="blackwidow_p3_dmg" value="31 34" />
+            <talentvalue level="7" name="blackwidow_p3_dmg" value="41 45" />
+            <talentvalue level="8" name="blackwidow_p3_dmg" value="54 60" />
+            <talentvalue level="12" name="blackwidow_p3_dmg" value="85 94" />
+            <talentvalue level="13" name="blackwidow_p3_dmg" value="126 139" />
+            <talentvalue level="1" name="blackwidow_p3_pwr" value="17" />
+            <talentvalue level="3" name="blackwidow_p3_pwr" value="21" />
+            <talentvalue level="4" name="blackwidow_p3_pwr" value="23" />
+            <talentvalue level="7" name="blackwidow_p3_pwr" value="30" />
+            <talentvalue level="8" name="blackwidow_p3_pwr" value="34" />
+            <talentvalue level="12" name="blackwidow_p3_pwr" value="46" />
+            <talentvalue level="13" name="blackwidow_p3_pwr" value="56" />
+            <talentvalue level="1" name="blackwidow_p3_kb" value="190" />
+            <talentvalue level="13" name="blackwidow_p3_kb" value="370" />
+            <talentvalue level="1" name="blackwidow_p3_lif" value="3" />
+            <talentvalue level="13" name="blackwidow_p3_lif" value="10" />
+        </talentvalues>
+        <level description="%blackwidow_p3_kb Knockback \n%blackwidow_p3_dmg $DMG \n%blackwidow_p3_lif Seconds \n%blackwidow_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Knife Bomb" description="Throws a special knife that if charged will explode on contact. $PT_CHARGE" descshort="Projectile" icon="3" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p4_req" value="15" />
+            <talentvalue level="2" name="blackwidow_p4_req" value="18" />
+            <talentvalue level="5" name="blackwidow_p4_req" value="27" />
+            <talentvalue level="6" name="blackwidow_p4_req" value="30" />
+            <talentvalue level="10" name="blackwidow_p4_req" value="53" />
+            <talentvalue level="11" name="blackwidow_p4_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p4_dmg" value="82 90" value_charged_scale="2.0" />
+            <talentvalue level="2" name="blackwidow_p4_dmg" value="112 124" value_charged_scale="2.0" />
+            <talentvalue level="5" name="blackwidow_p4_dmg" value="143 157" value_charged_scale="2.0" />
+            <talentvalue level="6" name="blackwidow_p4_dmg" value="188 204" value_charged_scale="2.0" />
+            <talentvalue level="10" name="blackwidow_p4_dmg" value="232 256" value_charged_scale="2.0" />
+            <talentvalue level="11" name="blackwidow_p4_dmg" value="322 356" value_charged_scale="2.0" />
+            <talentvalue level="1" name="blackwidow_p4_pwr" value="17" value_charged="18" />
+            <talentvalue level="2" name="blackwidow_p4_pwr" value="20" value_charged="21" />
+            <talentvalue level="5" name="blackwidow_p4_pwr" value="23" value_charged="24" />
+            <talentvalue level="6" name="blackwidow_p4_pwr" value="27" value_charged="28" />
+            <talentvalue level="10" name="blackwidow_p4_pwr" value="35" value_charged="36" />
+            <talentvalue level="11" name="blackwidow_p4_pwr" value="48" value_charged="49" />
+        </talentvalues>
+        <level description="%blackwidow_p4_dmg $DMG \n%blackwidow_p4_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Widow's Charm" description="Firing pheromone laiden pellets, Black Widow is able to charm her victims into attacking her enemies." descshort="Special" icon="4" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p5" power="power5" type="aoe">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p5_req" value="17" />
+            <talentvalue level="4" name="blackwidow_p5_req" value="26" />
+            <talentvalue level="5" name="blackwidow_p5_req" value="29" />
+            <talentvalue level="9" name="blackwidow_p5_req" value="53" />
+            <talentvalue level="10" name="blackwidow_p5_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p5_life" value="3" />
+            <talentvalue level="10" name="blackwidow_p5_life" value="25" />
+            <talentvalue level="1" name="blackwidow_p5_pwr" value="18" />
+            <talentvalue level="4" name="blackwidow_p5_pwr" value="23" />
+            <talentvalue level="5" name="blackwidow_p5_pwr" value="25" />
+            <talentvalue level="9" name="blackwidow_p5_pwr" value="38" />
+            <talentvalue level="10" name="blackwidow_p5_pwr" value="45" />
+            <talentvalue level="1" name="blackwidow_p5_dmg" value="90 98" />
+            <talentvalue level="4" name="blackwidow_p5_dmg" value="112 124" />
+            <talentvalue level="5" name="blackwidow_p5_dmg" value="143 157" />
+            <talentvalue level="9" name="blackwidow_p5_dmg" value="224 248" />
+            <talentvalue level="10" name="blackwidow_p5_dmg" value="322 356" />
+        </talentvalues>
+        <level description="%blackwidow_p5_life Seconds \n%blackwidow_p5_dmg $DMG \n%blackwidow_p5_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Widow's Bite" description="From her wrist gauntlets, Black Widow fires her signature weapon, blasting enemies with electrostatic energy beams." descshort="Beam" icon="11" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p8" power="power8">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p8_req" value="20" />
+            <talentvalue level="3" name="blackwidow_p8_req" value="26" />
+            <talentvalue level="4" name="blackwidow_p8_req" value="29" />
+            <talentvalue level="8" name="blackwidow_p8_req" value="53" />
+            <talentvalue level="9" name="blackwidow_p8_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p8_dmg" value="82 90" />
+            <talentvalue level="3" name="blackwidow_p8_dmg" value="112 124" />
+            <talentvalue level="4" name="blackwidow_p8_dmg" value="143 157" />
+            <talentvalue level="8" name="blackwidow_p8_dmg" value="224 248" />
+            <talentvalue level="9" name="blackwidow_p8_dmg" value="322 356" />
+            <talentvalue level="1" name="blackwidow_p8_pwr" value="21" />
+            <talentvalue level="3" name="blackwidow_p8_pwr" value="26" />
+            <talentvalue level="4" name="blackwidow_p8_pwr" value="29" />
+            <talentvalue level="8" name="blackwidow_p8_pwr" value="41" />
+            <talentvalue level="9" name="blackwidow_p8_pwr" value="50" />
+        </talentvalues>
+        <level description="%blackwidow_p8_dmg $DMG_ELECTRICITY\n%blackwidow_p8_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Soviet Strike" description="Kicking it into overdrive, Black Widow is able to increase her melee damage output for a short duration." descshort="Boost" icon="5" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p6_req" value="2" />
+            <talentvalue level="5" name="blackwidow_p6_req" value="14" />
+            <talentvalue level="6" name="blackwidow_p6_req" value="17" />
+            <talentvalue level="9" name="blackwidow_p6_req" value="26" />
+            <talentvalue level="10" name="blackwidow_p6_req" value="29" />
+            <talentvalue level="14" name="blackwidow_p6_req" value="53" />
+            <talentvalue level="15" name="blackwidow_p6_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p6_pwr" value="32" />
+            <talentvalue level="5" name="blackwidow_p6_pwr" value="60" />
+            <talentvalue level="6" name="blackwidow_p6_pwr" value="68" />
+            <talentvalue level="9" name="blackwidow_p6_pwr" value="88" />
+            <talentvalue level="10" name="blackwidow_p6_pwr" value="92" />
+            <talentvalue level="14" name="blackwidow_p6_pwr" value="140" />
+            <talentvalue level="15" name="blackwidow_p6_pwr" value="172" />
+            <talentvalue level="1" name="blackwidow_p6_dmg" value="1.05" />
+            <talentvalue level="15" name="blackwidow_p6_dmg" value="1.25" />
+            <talentvalue level="1" name="blackwidow_p6_lif" value="20" />
+            <talentvalue level="5" name="blackwidow_p6_lif" value="40" />
+            <talentvalue level="6" name="blackwidow_p6_lif" value="50" />
+            <talentvalue level="9" name="blackwidow_p6_lif" value="65" />
+            <talentvalue level="10" name="blackwidow_p6_lif" value="80" />
+            <talentvalue level="14" name="blackwidow_p6_lif" value="120" />
+            <talentvalue level="15" name="blackwidow_p6_lif" value="180" />
+            <talentvalue level="1" name="blackwidow_p6_ar" value="1.1" />
+            <talentvalue level="15" name="blackwidow_p6_ar" value="1.6" />
+        </talentvalues>
+        <level description="%blackwidow_p6_dmg:p Melee $DMG \n%blackwidow_p6_lif Seconds \n%blackwidow_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Red Dawn" description="By tapping on her belt, Black Widow activates her forcefield for a short time increasing her $DR and reducing $DMG." descshort="Boost" icon="6" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p7_req" value="14" />
+            <talentvalue level="2" name="blackwidow_p7_req" value="17" />
+            <talentvalue level="5" name="blackwidow_p7_req" value="26" />
+            <talentvalue level="6" name="blackwidow_p7_req" value="29" />
+            <talentvalue level="10" name="blackwidow_p7_req" value="53" />
+            <talentvalue level="11" name="blackwidow_p7_req" value="73" />
+            <talentvalue level="1" name="blackwidow_p7_dmg" value="0.04" />
+            <talentvalue level="2" name="blackwidow_p7_dmg" value="0.06" />
+            <talentvalue level="5" name="blackwidow_p7_dmg" value="0.06" />
+            <talentvalue level="6" name="blackwidow_p7_dmg" value="0.08" />
+            <talentvalue level="10" name="blackwidow_p7_dmg" value="0.08" />
+            <talentvalue level="11" name="blackwidow_p7_dmg" value="0.1" />
+            <talentvalue level="1" name="blackwidow_p7_def" value="10" />
+            <talentvalue level="11" name="blackwidow_p7_def" value="100" />
+            <talentvalue level="1" name="blackwidow_p7_life" value="40" />
+            <talentvalue level="2" name="blackwidow_p7_life" value="50" />
+            <talentvalue level="5" name="blackwidow_p7_life" value="65" />
+            <talentvalue level="6" name="blackwidow_p7_life" value="80" />
+            <talentvalue level="10" name="blackwidow_p7_life" value="120" />
+            <talentvalue level="11" name="blackwidow_p7_life" value="180" />
+            <talentvalue level="1" name="blackwidow_p7_pwr" value="60" />
+            <talentvalue level="2" name="blackwidow_p7_pwr" value="68" />
+            <talentvalue level="5" name="blackwidow_p7_pwr" value="88" />
+            <talentvalue level="6" name="blackwidow_p7_pwr" value="92" />
+            <talentvalue level="10" name="blackwidow_p7_pwr" value="140" />
+            <talentvalue level="11" name="blackwidow_p7_pwr" value="172" />
+        </talentvalues>
+        <level description="+%blackwidow_p7_def $DR \n%blackwidow_p7_dmg:p $DMG Reduction \n%blackwidow_p7_life Seconds \n%blackwidow_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%blackwidow_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Russian Fury" description="Drawing both her machinegun and pistol, Black Widow unleashes a furious volley of fire tearing down everything in front of her." descshort="Xtreme" icon="7" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="blackwidow_p9_req" value="10" />
+            <talentvalue level="3" name="blackwidow_p9_req" value="25" />
+            <talentvalue level="4" name="blackwidow_p9_req" value="30" />
+            <talentvalue level="6" name="blackwidow_p9_req" value="48" />
+            <talentvalue level="1" name="blackwidow_p9_dmg" value="51 56" />
+            <talentvalue level="3" name="blackwidow_p9_dmg" value="85 94" />
+            <talentvalue level="4" name="blackwidow_p9_dmg" value="102 113" />
+            <talentvalue level="6" name="blackwidow_p9_dmg" value="136 150" />
+        </talentvalues>
+        <level count="20" description="%blackwidow_p9_dmg $DMG\n%blackwidow_p9_pwr $EP">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%blackwidow_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Melee Damage Increase" description="Increases damage done by melee attacks" icon="5" icon_texture="textures/ui/talent_icons.png" name="widow_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit11_pct" value="1.04" />
+            <talentvalue level="9" name="widow_outfit11_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit11_pct:p Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%widow_outfit11_pct">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Boost Body" description="Increase to body attribute" icon="12" icon_texture="textures/ui/talent_icons.png" name="widow_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit12_pct" value="3" />
+            <talentvalue level="9" name="widow_outfit12_pct" value="15" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit12_pct Body">
+            <powerup life="-1">
+                <affecter attribute="body" level="%widow_outfit11_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR" icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit13_dr" value="1" />
+            <talentvalue level="9" name="widow_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%widow_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Regeneration" description="Increases the rate health is regenerated" icon="30" icon_texture="textures/ui/talent_icons.png" name="widow_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit21_hlth" value="0.004" />
+            <talentvalue level="9" name="widow_outfit21_hlth" value="0.012" />
+            <talentvalue level="1" name="widow_outfit21_show" value="0.4" />
+            <talentvalue level="9" name="widow_outfit21_show" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit21_show:f% Max $HP Regenerated Per Second">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%widow_outfit21_hlth" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects a percentage of damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="widow_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit22_pct" value="0.25" />
+            <talentvalue level="9" name="widow_outfit22_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit22_pct:p $DMG Reflected">
+            <powerup life="-1">
+                <affecter attribute="reflect_damage" level="%widow_outfit22_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR" icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit23_dr" value="1" />
+            <talentvalue level="9" name="widow_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%widow_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Gun Mastery" description="Increases damage done when using a gun" icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="widow_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit31_pct" value="1.05" />
+            <talentvalue level="9" name="widow_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit31_pct:s $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="damage" level="%widow_outfit31_pct" scope_node="projectile" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Increased Critical Chance" description="Increased chance to make a critical attack." icon="1" icon_texture="textures/ui/talent_icons.png" name="widow_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit32_pct" value="0.05" />
+            <talentvalue level="9" name="widow_outfit32_pct" value="0.13" />
+        </talentvalues>
+        <level count="9" description="%widow_outfit32_pct:p">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%widow_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR" icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit33_dr" value="1" />
+            <talentvalue level="9" name="widow_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%widow_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="widow_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit41_pct" value="0.03" />
+            <talentvalue level="9" name="widow_outfit41_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit41_pct:p Dodge Chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%widow_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy per Kill" description="Regain $EP per Kill" icon="15" icon_texture="textures/ui/talent_icons.png" name="widow_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit42_pct" value="5" />
+            <talentvalue level="9" name="widow_outfit42_pct" value="25" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit42_pct $EP per Kill">
+            <powerup life="-1">
+                <affecter attribute="energy_per_kill" level="%widow_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR" icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="widow_outfit43_dr" value="1" />
+            <talentvalue level="9" name="widow_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%widow_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%widow_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

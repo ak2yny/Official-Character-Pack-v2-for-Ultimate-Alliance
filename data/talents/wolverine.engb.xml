@@ -1,0 +1,464 @@
+<talents>
+    <talent descname="Claw Slash" description="Increased melee attack that causes bleed damage." descshort="Melee" icon="0" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p1" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_p1_req" value="1" />
+            <talentvalue level="5" name="wolv_p1_req" value="13" />
+            <talentvalue level="6" name="wolv_p1_req" value="16" />
+            <talentvalue level="9" name="wolv_p1_req" value="25" />
+            <talentvalue level="10" name="wolv_p1_req" value="28" />
+            <talentvalue level="14" name="wolv_p1_req" value="52" />
+            <talentvalue level="15" name="wolv_p1_req" value="72" />
+            <talentvalue level="1" name="wolv_p1_dmg" value="17 19" />
+            <talentvalue level="5" name="wolv_p1_dmg" value="58 64" />
+            <talentvalue level="6" name="wolv_p1_dmg" value="78 86" />
+            <talentvalue level="9" name="wolv_p1_dmg" value="109 120" />
+            <talentvalue level="10" name="wolv_p1_dmg" value="139 154" />
+            <talentvalue level="14" name="wolv_p1_dmg" value="221 244" />
+            <talentvalue level="15" name="wolv_p1_dmg" value="319 353" />
+            <talentvalue level="1" name="wolv_p1_bld" value="11 13" />
+            <talentvalue level="5" name="wolv_p1_bld" value="17 19" />
+            <talentvalue level="6" name="wolv_p1_bld" value="20 23" />
+            <talentvalue level="9" name="wolv_p1_bld" value="31 34" />
+            <talentvalue level="10" name="wolv_p1_bld" value="41 45" />
+            <talentvalue level="14" name="wolv_p1_bld" value="65 71" />
+            <talentvalue level="15" name="wolv_p1_bld" value="95 105" />
+            <talentvalue level="1" name="wolv_p1_pwr" value="8" />
+            <talentvalue level="5" name="wolv_p1_pwr" value="17" />
+            <talentvalue level="6" name="wolv_p1_pwr" value="19" />
+            <talentvalue level="9" name="wolv_p1_pwr" value="26" />
+            <talentvalue level="10" name="wolv_p1_pwr" value="28" />
+            <talentvalue level="14" name="wolv_p1_pwr" value="44" />
+            <talentvalue level="15" name="wolv_p1_pwr" value="55" />
+            <talentvalue level="1" name="wolv_frenzy_dmg" value="10 12" />
+            <talentvalue level="5" name="wolv_frenzy_dmg" value="17 19" />
+            <talentvalue level="6" name="wolv_frenzy_dmg" value="24 26" />
+            <talentvalue level="9" name="wolv_frenzy_dmg" value="34 38" />
+            <talentvalue level="10" name="wolv_frenzy_dmg" value="44 49" />
+            <talentvalue level="14" name="wolv_frenzy_dmg" value="75 83" />
+            <talentvalue level="15" name="wolv_frenzy_dmg" value="109 120" />
+            <talentvalue level="1" name="wolv_frenzy_inc" value="0.1" />
+            <talentvalue level="15" name="wolv_frenzy_inc" value="0.17" />
+            <talentvalue level="1" name="wolv_frenzy_life" value="3" />
+            <talentvalue level="15" name="wolv_frenzy_life" value="7" />
+            <talentvalue level="1" name="wolv_frenzy_pwr" value="5" />
+            <talentvalue level="5" name="wolv_frenzy_pwr" value="10" />
+            <talentvalue level="6" name="wolv_frenzy_pwr" value="11" />
+            <talentvalue level="9" name="wolv_frenzy_pwr" value="16" />
+            <talentvalue level="10" name="wolv_frenzy_pwr" value="17" />
+            <talentvalue level="14" name="wolv_frenzy_pwr" value="26" />
+            <talentvalue level="15" name="wolv_frenzy_pwr" value="33" />
+        </talentvalues>
+        <level description="%wolv_p1_dmg $DMG_PHYSICAL\n%wolv_p1_bld $DMG_BLEED\n%wolv_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Claw Frenzy" description="Multiple slashing attacks with each hit increasing attack speed for a time." descshort="Melee" icon="3" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_frenzy" parent="wolv_p1" type="attack">
+        <level description="%wolv_frenzy_dmg $DMG_PHYSICAL\n+%wolv_frenzy_inc:p speed per hit for %wolv_frenzy_life seconds\n%wolv_frenzy_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Lethal Lunge" description="Launches forward knocking back enemies where he lands and brutally slashing his target." descshort="Charge" icon="1" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_lunge" power="power6">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_lunge_req" value="5" />
+            <talentvalue level="4" name="wolv_lunge_req" value="14" />
+            <talentvalue level="6" name="wolv_lunge_req" value="17" />
+            <talentvalue level="9" name="wolv_lunge_req" value="26" />
+            <talentvalue level="10" name="wolv_lunge_req" value="29" />
+            <talentvalue level="14" name="wolv_lunge_req" value="53" />
+            <talentvalue level="15" name="wolv_lunge_req" value="73" />
+            <talentvalue level="1" name="wolv_lunge_dmg" value="31 34" />
+            <talentvalue level="5" name="wolv_lunge_dmg" value="61 68" />
+            <talentvalue level="6" name="wolv_lunge_dmg" value="82 90" />
+            <talentvalue level="9" name="wolv_lunge_dmg" value="112 124" />
+            <talentvalue level="10" name="wolv_lunge_dmg" value="143 157" />
+            <talentvalue level="14" name="wolv_lunge_dmg" value="224 248" />
+            <talentvalue level="15" name="wolv_lunge_dmg" value="322 356" />
+            <talentvalue level="1" name="wolv_lunge_kb" value="620" />
+            <talentvalue level="15" name="wolv_lunge_kb" value="620" />
+            <talentvalue level="1" name="wolv_lunge_rage" value="2" />
+            <talentvalue level="15" name="wolv_lunge_rage" value="2" />
+            <talentvalue level="1" name="wolv_lunge_pwr" value="11" />
+            <talentvalue level="5" name="wolv_lunge_pwr" value="18" />
+            <talentvalue level="6" name="wolv_lunge_pwr" value="20" />
+            <talentvalue level="9" name="wolv_lunge_pwr" value="27" />
+            <talentvalue level="10" name="wolv_lunge_pwr" value="29" />
+            <talentvalue level="14" name="wolv_lunge_pwr" value="45" />
+            <talentvalue level="15" name="wolv_lunge_pwr" value="56" />
+            <talentvalue level="1" name="wolv_p6_dmg" value="13 15" />
+            <talentvalue level="5" name="wolv_p6_dmg" value="24 26" />
+            <talentvalue level="6" name="wolv_p6_dmg" value="31 34" />
+            <talentvalue level="9" name="wolv_p6_dmg" value="44 49" />
+            <talentvalue level="10" name="wolv_p6_dmg" value="54 60" />
+            <talentvalue level="14" name="wolv_p6_dmg" value="88 98" />
+            <talentvalue level="15" name="wolv_p6_dmg" value="126 139" />
+            <talentvalue level="1" name="wolv_p6_chnc" value="0.5" />
+            <talentvalue level="15" name="wolv_p6_chnc" value="0.95" />
+            <talentvalue level="1" name="wolv_p6_pwr" value="14" />
+            <talentvalue level="5" name="wolv_p6_pwr" value="23" />
+            <talentvalue level="6" name="wolv_p6_pwr" value="26" />
+            <talentvalue level="9" name="wolv_p6_pwr" value="35" />
+            <talentvalue level="10" name="wolv_p6_pwr" value="38" />
+            <talentvalue level="14" name="wolv_p6_pwr" value="59" />
+            <talentvalue level="15" name="wolv_p6_pwr" value="73" />
+        </talentvalues>
+        <level description="%wolv_lunge_dmg $DMG_PHYSICAL\n%wolv_lunge_kb:r foot $KB\n%wolv_lunge_rage:s rage\n%wolv_lunge_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_lunge_req" />
+        </level>
+    </talent>
+    <talent descname="Certain Death" description="Impale the enemy on Wolverine's claws, lift them up, and throw them down.  High chance of instant kill." descshort="Melee" icon="5" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p6" parent="wolv_lunge" type="attack">
+        <level description="%wolv_p6_dmg $DMG_PHYSICAL\n%wolv_p6_chnc:p chance to instant kill\n%wolv_p6_pwr $EP">
+            <tier cost="1" count="4" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_lunge_req" />
+        </level>
+    </talent>
+    <talent descname="Eviscerate" description="Radial damage to nearby enemies with heavy thrust into a single second target." descshort="Melee" icon="2" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p3" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_p3_req" value="10" />
+            <talentvalue level="3" name="wolv_p3_req" value="13" />
+            <talentvalue level="4" name="wolv_p3_req" value="16" />
+            <talentvalue level="7" name="wolv_p3_req" value="25" />
+            <talentvalue level="8" name="wolv_p3_req" value="28" />
+            <talentvalue level="12" name="wolv_p3_req" value="52" />
+            <talentvalue level="13" name="wolv_p3_req" value="72" />
+            <talentvalue level="1" name="wolv_p3_dmg" value="20 23" />
+            <talentvalue level="3" name="wolv_p3_dmg" value="27 30" />
+            <talentvalue level="4" name="wolv_p3_dmg" value="37 41" />
+            <talentvalue level="7" name="wolv_p3_dmg" value="51 56" />
+            <talentvalue level="8" name="wolv_p3_dmg" value="68 75" />
+            <talentvalue level="12" name="wolv_p3_dmg" value="109 120" />
+            <talentvalue level="13" name="wolv_p3_dmg" value="156 173" />
+            <talentvalue level="1" name="wolv_p3_bld" value="1.05" />
+            <talentvalue level="13" name="wolv_p3_bld" value="1.25" />
+            <talentvalue level="1" name="wolv_p3_pwr" value="15" />
+            <talentvalue level="3" name="wolv_p3_pwr" value="17" />
+            <talentvalue level="4" name="wolv_p3_pwr" value="19" />
+            <talentvalue level="7" name="wolv_p3_pwr" value="26" />
+            <talentvalue level="8" name="wolv_p3_pwr" value="28" />
+            <talentvalue level="12" name="wolv_p3_pwr" value="44" />
+            <talentvalue level="13" name="wolv_p3_pwr" value="55" />
+            <talentvalue level="1" name="wolv_p5_dmg" value="34 38" />
+            <talentvalue level="3" name="wolv_p5_dmg" value="41 45" />
+            <talentvalue level="4" name="wolv_p5_dmg" value="58 64" />
+            <talentvalue level="7" name="wolv_p5_dmg" value="78 86" />
+            <talentvalue level="8" name="wolv_p5_dmg" value="102 113" />
+            <talentvalue level="12" name="wolv_p5_dmg" value="163 180" />
+            <talentvalue level="13" name="wolv_p5_dmg" value="238 263" />
+            <talentvalue level="1" name="wolv_p5_pwr" value="15" />
+            <talentvalue level="3" name="wolv_p5_pwr" value="17" />
+            <talentvalue level="4" name="wolv_p5_pwr" value="19" />
+            <talentvalue level="7" name="wolv_p5_pwr" value="26" />
+            <talentvalue level="8" name="wolv_p5_pwr" value="28" />
+            <talentvalue level="12" name="wolv_p5_pwr" value="44" />
+            <talentvalue level="13" name="wolv_p5_pwr" value="55" />
+        </talentvalues>
+        <level description="%wolv_p3_dmg $DMG_PHYSICAL to nearby enemies\n%wolv_p3_bld:s $DMG_PHYSICAL to bleeding victims\n%wolv_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Spin Attack" description="Spin forward, hitting multiple targets with claws." descshort="Melee" icon="4" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p5" parent="wolv_p3" type="attack">
+        <level description="%wolv_p5_dmg $DMG_PHYSICAL\n%wolv_p5_pwr $EP">
+            <tier cost="1" count="2" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Fury" description="Boosts $DMG, speed, and rage." descshort="Boost" icon="6" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p7" power="power8" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_p7_req" value="2" />
+            <talentvalue level="5" name="wolv_p7_req" value="14" />
+            <talentvalue level="6" name="wolv_p7_req" value="17" />
+            <talentvalue level="9" name="wolv_p7_req" value="26" />
+            <talentvalue level="10" name="wolv_p7_req" value="29" />
+            <talentvalue level="14" name="wolv_p7_req" value="53" />
+            <talentvalue level="15" name="wolv_p7_req" value="73" />
+            <talentvalue level="1" name="wolv_p7_life" value="20" />
+            <talentvalue level="5" name="wolv_p7_life" value="40" />
+            <talentvalue level="6" name="wolv_p7_life" value="50" />
+            <talentvalue level="9" name="wolv_p7_life" value="65" />
+            <talentvalue level="10" name="wolv_p7_life" value="80" />
+            <talentvalue level="14" name="wolv_p7_life" value="120" />
+            <talentvalue level="15" name="wolv_p7_life" value="180" />
+            <talentvalue level="1" name="wolv_p7_dmg" value="1.05" />
+            <talentvalue level="5" name="wolv_p7_dmg" value="1.06" />
+            <talentvalue level="6" name="wolv_p7_dmg" value="1.07" />
+            <talentvalue level="9" name="wolv_p7_dmg" value="1.08" />
+            <talentvalue level="10" name="wolv_p7_dmg" value="1.09" />
+            <talentvalue level="14" name="wolv_p7_dmg" value="1.1" />
+            <talentvalue level="15" name="wolv_p7_dmg" value="1.11" />
+            <talentvalue level="1" name="wolv_p7_spd" value="1.2" />
+            <talentvalue level="5" name="wolv_p7_spd" value="1.2" />
+            <talentvalue level="6" name="wolv_p7_spd" value="1.25" />
+            <talentvalue level="9" name="wolv_p7_spd" value="1.25" />
+            <talentvalue level="10" name="wolv_p7_spd" value="1.3" />
+            <talentvalue level="14" name="wolv_p7_spd" value="1.3" />
+            <talentvalue level="15" name="wolv_p7_spd" value="1.4" />
+            <talentvalue level="1" name="wolv_p7_rage" value="1.1" />
+            <talentvalue level="15" name="wolv_p7_rage" value="2" />
+            <talentvalue level="1" name="wolv_p7_pwr" value="32" />
+            <talentvalue level="5" name="wolv_p7_pwr" value="72" />
+            <talentvalue level="6" name="wolv_p7_pwr" value="80" />
+            <talentvalue level="9" name="wolv_p7_pwr" value="108" />
+            <talentvalue level="10" name="wolv_p7_pwr" value="116" />
+            <talentvalue level="14" name="wolv_p7_pwr" value="180" />
+            <talentvalue level="15" name="wolv_p7_pwr" value="224" />
+            <talentvalue level="1" name="wolv_p8_life" value="20" />
+            <talentvalue level="5" name="wolv_p8_life" value="40" />
+            <talentvalue level="6" name="wolv_p8_life" value="50" />
+            <talentvalue level="9" name="wolv_p8_life" value="65" />
+            <talentvalue level="10" name="wolv_p8_life" value="80" />
+            <talentvalue level="14" name="wolv_p8_life" value="120" />
+            <talentvalue level="15" name="wolv_p8_life" value="180" />
+            <talentvalue level="1" name="wolv_p8_dmg" value="0.75" />
+            <talentvalue level="5" name="wolv_p8_dmg" value="0.6" />
+            <talentvalue level="6" name="wolv_p8_dmg" value="0.55" />
+            <talentvalue level="9" name="wolv_p8_dmg" value="0.4" />
+            <talentvalue level="10" name="wolv_p8_dmg" value="0.35" />
+            <talentvalue level="14" name="wolv_p8_dmg" value="0.2" />
+            <talentvalue level="15" name="wolv_p8_dmg" value="0.1" />
+            <talentvalue level="1" name="wolv_p8_pwr" value="32" />
+            <talentvalue level="5" name="wolv_p8_pwr" value="72" />
+            <talentvalue level="6" name="wolv_p8_pwr" value="80" />
+            <talentvalue level="9" name="wolv_p8_pwr" value="108" />
+            <talentvalue level="10" name="wolv_p8_pwr" value="116" />
+            <talentvalue level="14" name="wolv_p8_pwr" value="180" />
+            <talentvalue level="15" name="wolv_p8_pwr" value="224" />
+        </talentvalues>
+        <level description="%wolv_p7_dmg:s $DMG_PHYSICAL (%wolv_p7_dmg:x)\n%wolv_p7_spd:s attack speed\n%wolv_p7_rage:s rage per hit\n%wolv_p7_life seconds\n%wolv_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Taunt" description="Forces enemies to attack Wolverine.  Affected enemies do less damage and are forced to melee." descshort="Debuff" icon="7" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p8" parent="wolv_p7" type="boost">
+        <level description="%wolv_p8_dmg:s $DMG\n%wolv_p8_life sec\n%wolv_p8_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%wolv_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Feral Rage" description="Slashes multiple targets in a blinding flurry of rage." descshort="Xtreme" icon="9" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_teamxtreme" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_txtreme_req" value="10" />
+            <talentvalue level="8" name="wolv_txtreme_req" value="48" />
+            <talentvalue level="1" name="wolv_txtreme_dmg" value="85 94" />
+            <talentvalue level="8" name="wolv_txtreme_dmg" value="339 375" />
+        </talentvalues>
+        <level description="%wolv_txtreme_dmg $DMG_PHYSICAL">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%wolv_txtreme_req" />
+        </level>
+    </talent>
+    <talent descname="Feral" description="Stay in rage mode longer and increase critical chance." descshort="Passive" icon="12" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_feral" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_feral_req" value="14" />
+            <talentvalue level="5" name="wolv_feral_req" value="30" />
+            <talentvalue level="6" name="wolv_feral_req" value="37" />
+            <talentvalue level="8" name="wolv_feral_req" value="49" />
+            <talentvalue level="1" name="wolv_feral_rage" value="1" />
+            <talentvalue level="5" name="wolv_feral_rage" value="15" />
+            <talentvalue level="6" name="wolv_feral_rage" value="20" />
+            <talentvalue level="8" name="wolv_feral_rage" value="30" />
+            <talentvalue level="1" name="wolv_feral_crit" value="0.01" />
+            <talentvalue level="5" name="wolv_feral_crit" value="0.15" />
+            <talentvalue level="6" name="wolv_feral_crit" value="0.2" />
+            <talentvalue level="8" name="wolv_feral_crit" value="0.3" />
+        </talentvalues>
+        <level description="+%wolv_feral_rage seconds of rage time\n+%wolv_feral_crit:p Critical Chance">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="3" difficulty="hard" />
+            <require category="level" level="%wolv_feral_req" />
+            <powerup life="-1">
+                <affecter attribute="rage_time" level="%wolv_feral_rage" />
+                <affecter attribute="atk_critical" level="%wolv_feral_crit" />
+            </powerup>
+        </level>
+    </talent>
+    <talent hidden="true" icon="14" name="wolv_rage">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_rage_req" value="1" />
+            <talentvalue level="1" name="wolv_rage_time" value="15" />
+        </talentvalues>
+        <level count="1">
+            <require category="level" level="%wolv_rage_req" />
+            <powerup class="berserker_rage" life="-1" ragenode="rage_node" ragetag="1" ragetime="%wolv_rage_time" tag_name="berserker_rage">
+                <affecter attribute="rage" level="0.025" />
+                <powerup life="5" renderfx="enraged">
+                    <affecter attribute="enraged" level="1" />
+                </powerup>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Environment Damage" description="Increases the amount of $DMG done with weapons or throws." icon="0" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit11_pct" value="1.1" />
+            <talentvalue level="9" name="wolv_outfit11_pct" value="1.3" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit11_pct:s Weapon or Throw $DMG">
+            <powerup class="weapon_powerup" life="-1">
+                <powerup life="-1">
+                    <affecter affect_type="scale" attribute="move_attack" level="%wolv_outfit11_pct" />
+                    <affecter affect_type="scale" attribute="atk_damage" level="%wolv_outfit11_pct" />
+                </powerup>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit12_pct" value="1.02" />
+            <talentvalue level="9" name="wolv_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit12_pct:s Maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%wolv_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit13_dr" value="1" />
+            <talentvalue level="9" name="wolv_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%wolv_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Claw Damage" description="Increases the amount of damage done with claw attacks." icon="10" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit21_pct" value="1.05" />
+            <talentvalue level="9" name="wolv_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit21_pct:s Claw $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%wolv_outfit21_pct" scope_damage="dmg_blade" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="8" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit22_pct" value="0.05" />
+            <talentvalue level="9" name="wolv_outfit22_pct" value="0.13" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit22_pct:p Critical Chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%wolv_outfit22_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit23_dr" value="1" />
+            <talentvalue level="9" name="wolv_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%wolv_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Health Regen" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit31_pct" value="0.004" />
+            <talentvalue level="9" name="wolv_outfit31_pct" value="0.012" />
+            <talentvalue level="1" name="wolv_outfit31_shw" value="0.4" />
+            <talentvalue level="9" name="wolv_outfit31_shw" value="1.2" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit31_shw:f% Max $HP Regenerated Per Second">
+            <powerup life="-1">
+                <affecter attribute="health_regen_pct" level="%wolv_outfit31_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bleed Damage" description="Adds a chance to cause bleed damage to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit32_pct" value="0.05" />
+            <talentvalue level="9" name="wolv_outfit32_pct" value="0.15" />
+            <talentvalue level="1" name="wolv_outfit32_dmg" value="0.05" />
+            <talentvalue level="9" name="wolv_outfit32_dmg" value="0.15" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit32_pct:p Chance\n+%wolv_outfit32_dmg:p as $DMG_BLEED">
+            <powerup chance="%wolv_outfit32_pct" class="add_harming" damagepercent="%wolv_outfit32_dmg" life="-1">
+                <affecter attribute="powerup_scope" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit33_dr" value="1" />
+            <talentvalue level="9" name="wolv_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%wolv_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit41_pct" value="1.04" />
+            <talentvalue level="9" name="wolv_outfit41_pct" value="1.24" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit41_pct:s Maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%wolv_outfit41_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Rage Focus" description="Increases the length of time the rage state lasts." icon="8" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="wolv_outfit42_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%wolv_outfit42_pct:s Duration">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="rage_time" level="%wolv_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="wolv_outfit43_dr" value="1" />
+            <talentvalue level="9" name="wolv_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%wolv_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%wolv_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>
