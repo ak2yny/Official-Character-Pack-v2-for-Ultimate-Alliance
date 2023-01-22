@@ -1,6 +1,16 @@
 Changelog by ak2yny
 -------------------
 
+v3:
+- Erik Lensherr\Ermac (Mortal Kombat)
+   complete new mix, using correct priority this time: low - normal set (except menu); mid - fightstyle; high - 4_combat set
+- Erik Lensherr\Shocker (Marvel Comics)
+   mixed in a number of animations from Cap's fightstyle_default.
+   Note: this is an NPC made playable mod using only the NPC animations, without menu animations. It heavily relied on that fs default.
+- Erik Lensherr\Surtur (Marvel Comics)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (It's now heavy on triggers again - 307, fighmoves - 49)
+   Note: The mod is missing animations power_8_end, and power_8_loop
+
 v2:
 - Jeanfan321\Aqua
    removed, the animations stay identical (all animation sets of this mod are duplicates of "22_invisiblewoman_4_combat.igb").
