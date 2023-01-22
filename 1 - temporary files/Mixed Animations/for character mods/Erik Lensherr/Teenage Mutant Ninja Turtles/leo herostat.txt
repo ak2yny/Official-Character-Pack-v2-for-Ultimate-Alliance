@@ -1,0 +1,67 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 9 ;
+   characteranims = 206_leo ;
+   charactername = Leonardo ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 7 ;
+   name = Leo ;
+   playable = true ;
+   powerstyle = ps_leo ;
+   scriptlevel = 3 ;
+   skin = 20609 ;
+   skin_01_name = Classic ;
+   skin_02 = 10 ;
+   skin_02_name = Out of the Shadows ;
+   skin_03 = 11 ;
+   skin_03_name = Mutant Nightmare ;
+   skin_04 = 12 ;
+   skin_04_name = Mutant Nightmare 2 ;
+   sounddir = leo_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 17 ;
+      Multipart {
+      hideskin = sword_left_back_segment ;
+      menuonly = true ;
+      showskin = sword_left_segment ;
+      }
+
+      Multipart {
+      hideskin = sword_right_segment ;
+      menuonly = true ;
+      showskin = sword_right_back_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leo_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = turtle_power2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }

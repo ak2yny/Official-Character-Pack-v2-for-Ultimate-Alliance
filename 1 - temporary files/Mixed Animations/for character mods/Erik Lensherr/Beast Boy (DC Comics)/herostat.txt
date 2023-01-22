@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 18 ;
+   characteranims = 233_bboy ;
+   charactername = Beast Boy ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = bboy ;
+   playable = true ;
+   powerstyle = ps_bboy ;
+   scale_factor = 0.9 ;
+   scriptlevel = 3 ;
+   skin = 23305 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = DCUO ;
+   skin_03 = 07 ;
+   skin_03_name = Teen Titans ;
+   skin_04 = 08 ;
+   skin_04_name = Teen Titans 2 ;
+   sounddir = bboy_m ;
+   strength = 18 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = bboy_physiology ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

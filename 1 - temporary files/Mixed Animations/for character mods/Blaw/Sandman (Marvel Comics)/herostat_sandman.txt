@@ -1,0 +1,82 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 8 ;
+   characteranims = 220_sandman ;
+   charactername = Sandman ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = sandman ;
+   playable = true ;
+   powerstyle = ps_sandman ;
+   scriptlevel = 3 ;
+   skin = 22001 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Modern ;
+   skin_03 = 03 ;
+   skin_03_name = Wild Pack ;
+   skin_04 = 04 ;
+   skin_04_name = Ultimate ;
+   sounddir = sandman_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 220_morningstarLEFT_segment ;
+      hideskin2 = 220_morningstarRIGHT_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 220_sarmLEFT_segment ;
+      hideskin2 = 220_sarmRIGHT_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 220_hammerLEFT_segment ;
+      hideskin2 = 220_hammerRIGHT_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sandform ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sandm_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

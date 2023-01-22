@@ -1,0 +1,73 @@
+ares
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 83_ares ;
+   characteranimsclass = humanoid_large ;
+   charactername = Ares ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 4 ;
+   name = ares ;
+   playable = true ;
+   powerstyle = ps_ares ;
+   scale_factor = 1.05 ;
+   scriptlevel = 3 ;
+   skin = 8305 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Dark Avengers ;
+   skin_03 = 07 ;
+   skin_03_name = Chaos War ;
+   skin_04 = 08 ;
+   skin_04_name = Olympian Armor ;
+   sounddir = ares_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ares_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

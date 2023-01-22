@@ -1,0 +1,73 @@
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 98_klao ;
+   charactername = Kung Lao ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 7 ;
+   name = klao ;
+   playable = true ;
+   powerstyle = ps_klao ;
+   scriptlevel = 3 ;
+   skin = 9810 ;
+   skin_01_name = Klassic ;
+   skin_02 = 11 ;
+   skin_02_name = Original ;
+   skin_03 = 12 ;
+   skin_03_name = Deadly Alliance ;
+   skin_04 = 13 ;
+   skin_04_name = Shaolin Monks ;
+   sounddir = klao_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 4 ;
+      talent {
+      level = 1 ;
+      name = klao_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = acrobatics ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hat_hand_segment ;
+      nonmenuonly = true ;
+      showskin = hat_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hat_hand_segment ;
+      nonmenuonly = true ;
+      showskin = hat_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hat_hand_segment ;
+      menuonly = true ;
+      showskin = hat_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

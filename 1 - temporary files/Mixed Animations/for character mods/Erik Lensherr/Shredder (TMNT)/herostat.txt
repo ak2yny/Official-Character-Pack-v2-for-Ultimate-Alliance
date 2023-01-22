@@ -1,0 +1,68 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 10 ;
+   characteranims = 235_shredder ;
+   charactername = Shredder ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 10 ;
+   moveset1 = moveset_flying ;
+   name = shredder ;
+   playable = true ;
+   powerstyle = ps_shredder ;
+   scale_factor = 1.1 ;
+   scriptlevel = 3 ;
+   skin = 23505 ;
+   skin_01_name = TMNT 2003 ;
+   skin_02 = 06 ;
+   skin_02_name = TMNT: Out of the Shadows ;
+   skin_03 = 07 ;
+   skin_03_name = TMNT: Out of the Shadows (Unmasked) ;
+   skin_04 = 08 ;
+   skin_04_name = TMNT 2012 ;
+   sounddir = shred_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 2 ;
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = villain ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = shred_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

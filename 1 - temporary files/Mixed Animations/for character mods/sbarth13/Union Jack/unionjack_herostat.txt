@@ -1,0 +1,92 @@
+unionjack
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 105_unionjack ;
+   charactername = Union Jack ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 5 ;
+   name = unionjack ;
+   playable = true ;
+   powerstyle = ps_unionjack ;
+   scriptlevel = 3 ;
+   skin = 10505 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Modern ;
+   skin_03 = 07 ;
+   skin_03_name = WW2 ;
+   skin_04 = 08 ;
+   skin_04_name = Hero ;
+   sounddir = union_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 23 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = union_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dodge_melee ;
+      }
+
+      talent {
+      level = 1 ;
+      name = acrobatics ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = gun_left ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = gun_right ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      menuonly = true ;
+      model = models/bolton/KA-BAR_knife_L-handed ;
+      slot = ebolton_clawleft ;
+      }
+
+   }

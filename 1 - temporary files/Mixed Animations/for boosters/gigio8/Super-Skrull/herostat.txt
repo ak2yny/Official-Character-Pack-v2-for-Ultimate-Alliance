@@ -1,0 +1,134 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 33_sskrull ;
+   charactername = Super-Skrull ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 7 ;
+   moveset1 = moveset_flying ;
+   name = SSkrull ;
+   playable = true ;
+   powerstyle = ps_sskrull ;
+   scriptlevel = 3 ;
+   skin = 3301 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Rock Hard ;
+   skin_03 = 03 ;
+   skin_03_name = Fiery Attack ;
+   skin_04 = 04 ;
+   skin_04_name = Annihilation ;
+   sounddir = sskrul_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sskrull_p2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sskrull_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dominance ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/humant/special_burning ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/humant/special_burning ;
+      fxlevel = 3 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/humant/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/humant/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+   }

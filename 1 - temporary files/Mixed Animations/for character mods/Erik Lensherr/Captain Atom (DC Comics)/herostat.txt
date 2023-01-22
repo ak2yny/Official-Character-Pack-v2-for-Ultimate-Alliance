@@ -1,0 +1,70 @@
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 15 ;
+   characteranims = 229_catom ;
+   charactername = Captain Atom ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 10 ;
+   moveset1 = moveset_flying ;
+   name = Catom ;
+   playable = true ;
+   powerstyle = ps_catom ;
+   scriptlevel = 3 ;
+   skin = 22907 ;
+   skin_01_name = DCUO ;
+   skin_02 = 08 ;
+   skin_02_name = Invasion ;
+   skin_03 = 09 ;
+   skin_03_name = JLU ;
+   skin_04 = 10 ;
+   skin_04_name = Young Justice ;
+   sounddir = catom_m ;
+   strength = 16 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = quantum ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

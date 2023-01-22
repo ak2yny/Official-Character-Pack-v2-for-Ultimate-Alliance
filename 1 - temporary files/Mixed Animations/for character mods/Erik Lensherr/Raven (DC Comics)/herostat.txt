@@ -1,0 +1,59 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 8 ;
+   characteranims = 52_raven ;
+   charactername = Raven ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 13 ;
+   moveset1 = moveset_flying ;
+   name = Raven ;
+   playable = true ;
+   powerstyle = ps_raven ;
+   scriptlevel = 3 ;
+   skin = 5202 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Classic 2 ;
+   skin_03 = 04 ;
+   skin_03_name = DCUO ;
+   skin_04 = 05 ;
+   skin_04_name = DCUO White ;
+   skin_05 = 07 ;
+   skin_05_name = DCUO Blue ;
+   sounddir = raven_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 5 ;
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = raven_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = raven_halfdemon ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

@@ -1,0 +1,61 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 8 ;
+   characteranims = 02_te800 ;
+   charactername = Terminator ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 6 ;
+   name = te800 ;
+   playable = true ;
+   powerstyle = ps_te800 ;
+   scriptlevel = 3 ;
+   skin = 0221 ;
+   skin_01_name = T2 ;
+   skin_02 = 22 ;
+   skin_02_name = T1 ;
+   skin_03 = 23 ;
+   skin_03_name = T3 ;
+   skin_04 = 24 ;
+   skin_04_name = Pops ;
+   sounddir = te800_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 5 ;
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = abilities ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = te800_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

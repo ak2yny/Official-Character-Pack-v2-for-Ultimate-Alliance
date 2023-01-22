@@ -1,0 +1,96 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 95_longshot ;
+   charactername = Longshot ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   name = Longshot ;
+   playable = true ;
+   powerstyle = ps_longshot ;
+   scale_factor = 1.0 ;
+   scriptlevel = 3 ;
+   skin = 9502 ;
+   skin_01_name = Mojoverse ;
+   skin_02 = 03 ;
+   skin_02_name = Hydra ;
+   skin_03 = 04 ;
+   skin_03_name = Mojoverse (No Star) ;
+   skin_04 = 05 ;
+   skin_04_name = Mojoverse (Jacket) ;
+   sounddir = longs_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      BoltOn {
+      bolt = Bip01 Head ;
+      model = models/bolton/wig_long_blond ;
+      slot = ebolton_clawleft ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sword_r_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sword_r_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sword_l_hand_reverse_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = guns_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sword_l_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sword_l_hand_segment ;
+      }
+
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = long_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }

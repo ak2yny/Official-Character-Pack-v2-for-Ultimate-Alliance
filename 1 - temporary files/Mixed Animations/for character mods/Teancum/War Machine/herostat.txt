@@ -1,0 +1,95 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 18_warmachine ;
+   charactername = War Machine ;
+   level = 1 ;
+   menulocation = XXXX  ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = Warmachine ;
+   playable = true ;
+   powerstyle = ps_warmachine ;
+   scriptlevel = 3 ;
+   skin = 1802 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modular ;
+   skin_03 = 04 ;
+   skin_03_name = Iniative ;
+   skin_04 = 05 ;
+   skin_04_name = Ultimate ;
+   sounddir = warmch_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 13 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = warmachine_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ironman_grabsma ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 L Toe0 ;
+      effect = char/warmach/ability_fly_hand ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 R Toe0 ;
+      effect = char/warmach/ability_fly_hand ;
+      fxlevel = 1 ;
+      }
+
+      BoltOn {
+      bolt = Bip01 Spine2 ;
+      menuonly = true ;
+      model = models/bolton/warmachine_weapons_off_DXT1 ;
+      slot = ebolton_clawleft ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

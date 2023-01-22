@@ -1,0 +1,70 @@
+Changelog by ak2yny
+-------------------
+
+v2:
+- Jeanfan321\Aqua
+   removed, the animations stay identical (all animation sets of this mod are duplicates of "22_invisiblewoman_4_combat.igb").
+- Erik Lensherr\Doomsday (DC Comics)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackknockback2)
+- thetommyboy2002\The Flash
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default.
+   also in PS: changed the animation for groundattackknockback2 to the default ea_attack_ground1, because ea_power14 does not exist.
+- Tien\Green Lantern
+   removed the grabfallback move from the new powerstyle. This is a leftover move, and it's also identical to the same move in fightstyle_default. Also, removed jumpsmash, attackstun_finish, attacktrip2, attack_knockback_charge, groundattack, which are identical to the same moves in fightstyle_default.
+- Aventureiromax\He-Man (Masters of the Universe)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackknockback2)
+- Julio Cabral\Kung Lao (Mortal Kombat)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (whole, except a few)
+- Aventureiromax\Lion-O (Thundercats)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackknockback2)
+- LucasFernandesBR\Morrigan (Darkstalkers)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash)
+- Julio Cabral\MUA- Dragon Ball mods Pack1\Piccolo
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight, attackknockback2)
+- thetommyboy2002\Red Tornado
+   Removed menu animations from 10_redt_4_combat. Added power_1_loop from fightstyle_default.
+   Changed herostat for better compatibility with OHS.
+   This mod has serious animation issues. It seems like none of the fightstyle animations (fightstyle_redt, fightstyle_default) initially worked. Only power_2 is actually used, but there are two others: power_1_loop only to be found in fightstyle_default, power_4_loop is missing entirely. For the power_2, we assume that the one from fightstyle_redt was intended. This is only a guess, as everything looks bad. Since this never worked, it remains to assume that the creator never had a chance to truly choose a fitting animation.
+- Aventureiromax\Sasuke (Naruto)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackknockback2)
+- Aventureiromax\Shadow Moon (Kamen Rider)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackknockback2)
+- Aventureiromax\She-Ra (Masters of the Universe)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackheavy1)
+- Polygone\Star Sapphire (DC Comics)
+   Mixed in power_2_end from Cap's fightstyle_default.
+- Lean\Wonder Girl (DC Comics)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attack_knockback_charge)
+- Aventureiromax\Wonder Woman (DC Comics)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackheavy1)
+
+- 12emre12\Angel
+   fixed blocking animation
+   requires the mix fix for Norrin Radd's Angel mod
+- Norrin Radd\Angel
+   sorted anims to combat/non-combat sets, and fixed blocking animation
+   mixed in attack_light1 from Cap's fightstyle_default
+- shinden\Angel
+   fixed blocking animation
+   requires the mix fix for Norrin Radd's Angel mod
+- Dihan\Anole
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (all melee attacks)
+- Blizz\Avalanche
+   Animation mixing to remove fightstyle_thing
+- Me\Black Cat
+   Fixed the herostat. (missing semicolon)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (popupattack, jumpsmash)
+- LucasFernandesBR\Black Dwarf
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackheavy, groundattackknockback)
+- Dihan\Blink
+   mixed in attack_knockback1 from Cap's fightstyle_default
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (all melee attacks)
+   added packages from Outsider's Fix, to accomodate for the new 4_combat anim set
+   added Outsider's Fix (triplejump, grab-smash, xtreme msg, teleport)
+   added optional animations from Outsider's Fix (Dihan\Blink - Outsider's Fix)
+   removed block and grab requirement, removed XML2 leftovers from herostat
+- Maegawa\Toad
+   added animations from 209_toad.igb from XML2 pack (anims were removed in OCP 2)
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (all melee attacks)
+   
+   

@@ -1,0 +1,64 @@
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 6 ;
+   characteranims = 227_pinkr ;
+   charactername = Pink Ranger ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 12 ;
+   name = pinkr ;
+   playable = true ;
+   powerstyle = ps_pinkr ;
+   scale_factor = 0.97 ;
+   scriptlevel = 3 ;
+   skin = 22721 ;
+   skin_01_name = MMPR ;
+   skin_02 = 22 ;
+   skin_02_name = Zeo ;
+   skin_03 = 23 ;
+   skin_03_name = Slayer ;
+   skin_04 = 24 ;
+   skin_04_name = Lost Galaxy ;
+   skin_05 = 25 ;
+   skin_05_name = Turbo ;
+   skin_06 = 26 ;
+   skin_06_name = Turbo ;
+   sounddir = pinkr_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 4 ;
+      Multipart {
+      hideskin = bow_arrow_segment ;
+      }
+
+      Multipart {
+      hideskin = r_arrow ;
+      hideskin2 = l_bow ;
+      }
+
+      Multipart {      
+      hideskin = r_sword ;
+      }
+
+      talent {
+      level = 1 ;
+      name = pinkr_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

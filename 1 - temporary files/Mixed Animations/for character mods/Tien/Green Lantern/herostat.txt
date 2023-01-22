@@ -1,0 +1,75 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 254_greenlantern ;
+   charactername = Green Lantern ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = GreenLantern ;
+   playable = true ;
+   powerstyle = ps_greenlantern ;
+   scriptlevel = 3 ;
+   skin = 25401 ;
+   skin_01_name = Movie ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 03 ;
+   skin_03_name = Kyle Rayner ;
+   skin_04 = 04 ;
+   skin_04_name = Alan Scott ;
+   sounddir = glantern_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/glantern/special_aura_hand ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/glantern/ability_fly_hand ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+      talent {
+      level = 1 ;
+      name = glantern_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

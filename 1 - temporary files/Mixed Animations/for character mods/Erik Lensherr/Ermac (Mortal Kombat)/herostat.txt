@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 11 ;
+   characteranims = 83_ermac ;
+   charactername = Ermac ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 18 ;
+   moveset1 = moveset_flying ;
+   name = ermac ;
+   playable = true ;
+   powerstyle = ps_ermac ;
+   scriptlevel = 3 ;
+   skin = 8309 ;
+   skin_01_name = Klassic ;
+   skin_02 = 10 ;
+   skin_02_name = Deception ;
+   skin_03 = 11 ;
+   skin_03_name = MK 9 ;
+   skin_04 = 12 ;
+   skin_04_name = MK 2 ;
+   skin_05 = 13 ;
+   skin_05_name = MK 3 ;
+   sounddir = ermac_m ;
+   strength = 11 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mortal_kombat ;
+      }
+
+      talent {
+      level = 1 ;
+      name = energetic_entity ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

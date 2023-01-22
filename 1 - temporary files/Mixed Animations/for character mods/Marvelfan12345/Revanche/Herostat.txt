@@ -1,0 +1,88 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   canseestealthed = true ;
+   characteranims = 245_revanche ;
+   charactername = Revanche ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 12 ;
+   name = Revanche ;
+   playable = true ;
+   powerstyle = ps_revanche ;
+   scriptlevel = 3 ;
+   skin = 24501 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Kwannon ;
+   skin_03 = 03 ;
+   skin_03_name = House of M ;
+   skin_04 = 04 ;
+   skin_04_name = Assassin ;
+   skin_05 = 05 ;
+   skin_05_name = Outback Armor ;
+   skin_06 = 06 ;
+   skin_06_name = Blindfolded ;
+   sounddir = revan_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 9 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      menuonly = true ;
+      model = models/bolton/revanche_sword ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = revan_p1 ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = spear_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 10601_rlaws ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      name = critical ;
+      }
+
+      talent {
+      name = mutantmaster ;
+      }
+
+   }

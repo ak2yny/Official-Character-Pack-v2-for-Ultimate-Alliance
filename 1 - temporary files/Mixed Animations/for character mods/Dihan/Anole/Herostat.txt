@@ -1,0 +1,64 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 240_anole ;
+   charactername = Anole ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   name = anole ;
+   playable = true ;
+   powerstyle = ps_anole ;
+   scriptlevel = 3 ;
+   skin = 24001 ;
+   skin_01_name = Alpha Squadron ;
+   skin_02 = 02 ;
+   skin_02_name = Messiah Complex ;
+   skin_03 = 03 ;
+   skin_03_name = Young X-Men ;
+   skin_04 = 04 ;
+   skin_04_name = House of M ;
+   sounddir = anole_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 3 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = anole_jab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

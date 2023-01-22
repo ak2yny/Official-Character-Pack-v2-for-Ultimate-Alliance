@@ -1,0 +1,94 @@
+betaraybill
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 6 ;
+   characteranims = 56_betaraybill ;
+   charactername = Beta Ray Bill ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = betaraybill ;
+   playable = true ;
+   powerstyle = ps_betaraybill ;
+   scriptlevel = 3 ;
+   skin = 5605 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Secret Invasion ;
+   skin_03 = 07 ;
+   skin_03_name = Omega Flight ;
+   skin_04 = 08 ;
+   skin_04_name = Stormbreaker ;
+   sounddir = betarb_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 23 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = betarb_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_back_segment ;
+      menuonly = true ;
+      showskin = hammer_segment ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      effect = char/thor/ability_fly ;
+      fxlevel = 1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

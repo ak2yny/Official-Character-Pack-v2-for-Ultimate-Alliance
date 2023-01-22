@@ -1,0 +1,95 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canbeallythrown = true ;
+   characteranims = 236_daken ;
+   charactername = Daken ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = Daken ;
+   playable = true ;
+   powerstyle = ps_daken ;
+   scale_factor = 1 ;
+   scriptlevel = 3 ;
+   skin = 23601 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Dark Avenger ;
+   skin_03 = 03 ;
+   skin_03_name = Dark X-Men ;
+   skin_04 = 04 ;
+   skin_04_name = S.H.I.E.L.D.x  ;
+   sounddir = wolv_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 2 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      model = models/bolton/daken_left ;
+      slot = ebolton_clawleft ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/daken_right ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dake_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = dake_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = dake_p8 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

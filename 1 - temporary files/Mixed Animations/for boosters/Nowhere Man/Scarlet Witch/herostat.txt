@@ -1,0 +1,70 @@
+scarletwitch
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 205_scarletwitch ;
+   charactername = Scarlet Witch ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = ScarletWitch ;
+   playable = true ;
+   power1 = power1 ;
+   power2 = power2 ;
+   power3 = power3 ;
+   power4 = team_xtreme ;
+   powerstyle = ps_scarletwitch ;
+   scriptlevel = 3 ;
+   skin = 20501 ;
+   skin_01_name = Force Works ;
+   skin_02 = 02 ;
+   skin_02_name = Gypsy ;
+   skin_03 = 04 ;
+   skin_03_name = Ultimate ;
+   skin_04 = 03 ;
+   skin_04_name = Modern ;
+   sounddir = switch_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = Brotherhood ;
+      }
+
+      talent {
+      level = 1 ;
+      name = scar_hex_locked ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

@@ -1,0 +1,118 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 168_oya ;
+   charactername = Oya ;
+   level = 1 ;
+   menulocation = 6 ;
+   mind = 4 ;
+   name = oya ;
+   playable = true ;
+   powerstyle = ps_oya ;
+   scriptlevel = 3 ;
+   skin = 16805 ;
+   skin_01_name = Generation Hope ;
+   skin_02 = 06 ;
+   skin_02_name = New Mutants ;
+   skin_03 = 07 ;
+   skin_03_name = Civilian ;
+   skin_04 = 08 ;
+   skin_04_name = Jean Grey School ;
+   sounddir = storm_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = oya1_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = oya2_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 01 ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 02 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 04 ;
+      }
+
+   }

@@ -1,0 +1,94 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 198_frost ;
+   charactername = Emma Frost ;
+   level = 1 ;
+   menulocation = 6 ;
+   mind = 12 ;
+   name = emma_frost_hero ;
+   playable = true ;
+   powerstyle = ps_frost ;
+   scriptlevel = 3 ;
+   skin = 19803 ;
+   skin_01_name = New X-Men ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 01 ;
+   skin_03_name = Astonishing ;
+   skin_04 = 24 ;
+   skin_04_name = Steampunk Saloon Girl ;
+   sounddir = emma_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 1201_sai_left_segment ;
+      hideskin2 = 1201_sai_right_segment ;
+      skin = 04 ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 1201_star_left_segment ;
+      hideskin2 = 1201_star_right_segment ;
+      skin = 04 ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = unused_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = emma_fear ;
+      }
+
+      talent {
+      level = 1 ;
+      name = emma_reflect ;
+      }
+
+      talent {
+      level = 1 ;
+      name = emma_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = emma_psionic ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

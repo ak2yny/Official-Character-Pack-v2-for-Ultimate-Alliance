@@ -1,0 +1,102 @@
+
+drax
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 43_draxdlc ;
+   charactername = Drax the Destroyer ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 5 ;
+   name = draxdlc ;
+   playable = true ;
+   powerstyle = ps_draxdlc ;
+   scale_factor = 1.1 ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 4305 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Original ;
+   skin_03 = 07 ;
+   skin_03_name = Destroyer ;
+   skin_04 = 08 ;
+   skin_04_name = Guardian ;
+   sounddir = drax_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = drax_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = acrobatics ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dodge_melee ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/draxdlc_R_knife ;
+      slot = ebolton_clawright ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      model = models/bolton/draxdlc_L_knife ;
+      slot = ebolton_clawleft ;
+      }
+
+   }
+

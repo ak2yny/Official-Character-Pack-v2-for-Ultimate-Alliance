@@ -1,0 +1,67 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 209_toad ;
+   charactername = Toad ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   name = Toad ;
+   playable = true ;
+   powerstyle = ps_toad ;
+   scriptlevel = 3 ;
+   skin = 20901 ;
+   skin_01_name = Ultimate ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 03 ;
+   skin_03_name = Age of Apocalypse ;
+   skin_04 = 04 ;
+   skin_04_name = Modern ;
+   sounddir = toad_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 31 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = Brotherhood ;
+      }
+
+      BoltOn {
+      anim = 209_toad_tongue ;
+      bolt = Bip01 Head ;
+      menuonly = true ;
+      model = 20910 ;
+      slot = ebolton_cape ;
+      }
+
+      talent {
+      level = 1 ;
+      name = toa_donkey_kick ;
+      }
+
+      talent {
+      level = 1 ;
+      name = toa_outfit13 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+   }

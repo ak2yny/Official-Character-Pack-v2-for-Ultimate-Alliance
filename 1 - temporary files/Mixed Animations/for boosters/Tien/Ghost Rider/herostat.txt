@@ -1,0 +1,136 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 06_ghostrider ;
+   charactername = Ghost Rider ;
+   level = 1 ;
+   menulocation = 3 ;
+   mind = 8 ;
+   name = GhostRider ;
+   playable = true ;
+   powerstyle = ps_ghostrider ;
+   scriptlevel = 3 ;
+   skin = 0601 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Vengeance ;
+   skin_04 = 04 ;
+   skin_04_name = Western ;
+   sounddir = ghost_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ghost_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ghost_resist ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = ghost_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = ghost_p7 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 01 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 01 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 02 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 02 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 3 ;
+      skin = 04 ;
+      }
+
+   }

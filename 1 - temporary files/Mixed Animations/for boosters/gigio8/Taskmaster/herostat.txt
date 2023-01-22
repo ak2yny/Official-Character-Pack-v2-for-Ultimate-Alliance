@@ -1,0 +1,79 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 127_task ;
+   charactername = Taskmaster ;
+   level = 1 ;
+   menulocation = 16 ;
+   mind = 4 ;
+   name = Taskmaster ;
+   playable = true ;
+   powerstyle = ps_taskmaster ;
+   scriptlevel = 3 ;
+   skin = 12705 ;
+   skin_01_name = Original ;
+   skin_02 = 09 ;
+   skin_02_name = Avengers World ;
+   skin_03 = 07 ;
+   skin_03_name = Modern ;
+   skin_04 = 08 ;
+   skin_04_name = SHIELD ;
+   skin_05 = 06 ;
+   skin_05_name = Age of Ultron ;
+   sounddir = task_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 5 ;
+      Multipart {
+      hideskin = tm_bow ;
+      hideskin2 = tm_arrow ;
+      }
+
+      Multipart {
+      hideskin = tm_bow_holster ;
+      }
+
+      Multipart {
+      showskin = tm_shield ;
+      weaponevent = true ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      menuonly = true ;
+      model = models/bolton/viking_warrior_sword ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = task_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = task_skill ;
+      }
+
+      talent {
+      level = 1 ;
+      name = task_flash ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+   }

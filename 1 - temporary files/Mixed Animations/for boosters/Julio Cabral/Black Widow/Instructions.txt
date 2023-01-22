@@ -1,0 +1,89 @@
+This file will install a booster for Black Widow that includes MCU skins, huds and new powers. Make the backups cause this can cause several file changes.
+How to install:
+1)Download and install Outsider's Black Widow booster first from here: 
+
+http://marvelmods.com/forum/index.php/topic,8753.msg184959.html#msg184959
+
+2) Copy and paste all the files and folders I've provided.
+
+3) Change the herostat to this:
+
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 148_blackwidow ;
+   charactername = Black Widow ;
+   level = 1 ;
+   menulocation = 14 ;
+   mind = 8 ;
+   name = BlackWidowv ;
+   playable = true ;
+   powerstyle = ps_blackwidow ;
+   scriptlevel = 3 ;
+   skin = 14802 ;
+   skin_01_name = Avengers ;
+   skin_02 = 03 ;
+   skin_02_name = Age of Ultron ;
+   skin_03 = 04 ;
+   skin_03_name = Civil War ;
+   skin_04 = 05 ;
+   skin_04_name = Infinity War ;
+   sounddir = bwidow_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      hideskin = 20102_Mgun_segment ;
+      }
+
+      Multipart {
+      hideskin = r_pistol_segment ;
+      }
+
+      Multipart {
+      hideskin = l_pistol_segment ;
+      }
+
+      Multipart {
+      hideskin = 20102_knife_R_hand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = blackwidow_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }
+
+4) Compile the herostat and start a new game to try her.
+
+*The booster will give her new animations and powers to match her MCU version.

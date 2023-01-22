@@ -1,0 +1,60 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 62_hellcat ;
+   charactername = Hellcat ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = Hellcat ;
+   playable = true ;
+   powerstyle = ps_hellcat ;
+   scriptlevel = 3 ;
+   skin = 6205 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Avengers Second ;
+   skin_03 = 07 ;
+   skin_03_name = Ultimate ;
+   skin_04 = 08 ;
+   skin_04_name = Modern ;
+   sounddir = hellc_m ;
+   strength = 10 ;
+   team = hero ;
+   xpexempt = false ;
+   textureicon = 2 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hellcat_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

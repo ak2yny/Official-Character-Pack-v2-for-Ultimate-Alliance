@@ -1,0 +1,56 @@
+   stats {
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 76_whiteranger ;
+   charactername = White Ranger ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 8 ;
+   name = whiteranger ;
+   playable = true ;
+   powerstyle = ps_whiteranger ;
+   scriptlevel = 3 ;
+   skin = 7621 ;
+   skin_01_name = Classic ;
+   skin_02 = 22 ;
+   skin_02_name = No Helmet ;
+   sounddir = whiter_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 0 ;
+      talent {
+      level = 1 ;
+      name = whiteranger_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      hideskin = r_saba ;
+      hideskin2 = l_saba_beam ;
+      }
+
+      talent {
+      level = 1 ;
+      name = whiteranger_tele ;
+      }
+
+   }

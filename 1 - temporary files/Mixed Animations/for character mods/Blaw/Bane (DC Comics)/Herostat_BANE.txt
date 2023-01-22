@@ -1,0 +1,73 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 81_bane ;
+   characteranimsclass = humanoid_large ;
+   charactername = Bane ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 6 ;
+   name = bane ;
+   playable = true ;
+   powerstyle = ps_bane ;
+   scale_factor = 1.1 ;
+   scriptlevel = 3 ;
+   skin = 8111 ;
+   skin_01_name = New 52 ;
+   skin_02 = 12 ;
+   skin_02_name = Animated Series ;
+   skin_03 = 13 ;
+   skin_03_name = Classic ;
+   skin_04 = 14 ;
+   skin_04_name = Modern ;
+   sounddir = bane_m ;
+   strength = 12 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = bane_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

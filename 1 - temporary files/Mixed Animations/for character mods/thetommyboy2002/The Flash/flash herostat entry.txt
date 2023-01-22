@@ -1,0 +1,110 @@
+
+flash
+   stats {
+   autospend = bruiser ;
+   body = 5 ;
+   canbeallythrown = true ;
+   characteranims = 01_flash ;
+   charactername = The Flash ;
+   level = 2 ;
+   menulocation = 8 ;
+   mind = 8 ;
+   name = flash ;
+   playable = true ;
+   powerstyle = ps_flash ;
+   scriptlevel = 3 ;
+   skin = 0131 ;
+   skin_01_name = Classic (Barry)  ;
+   skin_02 = 32 ;
+   skin_02_name = 90's (Wally) ;
+   skin_03 = 33 ;
+   skin_03_name = Original (Jay Garrick) ;
+   skin_04 = 34 ;
+   skin_04_name = Max Mercury ;
+   skin_05 = 35 ;
+   skin_05_name = New 52 ;
+    skin_06 = 36 ;
+   skin_06_name = Kid Flash ;  
+   sounddir = blade_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 0 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+      
+      StatEffect {
+      bolt = fx01 ;
+      effect = char/mrfan/p1_power ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = fx02 ;
+      effect = char/flash/p1_power ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Pelvis ;
+      effect = char/flash/p1_power ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Pelvis ;
+      effect = char/flash/p1_power ;
+      fxlevel = 3 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Pelvis ;
+      effect = char/flash/p1_power ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flash_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flash_regen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

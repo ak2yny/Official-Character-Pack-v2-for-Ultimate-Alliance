@@ -1,0 +1,65 @@
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 105_jdredd ;
+   charactername = Judge Dredd ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 4 ;
+   name = jdredd ;
+   playable = true ;
+   powerstyle = ps_jdredd ;
+   scriptlevel = 3 ;
+   skin = 10509 ;
+   skin_01_name = Classic ;
+   skin_02 = 10 ;
+   skin_02_name = Lawman of the Future ;
+   skin_03 = 11 ;
+   skin_03_name = Urban Warfare ;
+   skin_04 = 12 ;
+   skin_04_name = Brit City ;
+   sounddir = dredd_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = baton_hand_segment ;
+      hideskin2 = gun_leg_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dredd_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

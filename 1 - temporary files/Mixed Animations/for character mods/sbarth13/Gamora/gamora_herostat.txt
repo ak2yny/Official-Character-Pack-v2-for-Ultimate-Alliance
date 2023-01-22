@@ -1,0 +1,89 @@
+
+gamora
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 115_gamora ;
+   charactername = Gamora ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 5 ;
+   name = gamora ;
+   playable = true ;
+   powerstyle = ps_gamora ;
+   scriptlevel = 3 ;
+   skin = 11505 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Classic ;
+   skin_03 = 07 ;
+   skin_03_name = Annihilation ;
+   skin_04 = 08 ;
+   skin_04_name = Guardians of the Galaxy ;
+   sounddir = gamora_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 13 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = gamora_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = scrapper_class ;
+      }
+
+      talent {
+      level = 1 ;
+      name = critical ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      menuonly = true ;
+      model = models/bolton/atlantean_defender_sword_left ;
+      slot = ebolton_clawleft ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+

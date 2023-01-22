@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 223_freeza ;
+   charactername = Freeza ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = Freeza ;
+   playable = true ;
+   powerstyle = ps_freeza ;
+   scale_factor = 0.9 ;
+   scriptlevel = 3 ;
+   skin = 22310 ;
+   skin_01_name = Classic ;
+   skin_02 = 13 ;
+   skin_02_name = Modern ;
+   sounddir = freeza_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = ki_rhand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = ki_lhand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = freeza_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+   }

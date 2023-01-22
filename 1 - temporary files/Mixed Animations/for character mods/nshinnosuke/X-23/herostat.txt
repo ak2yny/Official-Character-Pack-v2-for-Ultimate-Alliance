@@ -1,0 +1,91 @@
+x23
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canbeallythrown = true ;
+   characteranims = 86_x23 ;
+   charactername = X-23 ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = X23 ;
+   playable = true ;
+   power1 = power1 ;
+   power2 = power2 ;
+   power3 = power3 ;
+   power4 = power4 ;
+   powerstyle = ps_x23 ;
+   scale_factor = 1 ;
+   scriptlevel = 3 ;
+   skin = 8605 ;
+   skin_01_name = Target X ;
+   skin_02 = 03 ;
+   skin_02_name = X-Force ;
+   skin_03 = 04 ;
+   skin_03_name = Messiah Complex ;
+   skin_04 = 06 ;
+   skin_04_name = Purple ;
+   skin_05 = 02 ;
+   skin_05_name = Classic ;
+   skirmish_boost = -9 ;
+   sounddir = xx23_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 2 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      model = models/bolton/x-23_hand-claws ;
+      slot = ebolton_clawleft ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/x-23_hand-claws ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = x23_slash ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

@@ -1,0 +1,123 @@
+   stats {
+   autospend = support ;
+   body = 5 ;
+   characteranims = 224_firestar ;
+   charactername = Firestar ;
+   level = 1 ;
+   menulocation = XXXX ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = firestar ;
+   playable = true ;
+   powerstyle = ps_firestar ;
+   scriptlevel = 3 ;
+   skin = 22401 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Modern ;
+   skin_04 = 04 ;
+   skin_04_name = Ultimate ;
+   sounddir = invis_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fires_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fires_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      StatEffect {
+      bolt = fx01 ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 04 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = fx02 ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 04 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 3 ;
+      menuonly = true ;
+      skin = 04 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/firetorch/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+   }

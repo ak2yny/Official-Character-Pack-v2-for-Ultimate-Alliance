@@ -1,0 +1,52 @@
+   stats {
+   autospend = bruiser ;
+   body = 8 ;
+   characteranims = 16_shera ;
+   charactername = She-Ra ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 5 ;
+   name = shera ;
+   playable = true ;
+   powerstyle = ps_shera ;
+   scriptlevel = 3 ;
+   skin = 1621 ;
+   skin_01_name = Adora ;
+   skin_02 = 22 ;
+   skin_02_name = She-Ra ;
+   sounddir = shera_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 0 ;      
+      Multipart {
+      hideskin = sword_segment ;
+      menuonly = true ;
+      showskin = sword_back_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = shera_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

@@ -1,0 +1,60 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 38_spider_woman ;
+   charactername = Spider-Woman ;
+   level = 1 ;
+   menulocation = 12 ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = SpiderWoman ;
+   playable = true ;
+   powerstyle = ps_spiderwoman ;
+   scriptlevel = 3 ;
+   skin = 3801 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Agent of S.H.I.E.L.D. ;
+   skin_03 = 03 ;
+   skin_03_name = Secret Wars ;
+   skin_04 = 04 ;
+   skin_04_name = Ultimate ;
+   sounddir = spidwm_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = spdwm_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+   }

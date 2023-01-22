@@ -1,0 +1,69 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 218_hercules ;
+   characteranimsclass = humanoid_large ;
+   charactername = Hercules ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = hercules ;
+   playable = true ;
+   powerstyle = ps_hercules ;
+   scale_factor = 1.06 ;
+   skin = 21804 ;
+   skin_01_name = Modern ;
+   skin_02 = 02 ;
+   skin_02_name = Olympian ;
+   skin_03 = 03 ;
+   skin_03_name = Harness ;
+   skin_04 = 01 ;
+   skin_04_name = Original ;
+   skin_05 = 05 ;
+   skin_05_name = MUA 2 ;
+   sounddir = herc_m ;
+   powerstyle = ps_hercules ;
+   strength = 10 ;
+   team = hero ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = herc_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

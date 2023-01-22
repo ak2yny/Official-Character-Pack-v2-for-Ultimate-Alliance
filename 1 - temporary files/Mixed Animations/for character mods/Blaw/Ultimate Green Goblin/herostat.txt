@@ -1,0 +1,97 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 9 ;
+   canthrowally = true ;
+   characteranims = 161_ultgreengoblin ;
+   characteranimsclass = humanoid_large ;
+   charactername = The Green Goblin ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = XXXX ;
+   mind = 7 ;
+   name = ultgreengoblin ;
+   playable = true ;
+   powerstyle = ps_ultgreengoblin ;
+   scale_factor = 1.5 ;
+   scriptlevel = 3 ;
+   skin = 16101 ;
+   skin_01_name = Savage ;
+   skin_02 = 02 ;
+   skin_02_name = Evolved ;
+   skin_03 = 03 ;
+   skin_03_name = Hobgoblin ;
+   sounddir = thing_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ultgreengoblin_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      bolt = fx01 ;
+      effect = char/ultgg/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = fx02 ;
+      effect = char/ultgg/special_burning ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/ultgg/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/ultgg/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+   }

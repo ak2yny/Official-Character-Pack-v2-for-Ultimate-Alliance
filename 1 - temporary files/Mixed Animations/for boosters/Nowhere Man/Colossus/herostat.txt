@@ -1,0 +1,69 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 12 ;
+   canthrowally = true ;
+   characteranims = 78_Colossus ;
+   characteranimsclass = humanoid_large ;
+   charactername = Colossus ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 4 ;
+   name = Colossus ;
+   platform_hidden = PS ;
+   playable = true ;
+   powerstyle = ps_colossus ;
+   scale_factor = 1.15 ;
+   scriptlevel = 3 ;
+   skin = 7801 ;
+   skin_01_name = Ultimate ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 03 ;
+   skin_03_name = Evolution ;
+   skin_04 = 04 ;
+   skin_04_name = Age of Apocalypse ;
+   sounddir = colos_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = colos_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

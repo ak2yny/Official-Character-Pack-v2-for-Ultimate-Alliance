@@ -1,0 +1,67 @@
+XMLB characters {
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canseestealthed = true ;
+   characteranims = 02_daredevil ;
+   charactername = Daredevil ;
+   level = 1 ;
+   menulocation = 4 ;
+   mind = 4 ;
+   name = Daredevil ;
+   playable = true ;
+   powerstyle = ps_daredevil ;
+   scriptlevel = 3 ;
+   skin = 0201 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Armored ;
+   skin_04 = 04 ;
+   skin_04_name = Marvel Knight ;
+   skin_05 = 05 ;
+   skin_05_name = Skin 05 ;
+   skin_06 = 06 ;
+   skin_06_name = Skin 06 ;
+   sounddir = ddevil_m ;
+   strength = 10 ;
+   team = hero ;
+      talent {
+      level = 1 ;
+      name = devil_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = devil_vision ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = batons_segment ;
+      menuonly = true ;
+      }
+
+      Multipart {
+      hideskin = baton_hand_segment ;
+      nonmenuonly = true ;
+      }
+
+   }

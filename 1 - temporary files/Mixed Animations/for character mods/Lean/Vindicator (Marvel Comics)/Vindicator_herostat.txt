@@ -1,0 +1,65 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 76_vindicator ;
+   charactername = Vindicator ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = Vindicator ;
+   playable = true ;
+   powerstyle = ps_vindicator ;
+   scriptlevel = 3 ;
+   skin = 7605 ;
+   skin_01_name = Vindicator ;
+   skin_02 = 06 ;
+   skin_02_name = Guardian ;
+   skin_03 = 07 ;
+   skin_03_name = Exiles ;
+   skin_04 = 08 ;
+   skin_04_name = Alpha Flight ;
+   sounddir = vndctr_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vndctr_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vndctr_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

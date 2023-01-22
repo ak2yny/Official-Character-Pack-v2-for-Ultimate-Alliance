@@ -1,0 +1,74 @@
+stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 101_thanos ;
+   charactername = Thanos ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = thanos ;
+   playable = true ;
+   powerstyle = ps_thanos ;
+   scriptlevel = 3 ;
+   skin = 10102 ;
+   skin_01_name = Original ;
+   skin_02 = 03 ;
+   skin_02_name = Annihilation ;
+   skin_03 = 04 ;
+   skin_03_name = Classic ;
+   skin_04 = 05 ;
+   skin_04_name = Earth X ;
+   sounddir = thanos_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_power4 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_teleport ;
+      }
+
+      talent {
+      level = 1 ;
+      name = war_passive1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

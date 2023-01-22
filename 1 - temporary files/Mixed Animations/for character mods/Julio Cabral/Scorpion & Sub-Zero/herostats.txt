@@ -1,0 +1,112 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 10 ;
+   characteranims = 60_szero ;
+   charactername = Sub-Zero ;
+   level = 1 ;
+   menulocation = 3 ;
+   mind = 8 ;
+   name = szero ;
+   playable = true ;
+   powerstyle = ps_szero ;
+   scriptlevel = 3 ;
+   skin = 6005 ;
+   skin_01_name = Original ;
+   skin_02 = 06 ;
+   skin_02_name = Klassic ;
+   skin_03 = 07 ;
+   skin_03_name = Deadly Alliance ;
+   skin_04 = 08 ;
+   skin_04_name = Deception ;
+   sounddir = szero_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 3 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 10 ;
+   characteranims = 29_scorp ;
+   charactername = Scorpion ;
+   level = 1 ;
+   menulocation = 10 ;
+   mind = 8 ;
+   name = scorp ;
+   playable = true ;
+   powerstyle = ps_scorp ;
+   scriptlevel = 3 ;
+   skin = 2906 ;
+   skin_01_name = Original ;
+   skin_02 = 07 ;
+   skin_02_name = Klassic ;
+   skin_03 = 08 ;
+   skin_03_name = Deadly Alliance ;
+   skin_04 = 09 ;
+   skin_04_name = Deception ;
+   sounddir = scrp_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 3 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = scorp_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      hideskin = skull_segment ;
+      }
+
+      Multipart {
+      hideskin = toasty_segment ;
+      }
+
+   }

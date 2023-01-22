@@ -1,0 +1,85 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 05_thing ;
+   characteranimsclass = humanoid_large ;
+   charactername = Thing ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = 23 ;
+   mind = 4 ;
+   name = Thing ;
+   playable = true ;
+   powerstyle = ps_thing ;
+   scale_factor = 1.2 ;
+   scriptlevel = 3 ;
+   skin = 0501 ;
+   skin_01_name = Modern ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Classic ;
+   skin_04 = 04 ;
+   skin_04_name = Ultimate ;
+   sounddir = thing_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = thing_p1 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = thing_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = thing_p5 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

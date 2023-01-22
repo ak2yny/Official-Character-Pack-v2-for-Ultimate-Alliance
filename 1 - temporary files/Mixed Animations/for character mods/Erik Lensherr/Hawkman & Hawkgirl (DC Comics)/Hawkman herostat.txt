@@ -1,0 +1,70 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 113_hman ;
+   charactername = Hawkman ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 7 ;
+   moveset1 = moveset_flying ;
+   name = Hman ;
+   playable = true ;
+   powerstyle = ps_hman ;
+   scriptlevel = 3 ;
+   skin = 11309 ;
+   skin_01_name = JLU ;
+   skin_02 = 10 ;
+   skin_02_name = JLU (No Mask) ;
+   skin_03 = 11 ;
+   skin_03_name = DCUO ;
+   skin_04 = 12 ;
+   skin_04_name = Carter Hall ;
+   sounddir = hman_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 7 ;
+      talent {
+      level = 1 ;
+      name = hman_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hman_memories ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      Multipart {
+      hideskin = hammer_segment ;
+      menuonly = true ;
+      showskin = hammer_back_segment ;
+      }
+
+      BoltOn {
+      bolt = Bip01 Spine2 ;
+      model = models/bolton/hman_wings.igb ;
+      slot = ebolton_clawleft ;
+      menuonly = true ;
+      }
+
+   }

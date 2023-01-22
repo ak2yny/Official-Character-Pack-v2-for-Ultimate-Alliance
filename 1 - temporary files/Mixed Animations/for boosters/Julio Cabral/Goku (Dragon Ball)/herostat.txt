@@ -1,0 +1,68 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support_heavy ;
+   body = 6 ;
+   characteranims = 134_goku ;
+   charactername = Goku ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = goku ;
+   playable = true ;
+   powerstyle = ps_goku ;
+   scriptlevel = 3 ;
+   skin = 13410 ;
+   skin_01_name = Modern ;
+   skin_02 = 11 ;
+   skin_02_name = Classic ;
+   skin_03 = 12 ;
+   skin_03_name = Super ;
+   skin_04 = 13 ;
+   skin_04_name = Super Broly ;
+   skin_05 = 14 ;
+   skin_05_name = Damaged ;
+   sounddir = goku_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 13 ;
+      talent {
+      level = 1 ;
+      name = goku_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      hideskin = ssjhead_segment ; 
+      }
+
+      Multipart {
+      hideskin = ssj2head_segment ;
+      hideskin2 = ssj3head_segment ;
+      }
+
+   }

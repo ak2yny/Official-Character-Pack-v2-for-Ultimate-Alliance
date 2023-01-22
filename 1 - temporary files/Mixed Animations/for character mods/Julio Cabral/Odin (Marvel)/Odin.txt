@@ -1,0 +1,78 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 49_odinh ;
+   charactername = Odin ;
+   level = 1 ;
+   menulocation = 23 ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = odin ;
+   playable = true ;
+   powerstyle = ps_odinh ;
+   scale_factor = 1.1 ;
+   scriptlevel = 3 ;
+   skin = 4902 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Destroyer ;
+   skin_04 = 06 ;
+   skin_04_name = Original ;
+   skin_05 = 05 ;
+   skin_05_name = Movie ;
+   sounddir = odin_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = odin_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = boss_resistances ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

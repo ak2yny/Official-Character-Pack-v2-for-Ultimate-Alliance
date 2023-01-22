@@ -1,0 +1,79 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 6 ;
+   characteranims = 73_karnakdlc ;
+   charactername = Karnak ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   name = karnakdlc ;
+   playable = true ;
+   powerstyle = ps_karnakdlc ;
+   scriptlevel = 3 ;
+   skin = 7305 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Classic ;
+   skin_03 = 07 ;
+   skin_03_name = Royal ;
+   skin_04 = 08 ;
+   skin_04_name = Heroes Reborn ;
+   sounddir = karnak_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = karnak_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = acrobatics ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dodge_ranged ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dodge_melee ;
+      }
+
+      talent {
+      level = 1 ;
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

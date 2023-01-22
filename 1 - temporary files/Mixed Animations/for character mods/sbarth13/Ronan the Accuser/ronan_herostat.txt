@@ -1,0 +1,84 @@
+
+ronan
+   stats{
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 84_ronan ;
+   charactername = Ronan ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = ronan ;
+   playable = true ;
+   powerstyle = ps_ronan ;
+   scriptlevel = 3 ;
+   skin = 8405 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Original ;
+   skin_03 = 07 ;
+   skin_03_name = Annihilators ;
+   skin_04 = 08 ;
+   skin_04_name = Ultimate ;
+   sounddir = ronan_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 13 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ronan_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ronan_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/coreguard_hammer ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+

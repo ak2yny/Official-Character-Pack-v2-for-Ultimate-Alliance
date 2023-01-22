@@ -1,0 +1,106 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 06_ghostrider ;
+   charactername = Ghost Rider ;
+   level = 1 ;
+   menulocation = 3 ;
+   mind = 8 ;
+   name = GhostRider ;
+   playable = true ;
+   powerstyle = ps_ghostrider ;
+   scriptlevel = 3 ;
+   skin = 0601 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Vengeance ;
+   skin_04 = 04 ;
+   skin_04_name = Caretaker ;
+   skin_05 = 05 ;
+   skin_05_name = Ketch ;
+   skin_06 = 06 ;
+   skin_06_name = 2099 ;
+   sounddir = ghost_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ghost_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ghost_hcycle ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ghost_resist ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/ghostr/special_burninghead ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      zoneonly = false ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/ghostr/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/ghostr/special_burning ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+   }

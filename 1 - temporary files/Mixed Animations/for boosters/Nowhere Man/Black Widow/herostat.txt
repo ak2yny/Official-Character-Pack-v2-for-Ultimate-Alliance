@@ -1,0 +1,72 @@
+blackwidow
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 148_blackwidow ;
+   charactername = Black Widow ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   name = BlackWidowv ;
+   playable = true ;
+   powerstyle = ps_blackwidow ;
+   scriptlevel = 3 ;
+   skin = 14804 ;
+   skin_01_name = Modern ;
+   skin_02 = 03 ;
+   skin_02_name = Yelena Belova ;
+   skin_03 = 02 ;
+   skin_03_name = Ultimate ;
+   skin_04 = 05 ;
+   skin_04_name = Original ;
+   sounddir = bwidow_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      hideskin = 20102_Mgun_segment ;
+      }
+
+      Multipart {
+      hideskin = 20102_pistol_segment ;
+      }
+
+      Multipart {
+      hideskin = 20102_knife_R_hand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = blackwidow_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }

@@ -1,0 +1,67 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 8 ;
+   characteranims = 231_mikey ;
+   charactername = Michelangelo ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 6 ;
+   name = Mikey ;
+   playable = true ;
+   powerstyle = ps_mikey ;
+   scriptlevel = 3 ;
+   skin = 23109 ;
+   skin_01_name = Classic ;
+   skin_02 = 10 ;
+   skin_02_name = Out of the Shadows ;
+   skin_03 = 11 ;
+   skin_03_name = Mutant Nightmare ;
+   skin_04 = 12 ;
+   skin_04_name = Mutant Nightmare 2 ;
+   sounddir = mikey_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 17 ;
+      Multipart {
+      hideskin = nunchucks_right_segment ;
+      menuonly = true ;
+      showskin = nunchucks_right_back_segment ;
+      }
+
+      Multipart {
+      hideskin = nunchucks_left_segment ;
+      menuonly = true ;
+      showskin = nunchucks_left_back_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mikey_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = turtle_power4 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }

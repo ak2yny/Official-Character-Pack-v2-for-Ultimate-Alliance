@@ -1,0 +1,70 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 9 ;
+   characteranims = 182_hdrmn ;
+   charactername = Hydro-Man ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 3 ;
+   name = hdrmn ;
+   playable = true ;
+   powerstyle = ps_hdrmn ;
+   scriptlevel = 3 ;
+   skin = 18201 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Modern ;
+   skin_03 = 03 ;
+   skin_03_name = US Marine ;
+   skin_04 = 04 ;
+   skin_04_name = Animated Series ;
+   sounddir = hdrmn_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = arms ;
+      hideskin2 = stars ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hdrmn_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+   }

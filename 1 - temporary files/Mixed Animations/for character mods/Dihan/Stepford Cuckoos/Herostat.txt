@@ -1,0 +1,61 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   canseestealthed = true ;
+   characteranims = 226_stepford_cuckoos ;
+   charactername = Stepford Cuckoo ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = Cuckoo_hero ;
+   playable = true ;
+   powerstyle = ps_cuckoo_hero ;
+   scriptlevel = 3 ;
+   skin = 22601 ;
+   skin_01_name = Schoolgirl ;
+   skin_02 = 02 ;
+   skin_02_name = Mindee ;
+   skin_03 = 03 ;
+   skin_03_name = Celeste ;
+   skin_04 = 04 ;
+   skin_04_name = Phoebe ;
+   skin_05 = 05 ;
+   skin_05_name = Esme ;
+   sounddir = cuck_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 33 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      name = mutantmaster ;
+      }
+
+      talent {
+      level = 1 ;
+      name = cuckoo_burst ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

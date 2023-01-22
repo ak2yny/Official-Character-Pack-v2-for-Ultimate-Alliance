@@ -1,0 +1,68 @@
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser ;
+   body = 8 ;
+   characteranims = 219_marrow_hero ;
+   charactername = Marrow ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 6 ;
+   name = marrow_hero ;
+   playable = true ;
+   power1 = power1 ;
+   power2 = power2 ;
+   power3 = power3 ;
+   power4 = power4 ;
+   powerstyle = ps_marrow_hero ;
+   scriptlevel = 3 ;
+   skin = 21901 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Gene Nation ;
+   skin_03 = 04 ;
+   skin_03_name = Weapon X ;
+   sounddir = marrow_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 84 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      model = models/bolton/clay_guardian_right_kunai ;
+      slot = ebolton_clawleft ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      model = models/bolton/clay_guardian_left_kunai ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = marrow_shards ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

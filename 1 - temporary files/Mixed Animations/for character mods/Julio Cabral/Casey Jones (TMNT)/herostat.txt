@@ -1,0 +1,76 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 186_cjones ;
+   charactername = Casey Jones ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 8 ;
+   name = cjones ;
+   playable = true ;
+   powerstyle = ps_cjones ;
+   scriptlevel = 3 ;
+   skin = 18607 ;
+   skin_01_name = Sweat pants ;
+   skin_02 = 08 ;
+   skin_02_name = Modern ;
+   skin_03 = 09 ;
+   skin_03_name = Civilian ;
+   skin_04 = 10 ;
+   skin_04_name = Pad Armor ;
+   sounddir = cjones_m ;
+   strength = 3 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = cjones_p1 ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hockey_segment ;
+      nonmenuonly = true ;
+      showskin = hockey_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hockey_segment ;
+      nonmenuonly = true ;
+      showskin = hockey_back_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hockey_back_segment ;
+      menuonly = true ;
+      showskin = hockey_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+   }

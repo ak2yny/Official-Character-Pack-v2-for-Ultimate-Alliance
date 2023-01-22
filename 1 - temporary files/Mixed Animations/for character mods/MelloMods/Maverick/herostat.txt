@@ -1,0 +1,68 @@
+stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 102_maverick ;
+   charactername = Maverick ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   name = Maverick ;
+   playable = true ;
+   powerstyle = ps_maverick ;
+   scriptlevel = 3 ;
+   skin = 10202 ;
+   skin_01_name = Christoph Nord ;
+   skin_02 = 03 ;
+   skin_02_name = Chris Bradley ;
+   skin_03 = 04 ;
+   skin_03_name = Weapon X ;
+   skin_04 = 05 ;
+   skin_04_name = Agent Zero ;
+   skin_05 = 06 ;
+   skin_05_name = Vibranium Armor ;
+   sounddir = mav_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 5 ;
+      Multipart {
+      health = 0 ;
+      hideskin = gun_left_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = gun_right_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 12001_guns_segment ; 
+      }                             
+
+      talent {                        
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mav_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

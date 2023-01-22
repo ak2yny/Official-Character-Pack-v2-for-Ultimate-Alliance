@@ -1,0 +1,92 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 25 ;
+   characteranims = 190_darkseid ;
+   charactername = Darkseid ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 25 ;
+   moveset1 = moveset_flying ;
+   name = darkseid ;
+   playable = true ;
+   powerstyle = ps_darkseid ;
+   scale_factor = 1.15 ;
+   scriptlevel = 3 ;
+   skin = 19005 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Injustice ;
+   skin_03 = 07 ;
+   skin_03_name = MK vs DC ;
+   skin_04 = 08 ;
+   skin_04_name = JLU ;
+   sounddir = darkseid_m ;
+   strength = 25 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = new_god ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 L Hand ;
+      effect = char/darkseid/p1_power ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 R Hand ;
+      effect = char/darkseid/p1_power ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      effect = char/darkseid/flight_aura ;
+      fxlevel = 3 ;
+      }
+
+   }

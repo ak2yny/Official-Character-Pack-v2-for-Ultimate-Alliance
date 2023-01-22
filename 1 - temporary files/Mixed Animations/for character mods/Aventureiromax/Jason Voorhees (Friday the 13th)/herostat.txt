@@ -1,0 +1,66 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 9 ;
+   characteranims = 13_jasonv ;
+   charactername = Jason Voorhees ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 5 ;
+   name = jasonv ;
+   playable = true ;
+   powerstyle = ps_jasonv ;
+   scale_factor = 1.05 ;
+   scriptlevel = 3 ;
+   skin = 1321 ;
+   skin_01_name = Part II ;
+   skin_02 = 22 ;
+   skin_02_name = Part III ;
+   skin_03 = 23 ;
+   skin_03_name = Jason X ;
+   skin_04 = 24 ;
+   skin_04_name = Savini ;
+   skin_05 = 25 ;
+   skin_05_name = Part VII ;
+   skin_06 = 26 ;
+   skin_06_name = Part IX ;
+   sounddir = jasonv_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 7 ;
+      talent {
+      level = 1 ;
+      name = jasonv_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = abilities ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      Multipart {
+      hideskin = axe ;
+      hideskin2 = machete ;
+      }
+
+   }

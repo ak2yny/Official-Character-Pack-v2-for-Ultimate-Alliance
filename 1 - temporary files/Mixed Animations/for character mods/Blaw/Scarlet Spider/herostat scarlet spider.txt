@@ -1,0 +1,106 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 225_scarletspider ;
+   charactername = Scarlet Spider ;
+   level = 1 ;
+   menulocation = XXXX ;
+   mind = 8 ;
+   name = scarletspider ;
+   playable = true ;
+   powerstyle = ps_scarletspider ;
+   scriptlevel = 3 ;
+   skin = 22501 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Ben Reilly ;
+   skin_03 = 03 ;
+   skin_03_name = Joe Wade ;
+   skin_04 = 04 ;
+   skin_04_name = Stark Armor ;
+   sounddir = spider_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = scarletspider_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = spider_tied ;
+      }
+
+      talent {
+      level = 1 ;
+      name = spider_zip ;
+      }
+
+      talent {
+      level = 1 ;
+      name = spider_dodge ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      build = e2 ;
+      level = 1 ;
+      name = scarletspider_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = scarletspider_p3 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = scarletspider_p7 ;
+      }
+
+      StatEffect {
+      anim = menu_action ;
+      bolt = Bip01 L Hand ;
+      effect = char/scarletspider/menu_idle ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 L Hand ;
+      effect = char/scarletspider/menu_idle ;
+      fxlevel = 2 ;
+      }
+
+   }

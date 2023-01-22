@@ -1,0 +1,69 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 35_spider2099 ;
+   charactername = Spider-Man 2099 ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   name = Spider2099 ;
+   playable = true ;
+   powerstyle = ps_spider2099 ;
+   scriptlevel = 3 ;
+   skin = 3502 ;
+   skin_01_name = Modern ;
+   skin_02 = 03 ;
+   skin_02_name = Classic ;
+   skin_03 = 04 ;
+   skin_03_name = Flipside ;
+   skin_04 = 05 ;
+   skin_04_name = Retro ;
+   sounddir = sm2099_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sm2099_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sm2099_zip ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }

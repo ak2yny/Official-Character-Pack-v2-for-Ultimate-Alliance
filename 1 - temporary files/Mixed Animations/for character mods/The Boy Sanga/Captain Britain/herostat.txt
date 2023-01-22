@@ -1,0 +1,95 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 69_captbritain ;
+   charactername = Captain Britain ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = 25 ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = CaptainBritain ;
+   playable = true ;
+   powerstyle = ps_captainbritain ;
+   scale_factor = 1.05 ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 6902 ;
+   skin_01_name = Modern ;
+   skin_02 = 03 ;
+   skin_02_name = Classic ;
+   skin_03 = 04 ;
+   skin_03_name = Otherworld ;
+   skin_04 = 05 ;
+   skin_04_name = New Excalibur ;
+   sounddir = captbr_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = captbr_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = captbr_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = captbr_p3 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      descname = Crucial Strike ;
+      icon = 12 ;
+      name = critical ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = acrobatics ;
+      }
+
+   }

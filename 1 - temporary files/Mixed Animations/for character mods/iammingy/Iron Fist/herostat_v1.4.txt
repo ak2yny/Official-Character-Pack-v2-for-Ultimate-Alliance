@@ -1,0 +1,78 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 68_ironfist ;
+   charactername = Iron Fist ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   name = ironfist ;
+   playable = true ;
+   powerstyle = ps_ironfist ;
+   scriptlevel = 3 ;
+   skin = 6802 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Ultimate ;
+   skin_03 = 04 ;
+   skin_03_name = Tournament ;
+   skin_04 = 05 ;
+   skin_04_name = Modern ;
+   skin_05 = 06 ;
+   skin_05_name = Red ;
+   skin_06 = 07 ;
+   skin_06_name = Daredevil ;
+   sounddir = ifist_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ironf_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ironf_p6 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = batons_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = baton_hand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

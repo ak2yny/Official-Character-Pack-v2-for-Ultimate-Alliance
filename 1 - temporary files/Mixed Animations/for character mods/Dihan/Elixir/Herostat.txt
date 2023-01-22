@@ -1,0 +1,71 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 10 ;
+   characteranims = 232_elixir ;
+   charactername = Elixir ;
+   gen_charge_color = 0.8 0.2 0.2 1 ;
+   level = 1 ;
+   level_every_skill_reward = 99 ;
+   menulocation = xx ;
+   mind = 8 ;
+   name = elixir ;
+   playable = true ;
+   powerstyle = ps_elixir ;
+   scriptlevel = 3 ;
+   skin = 23201 ;
+   skin_01_name = New X-Men ;
+   skin_02 = 02 ;
+   skin_02_name = New Mutant Squad ;
+   skin_03 = 03 ;
+   skin_03_name = Messiah Complex ;
+   skin_04 = 04 ;
+   skin_04_name = X-Force ;
+   sounddir = elixir_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 3 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = elixir_lay ;
+      }
+
+      talent {
+      level = 1 ;
+      name = elixir_hurt ;
+      }
+
+      talent {
+      level = 1 ;
+      name = elixir_rage ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

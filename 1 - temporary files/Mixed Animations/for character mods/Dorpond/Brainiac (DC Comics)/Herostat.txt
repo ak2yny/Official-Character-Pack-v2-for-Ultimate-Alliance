@@ -1,0 +1,64 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 140_brainiac ;
+   charactername = Brainiac ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = Brainiac ;
+   playable = true ;
+   powerstyle = ps_brainiac ;
+   scriptlevel = 3 ;
+   skin = 14006 ;
+   skin_01_name = DCUO ;
+   sounddir = brnc_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = Brotherhood ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = brnc_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = brainiac_intellect ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+   }

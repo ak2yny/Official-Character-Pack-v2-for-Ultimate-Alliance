@@ -1,0 +1,85 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 101_thanos ;
+   charactername = Thanos ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = thanos ;
+   playable = true ;
+   powerstyle = ps_thanos ;
+   scale_factor = 1.25 ;
+   scriptlevel = 3 ;
+   skin = 10105 ;
+   skin_01_name = Endgame ;
+   skin_02 = 06 ;
+   skin_02_name = Infinity War ;
+   skin_03 = 07 ;
+   skin_03_name = Guardians of the Galaxy ;
+   skin_04 = 08 ;
+   skin_04_name = Final Battle ;
+   sounddir = thanos_m ;
+   strength = 30 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_teleport ;
+      }
+
+      talent {
+      level = 1 ;
+      name = boss_resistances ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_passive1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = than_taunt ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = l_hand_segment ;
+      }
+
+   }

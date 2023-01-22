@@ -1,0 +1,83 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 47_nightcrawlerdlc ;
+   charactername = Nightcrawler ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 9 ;
+   name = Nightcrawlerdlc ;
+   playable = true ;
+   powerstyle = ps_nightcrawlerdlc ;
+   scale_factor = 0.98 ;
+   scriptlevel = 3 ;
+   skin = 4705 ;
+   skin = 4702 ;
+   skin_01_name = Astonishing ;
+   skin_02 = 03 ;
+   skin_02_name = Classic ;
+   skin_03 = 04 ;
+   skin_03_name = Age of Apocalypse ;
+   skin_04 = 05 ;
+   skin_04_name = Ultimate ;
+   sounddir = night_m ;
+   strength = 5 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      anim = 47_nightcrawlerDlc_tail ;
+      bolt = Bip01 Pelvis ;
+      model = 4710 ;
+      slot = ebolton_tail ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = swords_bolton ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = swords ;
+      }
+
+      talent {
+      level = 1 ;
+      name = night_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = night_tele ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

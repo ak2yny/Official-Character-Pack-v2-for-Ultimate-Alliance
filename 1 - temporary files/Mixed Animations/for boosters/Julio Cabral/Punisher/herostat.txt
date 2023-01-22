@@ -1,0 +1,75 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 158_punisher ;
+   charactername = Punisher ;
+   level = 1 ;
+   menulocation = 8 ;
+   mind = 8 ;
+   name = Punisher ;
+   playable = true ;
+   powerstyle = ps_punisher ;
+   scriptlevel = 3 ;
+   skin = 15805 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Modern ;
+   skin_03 = 07 ;
+   skin_03_name = Marvel Knights ;
+   skin_04 = 08 ;
+   skin_04_name = Max ;
+   skin_05 = 09 ;
+   skin_05_name = Movie ;
+   skin_06 = 10 ;
+   skin_06_name = Omega Effect ;
+   sounddir = pnshr_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      hideskin = body_segment ;
+      }
+
+      BoltOn {
+      bolt = Bip01 R Hand ;
+      menuonly = true ;
+      model = models/punisher/m4 ;
+      name = bolton ;
+      slot = ebolton_clawright ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = pnshr_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

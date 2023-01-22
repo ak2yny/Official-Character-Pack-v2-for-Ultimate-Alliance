@@ -1,0 +1,63 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 230_raph ;
+   charactername = Raphael ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 6 ;
+   name = Raph ;
+   playable = true ;
+   powerstyle = ps_raph ;
+   scriptlevel = 3 ;
+   skin = 23009 ;
+   skin_01_name = Classic ;
+   skin_02 = 10 ;
+   skin_02_name = Out of the Shadows ;
+   skin_03 = 11 ;
+   skin_03_name = Mutant Nightmare ;
+   skin_04 = 12 ;
+   skin_04_name = Mutant Nightmare 2 ;
+   sounddir = raph_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 13 ;
+      Multipart {
+      hideskin = sai_left_back_segment ;
+      menuonly = true ;
+      showskin = sai_left_segment ;
+      }
+
+      Multipart {
+      hideskin = sai_right_back_segment ;
+      menuonly = true ;
+      showskin = sai_right_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = raph_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = turtle_power3 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

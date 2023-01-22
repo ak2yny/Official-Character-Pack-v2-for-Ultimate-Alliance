@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 110_hgirl ;
+   charactername = Hawkgirl ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 7 ;
+   moveset1 = moveset_flying ;
+   name = Hgirl ;
+   playable = true ;
+   powerstyle = ps_hgirl ;
+   scriptlevel = 3 ;
+   skin = 11009 ;
+   skin_01_name = JLU ;
+   skin_02 = 10 ;
+   skin_02_name = JLU (No Mask) ;
+   skin_03 = 11 ;
+   skin_03_name = DCUO ;
+   skin_04 = 12 ;
+   skin_04_name = Chay-Ara Hol ;
+   skin_05 = 13 ;
+   skin_05_name = Chay-Ara Hol (No Mask) ;
+   sounddir = hgirl_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 7 ;
+      talent {
+      level = 1 ;
+      name = hgirl_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hgirl_memories ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      Multipart {
+      hideskin = hammer_segment ;
+      menuonly = true ;
+      showskin = hammer_back_segment ;
+      }
+
+      BoltOn {
+      bolt = Bip01 Spine2 ;
+      model = models/bolton/hgirl_wings.igb ;
+      slot = ebolton_clawleft ;
+      menuonly = true ;
+      }
+
+   }

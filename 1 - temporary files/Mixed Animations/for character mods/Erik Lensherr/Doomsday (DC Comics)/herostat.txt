@@ -1,0 +1,77 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 20 ;
+   canthrowally = true ;
+   characteranims = 247_doomsday ;
+   characteranimsclass = humanoid_large ;
+   charactername = Doomsday ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 5 ;
+   name = doomsday ;
+   playable = true ;
+   powerstyle = ps_doomsday ;
+   scale_factor = 1.2 ;
+   scriptlevel = 3 ;
+   skin = 24705 ;
+   skin_01_name = DCU ;
+   skin_02 = 06 ;
+   skin_02_name = Alternate ;
+   skin_03 = 07 ;
+   skin_03_name = Injustice ;
+   skin_04 = 08 ;
+   skin_04_name = DCUO ;
+   skin_05 = 09 ;
+   skin_05_name = Custom 1 ;
+   skin_06 = 10 ;
+   skin_06_name = Custom 2 ;
+   sounddir = domsd_m ;
+   strength = 20 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dooms_invincible ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

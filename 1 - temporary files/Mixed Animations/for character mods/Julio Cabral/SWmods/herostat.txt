@@ -1,0 +1,140 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 120_obi ;
+   charactername = Obi-Wan Kenobi ;
+   level = 1 ;
+   menulocation = 12 ;
+   mind = 8 ;
+   name = obi ;
+   playable = true ;
+   powerstyle = ps_obi ;
+   scriptlevel = 3 ;
+   skin = 12008 ;
+   skin_01_name = Ben Kenobi ;
+   skin_02 = 06 ;
+   skin_02_name = Master Jedi ;
+   skin_03 = 07 ;
+   skin_03_name = Attack of the Clones ;
+   skin_04 = 09 ;
+   skin_04_name = Padawan ;
+   sounddir = obi_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 23 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_back_segment ;
+      menuonly = true ;
+      showskin = hammer_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 136_vader ;
+   charactername = Darth Vader ;
+   level = 1 ;
+   menulocation = 25 ;
+   mind = 8 ;
+   name = vader ;
+   playable = true ;
+   powerstyle = ps_vader ;
+   scale_factor = 1.05 ;
+   scriptlevel = 3 ;
+   skin = 13606 ;
+   skin_01_name = Modern ;
+   skin_02 = 07 ;
+   skin_02_name = Retro ;
+   sounddir = vader_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sabre_segment ;
+      nonmenuonly = true ;
+      showskin = sabre_off_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sabre_segment ;
+      nonmenuonly = true ;
+      showskin = sabre_off_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = sabre_off_segment ;
+      menuonly = true ;
+      showskin = sabre_segment ;
+      }
+
+   }

@@ -1,0 +1,86 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 15 ;
+   characteranims = 207_fate ;
+   charactername = Dr. Fate ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 25 ;
+   moveset1 = moveset_flying ;
+   name = Fate ;
+   playable = true ;
+   powerstyle = ps_fate ;
+   scriptlevel = 3 ;
+   skin = 20707 ;
+   skin_01_name = DCUO ;
+   skin_02 = 08 ;
+   skin_02_name = Sentinel of Magic ;
+   skin_03 = 09 ;
+   skin_03_name = Classic ;
+   skin_04 = 10 ;
+   skin_04_name = Young Justice ;
+   sounddir = fate_m ;
+   strength = 15 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fate_knowledge ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fate_equipment ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 L Hand ;
+      effect = char/fate/ability_fly ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 R Hand ;
+      effect = char/fate/ability_fly ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 Pelvis ;
+      effect = char/fate/ability_fly ;
+      fxlevel = 2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

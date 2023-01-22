@@ -1,0 +1,57 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 129_mbird ;
+   charactername = Mockingbird ;
+   level = 1 ;
+   menulocation = xx (highly recomend 9 ) ;
+   mind = 9 ;
+   name = mbird ;
+   playable = true ;
+   powerstyle = ps_mbird ;
+   scriptlevel = 3 ;
+   skin = 12904 ;
+   skin_01_name = Modern ;
+   skin_02 = 03 ;
+   skin_02_name = All New All Different ;
+   skin_03 = 02 ;
+   skin_03_name = Classic ;
+   skin_04 = 05 ;
+   skin_04_name = Agents of S.H.I.E.L.D. ;
+   sounddir = mbird_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 17 ;
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      menuonly = true ;
+      model = models/bolton/moonknight_staff ;
+      slot = ebolton_clawleft ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = baton_hand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mbird_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

@@ -1,0 +1,84 @@
+sasquatch
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 6 ;
+   canthrowally = true ;
+   characteranims = 136_sasquatchdlc ;
+   characteranimsclass = humanoid_large ;
+   charactername = Sasquatch ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 8 ;
+   name = sasquatchdlc ;
+   playable = true ;
+   powerstyle = ps_sasquatchdlc ;
+   scale_factor = 1.3 ;
+   scriptlevel = 3 ;
+   skin = 13605 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Original ;
+   skin_03 = 07 ;
+   skin_03_name = Snowbird ;
+   skin_04 = 08 ;
+   skin_04_name = House of M ;
+   sounddir = sasq_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sasq_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = knock_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sasq_grabsma ;
+      }
+
+   }

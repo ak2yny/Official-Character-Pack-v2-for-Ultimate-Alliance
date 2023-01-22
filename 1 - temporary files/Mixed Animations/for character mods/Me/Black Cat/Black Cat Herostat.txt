@@ -1,0 +1,57 @@
+   stats {
+   ailevel = 2 ;
+   autospend = bruiser_light ;
+   body = 20 ;
+   canbeallythrown = true ;
+   characteranims = 26_blackcat ;
+   charactername = Black Cat ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 8 ;
+   name = Blackcat ;
+   playable = true ;
+   powerstyle = ps_blackcat ;
+   scriptlevel = 3 ;
+   skin = 2603 ;
+   skin_01_name = Classic ;
+   skin_02 = 04 ;
+   skin_02_name = House of M ;
+   skin_03 = 05 ;
+   skin_03_name = Mangaverse ;
+   skin_04 = 06 ;
+   skin_04_name = Web of Shadows ;
+   skin_05 = 07 ;
+   skin_05_name = Sleek ;
+   sounddir = emma_m ;
+   strength = 7 ;
+   team = hero ;
+   textureicon = 2 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = bcat_blackcat ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

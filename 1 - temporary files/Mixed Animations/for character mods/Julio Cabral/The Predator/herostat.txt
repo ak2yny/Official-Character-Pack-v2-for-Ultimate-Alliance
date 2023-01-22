@@ -1,0 +1,70 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   characteranims = 48_pred ;
+   charactername = Predator ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = predator ;
+   playable = true ;
+   powerstyle = ps_predator ;
+   scriptlevel = 3 ;
+   skin = 4810 ;
+   skin_01_name = Jungle Hunter ;
+   skin_02 = 11 ;
+   skin_02_name = Alien Hunter ;
+   skin_03 = 12 ;
+   skin_03_name = Wolf ;
+   skin_04 = 13 ;
+   skin_04_name = Celtic ;
+   sounddir = pred_m ;
+   strength = 40 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = pred_p1 ;
+      }
+
+      Multipart {
+      hideskin = head_segment ;
+      }
+
+      Multipart {
+      hideskin = blade_segment ;
+      }
+
+      Multipart {
+      hideskin = bomb_segment ;
+      }
+
+      Multipart {
+      hideskin = inv_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+   }

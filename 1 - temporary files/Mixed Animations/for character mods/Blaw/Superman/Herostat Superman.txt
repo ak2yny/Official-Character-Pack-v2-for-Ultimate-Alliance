@@ -1,0 +1,80 @@
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 12 ;
+   characteranims = 35_sprmn ;
+   charactername = Superman ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = sprmn ;
+   playable = true ;
+   powerstyle = ps_sprmn ;
+   scriptlevel = 3 ;
+   skin = 3511 ;
+   skin_01_name = New 52 ;
+   skin_02 = 12 ;
+   skin_02_name = Classic ;
+   skin_03 = 13 ;
+   skin_03_name = Bizarro ;
+   skin_04 = 14 ;
+   skin_04_name = Kingdom Come ;
+   sounddir = sprmn_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sprmn_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = krypt_psy ;
+      }
+
+      talent {
+      level = 1 ;
+      name = magic_weak ;
+      }
+
+   }

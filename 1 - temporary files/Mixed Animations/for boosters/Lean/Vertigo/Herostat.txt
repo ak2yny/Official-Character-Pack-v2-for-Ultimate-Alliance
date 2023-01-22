@@ -1,0 +1,54 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 90_vertigo ;
+   charactername = Vertigo ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   name = Vertigo ;
+   playable = true ;
+   powerstyle = ps_vertigo ;
+   scriptlevel = 3 ;
+   skin = 9005 ;
+   skin_01_name = New Vertigo ;
+   skin_02 = 06 ;
+   skin_02_name = Age of X ;
+   skin_03 = 07 ;
+   skin_03_name = 90s ;
+   skin_04 = 08 ;
+   skin_04_name = Wolverine and The X-Men ;
+   sounddir = vertigo_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vertigo_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

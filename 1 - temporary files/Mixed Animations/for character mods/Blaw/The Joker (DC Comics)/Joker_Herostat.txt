@@ -1,0 +1,71 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 4 ;
+   characteranims = 28_joker ;
+   charactername = The Joker ;
+   level = 1 ;
+   menulocation = 11 ;
+   mind = 9 ;
+   name = joker ;
+   playable = true ;
+   powerstyle = ps_joker ;
+   scriptlevel = 3 ;
+   skin = 2802 ;
+   skin_01_name = New 52 ;
+   skin_02 = 03 ;
+   skin_02_name = Red Hood ;
+   skin_03 = 04 ;
+   skin_03_name = Classic ;
+   skin_04 = 05 ;
+   skin_04_name = Arkham ;
+   sounddir = joker_m ;
+   strength = 5 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = joker_p1 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = joker_p2 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = joker_p3 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

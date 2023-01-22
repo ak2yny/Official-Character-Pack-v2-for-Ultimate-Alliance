@@ -1,0 +1,80 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 8 ;
+   characteranims = 80_morrigan ;
+   charactername = Morrigan ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = morrigan ;
+   playable = true ;
+   powerstyle = ps_morrigan ;
+   scriptlevel = 3 ;
+   skin = 8012 ;
+   skin_01_name = MVC3 ;
+   skin_02 = 13 ;
+   skin_02_name = Night Warrior ;
+   skin_03 = 14 ;
+   skin_03_name = Casual ;
+   skin_04 = 15 ;
+   skin_04_name = MVCI ;
+   sounddir = morrigan_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 7 ;
+      Multipart {
+      hideskin = r_kick_segment ;
+      hideskin2 = l_kick_segment ;
+      }
+
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = morrigan_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = morrigan_drain ;
+      }
+
+   }

@@ -1,0 +1,77 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 208_rogue ;
+   charactername = Rogue ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = Rogue ;
+   playable = true ;
+   powerstyle = ps_rogue ;
+   scriptlevel = 3 ;
+   skin = 20801 ;
+   skin_01_name = Legacy ;
+   skin_02 = 02 ;
+   skin_02_name = Ultimate ;
+   skin_03 = 03 ;
+   skin_03_name = Age of Apocalypse ;
+   skin_04 = 04 ;
+   skin_04_name = Modern ;
+   sounddir = vogue_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = rog_telek ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      BoltOn {
+      anim = 208_rogue_wings ;
+      bolt = Bip01 Spine2 ;
+      model = 20810 ;
+      slot = ebolton_wings ;
+      }
+
+   }

@@ -1,0 +1,81 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 20 ;
+   canthrowally = true ;
+   characteranims = 72_mongul ;
+   charactername = Mongul ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 9 ;
+   moveset1 = moveset_flying ;
+   name = Mongul ;
+   playable = true ;
+   powerstyle = ps_mongul ;
+   scale_factor = 1.15 ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 7205 ;
+   skin_01_name = Batman BB ;
+   skin_02 = 06 ;
+   skin_02_name = DCU ;
+   skin_03 = 07 ;
+   skin_03_name = Classic ;
+   skin_04 = 08 ;
+   skin_04_name = Original ;
+   skin_05 = 09 ;
+   skin_05_name = Custom ;
+   sounddir = mong_m ;
+   strength = 20 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mongul_grabsma ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = mongul_strong ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

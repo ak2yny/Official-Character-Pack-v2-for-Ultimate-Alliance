@@ -1,0 +1,61 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 202_saske ;
+   charactername = Sasuke Uchiha ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 9 ;
+   name = saske ;
+   playable = true ;
+   powerstyle = ps_saske ;
+   scale_factor = 0.88 ;
+   scriptlevel = 3 ;
+   skin = 20221 ;
+   skin_01_name = Classic ;
+   skin_02 = 22 ;
+   skin_02_name = Akatsuki ;
+   skin_03 = 23 ;
+   skin_03_name = White ;
+   skin_04 = 24 ;
+   skin_04_name = Adult ;
+   sounddir = saske_m ;
+   strength = 9 ;
+   team = hero ;
+   textureicon = 0 ;
+      Multipart {
+      hideskin = sword_l_segment ;
+      hideskin2 = sword_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = cura ;
+      }
+
+      talent {
+      level = 1 ;
+      name = saske_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

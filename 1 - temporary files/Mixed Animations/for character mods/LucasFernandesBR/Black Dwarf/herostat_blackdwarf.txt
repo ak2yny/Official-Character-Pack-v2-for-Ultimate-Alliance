@@ -1,0 +1,81 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 9 ;
+   characteranims = 245_blackdwarf ;
+   charactername = Black Dwarf ;
+   level = 1 ;
+   menulocation = xxxx ;
+   mind = 7 ;
+   name = blackdwarf ;
+   playable = true ;
+   powerstyle = ps_blackdwarf ;
+   scale_factor = 1.15 ;
+   scriptlevel = 3 ;
+   skin = 24512 ;
+   skin_01_name = Comics ;
+   sounddir = blackdwarf_m ;
+   strength = 15 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = blackdwarf_reflect ;
+      }
+
+      talent {
+      level = 1 ;
+      name = blackdwarf_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = axe_hand_left ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = mass_hand_right ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = axe_hand_left ;
+      nonmenuonly = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = mass_hand_right ;
+      nonmenuonly = true ;
+      }
+
+   }

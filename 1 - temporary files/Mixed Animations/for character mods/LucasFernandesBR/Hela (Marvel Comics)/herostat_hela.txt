@@ -1,0 +1,79 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 8 ;
+   characteranims = 253_hela ;
+   charactername = Hela ;
+   level = 1 ;
+   menulocation = xxx ;
+   mind = 12 ;
+   name = hela ;
+   playable = true ;
+   powerstyle = ps_hela ;
+   scriptlevel = 3 ;
+   skin = 25312 ;
+   skin_01_name = Comics ;
+   skin_02 = 13 ;
+   skin_02_name = Ragnarok ;
+   skin_03 = 14 ;
+   skin_03_name = Future Fight ;
+   skin_04 = 15 ;
+   skin_04_name = Ragnarok with cape ;
+   sounddir = hela_m ;
+   strength = 8 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hela_drain ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hela_kill ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hela_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hela_resurrect ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hela_tele ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+   }

@@ -1,0 +1,87 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 125_rachel ;
+   charactername = Marvel Girl ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = Rachel ;
+   playable = true ;
+   powerstyle = ps_rachel ;
+   scriptlevel = 3 ;
+   skin = 12505 ;
+   skin_01_name = Classic ;
+   skin_02 = 07 ;
+   skin_02_name = Hound ;
+   skin_03 = 06 ;
+   skin_03_name = Starjammer ;
+   skin_04 = 09 ;
+   skin_04_name = House of M ;
+   skin_05 = 10 ;
+   skin_05_name = Ultimate ;
+   skin_06 = 08 ;
+   skin_06_name = Phoenix ;
+   sounddir = rachel_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = rach_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = rach_resist;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/rachel/special_burninghead ;
+      fxlevel = 1 ;
+      menuonly = false ;
+      skin = 06 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Head ;
+      effect = char/rachel/special_burninghead ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 06 ;
+      zoneonly = false ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

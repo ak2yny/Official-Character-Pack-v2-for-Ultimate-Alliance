@@ -1,0 +1,425 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   canseestealthed = true ;
+   characteranims = 27_seiya ;
+   charactername = Pegasus ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 4 ;
+   name = Seiya ;
+   playable = true ;
+   powerstyle = ps_seiya ;
+   scriptlevel = 3 ;
+   skin = 2703 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 04 ;
+   skin_03_name = Modern ;
+   skin_04 = 05 ;
+   skin_04_name = Unarmored ;
+   sounddir = seiya_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 1 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = seiya_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = fist_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 28_shiryu ;
+   charactername = Dragon ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 4 ;
+   name = Shiryu ;
+   playable = true ;
+   powerstyle = ps_shiryu ;
+   scriptlevel = 3 ;
+   skin = 2803 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 04 ;
+   skin_03_name = Modern ;
+   skin_04 = 05 ;
+   skin_04_name = Unarmored ;
+   sounddir = shiryu_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = shiryu_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      descname = Crucial Strike ;
+      icon = 12 ;
+      name = critical ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 42_hyoga ;
+   charactername = Cygnius ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 12 ;
+   name = Hyoga ;
+   playable = true ;
+   powerstyle = ps_hyoga ;
+   scriptlevel = 3 ;
+   skin = 4204 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Original ;
+   skin_03 = 05 ;
+   skin_03_name = Modern ;
+   skin_04 = 06 ;
+   skin_04_name = Unarmored ;
+   sounddir = hyoga_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hyoga_p2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hyoga_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 01 ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      nonmenuonly = true ;
+      showskin = body_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      nonmenuonly = true ;
+      showskin = body_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      menuonly = true ;
+      showskin = body_segment ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 02 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 04 ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = brussier ;
+   body = 5 ;
+   characteranims = 53_ikki ;
+   charactername = Phoenix ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = Ikki ;
+   playable = true ;
+   powerstyle = ps_ikki ;
+   scriptlevel = 3 ;
+   skin = 5303 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 04 ;
+   skin_03_name = Modern ;
+   skin_04 = 05 ;
+   skin_04_name = Unarmored ;
+   sounddir = ikki_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ikki_p4 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ikki_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ikki_reborn ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 56_rada ;
+   charactername = Wyvern ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = wyvern ;
+   playable = true ;
+   powerstyle = ps_wyvern ;
+   scale_factor = 1.15 ;
+   scriptlevel = 3 ;
+   skin = 5605 ;
+   skin_01_name = Anime ;
+   skin_02 = 06 ;
+   skin_02_name = Manga ;
+   skin_03 = 07 ;
+   skin_03_name = Variant ;
+   skin_04 = 08 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = rada_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = rada_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = open_wings_segment ;
+      }
+
+   }

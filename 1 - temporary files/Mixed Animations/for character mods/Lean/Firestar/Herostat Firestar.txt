@@ -1,0 +1,73 @@
+   stats {
+   autospend = support ;
+   body = 5 ;
+   characteranims = 224_firestar ;
+   charactername = Firestar ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = Firestar ;
+   playable = true ;
+   powerstyle = ps_firestar ;
+   scriptlevel = 3 ;
+   skin = 22401 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Modern ;
+   skin_04 = 04 ;
+   skin_04_name = Ultimate ;
+   sounddir = fires_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fires_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fires_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine ;
+      effect = char/firestar/special_flameon ;
+      fxlevel = 1 ;
+      menuonly = true ;
+      skin = 04 ;
+      zoneonly = true ;
+      }
+
+   }

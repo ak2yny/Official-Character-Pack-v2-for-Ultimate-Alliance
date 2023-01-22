@@ -1,0 +1,75 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 144_visiondlc ;
+   charactername = Vision ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = Visiondlc ;
+   playable = true ;
+   powerstyle = ps_visiondlc ;
+   scriptlevel = 3 ;
+   skin = 14402 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Classic ;
+   skin_03 = 04 ;
+   skin_03_name = Jonas ;
+   skin_04 = 08 ;
+   skin_04_name = Movie ;
+   skin_05 = 03 ;
+   skin_05_name = Original ;
+   skin_06 = 07 ;
+   skin_06_name = Stealth ;
+   sounddir = vision_m ;
+   strength = 6 ;
+   team = hero ;
+      talent {
+      level = 1 ;
+      name = vision_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vision_hardness ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vision_dodge ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = vision_resist ;
+      }
+
+   }

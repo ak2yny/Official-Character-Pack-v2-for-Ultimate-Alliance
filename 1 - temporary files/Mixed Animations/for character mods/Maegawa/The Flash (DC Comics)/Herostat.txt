@@ -1,0 +1,103 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 32_flash ;
+   charactername = Flash ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   name = Flash ;
+   playable = true ;
+   powerstyle = ps_flash ;
+   scriptlevel = 3 ;
+   skin = 3202 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Wally West ;
+   skin_03 = 04 ;
+   skin_03_name = Zoom ;
+   skin_04 = 05 ;
+   skin_04_name = Original ;
+   skin_05 = 06 ;
+   skin_05_name = Modern ;
+   skin_06 = 07 ;
+   skin_06_name = Injustice ;
+   sounddir = flash_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flash_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = healing_factor ;
+      }
+
+      talent {
+      level = 1 ;
+      name = speed_force ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/flash/special_trail ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/flash/special_trail ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/flash/special_trail ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Toe0 ;
+      effect = char/flash/special_trail ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Toe0 ;
+      effect = char/flash/special_trail ;
+      fxlevel = 1 ;
+      }
+
+   }

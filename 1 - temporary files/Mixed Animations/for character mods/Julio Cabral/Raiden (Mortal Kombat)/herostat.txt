@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 10 ;
+   characteranims = 165_raiden ;
+   charactername = Raiden ;
+   level = 1 ;
+   menulocation = xx (23 for the mannequin's better look) ;
+   mind = 8 ;
+   name = raiden ;
+   playable = true ;
+   powerstyle = ps_raiden ;
+   scriptlevel = 3 ;
+   skin = 16505 ;
+   skin_01_name = Original ;
+   skin_02 = 06 ;
+   skin_02_name = Klassic ;
+   skin_03 = 07 ;
+   skin_03_name = Deadly Alliance ;
+   skin_04 = 08 ;
+   skin_04_name = MK9 ;
+   skin_05 = 09 ;
+   skin_05_name = Armageddon ;
+   sounddir = raiden_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 3 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      BoltOn {
+      bolt = Bip01 L Hand ;
+      menuonly = true ;
+      model = models/bolton/raiden_staff ;
+      slot = ebolton_clawleft ;
+      }
+
+      Multipart {
+      hideskin = charge_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = raiden_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = raiden_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

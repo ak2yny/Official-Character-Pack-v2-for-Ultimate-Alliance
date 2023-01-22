@@ -1,0 +1,969 @@
+XMLB characters {
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 140_sag ;
+   charactername = Sagittarius ;
+   dlchero = true ;
+   level = 1 ;
+   menulocation = 19 ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = sag ;
+   playable = true ;
+   powerstyle = ps_sag ;
+   scale_factor = 1.1 ;
+   scriptlevel = 3 ;
+   skin = 14005 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Civil ;
+   skin_03 = 07 ;
+   skin_03_name = Manga ;
+   skin_04 = 08 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = sag_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_bow_back_segment ;
+      hideskin2 = 20301_bow_L_hand_mid_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_arrow_R_hand_segment ;
+      hideskin2 = 20301_ball_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_ice_R_hand_segment ;
+      hideskin2 = 20301_glue_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_missile_R_hand_segment ;
+      hideskin2 = 20301_bird_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_bow_L_hand_segment ;
+      nonmenuonly = true ;
+      showskin = 20301_bow_back_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hawk_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 32_libra ;
+   charactername = Libra ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = 24 ;
+   mind = 4 ;
+   name = libra ;
+   playable = true ;
+   powerstyle = ps_libra ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 3205 ;
+   skin_01_name = Modern ;
+   skin_02 = 07 ;
+   skin_02_name = Lost Canvas ;
+   skin_03 = 08 ;
+   skin_03_name = Unarmored ;
+   skin_04 = 06 ;
+   skin_04_name = Manga ;
+   sounddir = libra_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = libra_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 67_virgo ;
+   charactername = Virgo ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 12 ;
+   name = virgo ;
+   playable = true ;
+   powerstyle = ps_virgo ;
+   scriptlevel = 3 ;
+   skin = 6702 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Manga ;
+   skin_04 = 05 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = virgo_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = virgo_p2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = kan_segment ;
+      hideskin2 = six_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = tenbu_segment ;
+      hideskin2 = devil_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 51_aqua ;
+   charactername = Aquarius ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 12 ;
+   name = aquarius ;
+   playable = true ;
+   powerstyle = ps_aqua ;
+   scriptlevel = 3 ;
+   skin = 5102 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Manga ;
+   skin_04 = 05 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = camus_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = aqua_p2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = aqua_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 01 ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      nonmenuonly = true ;
+      showskin = body_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      nonmenuonly = true ;
+      showskin = body_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = aurora_segment ;
+      menuonly = true ;
+      showskin = body_segment ;
+      }
+
+      StatEffect {
+      anim = menu_idle ;
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = true ;
+      skin = 03 ;
+      zoneonly = false ;
+      }
+
+      StatEffect {
+      bolt = Bip01 R Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 L Hand ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 2 ;
+      menuonly = false ;
+      skin = 03 ;
+      zoneonly = true ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 02 ;
+      }
+
+      StatEffect {
+      bolt = Bip01 Spine2 ;
+      effect = char/iceman/special_selfchill ;
+      fxlevel = 1 ;
+      skin = 04 ;
+      }
+
+   }
+
+   stats {
+   ailevel = 2 ;
+   autospend = brusier ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 86_taurus ;
+   charactername = Taurus ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = 3 ;
+   mind = 12 ;
+   name = taurus ;
+   playable = true ;
+   powerstyle = ps_taurus ;
+   scale_factor = 1.1 ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 8602 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Manga ;
+   skin_04 = 05 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = tau_m ;
+   strength = 12 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = tau_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = tau_grabsma ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 137_cancer ;
+   charactername = Cancer ;
+   level = 1 ;
+   menulocation = 4 ;
+   mind = 12 ;
+   name = Cancer ;
+   playable = true ;
+   powerstyle = ps_cancer ;
+   scriptlevel = 3 ;
+   skin = 13705 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Modern ;
+   skin_03 = 07 ;
+   skin_03_name = Manga ;
+   skin_04 = 08 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = cancer_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = t_hand_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 83_leo ;
+   charactername = Leo ;
+   level = 1 ;
+   menulocation = 14 ;
+   mind = 12 ;
+   name = leo ;
+   playable = true ;
+   powerstyle = ps_leo ;
+   scriptlevel = 3 ;
+   skin = 8311 ;
+   skin_01_name = Classic ;
+   skin_02 = 10 ;
+   skin_02_name = Modern ;
+   skin_03 = 09 ;
+   skin_03_name = Manga ;
+   skin_04 = 12 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = leo_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leo_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 90_aries ;
+   charactername = Aries ;
+   level = 1 ;
+   menulocation = 25 ;
+   mind = 12 ;
+   name = Aries ;
+   playable = true ;
+   powerstyle = ps_aries ;
+   scriptlevel = 3 ;
+   skin = 9005 ;
+   skin_01_name = Classic ;
+   skin_02 = 08 ;
+   skin_02_name = Modern ;
+   skin_03 = 06 ;
+   skin_03_name = Manga ;
+   skin_04 = 07 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = mu_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = aries_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = aries_teleport ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 85_capricorn ;
+   charactername = Capricorn ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 8 ;
+   name = capricorn ;
+   playable = true ;
+   powerstyle = ps_capricorn ;
+   scriptlevel = 3 ;
+   skin = 8502 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Lost Canvas ;
+   skin_04 = 05 ;
+   skin_04_name = Manga ;
+   sounddir = shura_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 13 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = capricorn_p4 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_segment ;
+      nonmenuonly = true ;
+      showskin = hammer_back_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hammer_back_segment ;
+      menuonly = true ;
+      showskin = hammer_segment ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 10 ;
+   characteranims = 117_gemini ;
+   charactername = Gemini ;
+   level = 1 ;
+   menulocation = x ;
+   mind = 12 ;
+   name = Gemini ;
+   playable = true ;
+   powerstyle = ps_gemini ;
+   scriptlevel = 3 ;
+   skin = 11702 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern ;
+   skin_03 = 04 ;
+   skin_03_name = Manga ;
+   skin_04 = 05 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = saga_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = gemini_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 100 ;
+   characteranims = 23_pisces ;
+   charactername = Pisces ;
+   level = 1 ;
+   menulocation = 12 ;
+   mind = 8 ;
+   name = pisces ;
+   playable = true ;
+   powerstyle = ps_pisces ;
+   scale_factor = 1 ;
+   scriptlevel = 3 ;
+   skin = 2302 ;
+   skin_01_name = Classic ;
+   skin_02 = 03 ;
+   skin_02_name = Modern  ;
+   skin_03 = 04 ;
+   skin_03_name = Manga ;
+   skin_04 = 05 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = afro_m ;
+   strength = 12 ;
+   team = hero ;
+   textureicon = 23 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = blod_rose_segment ;
+      hideskin2 = pira_rose_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = lem_rose_segment ;
+      nonmenuonly = true ;
+      showskin = dem_rose_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = pisc_p1 ;
+      }
+
+      talent {
+      build = e3 ;
+      level = 1 ;
+      name = pisc_p2 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
+
+   stats {
+   ailevel = 2 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 128_milo ;
+   charactername = Scorpio ;
+   level = 1 ;
+   menulocation = 26 ;
+   mind = 12 ;
+   name = milo ;
+   playable = true ;
+   powerstyle = ps_milo ;
+   scriptlevel = 3 ;
+   skin = 12805 ;
+   skin_01_name = Classic ;
+   skin_02 = 06 ;
+   skin_02_name = Modern ;
+   skin_03 = 07 ;
+   skin_03_name = Manga ;
+   skin_04 = 08 ;
+   skin_04_name = Lost Canvas ;
+   sounddir = milo_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hand_segment ;
+      nonmenuonly = true ;
+      showskin = need_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = need_segment ;
+      nonmenuonly = true ;
+      showskin = hand_segment ;
+      weaponevent = true ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = hand_segment ;
+      menuonly = true ;
+      showskin = need_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = milo_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }
+
+   stats {
+   autospend = support ;
+   isteam = true ;
+   name = team_character ;
+   skin = 0002 ;
+   xpexempt = true ;
+   }
+
+}
+

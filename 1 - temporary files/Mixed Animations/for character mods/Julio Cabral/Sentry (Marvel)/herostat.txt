@@ -1,0 +1,82 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 7 ;
+   canthrowally = true ;
+   characteranims = 200_thesentry ;
+   charactername = Sentry ;
+   gen_charge_color = 0.8 0.2 0.2 1 ;
+   level = 1 ;
+   ignoreboundsscaling = true ;
+   menulocation = 21 ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = thesentry ;
+   playable = true ;
+   powerstyle = ps_thesentry ;
+   scale_factor = 1.02 ;
+   scaleattacks = true ;
+   scriptlevel = 3 ;
+   skin = 20001 ;
+   skin_01_name = Modern ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 03 ;
+   skin_03_name = Dark Avenger ;
+   skin_04 = 04 ;
+   skin_04_name = Silver Age ;
+   skin_05 = 09 ;
+   skin_05_name = New Avenger ;
+   sounddir = sentry_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 4 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sentry_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = sent_rage ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

@@ -1,0 +1,80 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 188_dococ ;
+   charactername = Doctor Octopus ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 8 ;
+   name = dococ ;
+   playable = true ;
+   powerstyle = ps_dococ ;
+   scriptlevel = 3 ;
+   skin = 18801 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = Original ;
+   skin_03 = 03 ;
+   skin_03_name = Ultimate ;
+   skin_04 = 04 ;
+   skin_04_name = Modern ;
+   sounddir = dococ_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 13 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = idle ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = utr_left_segment ;
+      hideskin2 = utr_right_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = ltr_left_segment ;
+      hideskin2 = ltr_right_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dococ_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = octo_grabsma ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

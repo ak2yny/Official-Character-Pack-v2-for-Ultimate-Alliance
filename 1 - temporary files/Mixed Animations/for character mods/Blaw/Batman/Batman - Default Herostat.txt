@@ -1,0 +1,65 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 24_batman ;
+   charactername = Batman ;
+   level = 1 ;
+   menulocation = 25 ;
+   mind = 9 ;
+   name = batman ;
+   playable = true ;
+   powerstyle = ps_batman ;
+   scriptlevel = 3 ;
+   skin = 2412 ;
+   skin_01_name = New 52 ;
+   skin_02 = 03 ;
+   skin_02_name = 70s ;
+   skin_03 = 02 ;
+   skin_03_name = Arkham ;
+   skin_04 = 05 ;
+   skin_04_name = Beyond ;
+   sounddir = batmn_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 17 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = glide ;
+      hideskin2 = l_sbrang ;
+      }
+
+      talent {
+      level = 1 ;
+      name = batman_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = batman_glide ;
+      }
+
+   }

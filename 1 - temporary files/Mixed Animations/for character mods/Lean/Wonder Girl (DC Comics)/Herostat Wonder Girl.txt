@@ -1,0 +1,57 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 108_cassie_sandsmark ;
+   charactername = Wonder Girl ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = CassieSandsmark ;
+   playable = true ;
+   powerstyle = ps_cassiesandsmark ;
+   scriptlevel = 3 ;
+   skin = 10805 ;
+   skin_01_name = DC Now ;
+   skin_02 = 06 ;
+   skin_02_name = Original ;
+   skin_03 = 07 ;
+   skin_03_name = Modern ;
+   skin_04 = 08 ;
+   skin_04_name = Classic ;
+   sounddir = wgirl_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      talent {
+      level = 1 ;
+      name = wndrgrl_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+   }

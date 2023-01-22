@@ -1,0 +1,76 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 7 ;
+   characteranims = 147_piccolo ;
+   charactername = Piccolo ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = Piccolo ;
+   playable = true ;
+   powerstyle = ps_piccolo ;
+   scale_factor = 1.17 ;
+   scriptlevel = 3 ;
+   skin = 14710 ;
+   skin_01_name = Modern ;
+   skin_02 = 11 ;
+   skin_02_name = Classic ;
+   skin_03 = 12 ;
+   skin_03_name = Manga ;
+   skin_04 = 13 ;
+   skin_04_name = Movie ;
+   sounddir = picco_m ;
+   strength = 10 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = picco_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      Multipart {
+      hideskin = makka_hand_segment ;
+      hideskin2 = head_segment ;
+      }
+
+      Multipart {
+      hideskin = light_g_segment ;
+      hideskin2 = makka_arm_segment ;
+      }
+
+   }

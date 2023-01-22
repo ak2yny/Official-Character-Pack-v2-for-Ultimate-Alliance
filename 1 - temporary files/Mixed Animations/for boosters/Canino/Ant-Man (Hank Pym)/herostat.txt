@@ -1,0 +1,52 @@
+
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 252_antman ;
+   charactername = Ant-Man ;
+   level = 1 ;
+   menulocation = 20 ;
+   mind = 8 ;
+   name = antman ;
+   scale_factor = 0.98 ;
+   playable = true ;
+   powerstyle = ps_antman ;
+   scriptlevel = 3 ;
+   skin = 25204 ;
+   skin_01_name = Scott Lang ;
+   skin_02 = 02 ;
+   skin_02_name = Classic ;
+   skin_03 = 01 ;
+   skin_03_name = Modern ;
+   skin_04 = 05 ;
+   skin_04_name = Civil War ;
+   skin_05 = 06 ;
+   skin_05_name = Ant-Man and The Wasp ;
+   skin_06 = 03 ;
+   skin_06_name = Quantum Suit ;
+   sounddir = ant_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 6 ;
+      talent {
+      level = 1 ;
+      name = antman_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+   }

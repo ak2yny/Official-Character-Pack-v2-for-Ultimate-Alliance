@@ -1,0 +1,73 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 180_donna_troy ;
+   charactername = Donna Troy ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 4 ;
+   moveset1 = moveset_flying ;
+   name = DonnaTroy ;
+   playable = true ;
+   powerstyle = ps_donnatroy ;
+   scriptlevel = 3 ;
+   skin = 18005 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Wonder Girl ;
+   skin_03 = 07 ;
+   skin_03_name = Teen Titans ;
+   sounddir = dtroy_m ;
+   strength = 12 ;
+   team = hero ;
+   textureicon = 7 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dtroy_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dtroy_resist ;
+      }
+
+      talent {
+      level = 1 ;
+      name = no_grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }
