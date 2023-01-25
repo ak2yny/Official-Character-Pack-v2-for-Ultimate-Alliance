@@ -147,22 +147,22 @@ PS3/PS4 and other controllers:
 All Cheat Codes:
 ------------------------
 
-100,000 Gold Coins		From the Team menu				Up, Up, Up, Left, Right, Left, Start
-Level 99 Team			From the Team menu				Up, Left, Up, Left, Down, Right, Down, Right, Start
-Unlock All Simulators		During Comic Book Missions			Up, Right, Left, Down, Up, Right, Left, Down, Start
-Unlock All Cinematics		From the Review menu				Up, Left, Left, Up, Right, Right, Up, Start
-Unlock All Comics		From the Review menu				Left, Right, Right, Left, Up Up, Right, Start
-Unlock All Concept Art		From the Review menu				Down, Down, Down, Right, Right, Left, Down, Start
-Unlock All Wallpapers		From the Review menu				Up, Down, Right, Left, Up, Up, Down, Start
-Unlock All Costumes		From the Start or Hero Management menus		Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Start
-Unlock All Powers		From the Start or Hero Management menus		Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Start
-Full Energy Bar			During Gameplay					Left, Right, Right, Left, Up, Down, Down, Up, Start
-God Mode (Invincibility)	During gameplay					Up, Down, Up, Down, Up, Left, Down, Right, Start
-Super Speed			During gameplay					Up, Left, Up, Right, Down, Right, Start
-Kill Enemies Instantly		During gameplay					Left, Right, Down, Down, Right, Left, Start
-Unlock All Characters		From the Start or Hero Management menus		Up, Up, Down, Down, Left, Left, Left, Start
-Unlock Dare Devil		At the Shield Access Point			Left, Left, Right, Right, Up, Down, Up, Down, Start
-Unlock Silver Surfer		At the Shield Access Point			Down, Left, Left, Up, Right, Up, Down, Left, Start
+100,000 Gold Coins        From the Team menu                       Up, Up, Up, Left, Right, Left, Start
+Level 99 Team             From the Team menu                       Up, Left, Up, Left, Down, Right, Down, Right, Start
+Unlock All Simulators     During Comic Book Missions               Up, Right, Left, Down, Up, Right, Left, Down, Start
+Unlock All Cinematics     From the Review menu                     Up, Left, Left, Up, Right, Right, Up, Start
+Unlock All Comics         From the Review menu                     Left, Right, Right, Left, Up Up, Right, Start
+Unlock All Concept Art    From the Review menu                     Down, Down, Down, Right, Right, Left, Down, Start
+Unlock All Wallpapers     From the Review menu                     Up, Down, Right, Left, Up, Up, Down, Start
+Unlock All Costumes       From the Start or Hero Management menus  Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Start
+Unlock All Powers         From the Start or Hero Management menus  Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Start
+Full Energy Bar           During Gameplay                          Left, Right, Right, Left, Up, Down, Down, Up, Start
+God Mode (Invincibility)  During gameplay                          Up, Down, Up, Down, Up, Left, Down, Right, Start
+Super Speed               During gameplay                          Up, Left, Up, Right, Down, Right, Start
+Kill Enemies Instantly    During gameplay                          Left, Right, Down, Down, Right, Left, Start
+Unlock All Characters     From the Start or Hero Management menus  Up, Up, Down, Down, Left, Left, Left, Start
+Unlock Dare Devil         At the Shield Access Point               Left, Left, Right, Right, Up, Down, Up, Down, Start
+Unlock Silver Surfer      At the Shield Access Point               Down, Left, Left, Up, Right, Up, Down, Left, Start
 
 
 Credits:
@@ -191,7 +191,7 @@ Official Character Pack 2
 -Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
 -ak2yny: for general fixes, assistance, gold sounds upgrade, Cyclops, conversion, XML icons upscale
 -Cyborg Sun 天: for testing and reporting
--Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy, metal venger1.
+-Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy, metal venger1, CCali.
 -Whiteking: for 5th and 6th skin for Emma Frost
 -Anyone else we forgot: Thanks
 
