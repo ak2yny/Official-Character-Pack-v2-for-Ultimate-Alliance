@@ -3501,10 +3501,10 @@
                         "attribute": "atk_critical",
                         "level": 0.05,
                         "scope": {
-                            "scope_attack": "punch"
+                            "scope_attack": "projectile"
                         },
                         "scope": {
-                            "scope_attack": "kick"
+                            "scope_attack": "beam"
                         }
                     }
                 }
@@ -4326,7 +4326,7 @@
                 "powerup": {
                     "life": -1,
                     "affecter": {
-                        "attribute": "def_damage_scope",
+                        "attribute": "damage",
                         "level": 0.5,
                         "scope": {
                             "scope_attack": "throw"
@@ -4605,7 +4605,10 @@
                     "life": -1,
                     "affecter": {
                         "attribute": "deflect_projectiles",
-                        "level": 0.1
+                        "level": 0.1,
+						"scope": {
+                            "scope_attack": "projectile"
+                        }
                     }
                 }
             },
@@ -4689,7 +4692,10 @@
                     "life": -1,
                     "affecter": {
                         "attribute": "deflect_projectiles",
-                        "level": 0.15
+                        "level": 0.15,
+						"scope": {
+                            "scope_attack": "projectile"
+                        }
                     }
                 }
             },
