@@ -4326,8 +4326,9 @@
                 "powerup": {
                     "life": -1,
                     "affecter": {
+                        "affect_type": "scale",
                         "attribute": "damage",
-                        "level": 0.5,
+                        "level": 1.5,
                         "scope": {
                             "scope_attack": "throw"
                         }
@@ -4600,15 +4601,12 @@
             "type": "equipment",
             "unique": true,
             "enhancement": {
-                "description": "^%d%% chance to reflect projectiles",
+                "description": "^%d%% chance to deflect projectiles",
                 "powerup": {
                     "life": -1,
                     "affecter": {
                         "attribute": "deflect_projectiles",
-                        "level": 0.1,
-						"scope": {
-                            "scope_attack": "projectile"
-                        }
+                        "level": 0.1
                     }
                 }
             },
@@ -4687,15 +4685,12 @@
             "type": "equipment",
             "unique": true,
             "enhancement": {
-                "description": "^%d%% chance to reflect projectiles",
+                "description": "^%d%% chance to deflect projectiles",
                 "powerup": {
                     "life": -1,
                     "affecter": {
                         "attribute": "deflect_projectiles",
-                        "level": 0.15,
-						"scope": {
-                            "scope_attack": "projectile"
-                        }
+                        "level": 0.15
                     }
                 }
             },
