@@ -136,29 +136,6 @@
             "skin": 6401
         },
         "stats": {
-            "characteranims": "56_deathbird",
-            "charactername": "Deathbird",
-            "moveset1": "moveset_flying",
-            "name": "Deathbird_npc",
-            "scale_factor": 1.3,
-            "skin": 5601,
-            "sounddir": "dbird_m",
-            "spawnorbs": 3,
-            "team": "none",
-            "StatEffect": {
-                "anim": "flying",
-                "bolt": "fx01",
-                "effect": "char/dbird/ability_fly",
-                "fxlevel": 1
-            },
-            "StatEffect": {
-                "anim": "flying",
-                "bolt": "fx02",
-                "effect": "char/dbird/ability_fly",
-                "fxlevel": 1
-            }
-        },
-        "stats": {
             "characteranims": "16_dr_strange",
             "charactername": "Doctor Strange",
             "name": "DrStrange_npc",
@@ -344,7 +321,7 @@
             "npchealthscale": 1.2,
             "skin": 2101,
             "sounddir": "nickfu_m",
-            "specific_health": "M_HLTH36",
+            "specific_health": 5000,
             "stats_from_level": true,
             "strength": 6,
             "team": "hero",
@@ -358,14 +335,6 @@
             },
             "talent": {
                 "level": 1,
-                "name": "grab"
-            },
-            "talent": {
-                "level": 1,
-                "name": "fightstyle_hero"
-            },
-            "talent": {
-                "level": 1,
                 "name": "monst_dmg_high"
             },
             "talent": {
@@ -374,7 +343,11 @@
             },
             "talent": {
                 "level": 1,
-                "name": "monst_health"
+                "name": "fightstyle_default"
+            },
+            "talent": {
+                "level": 1,
+                "name": "grab"
             }
         },
         "stats": {
@@ -626,7 +599,7 @@
         },
         "stats": {
             "characteranims": "144_vision",
-            "charactername": "The Vision",
+            "charactername": "Vision",
             "name": "Vision",
             "skin": 14401
         },
@@ -748,12 +721,6 @@
                 "model": 4710,
                 "slot": "ebolton_tail"
             }
-        },
-        "stats": {
-            "characteranims": "123_jean_grey",
-            "charactername": "Jean Grey",
-            "name": "JeanSimple",
-            "skin": 12301
         },
         "stats": {
             "characteranims": "80_silver_surfer",
@@ -7731,37 +7698,37 @@
         },
         "stats": {
             "aiforceranged": false,
-            "body": 40,
+            "body": 200,
             "characteranims": "168_swordsman_psp",
             "charactername": "Swordsman",
             "combolevel": "popsmash",
             "dangerrating": 50,
-            "level": 12,
-            "mind": 40,
+            "level": 20,
+            "mind": 140,
             "name": "Swordsman_PSP",
             "npcdamagescale": 1,
             "npchealthscale": 1,
             "powerstyle": "ps_swordsman_psp",
             "skin": 16801,
-            "sounddir": "swordsman_m",
+            "sounddir": "swords_m",
             "spawnorbs": 3,
             "specific_health": 850,
-            "strength": 40,
+            "strength": 140,
             "team": "enemy",
             "talent": {
                 "level": 1,
                 "name": "boss_resistances"
             },
             "talent": {
-                "level": 4,
+                "level": 20,
                 "name": "monst_dmg_high"
             },
             "talent": {
-                "level": 4,
+                "level": 20,
                 "name": "monst_dmg_low"
             },
             "talent": {
-                "level": 4,
+                "level": 20,
                 "name": "monst_health"
             },
             "talent": {
@@ -7945,82 +7912,6 @@
             "material": "solid_metal",
             "mind": 1,
             "name": "VV_IronmanDroid_a",
-            "powerstyle": "ps_doombot",
-            "skin": 1505,
-            "sounddir": "doombt_m",
-            "standard_pain_only": true,
-            "strength": 1,
-            "team": "enemy",
-            "Race": {
-                "name": "robot"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_dmg_high"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_dmg_low"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_health"
-            },
-            "talent": {
-                "level": 1,
-                "name": "fightstyle_villain"
-            }
-        },
-        "stats": {
-            "aiforceranged": true,
-            "body": 1,
-            "characteranims": "135_doom_bot",
-            "charactername": "Iron Man Droid",
-            "combolevel": "medium",
-            "leadername": "Iron Man Droid",
-            "leaderskin": 1505,
-            "level": 32,
-            "material": "solid_metal",
-            "mind": 1,
-            "name": "VV_IronmanDroid_b",
-            "powerstyle": "ps_doombot",
-            "skin": 1505,
-            "sounddir": "doombt_m",
-            "standard_pain_only": true,
-            "strength": 1,
-            "team": "enemy",
-            "Race": {
-                "name": "robot"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_dmg_high"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_dmg_low"
-            },
-            "talent": {
-                "level": 1,
-                "name": "monst_health"
-            },
-            "talent": {
-                "level": 1,
-                "name": "fightstyle_villain"
-            }
-        },
-        "stats": {
-            "aiforceranged": true,
-            "body": 1,
-            "characteranims": "135_doom_bot",
-            "charactername": "Iron Man Droid",
-            "combolevel": "medium",
-            "leadername": "Iron Man Droid",
-            "leaderskin": 1505,
-            "level": 12,
-            "material": "solid_metal",
-            "mind": 1,
-            "name": "VV_IronmanDroid_c",
             "powerstyle": "ps_doombot",
             "skin": 1505,
             "sounddir": "doombt_m",

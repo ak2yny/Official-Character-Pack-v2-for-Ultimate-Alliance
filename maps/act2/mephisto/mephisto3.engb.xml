@@ -1,0 +1,986 @@
+<world>
+    <entity act="2" killz="-360" level="17" name="world" partylight="1 0.67 0.07" partylightradius="360" skybox="skybox/mephisto" soundfile="mef3" zonescript="act2/mephisto/mephisto3/mephisto3"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_010" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_014" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_016" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_030" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_050" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/2_mephisto3_060" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto3/temp001" type="conversation"/>
+    <precache filename="map/mephisto/demon_soul_spawn" type="fx"/>
+    <precache filename="map/mephisto/heal" type="fx"/>
+    <precache filename="map/mephisto/statue_soul_release" type="fx"/>
+    <precache filename="act2/mephisto/mephisto3/nightcrawler_fade" type="script"/>
+    <precache filename="act2/mephisto/mephisto3/phoenix_fade" type="script"/>
+    <precache filename="common/end_cs" type="script"/>
+    <precache filename="zone_shared/mephisto/digging_out_of_grave" type="sound"/>
+    <precache filename="zone_shared/special/portal" type="sound"/>
+    <precache filename="zone_shared/special/spawn" type="sound"/>
+    <entity actcountremove="1" character="NightcrawlerSimple" checkteam="true" classname="monsterspawnerent" name="sp_nightcrawlersimple" nocollide="true"/>
+    <entity actcountremove="1" character="JeanGrey" checkteam="true" classname="monsterspawnerent" name="sp_phoenixsimple" nocollide="true"/>
+    <entity actcountremove="1" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_demonicsoul_b" nocollide="true"/>
+    <entity actcountremove="1" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_demonicsoul_b_leader" nocollide="true"/>
+    <entity actcountremove="1" character="FireGiant_a" classname="monsterspawnerent" instantspawn="true" monster_aggression="5" monster_smartent="true" name="ss_firegiant_a" nocollide="true"/>
+    <entity actcountremove="1" character="Blackheart" classname="monsterspawnerent" monster_deathspawn="Blackheart_treasure" monster_team="enemy" name="sp_blackheart" nocollide="true" nofadeondeath="true" shadow="true"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMSCORPION')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="25" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_scorpion" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept19.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="19" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art19" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f"/>
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" description="Wield" heaviness="0" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="mephisto/axe_mep_w" name="axe_mep_w" nogravity="false" nopush="true" puzzle_critical="true" quickuse="true" randompickups="0" structure="2" weapon="wp_twohanded"/>
+    <entity classname="physent" material="solid_metal" model="mephisto/brazier_mep_e" name="brazier_mep_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_s" fxlevel="1" health="50" material="solid_metal" model="mephisto/creepy_torch_mep_b" name="creepy_torch_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_l" fxlevel="3" health="150" material="solid_metal" model="mephisto/crypt_fire_giant_doors_mep_b" name="crypt_fire_giant_doors_mep_b" nogravity="true" nopickup="true" nopush="true" structure="1"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/crypt_fire_giant_roof_mep_e" name="crypt_fire_giant_roof_mep_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="solid_metal" model="mephisto/fence_10ft_mep_b" name="fence_10ft_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="solid_metal" model="mephisto/fence_post_mep_b" name="fence_post_mep_b" nogravity="true" nopickup="true" nopush="true" structure="1"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="rock" model="mephisto/gravestone_01_mep_b" name="gravestone_01_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="rock" model="mephisto/gravestone_02_mep_b" name="gravestone_02_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/gravestone_cross_mep_th" name="gravestone_cross_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" heaviness="1" material="rock" model="mephisto/gravestone_large_mep_th" name="gravestone_large_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="rock" model="mephisto/lava_skull_mep_b" name="lava_skull_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/pillar_01_mep_e" name="pillar_01_mep_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/pillar_02_mep_e" name="pillar_02_mep_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/pillar_03_mep_e" name="pillar_03_mep_e" nogravity="true" nopickup="true" nopush="true" pathignore="false" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_01_mep_th" name="rock_01_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_02_mep_th" name="rock_02_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_03_mep_th" name="rock_03_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_s" fxlevel="1" health="20" heaviness="0" material="rock" model="mephisto/skull_mep_th" name="skull_mep_th" structure="0"/>
+    <entity animstarton="true" classname="physent" material="energy" model="mephisto/soul_force_field_archway_mep_a" name="soul_force_field_archway_mep_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" description="Wield" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="mephisto/spear_mep_w" name="spear_mep_w" nogravity="false" nopush="true" quickuse="true" randompickups="0" structure="2" weapon="wp_throwable"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="rock" model="mephisto/statue_01_mep_b" name="statue_01_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="rock" model="mephisto/statue_02_mep_b" name="statue_02_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/statue_15ft_mep_e" name="statue_15ft_mep_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/stone_archway_mep_e" name="stone_archway_mep_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" material="rock" model="mephisto/stone_coffin_mep_b" name="stone_coffin_mep_b" nogravity="true" nopickup="true" nopush="true" randompickups="3" structure="0"/>
+    <entity actcountdisable="1" actonuse="true" classname="treasureent" description="weapon cache" material="rock" model="mephisto/treasure_chest_mep_a" name="treasure_chest_mep_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actonuse="true" classname="treasureent" description="weapon cache" material="rock" model="mephisto/treasure_chest_mep_a" name="treasure_spawn_chest_mep_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="mephisto/u_hanging_cage_falling_mep_a" name="u_hanging_cage_falling_mep_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="mephisto/u_hanging_cage_mep_a" name="u_hanging_cage_mep_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="u_soul_chamber_mep_a_b" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="mephisto/urn_01_mep_th" name="urn_01_mep_th" randompickups="3" structure="0"/>
+    <entity classname="physent" health="10" heaviness="0" material="hollow_metal" model="mephisto/urn_02_mep_th" name="urn_02_mep_th" randompickups="3" structure="0"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="0" classname="cameramagnetent" name="camera_magnet" nocollide="true" team="hero"/>
+    <entity actcountremove="1" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_once" nocollide="true" radiusdamage="true" smartent="false"/>
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_large" loopfxstarton="true" name="fire_large" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false"/>
+    <entinst type="s_nightcrawler">
+        <inst extents="-12 -18 0 36 18 84" name="s_nightcrawler" orient="0 0 3.14159" pos="1500 6948 366.499"/>
+    </entinst>
+    <entinst type="s_phoenix">
+        <inst extents="-12 -18 0 36 18 84" name="s_phoenix" pos="1740 6948 366.499"/>
+    </entinst>
+    <entinst type="s_gravespawn11">
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn11" orient="0 0 -1.5708" pos="1194 1878 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn06" orient="0 0 1.5708" pos="1171.2 894.58 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn05" pos="907.319 1296 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn04" orient="0 0 1.5708" pos="1295.89 906.617 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn03" pos="952.376 1152 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn02" orient="0 0 -1.5708" pos="1584 1374 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn01" orient="0 0 -1.5708" pos="1728 1332 -120"/>
+    </entinst>
+    <entinst type="s_gravespawn10">
+        <inst extents="-12.0 -18.0 -1.52588e-005 36.0 18.0 84.0" name="s_gravespawn10" pos="1378 3782 -120"/>
+    </entinst>
+    <entinst type="s_gravespawn09">
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn09" orient="0 0 3.14159" pos="1622 3778 -120"/>
+    </entinst>
+    <entinst type="s_gravespawn12">
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn12" orient="0 0 -1.5708" pos="1110 1914 -120"/>
+    </entinst>
+    <entinst type="s_gravespawn07">
+        <inst extents="-12 -18 0 36 18 84" name="s_gravespawn07" orient="0 0 3.14159" pos="1350 1499.78 -120"/>
+    </entinst>
+    <entinst type="s_gravespawn08">
+        <inst extents="-12.0 -18.0 -1.52588e-005 36.0 18.0 84.0" name="s_gravespawn08" pos="930 1499.78 -120"/>
+    </entinst>
+    <entinst type="s_zombie31">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_zombie31" orient="0 0 0.872665" pos="2059.14 3292.85 -120"/>
+    </entinst>
+    <entinst type="s_zombie84">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="s_zombie84" orient="0 0 -0.261799" pos="2913.42 5112.72 0"/>
+    </entinst>
+    <entinst type="s_zombie83">
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="s_zombie83" orient="0 0 -0.872664" pos="3232.72 5135.23 0"/>
+    </entinst>
+    <entinst type="s_zombie82">
+        <inst extents="-11.9995 -18 0 36.0005 18 84" name="s_zombie82" orient="0 0 -1.309" pos="3136.26 5394.34 0"/>
+    </entinst>
+    <entinst type="s_zombie81">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie81" orient="0 0 -0.349065" pos="3265.63 5229.63 0"/>
+    </entinst>
+    <entinst type="s_zombie80">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie80" orient="0 0 0.436333" pos="2884.53 4987.98 0"/>
+    </entinst>
+    <entinst type="s_zombie78">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie78" orient="0 0 -2.44346" pos="3089.93 5041.61 0"/>
+    </entinst>
+    <entinst type="s_zombie73">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie73" orient="0 0 3.05433" pos="3088.18 4932.31 0"/>
+    </entinst>
+    <entinst type="s_zombie71">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_zombie71" orient="0 0 1.13446" pos="2978.6 4759.58 0"/>
+    </entinst>
+    <entinst type="s_zombie70">
+        <inst extents="-12.0005 -18 0 35.9995 18 84" name="s_zombie70" orient="0 0 -1.13446" pos="3606.04 5093.64 0"/>
+    </entinst>
+    <entinst type="s_zombie69">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie69" orient="0 0 -2.35619" pos="3541.31 4763.58 0"/>
+    </entinst>
+    <entinst type="s_zombie68">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie68" orient="0 0 -2.18166" pos="3785.84 5112.38 0"/>
+    </entinst>
+    <entinst type="s_zombie01">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="s_zombie01" orient="0 0 -0.872665" pos="1084.6 3120.89 -120"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_zombie85" orient="0 0 -0.872665" pos="1503 322 -118"/>
+    </entinst>
+    <entinst type="s_zombie03">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="s_zombie03" orient="0 0 -1.91986" pos="1310.01 3096.82 -120"/>
+    </entinst>
+    <entinst type="s_zombie04">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie04" orient="0 0 -1.13446" pos="1233.45 3244.54 -120"/>
+    </entinst>
+    <entinst type="s_zombie05">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie05" orient="0 0 -0.174533" pos="907.148 2973.4 -120"/>
+    </entinst>
+    <entinst type="s_zombie08">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="s_zombie08" orient="0 0 -0.174533" pos="932.527 3261.45 -120"/>
+    </entinst>
+    <entinst type="s_zombie09">
+        <inst extents="-11.9998 -18.0002 0 36.0002 17.9998 84" name="s_zombie09" orient="0 0 -0.698132" pos="804.677 3295.42 -120"/>
+    </entinst>
+    <entinst type="s_zombie10">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie10" orient="0 0 -2.35619" pos="1432.69 2995.73 -120"/>
+    </entinst>
+    <entinst type="s_zombie11">
+        <inst extents="-12.0001 -18.0002 0 35.9999 17.9998 84" name="s_zombie11" orient="0 0 -2.96706" pos="1499.72 3164.58 -120"/>
+    </entinst>
+    <entinst type="s_zombie12">
+        <inst extents="-11.9998 -17.9999 0 36.0002 18.0001 84" name="s_zombie12" orient="0 0 -2.18166" pos="1112.03 3337.69 -120"/>
+    </entinst>
+    <entinst type="s_zombie13">
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="s_zombie13" orient="0 0 -0.436332" pos="1251.41 3473.15 -120"/>
+    </entinst>
+    <entinst type="s_zombie14">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_zombie14" orient="0 0 1.39626" pos="1500.7 3385.14 -120"/>
+    </entinst>
+    <entinst type="s_zombie15">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie15" orient="0 0 -1.0472" pos="1447.52 3551.18 -120"/>
+    </entinst>
+    <entinst type="s_zombie19">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie19" orient="0 0 -1.22173" pos="1173.59 3611.07 -120"/>
+    </entinst>
+    <entinst type="s_zombie20">
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="s_zombie20" orient="0 0 -1.22173" pos="1132.82 3882.22 -120"/>
+    </entinst>
+    <entinst type="s_zombie21">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie21" orient="0 0 0.610865" pos="1225.86 4028.99 -120"/>
+    </entinst>
+    <entinst type="s_zombie22">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie22" orient="0 0 0.610865" pos="1641.04 3537.92 -120"/>
+    </entinst>
+    <entinst type="s_zombie25">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie25" orient="0 0 -0.785398" pos="1730.3 3994.45 -120"/>
+    </entinst>
+    <entinst type="s_zombie26">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie26" orient="0 0 -0.785398" pos="1774.72 4065.93 -120"/>
+    </entinst>
+    <entinst type="s_zombie28">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie28" orient="0 0 -1.48353" pos="2125.57 3813.48 -120"/>
+    </entinst>
+    <entinst type="s_zombie29">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie29" orient="0 0 -2.70526" pos="2151.29 3616.08 -120"/>
+    </entinst>
+    <entinst type="s_zombie30">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie30" orient="0 0 1.5708" pos="1962 3222 -120"/>
+    </entinst>
+    <entinst type="s_zombie32">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie32" orient="0 0 -0.959931" pos="1910.64 3695.4 -120"/>
+    </entinst>
+    <entinst type="s_zombie33">
+        <inst extents="-11.9998 -18.0002 0 36.0002 17.9998 84" name="s_zombie33" orient="0 0 -2.96706" pos="1855.39 3519.61 -120"/>
+    </entinst>
+    <entinst type="s_zombie37">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie37" orient="0 0 2.53073" pos="3296.42 3496.86 0"/>
+    </entinst>
+    <entinst type="s_zombie38">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie38" orient="0 0 -3.05433" pos="3463.64 3460.5 0"/>
+    </entinst>
+    <entinst type="s_zombie39">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie39" orient="0 0 1.39626" pos="3269.85 3884.78 0"/>
+    </entinst>
+    <entinst type="s_zombie40">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="s_zombie40" orient="0 0 -2.87979" pos="3282.27 3678.5 0"/>
+    </entinst>
+    <entinst type="s_zombie41">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie41" orient="0 0 2.87979" pos="3530.74 3678.51 0"/>
+    </entinst>
+    <entinst type="s_zombie42">
+        <inst extents="-11.9995 -18.0001 0 36.0005 17.9999 84" name="s_zombie42" orient="0 0 -1.91986" pos="3430.2 3783.94 0"/>
+    </entinst>
+    <entinst type="s_zombie44">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie44" orient="0 0 -0.872665" pos="3212.15 4036.61 0"/>
+    </entinst>
+    <entinst type="s_zombie45">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie45" orient="0 0 1.309" pos="3618.29 3831.38 0"/>
+    </entinst>
+    <entinst type="s_zombie46">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie46" orient="0 0 -2.35619" pos="3491.81 4024.48 0"/>
+    </entinst>
+    <entinst type="s_zombie47">
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="s_zombie47" orient="0 0 -1.13446" pos="3371.47 4075.7 0"/>
+    </entinst>
+    <entinst type="s_zombie48">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="s_zombie48" orient="0 0 -2.00713" pos="3612.36 4070.32 0"/>
+    </entinst>
+    <entinst type="s_zombie65">
+        <inst extents="-12.0005 -17.9995 0 35.9995 18.0005 84" name="s_zombie65" orient="0 0 2.44346" pos="3959.31 4660.79 0"/>
+    </entinst>
+    <entinst type="s_zombie66">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="s_zombie66" orient="0 0 -0.785398" pos="3756.93 4849.24 0"/>
+    </entinst>
+    <entinst type="s_zombie67">
+        <inst extents="-12 -18 0 36 18 84" name="s_zombie67" orient="0 0 -0.698132" pos="3384.28 4728.78 0"/>
+    </entinst>
+    <entinst type="s_graveleader01">
+        <inst extents="-12 -18 0 36 18 84" name="s_graveleader01" orient="0 0 -1.5708" pos="1500 3900 -120"/>
+    </entinst>
+    <entinst type="ss_firegiant_a">
+        <inst extents="-12 -18 0 36 18 84" name="ss_firegiant_a" orient="0 0 -1.5708" pos="1200 2422 -240.083"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_firegiant_a" orient="0 0 3.14159" pos="2880 3600 -240.083"/>
+    </entinst>
+    <entinst type="s_cryptspawn02">
+        <inst extents="-12 -18 0 36 18 84" name="s_cryptspawn02" orient="0 0 -1.5708" pos="3720 4522.8 22.4033"/>
+    </entinst>
+    <entinst type="s_cryptspawn01">
+        <inst extents="-12 -18 0 36 18 84" name="s_cryptspawn01" orient="0 0 -1.5708" pos="3120 4522.8 22.4033"/>
+    </entinst>
+    <entinst type="sp_blackheart_res">
+        <inst extents="-12 -18 0 36 18 84" name="sp_blackheart_res" orient="0 0 -1.5708" pos="1728 5824 0"/>
+    </entinst>
+    <entinst type="s_blackheart">
+        <inst extents="-12 -18 0 36 18 84" name="s_blackheart" orient="0 0 -1.5708" pos="1620 5860 0"/>
+    </entinst>
+    <entinst type="comic_scorpion">
+        <inst name="comic_scorpion" pos="1500 3840 -120"/>
+    </entinst>
+    <entinst type="concept_art19">
+        <inst name="concept_art19" pos="3720 4500 22.4033"/>
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="1740 3300 -120"/>
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="3120 4500 22.4033"/>
+    </entinst>
+    <entinst type="axe_mep_w">
+        <inst name="axe_mep_w" orient="-1.5708 2.68221e-007 1.5708" pos="1331.1 3780 -71"/>
+        <inst name="axe_mep_w" orient="-1.5708 0 -1.5708" pos="1668.9 3780 -71"/>
+    </entinst>
+    <entinst type="brazier_mep_e">
+        <inst name="brazier_mep_e" orient="0 0 -2.35619" pos="900.05 899.95 -72"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="816 1416 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1416 3984 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1824 696 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="1824 3384 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1824 3216 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="2040 3120 -72"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="3540.05 3420.05 48"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="1824 864 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="1416 696 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1464 1416 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1416 864 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="1584 3984 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="1464 1584 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="816 1584 -120"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="1979.95 1380.05 -72"/>
+        <inst name="brazier_mep_e" orient="0 0 1.5708" pos="1848 6996 361"/>
+        <inst name="brazier_mep_e" orient="0 0 -1.5708" pos="1392 6996 361"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="3036 4584 17.4033"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="3204 4584 17.4033"/>
+        <inst name="brazier_mep_e" orient="0 0 0.785398" pos="3636 4584 17.4033"/>
+        <inst name="brazier_mep_e" orient="0 0 -0.785398" pos="3804 4584 17.4033"/>
+        <inst name="brazier_mep_e" orient="0 0 2.35619" pos="2939.95 5339.95 48"/>
+    </entinst>
+    <entinst type="creepy_torch_mep_b">
+        <inst name="creepy_torch_mep_b06" orient="0 0 -1.5708" pos="2740 3704 -240.083"/>
+        <inst name="creepy_torch_mep_b01" pos="1092 2380 -240.083"/>
+        <inst name="creepy_torch_mep_b02" pos="1092 2300 -240.083"/>
+        <inst name="creepy_torch_mep_b03" orient="0 0 3.14159" pos="1307.6 2380 -240.083"/>
+        <inst name="creepy_torch_mep_b04" orient="0 0 3.14159" pos="1307.6 2300 -240.083"/>
+        <inst name="creepy_torch_mep_b05" orient="0 0 -1.5708" pos="2660 3704 -240.083"/>
+        <inst name="creepy_torch_mep_b12" orient="0 0 1.5708" pos="2500 4936 -120.083"/>
+        <inst name="creepy_torch_mep_b07" orient="0 0 1.5708" pos="2660 3496 -240.083"/>
+        <inst name="creepy_torch_mep_b08" orient="0 0 1.5708" pos="2740 3496 -240.083"/>
+        <inst name="creepy_torch_mep_b09" orient="0 0 -1.5708" pos="2420 5144 -120.083"/>
+        <inst name="creepy_torch_mep_b10" orient="0 0 -1.5708" pos="2500 5144 -120.083"/>
+        <inst name="creepy_torch_mep_b11" orient="0 0 1.5708" pos="2420 4936 -120.083"/>
+    </entinst>
+    <entinst type="door_crypt01">
+        <inst name="door_crypt01" pos="3120 4500 0"/>
+        <inst name="door_crypt02" pos="3720 4500 0"/>
+    </entinst>
+    <entinst type="crypt_fire_giant_roof_mep_e">
+        <inst name="crypt_fire_giant_roof_mep_e" pos="3720 4500 0"/>
+        <inst name="crypt_fire_giant_roof_mep_e" pos="3120 4500 0"/>
+    </entinst>
+    <entinst type="fence_10ft_mep_b">
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="819.322 3068.8 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1575.89 3068.8 -120"/>
+        <inst name="fence_10ft_mep_b" pos="990.399 3382.28 -120"/>
+        <inst name="fence_10ft_mep_b" pos="851.198 3382.28 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="1062.28 3588.8 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="1062.28 3449.6 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 3.14159" pos="1129.6 3656.13 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 3.14159" pos="1812 3807.65 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 3.14159" pos="1951.2 3807.65 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="823.071 1308 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1297.72 2929.6 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="2020.93 3459.68 -120"/>
+        <inst name="fence_10ft_mep_b" pos="1953.6 3392.59 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="2018.53 3740.32 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3537.72 3849.6 0"/>
+        <inst name="fence_10ft_mep_b" pos="3609.6 3782.28 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3337.72 3849.6 0"/>
+        <inst name="fence_10ft_mep_b" pos="3270.4 3782.28 0"/>
+        <inst name="fence_10ft_mep_b" pos="3390.4 3342.28 0"/>
+        <inst name="fence_10ft_mep_b" pos="1508.8 2862.28 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3737.72 4070.4 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3737.72 3931.2 0"/>
+        <inst name="fence_10ft_mep_b" pos="3370.4 4142.28 0"/>
+        <inst name="fence_10ft_mep_b" pos="3509.6 4142.28 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="3622.28 3569.6 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="819.322 2929.6 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3177.72 4868.8 0"/>
+        <inst name="fence_10ft_mep_b" pos="3249.6 4940.68 0"/>
+        <inst name="fence_10ft_mep_b" pos="3388.8 4940.68 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3455.89 5008 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3455.89 5276.65 0"/>
+        <inst name="fence_10ft_mep_b" pos="3929.6 4822.28 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3857.72 4889.6 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3857.72 5028.8 0"/>
+        <inst name="fence_10ft_mep_b" pos="1760.32 6384.8 -1.52589e-005"/>
+        <inst name="fence_10ft_mep_b" pos="1479.68 6384.8 -1.52589e-005"/>
+        <inst name="fence_10ft_mep_b" pos="1980 5244 0"/>
+        <inst name="fence_10ft_mep_b" pos="1692 5244 0"/>
+        <inst name="fence_10ft_mep_b" pos="1548 5244 0"/>
+        <inst name="fence_10ft_mep_b" pos="1369.6 2862.28 -120"/>
+        <inst name="fence_10ft_mep_b" pos="891.198 2862.28 -120"/>
+        <inst name="fence_10ft_mep_b" pos="1030.4 2862.28 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="2056.69 832.6 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="2056.69 971.801 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -3.14159" pos="1711.2 1456.97 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -3.14159" pos="1572 1456.97 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1778.53 1389.64 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -3.14159" pos="1850.4 1178.57 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1778.53 1250.44 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="2056.93 1111 -120"/>
+        <inst name="fence_10ft_mep_b" pos="890.396 1099.07 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3177.72 4729.6 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1575.89 2929.6 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="3097.72 4070.4 0"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="823.071 1166.4 -120"/>
+        <inst name="fence_10ft_mep_b" pos="1308 820.911 -120"/>
+        <inst name="fence_10ft_mep_b" pos="1168.8 820.911 -120"/>
+        <inst name="fence_10ft_mep_b" pos="1989.6 1183.12 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 -1.5708" pos="1101.47 887.997 -120"/>
+        <inst name="fence_10ft_mep_b" orient="0 0 1.5708" pos="1097.72 2929.6 -120"/>
+    </entinst>
+    <entinst type="fence_post_mep_b">
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="1578.16 2999.2 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="821.598 2999.2 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="821.598 3138.4 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="1578.16 3138.4 -120"/>
+        <inst name="fence_post_mep_b" pos="1060 3380 -120"/>
+        <inst name="fence_post_mep_b" pos="920.799 3380 -120"/>
+        <inst name="fence_post_mep_b" pos="781.598 3380 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 -1.5708" pos="1060 3658.4 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 -1.5708" pos="1060 3519.2 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 3.14159" pos="1199.2 3658.4 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 3.14159" pos="1881.6 3809.92 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 3.14159" pos="2020.8 3809.92 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="1100 2999.2 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="1300 2999.2 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="2023.2 3390.08 -120"/>
+        <inst name="fence_post_mep_b" pos="1884 3390.31 -120"/>
+        <inst name="fence_post_mep_b" pos="3324.21 4560 0"/>
+        <inst name="fence_post_mep_b" pos="3300.21 4560 0"/>
+        <inst name="fence_post_mep_b" pos="3515.79 4560 0"/>
+        <inst name="fence_post_mep_b" pos="3539.79 4560 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3540 3919.2 0"/>
+        <inst name="fence_post_mep_b" pos="3540 3780 0"/>
+        <inst name="fence_post_mep_b" pos="3679.2 3780 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3340 3919.2 0"/>
+        <inst name="fence_post_mep_b" pos="3340 3780 0"/>
+        <inst name="fence_post_mep_b" pos="3200.8 3780 0"/>
+        <inst name="fence_post_mep_b" pos="3320.8 3340 0"/>
+        <inst name="fence_post_mep_b" pos="3460 3340 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3100 4140 0"/>
+        <inst name="fence_post_mep_b" pos="3100 4000.8 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3740 4140 0"/>
+        <inst name="fence_post_mep_b" pos="3740 4000.8 0"/>
+        <inst name="fence_post_mep_b" pos="3740 3861.6 0"/>
+        <inst name="fence_post_mep_b" pos="3300.8 4140 0"/>
+        <inst name="fence_post_mep_b" pos="3440 4140 0"/>
+        <inst name="fence_post_mep_b" pos="3579.2 4140 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 -1.5708" pos="3620 3500 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 -1.5708" pos="3620 3639.2 0"/>
+        <inst name="fence_post_mep_b" pos="3180 4660 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3180 4799.2 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3180 4938.4 0"/>
+        <inst name="fence_post_mep_b" pos="3319.2 4938.4 0"/>
+        <inst name="fence_post_mep_b" pos="3458.4 4938.4 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3458.16 5346.25 0"/>
+        <inst name="fence_post_mep_b" pos="3999.2 4820 0"/>
+        <inst name="fence_post_mep_b" pos="3860 4820 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3860 4959.2 0"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="3860 5098.4 0"/>
+        <inst name="fence_post_mep_b" pos="1829.92 6382.53 -1.90736e-005"/>
+        <inst name="fence_post_mep_b" pos="1410.08 6382.53 -1.90736e-005"/>
+        <inst name="fence_post_mep_b" pos="2052 5244 0"/>
+        <inst name="fence_post_mep_b" pos="1620 5244 0"/>
+        <inst name="fence_post_mep_b" pos="1476 5244 0"/>
+        <inst name="fence_post_mep_b" pos="1439.2 2860 -120"/>
+        <inst name="fence_post_mep_b" pos="821.598 2860 -120"/>
+        <inst name="fence_post_mep_b" pos="960.799 2860 -120"/>
+        <inst name="fence_post_mep_b" pos="1300 2860 -120"/>
+        <inst name="fence_post_mep_b" pos="1100 2860 -120"/>
+        <inst name="fence_post_mep_b" pos="2058.97 762.999 -120"/>
+        <inst name="fence_post_mep_b" pos="2058.97 902.2 -120"/>
+        <inst name="fence_post_mep_b" pos="1780.8 1459.24 -120"/>
+        <inst name="fence_post_mep_b" pos="1641.6 1459.24 -120"/>
+        <inst name="fence_post_mep_b" orient="0 0 1.5708" pos="1780.8 1320.04 -120"/>
+        <inst name="fence_post_mep_b" pos="1920 1180.84 -120"/>
+        <inst name="fence_post_mep_b" pos="1780.8 1180.84 -120"/>
+        <inst name="fence_post_mep_b" pos="959.997 1096.8 -120"/>
+        <inst name="fence_post_mep_b" pos="820.796 1096.8 -120"/>
+        <inst name="fence_post_mep_b" pos="820.796 1238.4 -120"/>
+        <inst name="fence_post_mep_b" pos="1099.2 957.598 -120"/>
+        <inst name="fence_post_mep_b" pos="2059.2 1041.4 -120"/>
+        <inst name="fence_post_mep_b" pos="2059.2 1180.6 -120"/>
+        <inst name="fence_post_mep_b" pos="1099.2 818.397 -120"/>
+        <inst name="fence_post_mep_b" pos="1238.4 818.397 -120"/>
+        <inst name="fence_post_mep_b" pos="1578.4 2860 -120"/>
+    </entinst>
+    <entinst type="gravestone_01_mep_b11">
+        <inst name="gravestone_01_mep_b11" orient="0 0 3.14159" pos="2302.86 5590.69 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 -1.5708" pos="1584 1440 -120"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 1.5708" pos="1020 2875.99 -120"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 -1.5708" pos="1820 3792.01 -120"/>
+        <inst name="gravestone_01_mep_b11" pos="3203.99 4860 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 1.5708" pos="3500 4160 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 -0.785398" pos="977.643 6110.75 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 0.523599" pos="956.547 5758.31 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 0.523599" pos="1011.58 5662.98 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 3.14159" pos="2302.86 5700.77 0"/>
+        <inst name="gravestone_01_mep_b11" orient="0 0 -2.18166" pos="2239.33 6127.49 0"/>
+        <inst name="gravestone_01_mep_b11" pos="840 1296 -120"/>
+    </entinst>
+    <entinst type="gravestone_02_mep_b">
+        <inst name="gravestone_02_mep_b" pos="864 1152 -120"/>
+        <inst name="gravestone_02_mep_b" orient="0 0 1.5708" pos="1728 1416 -120"/>
+        <inst name="gravestone_02_mep_b" orient="0 0 1.5708" pos="1360 2892 -120"/>
+        <inst name="gravestone_02_mep_b" orient="0 0 -1.5708" pos="840 3348 -120"/>
+        <inst name="gravestone_02_mep_b" orient="0 0 1.5708" pos="3280 3811.47 0"/>
+    </entinst>
+    <entinst type="gravestone_cross_mep_th">
+        <inst name="gravestone_cross_mep_th" pos="2040 1123.2 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 -1.5708" pos="1171.2 840 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 1.5708" pos="3380 4149.25 0"/>
+        <inst name="gravestone_cross_mep_th" pos="2040 983.2 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 1.5708" pos="900 2872 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 1.5708" pos="1020 3368 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 1.5708" pos="1940 3408 -120"/>
+        <inst name="gravestone_cross_mep_th" orient="0 0 1.5708" pos="3620 3792 0"/>
+    </entinst>
+    <entinst type="gravestone_large_mep_th">
+        <inst name="gravestone_large_mep_th" orient="0 0 -3.14159" pos="1296 840 -120"/>
+        <inst name="gravestone_large_mep_th" orient="0 0 3.14159" pos="1500 2872 -120"/>
+        <inst name="gravestone_large_mep_th" pos="1940 3800 -120"/>
+        <inst name="gravestone_large_mep_th" orient="0 0 1.5708" pos="3206.5 4740 0"/>
+    </entinst>
+    <entinst type="lava_skull_mep_b">
+        <inst name="lava_skull_mep_b" orient="0 0 -1.5708" pos="1826.92 3300 -120"/>
+        <inst name="lava_skull_mep_b" orient="0 0 1.5708" pos="1308 3852 -120"/>
+        <inst name="lava_skull_mep_b" orient="0 0 -1.5708" pos="1692 3708 -120"/>
+        <inst name="lava_skull_mep_b" orient="0 0 -1.5708" pos="1692 3852 -120"/>
+        <inst name="lava_skull_mep_b" orient="0 0 1.5708" pos="1308 3708 -120"/>
+    </entinst>
+    <entinst type="pillar_01_mep_e">
+        <inst name="pillar_01_mep_e" pos="1788 612 -120"/>
+        <inst name="pillar_01_mep_e" pos="1788 948 -120"/>
+        <inst name="pillar_01_mep_e" pos="1452 948 -120"/>
+        <inst name="pillar_01_mep_e" pos="1332 3948 -120"/>
+        <inst name="pillar_01_mep_e" pos="2880 3680 -240.083"/>
+        <inst name="pillar_01_mep_e" pos="1668 3948 -120"/>
+        <inst name="pillar_01_mep_e" pos="2520 3680 -240.083"/>
+        <inst name="pillar_01_mep_e" pos="2520 3520 -240.083"/>
+        <inst name="pillar_01_mep_e" pos="1754.85 6415.6 0"/>
+        <inst name="pillar_01_mep_e" pos="1469.43 6415.6 0"/>
+        <inst name="pillar_01_mep_e" pos="1860 5580 0"/>
+        <inst name="pillar_01_mep_e" pos="1380 5580 0"/>
+        <inst name="pillar_01_mep_e" pos="1380 6060 0"/>
+        <inst name="pillar_01_mep_e" pos="2880 3520 -240.083"/>
+        <inst name="pillar_01_mep_e" pos="1452 612 -120"/>
+    </entinst>
+    <entinst type="pillar_02_mep_e">
+        <inst name="pillar_02_mep_e" pos="1680 4920 0"/>
+        <inst name="pillar_02_mep_e" pos="1500 5820 0"/>
+        <inst name="pillar_02_mep_e" pos="1860 6060 0"/>
+    </entinst>
+    <entinst type="pillar_03_mep_e">
+        <inst name="pillar_03_mep_e" orient="0 0 3.14159" pos="1740 5820 0"/>
+        <inst name="pillar_03_mep_e" pos="1680 5160 0"/>
+    </entinst>
+    <entinst type="rock_01_mep_th">
+        <inst name="rock_01_mep_th" orient="0 0 -3.05433" pos="3677.61 5227.38 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="2898.19 4732.96 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1312.25 5447.17 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="2076.29 5686.13 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1674.68 6108.56 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1384.18 5987.02 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1405.51 6313.41 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.05433" pos="2226.6 3419.05 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -2.70526" pos="1541.48 5269.66 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="914.813 5669.01 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.74533" pos="1101.71 3687.98 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -1.48353" pos="1332.27 1294.05 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="2321.91 5464.22 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" pos="1369.78 409.595 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -2.35619" pos="1534.35 2826.66 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1492.06 5282.95 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.05433" pos="792.333 1331.47 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 1.65806" pos="1938.23 5908.88 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.05433" pos="3658.94 3746.38 -1.52588e-005"/>
+        <inst name="rock_01_mep_th" orient="0 0 -2.35619" pos="1474.3 1899.68 -120"/>
+    </entinst>
+    <entinst type="rock_02_mep_th">
+        <inst name="rock_02_mep_th" pos="2403.39 5924.57 0"/>
+        <inst name="rock_02_mep_th" pos="1439.07 6064.24 0"/>
+        <inst name="rock_02_mep_th" pos="1307.49 453.071 -120"/>
+        <inst name="rock_02_mep_th" pos="3420.53 5289.08 0"/>
+        <inst name="rock_02_mep_th" orient="0 0 -1.5708" pos="3722.33 4674.77 0"/>
+        <inst name="rock_02_mep_th" pos="3274.63 3405.86 0"/>
+        <inst name="rock_02_mep_th" pos="1265.31 3961.31 -120"/>
+        <inst name="rock_02_mep_th" pos="762.115 3170.53 -120"/>
+        <inst name="rock_02_mep_th" pos="1800.35 5828.76 0"/>
+        <inst name="rock_02_mep_th" pos="1434.72 1946.89 -120"/>
+    </entinst>
+    <entinst type="rock_03_mep_th">
+        <inst name="rock_03_mep_th" orient="0 0 3.05433" pos="550.571 1517.93 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 1.5708" pos="987.353 2699.53 -120"/>
+        <inst name="rock_03_mep_th" pos="3900.87 4313.38 0"/>
+        <inst name="rock_03_mep_th" orient="0 0 -1.5708" pos="1319.65 1336.92 -120"/>
+        <inst name="rock_03_mep_th" pos="1776.36 3866.35 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 1.5708" pos="3388.98 5342.19 0"/>
+        <inst name="rock_03_mep_th" orient="0 0 -1.5708" pos="2136.72 3902.38 -120"/>
+    </entinst>
+    <entinst type="skull_mep_th">
+        <inst name="skull_mep_th" orient="0 0 1.5708" pos="2957.77 5343.11 48.073"/>
+        <inst name="skull_mep_th" orient="0 0 -2.18166" pos="2928.3 5350.98 48.073"/>
+        <inst name="skull_mep_th" pos="1738.37 5786.36 3.11253"/>
+        <inst name="skull_mep_th" orient="0 0 -0.349066" pos="2933.62 5324.9 48.073"/>
+        <inst name="skull_mep_th" orient="0 0 0.959931" pos="3551.7 3409.02 48.073"/>
+        <inst name="skull_mep_th" orient="0 0 -1.5708" pos="3522.23 3416.89 48.073"/>
+        <inst name="skull_mep_th" orient="0 0 2.79253" pos="3546.38 3435.1 48.073"/>
+        <inst name="skull_mep_th" orient="0 0 0.959931" pos="2051.65 3108.97 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 -1.5708" pos="2022.18 3116.84 -71.927"/>
+        <inst name="skull_mep_th" pos="1983.11 1362.23 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 -1.91986" pos="1964.9 1386.38 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 2.53073" pos="1990.98 1391.7 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 3.14159" pos="896.887 917.774 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 1.22173" pos="915.096 893.619 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 -0.610866" pos="889.018 888.304 -71.927"/>
+        <inst name="skull_mep_th" orient="0 0 2.79253" pos="2046.33 3135.05 -71.927"/>
+    </entinst>
+    <entinst type="skull_mep_th13">
+        <inst name="skull_mep_th13" orient="0 0 -1.5708" parent="creepy_torch_mep_b04" pos="1307.6 2300 -168"/>
+        <inst name="skull_mep_th12" orient="0 0 -1.5708" parent="creepy_torch_mep_b03" pos="1307.6 2380 -168"/>
+        <inst name="skull_mep_th11" orient="0 0 1.5708" parent="creepy_torch_mep_b02" pos="1092 2300 -168"/>
+        <inst name="skull_mep_th10" orient="0 0 1.5708" parent="creepy_torch_mep_b01" pos="1092 2380 -168"/>
+        <inst name="skull_mep_th14" parent="creepy_torch_mep_b05" pos="2660 3704 -168"/>
+        <inst name="skull_mep_th15" parent="creepy_torch_mep_b06" pos="2740 3704 -168"/>
+        <inst name="skull_mep_th16" orient="0 0 3.14159" parent="creepy_torch_mep_b07" pos="2660 3496 -168"/>
+        <inst name="skull_mep_th17" orient="0 0 3.14159" parent="creepy_torch_mep_b08" pos="2740 3496 -168"/>
+        <inst name="skull_mep_th24" parent="creepy_torch_mep_b09" pos="2420 5144 -48"/>
+        <inst name="skull_mep_th25" parent="creepy_torch_mep_b10" pos="2500 5144 -48"/>
+        <inst name="skull_mep_th26" orient="0 0 3.14159" parent="creepy_torch_mep_b11" pos="2420 4936 -48"/>
+        <inst name="skull_mep_th27" orient="0 0 3.14159" parent="creepy_torch_mep_b12" pos="2500 4936 -48"/>
+    </entinst>
+    <entinst type="ff_cages">
+        <inst name="ff_cages" pos="1620.0 6400.0 -9.53682e-006"/>
+    </entinst>
+    <entinst type="spear_mep_w">
+        <inst name="spear_mep_w" orient="-1.5708 0 -2.26893" pos="1461.76 5989.05 12"/>
+        <inst name="spear_mep_w" orient="-1.5708 0 0.523598" pos="2037.76 5353.05 12"/>
+        <inst name="spear_mep_w" orient="-1.5708 0 3.14159" pos="1509.76 3973.05 -64"/>
+    </entinst>
+    <entinst type="statue_01_mep_b">
+        <inst name="statue_01_mep_b" pos="2460 5135.61 -120.083"/>
+        <inst name="statue_01_mep_b" orient="0 0 3.14159" pos="2700 3506.79 -240.083"/>
+        <inst name="statue_01_mep_b" orient="0 0 3.14159" pos="2460 4946.79 -120.083"/>
+        <inst name="statue_01_mep_b" pos="2700 3693.21 -240.083"/>
+        <inst name="statue_01_mep_b" orient="0 0 -1.5708" pos="1293.21 2340 -240.083"/>
+        <inst name="statue_01_mep_b" orient="0 0 1.5708" pos="1104.39 2340 -240.083"/>
+    </entinst>
+    <entinst type="statue_02_mep_b">
+        <inst name="statue_02_mep_b" pos="2004 5172 0"/>
+        <inst name="statue_02_mep_b" pos="2004 4908 0"/>
+        <inst name="statue_02_mep_b" orient="0 0 -1.5708" pos="1135.64 2953.19 -120"/>
+        <inst name="statue_02_mep_b" orient="0 0 3.14159" pos="3411.36 5208.36 0"/>
+        <inst name="statue_02_mep_b" orient="0 0 -1.5708" pos="3503.95 3873.19 0"/>
+        <inst name="statue_02_mep_b" orient="0 0 3.14159" pos="3411.36 5080.05 0"/>
+        <inst name="statue_02_mep_b" orient="0 0 -1.5708" pos="1263.95 2953.19 -120"/>
+        <inst name="statue_02_mep_b" pos="2067.61 3535.64 -120"/>
+        <inst name="statue_02_mep_b" pos="2067.61 3663.73 -120"/>
+        <inst name="statue_02_mep_b" orient="0 0 -1.5708" pos="3375.64 3873.19 0"/>
+    </entinst>
+    <entinst type="statue_15ft_mep_e">
+        <inst name="statue_15ft_mep_e" orient="0 0 0.0872662" pos="1438.67 6560 120"/>
+        <inst name="statue_15ft_mep_e" orient="0 0 3.14159" pos="1800 6560 120"/>
+    </entinst>
+    <entinst type="stone_archway_mep_e">
+        <inst name="stone_archway_mep_e" pos="1200 3000 -120"/>
+        <inst name="stone_archway_mep_e" pos="1836 5244 0"/>
+        <inst name="stone_archway_mep_e" pos="1620.0 6400.0 -9.53682e-006"/>
+        <inst name="stone_archway_mep_e" orient="0 0 -1.5708" pos="3458.16 5144 0"/>
+        <inst name="stone_archway_mep_e" pos="3440 3920 0"/>
+        <inst name="stone_archway_mep_e" pos="3420 4560 0"/>
+        <inst name="stone_archway_mep_e" orient="0 0 1.5708" pos="2020.8 3600 -120"/>
+    </entinst>
+    <entinst type="stone_coffin_mep_b">
+        <inst name="stone_coffin_mep_b" orient="-1.5708 0 3.14159" pos="3120 4604 100.471"/>
+        <inst name="stone_coffin_mep_b" orient="0 0 1.5708" pos="1764.81 780 -120"/>
+        <inst name="stone_coffin_mep_b" orient="0 0 -1.5708" pos="1475.19 780 -120"/>
+        <inst name="stone_coffin_mep_b" orient="-1.5708 0 3.14159" pos="3720 4604 100.471"/>
+    </entinst>
+    <entinst type="treasure_chest_mep_a">
+        <inst name="treasure_chest_mep_a" pos="1500 4240 -120"/>
+    </entinst>
+    <entinst type="treasure_spawn_chest_mep_a">
+        <inst name="treasure_spawn_chest_mep_a" orient="0 0 1.5708" pos="852 1500 -120"/>
+        <inst name="treasure_spawn_chest_mep_a" orient="0 0 -1.5708" pos="1428 1500 -120"/>
+    </entinst>
+    <entinst type="cage_drop">
+        <inst name="cage_drop" pos="3360 2280 0"/>
+    </entinst>
+    <entinst type="cage_open_n">
+        <inst name="cage_open_n" orient="0 0 -1.5708" pos="1500 6948 360"/>
+        <inst name="cage_open_p" orient="0 0 1.5708" pos="1740 6948 360"/>
+    </entinst>
+    <entinst type="soul04">
+        <inst name="soul04" pos="900 5940 0"/>
+    </entinst>
+    <entinst type="soul02">
+        <inst name="soul02" orient="0 0 0.523599" pos="1140 5580 0"/>
+    </entinst>
+    <entinst type="soul03">
+        <inst name="soul03" orient="0 0 2.44346" pos="2160 5520 0"/>
+    </entinst>
+    <entinst type="soul05">
+        <inst name="soul05" orient="0 0 3.14159" pos="2220 5820 0"/>
+    </entinst>
+    <entinst type="soul01">
+        <inst name="soul01" orient="0 0 -2.35619" pos="2040 6120 0"/>
+    </entinst>
+    <entinst type="soul06">
+        <inst name="soul06" orient="0 0 -0.610865" pos="1260 6180 0"/>
+    </entinst>
+    <entinst type="urn_01_mep_th16">
+        <inst name="urn_01_mep_th16" pos="1696.74 5292.67 0"/>
+        <inst name="urn_01_mep_th16" pos="1381.31 5537.82 0"/>
+        <inst name="urn_01_mep_th16" pos="1328.58 6048.97 0"/>
+        <inst name="urn_01_mep_th16" pos="1346.11 6017.98 0"/>
+        <inst name="urn_01_mep_th16" pos="1380.08 5621.06 0"/>
+        <inst name="urn_01_mep_th16" pos="1895.82 5614.87 0"/>
+        <inst name="urn_01_mep_th16" orient="0 0 1.5708" pos="1906.45 5584.22 0"/>
+        <inst name="urn_01_mep_th16" pos="1865.2 5627.9 0"/>
+        <inst name="urn_01_mep_th16" pos="1453.01 5809.98 0"/>
+        <inst name="urn_01_mep_th16" pos="1970.24 5292.67 0"/>
+        <inst name="urn_01_mep_th16" pos="1758.55 6332.51 0"/>
+        <inst name="urn_01_mep_th16" pos="1485.05 6332.51 0"/>
+    </entinst>
+    <entinst type="urn_01_mep_th">
+        <inst name="urn_01_mep_th" orient="0 0 -0.610865" pos="1796.32 724.597 -120"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.79253" pos="1933.13 1402.14 -120"/>
+        <inst name="urn_01_mep_th" orient="0 0 1.22173" pos="945.362 926.325 -120"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.79253" pos="1789.49 3314.75 -120"/>
+        <inst name="urn_01_mep_th" orient="0 0 -2.87979" pos="3034.63 4548.11 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.87979" pos="3056.49 4525.23 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 -2.61799" pos="3205.69 4516.75 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 -3.05433" pos="3808.39 4553.8 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.61799" pos="3793.07 4528.72 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.18166" pos="3668.34 4564.2 17.2782"/>
+        <inst name="urn_01_mep_th" orient="0 0 2.53073" pos="3638.25 4550.59 17.2782"/>
+        <inst name="urn_01_mep_th" pos="1450.45 863.923 -120"/>
+    </entinst>
+    <entinst type="urn_02_mep_th">
+        <inst name="urn_02_mep_th" orient="0 0 -0.523599" pos="1442.61 832.421 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 -1.0472" pos="1772.24 703.113 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 -2.44346" pos="1797.14 833.91 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 2.35619" pos="1956.03 1427.35 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 0.785398" pos="955.304 896.048 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 0.2618" pos="851.648 922.963 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 2.35619" pos="1812.39 3339.97 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 1.48353" pos="1817.85 3259.92 -120"/>
+        <inst name="urn_02_mep_th" orient="0 0 2.96706" pos="3065.33 4556.44 17.2782"/>
+        <inst name="urn_02_mep_th" orient="0 0 -3.05433" pos="3203.95 4548.49 17.2782"/>
+        <inst name="urn_02_mep_th" orient="0 0 2.79253" pos="3776.69 4555.06 17.2782"/>
+    </entinst>
+    <entinst type="end_camera_magnet">
+        <inst extents="-414 -288 0 414 288 398.6" name="end_camera_magnet" pos="1626 6874.03 112.72"/>
+    </entinst>
+    <entinst type="soul_zapper04">
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper04" parent="soul02" pos="1140 5580 -60"/>
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper05" parent="soul04" pos="900 5940 -60"/>
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper02" orient="0 0 3.14159" parent="soul05" pos="2220 5820 -60"/>
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper06" parent="soul06" pos="1260 6180 -60"/>
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper03" parent="soul03" pos="2160 5520 -60"/>
+        <inst extents="-108 -108 0 108 108 216" name="soul_zapper01" parent="soul01" pos="2040 6120 -60"/>
+    </entinst>
+    <entinst type="lightent04">
+        <inst extents="-6 -6 -6 6 6 6" name="lightent04" parent="soul02" pos="1140 5580 96"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lightent01" parent="soul05" pos="2220 5820 96"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lightent02" parent="soul01" pos="2040 6120 96"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lightent05" parent="soul04" pos="900 5940 96"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lightent03" parent="soul03" pos="2160 5520 96"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lightent06" parent="soul06" pos="1260 6180 96"/>
+    </entinst>
+    <entinst type="cam_grave01">
+        <inst extents="-6 -6 -6 6 6 6" name="cam_grave01" orient="0 0 0.785398" pos="1620 1320 -84"/>
+    </entinst>
+    <entinst type="fx_torch20">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="3636 4584 60.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="3204 4584 60.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="3036 4584 60.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" orient="0 0 1.5708" pos="2939.95 5339.95 90.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" orient="0 0 -1.5708" pos="3540.05 3420.05 90.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" orient="0 0 -1.5708" pos="2040 3120 -29.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1824 3216 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1824 3384 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1584 3984 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="3804 4584 60.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="900.05 899.95 -29.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1979.95 1380.05 -29.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1824 696 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1416 696 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1416 864 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1464 1416 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1464 1584 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="816 1416 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="816 1584 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1416 3984 -77.874"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch20" pos="1824 864 -77.874"/>
+    </entinst>
+    <entinst type="smoke_fx05">
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="1740 3540 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="1144 3172 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="660 1500 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="1635.6 1272 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="1863.6 540 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="smoke_fx05" pos="3540 4260 0"/>
+    </entinst>
+    <entinst type="fx_zone_link01">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_zone_link01" orient="0 0 1.5708" pos="1620 324 -120"/>
+    </entinst>
+    <entinst type="fx_mephisto4">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_mephisto4" orient="0 0 -1.5708" pos="1620 6864 247"/>
+    </entinst>
+    <entinst type="lock_phoenix">
+        <inst extents="-6 -6 -6 6 6 6" name="lock_phoenix" pos="1848 6996 404.126"/>
+        <inst extents="-6 -6 -6 6 6 6" name="lock_nightcrawler" pos="1392 6996 404.126"/>
+    </entinst>
+    <entinst type="end_camera_mag">
+        <inst extents="-6 -6 -6 6 6 6" name="end_camera_mag" pos="1620 6505.69 515.906"/>
+        <inst extents="-6 -6 -6 6 6 6" name="cam_crypt02" orient="0 0 0.785398" pos="3660 4260 80.6391"/>
+        <inst extents="-6 -6 -6 6 6 6" name="cam_crypt01" orient="0 0 2.35619" pos="3180 4260 80.6391"/>
+    </entinst>
+    <entinst type="backup_spot">
+        <inst extents="-6 -6 -6 6 6 6" name="backup_spot" orient="0 0 -1.5708" pos="1620 6340 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="cam_blackheart" orient="0 0 0.872665" pos="1560 5760 60"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="1620 420 -120"/>
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0241 -95.2953 0 71.9759 48.7832 83.9544" name="player_start_all02" orient="0 0 -1.5708" pos="1620 6732 247.2"/>
+    </entinst>
+    <entinst type="relay_exit">
+        <inst extents="-6 -6 0 6 6 12" name="relay_exit" pos="1620 6912 366.879"/>
+    </entinst>
+    <entinst type="res_blackheart">
+        <inst extents="-6 -6 0 6 6 12" name="res_blackheart" pos="1656 5724 0"/>
+    </entinst>
+    <entinst type="arena_trigger">
+        <inst extents="-1020 -600 0 1020 600 360" name="arena_trigger" pos="1620 5839.44 0"/>
+    </entinst>
+    <entinst type="trig_nightcrawler_no">
+        <inst extents="-60 -12 0 60 12 120" name="trig_nightcrawler_no" pos="1392 6924 360.879"/>
+    </entinst>
+    <entinst type="trig_phoenix_no">
+        <inst extents="-60 -12 0 60 12 120" name="trig_phoenix_no" pos="1845.6 6924 360.879"/>
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-540 -12 0 540 12 240" name="trigger_touch02" pos="1140 1692 -120"/>
+    </entinst>
+    <entinst type="trigger_touch03">
+        <inst extents="-48 -12 0 48 12 120" name="trigger_touch03" pos="1500 3648 -120"/>
+    </entinst>
+    <entinst type="trigger_touch04">
+        <inst extents="-420 -12 0 420 12 240" name="trigger_touch04" pos="3420 3972 0"/>
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-720 -12 0 720 12 240" name="trigger_touch01" pos="1440 1092 -120"/>
+    </entinst>
+    <entinst type="trig_blackheart">
+        <inst extents="-600 -60 0 600 60 240" name="trig_blackheart" pos="1740 5340 0"/>
+    </entinst>
+    <entinst type="trig_phoenix">
+        <inst extents="-24 -18 0 24 18 48" name="trig_phoenix" pos="1848 6990 360.879"/>
+    </entinst>
+    <entinst type="trig_nightcrawler">
+        <inst extents="-24 -18 0 24 18 48" name="trig_nightcrawler" pos="1392 6990 360.879"/>
+    </entinst>
+    <entinst type="wp_1spawngo01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_1spawngo01" pos="3180 4140 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_2spawngo01" pos="3660 4140 0"/>
+    </entinst>
+    <entinst type="wp_blackheartspot01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_blackheartspot01" pos="1620 5825.16 0"/>
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" pos="1380 540 -120"/>
+    </entinst>
+    <entinst type="link_mephisto4">
+        <inst extents="-36 -12 0 36 12 120" name="link_mephisto4" pos="1620 6864 240"/>
+    </entinst>
+    <entinst type="link_mephisto2">
+        <inst extents="-60 -12 0 60 12 120" name="link_mephisto2" pos="1620 324 -120"/>
+    </entinst>
+    <entinst type="fire_large01">
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="1854 544 -120"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="3330 4420 0"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="1398 5320 0"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="942 1852 -120"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="1434 3280 -120"/>
+    </entinst>
+    <entity actcountremove="1" character="NightcrawlerSimple" checkteam="true" classname="monsterspawnerent" monster_name="nightcrawler" monster_spawnexactlocation="true" monster_team="none" name="s_nightcrawler" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="JeanGrey" checkteam="true" classname="monsterspawnerent" monster_name="phoenix_npc" monster_spawnexactlocation="true" monster_team="none" name="s_phoenix" nocollide="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie67" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie67" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie66" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie66" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie65" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie65" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie48" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie48" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie47" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie47" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie46" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie46" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie45" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie45" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie44" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie44" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie42" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie42" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie41" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie41" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie40" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie40" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie39" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie39" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie38" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie38" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie37" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie37" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie33" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie33" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie32" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie32" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie30" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie30" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie29" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie29" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie28" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie28" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie26" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie26" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie25" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie25" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie22" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie22" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie21" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie21" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie20" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie20" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie19" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie19" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie15" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie15" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie14" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie14" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie13" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie13" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie12" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie12" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie11" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie11" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie10" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie10" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie09" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie09" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie08" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie08" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie05" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie05" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie04" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie04" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie03" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie03" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie01" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie01" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie68" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie68" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie69" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie69" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie70" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie70" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie71" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie71" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie73" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie73" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie78" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie78" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie80" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie80" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie81" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie81" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie82" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie82" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie83" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie83" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie84" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie84" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="10" actonvisible="true" character="DemonicSoul_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="s_zombie31" monster_smartent="true" monster_spawnexactlocation="true" name="s_zombie31" nocollide="true" shy="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.75" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn08" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.5" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn07" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.25" actsound="zone_shared/mephisto/digging_out_of_grave" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn12" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn09" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.25" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn10" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actsound="zone_shared/mephisto/digging_out_of_grave" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_aggression="5" monster_smartent="true" monster_spawnexactlocation="true" name="s_gravespawn11" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.5" character="DemonicSoul_b" classname="monsterspawnerent" firstspawnscript="act2/mephisto/mephisto3/gravespawn_1ss" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="s_graveleader01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="FireGiant_a" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_name="cryptspawn01" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" name="s_cryptspawn01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="FireGiant_a" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_name="cryptspawn02" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" name="s_cryptspawn02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="Blackheart" classname="monsterspawnerent" monster_deathscript="act2/mephisto/mephisto3/blackheart_death" monster_name="blackheart" monster_persistent="false" monster_removeondeath="false" monster_smartent="false" monster_spawnexactlocation="true" monster_team="enemy" name="s_blackheart" nocollide="true" nofadeondeath="true" resetstate="true" shadow="true" smartent="false"/>
+    <entity character="Blackheart" classname="monsterspawnerent" monster_deathscript="act2/mephisto/mephisto3/blackheart_death" monster_name="blackheart" monster_persistent="false" monster_removeondeath="false" monster_smartent="false" monster_spawnexactlocation="true" monster_team="enemy" name="sp_blackheart_res" nocollide="true" nofadeondeath="true" resetstate="true" shadow="true" smartent="false"/>
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="Blackheart" monster_deathspawn="Blackheart_treasure" name="Blackheart_treasure" nocollide="true"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="18" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="20" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_l" fxlevel="3" health="150" material="solid_metal" model="mephisto/crypt_fire_giant_doors_mep_b" name="door_crypt01" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="1"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="75" material="rock" model="mephisto/gravestone_01_mep_b" name="gravestone_01_mep_b11" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_s" fxlevel="1" health="20" heaviness="0" loopfx="map/common/fire_torch" loopfxstarton="true" material="rock" model="mephisto/skull_mep_th" name="skull_mep_th13" structure="0"/>
+    <entity animstarton="true" classname="physent" material="energy" model="mephisto/soul_force_field_archway_mep_a" name="ff_cages" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actsound="zone_shared/mephisto/cage_fall" classname="physent" material="solid_metal" model="mephisto/u_hanging_cage_falling_mep_a" name="cage_drop" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="mephisto/u_hanging_cage_mep_a" name="cage_open_n" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper06" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul06" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper01" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul01" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper02" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul05" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper03" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul03" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper04" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul02" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity actinactivedelay="3" actontouch="true" acttargets="soul_zapper05" actteamplayer="true" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_sulpher" deathscript="act2/mephisto/mephisto3/soul_free" deathsound="death_style/ds_sulpher_m" deathspawn="u_soul_chamber_mep_a_b_d" fxlevel="2" health="350" material="energy" model="mephisto/u_soul_chamber_mep_a_b" name="soul04" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="1" team="enemy"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" mass="0" material="energy" model="mephisto/u_soul_chamber_stump_mep_b" name="u_soul_chamber_mep_a_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="mephisto/urn_01_mep_th" name="urn_01_mep_th16" randompickups="5" structure="0"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="end_camera_mag" classname="cameramagnetent" name="end_camera_magnet" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/mephisto/soul_chamber" classname="affectableharment" conversationoff="true" damage="15" damagemods="dmgmod_unblockable dmgmod_auto_knockback" damagetype="dmg_physical" fxlevel="2" informai="false" knockback="1000" name="soul_zapper04" nocollide="true" radiusdamage="true" resetstate="true" smartent="false" team="enemy"/>
+    <entity classname="lightent" lightcolor="1 1 0.94" lightradius="250" name="cam_grave01" nocollide="true" smartent="false" startoff="false"/>
+    <entity classname="lightent" lightcolor="0.79 0.72 0.38" lightradius="200" name="lightent04" nocollide="true" resetstate="true" startoff="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_torch_blue" loopfxstarton="false" name="lock_phoenix" nocollide="true" smartent="false"/>
+    <entity actsound="zone_shared/special/spawn" actsoundloop="zone_shared/special/portal" acttogglesloopfx="true" classname="actionent" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="fx_mephisto4" nocollide="true" resetstate="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/scr_blinkportal" loopfxstarton="true" name="fx_zone_link01" nocollide="true" smartent="true" spawnsoundloop="zone_shared/special/portal"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/steam_large_dark" loopfxstarton="true" name="smoke_fx05" nocollide="true" smartent="true"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_torch" loopfxstarton="true" name="fx_torch20" nocollide="true" smartent="true"/>
+    <entity classname="ent" name="backup_spot" nocollide="true" resetstate="true" smartent="false"/>
+    <entity classname="ent" name="end_camera_mag" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_mephisto3" prevzone="mephisto4"/>
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_mephisto3" prevzone="act2/mephisto/mephisto2"/>
+    <entity actscript="act2/mephisto/mephisto3/res_blackheart" classname="actionent" name="res_blackheart" nocollide="true" resetstate="true" smartent="false"/>
+    <entity actscript="act2/mephisto/mephisto3/exit_enable" classname="actionent" name="relay_exit" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/mephisto/mephisto3/blackheart_arena_in" boxcollision="true" classname="scripttriggerent" deactscript="act2/mephisto/mephisto3/blackheart_arena_out" name="arena_trigger" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act2/mephisto/mephisto3/blackheart_intro" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_blackheart" nocollide="true" resetstate="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act2/mephisto/mephisto3/cs_gravespawn01" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act2/mephisto/mephisto3/cryptspawn_cs" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch04" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="s_gravespawn10 s_graveleader01 s_gravespawn09" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch03" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="s_gravespawn11 s_gravespawn12 s_gravespawn08 s_gravespawn07" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch02" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="startConversation('act2/mephisto/mephisto3/2_mephisto3_016')" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_phoenix_no" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="startConversation('act2/mephisto/mephisto3/2_mephisto3_014')" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_nightcrawler_no" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actonuse="true" actscript="act2/mephisto/mephisto3/nightcrawler_release" boxcollision="true" classname="gameent" description="Release Nightcrawler" hinttype="objective" name="trig_nightcrawler" nocollide="true" quickuse="true" smartent="false" team="none"/>
+    <entity actcountremove="1" actonuse="true" actscript="act2/mephisto/mephisto3/phoenix_release" boxcollision="true" classname="gameent" description="Release Jean Grey" hinttype="objective" name="trig_phoenix" nocollide="true" quickuse="true" smartent="false" team="none"/>
+    <entity classname="waypointent" name="wp_blackheartspot01" nocollide="true" smartent="false" speed="1"/>
+    <entity beeline="true" classname="waypointent" name="wp_1spawngo01" nocollide="true" smartent="false" speed="1"/>
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Inferno" name="link_mephisto2" nextzone="act2/mephisto/mephisto2" nocollide="true" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Stygian Abyss" name="link_mephisto4" nextzone="mephisto4" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_demon_large" loopfxstarton="true" name="fire_large01" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false"/>
+</world>

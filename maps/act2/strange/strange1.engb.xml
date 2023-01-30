@@ -1,0 +1,518 @@
+<world>
+    <entity act="2" combatlocked="true" level="12" name="world" nosave="true" partylight="1 1 1" soundfile="town2" startblack="true" zonescript="act2/strange/strange1"/>
+    <precache filename="act2/strange/2_strange1_010" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_015" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_020" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_030" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_040" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_050" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_060" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_070" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_072" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_080" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_090" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_100" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_102" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_110" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_210" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_220" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_230" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_240" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_250" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_260" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_270" type="conversation"/>
+    <precache filename="act2/strange/2_strange1_280" type="conversation"/>
+    <precache filename="act2/strange/no_enter_bedroom" type="conversation"/>
+    <precache filename="act2/strange/temp_conv" type="conversation"/>
+    <precache filename="act2/strange/strange1/book_vishanti" type="dialog"/>
+    <precache filename="act2/strange/strange1/crystal_haggoth" type="dialog"/>
+    <precache filename="act2/strange/strange1/orb_agamotto" type="dialog"/>
+    <precache filename="act2/strange/strange1/scepter_dormammu" type="dialog"/>
+    <precache filename="act2/strange/strange1/statue_nightmare" type="dialog"/>
+    <precache filename="act2/strange/strange1/wind_watoomb" type="dialog"/>
+    <precache filename="map/common/teleportation_orb" type="fx"/>
+    <precache filename="map/strange/mirror_of_ancients" type="fx"/>
+    <precache filename="models/bolton/cerebro_helm" type="model"/>
+    <precache filename="act2/strange/check_eye_queen" type="script"/>
+    <precache filename="act2/strange/check_gem_oshtur" type="script"/>
+    <precache filename="act2/strange/check_jean_alive" type="script"/>
+    <precache filename="act2/strange/check_nightcralwer_alive" type="script"/>
+    <precache filename="act2/strange/check_strange_obj30" type="script"/>
+    <precache filename="act2/strange/give_security_mod" type="script"/>
+    <precache filename="act2/strange/load_act3" type="script"/>
+    <precache filename="act2/strange/load_mephisto1" type="script"/>
+    <precache filename="act2/strange/load_murder1" type="script"/>
+    <precache filename="act2/strange/show_mephisto_obj10" type="script"/>
+    <precache filename="act2/strange/show_murder_obj10" type="script"/>
+    <precache filename="act2/strange/show_strange_obj40" type="script"/>
+    <precache filename="act2/strange/strange_welcome02" type="script"/>
+    <precache filename="act2/strange/talk_bw01b" type="script"/>
+    <precache filename="act2/strange/talk_fury01b" type="script"/>
+    <precache filename="act2/strange/talk_jeangrey01_post" type="script"/>
+    <precache filename="act2/strange/talk_mirrorb" type="script"/>
+    <precache filename="act2/strange/talk_pym01b" type="script"/>
+    <precache filename="act2/strange/talk_vision01b" type="script"/>
+    <precache filename="act2/strange/talk_wong01_post" type="script"/>
+    <precache filename="act2/strange/xor_bw_convs" type="script"/>
+    <precache filename="act2/strange/xor_fury_convs" type="script"/>
+    <precache filename="common/conv_run_once/run_once21" type="script"/>
+    <precache filename="common/set_importanttalk" type="script"/>
+    <precache filename="zone_shared/strange/orb_tele" type="sound"/>
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" name="sp_drstrangesimple" nocollide="true"/>
+    <entity actcountremove="1" character="JeanGrey" checkteam="true" classname="monsterspawnerent" name="sp_jeangrey" nocollide="true"/>
+    <entity actcountremove="1" character="ProfessorNPC" classname="monsterspawnerent" name="sp_professorxsimple" nocollide="true"/>
+    <entity actcountremove="1" character="BlackWidow" classname="monsterspawnerent" name="sp_blackwidow" nocollide="true"/>
+    <entity actcountremove="1" character="HankPym" classname="monsterspawnerent" name="sp_hankpym" nocollide="true"/>
+    <entity actcountremove="1" character="NickFuryNPC" classname="monsterspawnerent" name="sp_nickfurynpc" nocollide="true"/>
+    <entity actcountremove="1" character="Vision" classname="monsterspawnerent" name="sp_vision" nocollide="true"/>
+    <entity actcountremove="1" character="Wong" classname="monsterspawnerent" name="sp_wong" nocollide="true"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s"/>
+    <entity actinactivedelay="1" actleader="true" actonuse="true" actscript="common/puzzleents/blinkportal" actsoundloop="zone_shared/special/blink_portal" acttogglesloopfx="true" boxcollision="true" classname="gameent" deatheffect="map/common/scr_blinkportal_c" description="Portal" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="blink_portal_loc" nocollide="true" resetstate="true" smartent="false" spawnscript="common/puzzleents/blinkportalspawnscript" startenabled="false" team="hero" toggleonact="true"/>
+    <entity classname="enabletargetent" enable="true" name="enable_target" nocollide="true"/>
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="actionent" name="loop_sound" nocollide="true" smartent="true" toggleonact="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity classname="physent" health="1" name="shoot_me" nocollide="true" nogravity="true" nopickup="true" structure="2"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_cover" nocollide="true" smartent="true"/>
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="strange/armil_drs_e" name="armil_drs_e" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/littlecontactrings" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="strange/cerebro_remote_drs_e" name="cerebro_remote_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="Wood" model="strange/column_25ft_drs_e" name="column_25ft_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="Wood" model="strange/column_support_beam_drs_e" name="column_support_beam_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_l" fxlevel="3" health="75" material="wood" model="strange/door_drs_d" name="door_drs_d" nogravity="true" nopickup="true" nopush="true" openangle="90" structure="0" toggleonact="true"/>
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" material="Wood" model="strange/door_strange_drs_d" name="door_strange_drs_d" nogravity="true" nopickup="true" nopush="true" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/strange/foyer_steps" loopfxstarton="true" material="Wood" model="strange/foyer_steps_drs_a" name="foyer_steps_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="strange/hanging_lamp_drs_e" name="hanging_lamp_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" loopfx="effects/map/strange/mirror_of_ancients" loopfxstarton="true" material="Wood" model="strange/mirror_of_ancients_drs_e" name="mirror_of_ancients_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" loopfx="effects/map/strange/mirror_of_ancients" loopfxstarton="true" material="Wood" model="strange/mirror_of_ancients_gem_drs_e" name="mirror_of_ancients_gem_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actsound="zone_shared/object/console_fighter" classname="physent" material="rock" model="strange/mission_review_drs_a" name="mission_review_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actsound="zone_shared/object/console_fighter" classname="physent" material="solid_metal" model="strange/mission_training_drs_a" name="mission_training_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actsound="zone_shared/object/console_fighter" classname="physent" material="rock" model="strange/mission_trivia_drs_a" name="mission_trivia_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="rock" model="strange/occult_object_06_drs_a" name="occult_object_06_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/strange/orb_of_agamotto" loopfxstarton="true" material="rock" model="strange/orb_of_agamotto_drs_a" name="orb_of_agamotto_drs_a" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/orbofag" structure="2"/>
+    <entity animstarton="true" classname="physent" loopfx="map/strange/teleport_orb" loopfxstarton="true" material="rock" model="strange/orb_of_teleportation_drs_a" name="orb_of_teleportation_drs_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/orboftele" structure="2"/>
+    <entity actonuse="false" classname="physent" material="solid_metal" model="strange/scepter_of_dormammu_drs_e" name="scepter_of_dormammu_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" loopfx="effects/map/strange/mirror_of_ancients_gem" loopfxstarton="true" material="rock" model="strange/small_gem_drs_e" name="small_gem_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="Wood" model="strange/spiral_stairs_drs_e" name="spiral_stairs_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entinst type="sp_drstrangesimple03">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_drstrangesimple03" orient="0 0 3.14159" pos="186 3957.99 2.91849"/>
+    </entinst>
+    <entinst type="sp_drstrangesimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_drstrangesimple01" pos="241.554 767.122 -118.475"/>
+    </entinst>
+    <entinst type="sp_drstrangesimple02">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_drstrangesimple02" orient="0 0 1.5708" pos="3060 1587.36 2.91849"/>
+    </entinst>
+    <entinst type="sp_jeangrey01">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="sp_jeangrey01" orient="0 0 -1.5708" pos="-139.805 3534.03 2.91849"/>
+    </entinst>
+    <entinst type="sp_professorxsimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_professorxsimple01" orient="0 0 1.5708" pos="-139.285 3439.84 0"/>
+    </entinst>
+    <entinst type="sp_blackwidow01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_blackwidow01" pos="387.661 3780 0"/>
+    </entinst>
+    <entinst type="sp_hankpym01">
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="sp_hankpym01" orient="0 0 -1.49226" pos="800.0 3760.0 -9.53674e-006"/>
+    </entinst>
+    <entinst type="sp_nickfurynpc01">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="sp_nickfurynpc01" orient="0 0 -1.5708" pos="573.016 3912.54 5.97873"/>
+    </entinst>
+    <entinst type="sp_vision01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_vision01" pos="725.783 3823.72 2.47168"/>
+    </entinst>
+    <entinst type="sp_wong01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_wong01" orient="0 0 3.11547" pos="808.727 3653.23 0.814183"/>
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="82.4297 3957.99 36.1343"/>
+    </entinst>
+    <entinst type="upgrade_focus02">
+        <inst name="upgrade_focus02" pos="98.9687 4095.49 36.5081"/>
+    </entinst>
+    <entinst type="upgrade_striking01">
+        <inst name="upgrade_striking01" pos="1439.96 3780 0"/>
+    </entinst>
+    <entinst type="blink_portal_loc">
+        <inst extents="-10 -20 0 9.99998 20 60" name="blink_portal_loc" orient="0 0 1.5708" pos="540 3636 0"/>
+    </entinst>
+    <entinst type="enable_target01">
+        <inst extents="-6 -6 0 6 6 12" name="enable_target01" pos="28.4511 3961.66 0"/>
+    </entinst>
+    <entinst type="enable_target02">
+        <inst extents="-6 -6 0 6 6 12" name="enable_target02" pos="45.7331 4105.24 0"/>
+    </entinst>
+    <entinst type="fireplace_light">
+        <inst extents="-6 -6 -6 6 6 6" name="fireplace_light" pos="-119.081 3333.51 22.3087"/>
+    </entinst>
+    <entinst type="meditation_ring">
+        <inst extents="-6 -6 -6 6 6 6" name="meditation_ring" pos="186 3957.99 2.91849"/>
+    </entinst>
+    <entinst type="effect_profx">
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="effect_profx" orient="0 0 1.5708" pos="-139.285 3439.84 0"/>
+    </entinst>
+    <entinst type="loop_effect01">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect01" pos="-119.325 3313.22 12"/>
+    </entinst>
+    <entinst type="loop_sound01">
+        <inst extents="-6 -6.00007 0 6 5.99993 12" name="loop_sound01" orient="0 0 3.14159" pos="186 3957.99 2.91849"/>
+    </entinst>
+    <entinst type="player_start_all07">
+        <inst extents="-48.0244 -95.2952 0 71.9756 48.7833 83.9544" name="player_start_all07" orient="0 0 -3.14159" pos="712.557 3705.82 0"/>
+    </entinst>
+    <entinst type="player_start_all06">
+        <inst extents="-48.0244 -95.2952 0 71.9756 48.7833 83.9544" name="player_start_all06" orient="0 0 -3.14159" pos="712.557 3705.82 0"/>
+    </entinst>
+    <entinst type="player_start_all05">
+        <inst extents="-48.0244 -95.2952 0 71.9756 48.7833 83.9544" name="player_start_all05" orient="0 0 -3.14159" pos="712.557 3705.82 0"/>
+    </entinst>
+    <entinst type="player_start_all03">
+        <inst extents="-48.0244 -95.2952 0 71.9756 48.7833 83.9544" name="player_start_all03" orient="0 0 -3.14159" pos="712.557 3705.82 0"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="540 351.368 -240"/>
+    </entinst>
+    <entinst type="player_start_all04">
+        <inst extents="-48.0244 -95.2952 0 71.9756 48.7833 83.9544" name="player_start_all04" orient="0 0 -3.14159" pos="712.557 3705.82 0"/>
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all02" orient="0 0 -1.5708" pos="540 3923.82 0"/>
+    </entinst>
+    <entinst type="intro_setup">
+        <inst extents="-6 -6 0 6 6 12" name="intro_setup" pos="541.669 3718.65 0"/>
+    </entinst>
+    <entinst type="start_exit">
+        <inst extents="-6 -6 0 6 6 12" name="start_exit" pos="775.932 3706.01 240"/>
+    </entinst>
+    <entinst type="conv_cam">
+        <inst extents="-6 -6 0 6 6 12" name="conv_cam" pos="540 3780 240"/>
+    </entinst>
+    <entinst type="wp_occult_c01_">
+        <inst extents="-6 -6 0 6 6 12" name="wp_occult_c01_" pos="1561.13 3953.18 54"/>
+        <inst extents="-6 -6 0 6 6 12" name="wp_occult_b01_" pos="1440 3954.79 54"/>
+        <inst extents="-6 -6 0 6 6 12" name="wp_occult_e01_" pos="1438.98 3605.4 54"/>
+        <inst extents="-6 -6 0 6 6 12" name="wp_occult_d01_" pos="1320 3605.71 54"/>
+        <inst extents="-6 -6 0 6 6 12" name="wp_occult_a01_" pos="1320 3953.18 54"/>
+    </entinst>
+    <entinst type="bw_walk">
+        <inst extents="-6 -6 0 6 6 12" name="bw_walk" pos="419.597 3779.39 120"/>
+    </entinst>
+    <entinst type="misc_strange_object06">
+        <inst extents="-32 -31.9998 0 32 32.0002 120" name="misc_strange_object06" pos="98.9686 4090.88 0"/>
+    </entinst>
+    <entinst type="misc_strange_object05">
+        <inst extents="-32 -48 0 32 48 120" name="misc_strange_object05" pos="344.363 3780 0"/>
+    </entinst>
+    <entinst type="misc_strange_object04">
+        <inst extents="-48 -48 0 48 48 120" name="misc_strange_object04" pos="540 3908.5 0"/>
+    </entinst>
+    <entinst type="misc_strange_object03">
+        <inst extents="-48 -64 0 48 64 120" name="misc_strange_object03" pos="104.093 3957.99 0"/>
+    </entinst>
+    <entinst type="center">
+        <inst extents="-138 -120 0 138 120 120" name="center" pos="543.784 3782.65 0"/>
+        <inst extents="-120 -132 0 120 132 120" name="occult" pos="1398.3 3787.14 0"/>
+        <inst extents="-120 -48 0 120 48 120" name="studya" pos="-24.6669 3656.31 0"/>
+        <inst extents="-42 -132 0 42 132 120" name="siting_area" pos="938.104 3699.91 0"/>
+        <inst extents="-120 -60 0 120 60 120" name="studyb" pos="-114.477 3444.78 0"/>
+    </entinst>
+    <entinst type="misc_strange_object02">
+        <inst extents="-48 -48 0 48 48 120" name="misc_strange_object02" pos="1533.53 3780 0"/>
+    </entinst>
+    <entinst type="misc_strange_object01">
+        <inst extents="-24 -24 0 24 24 120" name="misc_strange_object01" pos="1440 3780 0"/>
+    </entinst>
+    <entinst type="trigger_grab_gem">
+        <inst extents="-24 -12 0 24 12 60" name="trigger_grab_gem" pos="362.742 385.152 -240"/>
+    </entinst>
+    <entinst type="trigger_use05">
+        <inst extents="-60 -12 0 60 12 120" name="trigger_use05" pos="540.0 3564.0 -1.52588e-005"/>
+    </entinst>
+    <entinst type="trigger_use04">
+        <inst extents="-60 -15 0 60 15 120" name="trigger_use04" pos="3060.0 2550.0 -1.52588e-005"/>
+    </entinst>
+    <entinst type="trigger_use03">
+        <inst extents="-60 -15 0 60 15 120" name="trigger_use03" pos="3060.0 1407.0 -1.52588e-005"/>
+    </entinst>
+    <entinst type="trigger_use02">
+        <inst extents="-60 -15 0 60 15 120" name="trigger_use02" pos="180 870 -120"/>
+        <inst extents="-60 -15 0 60 15 120" name="trigger_use02" pos="900 870 -120"/>
+    </entinst>
+    <entinst type="trigger_use06">
+        <inst extents="-12 -30 0 12 30 120" name="trigger_use06" pos="301.058 3901.38 0"/>
+    </entinst>
+    <entinst type="wp_intro02">
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="wp_intro02" orient="0 0 -1.5708" pos="541.695 750.326 -120"/>
+    </entinst>
+    <entinst type="wp_intro01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_intro01" pos="333.74 750.326 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="spawn_pt" pos="247.554 767.122 -120"/>
+    </entinst>
+    <entinst type="wp_hero_a01">
+        <inst extents="-5.99999 -5.99999 -6 6.00001 6.00001 6" name="wp_hero_a01" orient="0 0 1.5708" pos="466 422 -240"/>
+        <inst extents="-5.99999 -5.99999 -6 6.00001 6.00001 6" name="wp_hero_b01" orient="0 0 1.5708" pos="510 416 -240"/>
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="wp_hero_d01" orient="0 0 1.5708" pos="590.166 416 -240"/>
+        <inst extents="-5.99999 -6.00002 -6 6.00001 5.99998 6" name="wp_hero_c01" orient="0 0 1.5708" pos="554 416 -240"/>
+    </entinst>
+    <entinst type="waypoint">
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="hide_spot01" orient="0 0 1.5708" pos="480.413 143.42 -240"/>
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="hide_spot02" orient="0 0 1.5708" pos="516.352 143.42 -240"/>
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="hide_spot03" orient="0 0 1.5708" pos="561.387 142.521 -240"/>
+        <inst extents="-6 -6.00001 -6 6 5.99999 6" name="hide_spot04" orient="0 0 1.5708" pos="599.874 142.521 -240"/>
+        <inst extents="-6.00002 -5.99997 -6 5.99998 6.00003 6" name="inner_sanctum" orient="0 0 1.5708" pos="540 3594 0"/>
+        <inst extents="-6 -5.99989 -6 6 6.00011 6" name="profx01" orient="0 0 -3.05433" pos="-87.8101 3454.08 0"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="profx02" orient="0 0 -1.5708" pos="-120.592 3661.43 0"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="jeangrey02" orient="0 0 -1.5708" pos="-120.592 3661.43 0"/>
+        <inst extents="-5.99975 -5.99985 -8.49979 6.00025 6.00015 3.50021" name="orb_camera" orient="0.523599 0 -2.53073" pos="759.506 3706.15 42"/>
+        <inst extents="-6.00001 -6.00003 -6 5.99999 5.99997 6" name="fury_01" orient="0 0 2.44346" pos="612.995 3871.22 0"/>
+        <inst extents="-5.99996 -6.00003 -6 6.00004 5.99997 6" name="fury_02" orient="0 0 1.5708" pos="540.117 3701.67 0"/>
+        <inst extents="-6.00001 -6.00007 -6 5.99999 5.99993 6" name="pym01" orient="0 0 -0.698132" pos="743.645 3797.37 0"/>
+        <inst extents="-5.99995 -5.99988 -6 6.00005 6.00012 6" name="pym02" orient="0 0 0.261799" pos="624.045 3659.08 0"/>
+        <inst extents="-6.00002 -5.99994 -6 5.99998 6.00006 6" name="jean01" orient="0 0 0.349066" pos="-198.853 3498.58 2.91849"/>
+        <inst extents="-6.00009 -6.00004 -6 5.99991 5.99996 6" name="pym_spot01" orient="0 0 -1.48353" pos="800 3754.72 0"/>
+        <inst extents="-5.99996 -6.00011 -6 6.00004 5.99989 6" name="talkto_door" orient="0 0 -0.959931" pos="341.727 3881.48 -1.63412e-005"/>
+        <inst extents="-6.00002 -6 -6 5.99998 6 6" name="foyer_right" orient="0 0 -1.56905" pos="894 823.055 -120"/>
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="foyer_left" orient="0 0 -1.5708" pos="180 823.055 -120"/>
+        <inst extents="-6.00001 -6.00006 -6 5.99999 5.99994 6" name="orb_camera02" orient="0 0 -0.523599" pos="722.412 3760.16 0"/>
+        <inst extents="-6 -6.00011 -6 6 5.99989 6" name="orb_camera01" orient="0 0 -0.174533" pos="722.412 3724.16 0"/>
+        <inst extents="-6.00005 -6 -6 5.99995 6 6" name="wong_spawn_pt" orient="0 0 -1.59691" pos="808.727 3653.23 0.814183"/>
+        <inst extents="-5.99997 -5.99999 -9.25007 6.00003 6.00001 2.74993" name="wong_" orient="-1.30804 0.084285 -1.54816" pos="874.777 3625.74 48"/>
+        <inst extents="-6.00012 -5.99998 -6 5.99988 6.00002 6" name="wong_01" orient="0 0 1.54468" pos="807.441 3603.73 0.814183"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="jean02" orient="0 0 -1.5708" pos="-120.592 3661.43 2.91849"/>
+        <inst extents="-5.99994 -6.00002 -6 6.00006 5.99998 6" name="wong_02" orient="0 0 -1.50965" pos="786.695 3828.63 0.814183"/>
+        <inst extents="-5.99995 -5.99995 -7.55688 6.00005 6.00005 4.44312" name="bw_" orient="0.0872664 0 2.26893" pos="476.589 3832.99 42"/>
+        <inst extents="-6.00004 -6.00005 -6 5.99996 5.99995 6" name="bw_01" orient="0 0 1.8326" pos="526.134 3798.53 0"/>
+        <inst extents="-5.99996 -6.00003 -6 6.00004 5.99997 6" name="bw_02" orient="0 0 1.5708" pos="540.117 3656.36 0"/>
+        <inst extents="-6.00006 -5.99999 -6 5.99994 6.00001 6" name="door_" orient="0 0 -1.5708" pos="362.379 3896.4 42"/>
+        <inst extents="-5.99999 -6.00003 -6 6.00001 5.99997 6" name="door_01" orient="0 0 3.14159" pos="347.422 3906.33 0"/>
+        <inst extents="-5.99989 -6.00001 -6 6.00011 5.99999 6" name="door_02" orient="0 0 1.5708" pos="540.117 3701.67 0"/>
+        <inst extents="-6.0001 -6.00007 -6 5.9999 5.99993 6" name="door_03" orient="0 0 2.18166" pos="358.863 3870.13 0"/>
+        <inst extents="-6.00009 -6.00003 -6 5.99991 5.99997 6" name="fury_" orient="0 0 -1.5708" pos="573.016 3906.54 44.9787"/>
+        <inst extents="-5.99995 -5.99998 -6 6.00005 6.00002 6" name="exit_outofview" orient="0 0 -1.50965" pos="370.488 3664.85 0.814183"/>
+        <inst extents="-6.00009 -6.00002 -6 5.99991 5.99998 6" name="exit_hero04" orient="0 0 -1.59691" pos="803.621 3798.61 0.814183"/>
+        <inst extents="-5.99999 -6.00002 -6 6.00001 5.99998 6" name="exit_hero03" orient="0 0 -0.549717" pos="755.463 3753.69 0.814183"/>
+        <inst extents="-6.00006 -6.00006 -6 5.99994 5.99994 6" name="exit_hero02" orient="0 0 0.672014" pos="752.075 3660.78 0.814183"/>
+        <inst extents="-5.99999 -5.99999 -6 6.00001 6.00001 6" name="exit_hero01" orient="0 0 1.54468" pos="804.699 3599.45 0.814183"/>
+    </entinst>
+    <entinst type="wp_review01">
+        <inst extents="-6.00008 -5.99997 -6 5.99992 6.00003 6" name="wp_review01" orient="0 0 1.5708" pos="513.141 3945.88 0"/>
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="wp_bw01" pos="508.76 3780.11 0"/>
+    </entinst>
+    <entinst type="wp_leave_a01">
+        <inst extents="-6.00002 -6.00002 -6 5.99998 5.99998 6" name="wp_leave_a01" orient="0 0 -1.5708" pos="894.194 855.598 -120"/>
+    </entinst>
+    <entinst type="wp_bw02">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_bw02" pos="517.855 3912.02 0"/>
+    </entinst>
+    <entinst type="wp_special01">
+        <inst extents="-5.99998 -6.0001 -6 6.00002 5.9999 6" name="wp_special01" orient="0 0 3.14159" pos="634.511 3775.19 0"/>
+    </entinst>
+    <entinst type="vision_spot">
+        <inst extents="-5.99997 -6.00001 -6 6.00003 5.99999 6" name="vision_spot" orient="0 0 -1.5708" pos="1311.1 3805.94 0"/>
+        <inst extents="-5.99997 -6.00002 -6 6.00003 5.99998 6" name="occult_01" orient="0 0 1.48353" pos="1312.23 3746.52 0"/>
+        <inst extents="-6.00006 -6.00004 -6 5.99994 5.99996 6" name="occult_" orient="0 0 1.5708" pos="1282.66 3776.19 42"/>
+        <inst extents="-6 -6 -6 6 6 6" name="occult_02" pos="1103.89 3767.66 0"/>
+    </entinst>
+    <entinst type="wp_training01">
+        <inst extents="-5.99991 -5.99997 -6 6.00009 6.00003 6" name="wp_training01" orient="0 0 1.65806" pos="361.165 3958.86 0"/>
+    </entinst>
+    <entinst type="wp_trivia01">
+        <inst extents="-5.99989 -5.99999 -6 6.00011 6.00001 6" name="wp_trivia01" orient="0 0 -1.89648" pos="401.193 3620.26 0"/>
+    </entinst>
+    <entinst type="wp_review02">
+        <inst extents="-6.00011 -5.99997 -6 5.99989 6.00003 6" name="wp_review02" orient="0 0 1.5708" pos="667.854 3945.88 0"/>
+    </entinst>
+    <entinst type="corridor02">
+        <inst extents="-6.00001 -5.99991 -6 5.99999 6.00009 6" name="corridor02" orient="0 0 -1.5708" pos="3060 2454 0"/>
+        <inst extents="-6.00001 -6.00007 -6 5.99999 5.99993 6" name="corridor01" orient="0 0 1.5708" pos="3060 1500 0"/>
+    </entinst>
+    <entinst type="pym">
+        <inst extents="-6.00011 -5.99999 -11.6293 5.99989 6.00001 0.370721" name="pym" orient="-1.04555 0.0755503 -1.52708" pos="788 3754.72 42"/>
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="profx" orient="0 0 1.5708" pos="-163.285 3439.84 36"/>
+        <inst extents="-5.99996 -5.99997 -6 6.00004 6.00003 6" name="jean" orient="0 0 0.349066" pos="-170.535 3545.93 48"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="jean_seat" orient="0 0 -1.5708" pos="-139.805 3534.03 8.91849"/>
+    </entinst>
+    <entinst type="wp_corridor01">
+        <inst extents="-5.99989 -6.00011 -6 6.00011 5.99989 6" name="wp_corridor01" orient="0 0 1.5708" pos="3060 2528.6 0"/>
+    </entinst>
+    <entinst type="wp_occult_e01">
+        <inst extents="-6.00004 -5.99995 -6 5.99996 6.00005 6" name="wp_occult_e01" orient="0 0 -1.5708" pos="1440.84 3643.33 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_occultroom01" pos="1313.6 3783.25 0"/>
+        <inst extents="-6 -5.99995 -6 6 6.00005 6" name="wp_occult_f01" orient="0 0 -1.5708" pos="1563.63 3643.33 0"/>
+        <inst extents="-6.00007 -5.99995 -6 5.99993 6.00005 6" name="wp_occult_d01" orient="0 0 -1.5708" pos="1322.15 3643.33 0"/>
+        <inst extents="-6.00006 -6.00005 -6 5.99994 5.99995 6" name="wp_occult_b01" orient="0 0 1.5708" pos="1443.58 3918.81 0"/>
+        <inst extents="-6.00007 -6.00005 -6 5.99993 5.99995 6" name="wp_occult_c01" orient="0 0 1.5708" pos="1562.26 3918.81 0"/>
+        <inst extents="-6.00006 -6.00005 -6 5.99994 5.99995 6" name="wp_occult_a01" orient="0 0 1.5708" pos="1320.78 3918.81 0"/>
+    </entinst>
+    <entinst type="wp_cover">
+        <inst extents="-6.00004 -6.00028 -9.6982 5.99996 5.99972 2.3018" name="mirror_camera" orient="-0.349066 0 0.174533" pos="1088.63 3767.71 60"/>
+        <inst extents="-6.0001 -6 -6 5.9999 6 6" name="talkto_mirror_spot" orient="0 0 0.698132" pos="1044.71 3808.37 0"/>
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" pos="540 3780 0"/>
+    </entinst>
+    <entinst type="link_strange2">
+        <inst extents="-48 -12 0 48 12 120" name="link_strange2" pos="575.883 4032.99 0"/>
+    </entinst>
+    <entinst type="armil_drs_e">
+        <inst name="armil_drs_e" pos="1440 3780 168"/>
+    </entinst>
+    <entinst type="cerebro_remote_drs_e">
+        <inst name="cerebro_remote_drs_e" pos="-136.319 3481.52 18.2773"/>
+    </entinst>
+    <entinst type="column_25ft_drs_e">
+        <inst name="column_25ft_drs_e" orient="0 0 1.5708" pos="781.614 626.808 -240"/>
+        <inst name="column_25ft_drs_e" orient="0 0 1.5708" pos="300 626.808 -240"/>
+        <inst name="column_25ft_drs_e" orient="0 0 1.5708" pos="300 147.555 -240"/>
+        <inst name="column_25ft_drs_e" orient="0 0 1.5708" pos="781.614 147.555 -240"/>
+    </entinst>
+    <entinst type="column_support_beam_drs_e">
+        <inst name="column_support_beam_drs_e" orient="0 0 1.5708" pos="781.614 386.281 -249.916"/>
+        <inst name="column_support_beam_drs_e" orient="0 0 1.5708" pos="300 386.281 -249.916"/>
+    </entinst>
+    <entinst type="right_foyer_door">
+        <inst name="right_foyer_door" pos="900 893.268 -120"/>
+        <inst name="doorto_sanctum" pos="3060.0 2574.0 -4.29171e-006"/>
+    </entinst>
+    <entinst type="door_drs_d">
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="3177 2340 0"/>
+        <inst name="door_drs_d" pos="180 896 -120"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="2943 2100 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="2943 1860 0"/>
+        <inst name="door_drs_d" pos="3060 1383 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="2943 2340 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="3177 1860 0"/>
+        <inst name="door_drs_d" pos="540 69.0002 -240"/>
+        <inst name="door_drs_d" pos="540 3543 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="2943 1620 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="3177 2100 0"/>
+        <inst name="door_drs_d" orient="0 0 1.5708" pos="3177 1620 0"/>
+    </entinst>
+    <entinst type="drstrange_door">
+        <inst name="drstrange_door" orient="0 0 1.5708" pos="299.967 3900 0"/>
+    </entinst>
+    <entinst type="foyer_steps_drs_a01">
+        <inst name="foyer_steps_drs_a01" pos="540 600 -240"/>
+    </entinst>
+    <entinst type="hanging_lamp_drs_e">
+        <inst name="hanging_lamp_drs_e" pos="3060 1980 60"/>
+        <inst name="hanging_lamp_drs_e" pos="3060 1620 60"/>
+        <inst name="hanging_lamp_drs_e" pos="3060 2340 60"/>
+        <inst name="hanging_lamp_drs_e" pos="-120.592 3661.43 60"/>
+    </entinst>
+    <entinst type="mirror">
+        <inst name="mirror" orient="0 0 -0.698132" pos="1086.56 3847.64 0"/>
+    </entinst>
+    <entinst type="mirror_gem">
+        <inst name="mirror_gem" pos="97.9419 4100.72 0"/>
+    </entinst>
+    <entinst type="review">
+        <inst name="review" pos="701.289 3978.74 0"/>
+    </entinst>
+    <entinst type="training">
+        <inst name="training" pos="360.0 3990.63 -2.86102e-005"/>
+    </entinst>
+    <entinst type="trivia">
+        <inst name="trivia" pos="380.696 3580.65 0"/>
+    </entinst>
+    <entinst type="wp_occult_f01_">
+        <inst name="wp_occult_f01_" pos="1561.13 3605.71 45.4756"/>
+    </entinst>
+    <entinst type="orb_of_agamotto">
+        <inst name="orb_of_agamotto" pos="540 3913.64 39.8604"/>
+    </entinst>
+    <entinst type="orb_object">
+        <inst name="orb_object" orient="0 0 -1.0472" pos="804.83 3706.15 -1.53271e-005"/>
+    </entinst>
+    <entinst type="scepter_of_dormammu_drs_e01">
+        <inst name="scepter_of_dormammu_drs_e01" orient="1.5708 1.63913e-007 -1.5708" pos="1442.09 3780 68.9563"/>
+    </entinst>
+    <entinst type="gem_of_oshtur">
+        <inst name="gem_of_oshtur" pos="362.742 384.811 -214.646"/>
+    </entinst>
+    <entinst type="spiral_stairs_drs_e">
+        <inst name="spiral_stairs_drs_e" orient="0 0 3.14159" pos="538.367 4030.21 0"/>
+    </entinst>
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" monster_actonuse="true" monster_actscript="startConversation('act2/strange/temp_conv')" monster_name="drstrange" monster_spawnexactlocation="true" name="sp_drstrangesimple02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_name="drstrangeintro" monster_spawnexactlocation="true" name="sp_drstrangesimple01" nocollide="true"/>
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actscript="act2/strange/talk_drstrange01" monster_name="drstrange" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_drstrange" name="sp_drstrangesimple03" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="JeanGrey" checkteam="true" classname="monsterspawnerent" monster_actonuse="true" monster_actscript="act2/strange/talk_jeangrey01" monster_name="jeangrey" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_jeangrey" name="sp_jeangrey01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ProfessorNPC" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_profx01" monster_name="profx_char" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_profx" name="sp_professorxsimple01" nocollide="true"/>
+    <entity actcountremove="1" character="BlackWidow" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_bw01" monster_name="bw" monster_noaidisable="false" monster_spawnexactlocation="true" name="sp_blackwidow01" nocollide="true"/>
+    <entity actcountremove="1" character="HankPym" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_pym01" monster_name="hankpym" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_pym" name="sp_hankpym01" nocollide="true"/>
+    <entity actcountremove="1" character="NickFuryNPC" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_fury01" monster_name="fury" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_fury" name="sp_nickfurynpc01" nocollide="true"/>
+    <entity actcountremove="1" character="Vision" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_vision01" monster_name="vision" monster_noaidisable="true" monster_nodistancecull="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_vision" name="sp_vision01" nocollide="true"/>
+    <entity actcountremove="1" character="Wong" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_wong01" monster_name="wong" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_wong01" nocollide="true"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" acttargets="enable_target02" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="11" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus02" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" acttargets="enable_target01" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="10" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" idnum="10" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s"/>
+    <entity acttargets="misc_strange_object06" classname="enabletargetent" enable="false" name="enable_target02" nocollide="true" smartent="false"/>
+    <entity acttargets="misc_strange_object03" classname="enabletargetent" enable="false" name="enable_target01" nocollide="true" smartent="false"/>
+    <entity classname="lightent" flickerfire="true" flickeroff="0.1" flickeron="0.3" flickerrandom="0.2" lightcolor="1 1 1" lightradius="400" name="fireplace_light" nocollide="true" startoff="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" fxlevel="4" loopfx="map/common/fire_small" loopfxstarton="true" name="loop_effect01" nocollide="true" smartent="true"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="effects/map/strange/profx_psychic" loopfxstarton="true" name="effect_profx" nocollide="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/strange/drstrange_meditation" loopfxstarton="true" name="meditation_ring" nocollide="true" smartent="false"/>
+    <entity classname="actionent" firstact="0.1" name="loop_sound01" nocollide="true" smartent="true" spawnsoundloop="zone_shared/strange/spirits" toggleonact="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_strange1" prevzone="strange2"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all04" nocollide="true" prevlink="link_strange1" prevzone="act2/murder/murder1"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all01" nocollide="true" prevlink="link_strange1" prevzone="act1/stark/stark1"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all03" nocollide="true" prevlink="link_strange1" prevzone="act2/mephisto/mephisto1"/>
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all05" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all06" nocollide="true" prevlink="link_strange1" prevzone="act2/murder/murder5"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all07" nocollide="true" prevlink="link_strange1" prevzone="act2/mephisto/mephisto4"/>
+    <entity actscript="act2/strange/intro_setup" classname="actionent" name="intro_setup" nocollide="true" smartent="false"/>
+    <entity actscript="act2/strange/tell_bw_go" classname="physent" health="1" name="bw_walk" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity classname="physent" health="1" name="wp_occult_c01_" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actscript="act2/strange/camera_set" classname="physent" health="1" name="conv_cam" nocollide="true" nodistancecull="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actscript="act2/strange/exit_scene" classname="physent" health="1" name="start_exit" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object01" nocollide="true" team="hero" tipdialog="act2/strange/strange1/scepter_dormammu"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object02" nocollide="true" team="hero" tipdialog="act2/strange/strange1/statue_nightmare"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/strange/goto_area_wong" boxcollision="true" classname="scripttriggerent" name="center" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object03" nocollide="true" smartent="false" team="hero" tipdialog="act2/strange/strange1/book_vishanti"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object04" nocollide="true" team="hero" tipdialog="act2/strange/strange1/orb_agamotto"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object05" nocollide="true" team="hero" tipdialog="act2/strange/strange1/crystal_haggoth"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="misc_strange_object06" nocollide="true" smartent="false" team="hero" tipdialog="act2/strange/strange1/wind_watoomb"/>
+    <entity actonuse="true" actscript="act2/strange/talkto_door" boxcollision="true" classname="gameent" description="Door to Dr. Strange's bedroom" name="trigger_use06" nocollide="true" team="none"/>
+    <entity actonuse="true" actscript="act2/strange/go_to_corridor" boxcollision="true" classname="gameent" description="Go to a corridor" hinttype="exit" name="trigger_use02" nocollide="true" quickuse="true" team="none"/>
+    <entity actonuse="true" actscript="act2/strange/go_to_foyer" boxcollision="true" classname="gameent" description="Go to foyer" hinttype="exit" name="trigger_use03" nocollide="true" quickuse="true" team="none"/>
+    <entity actonuse="true" actscript="act2/strange/go_to_sanctum" boxcollision="true" classname="gameent" description="Go to Inner Sanctum" hinttype="exit" name="trigger_use04" nocollide="true" quickuse="true" team="none"/>
+    <entity actonuse="true" actscript="act2/strange/go_to_corridor2" boxcollision="true" classname="gameent" description="Go to a corridor" hinttype="exit" name="trigger_use05" nocollide="true" quickuse="true" team="none"/>
+    <entity actcountremove="1" actonuse="true" actscript="act2/strange/grab_gem" boxcollision="true" classname="gameent" description="Gem of Oshtur" name="trigger_grab_gem" nocollide="true" smartent="false" team="none"/>
+    <entity actscript="common/fadeandremove" classname="waypointent" name="wp_corridor01" nocollide="true"/>
+    <entity classname="waypointent" name="pym" nocollide="true" smartent="false"/>
+    <entity classname="waypointent" name="corridor02" nocollide="true" speed="0.4"/>
+    <entity actscript="act2/strange/goto_review" beeline="true" classname="waypointent" name="wp_review02" nocollide="true" speed="0.3"/>
+    <entity actscript="act2/strange/goto_trivia" beeline="true" classname="waypointent" name="wp_trivia01" nocollide="true" speed="0.3"/>
+    <entity actscript="act2/strange/goto_training" beeline="true" classname="waypointent" name="wp_training01" nocollide="true" speed="0.3"/>
+    <entity classname="waypointent" name="vision_spot" nocollide="true" smartent="false" speed="0.3"/>
+    <entity actcountdisable="1" actscript="act2/strange/wong_hello" classname="waypointent" name="wp_special01" nocollide="true" smartent="false" speed="0.5"/>
+    <entity actscript="act2/strange/go_default" beeline="true" classname="waypointent" name="wp_bw02" nocollide="true" speed="0.3"/>
+    <entity actscript="common/fadeandremove" beeline="true" classname="waypointent" name="wp_leave_a01" nocollide="true"/>
+    <entity beeline="true" classname="waypointent" name="wp_review01" nocollide="true" speed="0.3"/>
+    <entity beeline="true" classname="waypointent" name="wp_hero_a01" nocollide="true"/>
+    <entity actcountremove="1" beeline="true" classname="waypointent" name="wp_intro01" nocollide="true"/>
+    <entity actscript="act2/strange/strange_welcome03" beeline="true" classname="waypointent" name="wp_intro02" nocollide="true"/>
+    <entity actscript="act2/strange/goto_occultitem" beeline="true" changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_occult_e01" nocollide="true" smartent="false" speed="0.3"/>
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Sanctuary" name="link_strange2" nextzone="strange2" nocollide="false" team="hero"/>
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_l" fxlevel="3" health="75" material="wood" model="strange/door_drs_d" name="right_foyer_door" nogravity="true" nopickup="true" nopush="true" openangle="90" smartent="false" structure="0" toggleonact="true"/>
+    <entity actcountdisable="1" actonuse="false" autoclosedelay="0" classname="doorent" material="Wood" model="strange/door_strange_drs_d" name="drstrange_door" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/strange/foyer_steps" loopfxstarton="true" material="Wood" model="strange/foyer_steps_drs_a" name="foyer_steps_drs_a01" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" structure="2"/>
+    <entity actonuse="true" actscript="act2/strange/talk_mirror" classname="physent" description="Mirror of the Ancient One" hinttype="talk" loopfx="effects/map/strange/mirror_of_ancients" loopfxstarton="true" material="Wood" model="strange/mirror_of_ancients_drs_e" name="mirror" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2"/>
+    <entity actonuse="true" actscript="act2/strange/talk_mirror" classname="physent" description="Mirror of the Ancient One" hinttype="talk" loopfx="effects/map/strange/mirror_of_ancients" loopfxstarton="true" material="Wood" model="strange/mirror_of_ancients_gem_drs_e" name="mirror_gem" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2"/>
+    <entity actonuse="true" actscript="common/review_menu" actsound="zone_shared/object/console_fighter" classname="physent" description="Strange Mission Review" hinttype="usetoggle" material="rock" model="strange/mission_review_drs_a" name="review" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actontouch="false" actonuse="true" actscript="common/review_dangerroom" actsound="zone_shared/object/console_fighter" classname="physent" description="S.H.I.E.L.D. Training Simulator" hinttype="usetoggle" material="solid_metal" model="strange/mission_training_drs_a" name="training" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actontouch="false" actonuse="true" actscript="common/review_trivia" actsound="zone_shared/object/console_fighter" classname="physent" description="Strange Trivia" hinttype="usetoggle" material="rock" model="strange/mission_trivia_drs_a" name="trivia" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="rock" model="strange/occult_object_06_drs_a" name="wp_occult_f01_" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/strange/orb_of_agamotto" loopfxstarton="true" material="rock" model="strange/orb_of_agamotto_drs_a" name="orb_of_agamotto" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" spawnsoundloop="zone_shared/town/orbofag" structure="2"/>
+    <entity actonuse="true" actscript="act2/strange/talk_orb" animstarton="true" classname="physent" description="Orb Of Teleportation" hinttype="importanttalk" loopfx="map/strange/teleport_orb" loopfxstarton="true" material="rock" model="strange/orb_of_teleportation_drs_a" name="orb_object" nogravity="true" nopickup="true" nopush="true" smartent="false" spawnsoundloop="zone_shared/town/orboftele" structure="2"/>
+    <entity actonuse="false" classname="physent" material="solid_metal" model="strange/scepter_of_dormammu_drs_e" name="scepter_of_dormammu_drs_e01" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actonuse="true" classname="physent" description="Gem of Oshtur" hinttype="objective" loopfx="effects/map/strange/mirror_of_ancients_gem" loopfxstarton="true" material="rock" model="strange/small_gem_drs_e" name="gem_of_oshtur" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" startenabled="false" structure="2" team="enemy"/>
+</world>

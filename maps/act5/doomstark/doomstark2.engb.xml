@@ -1,0 +1,223 @@
+﻿<world>
+    <entity act="5" killz="-180" level="32" name="world" nosave="false" partylight="1 0.95 0.72" partylightradius="230" soundfile="dsfite" startblack="true" zonescript="act5/doomstark/doomstark2/doomstark2"/>
+    <precache filename="act5/doomstark/doomstark2/5_doomstark2_010" type="conversation"/>
+    <precache filename="act5/doomstark/doomstark2/5_doomstark2_030" type="conversation"/>
+    <precache filename="act5/doomstark/doomstark2/fury_intro" type="conversation"/>
+    <precache filename="act5/doomstark/doomstark2/pym_dooropened" type="conversation"/>
+    <precache filename="act5/doomstark/doomstark2/pym_intro" type="conversation"/>
+    <precache filename="act5/doomstark/doomstark2/door_enabled" type="script"/>
+    <precache filename="act5/doomstark/doomstark2/survived_attack" type="script"/>
+    <precache filename="char/fury_m/p1_charge" type="sound"/>
+    <precache filename="char/fury_m/p1_power" type="sound"/>
+    <precache filename="char/fury_m/p3_power" type="sound"/>
+    <precache filename="char/fury_m/throw" type="sound"/>
+    <precache filename="common/melee/dmg_trip" type="sound"/>
+    <precache filename="common/melee/land_body" type="sound"/>
+    <precache filename="death_style/ds_glass_l" type="sound"/>
+    <precache filename="zone_shared/doom/doom_bots_down" type="sound"/>
+    <entity actcountremove="1" character="NickFuryCombatNPC" classname="monsterspawnerent" name="sp_nickfurycombatnpc" nocollide="true"/>
+    <entity actcountremove="1" character="DoomIronman_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_doomironman_a" nocollide="true"/>
+    <entity actcountremove="1" character="DoomIronman_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_doomironman_b" nocollide="true"/>
+    <entity actcountremove="1" character="DoomIronman_b" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_doomironman_b_leader" nocollide="true"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/column_cables_dstk_e" name="column_cables_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="doom_stark/doom_lg_hologram_dstk_a" name="doom_lg_hologram_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actsound="zone_shared/doom/doom_door1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="doom_stark/doors_dstk_d" name="doors_dstk_d" nogravity="true" nopickup="true" nopush="true" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/stark/ironman_lg_hologram" loopfxstarton="true" material="solid_metal" model="doom_stark/holo_projector_dstk_a" name="holo_projector_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_square_40ft_silver_dstk_e" name="pillar_square_40ft_silver_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="window_dstk_b_d" fxlevel="3" health="10" material="glass" model="doom_stark/window_dstk_b" name="window_dstk_b" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="enabletargetent" enable="true" name="enable_target" nocollide="true"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="physent" health="1" name="shoot_me" nocollide="true" nogravity="true" nopickup="true" structure="2"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" material="solid_metal" model="stark/doors_stk_d" name="doors_stk_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entinst type="nick_fury_spawner">
+        <inst extents="-12.0 -18.0 -1.43051e-005 36.0 18.0 84.0" name="nick_fury_spawner" pos="60 1220 -113.036"/>
+    </entinst>
+    <entinst type="ss_dim_b07">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_dim_b07" orient="0 0 -0.785398" pos="512.548 1352.4 240"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_dim_a07" orient="0 0 2.35619" pos="698.589 1151.68 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a05" pos="217.44 712.742 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a08" pos="460.407 1520 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a01" pos="-487.146 1520 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b06" orient="0 0 -3.14159" pos="723.539 939.592 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b05" orient="0 0 -3.14159" pos="574.18 713.818 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a04" pos="-459.416 712.742 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b04" orient="0 0 -3.14159" pos="-102.676 713.818 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a11" pos="-39.2074 713.818 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b11" orient="0 0 -3.14159" pos="161.128 712.742 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a03" pos="-597.99 939.592 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b03" orient="0 0 -3.14159" pos="-440.794 939.592 240"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_dim_a02" orient="0 0 2.35619" pos="-372.176 1151.68 240"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_dim_b02" orient="0 0 -0.785398" pos="-558.218 1352.4 240"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_dim_b01" orient="0 0 -3.14159" pos="-329.95 1520 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b10" orient="0 0 2.35619" pos="182.796 1141.73 240"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_dim_a10" orient="0 0 0.785398" pos="-57.8701 1136.52 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a09" pos="-109.364 1260 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b09" orient="0 0 -3.14159" pos="222 1260 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b08" orient="0 0 -3.14159" pos="617.603 1520 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_a06" pos="566.343 939.592 240"/>
+    </entinst>
+    <entinst type="doom_im_dead_spawner02">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_dead_spawner02" orient="0 0 -2.18166" pos="117.781 1315.36 -113.036"/>
+    </entinst>
+    <entinst type="doom_im_dead_spawner01">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="doom_im_dead_spawner01" orient="0 0 -0.698132" pos="-28 1168 -120"/>
+    </entinst>
+    <entinst type="doom_im_roof_spawner05">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_roof_spawner05" orient="0 0 -1.13446" pos="-410 1510 240"/>
+    </entinst>
+    <entinst type="doom_im_fury_spawner">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_fury_spawner" pos="43 1220 -113.036"/>
+    </entinst>
+    <entinst type="ss_dim_c08">
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c08" orient="0 0 -1.5708" pos="540.678 1595.44 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c09" orient="0 0 1.5708" pos="60 1163.15 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c07" orient="0 0 0.785398" pos="499.886 1164.28 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c05" orient="0 0 -1.5708" pos="446.695 778.232 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c11" orient="0 0 1.5708" pos="100.462 628 240"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_dim_c01" orient="0 0 -1.5708" pos="-406.874 1595.44 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c10" orient="0 0 1.5708" pos="60 970.636 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c04" orient="0 0 -1.5708" pos="-230.161 778.232 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c02" orient="0 0 0.785398" pos="-570.88 1164.28 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c03" orient="0 0 -1.5708" pos="-517.718 1031.51 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_c06" orient="0 0 -1.5708" pos="646.615 1031.51 240"/>
+    </entinst>
+    <entinst type="doom_im_window03">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_window03" pos="-560 1380 140"/>
+    </entinst>
+    <entinst type="doom_im_window01">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_window01" pos="-560 900 140"/>
+    </entinst>
+    <entinst type="doom_im_window02">
+        <inst extents="-12 -18 0 36 18 84" name="doom_im_window02" pos="-560 1020 140"/>
+    </entinst>
+    <entinst type="ss_dim_b_leader10b">
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader10b" orient="0 0 -1.5708" pos="137.293 1400.8 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader11" orient="0 0 1.5708" pos="20 628 240"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_dim_b_leader02" orient="0 0 -2.35619" pos="-418.386 1316.33 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader04" orient="0 0 -1.5708" pos="-308.258 776.939 240"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_dim_b_leader01" orient="0 0 -1.5708" pos="-409.765 1522.69 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader10" orient="0 0 -1.5708" pos="-10.5828 1400.8 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader05" orient="0 0 -1.5708" pos="368.598 776.939 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader09" orient="0 0 -1.5708" pos="62.4319 1400.8 240"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_dim_b_leader07" orient="0 0 -2.35619" pos="652.379 1316.33 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader06" orient="0 0 1.5708" pos="643.724 858.992 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader03" orient="0 0 1.5708" pos="-520.609 858.992 240"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_dim_b_leader08" orient="0 0 -1.5708" pos="537.787 1522.69 240"/>
+    </entinst>
+    <entinst type="column_cables_dstk_e03">
+        <inst name="column_cables_dstk_e03" pos="309.351 1422.2 -480"/>
+        <inst name="column_cables_dstk_e03" pos="-202.19 1422.2 -480"/>
+        <inst name="column_cables_dstk_e03" pos="-242.621 986.578 -480"/>
+        <inst name="column_cables_dstk_e03" pos="357.469 986.578 -480"/>
+    </entinst>
+    <entinst type="doom_lg_hologram_dstk_a01">
+        <inst name="doom_lg_hologram_dstk_a01" orient="0 0 -1.5708" pos="60 1677.27 -240"/>
+    </entinst>
+    <entinst type="door">
+        <inst name="door" pos="60 540 0"/>
+    </entinst>
+    <entinst type="holo_projector_dstk_a01">
+        <inst name="holo_projector_dstk_a01" orient="0 0 -1.5708" pos="60 1677.27 -244.932"/>
+    </entinst>
+    <entinst type="pillar_square_40ft_silver_dstk_e">
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="420 612.066 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="180 612.066 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="-60 612.066 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="-300 622.066 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="-540 622.066 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="540 1652.07 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="-420 1652.07 20"/>
+        <inst name="pillar_square_40ft_silver_dstk_e" pos="660 612.066 20"/>
+    </entinst>
+    <entinst type="window_breakable06">
+        <inst name="window_breakable06" orient="0 0 1.5708" pos="785 900 121"/>
+        <inst name="window_breakable05" orient="0 0 1.5708" pos="785 1020 121"/>
+        <inst name="window_breakable04" orient="0 0 1.5708" pos="785 1380 121"/>
+        <inst name="window_breakable03" orient="0 0 -1.5708" pos="-665 1380 121"/>
+        <inst name="window_breakable02" orient="0 0 -1.5708" pos="-665 1020 121"/>
+        <inst name="window_breakable01" orient="0 0 -1.5708" pos="-665 900 121"/>
+    </entinst>
+    <entinst type="turnon_station">
+        <inst extents="-6 -6 0 6 6 12" name="turnon_station" pos="60 1500 154"/>
+    </entinst>
+    <entinst type="start_pad">
+        <inst extents="-6 -6 -6 6 6 6" name="start_pad" pos="-48.7096 1482.38 -88.7852"/>
+    </entinst>
+    <entinst type="heal_effect">
+        <inst extents="-6 -6 -6 6 6 6" name="heal_effect" pos="-48.7096 1482.38 -88.7852"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="60 720 0"/>
+    </entinst>
+    <entinst type="cheat_spawn">
+        <inst extents="-6 -6 0 6 6 12" name="cheat_spawn" pos="59.6039 1139.88 240"/>
+    </entinst>
+    <entinst type="02">
+        <inst extents="-180 -180 0 180 180 240" name="02" pos="-460 1260 10"/>
+        <inst extents="-240 -140 0 240 140 240" name="08" pos="520 1580 0"/>
+        <inst extents="-180 -180 0 180 180 240" name="07" pos="580 1260 10"/>
+        <inst extents="-125 -140 0 125 140 240" name="06" pos="635 940 10"/>
+        <inst extents="-290 -120 0 290 120 240" name="05" pos="470.556 680 10"/>
+        <inst extents="-125 -140 0 125 140 240" name="03" pos="-515 940 10"/>
+        <inst extents="-340 -210 0 340 210 120" name="02" pos="60 1350 -120"/>
+        <inst extents="-340 -210 0 340 210 120" name="10" pos="60 930 -120"/>
+        <inst extents="-240 -140 0 240 140 240" name="01" pos="-400 1580 0"/>
+        <inst extents="-290 -120 0 290 120 240" name="04" pos="-349.444 680 10"/>
+    </entinst>
+    <entinst type="trigger_touch_heal">
+        <inst extents="-2 -2 0 2 2 120" name="trigger_touch_heal" pos="-48.7096 1482.38 -94.7852"/>
+    </entinst>
+    <entinst type="11">
+        <inst extents="-120 -120 0 120 120 240" name="11" pos="60.5555 680 10"/>
+    </entinst>
+    <entinst type="ironman_station_trig01">
+        <inst extents="-60 -60 0 60 60 80" name="ironman_station_trig01" pos="60 1500 -120"/>
+    </entinst>
+    <entinst type="camera">
+        <inst extents="-6 -6 -6 6 6 6" name="camera" pos="-48.6726 1259.46 -120"/>
+    </entinst>
+    <entinst type="camera01">
+        <inst extents="-6 -6 -6 6 6 6" name="camera01" pos="-48.6726 1201.71 -120"/>
+    </entinst>
+    <entinst type="link_doomstark1b">
+        <inst extents="-60 -5 0 60 5 120" name="link_doomstark1b" pos="60 545 0"/>
+    </entinst>
+    <entinst type="doors_stk_d01">
+        <inst name="doors_stk_d01" pos="60 360 0"/>
+    </entinst>
+    <entity actcountremove="1" character="NickFuryCombatNPC" classname="monsterspawnerent" monster_deathscript="act1/omega/omega4/what_have_we_done_end" monster_name="nick_fury" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/nick_fury_spawnscript" name="nick_fury_spawner" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="DoomIronman_a" classname="monsterspawnerent" instantspawn="false" monster_name="doom_im_fury" monster_noaidisable="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/doom_im_fury_spawnscript" name="doom_im_fury_spawner" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actondeath="false" character="DoomIronman_a" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_guarddistance="2000" monster_name="doom_intro" monster_smartent="false" monster_spawneffect="base/material/break/brk_glass" monster_spawnexactlocation="true" name="doom_im_roof_spawner05" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="DoomIronman_a" classname="monsterspawnerent" instantspawn="false" monster_name="doom_im_dead01" monster_noaidisable="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/doom_im_dead_spawnscript" name="doom_im_dead_spawner01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.5" character="DoomIronman_a" classname="monsterspawnerent" instantspawn="false" monster_name="doom_im_dead02" monster_noaidisable="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/doom_im_dead_spawnscript2" name="doom_im_dead_spawner02" nocollide="true" smartent="false"/>
+    <entity character="DoomIronman_a" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathscript="act5/doomstark/dim_death" monster_guarddistance="2000" monster_name="dim" monster_nodistancecull="true" monster_smartent="false" monster_spawneffect="base/material/break/brk_glass" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/dim_birth" name="ss_dim_b07" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" acttargets="window_breakable02" character="DoomIronman_b" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathtargets="doom_im_window02b" monster_guarddistance="2000" monster_name="doom_intro" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/firstspawn_break_window" name="doom_im_window02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" acttargets="window_breakable01" character="DoomIronman_b" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathtargets="doom_im_window01b" monster_guarddistance="2000" monster_name="doom_intro" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/firstspawn_break_window" name="doom_im_window01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" acttargets="window_breakable03" character="DoomIronman_b" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathtargets="doom_im_window03b" monster_guarddistance="2000" monster_name="doom_intro" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/doomstark2/firstspawn_break_window" name="doom_im_window03" nocollide="true" smartent="false"/>
+    <entity character="DoomIronman_b" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathscript="act5/doomstark/dim_death" monster_guarddistance="2000" monster_name="dim" monster_nodistancecull="true" monster_smartent="false" monster_spawneffect="base/material/break/brk_glass" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/dim_birth" name="ss_dim_c08" nocollide="true" smartent="false"/>
+    <entity character="DoomIronman_b" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathscript="act5/doomstark/dim_death" monster_guarddistance="2000" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="dim" monster_nodistancecull="true" monster_smartent="false" monster_spawneffect="base/material/break/brk_glass" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/dim_birth" name="ss_dim_b_leader10b" nocollide="true" smartent="false"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/column_cables_dstk_e" name="column_cables_dstk_e03" nogravity="true" nokillz="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="doom_stark/doom_lg_hologram_dstk_a" name="doom_lg_hologram_dstk_a01" nogravity="true" nokillz="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/doom/doom_door1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="doom_stark/doors_dstk_d" name="door" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/stark/ironman_lg_hologram" loopfxstarton="true" material="solid_metal" model="doom_stark/holo_projector_dstk_a" name="holo_projector_dstk_a01" nogravity="true" nokillz="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actdelay="1" actscript="act5/doomstark/doomstark2/break_window" classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="window_dstk_b_d" fxlevel="3" health="10" material="glass" model="doom_stark/window_dstk_b" name="window_breakable06" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" fxlevel="3" health="10" mass="0" material="glass" model="doom_stark/window_stump_dstk_b" name="window_dstk_b_d" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actdelay="10" acttargets="ironman_station_trig01" classname="enabletargetent" enable="true" name="turnon_station" nocollide="true" smartent="false"/>
+    <entity acteffect="base/misc/coop_resurrect" acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="heal_effect" nocollide="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="menu/pad_loop" loopfxstarton="false" name="start_pad" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all01" nocollide="true" prevzone="doomstark1a"/>
+    <entity actrescheduledelay="10" actrescheduledelaymin="10" actscript="act5/doomstark/force_spawn" classname="physent" firstact="20" health="1" name="cheat_spawn" nocollide="true" nodistancecull="false" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actinactivedelay="5" actleader="false" actmatchteam="true" actontouch="true" actscript="act5/doomstark/activate_dim_trigger" actteamplayer="true" boxcollision="true" classname="gameent" firstact="15" name="11" nocollide="true" nodistancecull="false" smartent="false" team="hero"/>
+    <entity actcountdisable="1" actmatchteam="true" actontouch="true" actscript="act5/doomstark/heal_player" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch_heal" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity actinactivedelay="5" actleader="false" actmatchteam="true" actontouch="true" actscript="act5/doomstark/activate_dim_trigger" actteamplayer="true" boxcollision="true" classname="gameent" name="02" nocollide="true" nodistancecull="false" smartent="false" team="hero"/>
+    <entity actcountdisable="1" actonuse="true" actscript="act5/doomstark/doomstark2/ironman_station" boxcollision="true" classname="gameent" description="Iron Man Health Console" hinttype="usetoggle" name="ironman_station_trig01" nocollide="true" smartent="false" startenabled="true" team="none"/>
+    <entity beeline="false" classname="waypointent" name="camera01" nocollide="true" smartent="false" speed="0.3"/>
+    <entity classname="waypointent" name="camera" nocollide="true" smartent="false" speed="0.3"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Tony Stark's Office" name="link_doomstark1b" nextzone="doomstark1b" nocollide="false" smartent="false" startenabled="false" team="hero"/>
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" material="solid_metal" model="stark/doors_stk_d" name="doors_stk_d01" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true"/>
+</world>

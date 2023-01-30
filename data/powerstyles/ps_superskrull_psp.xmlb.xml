@@ -1,0 +1,47 @@
+<PowerStyle>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.58">
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.16" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <event arc="180" attacktype="punch" damagescale="none" damagetype="dmg_physical" inherit="punch" name="radial_punch" />
+    <FightMove aireusetime="5" aitype="aoe" animenum="ea_power1" icon="1" is_power="true" lockangles="true" name="power_attack" priority="5">
+        <trigger life="3" name="powerup" shared_tag="shared_stunned" tag="200" time="-1" />
+        <trigger name="sound" sound="char/thing_m/A2_power" time="0.4" />
+        <trigger bolt="Bip01 L Hand" effect="char/supskr/p1_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger bolt="Bip01 R Hand" effect="char/supskr/p1_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger effect="char/supskr/p1_power" fxlevel="2" name="effect" time="0.525" />
+        <trigger damage="%mdmg_high" knockback="190" maxrange="70" name="radial_punch" offset="50" time="0.545" victimeventtag1="200" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event attacktype="projectile" count="3" damage="%mdmg_high" damagescale="none" damagetype="dmg_fire" entity="P2_Fireball" filename="ents_superskrull_psp" fulltargeting="true" inherit="projectile" maxrange="500" name="FireBall" noautoaim="true" speed="800" targetable="true">
+        <damagemod name="dmgmod_no_pain" />
+    </event>
+    <FightMove aireusetime="8" aitype="projectile" animenum="ea_power2" is_power="true" lockangles="true" name="power_boost" priority="5">
+        <trigger name="sound" sound="char/humant_m/a4_charge" time="0" />
+        <chain action="Idle" result="power4_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power2_loop" is_power="true" lockspeed="true" locktransitionangles="true" name="power4_loop" noautoaim="true" powerup_tag="humant_ranged" priority="5" turnrate="0.5">
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="7 11 31" name="FireBall" time="0.25" />
+        <trigger bolt="Bip01 L Hand" effect="char/supskr/p2_power" fxlevel="2" name="effect_sound" sound="char/humant_m/a4_power" time="0.25" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="20 -5 37" name="FireBall" time="0.75" />
+        <trigger bolt="Bip01 R Hand" effect="char/supskr/p2_power" fxlevel="2" name="effect_sound" sound="char/humant_m/a4_power" time="0.75" />
+        <chain action="Idle" result="power4_release" />
+    </FightMove>
+    <FightMove animenum="ea_power2_end" is_power="true" lockangles="true" name="power4_release" priority="5">
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event actorbolt="Bip01 L Hand" attacktype="projectile" count="1" damage="%mdmg_high" damagetype="dmg_physical" entity="P3_KineticBolt" filename="ents_superskrull_psp" fulltargeting="false" inherit="projectile" maxrange="500" name="KineticBolt" noautoaim="true" speed="1000" targetable="false" useboltangles="true" />
+    <FightMove aireusetime="8" aitype="projectile" animenum="ea_power3" is_power="true" lockangles="true" name="power_smash" priority="5" startchaintime="0.99" turnrate="0.01">
+        <chain action="Idle" result="power3_looping" />
+    </FightMove>
+    <FightMove animenum="ea_power3_loop" is_power="true" name="power3_looping" priority="5" startchaintime="0.99">
+        <trigger bolt="Bip01 R Hand" effect="char/supskr/p3_power" fxlevel="2" name="effect" time="0" />
+        <trigger name="sound" sound="char/invisw_m/A2_power" time="0.23" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="31 -8 46" name="KineticBolt" time="0.23" />
+        <trigger bolt="Bip01 L Hand" effect="char/supskr/p3_power" fxlevel="2" name="effect" time="0.33" />
+        <trigger name="sound" sound="char/invisw_m/A2_power" time="0.56" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="14 9 49" name="KineticBolt" time="0.56" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

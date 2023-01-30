@@ -1,0 +1,1460 @@
+<characters>
+    <stats name="_HERO1_MC_" />
+    <stats name="_HERO2_MC_" />
+    <stats name="_HERO3_MC_" />
+    <stats name="_HERO4_MC_" />
+    <stats characteranims="102_arcade" charactername="Arcade" name="Arcade" skin="10201" />
+    <stats charactername="Ancient One" name="AncientOne" skin="0000" />
+    <stats charactername="Announcer" name="Announcer" skin="0000" />
+    <stats characteranims="31_atlantean" charactername="Attilan Civilian" name="AttilanCivilian" skin="3101" />
+    <stats characteranims="31_atlantean" charactername="Attilan Civilian" name="AttilanCivilian_b" skin="3102" />
+    <stats characteranims="31_atlantean" charactername="Attilan Civilian" name="AttilanCivilian_c" skin="3103" />
+    <stats characteranims="31_atlantean" charactername="Attilan Civilian" name="AttilanCivilian_d" skin="3104" />
+    <stats characteranims="101_balder" charactername="Balder" name="Balder" skin="10101" />
+    <stats characteranims="87_black_bolt" charactername="Black Bolt" name="BlackBolt" skin="8701" />
+    <stats characteranims="148_black_widow" charactername="Black Widow" name="BlackWidow" skin="14801" />
+    <stats characteranims="148_black_widow_npc" charactername="Black Widow" name="BlackWidowNPC" skin="14801" />
+    <stats charactername="Book" name="book" skin="0000" />
+    <stats charactername="Book Of Majernik" name="BookOfMajernik" skin="0000" />
+    <stats characteranims="77_brucebanner" charactername="Bruce Banner" name="BruceBanner" skin="7701" />
+    <stats characteranims="151_clea" charactername="Clea" name="Clea" skin="15101" />
+    <stats charactername="Console" name="Console" skin="0000" />
+    <stats characteranims="00_testguy" charactername="Corsair" level="1" name="Corsair" skin="2301" sounddir="corsai_m" specific_health="2000" team="hero">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats characteranims="64_crystal" charactername="Crystal" name="Crystal" skin="6401" />
+    <stats characteranims="16_dr_strange" charactername="Doctor Strange" name="DrStrange_npc" skin="1601" />
+    <stats characteranims="00_testguy" charactername="Dum Dum Dugan" level="10" name="DumDumDugan" skin="5001" specific_health="2000" team="hero">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats characteranims="00_testguy" charactername="Dum Dum Dugan" name="DumDumDuganSimple" skin="5001" specific_health="2000" />
+    <stats characteranims="06_ghostrider" charactername="Ghost Rider" name="GhostRiderNPC" skin="0601">
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" />
+    </stats>
+    <stats characteranims="86_gorgon" charactername="Gorgon" name="Gorgon" skin="8601" />
+    <stats characteranims="142_hank_pym" charactername="Hank Pym" name="HankPym" skin="14201" />
+    <stats characteranims="100_heimdall" charactername="Heimdall" name="Heimdall" skin="10001" />
+    <stats characteranims="147_hermod" charactername="Hermod" name="Hermod" skin="14701" />
+    <stats characteranims="160_iceblock" charactername="Ice Block" name="IceBlock" skin="16001" />
+    <stats charactername="Inscription" name="Inscription" skin="0000" />
+    <stats characteranims="22_invisiblewoman" charactername="Invisible Woman" name="InvisibleWoman_npc" skin="2201" />
+    <stats characteranims="154_edwin_jarvis" charactername="Jarvis" name="Jarvis" skin="15401" />
+    <stats characteranims="123_jean_grey" charactername="Jean Grey" name="JeanGrey" skin="12301" />
+    <stats characteranims="73_karnac" charactername="Karnak" name="Karnac" skin="7301" />
+    <stats characteranims="74_lab_technician_male" charactername="Lab Technician" name="LabTechnician" skin="7401" />
+    <stats characteranims="75_lab_technician_female" charactername="Lab Technician" name="LabTechnicianFemale" skin="7501" />
+    <stats characteranims="24_lilandra" charactername="Princess Lilandra" name="Lilandra" skin="2401" />
+    <stats characteranims="95_lockjaw" charactername="Lockjaw" name="Lockjaw" scale_factor="1.6" skin="9501" />
+    <stats characteranims="157_luke_cage" charactername="Luke Cage" name="LukeCageNPC" scale_factor="1.15" skin="15701" />
+    <stats characteranims="96_medusa" charactername="Medusa" name="Medusa" skin="9601" />
+    <stats charactername="Menu" name="Menu" skin="0000" />
+    <stats characteranims="63_namor" charactername="Namor" name="Namor" skin="6301" />
+    <stats characteranims="155_Namorita" charactername="Namorita" name="Namorita" skin="15501" />
+    <stats characteranims="21_NickFury_NPC" charactername="Nick Fury" name="NickFuryNPC" skin="2101">
+        <Multipart hideskin="gun_left_segment" />
+        <Multipart hideskin="gun_right_segment" />
+    </stats>
+    <stats ailevel="1" body="7" characteranims="21_nickfury" charactername="Nick Fury" level="32" mind="8" name="NickFuryCombatNPC" npcdamagescale="1.2" npchealthscale="1.2" skin="2101" sounddir="nickfu_m" specific_health="5000" stats_from_level="true" strength="6" team="hero">
+        <Multipart health="0" hideskin="gun_left_segment" />
+        <Multipart health="0" hideskin="gun_right_segment" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats characteranims="47_Nightcrawler" charactername="Nightcrawler" name="Nightcrawler" skin="4701" />
+    <stats characteranims="49_odin" charactername="Odin" name="Odin" skin="4901" />
+    <stats characteranims="158_OfficeWorkerMale" charactername="Office Worker" name="OfficeWorkerMale" skin="15801" />
+    <stats characteranims="158_OfficeWorkerMale" charactername="Office Worker" name="OfficeWorkerMale_b" skin="15802" />
+    <stats characteranims="158_OfficeWorkerMale" charactername="Office Worker" name="OfficeWorkerMale_c" skin="15803" />
+    <stats characteranims="158_OfficeWorkerMale" charactername="Office Worker" name="OfficeWorkerMale_d" skin="15804" />
+    <stats characteranims="159_OfficeWorkerFemale" charactername="Office Worker" name="OfficeWorkerFemale" skin="15901" />
+    <stats characteranims="159_OfficeWorkerFemale" charactername="Office Worker" name="OfficeWorkerFemale_b" skin="15902" />
+    <stats characteranims="159_OfficeWorkerFemale" charactername="Office Worker" name="OfficeWorkerFemale_c" skin="15903" />
+    <stats characteranims="159_OfficeWorkerFemale" charactername="Office Worker" name="OfficeWorkerFemale_d" skin="15904" />
+    <stats characteranims="39_ProfessorX" charactername="Professor X" name="ProfessorNPC" skin="3901" />
+    <stats characteranims="20_mrfantastic_npc" charactername="Reed Richards" name="ReedRichards" skin="2006" />
+    <stats characteranims="76_senator_Kelly" charactername="Senator Kelly" name="SenatorKelly" skin="7601" />
+    <stats characteranims="00_testguy" charactername="Shi'ar Civilian" name="ShiarCivilian" skin="3201" />
+    <stats aiforceranged="true" body="1" characteranims="111_shield_agent" charactername="S.H.I.E.L.D. Agent" level="3" mind="1" mutatechance="0" name="ShieldAgent" powerstyle="ps_shield" skin="11101" sounddir="shield_m" specific_health="57" strength="1" team="hero">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+    </stats>
+    <stats characteranims="103_sif" charactername="Lady Sif" name="Sif" skin="10301" />
+    <stats alwaysflying="true" body="200" characteranims="80_Silver_Surfer_4_Galactus" charactername="Silver Surfer" level="30" mind="140" moveset1="moveset_flying" name="SilverSurfer_npc" power1="power4" power2="power5" powerstyle="ps_silversurfer_npc" skin="8001" sounddir="ssurf_m" specific_health="4000" stats_from_level="false" strength="140" team="hero">
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="3" name="flight" />
+        <talent level="1" name="silver_invuln" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="1" name="power4" />
+        <BoltOn bolt="Bip01 R Toe0" model="models/bolton/silver_surfer_surfboard" slot="ebolton_weapon" />
+        <StatEffect bolt="Bip01 R Toe0" effect="char/ssurfer/ability_fly" fxlevel="1" />
+    </stats>
+    <stats characteranims="25_skrull_empress" charactername="Skrull Empress" name="SkrullEmpress" skin="2501" />
+    <stats characteranims="90_skrull_scientist" charactername="Skrull Scientist" name="SkrullScientist" skin="9001" />
+    <stats characteranims="68_tony_stark" charactername="Tony Stark" name="TonyStark" skin="6801" />
+    <stats characteranims="58_triton" charactername="Triton" name="Triton" skin="5801" />
+    <stats characteranims="99_tyr" charactername="Tyr" name="Tyr" skin="9901" />
+    <stats characteranims="146_Valkyrie" charactername="Valkyrie" name="Valkyrie" skin="14601" />
+    <stats body="1" characteranims="94_viking_warrior" charactername="Viking Warrior" leadername="Viking Captain" leaderskin="9401" level="20" mind="1" name="VikingWarrior_npc" skin="9401" sounddir="vikwar_m" specific_health="208" strength="1" team="hero">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <BoltOn bolt="Bip01 L Hand" model="models/bolton/viking_warrior_shield" slot="ebolton_weapon" />
+        <BoltOn bolt="Bip01 R Hand" model="models/bolton/viking_warrior_sword" slot="ebolton_altweapon" />
+    </stats>
+    <stats characteranims="144_vision" charactername="Vision" name="Vision" skin="14401" />
+    <stats characteranims="145_volla" charactername="Volla" name="Volla" skin="14501" />
+    <stats characteranims="109_uatu_the_watcher" charactername="Watcher" name="Watcher" scale_factor="2" skin="10901" />
+    <stats characteranims="143_weasel" charactername="Weasel" name="Weasel" skin="14301" />
+    <stats characteranims="153_wong" charactername="Wong" name="Wong" skin="15301" />
+    <stats characteranims="156_wyatt_wingfoot" charactername="Wyatt Wingfoot" name="WyattWingfoot" skin="15601" />
+    <stats characteranims="11_black_panther" charactername="Black Panther" name="BlackPantherSimple" skin="1101" />
+    <stats characteranims="01_blade" charactername="Blade" name="BladeSimple" skin="0101" />
+    <stats characteranims="07_captamerica" charactername="Captain America" name="CaptainAmericaSimple" skin="0701" />
+    <stats characteranims="02_daredevil" charactername="Daredevil" name="DaredevilSimple" skin="0201" />
+    <stats characteranims="17_deadpool" charactername="Deadpool" name="DeadpoolSimple" skin="1701" />
+    <stats characteranims="16_dr_strange" charactername="Doctor Strange" name="DrStrangeSimple" skin="1601" />
+    <stats characteranims="12_elektra" charactername="Elektra" name="ElektraSimple" skin="1201" />
+    <stats characteranims="06_ghostrider" charactername="Ghost Rider" name="GhostRiderSimple" skin="0601">
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" />
+    </stats>
+    <stats characteranims="13_humantorch" charactername="Human Torch" name="HumanTorchSimple" skin="1301" />
+    <stats characteranims="08_iceman" charactername="Iceman" name="IcemanSimple" skin="0810" />
+    <stats characteranims="22_invisiblewoman" charactername="Invisible Woman" name="InvisibleWomanSimple" skin="2201" />
+    <stats characteranims="20_mrfantastic" charactername="Mr. Fantastic" name="MrFantasticSimple" skin="2001" />
+    <stats characteranims="47_Nightcrawler" charactername="Nightcrawler" name="NightcrawlerSimple" skin="4701">
+        <BoltOn anim="47_nightcrawler_tail" bolt="Bip01 Pelvis" model="4710" slot="ebolton_tail" />
+    </stats>
+    <stats characteranims="80_silver_surfer" charactername="Silver Surfer" name="SilverSurferSimple" skin="8001" />
+    <stats characteranims="09_spiderman" charactername="Spider-Man" name="SpidermanSimple" skin="0901" />
+    <stats characteranims="38_spider_woman" charactername="Spider-Woman" name="SpiderWomanSimple" skin="3801" />
+    <stats characteranims="04_storm_npc" charactername="Storm" name="StormSimple" skin="0401" />
+    <stats characteranims="05_thing" charactername="Thing" name="ThingSimple" scale_factor="1.3" skin="0501" />
+    <stats characteranims="10_thor" charactername="Thor" name="ThorSimple" skin="1001" />
+    <stats characteranims="14_warbird" charactername="Ms. Marvel" name="WarbirdSimple" skin="1401" />
+    <stats characteranims="03_wolverine_npc" charactername="Wolverine" name="WolverineSimple" skin="0301" />
+    <stats ainostraffe="true" body="200" characteranims="130_arcade_bot" charactername="Arcade Bot" dangerrating="50" large="true" level="50" mind="140" name="ArcadeBot" powerstyle="ps_arcadebot" size="240 240 384" skin="13001" sounddir="abot_m" specific_health="5000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="67" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="28_attuma" charactername="Attuma" combolevel="popsmash" dangerrating="50" level="9" mind="140" name="Attuma" powerstyle="ps_attuma" scale_factor="1.3" skin="2801" sounddir="attuma_m" specific_health="800" stats_from_level="false" strength="290" team="enemy" weapon="wp_attuma_trident">
+        <talent level="1" name="might" />
+        <talent level="10" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_weapon_twohanded" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="138_blackheart" charactername="Blackheart" combolevel="popsmash" dangerrating="50" level="25" mind="140" name="Blackheart" powerstyle="ps_blackheart" scale_factor="1.5" skin="13801" sounddir="bheart_m" spawnorbs="3" specific_health="900" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="56_deathbird" charactername="Deathbird" combolevel="popsmash" dangerrating="50" level="30" mind="140" moveset1="moveset_flying" name="Deathbird" powerstyle="ps_deathbird" scale_factor="1.3" skin="5601" sounddir="dbird_m" specific_health="4000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+        <StatEffect anim="flying" bolt="fx01" effect="char/dbird/ability_fly" fxlevel="1" />
+        <StatEffect anim="flying" bolt="fx02" effect="char/dbird/ability_fly" fxlevel="1" />
+        <Multipart health="0" hideskin="javelin_left_segment" />
+        <Multipart health="0" hideskin="javelin_right_segment" />
+    </stats>
+    <stats body="200" characteranims="35_destroyer" charactername="Destroyer Armor" combolevel="popsmash" dangerrating="50" ignoreboundsscaling="true" level="30" mind="140" name="DestroyerArmor" powerstyle="ps_destroyer" scale_factor="1.866" skin="3501" sounddir="destry_m" specific_health="4000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+    </stats>
+    <stats aiforceranged="true" body="250" characteranims="19_drdoom" charactername="Dr. Doom" combolevel="popsmash" dangerrating="50" level="60" mind="250" name="DrDoom" powerstyle="ps_drdoom" scale_factor="1.6" skin="1901" sounddir="doom_m" specific_health="4000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="75" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="29_enchantress" charactername="Enchantress" combolevel="popsmash" dangerrating="50" level="25" mind="140" name="Enchantress" powerstyle="ps_enchantress" scale_factor="1.2" skin="2901" sounddir="enchnt_m" specific_health="2000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="25" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances_with_finishers" />
+    </stats>
+    <stats body="200" characteranims="62_executioner" charactername="Executioner" combolevel="popsmash" dangerrating="50" level="25" mind="140" name="Executioner" power1="power1" power2="power2" power3="power3" power4="power4" powerstyle="ps_executioner" scale_factor="1.5" skin="6201" sounddir="execut_m" specific_health="2000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="25" name="monst_dmg_high" />
+        <talent level="1" name="boss_resistances" />
+        <BoltOn bolt="Bip01 R Hand" model="models/bolton/executioner_axe" slot="ebolton_weapon" />
+    </stats>
+    <stats body="200" characteranims="114_fin_fang_foom" charactername="Fin Fang Foom" dangerrating="50" level="10" mind="140" name="FinFangFoom" powerstyle="ps_fff" scale_factor="1.2" size="240 240 240" skin="11401" sounddir="fff_m" spawnorbs="4" specific_health="720" stats_from_level="false" strength="140" team="enemy">
+        <BoltOn anim="114_fin_fang_foom_wings" bolt="Bip01 Spine2" model="11450" slot="ebolton_autoanim" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="3" name="monst_dmg_low" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="18_galactus" charactername="Galactus" dangerrating="125" large="true" level="30" mind="1" name="Galactus" powerstyle="ps_galactus" size="240 450 1480" skin="1801" sounddir="galac_m" specific_health="8000" stats_from_level="false" strength="1" team="enemy" textureicon="38">
+        <talent level="1" name="might" />
+        <talent level="1" name="boss_resistances" />
+        <Race name="Mutant" />
+        <talent level="70" name="monst_dmg_high" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="18_galactus" charactername="Galactus" dangerrating="125" large="true" level="30" mind="1" name="Galactus_Light" size="240 450 1480" skin="1801" specific_health="8000" stats_from_level="false" strength="1" team="enemy" textureicon="38">
+        <talent level="1" name="might" />
+        <talent level="1" name="boss_resistances" />
+        <Race name="Mutant" />
+        <talent level="70" name="monst_dmg_high" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="55_gladiator" charactername="Gladiator" combolevel="popsmash" dangerrating="50" level="30" mind="140" moveset1="moveset_flying" name="Gladiator" powerstyle="ps_gladiator" scale_factor="1.2" skin="5501" sounddir="glad_m" specific_health="2500" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="35" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+        <StatEffect anim="flying" bolt="Bip01 Spine1" effect="char/glad/ability_fly" fxlevel="1" />
+    </stats>
+    <stats body="200" characteranims="71_grey_gargoyle" charactername="Grey Gargoyle" combolevel="popsmash" dangerrating="50" level="18" mind="140" name="GreyGargoyle" powerstyle="ps_greygargoyle" skin="7101" sounddir="greyg_m" spawnorbs="3" specific_health="2000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="115_kraken" charactername="Kraken" dangerrating="101" level="12" mind="140" name="Kraken" powerstyle="ps_kraken" scale_factor="1" size="240 240 240" skin="11501" sounddir="kraken_m" specific_health="4000" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="10" name="monst_dmg_high" />
+        <talent level="6" name="monst_dmg_low" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+        <StatEffect bolt="Bip01 Head" effect="char/kraken/special_eye_glow" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="36_loki" charactername="Loki" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Loki" powerstyle="ps_loki" scale_factor="1.2" skin="3601" sounddir="loki_m" spawnorbs="3" specific_health="4500" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="45" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+    </stats>
+    <stats body="250" characteranims="19_drdoom" charactername="Dr. Doom" level="60" mind="250" name="Loki_DrDoom" scale_factor="1.6" skin="1901" specific_health="12000" strength="140" team="none" />
+    <stats body="1" characteranims="97_Loki_Troll" charactername="Loki Troll" combolevel="popup" leadername="Loki Troll Brute" leaderskin="9701" level="21" mind="1" name="loki_LokiTroll" npcdamagescale="1.2" powerstyle="ps_lokitroll" skin="9701" sounddir="ltroll_m" strength="1" team="enemy" weapon="wp_lokitroll_mace">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="00_testguy" charactername="Viking Warrior" leadername="Viking Captain" leaderskin="9401" level="20" mind="1" name="loki_VikingWarrior" skin="9401" sounddir="vikwar_m" specific_health="208" strength="1" team="hero">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+    </stats>
+    <stats body="200" characteranims="00_testguy" charactername="Nick Fury" level="30" mind="140" name="LokiNickFury" scale_factor="1.2" skin="2101" specific_health="4000" stats_from_level="false" strength="140" team="none" />
+    <stats aiforceranged="true" body="200" characteranims="00_testguy" charactername="Loki" level="30" mind="140" name="Loki_NPC" scale_factor="1.2" skin="3601" sounddir="loki_m" specific_health="4000" strength="140" team="none">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" characteranims="72_mandarin" charactername="Mandarin" combolevel="popsmash" dangerrating="50" level="20" name="Mandarin" power1="power1" power2="power2" power3="power3" powerstyle="ps_Mandarin" scale_factor="1.2" skin="7201" sounddir="mandrn_m" spawnorbs="3" specific_health="3000" stats_from_level="false" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="25" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="69_Mantis_Bot" charactername="Mandarin Explodo Bot" level="10" mind="140" name="Mandarin_bot" powerstyle="ps_mantis" skin="6901" sounddir="mbot_m" specific_health="1" stats_from_level="false" strength="140" team="enemy" />
+    <stats body="200" characteranims="124_Ultimo" charactername="Ultimo" dangerrating="50" ignoreboundsscaling="true" level="10" mind="140" name="Mandarin_ultimo" powerstyle="ps_mandarinultimo" scale_factor="1.667" skin="12401" sounddir="ultimo_m" specific_health="200" stats_from_level="false" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="10" name="monst_dmg_high" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats characteranims="72_mandarin" charactername="Mandarin" name="Mandarin_NPC" skin="7201" team="none" />
+    <stats aipickupweaponchance="0" body="200" characteranims="79_mephisto" charactername="Mephisto" combolevel="popsmash" dangerrating="50" level="25" mind="140" name="Mephisto" pickupthrowchance="0" power1="power1" power2="power2" power3="power3" power4="power4" powerstyle="ps_mephisto" scale_factor="2" skin="7901" sounddir="mefsto_m" spawnorbs="3" specific_health="3000" stats_from_level="false" strength="140">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="23" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_Mephisto_resistances" />
+    </stats>
+    <stats body="200" characteranims="47_nightcrawler" charactername="Nightcrawler" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Mephisto_Nightcrawler" powerstyle="ps_meph_nightcrawler" skin="4701" sounddir="mnight_m" specific_health="800" stats_from_level="false" strength="140" team="enemy">
+        <BoltOn anim="47_nightcrawler_tail" bolt="Bip01 Pelvis" model="4710" slot="ebolton_tail" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="123_jean_grey" charactername="Jean Grey" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Mephisto_Phoenix" powerstyle="ps_meph_phoenix" skin="12301" sounddir="mphnx_m" specific_health="800" stats_from_level="false" strength="140" team="enemy">
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="123_jean_grey" charactername="Jean Grey" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Murder_Phoenix" powerstyle="ps_meph_phoenix" skin="12301" sounddir="mphnx_m" specific_health="800" stats_from_level="false" strength="140" team="enemy">
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="200" characteranims="65_modok" charactername="M.O.D.O.K." dangerrating="50" large="true" level="9" mind="140" moveset1="moveset_flying" name="Modok" powerstyle="ps_modok" size="90 90 120" skin="6501" sounddir="modok_m" specific_health="1500" stats_from_level="false" strength="140" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="16" name="monst_dmg_high" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="3" name="flight" />
+    </stats>
+    <stats body="200" characteranims="66_tigershark" charactername="Tiger Shark" combolevel="popsmash" dangerrating="50" level="9" mind="140" name="TigerShark" powerstyle="ps_tigshk" scale_factor="1.28" skin="6601" sounddir="tigshk_m" specific_health="800" stats_from_level="false" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="10" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="85_titannus" charactername="Titannus" combolevel="popsmash" dangerrating="50" level="50" mind="140" name="Titannus" powerstyle="ps_tittanus" scale_factor="1.66" skin="8501" sounddir="titann_m" spawnorbs="3" specific_health="5000" stats_from_level="false" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="70" name="monst_dmg_high" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="108_ymir" charactername="Ymir" dangerrating="50" large="true" level="23" mind="140" name="Ymir" powerstyle="ps_ymir" size="240 450 600" skin="10801" sounddir="ymir_m" specific_health="4000" stats_from_level="false" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="40" name="monst_dmg_high" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="107_baron_mordo" charactername="Baron Mordo" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="BaronMordo" npcdamagescale="1" npchealthscale="3" powerstyle="ps_baronmordo" scale_factor="1.1" skin="10701" sounddir="mordo_m" spawnorbs="3" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="26" name="monst_dmg_high" />
+        <talent level="26" name="monst_dmg_low" />
+        <talent level="26" name="monst_health" />
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="60" characteranims="45_bulldozer" charactername="Bulldozer" combolevel="popsmash" dangerrating="50" level="30" mind="60" name="bulldozer" npcdamagescale="1" npchealthscale="3" powerstyle="ps_bulldozer" scale_factor="1.1" skin="4501" sounddir="bdozr_m" spawnorbs="1" specific_health="1500" strength="60" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="30" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="40" characteranims="59_Bullseye" charactername="Bullseye" combolevel="popsmash" dangerrating="50" level="12" mind="40" name="Bullseye" npcdamagescale="0.6" npchealthscale="4.25" pickupthrowchance="100" powerstyle="ps_bullseye" scale_factor="1.1" skin="5901" sounddir="beye_m" specific_health="850" strength="40" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="4" name="monst_dmg_high" />
+        <talent level="4" name="monst_dmg_low" />
+        <talent level="4" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="116_byrrah" charactername="Byrrah" dangerrating="50" level="9" mind="140" name="Byrrah" npcdamagescale="2.25" npchealthscale="4" powerstyle="ps_byrrah" skin="11601" sounddir="byrrah_m" specific_health="4000" strength="290" team="enemy" weapon="wp_byrrah_harpoon">
+        <talent level="1" name="might" />
+        <talent level="67" name="monst_dmg_high" />
+        <talent level="67" name="monst_dmg_low" />
+        <talent level="67" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="27_crimsondynamo" charactername="Crimson Dynamo" combolevel="popsmash" dangerrating="50" level="10" mind="140" name="CrimsonDynamo" npcdamagescale="1.5" npchealthscale="10" powerstyle="ps_crimsondynamo" skin="2701" sounddir="crmson_m" spawnorbs="3" specific_health="1000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="4" name="monst_dmg_high" />
+        <talent level="4" name="monst_dmg_low" />
+        <talent level="8" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="07_captamerica" charactername="Dark Captain America" combolevel="popsmash" dangerrating="50" level="35" mind="140" name="DarkCaptainAmerica" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_DarkCap" scale_factor="1.2" skin="0705" sounddir="dca_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <Multipart showskin="shield_segment" weaponevent="true" />
+        <talent level="1" name="might" />
+        <talent level="35" name="monst_dmg_high" />
+        <talent level="35" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="07_captamerica" charactername="Dark Captain America" combolevel="popsmash" dangerrating="50" level="35" mind="140" name="DarkCaptainAmericaComic" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_DarkCapcomic" scale_factor="1.2" skin="0705" sounddir="dca_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <Multipart showskin="shield_segment" weaponevent="true" />
+        <talent level="1" name="might" />
+        <talent level="35" name="monst_dmg_high" />
+        <talent level="35" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="132_dark_colossus" charactername="Dark Colossus" combolevel="popsmash" dangerrating="50" level="35" mind="140" name="DarkColossus" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_DarkColossus" scale_factor="1.4" skin="13201" sounddir="dcolos_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="35" name="monst_dmg_high" />
+        <talent level="35" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="131_dark_cyclops" charactername="Dark Cyclops" combolevel="popsmash" dangerrating="50" level="50" mind="140" name="DarkCyclops" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_DarkCyclops" scale_factor="1.2" skin="13101" sounddir="dcyclp_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="30_dark_psylocke" charactername="Dark Psylocke" combolevel="popsmash" dangerrating="50" level="50" mind="140" name="DarkPsylocke" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_DarkPsylocke" scale_factor="1.2" skin="3005" sounddir="dpsylc_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="09_Spiderman_Dark" charactername="Dark Spider-Man" combolevel="popsmash" dangerrating="50" level="40" mind="140" name="DarkSpiderman" npcdamagescale="1" npchealthscale="2.5" powerstyle="ps_DarkSpiderman" scale_factor="1.2" skin="0905" sounddir="dspide_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="40" name="monst_dmg_high" />
+        <talent level="40" name="monst_dmg_low" />
+        <talent level="40" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="10_thor" charactername="Dark Thor" combolevel="popsmash" dangerrating="50" level="40" mind="140" moveset1="moveset_flying" name="DarkThor" npcdamagescale="1" npchealthscale="2.5" powerstyle="ps_DarkThor" scale_factor="1.2" skin="1005" sounddir="dthor_m" spawnorbs="3" specific_health="5000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="40" name="monst_dmg_high" />
+        <talent level="40" name="monst_dmg_low" />
+        <talent level="40" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+        <Multipart health="0" hideskin="hammer_segment" nonmenuonly="true" showskin="hammer_back_segment" />
+        <StatEffect anim="flying" effect="char/thor/ability_fly" fxlevel="1" />
+    </stats>
+    <stats body="200" characteranims="20_mrfantastic_dark" charactername="Dark Mr. Fantastic" combolevel="popsmash" dangerrating="50" level="50" mind="140" name="DarkMrFantastic" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_darkmrfantastic" scale_factor="1.4" skin="2005" sounddir="dmrf_m" spawnorbs="3" specific_health="3000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="20_mrfantastic_dark" charactername="Dark Mr. Fantastic" dangerrating="50" level="35" mind="140" name="DarkMrFantasticWeak" npcdamagescale="0.25" npchealthscale="0.25" powerstyle="ps_darkmrfantasticsm" scale_factor="1" skin="2005" sounddir="dmrf_m" specific_health="10" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="5" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="13_humantorch_dark" charactername="Dark Human Torch" combolevel="popsmash" dangerrating="50" level="35" mind="140" moveset1="moveset_flying" name="DarkHumanTorch" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_darkhumantorch" scale_factor="1.4" skin="1305" sounddir="dtorch_m" spawnorbs="3" specific_health="3000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="13_humantorch_dark" charactername="Dark Human Torch" dangerrating="50" level="20" mind="140" moveset1="moveset_flying" name="DarkHumanTorchWeak" npcdamagescale="0.25" npchealthscale="0.25" powerstyle="ps_darkhumantorchsm" scale_factor="1" skin="1305" sounddir="dtorch_m" specific_health="10" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="5" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="22_invisiblewoman_dark" charactername="Dark Invisible Woman" combolevel="popsmash" dangerrating="50" level="35" mind="140" name="DarkInvisibleWoman" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_darkinvisiblewoman" scale_factor="1.4" skin="2205" sounddir="dinvw_m" spawnorbs="3" specific_health="3000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="22_invisiblewoman_dark" charactername="Dark Invisible Woman" dangerrating="50" level="35" mind="140" name="DarkInvisibleWomanWeak" npcdamagescale="0.25" npchealthscale="0.25" powerstyle="ps_darkinvisiblewomansm" scale_factor="1" skin="2205" sounddir="dinvw_m" specific_health="10" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="5" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="200" characteranims="05_thing_dark" charactername="Dark Thing" combolevel="popsmash" dangerrating="50" level="35" mind="140" name="DarkThing" npcdamagescale="1" npchealthscale="3.65" powerstyle="ps_darkthing" scale_factor="1.65" skin="0505" sounddir="dthing_m" spawnorbs="3" specific_health="3000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="50" name="monst_dmg_high" />
+        <talent level="50" name="monst_dmg_low" />
+        <talent level="50" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="05_thing_dark" charactername="Dark Thing" dangerrating="50" level="35" mind="140" name="DarkThingWeak" npcdamagescale="0.25" npchealthscale="0.25" powerstyle="ps_darkthingsm" scale_factor="1.3" skin="0505" sounddir="dthing_m" specific_health="10" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="5" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats ainostraffe="true" characteranims="67_dragonman" charactername="Dragonman" combolevel="popsmash" dangerrating="50" large="true" level="15" moveset1="moveset_flying" name="DragonMan" npcdamagescale="1.65" npchealthscale="8" powerstyle="ps_dragon" size="70 70 110" skin="6701" sounddir="dragon_m" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="3" name="flight" />
+    </stats>
+    <stats body="200" characteranims="26_Hussar" charactername="Hussar" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Hussar" npcdamagescale="1.25" npchealthscale="5" powerstyle="ps_hussar" scale_factor="1.1" skin="2601" sounddir="hussar_m" spawnorbs="3" specific_health="3000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="28" name="monst_dmg_high" />
+        <talent level="28" name="monst_dmg_low" />
+        <talent level="32" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="117_Krang" charactername="Krang" combolevel="popsmash" dangerrating="50" level="9" mind="140" name="Krang" npcdamagescale="2.25" npchealthscale="4" powerstyle="ps_krang" scale_factor="1.1" skin="11701" sounddir="krang_m" specific_health="2000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+        <BoltOn bolt="Bip01 R Hand" model="models/bolton/krang_gun" slot="ebolton_weapon" />
+    </stats>
+    <stats body="200" characteranims="57_Kurse" charactername="Kurse" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Kurse" npcdamagescale="2.25" npchealthscale="5.5" powerstyle="ps_kurse" scale_factor="1.1" skin="5701" sounddir="kurse_m" specific_health="2000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="61_Lizard" charactername="Lizard" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Lizard" npcdamagescale="1.65" npchealthscale="6" powerstyle="ps_lizard" scale_factor="1.1" skin="6102" sounddir="lizard_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="60_mysterio" charactername="Mysterio" combolevel="popsmash" dangerrating="50" level="8" mind="140" name="Mysterio" npcdamagescale="0.85" npchealthscale="2.75" powerstyle="ps_mysterio" scale_factor="1.1" skin="6001" sounddir="mysto_m" spawnorbs="3" specific_health="400" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="5" name="monst_dmg_high" />
+        <talent level="5" name="monst_dmg_low" />
+        <talent level="5" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="51_Neutron" charactername="Neutron" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Neutron" npcdamagescale="1.25" npchealthscale="4" powerstyle="ps_neutron" scale_factor="1.3" skin="5101" sounddir="neutrn_m" spawnorbs="3" specific_health="3000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="28" name="monst_dmg_high" />
+        <talent level="28" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="53_paibok" charactername="Paibok" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Paibok" npcdamagescale="1.65" npchealthscale="6" powerstyle="ps_paibok" scale_factor="1.1" skin="5301" sounddir="paibok_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="60" characteranims="44_piledriver" charactername="Piledriver" combolevel="popsmash" dangerrating="50" level="30" mind="60" name="piledriver" npcdamagescale="1" npchealthscale="1.5" powerstyle="ps_piledriver" skin="4401" sounddir="pildrv_m" spawnorbs="1" specific_health="1500" strength="60" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="30" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="60" characteranims="118_Radioactive_Man" charactername="Radioactive Man" combolevel="popsmash" dangerrating="50" level="6" mind="60" name="Radioactiveman" npcdamagescale="0.75" npchealthscale="3" powerstyle="ps_radiom" scale_factor="1.1" skin="11801" sounddir="radiom_m" spawnorbs="3" specific_health="800" strength="60" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="8" name="monst_dmg_high" />
+        <talent level="8" name="monst_dmg_low" />
+        <talent level="8" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+        <talent level="1" name="radiom_dot" />
+    </stats>
+    <stats body="200" characteranims="37_rhino" charactername="Rhino" combolevel="popsmash" dangerrating="50" force_falling_push_response="true" level="20" mind="140" name="Rhino" npcdamagescale="1.25" npchealthscale="3" powerstyle="ps_rhino" scale_factor="1.2" skin="3701" sounddir="rhino_m" specific_health="4000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="14" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="40" characteranims="40_scorpion" charactername="Scorpion" combolevel="popsmash" dangerrating="50" level="11" mind="40" name="Scorpion" npcdamagescale="0.7" npchealthscale="2.3" powerstyle="ps_scorpion" scale_factor="1.1" skin="4001" sounddir="scorp_m" spawnorbs="3" specific_health="650" strength="40" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="3" name="monst_dmg_high" />
+        <talent level="3" name="monst_dmg_low" />
+        <talent level="3" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="42_shocker" charactername="Shocker" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Shocker" npcdamagescale="1" npchealthscale="5.5" powerstyle="ps_shocker" scale_factor="1.1" skin="4201" sounddir="shockr_m" specific_health="2000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="48_Starbolt" charactername="Starbolt" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Starbolt" npcdamagescale="1.5" npchealthscale="6" powerstyle="ps_starbolt" scale_factor="1.15" skin="4801" sounddir="strblt_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="37" name="monst_dmg_high" />
+        <talent level="37" name="monst_dmg_low" />
+        <talent level="37" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+        <StatEffect effect="char/strblt/special_burning" fxlevel="1" />
+        <StatEffect bolt="Bip01 Head" effect="char/strblt/special_burning" fxlevel="2" />
+    </stats>
+    <stats body="200" characteranims="33_superskrull" charactername="Super Skrull" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="SuperSkrull" npcdamagescale="1.5" npchealthscale="6" powerstyle="ps_supers" scale_factor="1" skin="3301" sounddir="supers_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="60" characteranims="46_thunderball" charactername="Thunderball" combolevel="popsmash" dangerrating="50" level="30" mind="60" name="thunderball" npcdamagescale="1.5" npchealthscale="2.25" powerstyle="ps_thunderball" scale_factor="1.1" skin="4601" sounddir="tball_m" spawnorbs="1" specific_health="1500" strength="60" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="30" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+        <BoltOn actorskin="4602" anim_set="46_Thunderball_BallNChain" bolt="Bip01 R Hand" slot="ebolton_autoanim" />
+    </stats>
+    <stats body="200" characteranims="54_ulik" charactername="Ulik" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Ulik" npcdamagescale="0.7" npchealthscale="3.85" powerstyle="ps_ulik" scale_factor="1.1" skin="5401" sounddir="ulik_m" specific_health="1400" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="30" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+        <talent level="1" name="energy_resistant" />
+        <talent level="1" name="physical_resistant" />
+    </stats>
+    <stats body="200" characteranims="124_Ultimo" charactername="Ultimo" combolevel="popsmash" dangerrating="50" ignoreboundsscaling="true" level="17" mind="140" name="Ultimo" npcdamagescale="1.4" npchealthscale="3.85" powerstyle="ps_ultimo" scale_factor="3" size="70 70 110" skin="12401" sounddir="ultimo_m" specific_health="1300" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats body="200" characteranims="124_Ultimo" charactername="Ultimo Mark 2" combolevel="popsmash" dangerrating="50" ignoreboundsscaling="true" level="22" mind="140" name="Ultimo_b" npcdamagescale="1.4" npchealthscale="3.85" powerstyle="ps_ultimo" scale_factor="3" size="70 70 110" skin="12401" sounddir="ultimo_m" specific_health="1300" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="boss_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="61_Lizard" charactername="Lizard" combolevel="popsmash" dangerrating="50" level="32" mind="140" name="UltraLizard" npcdamagescale="1.5" npchealthscale="5.25" powerstyle="ps_lizard" scale_factor="1.1" skin="6101" sounddir="lizard_m" spawnorbs="3" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="37_rhino" charactername="Ultra Rhino" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="UltraRhino" npcdamagescale="1" npchealthscale="5.5" powerstyle="ps_rhino" scale_factor="1.2" skin="3702" sounddir="rhino_m" specific_health="2000" strength="290" team="enemy">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="40_scorpion" charactername="Ultra Scorpion" combolevel="popsmash" dangerrating="50" level="32" mind="140" name="UltraScorpion" npcdamagescale="1.5" npchealthscale="5.25" powerstyle="ps_scorpion" scale_factor="1.1" skin="4002" sounddir="scorp_m" spawnorbs="3" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats aiforceranged="true" body="200" characteranims="42_shocker" charactername="Ultra Shocker" combolevel="popsmash" dangerrating="50" level="32" mind="140" name="UltraShocker" npcdamagescale="1.5" npchealthscale="5.25" powerstyle="ps_shocker" scale_factor="1.1" skin="4202" sounddir="shockr_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="34_ultron" charactername="Ultron" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Ultron" npcdamagescale="1" npchealthscale="3" powerstyle="ps_ultron" scale_factor="1.3" skin="3401" sounddir="ultron_m" spawnorbs="3" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="26" name="monst_dmg_high" />
+        <talent level="26" name="monst_dmg_low" />
+        <talent level="26" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="200" characteranims="52_Warstar" charactername="Warstar" combolevel="popsmash" dangerrating="50" level="30" mind="140" name="Warstar" npcdamagescale="1.65" npchealthscale="8" powerstyle="ps_warstar" scale_factor="1.6" skin="5201" sounddir="warstr_m" specific_health="4000" strength="140" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <talent level="37" name="monst_dmg_high" />
+        <talent level="37" name="monst_dmg_low" />
+        <talent level="37" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="60" characteranims="119_winter_soldier" charactername="Winter Soldier" combolevel="popsmash" dangerrating="50" level="6" mind="60" name="WinterSoldier" npcdamagescale="0.75" npchealthscale="3" powerstyle="ps_wintersoldier" skin="11901" sounddir="winter_m" spawnorbs="3" specific_health="800" strength="60" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="8" name="monst_dmg_high" />
+        <talent level="8" name="monst_dmg_low" />
+        <talent level="8" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="villain_resistances" />
+    </stats>
+    <stats body="60" characteranims="43_wrecker" charactername="Wrecker" combolevel="popsmash" dangerrating="50" level="30" mind="60" name="wrecker" npcdamagescale="1" npchealthscale="2.25" powerstyle="ps_wrecker" scale_factor="1.1" skin="4301" sounddir="wrckr_m" spawnorbs="1" specific_health="1500" strength="60" team="enemy" textureicon="45">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="30" name="monst_dmg_high" />
+        <talent level="30" name="monst_dmg_low" />
+        <talent level="30" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="villain_resistances" />
+        <BoltOn bolt="Bip01 R Hand" model="models/bolton/wrecker_crowbar" slot="ebolton_weapon" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="125_aim_reaver" charactername="AIM Reaver" combolevel="veryeasy" leadername="AIM Reaver" leaderskin="12501" level="5" material="solid_metal" mind="1" name="AIMReaver_a" nonhumanoidskeleton="true" npchealthscale="0.75" powerstyle="ps_aimreaver" skin="12501" sounddir="aimr_m" standard_pain_only="true" strength="1" team="enemy" weapon="wp_aimreaver_dummy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <StatEffect bolt="Bip01" effect="char/aimr/special_hover" fxlevel="1" />
+        <StatEffect effect="char/aimr/special_hover" fxlevel="2" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="125_aim_reaver" charactername="AIM Reaver" combolevel="veryeasy" leadername="AIM Reaver" leaderskin="12502" level="13" material="solid_metal" mind="1" name="AIMReaver_b" nonhumanoidskeleton="true" npchealthscale="0.75" powerstyle="ps_aimreaver" skin="12502" sounddir="aimr_m" standard_pain_only="true" strength="1" team="enemy" weapon="wp_aimreaver_dummy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <StatEffect bolt="Bip01" effect="char/aimr/special_hover" fxlevel="1" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="126_aim_trooper" charactername="AIM Trooper" combolevel="veryeasy" leadername="AIM Trooper" leaderskin="12601" level="4" mind="1" name="AIMTrooper_a" npcdamagescale="0.5" npchealthscale="0.75" powerstyle="ps_aimtrooper" skin="12601" sounddir="aimt_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_aimtrooper_gun">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="front_invuln" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="126_aim_trooper" charactername="AIM Trooper" combolevel="veryeasy" leadername="AIM Trooper" leaderskin="12601" level="5" mind="1" name="AIMTrooper_b" npcdamagescale="0.5" npchealthscale="0.75" powerstyle="ps_aimtrooper" skin="12601" sounddir="aimt_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_aimtrooper_gun">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="front_invuln" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="126_aim_trooper" charactername="AIM Trooper" combolevel="veryeasy" leadername="AIM Trooper" leaderskin="12601" level="4" mind="1" name="AIMTrooper_c" npcdamagescale="0.5" npchealthscale="0.75" powerstyle="ps_aimtrooper" skin="12601" sounddir="aimt_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_aimtrooper_gun" weapon_no_acc="true">
+        <talent level="0" name="front_invuln" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="133_arcade_android" charactername="Arcade Android" combolevel="medium" leadername="Arcade Android" leaderskin="13301" level="12" material="solid_metal" mind="1" name="ArcadeAndriod_a" powerstyle="ps_arcadeandroid" skin="13301" sounddir="arr_m" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="hero_skin" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="133_arcade_android" charactername="Arcade Android" combolevel="medium" leadername="Arcade Android" leaderskin="13301" level="13" material="solid_metal" mind="1" name="ArcadeAndriod_b" powerstyle="ps_arcadeandroid" skin="13301" sounddir="arr_m" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="hero_skin" />
+    </stats>
+    <stats body="1" characteranims="134_Arcade_clown" charactername="Arcade Clown" combolevel="medium" leadername="Arcade Clown" leaderskin="13401" level="13" mind="1" name="ArcadeClown_a" pain_pitch_range="600" powerstyle="ps_arcadeclown" skin="13401" sounddir="aclown_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="energy_resistant" />
+    </stats>
+    <stats body="1" characteranims="134_Arcade_clown" charactername="Arcade Clown" combolevel="medium" leadername="Arcade Clown" leaderskin="13403" level="14" mind="1" name="ArcadeClown_b" pain_pitch_range="600" powerstyle="ps_arcadeclown" skin="13403" sounddir="aclown_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="energy_resistant" />
+    </stats>
+    <stats body="1" characteranims="120_atlantean_armored" charactername="Atlantean Armored" combolevel="easy" leadername="Atlantean Armored" leaderskin="12001" level="7" mind="1" name="AtlanteanArmored_a" npchealthscale="1.5" powerstyle="ps_atlanteanarmored" skin="12001" sounddir="atla_m" strength="1" team="enemy" weapon="wp_atlanteanarmored_staff">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+    </stats>
+    <stats body="1" characteranims="120_atlantean_armored" charactername="Atlantean Armored" combolevel="easy" leadername="Atlantean Armored" leaderskin="12002" level="8" mind="1" name="AtlanteanArmored_b" npchealthscale="1.5" powerstyle="ps_atlanteanarmored" skin="12002" sounddir="atla_m" strength="1" team="enemy" weapon="wp_atlanteanarmored_staff">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="121_atlantean_champion" charactername="Atlantean Champion" combolevel="medium" leadername="Atlantean Champion" leaderskin="12101" level="6" mind="1" name="AtlanteanChampion_a" powerstyle="ps_atlanteanchampion" resurrect="master" skin="12101" sounddir="atlc_m" strength="1" team="enemy" weapon="wp_atlanteanchampion_spear">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="finisher" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="121_atlantean_champion" charactername="Atlantean Champion" combolevel="medium" leadername="Atlantean Champion" leaderskin="12102" level="7" mind="1" name="AtlanteanChampion_b" powerstyle="ps_atlanteanchampion" resurrect="master" skin="12102" sounddir="atlc_m" strength="1" team="enemy" weapon="wp_atlanteanchampion_spear">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="finisher" />
+    </stats>
+    <stats body="1" characteranims="122_atlantean_defender" charactername="Atlantean Defender" combolevel="easy" leadername="Atlantean Defender" leaderskin="12201" level="6" mind="1" name="AtlanteanDefender_a" powerstyle="ps_atlanteandefender" resurrect="minion" skin="12201" sounddir="atld_m" strength="1" team="enemy" weapon="wp_atlanteandefender_swords">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="122_atlantean_defender" charactername="Atlantean Defender" combolevel="easy" leadername="Atlantean Defender" leaderskin="12203" level="7" mind="1" name="AtlanteanDefender_b" powerstyle="ps_atlanteandefender" resurrect="minion" skin="12203" sounddir="atld_m" strength="1" team="enemy" weapon="wp_atlanteandefender_swords">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="112_clay_guardian" charactername="Clay Guardian" combolevel="medium" deathnode="deathgen" leadername="Clay Guardian Captain" leaderskin="11201" level="10" mind="1" name="ClayGuardian_a" npcdamagescale="0.75" powerstyle="ps_clayguardian" scale_factor="0.8" skin="11201" sounddir="clayg_m" standard_pain_only="true" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_clayguardian_daggers">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="spawnsecond" />
+    </stats>
+    <stats body="1" characteranims="112_clay_guardian" charactername="Clay Guardian" combolevel="medium" deathnode="deathgen" leadername="Clay Guardian Captain" leaderskin="11202" level="12" mind="1" name="ClayGuardian_b" npcdamagescale="0.75" powerstyle="ps_clayguardian" scale_factor="0.8" skin="11202" sounddir="clayg_m" standard_pain_only="true" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_clayguardian_daggers">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="spawnsecond" />
+    </stats>
+    <stats body="1" characteranims="112_clay_guardian" charactername="Clay Guardian" combolevel="medium" deathnode="deathgen" leadername="Clay Guardian Captain" leaderskin="11204" level="22" mind="1" name="ClayGuardian_c" npcdamagescale="0.75" powerstyle="ps_clayguardian" scale_factor="0.8" skin="11204" sounddir="clayg_m" standard_pain_only="true" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_clayguardian_daggers">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="spawnsecond" />
+    </stats>
+    <stats body="1" characteranims="113_clay_warrior" charactername="Clay Warrior" combolevel="medium" deathnode="deathgen" leadername="Clay Warrior" leaderskin="11301" level="9" mind="1" name="ClayWarrior_a" npcdamagescale="0.5" npchealthscale="0.1" powerstyle="ps_claywarrior" skin="11301" sounddir="clayw_m" strength="1" team="enemy" weapon="wp_claywarrior_scimitar">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="113_clay_warrior" charactername="Clay Warrior" combolevel="medium" deathnode="deathgen" leadername="Clay Warrior" leaderskin="11302" level="12" mind="1" name="ClayWarrior_b" npcdamagescale="0.5" npchealthscale="0.1" powerstyle="ps_claywarrior" skin="11302" sounddir="clayw_m" strength="1" team="enemy" weapon="wp_claywarrior_scimitar">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="113_clay_warrior" charactername="Clay Warrior" combolevel="medium" deathnode="deathgen" leadername="Clay Warrior" leaderskin="11304" level="22" mind="1" name="ClayWarrior_c" npcdamagescale="0.5" npchealthscale="0.1" powerstyle="ps_claywarrior" skin="11304" sounddir="clayw_m" strength="1" team="enemy" weapon="wp_claywarrior_scimitar">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="104_DarkElf_Strider" charactername="Dark Elf Strider" combolevel="popsmash" leadername="Dark Elf Strider Captain" leaderskin="10401" level="23" mind="1" name="DarkElfStrider_a" powerstyle="ps_destrider" skin="10401" sounddir="delfm_m" strength="1" team="enemy" weapon="wp_darkelfstrider_staff">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="finisher" />
+    </stats>
+    <stats body="1" characteranims="104_DarkElf_Strider" charactername="Dark Elf Strider" combolevel="popsmash" leadername="Dark Elf Strider Captain" leaderskin="10403" level="24" mind="1" name="DarkElfStrider_b" powerstyle="ps_destrider" skin="10403" sounddir="delfm_m" strength="1" team="enemy" weapon="wp_darkelfstrider_staff">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="finisher" />
+    </stats>
+    <stats body="1" characteranims="105_DarkElf_Warlock" charactername="Dark Elf Warlock" combolevel="popsmash" leadername="Dark Elf Warlock Master" leaderskin="10501" level="23" mind="1" name="DarkElfWarlock_a" powerstyle="ps_dewarlock" skin="10501" sounddir="delfsc_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="105_DarkElf_Warlock" charactername="Dark Elf Warlock" combolevel="popsmash" leadername="Dark Elf Warlock Master" leaderskin="10503" level="24" mind="1" name="DarkElfWarlock_b" powerstyle="ps_dewarlock" skin="10503" sounddir="delfsc_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="141_demonic_soul" charactername="Demonic Soul" combolevel="hard" leadername="Demonic Soul" leaderskin="14101" level="16" mind="1" name="DemonicSoul_a" no_ldr_scale="true" npchealthscale="1.5" powerstyle="ps_demonicsoul" skin="14101" sounddir="dmnr_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="possess" />
+    </stats>
+    <stats body="1" characteranims="141_demonic_soul" charactername="Demonic Soul" leadername="Demonic Soul" leaderskin="14102" level="17" mind="1" name="DemonicSoul_b" npchealthscale="0.1" powerstyle="ps_demonicsoul" skin="14102" sounddir="dmnr_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="141_demonic_soul" charactername="Demonic Soul" combolevel="hard" leadername="Demonic Soul" leaderskin="14104" level="33" mind="1" name="DemonicSoul_c" no_ldr_scale="true" npchealthscale="1.5" powerstyle="ps_demonicsoul" skin="14104" sounddir="dmnr_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="possess" />
+    </stats>
+    <stats body="1" characteranims="140_demon_leaper" charactername="Demon Leaper" combolevel="medium" leadername="Demon Leaper" leaderskin="14001" level="16" mind="1" name="DemonLeaper_a" no_ldr_scale="true" powerstyle="ps_demonleaper" skin="14001" sounddir="dmnm_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="140_demon_leaper" charactername="Demon Leaper" combolevel="medium" leadername="Demon Leaper" leaderskin="14002" level="17" mind="1" name="DemonLeaper_b" no_ldr_scale="true" powerstyle="ps_demonleaper" skin="14002" sounddir="dmnm_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="140_demon_leaper" charactername="Skrull Experiment" combolevel="medium" leadername="Demon Leaper" leaderskin="14003" level="33" mind="1" name="DemonLeaper_c" no_ldr_scale="true" powerstyle="ps_demonleaper" skin="14003" sounddir="dmnm_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Doom Bot" combolevel="medium" leadername="Doom Bot" leaderskin="13501" level="3" material="solid_metal" mind="1" name="DoomBot_a" powerstyle="ps_doombot" skin="13501" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Doom Bot" combolevel="medium" leadername="Doom Bot" leaderskin="13501" level="32" material="solid_metal" mind="1" name="DoomBot_b" powerstyle="ps_doombot" skin="13501" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Doom Bot" combolevel="medium" leadername="Doom Bot" leaderskin="13501" level="12" material="solid_metal" mind="1" name="DoomBot_c" powerstyle="ps_doombot" skin="13501" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="15_ironman" charactername="Doom Ironman" combolevel="popsmash" leadername="Doom Ironman" level="32" mind="1" name="DoomIronman_a" npchealthscale="0.5" powerstyle="ps_doomironman" skin="12901" sounddir="dmiron_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="dim_launch" />
+        <StatEffect anim="flying" bolt="Bip01 L Toe0" effect="char/dmiron/ability_fly" fxlevel="1" />
+        <StatEffect anim="flying" bolt="Bip01 R Toe0" effect="char/dmiron/ability_fly" fxlevel="1" />
+    </stats>
+    <stats body="1" characteranims="15_ironman" charactername="Doom Ironman" combolevel="popsmash" leadername="Doom Ironman" level="33" mind="1" name="DoomIronman_b" npchealthscale="0.5" powerstyle="ps_doomironman" skin="12901" sounddir="dmiron_m" strength="1" team="enemy">
+        <talent level="0" name="dim_launch" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <StatEffect anim="flying" bolt="Bip01 L Toe0" effect="char/dmiron/ability_fly" fxlevel="1" />
+    </stats>
+    <stats body="1" characteranims="15_ironman" charactername="Doom Ironman" combolevel="popsmash" leadername="Doom Ironman" level="34" mind="1" name="DoomIronman_c" npchealthscale="0.5" powerstyle="ps_doomironman" skin="12901" sounddir="dmiron_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="dim_launch" />
+        <StatEffect anim="flying" bolt="Bip01 L Toe0" effect="char/dmiron/ability_fly" fxlevel="1" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="136_doomsman" charactername="Doomsman" combolevel="popsmash" large="true" leadername="Doomsman" leaderskin="13601" level="32" mind="1" name="Doomsman_a" npchealthscale="1.5" powerstyle="ps_doomsman" scale_factor="1.44" scaleattacks="true" skin="13601" sounddir="dooms_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="knock_resist" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="136_doomsman" charactername="Doomsman" combolevel="popsmash" large="true" leadername="Doomsman" leaderskin="13601" level="33" mind="1" name="Doomsman_b" npchealthscale="1.5" powerstyle="ps_doomsman" scale_factor="1.44" scaleattacks="true" skin="13601" sounddir="dooms_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="knock_resist" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="136_doomsman" charactername="Doomsman" combolevel="popsmash" large="true" leadername="Doomsman" leaderskin="13601" level="34" mind="1" name="Doomsman_c" npchealthscale="1.5" powerstyle="ps_doomsman" scale_factor="1.44" scaleattacks="true" skin="13601" sounddir="dooms_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="knock_resist" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Doom Sentry" combolevel="hard" leadername="Doom Sentry" leaderskin="13501" level="15" material="solid_metal" mind="1" name="DoomSentry_a" powerstyle="ps_doombot" skin="13501" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Doom Sentry" combolevel="hard" leadername="Doom Sentry" leaderskin="13501" level="15" material="solid_metal" mind="1" name="DoomSentry_b" powerstyle="ps_doombot" skin="13501" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="98_Fenris_wolf" charactername="Fenris Wolf" combolevel="popsmash" leadername="Fenris Alpha Wolf" leaderskin="9801" level="22" mind="1" name="FenrisWolf_a" nonhumanoidskeleton="true" npcdamagescale="1.2" powerstyle="ps_fenris" size="32 32 72" skin="9801" sounddir="fenris_m" strength="1" team="enemy">
+        <talent level="1" name="fightstyle_nonhuman" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="98_Fenris_wolf" charactername="Fenris Wolf" combolevel="popsmash" leadername="Fenris Alpha Wolf" leaderskin="9803" level="23" mind="1" name="FenrisWolf_b" nonhumanoidskeleton="true" npcdamagescale="1.2" powerstyle="ps_fenris" size="32 32 72" skin="9803" sounddir="fenris_m" strength="1" team="enemy">
+        <talent level="1" name="fightstyle_nonhuman" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="149_fire_giant" charactername="Fire Giant" combolevel="popup" heaviness="3" ignoreboundsscaling="true" large="true" leadername="Fire Giant" level="18" mind="1" name="FireGiant_a" no_ldr_scale="true" npchealthscale="2" powerstyle="ps_firegiant" scale_factor="2" size="32 32 108" skin="14901" sounddir="fgiant_m" strength="1" team="enemy" weapon="wp_firegiant_sword">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="elemental_resistant" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="knock_resist" />
+        <talent level="1" name="no_grab" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="106_FrostGiant" charactername="Frost Giant" combolevel="popup" ignoreboundsscaling="true" large="true" leadername="Frost Giant Overlord" leaderskin="10601" level="24" mind="1" name="FrostGiant_a" no_ldr_scale="true" npchealthscale="1.5" powerstyle="ps_frostgiant" scale_factor="2" size="32 32 108" skin="10601" sounddir="icegnt_m" strength="1" team="enemy" weapon="wp_frostgiant_hammer">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="elemental_resistant" />
+        <talent level="1" name="knock_resist" />
+        <talent level="1" name="no_grab" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="106_FrostGiant" charactername="Frost Giant" combolevel="popup" ignoreboundsscaling="true" large="true" leadername="Frost Giant Overlord" leaderskin="10603" level="25" mind="1" name="FrostGiant_b" no_ldr_scale="true" npchealthscale="1.5" powerstyle="ps_frostgiant" scale_factor="2" size="32 32 108" skin="10603" sounddir="icegnt_m" strength="1" team="enemy" weapon="wp_frostgiant_hammer">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="elemental_resistant" />
+        <talent level="1" name="knock_resist" />
+        <talent level="1" name="no_grab" />
+    </stats>
+    <stats body="1" characteranims="81_Punisher_Bot" charactername="Galactus Punisher" combolevel="popsmash" leadername="Galactus Punisher" leaderskin="8101" level="29" mind="1" name="GalactusPunisher_a" powerstyle="ps_galactuspunisher" skin="8101" sounddir="punish_m" strength="1" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+    </stats>
+    <stats body="1" characteranims="81_Punisher_Bot" charactername="Galactus Punisher" combolevel="popsmash" leadername="Galactus Punisher" leaderskin="8103" level="30" mind="1" name="GalactusPunisher_b" powerstyle="ps_galactuspunisher" skin="8103" sounddir="punish_m" strength="1" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+    </stats>
+    <stats body="1" characteranims="81_Punisher_Bot" charactername="Galactus Punisher" combolevel="popsmash" leadername="Galactus Punisher" leaderskin="8104" level="25" mind="1" name="GalactusPunisher_c" powerstyle="ps_galacpunishnoknock" skin="8104" sounddir="punish_m" strength="1" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+    </stats>
+    <stats body="1" characteranims="97_Loki_Troll" charactername="Loki Troll" combolevel="popup" leadername="Loki Troll Brute" leaderskin="9701" level="21" mind="1" name="LokiTroll_a" npcdamagescale="1.2" powerstyle="ps_lokitroll" skin="9701" sounddir="ltroll_m" strength="1" team="enemy" weapon="wp_lokitroll_mace">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="97_Loki_Troll" charactername="Loki Troll" combolevel="popup" leadername="Loki Troll Brute" leaderskin="9704" level="22" mind="1" name="LokiTroll_b" npcdamagescale="1.2" powerstyle="ps_lokitroll" skin="9704" sounddir="ltroll_m" strength="1" team="enemy" weapon="wp_lokitroll_mace">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_Big" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" alwaysflying="true" body="1" characteranims="150_mephisto_pet" charactername="Mephisto's Pet" combolevel="hard" leadername="Mephisto's Pet" leaderskin="15001" level="17" mind="1" moveset1="moveset_flying" name="MephistoPet_a" nonhumanoidskeleton="true" powerstyle="ps_mephistopet" skin="15001" sounddir="meppet_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="no_trip" />
+        <talent level="1" name="knock_resist" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="137_murder_bot" charactername="Murder Bot" combolevel="medium" leadername="Murder Bot" leaderskin="13701" level="14" material="solid_metal" mind="1" name="MurderBot_a" nonhumanoidskeleton="true" npcdamagescale="0.75" npchealthscale="0.75" powerstyle="ps_murderbot" scale_factor="1.25" skin="13701" sounddir="krobot_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" ainostraffe="true" body="1" characteranims="137_murder_bot" charactername="Murder Bot" combolevel="medium" leadername="Murder Bot" leaderskin="13704" level="16" material="solid_metal" mind="1" name="MurderBot_b" nonhumanoidskeleton="true" npcdamagescale="0.75" npchealthscale="0.75" powerstyle="ps_murderbot" scale_factor="1.25" skin="13704" sounddir="krobot_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="127_shaolin_healer" charactername="Shaolin Healer" combolevel="medium" leadername="Shaolin Healer" leaderskin="12701" level="10" mind="1" name="ShaolinHealer_a" powerstyle="ps_shaolinhealer" skin="12701" sounddir="shahl_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="127_shaolin_healer" charactername="Shaolin Healer" combolevel="medium" leadername="Shaolin Healer" leaderskin="12702" level="11" mind="1" name="ShaolinHealer_b" powerstyle="ps_shaolinhealer" skin="12702" sounddir="shahl_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="127_shaolin_healer" charactername="Shaolin Healer" combolevel="medium" dangerrating="11" leadername="Shaolin Healer" leaderskin="12703" level="11" mind="1" name="ShaolinHealer_gg" powerstyle="ps_shaolinhealer" skin="12703" sounddir="shahl_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="128_shaolin_monk" charactername="Shaolin Monk" combolevel="medium" leadername="Shaolin Master" leaderskin="12801" level="9" mind="1" name="ShaolinMonk_a" powerstyle="ps_shaolinmonk" skin="12801" sounddir="shamk_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="128_shaolin_monk" charactername="Shaolin Monk" combolevel="medium" leadername="Shaolin Master" leaderskin="12802" level="11" mind="1" name="ShaolinMonk_b" powerstyle="ps_shaolinmonk" skin="12802" sounddir="shamk_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="82_shiar_gunner" charactername="Shi'ar Gunner" combolevel="popsmash" leadername="Shi'ar Gunnery Sergeant" leaderskin="8201" level="26" mind="1" mutantskin="8201" mutatechance="2" name="ShiarGunner_a" powerstyle="ps_shiargunner" skin="8201" sounddir="shiarg_m" strength="1" team="enemy" weapon="wp_shiargunner_gun">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="82_shiar_gunner" charactername="Shi'ar Gunner" combolevel="popsmash" leadername="Shi'ar Gunnery Sergeant" leaderskin="8201" level="27" mind="1" mutantskin="8201" mutatechance="2" name="ShiarGunner_b" powerstyle="ps_shiargunner" skin="8201" sounddir="shiarg_m" strength="1" team="enemy" weapon="wp_shiargunner_gun">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="82_shiar_gunner" charactername="Shi'ar Gunner" combolevel="popsmash" leadername="Shi'ar Gunnery Sergeant" leaderskin="8201" level="27" mind="1" mutantskin="8201" mutatechance="2" name="ShiarGunner_c" powerstyle="ps_shiargunner" skin="8201" sounddir="shiarg_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_shiargunner_gun">
+        <talent level="1" name="applied_front_invuln" />
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="83_shiar_soldier" charactername="Shi'ar Soldier" combolevel="popsmash" leadername="Shi'ar Soldier Commander" leaderskin="8301" level="26" mind="1" mutantskin="8301" mutatechance="2" name="ShiarSoldier_a" powerstyle="ps_shiarsoldier" skin="8301" sounddir="shiars_m" strength="1" team="enemy" weapon="wp_shiar_staff">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="83_shiar_soldier" charactername="Shi'ar Soldier" combolevel="popsmash" leadername="Shi'ar Soldier Commander" leaderskin="8303" level="27" mind="1" mutantskin="8303" mutatechance="2" name="ShiarSoldier_b" powerstyle="ps_shiarsoldier" skin="8303" sounddir="shiars_m" strength="1" team="enemy" weapon="wp_shiar_staff">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="84_shiar_tracker" charactername="Shi'ar Tracker" combolevel="popup" leadername="Shi'ar Tracker" leaderskin="8401" level="27" mind="1" name="ShiarTracker_a" npchealthscale="0.75" powerstyle="ps_shiartracker" skin="8401" sounddir="shiart_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="tracker" />
+        <StatEffect bolt="Bip01 L Toe0" effect="char/shiart/special_jets" fxlevel="1" />
+        <StatEffect bolt="Bip01 R Toe0" effect="char/shiart/special_jets" fxlevel="2" />
+        <StatEffect effect="char/shiart/special_jets" fxlevel="3" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="84_shiar_tracker" charactername="Shi'ar Tracker" combolevel="popup" leadername="Shi'ar Tracker" leaderskin="8403" level="28" mind="1" name="ShiarTracker_b" npchealthscale="0.75" powerstyle="ps_shiartracker" skin="8403" sounddir="shiart_m" strength="1" team="enemy">
+        <talent level="2" name="tracker" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <StatEffect bolt="Bip01 L Toe0" effect="char/shiart/special_jets" fxlevel="1" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="88_skrull_commando" charactername="Commando" combolevel="popsmash" leadername="Commando" leaderskin="8801" level="28" mind="1" mutantskin="8801" mutatechance="2" name="SkrullCommando_a" powerstyle="ps_skrullcommando" resurrect="master" skin="8801" sounddir="skrulc_m" strength="1" team="enemy" weapon="wp_skrullcommando_gun">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain_fast" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="88_skrull_commando" charactername="Commando" combolevel="popsmash" leadername="Commando" leaderskin="8802" level="29" mind="1" mutantskin="8802" mutatechance="2" name="SkrullCommando_b" powerstyle="ps_skrullcommando" resurrect="master" skin="8802" sounddir="skrulc_m" strength="1" team="enemy" weapon="wp_skrullcommando_gun">
+        <talent level="1" name="might" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="Mutant" />
+        <talent level="1" name="fightstyle_villain_fast" />
+    </stats>
+    <stats body="1" characteranims="89_skrull_deviant" charactername="Skrull Deviant" combolevel="popsmash" leadername="Skrull Deviant" leaderskin="8901" level="28" mind="1" mutantskin="8901" mutatechance="2" name="SkrullDeviant_a" powerstyle="ps_skrulldeviant" resurrect="minion" skin="8901" sounddir="skruld_m" strength="1" team="enemy" weapon="wp_skrulldeviant_axe">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats body="1" characteranims="89_skrull_deviant" charactername="Skrull Deviant" combolevel="popsmash" leadername="Skrull Deviant" leaderskin="8902" level="29" mind="1" mutantskin="8902" mutatechance="2" name="SkrullDeviant_b" powerstyle="ps_skrulldeviant" resurrect="minion" skin="8902" sounddir="skruld_m" strength="1" team="enemy" weapon="wp_skrulldeviant_axe">
+        <talent level="1" name="might" />
+        <Race name="Mutant" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="110_SuperSoldier" charactername="Super Soldier" combolevel="veryeasy" large="true" leadername="Super Soldier Lieutenant" leaderskin="11001" level="4" mind="1" name="SuperSoldier_a" npcdamagescale="0.5" npchealthscale="2" powerstyle="ps_ssoldier" scale_factor="1.44" skin="11001" sounddir="ssmon_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="berserker" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="110_SuperSoldier" charactername="Super Soldier" combolevel="veryeasy" large="true" leadername="Super Soldier Lieutenant" leaderskin="11002" level="5" mind="1" name="SuperSoldier_b" npcdamagescale="0.5" npchealthscale="2" powerstyle="ps_ssoldier" scale_factor="1.44" skin="11002" sounddir="ssmon_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="berserker" />
+    </stats>
+    <stats ainostraffe="true" body="1" characteranims="110_SuperSoldier" charactername="Super Soldier" combolevel="veryeasy" large="true" leadername="Super Soldier Lieutenant" leaderskin="11003" level="21" mind="1" name="SuperSoldier_c" npcdamagescale="1.25" npchealthscale="2" powerstyle="ps_ssoldier" scale_factor="1.44" skin="11003" sounddir="ssmon_m" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="berserker" />
+    </stats>
+    <stats body="1" characteranims="113_ninja" charactername="The Hand Ninja" combolevel="veryeasy" leadername="Ninja" leaderskin="11300" level="4" mind="1" name="svs_Ninja" npcdamagescale="0.5" npchealthscale="0.75" powerstyle="ps_svsninja" resurrect="minion" skin="11300" sounddir="clayg_m" strength="1" team="enemy" vuln2_touch_of_death="true">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_fast" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="91_ultron_striker" charactername="Ultron Striker" combolevel="basic" deathnode="deathgen" leadername="Ultron Striker" leaderskin="9101" level="2" material="solid_metal" mind="1" name="UltronStriker_a" npcdamagescale="0.75" powerstyle="ps_ultronstriker" skin="9101" sounddir="ultrr_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="energy_resistant" />
+        <StatEffect bolt="Bip01 L Toe0" effect="char/ultrr/special_jets" fxlevel="1" />
+        <StatEffect bolt="Bip01 R Toe0" effect="char/ultrr/special_jets" fxlevel="2" />
+        <StatEffect effect="char/ultrr/special_jets" fxlevel="3" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="91_ultron_striker" charactername="Ultron Striker" combolevel="basic" deathnode="deathgen" leadername="Ultron Striker" leaderskin="9102" level="3" material="solid_metal" mind="1" name="UltronStriker_b" npcdamagescale="0.75" powerstyle="ps_ultronstriker" skin="9102" sounddir="ultrr_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="robot" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="energy_resistant" />
+        <StatEffect bolt="Bip01 L Toe0" effect="char/ultrr/special_jets" fxlevel="1" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="91_ultron_striker" charactername="Ultron Striker" combolevel="basic" deathnode="deathgen" leadername="Ultron Striker" leaderskin="9104" level="28" material="solid_metal" mind="1" name="UltronStriker_c" npcdamagescale="0.75" powerstyle="ps_ultronstriker" skin="9104" sounddir="ultrr_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <Race name="robot" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="energy_resistant" />
+        <StatEffect bolt="Bip01 L Toe0" effect="char/ultrr/special_jets" fxlevel="1" />
+    </stats>
+    <stats body="1" characteranims="92_ultron_warrior" charactername="Ultron Warrior" combolevel="basic" deathnode="deathgen" leadername="Ultron Warrior" leaderskin="9201" level="1" mind="1" name="UltronWarrior_a" powerstyle="ps_ultronwarrior" skin="9201" sounddir="ultrm_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="92_ultron_warrior" charactername="Ultron Warrior" combolevel="basic" deathnode="deathgen" leadername="Ultron Warrior" leaderskin="9203" level="3" mind="1" name="UltronWarrior_b" powerstyle="ps_ultronwarrior" skin="9203" sounddir="ultrm_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats body="1" characteranims="92_ultron_warrior" charactername="Ultron Warrior" combolevel="basic" deathnode="deathgen" leadername="Ultron Warrior" leaderskin="9204" level="28" mind="1" name="UltronWarrior_c" powerstyle="ps_ultronwarrior" skin="9204" sounddir="ultrm_m" standard_pain_only="true" strength="1" team="enemy">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="93_viking_archer" charactername="Viking Archer" combolevel="popup" leadername="Viking Marksman" leaderskin="9301" level="20" mind="1" name="VikingArcher_a" powerstyle="ps_vikingarcher" skin="9301" sounddir="vikarc_m" strength="1" team="enemy" weapon="wp_vikingarcher_bow">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="93_viking_archer" charactername="Viking Archer" combolevel="popup" leadername="Viking Marksman" leaderskin="9302" level="21" mind="1" name="VikingArcher_b" powerstyle="ps_vikingarcher" skin="9302" sounddir="vikarc_m" strength="1" team="enemy" weapon="wp_vikingarcher_bow">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="1" characteranims="94_viking_warrior" charactername="Viking Warrior" combolevel="popup" leadername="Viking Captain" leaderskin="9401" level="20" mind="1" name="VikingWarrior_a" powerstyle="ps_vikingwarrior" skin="9401" sounddir="vikwar_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_vikingwarrior_shield">
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="changing_finishers" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats body="1" characteranims="94_viking_warrior" charactername="Viking Warrior" combolevel="popup" leadername="Viking Captain" leaderskin="9402" level="21" mind="1" name="VikingWarrior_b" powerstyle="ps_vikingwarrior" skin="9402" sounddir="vikwar_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_vikingwarrior_shield">
+        <talent level="1" name="changing_finishers" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats body="1" characteranims="94_viking_warrior" charactername="Viking Warrior" combolevel="popup" leadername="Viking Captain" leaderskin="9403" level="35" mind="1" name="VikingWarrior_c" powerstyle="ps_vikingwarrior" skin="9403" sounddir="vikwar_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_vikingwarrior_shield">
+        <talent level="1" name="changing_finishers" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats body="1" characteranims="94_viking_warrior" charactername="Viking Warrior" combolevel="popup" leadername="Viking Captain" leaderskin="9404" level="23" mind="1" name="VikingWarrior_d" powerstyle="ps_vikingwarrior" skin="9404" sounddir="vikwar_m" strength="1" team="enemy" vuln2_touch_of_death="true" weapon="wp_vikingwarrior_shield">
+        <talent level="1" name="changing_finishers" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain_big" />
+    </stats>
+    <stats aiforceranged="false" body="200" characteranims="168_swordsman_psp" charactername="Swordsman" combolevel="popsmash" dangerrating="50" level="20" mind="140" name="Swordsman_PSP" npcdamagescale="1" npchealthscale="1" powerstyle="ps_swordsman_psp" skin="16801" sounddir="swords_m" spawnorbs="3" specific_health="850" strength="140" team="enemy">
+        <talent level="1" name="boss_resistances" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="grab" />
+    </stats>
+    <stats aiforceranged="false" body="200" characteranims="33_SuperSkrull_psp" charactername="Super Skrull" dangerrating="50" level="30" mind="140" name="SuperSkrull_PSP" npcdamagescale="1" npchealthscale="1" powerstyle="ps_superskrull_psp" skin="3302" sounddir="supers_m" spawnorbs="3" specific_health="4000" strength="140" team="enemy">
+        <talent level="1" name="boss_resistances" />
+        <talent level="47" name="monst_dmg_high" />
+        <talent level="47" name="monst_dmg_low" />
+        <talent level="47" name="monst_health" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="might" />
+        <talent level="1" name="flight" />
+        <StatEffect attack_bone_pos="0 0 -15" bolt="Bip01 R Hand" effect="char/supskr/special_burninghand" />
+        <StatEffect attack_bone_pos="0 0 -15" bolt="Bip01 L Hand" effect="char/supskr/special_burninghand" />
+    </stats>
+    <stats body="200" characteranims="15_ironman" charactername="Iron Man" combolevel="popsmash" dangerrating="50" level="17" mind="140" name="Ironman_PSP" npcdamagescale="1" npchealthscale="1" powerstyle="ps_ironman_psp" skin="1502" sounddir="iron_m" specific_health="1300" strength="140" team="enemy">
+        <talent level="1" name="boss_resistances" />
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="grab" />
+        <talent level="1" name="flight" />
+        <talent level="1" name="might" />
+        <talent level="1" name="ironman_grabsma" />
+    </stats>
+    <stats aiforceranged="false" body="200" characteranims="12_elektra" charactername="Elektra" combolevel="popsmash" dangerrating="50" level="15" mind="140" name="Elektra_PSP" npcdamagescale="1" npchealthscale="1" powerstyle="ps_elektraboss" scale_factor="1.2" skin="1201" sounddir="elekra_m" spawnorbs="3" specific_health="2000" strength="140" team="enemy">
+        <talent level="20" name="monst_dmg_high" />
+        <talent level="20" name="monst_dmg_low" />
+        <talent level="20" name="monst_health" />
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="boss_resistances" />
+        <talent level="1" name="grab" />
+        <Multipart hideskin="1201_sai_left_segment" />
+        <Multipart hideskin="1201_sai_right_segment" />
+        <Multipart hideskin="1201_star_left_segment" />
+        <Multipart hideskin="1201_star_right_segment" />
+    </stats>
+    <stats aiforceranged="true" body="1" characteranims="135_doom_bot" charactername="Iron Man Droid" combolevel="medium" leadername="Iron Man Droid" leaderskin="1505" level="3" material="solid_metal" mind="1" name="VV_IronmanDroid_a" powerstyle="ps_doombot" skin="1505" sounddir="doombt_m" standard_pain_only="true" strength="1" team="enemy">
+        <Race name="robot" />
+        <talent level="1" name="monst_dmg_high" />
+        <talent level="1" name="monst_dmg_low" />
+        <talent level="1" name="monst_health" />
+        <talent level="1" name="fightstyle_villain" />
+    </stats>
+    <stats body="7" characteranims="06_ghostrider" charactername="Ghost Rider" level="1" mind="8" name="GhostRider" playable="true" powerstyle="ps_ghostrider_m" skin="0601" sounddir="ghost_m" strength="6" team="hero">
+        <talent level="1" name="fightstyle_default" />
+        <talent level="1" name="might" />
+        <StatEffect bolt="Bip01 Head" effect="char/ghostr/special_burninghead" fxlevel="1" />
+    </stats>
+</characters>

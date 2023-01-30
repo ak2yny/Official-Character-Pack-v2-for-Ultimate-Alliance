@@ -1,0 +1,498 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/DMIRON_M/DEATH/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/DEATH/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/FLYBEGIN",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/FLYEND",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/0",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/1",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/2",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_CHARGE",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_POWER",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_RELEASE",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P8_CHARGE",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/XTRACTION",
+            "sample_index": 9,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/0",
+            "sample_index": 12,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/1",
+            "sample_index": 13,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/2",
+            "sample_index": 14,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/0",
+            "sample_index": 15,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/1",
+            "sample_index": 16,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/2",
+            "sample_index": 17,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/0",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/1",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/2",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/0",
+            "sample_index": 21,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/1",
+            "sample_index": 22,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/2",
+            "sample_index": 23,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 24,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 25,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 26,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/0",
+            "sample_index": 27,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/1",
+            "sample_index": 28,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/2",
+            "sample_index": 29,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/3",
+            "sample_index": 30,
+            "flags": 6
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CARPET",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CONCRETE",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/0",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/1",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/2",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL",
+            "sample_index": 37,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD",
+            "sample_index": 38,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/HELI/POWER_LIGHTS_ON",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": 83219328,
+            "sample_index": 40,
+            "flags": 31
+        },
+        {
+            "hash": 83176567,
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": 140955035,
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": 83019620,
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/STARK/TO_LAIR",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/STARK/WATERFALL",
+            "sample_index": 45,
+            "flags": 12
+        },
+        {
+            "hash": "ZONE_SHARED/STARK/WATERFALL_EXIT",
+            "sample_index": 46,
+            "flags": 255
+        }
+    ],
+    "samples": [
+        {
+            "file": "town5_m\\DEATH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\DEATH4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\PAIN5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\PAIN12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\p3_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\p8_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\xtraction.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\hit_glass.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\plexi6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\fs_carpet21.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\fs_carpet5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\fs_carpet7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\concrete8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\concrete4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\concrete6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\plexi4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\plexi6_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\plexi3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal8_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal7_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\wood7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\wood8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\wood3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\wood5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\plexi6_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\hit_concrete.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal7_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\solid_metal8_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\hit_glass_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\hit_solid_metal.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\hit_wood.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\power_lights_on.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\beep.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\drag.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\glass_break.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\shot.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\to_lair.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5_m\\waterfall.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "town5_m\\waterfall_exit.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "iron_m\\flybegin.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "iron_m\\flyend.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

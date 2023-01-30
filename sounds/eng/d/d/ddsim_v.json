@@ -1,0 +1,590 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/BEYE_V/ISEEYOU",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNT/***RANDOM***/0",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNT/***RANDOM***/1",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNT/***RANDOM***/2",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNT/***RANDOM***/3",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNT/***RANDOM***/4",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/TAUNTKD/***RANDOM***/2",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/VICTORY/***RANDOM***/0",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/VICTORY/***RANDOM***/1",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/VICTORY/***RANDOM***/2",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BEYE_V/YELL",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/EPITAPH/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/EPITAPH/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRM_V/YELL",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/EPITAPH/***RANDOM***/0",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/EPITAPH/***RANDOM***/1",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULTRR_V/YELL",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "MISSION/CAP/1",
+            "sample_index": 14,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/10",
+            "sample_index": 15,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/2",
+            "sample_index": 16,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/20",
+            "sample_index": 17,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/3",
+            "sample_index": 18,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/4",
+            "sample_index": 19,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/40",
+            "sample_index": 20,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/5",
+            "sample_index": 21,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/6",
+            "sample_index": 22,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/60",
+            "sample_index": 23,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/7",
+            "sample_index": 24,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/8",
+            "sample_index": 25,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/9",
+            "sample_index": 26,
+            "flags": 255
+        },
+        {
+            "hash": "MISSION/CAP/LAUNCH",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "MISSION/CAP/LAUNCH_TERM",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "MUSIC/CUES/IN",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "MUSIC/CUES/OUT",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": 74106321,
+            "sample_index": 31,
+            "flags": 255
+        },
+        {
+            "hash": 74106323,
+            "sample_index": 32,
+            "flags": 255
+        },
+        {
+            "hash": "STATSCREEN/AMB",
+            "sample_index": 33,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BULLSEYE/6_HEROMISSION_174_010_BE",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/BULLSEYE/6_HEROMISSION_174_012_BE",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/BULLSEYE/6_HEROMISSION_174_014_BE",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_170_010_DD",
+            "sample_index": 37,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_170_011_DD",
+            "sample_index": 38,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_170_012_DD",
+            "sample_index": 39,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_170_013_DD",
+            "sample_index": 40,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_174_011_DD",
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_174_013_DD",
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_174_015_DD",
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/6_HEROMISSION_176_010_DD",
+            "sample_index": 44,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "casim_v\\epitaph.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\epitaph2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\iseeyou.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\iseeyou2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\tauntkd.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\tauntkd2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\yell.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\epitaph_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\epitaph2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\iseeyou_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\iseeyou2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\tauntkd_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\tauntks.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\yell_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\20.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\40.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\60.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\launch.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\launch_term.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\in.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\out.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "casim_v\\helsim_a.wav",
+            "format": 0,
+            "sample_rate": 22050,
+            "flags": 2
+        },
+        {
+            "file": "casim_v\\helsim_c.wav",
+            "format": 0,
+            "sample_rate": 41000,
+            "flags": 34
+        },
+        {
+            "file": "casim_v\\amb.wav",
+            "format": 0,
+            "sample_rate": 41000,
+            "flags": 2
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_010_BE.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_012_BE.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_014_BE.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_170_010_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_170_011_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_170_012_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_170_013_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_011_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_013_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_174_015_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ddsim_v\\6_HEROMISSION_176_010_DD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\ISEEYOU.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNT2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNT3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNT4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNT5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNTKD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNTKD2_ALT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\TAUNTKD3_ALT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\VICTORY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\VICTORY2_ALT3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\VICTORY3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "heli2_v\\YELL.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

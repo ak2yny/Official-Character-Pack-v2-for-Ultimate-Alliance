@@ -20,7 +20,8 @@
                 "time": 0.16
             },
             "trigger": {
-                "name": "whoosh_light",
+                "name": "sound",
+                "sound": "char/swords_m/p1_power",
                 "time": 0.25
             },
             "trigger": {
@@ -33,10 +34,6 @@
                 "life": 0.3,
                 "name": "trail",
                 "time": 0.35
-            },
-            "trigger": {
-                "name": "whoosh_light",
-                "time": 0.45
             },
             "trigger": {
                 "damage": "%mdmg_low",
@@ -67,6 +64,11 @@
                 "filename": "ents_swordsman_psp",
                 "name": "projectile",
                 "speed": 900,
+                "time": 0.5
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/swords_m/p2_power",
                 "time": 0.5
             },
             "trigger": {
@@ -108,6 +110,11 @@
                 "damagemod": {
                     "name": "dmgmod_popup"
                 }
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/swords_m/p3_power",
+                "time": 0.55
             },
             "trigger": {
                 "effect": "char/swordsman/p8_power",

@@ -1,0 +1,1351 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/GLAD_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/PAIN/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/PAIN/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/PAIN/***RANDOM***/2",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/P1_CHARGE",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/P1_POWER",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/P2_CHARGE",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/P2_POWER",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/STRUGGLE/***RANDOM***/0",
+            "sample_index": 131,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/STRUGGLE/***RANDOM***/1",
+            "sample_index": 132,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GLAD_M/STRUGGLE/***RANDOM***/2",
+            "sample_index": 133,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/DEATH/***RANDOM***/0",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/DEATH/***RANDOM***/1",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/DEATH/***RANDOM***/2",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/PAIN/***RANDOM***/0",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/PAIN/***RANDOM***/1",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/PAIN/***RANDOM***/2",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/PAIN/***RANDOM***/3",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/P1_CHARGE",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/P1_IMPACT",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/P2_CHARGE",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/P2_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIARS_M/WEAPON_DEATH",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/HOVER/***RANDOM***/0",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/HOVER/***RANDOM***/1",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/HOVER/***RANDOM***/2",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/HOVER/***RANDOM***/3",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/HOVER/***RANDOM***/4",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/P1_CHARGE",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/P1_POWER",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/P2_CHARGE",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/P2_IMPACT",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/P2_POWER",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/PAIN/***RANDOM***/0",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/PAIN/***RANDOM***/1",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SHIART_M/PAIN/***RANDOM***/2",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/CONCEPT_ART_PICKUP",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/DANGERDISC_PICKUP",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/EXTRACTION",
+            "sample_index": 35,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/PICKUP_POWER",
+            "sample_index": 36,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/TREASURE",
+            "sample_index": 37,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/XTRACTION",
+            "sample_index": 38,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/0",
+            "sample_index": 39,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/1",
+            "sample_index": 40,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/2",
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/0",
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/1",
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/2",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/0",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/1",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/2",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/3",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/4",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/5",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/MOMENTUM_BAR",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/0",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/1",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/2",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/0",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/1",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/2",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/0",
+            "sample_index": 58,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/1",
+            "sample_index": 59,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/2",
+            "sample_index": 60,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_GLASS_L/***RANDOM***/0",
+            "sample_index": 61,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_GLASS_L/***RANDOM***/1",
+            "sample_index": 62,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_L/***RANDOM***/0",
+            "sample_index": 63,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_L/***RANDOM***/1",
+            "sample_index": 64,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_M/***RANDOM***/0",
+            "sample_index": 65,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_M/***RANDOM***/1",
+            "sample_index": 66,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_M/***RANDOM***/2",
+            "sample_index": 67,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_L/***RANDOM***/0",
+            "sample_index": 68,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_L/***RANDOM***/1",
+            "sample_index": 69,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_M/***RANDOM***/0",
+            "sample_index": 70,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_M/***RANDOM***/1",
+            "sample_index": 71,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/0",
+            "sample_index": 72,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/1",
+            "sample_index": 73,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/2",
+            "sample_index": 74,
+            "flags": 44
+        },
+        {
+            "hash": "DEATH_STYLE/T_SHIAR",
+            "sample_index": 75,
+            "flags": 44
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_BIOMETAL/***RANDOM***/0",
+            "sample_index": 76,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_BIOMETAL/***RANDOM***/1",
+            "sample_index": 77,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_BIOMETAL/***RANDOM***/2",
+            "sample_index": 78,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/0",
+            "sample_index": 79,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/1",
+            "sample_index": 80,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/2",
+            "sample_index": 81,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/0",
+            "sample_index": 82,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/1",
+            "sample_index": 83,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/2",
+            "sample_index": 84,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/0",
+            "sample_index": 85,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/1",
+            "sample_index": 86,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/2",
+            "sample_index": 87,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 88,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 89,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 90,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/0",
+            "sample_index": 91,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/1",
+            "sample_index": 92,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/2",
+            "sample_index": 93,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/0",
+            "sample_index": 94,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/1",
+            "sample_index": 95,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/2",
+            "sample_index": 96,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 97,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 98,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 99,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_BIOMETAL/***RANDOM***/0",
+            "sample_index": 100,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_BIOMETAL/***RANDOM***/1",
+            "sample_index": 101,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CARPET/***RANDOM***/0",
+            "sample_index": 102,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CARPET/***RANDOM***/1",
+            "sample_index": 103,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/0",
+            "sample_index": 104,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/1",
+            "sample_index": 105,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/0",
+            "sample_index": 106,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/1",
+            "sample_index": 107,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 108,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 109,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 110,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/3",
+            "sample_index": 111,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_PLASTIC/***RANDOM***/0",
+            "sample_index": 112,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_PLASTIC/***RANDOM***/1",
+            "sample_index": 113,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/0",
+            "sample_index": 114,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/1",
+            "sample_index": 115,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/2",
+            "sample_index": 116,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/3",
+            "sample_index": 117,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 118,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 119,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/OBJECT/CONTACT_RINGS",
+            "sample_index": 120,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/OBJECT/FORCEFIELD",
+            "sample_index": 121,
+            "flags": 6
+        },
+        {
+            "hash": "ZONE_SHARED/OBJECT/TECHSTATION",
+            "sample_index": 122,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/BIG_ENERGYCORE_DOWN",
+            "sample_index": 123,
+            "flags": 31
+        },
+        {
+            "hash": 82463829,
+            "sample_index": 124,
+            "flags": 31
+        },
+        {
+            "hash": 79827890,
+            "sample_index": 125,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/GLAD_LOOP",
+            "sample_index": 126,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/GLADIATOR_ARM",
+            "sample_index": 127,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/MACHINE_BEAM_LOOP",
+            "sample_index": 128,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/SHIAR_ENERGYCORE1",
+            "sample_index": 129,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SHIAR/SHIAR_ENERGYCORE2",
+            "sample_index": 130,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "shiar2_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\DEATH_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\DEATH2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\DEATH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\PAIN8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_power_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\weapon_death.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hover.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hover2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hover3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hover4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hover5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_charge_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p1_power_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_charge_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\p2_power_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\pain_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\pain3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\pain2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\concept_art_pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\dangerdisc_pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\extraction.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\pickup_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\treasure.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\xtraction.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\block2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\block3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\block4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_metal9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_metal10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_metal14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_normal16.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_normal2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_normal3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\momentum_bar.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh-heavy13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh-heavy16.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh-heavy3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\whoosh6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_electric2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_electric3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_electric.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_glass.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_glass2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_bio_l.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_hollow2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_bio_m.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_bio_s.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_hollow_s.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_hollow2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_hollow2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_bio_s_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal6_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_bio_m_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\ds_metal_hollow_s_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\t_infinite.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\1_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\1_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\1_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi5_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\plexi5_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2_4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\1_4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1_4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal6_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_biometal6_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_glass4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_plastic4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_hollow_metal4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_hollow_metal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_solid_metal.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_solid_metal3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_plastic4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_glass4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_hollow_metal4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_hollow_metal6_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal1_5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\fs_solidmetal2_5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_solid_metal_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\hit_solid_metal3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\contact_rings.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "shiar2_m\\forcefield.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "shiar2_m\\techstation.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\big_energycore_down.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\console.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\door_shiar.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\glad_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "shiar2_m\\gladiator_arm.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\machine_beam_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "shiar2_m\\shiar_energycore1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_m\\shiar_energycore2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_v\\STRUGGLE.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_v\\STRUGGLE4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "shiar2_v\\STRUGGLE5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

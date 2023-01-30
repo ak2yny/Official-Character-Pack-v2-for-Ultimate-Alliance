@@ -1,0 +1,829 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/DMIRON_M/DEATH/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/DEATH/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/0",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/1",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/PAIN/***RANDOM***/2",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_CHARGE",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_POWER",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P3_RELEASE",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DMIRON_M/P8_CHARGE",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/NICKFU_M/DEATH",
+            "sample_index": 9,
+            "flags": 31},
+        {
+            "hash": "CHAR/NICKFU_M/PAIN/***RANDOM***/0",
+            "sample_index": 10,
+            "flags": 31},
+        {
+            "hash": "CHAR/NICKFU_M/PAIN/***RANDOM***/1",
+            "sample_index": 11,
+            "flags": 31},
+        {
+            "hash": "CHAR/NICKFU_M/PAIN/***RANDOM***/2",
+            "sample_index": 12,
+            "flags": 31},
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/0",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/1",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/2",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/0",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/1",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/2",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/0",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/1",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/2",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/3",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/MOMENTUM_BAR",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/0",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/1",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/2",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/3",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/4",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/0",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/1",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/2",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/3",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_GLASS_L/***RANDOM***/0",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_GLASS_L/***RANDOM***/1",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_GLASS_L/***RANDOM***/2",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/0",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/1",
+            "sample_index": 37,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/2",
+            "sample_index": 38,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/0",
+            "sample_index": 39,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/1",
+            "sample_index": 40,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/2",
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/0",
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/1",
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CONCRETE/***RANDOM***/2",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/0",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_GLASS/***RANDOM***/1",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/0",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/1",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/2",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/0",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/1",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/2",
+            "sample_index": 58,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEPFS_WOOD/***RANDOM***/0",
+            "sample_index": 59,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEPFS_WOOD/***RANDOM***/1",
+            "sample_index": 60,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEPFS_WOOD/***RANDOM***/2",
+            "sample_index": 61,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CONCRETE/***RANDOM***/0",
+            "sample_index": 62,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CONCRETE/***RANDOM***/1",
+            "sample_index": 63,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CONCRETE/***RANDOM***/2",
+            "sample_index": 64,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/0",
+            "sample_index": 65,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/1",
+            "sample_index": 66,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/2",
+            "sample_index": 67,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_GLASS/***RANDOM***/3",
+            "sample_index": 68,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 69,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 70,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 71,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/0",
+            "sample_index": 72,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/1",
+            "sample_index": 73,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/2",
+            "sample_index": 74,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 75,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 76,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 77,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/0",
+            "sample_index": 78,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/1",
+            "sample_index": 79,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/2",
+            "sample_index": 80,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/DOOM/DOOM_BOTS_DOWN",
+            "sample_index": 81,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/DOOM/DOOM_DOOR1",
+            "sample_index": 82,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\DEATH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\DEATH4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\PAIN5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\PAIN12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\p3_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\p8_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\f\\u\\fury_m\\DEATH7.wav",
+            "format": 106,
+            "sample_rate": 22050},
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\f\\u\\fury_m\\PAIN12.wav",
+            "format": 106,
+            "sample_rate": 22050},
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\f\\u\\fury_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050},
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\f\\u\\fury_m\\PAIN4.wav",
+            "format": 106,
+            "sample_rate": 22050},
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\block3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\block5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\block6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_metal14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_metal8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_metal13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal16.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\momentum_bar.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh-heavy14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh-heavy15.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh-heavy6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh_heavy1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh_heavy2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh22.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\whoosh7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_glass_l.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_glass2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_glass.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_metal_m.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_metal5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\ds_metal8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet21.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\concrete12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\concrete15.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\concrete10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_glass2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_glass4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal15.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_rock4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_stone12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_stone3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal11_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal14_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\solid_metal15_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet21_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\fs_carpet5_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\wood3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\wood5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\wood12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal13_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal16_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_glass6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_glass7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_glass8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_glass.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal16_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_normal4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal12_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal11_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_solid_metal3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_wood3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\hit_wood5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\doom_bots_down.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "D:\\Programme\\_portable\\Games\\Marvel - Ultimate Alliance Mods\\mods\\Official-Character-Pack-v2-for-Ultimate-Alliance\\sounds\\eng\\d\\s\\dsfite_m\\doom_door1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

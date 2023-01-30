@@ -1,0 +1,26 @@
+<PowerStyle>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.58">
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.16"/>
+        <trigger name="sound" sound="char/swords_m/p1_power" time="0.25"/>
+        <trigger damage="%mdmg_low" name="punch" time="0.33"/>
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.35"/>
+        <trigger damage="%mdmg_low" name="punch" time="0.65"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="projectile" animenum="ea_power1" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power_attack" priority="5">
+        <trigger actorbolt="Bip01 R Hand" attacktype="projectile" damage="%mdmg_high" damagetype="dmg_physical" entity="sword_beam" filename="ents_swordsman_psp" name="projectile" speed="900" time="0.5"/>
+        <trigger name="sound" sound="char/swords_m/p2_power" time="0.5"/>
+        <trigger arc="180" damage="%mdmg_high" damagetype="physical" maxrange="72" name="radial" time="0.5"/>
+        <trigger effect="char/swordsman/p1_swing" fxlevel="1" name="effect" time="0.24"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="9" aitype="aoe" animenum="ea_power2" blendtime="0" is_power="true" lockangles="true" name="power_smash" startchaintime="0.4">
+        <trigger attacktype="sword" damage="%mdmg_high" damagetype="physical" knockback="305" maxrange="160" name="radial" time="0.55">
+            <damagemod name="dmgmod_popup"/>
+        </trigger>
+        <trigger name="sound" sound="char/swords_m/p3_power" time="0.55"/>
+        <trigger effect="char/swordsman/p8_power" fxlevel="1" name="effect" time="0.35"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+</PowerStyle>

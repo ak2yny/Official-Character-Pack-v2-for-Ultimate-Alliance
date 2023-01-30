@@ -1,0 +1,910 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/CLAYG_V/EPITAPH/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/EPITAPH/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/EPITAPH/***RANDOM***/2",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/EPITAPH/***RANDOM***/3",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/EPITAPH/***RANDOM***/4",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/2",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/3",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/4",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/ISEEYOU/***RANDOM***/5",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_M/STRUGGLE",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/TAUNTKD/***RANDOM***/2",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/TAUNTKD/***RANDOM***/3",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/TAUNTKD/***RANDOM***/4",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/0",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/1",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/2",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/3",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/4",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/VICTORY/***RANDOM***/5",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/YELL/***RANDOM***/0",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CLAYG_V/YELL/***RANDOM***/1",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/EPITAPH/***RANDOM***/0",
+            "sample_index": 40,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/EPITAPH/***RANDOM***/1",
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/EPITAPH/***RANDOM***/2",
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/ISEEYOU/***RANDOM***/2",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_LONG/***RANDOM***/0",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_LONG/***RANDOM***/1",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_LONG/***RANDOM***/2",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_MED/***RANDOM***/0",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_MED/***RANDOM***/1",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_MED/***RANDOM***/2",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_SHORT/***RANDOM***/0",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_SHORT/***RANDOM***/1",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/LAUGH_SHORT/***RANDOM***/2",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_M/STRUGGLE/***RANDOM***/0",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_M/STRUGGLE/***RANDOM***/1",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_M/STRUGGLE/***RANDOM***/2",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_M/STRUGGLE/***RANDOM***/3",
+            "sample_index": 58,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNT/***RANDOM***/0",
+            "sample_index": 59,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNT/***RANDOM***/1",
+            "sample_index": 60,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNT/***RANDOM***/2",
+            "sample_index": 61,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNT/***RANDOM***/3",
+            "sample_index": 62,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNT/***RANDOM***/4",
+            "sample_index": 63,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 64,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 65,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/TAUNTKD/***RANDOM***/2",
+            "sample_index": 66,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/VICTORY/***RANDOM***/0",
+            "sample_index": 67,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/VICTORY/***RANDOM***/1",
+            "sample_index": 68,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/VICTORY/***RANDOM***/2",
+            "sample_index": 69,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/LTROLL_V/YELL",
+            "sample_index": 70,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/EPITAPH/***RANDOM***/0",
+            "sample_index": 71,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/EPITAPH/***RANDOM***/1",
+            "sample_index": 72,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/EPITAPH/***RANDOM***/2",
+            "sample_index": 73,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/ISEEYOU/***RANDOM***/2",
+            "sample_index": 74,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/0",
+            "sample_index": 75,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/1",
+            "sample_index": 76,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/2",
+            "sample_index": 77,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNT/***RANDOM***/0",
+            "sample_index": 78,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNT/***RANDOM***/1",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNT/***RANDOM***/2",
+            "sample_index": 79,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNT/***RANDOM***/3",
+            "sample_index": 80,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNT/***RANDOM***/4",
+            "sample_index": 81,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNTKD/***RANDOM***/0",
+            "sample_index": 82,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNTKD/***RANDOM***/1",
+            "sample_index": 83,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/TAUNTKD/***RANDOM***/2",
+            "sample_index": 84,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/VICTORY/***RANDOM***/0",
+            "sample_index": 85,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/VICTORY/***RANDOM***/1",
+            "sample_index": 86,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/VICTORY/***RANDOM***/2",
+            "sample_index": 87,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_V/YELL",
+            "sample_index": 88,
+            "flags": 31
+        },
+        {
+            "hash": 230344049,
+            "sample_index": 26,
+            "flags": 255
+        },
+        {
+            "hash": 230344051,
+            "sample_index": 27,
+            "flags": 255
+        },
+        {
+            "hash": "MUSIC/CUES/IN/***RANDOM***/0",
+            "sample_index": 28,
+            "flags": 255
+        },
+        {
+            "hash": "MUSIC/CUES/IN/***RANDOM***/1",
+            "sample_index": 29,
+            "flags": 255
+        },
+        {
+            "hash": "MUSIC/CUES/IN/***RANDOM***/2",
+            "sample_index": 30,
+            "flags": 255
+        },
+        {
+            "hash": "MUSIC/CUES/OUT",
+            "sample_index": 31,
+            "flags": 255
+        },
+        {
+            "hash": "STATSCREEN/AMB",
+            "sample_index": 32,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/KURSE/ISEEEYOU2",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/KURSE/ISEEYOU",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/KURSE/TAUNT2",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/THOR/6_HEROMISSION_500_010_THO",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/THOR/6_HEROMISSION_500_011_THO",
+            "sample_index": 37,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/THOR/6_HEROMISSION_510_011_THO",
+            "sample_index": 38,
+            "flags": 31
+        },
+        {
+            "hash": "VOICE/THOR/6_HEROMISSION_510_013_THO",
+            "sample_index": 39,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "thosim_v\\EPITAPH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\EPITAPH5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\EPITAPH4_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\EPITAPH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\EPITAPH2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU5_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\STRUGGLE.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNTKD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNTKD6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNTKD5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNTKD4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNTKD2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\VICTORY2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\YELL.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\YELL2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\blank.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\asgsim_a.wav",
+            "format": 0,
+            "sample_rate": 22050,
+            "flags": 2
+        },
+        {
+            "file": "thosim_v\\asgsim_c.wav",
+            "format": 0,
+            "sample_rate": 41000,
+            "flags": 34
+        },
+        {
+            "file": "thosim_v\\in.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\in_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\in_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\out.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\amb.wav",
+            "format": 0,
+            "sample_rate": 41000,
+            "flags": 2
+        },
+        {
+            "file": "thosim_v\\ISEEEYOU2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\ISEEYOU.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\TAUNT2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\6_HEROMISSION_500_010_THO.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\6_HEROMISSION_500_011_THO.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\6_HEROMISSION_510_011_THO.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "thosim_v\\6_HEROMISSION_510_013_THO.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\EPITAPH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\EPITAPH2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\EPITAPH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\ISEEYOU_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\ISEEYOU2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\ISEEYOU3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_LONG.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_LONG2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_LONG3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_MED.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_MED2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_MED3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_SHORT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_SHORT2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\LAUGH_SHORT3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\STRUGGLE_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\STRUGGLE2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\STRUGGLE3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\STRUGGLE4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNT_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNT2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNT3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNT4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNT5_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNTKD_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNTKD2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\TAUNTKD3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\VICTORY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\VICTORY2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\VICTORY3_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "asgrd1_v\\YELL_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\EPITAPH_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\EPITAPH2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\EPITAPH3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\ISEEYOU3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNT1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNT3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNT4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNT5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNTKD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNTKD2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\TAUNTKD3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\VICTORY_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\VICTORY2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\VICTORY3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\YELL.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

@@ -1,0 +1,1228 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/DELFM_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/P1_CHARGE",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/P2_CHARGE",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/PAIN/***RANDOM***/0",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/PAIN/***RANDOM***/1",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/PAIN/***RANDOM***/2",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/DELFM_M/WEAPON_DEATH",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/DEATH/***RANDOM***/0",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/DEATH/***RANDOM***/1",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/PAIN/***RANDOM***/0",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/PAIN/***RANDOM***/1",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/PAIN/***RANDOM***/2",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/P1_CHARGE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/P1_POWER",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/P2_CHARGE",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/0",
+            "sample_index": 119,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/1",
+            "sample_index": 120,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/KURSE_M/STRUGGLE/***RANDOM***/2",
+            "sample_index": 121,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/DEATH",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/PAIN/***RANDOM***/0",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/PAIN/***RANDOM***/1",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/PAIN/***RANDOM***/2",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/P1_CHARGE",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/P1_POWER",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/ULIK_M/P2_CHARGE",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/DEATH",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/PAIN/***RANDOM***/0",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/PAIN/***RANDOM***/1",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/PAIN/***RANDOM***/2",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P1_IMPACT/***RANDOM***/0",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P1_IMPACT/***RANDOM***/1",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_CHARGE",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/0",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/1",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/2",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/3",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/4",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P2_IMPACT/***RANDOM***/5",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P3_DROP",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/P4_POWER",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/VIKWAR_M/WEAPON_DEATH",
+            "sample_index": 37,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/CONCEPT_ART_PICKUP",
+            "sample_index": 38,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/DANGERDISC_PICKUP",
+            "sample_index": 39,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/GAME/EXTRACTION",
+            "sample_index": 40,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/PICKUP_POWER",
+            "sample_index": 41,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/TREASURE",
+            "sample_index": 42,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/XTRACTION",
+            "sample_index": 43,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/0",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/1",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/0",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/1",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/0",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/1",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/0",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/1",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/0",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/1",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DESTRUCTION/DS_STONE2",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ICE_L",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ICE_M",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_PLANTSNOW_L",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_STONE_M/***RANDOM***/0",
+            "sample_index": 58,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_STONE_M/***RANDOM***/1",
+            "sample_index": 59,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_WOODHOLLOW_M/***RANDOM***/0",
+            "sample_index": 60,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_WOODHOLLOW_M/***RANDOM***/1",
+            "sample_index": 61,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/0",
+            "sample_index": 62,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/1",
+            "sample_index": 63,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_CARPET/***RANDOM***/2",
+            "sample_index": 64,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/0",
+            "sample_index": 65,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/1",
+            "sample_index": 66,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_DEBRIS/***RANDOM***/2",
+            "sample_index": 67,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ENERGY/***RANDOM***/0",
+            "sample_index": 68,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ENERGY/***RANDOM***/1",
+            "sample_index": 69,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ENERGY/***RANDOM***/2",
+            "sample_index": 70,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 71,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 72,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 73,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_WOOD/***RANDOM***/0",
+            "sample_index": 74,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_WOOD/***RANDOM***/1",
+            "sample_index": 75,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_WOOD/***RANDOM***/2",
+            "sample_index": 76,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ICE/***RANDOM***/0",
+            "sample_index": 77,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ICE/***RANDOM***/1",
+            "sample_index": 78,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ICE/***RANDOM***/2",
+            "sample_index": 79,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/0",
+            "sample_index": 80,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/1",
+            "sample_index": 81,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_PLASTIC/***RANDOM***/2",
+            "sample_index": 82,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ROCK/***RANDOM***/0",
+            "sample_index": 83,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ROCK/***RANDOM***/1",
+            "sample_index": 84,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_ROCK/***RANDOM***/2",
+            "sample_index": 85,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/0",
+            "sample_index": 86,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/1",
+            "sample_index": 87,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/2",
+            "sample_index": 88,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/0",
+            "sample_index": 89,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_WOOD/***RANDOM***/1",
+            "sample_index": 90,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CARPET/***RANDOM***/0",
+            "sample_index": 91,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_CARPET/***RANDOM***/1",
+            "sample_index": 92,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/0",
+            "sample_index": 93,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/1",
+            "sample_index": 94,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_DEBRIS/***RANDOM***/2",
+            "sample_index": 95,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ENERGY",
+            "sample_index": 96,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 97,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 98,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_WOOD/***RANDOM***/0",
+            "sample_index": 99,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_WOOD/***RANDOM***/1",
+            "sample_index": 100,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ICE/***RANDOM***/0",
+            "sample_index": 101,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ICE/***RANDOM***/1",
+            "sample_index": 102,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ICE/***RANDOM***/2",
+            "sample_index": 103,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_PLASTIC/***RANDOM***/0",
+            "sample_index": 104,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_PLASTIC/***RANDOM***/1",
+            "sample_index": 105,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_PLASTIC/***RANDOM***/2",
+            "sample_index": 106,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ROCK/***RANDOM***/0",
+            "sample_index": 107,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_ROCK/***RANDOM***/1",
+            "sample_index": 108,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/0",
+            "sample_index": 109,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/1",
+            "sample_index": 110,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/0",
+            "sample_index": 111,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/1",
+            "sample_index": 112,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_WOOD/***RANDOM***/2",
+            "sample_index": 113,
+            "flags": 31
+        },
+        {
+            "hash": "MISSION/KURSE/WEAKEN",
+            "sample_index": 114,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/FX/FIRE_MED",
+            "sample_index": 115,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/MOVER/TREASURE_CHEST",
+            "sample_index": 116,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/OBJECT/TECHSTATION",
+            "sample_index": 117,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SPECIAL/BEACON",
+            "sample_index": 118,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "giant1_m\\DEATH4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\weapon_death.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\DEATH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\DEATH_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN2_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_charge_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_power_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_charge_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\DEATH_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN3_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\PAIN6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_impact2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_charge_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_impact3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p1_impact4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_impact2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_impact4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_impact1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p2_impact3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p3_drop.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\weapon_death_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\concept_art_pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\dangerdisc_pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\extraction.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\pickup_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\treasure.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\xtraction.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\block2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\blocked3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_metal9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_metal14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_normal18.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_normal4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\whoosh-heavy22.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\whoosh-heavy13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\whoosh5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\whoosh11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_stone2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_ice_l.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_ice_m.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_plantsnow_l.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_stone1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_stone2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\ds_wood3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow5_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow6_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow5_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow6_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_rock4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\wood11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow5_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow6_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\snow4_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_rock4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone8_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone8_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_rock4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone4_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_rock4_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fs_stone8_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\wood11_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\wood7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_energy2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_hollowmetal.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_hollow_metal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_hollow_wood0.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_hollow_wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice1_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice9_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice1_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_ice9_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock4_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock13_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock13_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_rock4_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_wood3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_wood4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\hit_wood7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\weaken.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\fire_med.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "giant1_m\\treasure_chest.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\techstation.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_m\\beacon.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "giant1_v\\STRUGGLE2_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}
