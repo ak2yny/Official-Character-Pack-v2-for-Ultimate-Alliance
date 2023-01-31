@@ -1,0 +1,54 @@
+<conversation>
+    <startCondition runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/fury/2_strange1_720_010_nf" text="%NickFuryNPC%: When you're done here you have to get to Asgard. Use the Orb of Teleportation when you're ready to go.">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/fury/2_strange1_220_020_nf" text="%NickFuryNPC%: Was there something else you wanted?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="Why would the Masters of Evil go to Mephisto's Realm?">
+                    <line soundtoplay="voice/fury/2_strange1_220_101_nf" text="%NickFuryNPC%: I don't know. It makes no sense. Mephisto and Doom have been enemies a long time.">
+                        <response text="%PLAYER%: Why are they enemies?">
+                            <line soundtoplay="voice/fury/2_strange1_220_103_nf" text="%NickFuryNPC%: For years on every Midsummer's Eve, Dr. Doom attempted to invade Mephisto's Realm and retrieve his mother.">
+                                <response scriptfile="setGameFlag('conv_var2', 3,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 3 )" text="Doom's mother is in Mephisto's Realm?">
+                    <line soundtoplay="voice/fury/2_strange1_220_201_nf" text="%NickFuryNPC%: When Doom was very young, his mother made a pact with Mephisto. She promised her astral spirit in return for the power to destroy a Baron who was impoverishing her people.">
+                        <response text="%PLAYER%: And the deal didn't go as planned?">
+                            <line soundtoplay="voice/fury/2_strange1_220_203_nf" text="%NickFuryNPC%: Right. She couldn't control the power and wound up killing almost everyone in her village. She died shortly after and became the prisoner of Mephisto.">
+                                <response soundtoplay="voice/player/2_strange1_220_204_tl" text="%PLAYER%: Was she ever freed?">
+                                    <line soundtoplay="voice/fury/2_strange1_220_205_nf" text="%NickFuryNPC%: Yes. Oddly enough, Dr. Doom and Dr. Strange teamed up and went to Mephisto's Realm. Together they freed Cynthia Von Doom.">
+                                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Is this why the Tome of Asarius was taken from Atlantis?">
+                    <line soundtoplay="voice/fury/2_strange1_220_301_nf" text="%NickFuryNPC%: Without a doubt. The Tome of Asarius listed the coordinates of Mephisto's Realm. With that information, Doom could properly attune Nightcrawler's teleportation portal.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+                <response text="Thank you, Colonel Fury.">
+                    <line soundtoplay="voice/fury/2_strange1_220_401_nf" text="%NickFuryNPC%: Any time.">
+                        <response conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

@@ -21,20 +21,10 @@ waittimed ( 1.000 )
 murder_done = getObjective("murder_obj40", "COMPLETE" )
 if murder_done != 0
      # ( "part2" )
-     hero_name = getName("_ACTIVATOR_" )
-     if hero_name == "magneto"
-	 startConversation("act2/strange/2_strange1_260m" )
-     else
-         startConversation("act2/strange/2_strange1_260" )
-     endif
+     startConversation("act2/strange/2_strange1_260" )
 else
      # ( "part1" )
      # ( "This is unlocked from the start" )
-     hero_name = getName("_ACTIVATOR_" )
-     if hero_name == "magneto"
-	startConversation("act2/strange/2_strange1_060m" )
-     else
-     	startConversation("act2/strange/2_strange1_060" )
-     endif
+     startConversation("act2/strange/2_strange1_060" )
 endif
 

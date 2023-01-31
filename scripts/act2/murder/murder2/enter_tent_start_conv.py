@@ -14,7 +14,7 @@ if check == 0
      waittimed ( 0.750 )
      cyclops = isActorOnTeam("Cyclops" )
      if cyclops == 1
-     	  startConversation("act2/murder/murder2/2_murder2_014_dlc" )
+          startConversation("act2/murder/murder2/2_murder2_014_dlc" )
      else
           startCharConversation("act2/murder/murder2/2_murder2_020", "invisiblewoman", "act2/murder/murder2/2_murder2_022" )
      endif
