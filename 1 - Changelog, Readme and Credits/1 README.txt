@@ -156,7 +156,7 @@ Unlock All Concept Art    From the Review menu                     Down, Down, D
 Unlock All Wallpapers     From the Review menu                     Up, Down, Right, Left, Up, Up, Down, Start
 Unlock All Costumes       From the Start or Hero Management menus  Up, Down, Up, Down, Left, Right, Left, Right, Up, Down, Start
 Unlock All Powers         From the Start or Hero Management menus  Left, Right, Left, Right, Up, Down, Up, Down, Left, Right, Start
-Full Energy Bar           During Gameplay                          Left, Right, Right, Left, Up, Down, Down, Up, Start
+Full Energy Bar           During gameplay                          Left, Right, Right, Left, Up, Down, Down, Up, Start
 God Mode (Invincibility)  During gameplay                          Up, Down, Up, Down, Up, Left, Down, Right, Start
 Super Speed               During gameplay                          Up, Left, Up, Right, Down, Right, Start
 Kill Enemies Instantly    During gameplay                          Left, Right, Down, Down, Right, Left, Start
@@ -181,7 +181,7 @@ Official Character Pack 2
 -Ceamonks890: for general help and providing CSS callouts
 -Canino: coding and icons conversion
 -Rasdel: for Moon Knight retexture of 4105 skin
--Outsider: for Black Widow & Cable boosters, Dark Phoenix fix, herostats
+-Outsider: for Black Widow & Cable boosters, Dark Phoenix fix, herostats+NPCstats, Game stability
 -MrKablamm0fish: for map + object fixes, Black Widow comic mission conversion
 -Krisan Thyme: for converting dlc sounds and fixing various scripts
 -Nowhereman: for the Hand Ninjas & JulioCabral for the SIM coding
