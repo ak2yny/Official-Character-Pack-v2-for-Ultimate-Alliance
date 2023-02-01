@@ -37,7 +37,8 @@ CSS (Character Selection Stage):
 Other:
 - "0 Data files decompiled" contains some code for simulators, characters, herostat, etc. Includes files for Heroselect.
   IMPORTANT: For experts only.
-- "Full X_Voice" adds roster callouts for modded characters not included in the OCP, should you install any characters yourself.
+- "1 Recommended Game Stability Mods" include fixes by the Outsider and reducers by Spoony, which should reduce the chance for crashes because of limits.
+- "2 Full X_Voice" adds roster callouts for modded characters not included in the OCP, should you install any characters yourself.
 - "Optional Extra Daredevil Action Figure": Suggested by Cyborg Sun, Rampage created a mod for Attilan adding another Daredevil action figure, as every other hub had a hidden figure previously.
 - "Optional Invisible Player Indicator and target selector" is what gave the colored rings around the characters currently being played.
 - "Optional Main Menu BG with image instead of video" makes it so that you the video playing in the background of start menu is a loadscreen instead.
