@@ -2,5 +2,4 @@
 # ( "comment" )
 remove ( "eye_of_queen_mep_e01", "eye_of_queen_mep_e01" )
 setGameFlag("strange", 15, 1 )
-objective ( "Strange_obj40",  "EOBJCMD_UPDATE" )
 
