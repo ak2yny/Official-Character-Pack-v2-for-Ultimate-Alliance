@@ -1,0 +1,69 @@
+<conversation>
+    <startCondition conditionscriptfile="act2/strange/check_eye_queen">
+        <participant name="default">
+            <line soundtoplay="voice/wong/2_strange1_280_020_won" text="%WONG%: Ah, you have the Eye of the Shadow Queen. Thank you, my friend.">
+                <response chosenscriptfile="objective('strange_obj40','EOBJCMD_COMPLETE')" tagjump="autogen_tag_1" text="%PLAYER%: My pleasure, Wong." />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv_run_once/run_once21">
+        <participant name="default">
+            <line soundtoplay="voice/wong/2_strange1_280_010_won" text="%WONG%: I apologize that the Orb of Teleportation sent you to Murderworld. I should have foreseen Baron Mordo's treachery.">
+                <response text="%PLAYER%: It's not your fault, Wong. Besides, that little side trip worked to our advantage.">
+                    <line soundtoplay="voice/wong/2_strange1_280_012_won" text="%WONG%: Perhaps. I find that I must ask a favor of you.">
+                        <response text="%PLAYER%: Anything, Wong. Just name it.">
+                            <line soundtoplay="voice/wong/2_strange1_280_014_won" text="%WONG%: While you are in Mephisto's Realm, if you should locate the Eye of the Shadow Queen, would you bring it to me?">
+                                <response chosenscriptfile="act2/strange/show_strange_obj40" tagjump="autogen_tag_1" text="%PLAYER%: Sure, we can do that." />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/wong/2_strange1_280_030_won" text="%WONG%: What may I do for you?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="Will the Teleportation Orb work correctly now?">
+                    <line soundtoplay="voice/wong/2_strange1_280_101_won" text="%WONG%: Rest assured that the Orb will now take you to the proper destination.">
+                        <response text="%PLAYER%: What did you have to do to fix it?">
+                            <line soundtoplay="voice/wong/2_strange1_280_102_won" text="%WONG%: The spells required to counteract Baron Mordo's magic were quite difficult. I found it to be an intriguing test of my skills.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="What was the evil that Clea sensed near the Sanctum Sanctorum?">
+                    <line soundtoplay="voice/wong/2_strange1_280_201_won" text="%WONG%: That was the spell Baron Mordo had cast to disrupt the Orb of Teleportation. It was designed to activate immediately after anyone used the Orb.">
+                        <response text="%PLAYER%: Oh, so that's why we teleported to Murderworld rather than Doom's castle?">
+                            <line soundtoplay="voice/wong/2_strange1_280_203_won" text="%WONG%: Correct. It is a testament to Mordo's skill that he was able to cloak the spells true function from Clea and Dr. Strange.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="What is the Eye of the Shadow Queen?">
+                    <line soundtoplay="voice/wong/2_strange1_280_301_won" text="%WONG%: It is a talisman of value to no one but me. The bauble serves as a reminder of a creature who caused me a great deal of turmoil.">
+                        <response text="%PLAYER%: What did the Shadow Queen do?">
+                            <line soundtoplay="voice/wong/2_strange1_280_303_won" text="%WONG%: She had me abducted and taken to her dimension. It required the combined might of Dr. Strange and myself to destroy her.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Wong.">
+                    <line soundtoplay="voice/wong/2_strange1_280_401_won" text="%WONG%: It is a pleasure to be of service.">
+                        <response chosenscriptfile="act2/strange/talk_wong01_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

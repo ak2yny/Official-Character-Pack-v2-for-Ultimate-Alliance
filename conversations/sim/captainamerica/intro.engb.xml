@@ -1,0 +1,17 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line text="%CaptainAmericaSimple%I've always suspected that Winter Soldier was a former associate of mine.  Nick Fury recently confirmed that he was my former sidekick Bucky.  I thought he had died in the explosion on the plane when we were trying to disarm that bomb so many years ago.">
+                <response text="%BLANK%">
+                    <line text="%CaptainAmericaSimple%It turns out that he survived somehow, just as I had.  A russian sub commander found him, brain washed him, and trained him as an assassin.  What exactly he is doing on the S.H.I.E.L.D. helicarrier now though, I don't know for sure, but he has planted bombs near critical equipment in an attempt to cripple the helicarrier.">
+                        <response text="%BLANK%">
+                            <line text="%CaptainAmericaSimple%I have had bad experiences with bombs in the past when trying to disarm them, so I need to be careful and keep a steady hand.  If things go bad though, I always have my trusty shield to protect me.">
+                                <response conversationend="true" text="%END%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

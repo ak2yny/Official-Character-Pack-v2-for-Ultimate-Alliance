@@ -1,0 +1,112 @@
+<conversation>
+    <startCondition conditionscriptfile="common/conv/thor" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/thor/3_valhalla1_062_010_tho" text="%THOR%: Sif, it is good to see you. Are you unhurt?">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/sif/3_valhalla1_062_010_sif" text="%SIF%: Though I've suffered a few bruises from battle I am fine. And it is good to see you as well. Have you heard the news of the fall of Asgard?">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/thor/3_valhalla1_062_011_tho" text="%THOR%: Aye, and it saddens me greatly. Although it is no surprise to me that Loki was the cause.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/sif/3_valhalla1_062_012_sif" text="%SIF%: True. Long has he desired your father's throne. And now it appears that he may have at last won it.">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/thor/3_valhalla1_062_013_tho" text="%THOR%: Nay thee, I say! Asgard will be free again. My friends of Earth are strong and will aid us in any way possible.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/sif/3_valhalla1_062_014_sif" text="%SIF%: Let us hope your friends are strong enough, Thor. For never has Asgard needed as much aid as it does this dark day.">
+                                                        <response tagjump="autogen_tag_2" text="%BLANK%" />
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/thor" noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/sif/3_valhalla1_060_020_sif" text="%SIF%: Yes? What else do you want?">
+                <response tagjump="autogen_tag_2" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/sif/3_valhalla1_060_010_sif" text="%SIF%: Greetings, human. I would have you know Valhalla is a very sacred place of the Asgard dead. It is only because of the war that we would allow you to make camp here.">
+                <response text="%PLAYER%: We understand, Sif. How goes the battle?">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_012_sif" text="%SIF%: Not well. Our city is overrun and our warriors imprisoned. Odin is now facing the Frost Giants alone.">
+                        <response text="%PLAYER%: What can we do to help, Lady Sif?">
+                            <line soundtoplay="voice/sif/3_valhalla1_060_014_sif" text="%SIF%: You must travel to Asgard and free Balder from his prison. Then he can rally the other gods and win back our fair city.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/sif/3_valhalla1_060_020_sif" text="%SIF%: Yes? What else do you want?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_2" text="%PLAYER%">
+                <response text="What is Valhalla?">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_101_sif" text="%SIF%: It is the world where the honored dead of Asgard go. Here the astral energy of the deceased exist until Ragnarok.">
+                        <response text="%PLAYER%: How do the dead get here?">
+                            <line soundtoplay="voice/sif/3_valhalla1_060_103_sif" text="%SIF%: The courageous dead are escorted here by warrior women who appear over battle fields and take stock of the slain. The greatest of them is called Valkyrie.">
+                                <response tagjump="autogen_tag_2" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response chosenscriptfile="act3/valhalla/talk_ladysif_post" conversationend="true" text="Thank you, Sif." />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="What is Valhalla?">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_101_sif" text="%SIF%: It is the world where the honored dead of Asgard go. Here the astral energy of the deceased exist until Ragnarok.">
+                        <response text="%PLAYER%: How do the dead get here?">
+                            <line soundtoplay="voice/sif/3_valhalla1_060_103_sif" text="%SIF%: The courageous dead are escorted here by warrior women who appear over battle fields and take stock of the slain. The greatest of them is called Valkyrie.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response soundtoplay="voice/player/3_valhalla1_060_200_tl" text="Who is Balder?">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_201_sif" text="%SIF%: He is second in power only to the mighty Thor. Balder is always looked to as a leader in times of danger.">
+                        <response text="%PLAYER%: Balder must be pretty important.">
+                            <line soundtoplay="voice/sif/3_valhalla1_060_203_sif" text="%SIF%: He is indeed. Prophecy tells us that Balder's death will help trigger Ragnarok - the end of Asgard and the destruction of its people.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Do you know Thor?">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_301_sif" text="%SIF%: Quite well. As children Thor and I would play together and then later in life we became...more.">
+                        <response text="%PLAYER%: What happened between you two?">
+                            <line soundtoplay="voice/sif/3_valhalla1_060_303_sif" text="%SIF%: For a time we were happy and it seemed that we would wed. But I could not abide his constant interest in Midgard, the planet you call Earth. And because of that, we never married.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thank you, Lady Sif.">
+                    <line soundtoplay="voice/sif/3_valhalla1_060_401_sif" text="%SIF%: You may go now.">
+                        <response chosenscriptfile="act3/valhalla/talk_ladysif_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

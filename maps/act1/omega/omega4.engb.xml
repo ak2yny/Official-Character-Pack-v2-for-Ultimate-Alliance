@@ -1,0 +1,725 @@
+<world>
+    <entity act="1" bigconvmap="true" extent_max="3200 1800 480" extent_min="-3719 -1799 -599" killz="-480" level="5" name="world" partylight="0.18 0.41 0.54" soundfile="omega4" zonescript="act1/omega/omega4/omega4" />
+    <precache filename="act1/omega/omega4/1_omega4_001" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_002" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_003" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_004" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_010" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_012" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_014" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_020" type="conversation" />
+    <precache filename="act1/omega/omega4/1_omega4_030" type="conversation" />
+    <precache filename="act1/omega/omega4/gunner_conv" type="conversation" />
+    <precache filename="act1/omega/omega4/modok_defeated" type="conversation" />
+    <precache filename="act1/omega/omega4/modok_encounter" type="conversation" />
+    <precache filename="act1/omega/omega4/security_agent" type="conversation" />
+    <precache filename="act1/omega/omega4/security_agent_success" type="conversation" />
+    <precache filename="base/hit/hit_electricity" type="fx" />
+    <precache filename="char/modok/shock" type="fx" />
+    <precache filename="map/heli/chopper_loop" type="fx" />
+    <precache filename="map/heli/chopper_takeoff" type="fx" />
+    <precache filename="models/omega/turret_bullet" type="model" />
+    <precache filename="omega/gun/mp_gun" type="motionpath" />
+    <precache filename="omega/helipad_copter/mp_helipad_copter" type="motionpath" />
+    <precache filename="omega/shoot_copter/mp_shoot_copter" type="motionpath" />
+    <precache filename="act1/omega/omega4/cinematic_end" type="script" />
+    <precache filename="act1/omega/omega4/load_stark" type="script" />
+    <precache filename="act1/omega/omega4/modok_defeated" type="script" />
+    <precache filename="act1/omega/omega4/security_agent_conv_end" type="script" />
+    <precache filename="act1/omega/omega4/security_agent_defeated" type="script" />
+    <precache filename="act1/omega/omega4/security_agent_defeated_new" type="script" />
+    <precache filename="act1/omega/omega4/what_have_we_done_end" type="script" />
+    <precache filename="zone_shared/fx/explosion" type="sound" />
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" name="sp_shieldagent" nocollide="true" />
+    <entity actcountremove="1" character="AIMReaver_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimreaver_b" nocollide="true" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimtrooper_b" nocollide="true" />
+    <entity actcountremove="1" character="AIMTrooper_c" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimtrooper_c" nocollide="true" />
+    <entity actcountremove="1" character="Modok" classname="monsterspawnerent" monster_deathspawn="Modok_treasure" monster_team="enemy" name="sp_modok" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept22.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="22" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art22" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity actcountremove="1" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_once" nocollide="true" radiusdamage="true" smartent="false" />
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="actionent" name="loop_sound" nocollide="true" smartent="true" toggleonact="true" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="pressure_plate_invisible" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="projectileent" name="projectile" />
+    <entity classname="actionent" name="relay" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity classname="physent" material="solid_metal" model="omega/anti_aircraft_gun_omega_a" name="anti_aircraft_gun_omega_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="10" heaviness="0" material="solid_metal" model="omega/barrel_omega_th" name="barrel_omega_th" randompickups="3" structure="0" />
+    <entity classname="challengeent" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" material="solid_metal" model="omega/cargo_container_omega_c" name="cargo_container_omega_c" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="omega/catwalk_railing_10ft_omega_b" name="catwalk_railing_10ft_omega_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="50" heaviness="0" material="solid_metal" model="omega/chair_omega_th" name="chair_omega_th" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_01_omega_b_d" fxlevel="2" health="100" material="electronics" model="omega/console_01_omega_b" name="console_01_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_02_omega_b_d" fxlevel="2" health="100" material="electronics" model="omega/console_02_omega_b" name="console_02_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_desk_omega_b_d" fxlevel="2" health="100" material="electronics" model="omega/console_desk_omega_b" name="console_desk_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" material="solid_metal" model="omega/copter_enemy_omega_a" name="copter_enemy_omega_a" nogravity="false" nopickup="false" nopush="false" structure="2" />
+    <entity classname="moverent" material="solid_metal" model="omega/copter_enemy_omega_m" move="0 0 0" moveduration="1" name="copter_enemy_omega_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" structure="2" toggleonact="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="crate_omega_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" material="solid_metal" model="omega/crate_push_pull_omega_p" name="crate_push_pull_omega_p" nopush="true" quickuse="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="cube_omega_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="omega/desk_omega_b" name="desk_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_invulnerable_omega_d" name="door_invulnerable_omega_d" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/omega/door" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="omega/door_omega_d" name="door_omega_d" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" structure="0" toggleonact="true" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/girder_20ft_omega_e" name="girder_20ft_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/girder_wall_10ft_omega_e" name="girder_wall_10ft_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/girder_wall_20ft_omega_e" name="girder_wall_20ft_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="glass_ceiling_omega_b_d" fxlevel="3" health="75" material="glass" model="omega/glass_ceiling_omega_b" name="glass_ceiling_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/hanging_light_omega_e" name="hanging_light_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" fxlevel="3" health="150" material="electronics" model="omega/master_control_station_omega_b" name="master_control_station_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="1" material="hollow_metal" model="omega/oildrum_4x6_omega_th" name="oildrum_4x6_omega_th" randompickups="3" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" deathspawn="pipe_curved_01_omega_b_d" fxlevel="2" health="100" material="hollow_metal" model="omega/pipe_curved_01_omega_b" name="pipe_curved_01_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="omega/pipe_huge_straight_omega_e" name="pipe_huge_straight_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity animstarton="true" camerafadeout="true" classname="physent" material="solid_metal" model="omega/radar_dish_omega_a" name="radar_dish_omega_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" material="solid_metal" model="omega/spire_omega_a" name="spire_omega_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/spire_omega_e" name="spire_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/support_plank_10x20_omega_e" name="support_plank_10x20_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/u_copter_enemy_omega_a" name="u_copter_enemy_omega_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/vertical_pump_omega_a" name="vertical_pump_omega_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="wall_screen_omega_b_d" fxlevel="2" health="100" material="electronics" model="omega/wall_screen_omega_b" name="wall_screen_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_large" loopfxstarton="true" name="fire_large" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false" />
+    <entity boxdamage="true" classname="affectableharment" damage="11 13" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-30 -30 0 30 30 36" health="1" knockback="200" loopfx="map/common/fire_medium" loopfxstarton="true" name="fire_med" radiusdamage="false" reactpower="extinguish" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_med" />
+    <entity boxdamage="true" classname="affectableharment" damage="10 12" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-15 -15 0 15 15 30" health="1" knockback="200" loopfx="map/common/fire_small" loopfxstarton="true" name="fire_sm" radiusdamage="false" reactpower="extinguish" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_sm" />
+    <entinst type="sp_shieldagent02">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="sp_shieldagent02" orient="0 0 -2.18166" pos="1690 -620 -120" />
+    </entinst>
+    <entinst type="sp_shieldagent01">
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="sp_shieldagent01" orient="0 0 1.91986" pos="-2640 -930 -240" />
+    </entinst>
+    <entinst type="ss_aimreaver_b">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_aimreaver_b" orient="0 0 -1.13446" pos="1720 420 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_aimreaver_b" orient="0 0 -2.96706" pos="-1980 -540 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_aimreaver_b" orient="0 0 -1.309" pos="-2000 -340 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" pos="-760.0 90.0 3.19179e-005" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_aimreaver_b" orient="0 0 -2.96706" pos="-1820 -540 0" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_aimreaver_b" orient="0 0 -2.35619" pos="-1540 -540 0" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_aimreaver_b" orient="0 0 -2.0944" pos="-2250.0 1270.0 -3.00989e-006" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 -2.70526" pos="460 -860 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 2.26893" pos="140 -880 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 2.79253" pos="800 -320 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 -3.05433" pos="900 -290 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 1.5708" pos="1170 -460 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 0.785398" pos="1860 -780 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 2.79253" pos="2100 -540 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_aimreaver_b" orient="0 0 2.18166" pos="-1500.0 1170.0 -9.02968e-006" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_b" orient="0 0 -1.5708" pos="1770 170 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b">
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_aimtrooper_b" orient="0 0 0.872665" pos="2020 -1013.66 -240" />
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="ss_aimtrooper_b" orient="0 0 1.74533" pos="1770 -870 -240" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_aimtrooper_b" orient="0 0 2.18166" pos="1730 -960 -240" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_aimtrooper_b" orient="0 0 1.8326" pos="1080 -620 -120" />
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_aimtrooper_b" orient="0 0 -2.61799" pos="1120 -70 0" />
+        <inst extents="-12.0001 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 0.698132" pos="1950 -892.088 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 -2.0944" pos="600 -100 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 -1.8326" pos="530 -630 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 1.5708" pos="2100 -914.705 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" pos="-780.0 190.0 2.58981e-005" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_aimtrooper_b" orient="0 0 -1.74533" pos="-2210.0 -550.0 1.98783e-005" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_aimtrooper_b" orient="0 0 -2.00713" pos="-2460 -420 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_aimtrooper_b" orient="0 0 -2.96706" pos="-1770.0 1310.0 -1.50494e-005" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_aimtrooper_b" orient="0 0 -2.35619" pos="-2110 1340 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 -2.0944" pos="-1980 -920 -240" />
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_aimtrooper_b" orient="0 0 2.87979" pos="-1920 1250 0" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_aimtrooper_b" orient="0 0 -2.0944" pos="-2400 1260 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_aimtrooper_b" orient="0 0 -1.91986" pos="1840 1020 0" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_aimtrooper_b" orient="0 0 -2.70526" pos="-2060 -860 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 -1.22173" pos="1700 950 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 2.53073" pos="1420 -790 -120" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_aimtrooper_b" orient="0 0 2.53073" pos="1200 -790 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b" orient="0 0 -2.00713" pos="840 70 0" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_aimtrooper_b" orient="0 0 -1.8326" pos="1760 740 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b32">
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_aimtrooper_b32" orient="0 0 2.26893" pos="2939.19 896.859 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b03">
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b03" orient="0 0 -1.5708" pos="-1030 -140 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b02">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_aimtrooper_b02" orient="0 0 -0.523599" pos="-1130 -190 0" />
+    </entinst>
+    <entinst type="trooper_copter_spawner">
+        <inst extents="-12 -18 0 36 18 84" name="trooper_copter_spawner" orient="0 0 1.5708" pos="300 -1400 -120" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b01">
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_b01" orient="0 0 -2.35619" pos="-800 -140 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_b31">
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_aimtrooper_b31" orient="0 0 -2.61799" pos="2939.19 1139.65 0" />
+    </entinst>
+    <entinst type="ss_aimtrooper_c01">
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimtrooper_c01" pos="1740.03 1019.23 0" />
+    </entinst>
+    <entinst type="modok_spawner">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="modok_spawner" orient="0 0 -3.14159" pos="2940.34 1020 0" />
+    </entinst>
+    <entinst type="blackpanther_actionfigure01">
+        <inst name="blackpanther_actionfigure01" orient="0 0 0.785398" pos="-2565.09 898.965 0" />
+    </entinst>
+    <entinst type="concept_art22">
+        <inst name="concept_art22" pos="-2338.28 -1235.86 -357.038" />
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="1859.58 -541.526 0" />
+    </entinst>
+    <entinst type="shocker">
+        <inst extents="-300 -110 0 300 110 240" name="shocker" pos="2523.78 1020 -120" />
+    </entinst>
+    <entinst type="helipad_copter_light">
+        <inst extents="-6 -6 -6 6 6 6" name="helipad_copter_light" pos="160.261 -1136.12 434.468" />
+        <inst extents="-6 -6 -6 6 6 6" name="shoot_copter_light01" pos="-1897.04 -2968.5 434.468" />
+        <inst extents="-6 -6 -6 6 6 6" name="shoot_copter_light04" pos="1845.95 -1852.63 434.468" />
+        <inst extents="-6 -6 -6 6 6 6" name="shoot_copter_light02" pos="-509.896 -2968.5 434.468" />
+        <inst extents="-6 -6 -6 6 6 6" name="shoot_copter_light03" pos="1049.12 -2730.26 434.468" />
+    </entinst>
+    <entinst type="spire_explosion01">
+        <inst extents="-6 -6 -6 6 6 6" name="spire_explosion01" pos="-270 -670 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="spire_explosion02" pos="-260 -730 -60" />
+        <inst extents="-6 -6 -6 6 6 6" name="spire_explosion03" pos="-240 -620 30" />
+    </entinst>
+    <entinst type="spire_fire_wall">
+        <inst extents="-6 -6 -6 6 6 6" name="spire_fire_wall" pos="-230 -480 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="spire_fire_wall" pos="-260 -540 -120" />
+    </entinst>
+    <entinst type="crate_explode">
+        <inst extents="-6 -6 -6 6 6 6" name="crate_explode" pos="-960.065 -332.395 -250" />
+    </entinst>
+    <entinst type="spire_explosion04">
+        <inst extents="-6 -6 -6 6 6 6" name="spire_explosion04" pos="-240 -790 36" />
+    </entinst>
+    <entinst type="helisound01">
+        <inst extents="-6 -6 0 6 6 12" name="helisound01" pos="-2368.7 -976.49 -60" />
+        <inst extents="-6 -6 0 6 6 12" name="helisound" pos="-700.771 -1067.76 -60" />
+        <inst extents="-6 -6 0 6 6 12" name="helisound02" pos="1832.54 -1283.67 -60" />
+        <inst extents="-6 -6 0 6 6 12" name="helisound03" pos="60 -625 -120" />
+    </entinst>
+    <entinst type="copter_flyby_start_spot">
+        <inst extents="-6 -6 -6 6 6 6" name="copter_flyby_start_spot" pos="-3100 -1286.53 -180" />
+        <inst extents="-6.00001 -5.99999 -6 5.99999 6.00001 6" name="trooper_copter_spot" orient="0 0 1.5708" pos="300 -900 -240" />
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="glass_guys_spot" orient="0 0 -1.5708" pos="-960 -420 -90" />
+        <inst extents="-6.00003 -5.99997 -6 5.99997 6.00003 6" name="hero_move_spot01" orient="0 0 -1.5708" pos="-957.86 -550.447 -120" />
+        <inst extents="-6.00001 -6.00003 -6 5.99999 5.99997 6" name="hero_move_spot02" orient="0 0 1.5708" pos="-2520.0 660.0 6.01977e-006" />
+        <inst extents="-6 -6.00004 -6 6 5.99996 6" name="hero_move_spot03" orient="0 0 1.5708" pos="-1500.0 900.0 6.01977e-006" />
+        <inst extents="-6 -6 -6 6 6 6" name="hero_move_spot04" orient="0 0 -1.5708" pos="0.0 -130.0 6.01977e-006" />
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="hero_evade_spot01" orient="0 0 -0.349066" pos="-460 -580 -120" />
+        <inst extents="-6 -5.99998 -6 6 6.00002 6" name="hero_evade_spot02" orient="0 0 -0.261799" pos="-440 -550 -120" />
+        <inst extents="-6 -6.00003 -6 6 5.99997 6" name="hero_evade_spot03" orient="0 0 -0.349066" pos="-420 -520 -120" />
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="hero_evade_spot01b" orient="0 0 -3.14159" pos="-510 -580 -120" />
+        <inst extents="-5.99999 -5.99998 -6 6.00001 6.00002 6" name="hero_evade_spot03b" orient="0 0 2.70526" pos="-490 -490 -120" />
+        <inst extents="-5.99999 -5.99999 -6 6.00001 6.00001 6" name="chal_null" orient="0 0 1.5708" pos="-959.862 -289.425 1.51562" />
+        <inst extents="-6.00006 -6.00001 -6 5.99994 5.99999 6" name="spire_copter_start_spot" orient="0 0 -2.35619" pos="-780 -1180 -480" />
+        <inst extents="-6.00001 -6.00002 -6 5.99999 5.99998 6" name="hero_evade_spot02b" orient="0 0 -3.14159" pos="-510 -530 -120" />
+        <inst extents="-5.99999 -6.00003 -6 6.00001 5.99997 6" name="hero_evade_spot04b" orient="0 0 2.70526" pos="-460 -460 -120" />
+        <inst extents="-5.99997 -5.99995 -6 6.00003 6.00005 6" name="security_agent_door_spot" orient="0 0 -1.309" pos="1790 -120 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="herospot01" pos="2180.72 1011.65 15.1722" />
+        <inst extents="-6 -6 -6 6 6 6" name="herospot02" pos="2128.99 961.949 15.1722" />
+        <inst extents="-6 -6 -6 6 6 6" name="herospot03" pos="2122.37 1072.39 15.1722" />
+        <inst extents="-6 -6 -6 6 6 6" name="herospot04" pos="2084.15 1015 15.1722" />
+        <inst extents="-6 -5.99999 -11.909 6 6.00001 0.0910196" name="boom_spot" orient="0 0.785398 1.65806" pos="1855.55 -2115.63 251.544" />
+        <inst extents="-6.00001 -5.99999 -15.2859 5.99999 6.00001 -3.28589" name="shoot_copter_spot" orient="-1.13027 -0.16872 -0.514361" pos="-2453.14 -3208.72 251.544" />
+        <inst extents="-6 -5.99997 -6 6 6.00003 6" name="hero_evade_spot04" orient="0 0 -0.349066" pos="-400 -490 -120" />
+    </entinst>
+    <entinst type="null">
+        <inst extents="-6.00002 -6.00001 -6 5.99998 5.99999 6" name="null" orient="0 0 2.35619" pos="1860 -1020 -240" />
+        <inst extents="-5.99993 -5.99991 -14.5749 6.00007 6.00009 -2.57492" name="null" orient="0.230712 -0.539644 -2.27288" pos="602.489 -1046.56 251.544" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" pos="-3300 -540 0" />
+    </entinst>
+    <entinst type="glass_pressure_plate">
+        <inst extents="-120 -120 0 120 120 1.2" name="glass_pressure_plate" pos="-960 -360 -116" />
+    </entinst>
+    <entinst type="glass_pressure_plate01">
+        <inst extents="-50 -20 0 50 20 1.2" name="glass_pressure_plate01" pos="-960.093 -287.961 -0.0297246" />
+    </entinst>
+    <entinst type="missile">
+        <inst name="missile" pos="-700.771 -1067.76 -60" />
+    </entinst>
+    <entinst type="missile_spot">
+        <inst extents="-6.00001 -6 0 5.99999 6 12" name="missile_spot" orient="0 0 0.785398" pos="-605.374 -1005.72 -102.643" />
+        <inst extents="-6.00004 -5.99995 -4.59626 5.99996 6.00005 7.40374" name="flak_spot" orient="0 -0.436332 -1.5708" pos="1843.09 -1187.08 -39.1355" />
+        <inst extents="-5.99997 -6.00004 5.14105e-007 6.00003 5.99996 12.0" name="chopper_agent_bullet" orient="0 0 1.74533" pos="1840 -360 60" />
+        <inst extents="-6 -5.99995 0 6 6.00005 12" name="chopper_agent_bullet" orient="0 0 1.39626" pos="1740 -360 60" />
+        <inst extents="-6 -5.99995 -4.59628 6 6.00005 7.40372" name="flak_spot" orient="0 -0.436332 -1.5708" pos="1876.86 -1187.08 -39.1355" />
+        <inst extents="-5.99999 -6 0 6.00001 6 12" name="missile_spot" orient="0 0 0.785398" pos="-606.468 -1006.81 -102.643" />
+    </entinst>
+    <entinst type="spawn_guards">
+        <inst extents="-6 -6.00006 0 6 5.99994 12" name="spawn_guards" pos="1741.12 1020.32 0" />
+    </entinst>
+    <entinst type="hurter">
+        <inst extents="-6 -6 0 6 6 12" name="hurter" pos="2580 1020 -120" />
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-780 -450 0 780 450 168" name="trigger_area01" pos="2340 990 0" />
+    </entinst>
+    <entinst type="modok_arena_trig">
+        <inst extents="-450 -500 0 450 500 360" name="modok_arena_trig" pos="2670 964 -120" />
+    </entinst>
+    <entinst type="modok_trigger">
+        <inst extents="-180 -240 0 180 240 288" name="modok_trigger" pos="2402.6 1020 -120" />
+    </entinst>
+    <entinst type="security_agent_trig">
+        <inst extents="-120 -120 0 120 120 288" name="security_agent_trig" pos="1620 -780 -120" />
+    </entinst>
+    <entinst type="copter_destroy_spire_trig">
+        <inst extents="-180 -120 0 180 120 288" name="copter_destroy_spire_trig" orient="0 0 -1.5708" pos="-420 -480 -120" />
+    </entinst>
+    <entinst type="glass_roof_intro_trig01">
+        <inst extents="-30 -125 0 30 125 288" name="glass_roof_intro_trig01" orient="0 0 -1.5708" pos="60 -625 -120" />
+    </entinst>
+    <entinst type="to_hero_spot03">
+        <inst extents="-60 -30 0 60 30 120" name="to_hero_spot03" pos="60 -90 0" />
+    </entinst>
+    <entinst type="to_hero_spot04">
+        <inst extents="-120 -60 0 120 60 120" name="to_hero_spot04" pos="-1500 793.221 0" />
+    </entinst>
+    <entinst type="to_hero_spot01">
+        <inst extents="-60 -30 0 60 30 120" name="to_hero_spot01" pos="-2460 570 0" />
+    </entinst>
+    <entinst type="to_hero_spot02">
+        <inst extents="-60 -30 0 60 30 120" name="to_hero_spot02" pos="-900 -210 -250" />
+    </entinst>
+    <entinst type="copter_flyby_trig">
+        <inst extents="-240 -120 0 240 120 168" name="copter_flyby_trig" pos="-2340 -780 0" />
+    </entinst>
+    <entinst type="copter_destroy_guns_trig">
+        <inst extents="-120 -120 0 120 120 288" name="copter_destroy_guns_trig" pos="-2700 -550 -120" />
+    </entinst>
+    <entinst type="glass_roof_intro_trig">
+        <inst extents="-30 -125 0 30 125 288" name="glass_roof_intro_trig" pos="-1230 -545 -120" />
+    </entinst>
+    <entinst type="pres_chal_trig">
+        <inst extents="-29.0297 -10.2265 0 29.0297 10.2265 45.4855" name="pres_chal_trig" pos="-959.958 -227.761 0" />
+    </entinst>
+    <entinst type="destroy_copter_trig">
+        <inst extents="-40 -30 0 40 30 60" name="destroy_copter_trig" pos="1873.2 -946.413 -240" />
+    </entinst>
+    <entinst type="wp_mrun3_03">
+        <inst extents="-6.00012 -5.99996 -6 5.99988 6.00004 6" name="wp_mrun3_03" orient="0 0 -0.436332" pos="2877.46 1069.31 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun2_03" pos="2825.01 1027.42 0" />
+        <inst extents="-5.99995 -6 -6 6.00005 6 6" name="wp_mrun1_03" orient="0 0 0.349066" pos="2871.41 991.557 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun4_02" pos="2637.83 1035.25 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun3_02" pos="2708.58 1078.41 -66.7423" />
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="wp_mrun1_02" orient="0 0 0.349066" pos="2762.53 991.557 -15.9528" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun4_01" pos="2522.57 1027.76 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun3_01" pos="2585.27 1071.04 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun2_01" pos="2559.85 971.944 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun1_01" pos="2627.57 984.543 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun4_03" pos="2739.93 1030.73 -36.0238" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mrun2_02" pos="2676.12 989.524 -66.7423" />
+    </entinst>
+    <entinst type="wp_modokspot01">
+        <inst extents="-5.99991 -5.99999 -6 6.00009 6.00001 6" name="wp_modokspot01" orient="0 0 -3.14159" pos="2910.34 1020 0" />
+    </entinst>
+    <entinst type="wp_mroom2_01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mroom2_01" pos="2438.81 1072.9 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mroom3_01" pos="2442.1 972.137 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mroom4_01" pos="2405.03 1019.23 -110.909" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_guardpath_01" pos="1979.63 1020.32 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_mroom1_01" pos="2485.91 1026.9 -120" />
+    </entinst>
+    <entinst type="wp_securityagentpath03">
+        <inst extents="-5.99999 -6.00005 -6 6.00001 5.99995 6" name="wp_securityagentpath03" orient="0 0 1.22173" pos="1700 -280 0" />
+        <inst extents="-6 -6.00004 -6 6 5.99996 6" name="wp_securityagentpath02" orient="0 0 1.22173" pos="1620 -390 0" />
+        <inst extents="-6.00006 -6 -6 5.99994 6 6" name="wp_securityagentpath01" orient="0 0 2.35619" pos="1620 -600 -120" />
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="wp_raildestroy01" orient="0 0 -2.53073" pos="-860 -180 0" />
+        <inst extents="-6 -6.00001 -6 6 5.99999 6" name="wp_raildestroysecond01" orient="0 0 -1.5708" pos="-940 -300 0" />
+    </entinst>
+    <entinst type="wp_guardpath_02">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_guardpath_02" pos="2203.07 1020.32 0" />
+    </entinst>
+    <entinst type="wp_raildestroy02">
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="wp_raildestroy02" orient="0 0 -1.5708" pos="-940 -260 0" />
+    </entinst>
+    <entinst type="wp_guardpath_03">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_guardpath_03" pos="2404.89 1020.32 -112.549" />
+    </entinst>
+    <entinst type="anti_aircraft_gun">
+        <inst name="anti_aircraft_gun" orient="0 0 2.35619" pos="1860 -1020 -240" />
+    </entinst>
+    <entinst type="barrel_omega_th">
+        <inst name="barrel_omega_th" pos="-1560.0 1080.0 1.80593e-005" />
+        <inst name="barrel_omega_th" pos="-2390 1080 0" />
+        <inst name="barrel_omega_th" pos="-2386.6 1119.22 0" />
+        <inst name="barrel_omega_th" pos="-1810 1450 0" />
+        <inst name="barrel_omega_th" pos="-1800 1120 0" />
+        <inst name="barrel_omega_th" pos="-1830 1070 0" />
+        <inst name="barrel_omega_th" pos="-1180 -260 0" />
+        <inst name="barrel_omega_th" pos="-1220 -230 0" />
+        <inst name="barrel_omega_th" pos="-710 -250 0" />
+        <inst name="barrel_omega_th" orient="0 0 1.5708" pos="-2182.62 -465.245 0" />
+        <inst name="barrel_omega_th" pos="-1551.33 1348.73 0" />
+        <inst name="barrel_omega_th" pos="-2150 1090 0" />
+        <inst name="barrel_omega_th" pos="-2527.38 1330 0" />
+        <inst name="barrel_omega_th" pos="-700 -190 0" />
+        <inst name="barrel_omega_th" pos="-2140 -460 0" />
+        <inst name="barrel_omega_th" pos="-2220.43 -450 0" />
+        <inst name="barrel_omega_th" pos="-2300 -630 0" />
+        <inst name="barrel_omega_th" pos="-1427.85 1320 0" />
+        <inst name="barrel_omega_th" orient="0 0 1.5708" pos="-2299.21 -586.572 0" />
+        <inst name="barrel_omega_th" pos="-1090 -100 0" />
+        <inst name="barrel_omega_th" pos="-1790 1410 0" />
+    </entinst>
+    <entinst type="barrel_omega_th05">
+        <inst name="barrel_omega_th05" pos="2876.6 1318.13 -120" />
+        <inst name="barrel_omega_th05" pos="2510.38 1325.43 -120" />
+        <inst name="barrel_omega_th05" pos="2534.72 726.824 -120" />
+        <inst name="barrel_omega_th05" pos="2400.88 821.726 -120" />
+        <inst name="barrel_omega_th05" pos="2398.45 1179.43 -120" />
+        <inst name="barrel_omega_th05" pos="2840.78 1331.39 -110.692" />
+        <inst name="barrel_omega_th05" pos="2808.63 1309.37 -110.692" />
+        <inst name="barrel_omega_th05" pos="2773.28 1328.99 -110.692" />
+    </entinst>
+    <entinst type="glass_breaker_chal">
+        <inst name="glass_breaker_chal" pos="-1161.03 118.269 -38.3042" />
+    </entinst>
+    <entinst type="catwalk_railing_10ft_omega_b">
+        <inst name="catwalk_railing_10ft_omega_b" orient="0 0 3.14159" pos="-2040 -430 0" />
+        <inst name="catwalk_railing_10ft_omega_b" pos="-2040 -650 0" />
+        <inst name="catwalk_railing_10ft_omega_b" pos="-1920 -650 0" />
+        <inst name="catwalk_railing_10ft_omega_b" orient="0 0 3.14159" pos="-1920 -430 0" />
+    </entinst>
+    <entinst type="glass_railing">
+        <inst name="glass_railing" pos="-960 -290 0" />
+    </entinst>
+    <entinst type="chair_omega_th">
+        <inst name="chair_omega_th" orient="0 0 1.5708" pos="-2420 660 0" />
+        <inst name="chair_omega_th" orient="0 0 -1.5708" pos="-2620 660 0" />
+    </entinst>
+    <entinst type="chair_omega_th06">
+        <inst name="chair_omega_th06" orient="0 0 1.5708" pos="-850 -290 -250" />
+    </entinst>
+    <entinst type="console_01_omega_b">
+        <inst name="console_01_omega_b" orient="0 0 -2.35619" pos="2990 850 0" />
+        <inst name="console_01_omega_b" orient="0 0 -0.785398" pos="2990 1190 0" />
+        <inst name="console_01_omega_b" orient="0 0 1.5708" pos="-2304.38 -497.362 0" />
+    </entinst>
+    <entinst type="console_02_omega_b">
+        <inst name="console_02_omega_b" orient="0 0 -0.785398" pos="2750 830 0" />
+        <inst name="console_02_omega_b" pos="2640 720 -120" />
+        <inst name="console_02_omega_b" orient="0 0 -2.35619" pos="2750 1210 0" />
+        <inst name="console_02_omega_b" orient="0 0 -3.14159" pos="2640 1320 -120" />
+    </entinst>
+    <entinst type="console_desk_omega_b">
+        <inst name="console_desk_omega_b" orient="0 0 1.5708" pos="2370 1350 -120" />
+        <inst name="console_desk_omega_b" orient="0 0 3.14159" pos="2370 690 -120" />
+    </entinst>
+    <entinst type="copter_flyby">
+        <inst name="copter_flyby" pos="-2798.43 165.023 -100" />
+    </entinst>
+    <entinst type="spire_copter">
+        <inst name="spire_copter" orient="0 0 -2.35619" pos="-1580 210 -360" />
+    </entinst>
+    <entinst type="destroyable_copter">
+        <inst name="destroyable_copter" orient="0 -0.261799 -1.57079" pos="2560 -260 -170" />
+    </entinst>
+    <entinst type="crate_omega_th">
+        <inst name="crate_omega_th" pos="-1850 1120 0" />
+        <inst name="crate_omega_th" pos="-1900 1070 0" />
+        <inst name="crate_omega_th" pos="-2090 1080 0" />
+        <inst name="crate_omega_th" pos="-2590.0 760.0 2.89079e-005" />
+        <inst name="crate_omega_th" pos="-1427.85 1280 0" />
+        <inst name="crate_omega_th" pos="-2160 1440 0" />
+        <inst name="crate_omega_th" orient="0 0 1.5708" pos="1836.42 -584.559 2.05042e-005" />
+        <inst name="crate_omega_th" pos="-1210 -170 0" />
+        <inst name="crate_omega_th" pos="2176.92 -122.425 0" />
+        <inst name="crate_omega_th" pos="1883.35 -585.897 0" />
+        <inst name="crate_omega_th" orient="0 0 0.872665" pos="1871.72 -501.757 2.05042e-005" />
+        <inst name="crate_omega_th" pos="-2110 1120 0" />
+    </entinst>
+    <entinst type="crate_omega_th04">
+        <inst name="crate_omega_th04" pos="2870.52 723.174 -120" />
+        <inst name="crate_omega_th04" pos="2830.37 714.657 -120" />
+    </entinst>
+    <entinst type="glass_breaker_crate">
+        <inst name="glass_breaker_crate" pos="-1207.93 -117.318 1" />
+    </entinst>
+    <entinst type="cube_omega_th04">
+        <inst name="cube_omega_th04" pos="2819.28 1218.02 0" />
+        <inst name="cube_omega_th04" pos="2813.92 827.818 0" />
+        <inst name="cube_omega_th04" pos="2908.11 842.056 0" />
+        <inst name="cube_omega_th04" pos="2865.65 835.109 0" />
+        <inst name="cube_omega_th04" pos="2864.44 1198.3 0" />
+        <inst name="cube_omega_th04" pos="2906.9 1207.06 0" />
+        <inst name="cube_omega_th04" pos="2781.7 729.257 -120" />
+    </entinst>
+    <entinst type="cube_omega_th">
+        <inst name="cube_omega_th" pos="1822.71 -505.864 2.05042e-005" />
+        <inst name="cube_omega_th" orient="0 0 -1.65806" pos="1822.71 -546.866 2.05042e-005" />
+        <inst name="cube_omega_th" orient="0 0 -2.87979" pos="1895.09 -542.138 2.05042e-005" />
+        <inst name="cube_omega_th" pos="2089.7 -100.235 0" />
+        <inst name="cube_omega_th" orient="0 0 -0.349066" pos="2134.07 -98.5353 0" />
+    </entinst>
+    <entinst type="desk_omega_b">
+        <inst name="desk_omega_b" orient="0 0 -1.5708" pos="-2390 660 0" />
+        <inst name="desk_omega_b" orient="0 0 1.5708" pos="-2650 660 0" />
+    </entinst>
+    <entinst type="desk_omega_b06">
+        <inst name="desk_omega_b06" orient="0 0 -1.5708" pos="-830 -300 -250" />
+    </entinst>
+    <entinst type="door_invulnerable_omega_d03">
+        <inst name="door_invulnerable_omega_d03" pos="-2460 540 0" />
+        <inst name="door_invulnerable_omega_d03" pos="60 -60 0" />
+    </entinst>
+    <entinst type="security_door">
+        <inst name="security_door" pos="1740 -60 0" />
+    </entinst>
+    <entinst type="door_invulnerable_omega_d02">
+        <inst name="door_invulnerable_omega_d02" pos="-900 -180 -250" />
+    </entinst>
+    <entinst type="door_omega_d">
+        <inst name="door_omega_d" pos="-1500 1020 0" />
+        <inst name="door_omega_d" pos="-2460 1020 0" />
+    </entinst>
+    <entinst type="girder_20ft_omega_e">
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="670 240 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1510 0 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1970 0 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1970 480 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1510 480 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-1150 -70 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-1020 -70 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1010 240 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="670 120 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="2210 -630 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="2210 -330 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1510 -450 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1250 -630 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="-150 -70 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="150 -70 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1250 -210 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-900 -70 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="1010 120 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-2610 -430 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-3030 -430 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-1470 -430 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-1290 -430 -121" />
+        <inst name="girder_20ft_omega_e" pos="-1250 -390 -121" />
+        <inst name="girder_20ft_omega_e" pos="-670 -390 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-600 -430 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="-530 -390 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="-310 -390 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="-240 -430 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-2310 -190 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 -1.5708" pos="-2010 -190 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="-1870 -330 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="-170 -330 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="170 -330 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="170 -510 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="430 -220 -121" />
+        <inst name="girder_20ft_omega_e" orient="0 0 3.14159" pos="430 -510 -121" />
+    </entinst>
+    <entinst type="girder_20ft_omega_e14">
+        <inst name="girder_20ft_omega_e14" orient="0 0 -1.5708" pos="-2520 -670 -246" />
+        <inst name="girder_20ft_omega_e14" orient="0 0 -1.5708" pos="-2400 -670 -246" />
+        <inst name="girder_20ft_omega_e14" orient="0 0 -1.5708" pos="-2280 -670 -246" />
+        <inst name="girder_20ft_omega_e14" orient="0 0 -1.5708" pos="-2160 -670 -246" />
+    </entinst>
+    <entinst type="girder_wall_10ft_omega_e">
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 3.14159" pos="432 -60 0" />
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 1.5708" pos="-3120 -432 0" />
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 1.5708" pos="-2460 -192 0" />
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 1.5708" pos="-1680 -432 0" />
+        <inst name="girder_wall_10ft_omega_e" pos="1248 -60 0" />
+        <inst name="girder_wall_10ft_omega_e" pos="2208 -180 0" />
+        <inst name="girder_wall_10ft_omega_e" pos="-312 -60 0" />
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 3.14159" pos="-528 -60 0" />
+        <inst name="girder_wall_10ft_omega_e" orient="1.50996e-007 0.0 3.14159" pos="1511.14 -300 0.199615" />
+    </entinst>
+    <entinst type="girder_wall_20ft_omega_e">
+        <inst name="girder_wall_20ft_omega_e" orient="-1.74846e-007 0.0 1.5708" pos="360 -552 -120" />
+        <inst name="girder_wall_20ft_omega_e" pos="1248 -330 -120" />
+        <inst name="girder_wall_20ft_omega_e" pos="1248 -510 -120" />
+        <inst name="girder_wall_20ft_omega_e" orient="-1.74846e-007 0.0 1.5708" pos="240 -552 -120" />
+        <inst name="girder_wall_20ft_omega_e" orient="-1.74846e-007 0.0 1.5708" pos="-2160 -192 -120" />
+    </entinst>
+    <entinst type="glass_roof">
+        <inst name="glass_roof" pos="-960 -360 -120" />
+    </entinst>
+    <entinst type="hanging_light_omega_e">
+        <inst name="hanging_light_omega_e" pos="2820 1020 -60" />
+        <inst name="hanging_light_omega_e" pos="2460 1020 -60" />
+        <inst name="hanging_light_omega_e" pos="-2580 780 -60" />
+        <inst name="hanging_light_omega_e" pos="-2220 1380 -60" />
+        <inst name="hanging_light_omega_e" pos="-1740 1380 -60" />
+        <inst name="hanging_light_omega_e" pos="1740 240 -60" />
+        <inst name="hanging_light_omega_e" pos="1740 1020 -60" />
+    </entinst>
+    <entinst type="teh_master">
+        <inst name="teh_master" orient="0 0 -1.5708" pos="3000 1020 0" />
+    </entinst>
+    <entinst type="oildrum_4x6_omega_th">
+        <inst name="oildrum_4x6_omega_th" orient="-1.5708 0 0.436332" pos="1796.45 -634.878 29.2298" />
+        <inst name="oildrum_4x6_omega_th" pos="1939.74 -481.446 0" />
+    </entinst>
+    <entinst type="pipe_curved_01_omega_b">
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="630 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-1890 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="450 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="2190 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-30 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-2070 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-2790 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 3.14159" pos="-2400 798.487 0" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 3.14159" pos="-2400 748.83 0" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-2610 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="2010 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 1.5708" pos="-630 120 0" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-2100 1440 0" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 1.5708" pos="-570 120 0" />
+        <inst name="pipe_curved_01_omega_b" pos="-2280 -385 -120" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="1705 -480 -120" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="150 -720 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="2015 -360 -120" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="1050 -240 -120" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="630 -240 -120" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -3.14159" pos="-838.858 -450.19 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -3.14159" pos="-838.858 -390.19 -240" />
+        <inst name="pipe_curved_01_omega_b" pos="-1080.69 -330.476 -240" />
+        <inst name="pipe_curved_01_omega_b" pos="-1080.69 -390.476 -240" />
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="-1860 1440 0" />
+    </entinst>
+    <entinst type="pipe_huge_straight_omega_e">
+        <inst name="pipe_huge_straight_omega_e" orient="0 0 1.5708" pos="-2339.49 1509.03 -120" />
+        <inst name="pipe_huge_straight_omega_e" orient="0 0 1.5708" pos="-2700 960 -120" />
+        <inst name="pipe_huge_straight_omega_e" pos="-1930 -250 -360" />
+        <inst name="pipe_huge_straight_omega_e" pos="-1930 -250 -120" />
+        <inst name="pipe_huge_straight_omega_e" orient="0 0 1.5708" pos="-2700 840 -120" />
+        <inst name="pipe_huge_straight_omega_e" orient="0 0 1.5708" pos="-1620.16 1509.03 -120" />
+    </entinst>
+    <entinst type="radar_dish_omega_a">
+        <inst name="radar_dish_omega_a" orient="1.74846e-007 0.0 2.35619" pos="-2340 -660 120" />
+    </entinst>
+    <entinst type="spire_animated">
+        <inst name="spire_animated" orient="0 0 3.14159" pos="-50 330 -520" />
+    </entinst>
+    <entinst type="spire_omega_e">
+        <inst name="spire_omega_e" orient="0 0 3.14159" pos="-1200 -540 -120" />
+        <inst name="spire_omega_e" orient="0 0 3.14159" pos="-720 -540 -120" />
+        <inst name="spire_omega_e" orient="0 0 3.14159" pos="-3000 -540 -120" />
+    </entinst>
+    <entinst type="spire">
+        <inst name="spire" orient="0 0 3.14159" pos="-240 -540 -120" />
+    </entinst>
+    <entinst type="support_plank_10x20_omega_e">
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="240 -540 -120" />
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="-2160 -660 0" />
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="-2280 -660 0" />
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="360 -540 -120" />
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="-2400 -660 0" />
+        <inst name="support_plank_10x20_omega_e" orient="0 0 3.14159" pos="-2520 -660 0" />
+    </entinst>
+    <entinst type="destroyable_copter_init">
+        <inst name="destroyable_copter_init" orient="0.0 -0.261799 1.74846e-007" pos="3209.57 -260 -170" />
+        <inst name="helipad_copter" orient="0.230711 -0.539644 -2.27287" pos="602.489 -1046.56 251.544" />
+    </entinst>
+    <entinst type="vertical_pump_omega_a">
+        <inst name="vertical_pump_omega_a" pos="-2640 1200 -120" />
+        <inst name="vertical_pump_omega_a" pos="-1320 1200 -120" />
+    </entinst>
+    <entinst type="wall_screen_omega_b">
+        <inst name="wall_screen_omega_b" pos="2580 1330 60" />
+        <inst name="wall_screen_omega_b" pos="2700 1330 60" />
+        <inst name="wall_screen_omega_b" pos="-1979.6 1449.6 87.4346" />
+        <inst name="wall_screen_omega_b" orient="0 0 3.14159" pos="2700 710 60" />
+        <inst name="wall_screen_omega_b" orient="0 0 3.14159" pos="2580 710 60" />
+    </entinst>
+    <entinst type="fire_large">
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2650 -1020 -240" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2060 -1050 -240" />
+    </entinst>
+    <entinst type="fire_med">
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="-2530 -1070 -240" />
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="-2170 -1010 -240" />
+    </entinst>
+    <entinst type="fire_sm">
+        <inst extents="-15 -15 0 15 15 30" name="fire_sm" pos="-2530 -980 -240" />
+        <inst extents="-15 -15 0 15 15 30" name="fire_sm" pos="-2070 -960 -240" />
+    </entinst>
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_spawnexactlocation="true" monster_spawnscript="act1/omega/omega4/visible_invunerable" monster_team="none" name="sp_shieldagent01" nocollide="true" />
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_name="security_agent" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act1/omega/omega4/visible_invunerable" monster_team="none" name="sp_shieldagent02" nocollide="true" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="true" monster_name="scampie2" monster_smartent="false" name="ss_aimtrooper_b31" nocollide="true" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="false" monster_name="trooper_rail_destroyer" monster_smartent="true" name="ss_aimtrooper_b01" nocollide="true" smartent="false" />
+    <entity character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="false" monster_guarddistance="1200" monster_nodistancecull="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/omega/omega4/trooper_copter_spawnscript_new" name="trooper_copter_spawner" nocollide="true" smartent="false" toggleonact="true" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="false" monster_name="trooper_rail_02" monster_smartent="true" name="ss_aimtrooper_b02" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="false" monster_name="trooper_rail_01" monster_smartent="true" name="ss_aimtrooper_b03" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="AIMTrooper_b" classname="monsterspawnerent" instantspawn="true" monster_name="scampie1" monster_smartent="false" name="ss_aimtrooper_b32" nocollide="true" />
+    <entity actcountremove="0" character="AIMTrooper_c" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_aialertrange="5000" monster_deathscript="act1/omega/omega4/modok_guard_death" monster_guarddistance="5000" monster_name="guard" monster_smartent="false" monster_spawnscript="act1/omega/omega4/modok_guard_path" name="ss_aimtrooper_c01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="Modok" classname="monsterspawnerent" monster_deathscript="act1/omega/omega4/modok_death_script" monster_deathspawn="Modok_treasure" monster_name="Modok" monster_nofadeondeath="true" monster_spawnexactlocation="true" monster_spawnscript="setAIActive('_OWNER_','FALSE')" monster_team="enemy" name="modok_spawner" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="Modok" monster_deathspawn="Modok_treasure" name="Modok_treasure" nocollide="true" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" idnum="2" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure01" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp" />
+    <entity actcountdisable="1" actcountremove="1" actdistance="60" acteffect="base/item/item_pickup" actleader="true" actonuse="true" actscript="common/actionfigures/xpbonus" actsound="common/game/pickup_power" animstarton="true" classname="physent" description="Experience Points" fxlevel="7" model="pickups/experience_point" name="af_bp_xp" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" quickuse="true" smartent="false" structure="2" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="17" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity boxdamage="true" classname="affectableharment" conversationoff="false" damage="10" damagemods="dmgmod_forcepain" damagetype="dmg_electricity" informai="false" name="shocker" nocollide="true" radiusdamage="false" smartent="false" />
+    <entity classname="lightent" lightcolor="0.98 0.99 0.67" lightradius="400" name="helipad_copter_light" nocollide="true" smartent="false" startoff="false" />
+    <entity actcountremove="1" acttogglesloopfx="true" classname="actionent" loopfx="base/material/explode/exp_generic_med" loopfxstarton="false" name="spire_explosion04" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acteffect="base/material/break/brk_metal" acttogglesloopfx="false" classname="actionent" loopfxstarton="false" name="crate_explode" nocollide="true" smartent="false" toggleonact="true" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_large" loopfxstarton="false" name="spire_fire_wall" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acttogglesloopfx="true" classname="actionent" loopfx="base/material/explode/exp_generic_lrg" loopfxstarton="false" name="spire_explosion01" nocollide="true" smartent="false" />
+    <entity actsoundloop="zone_shared/omega/helicopter" classname="actionent" name="helisound01" nocollide="true" smartent="false" toggleonact="true" />
+    <entity classname="ent" name="copter_flyby_start_spot" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all01" nocollide="true" prevzone="omega3" />
+    <entity actcountremove="1" actmatchent="glass_breaker_crate" actscript="act1/omega/omega4/pressure_chal" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="glass_pressure_plate01" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity actcountremove="1" actmatchent="glass_breaker_crate" actscript="act1/omega/omega4/glass_roof" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="glass_pressure_plate" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity classname="projectileent" damage="10" damagetype="dmg_physical" dieoncontact="true" lifetime="6" model="omega/turret_bullet" name="missile" nogravity="true" numbounces="0" smartent="false" spawneffect="base/misc/turret_gun_muzzle" spawnsound="zone_shared/omega/turret_shot" speed="500" structure="2" />
+    <entity actscript="act1/omega/omega4/modok_manual_hurt" classname="actionent" name="hurter" nocollide="true" smartent="false" />
+    <entity actinactivedelay="10" actscript="act1/omega/omega4/modok_spawn_guards" classname="actionent" name="spawn_guards" nocollide="true" smartent="false" />
+    <entity actscript="act1/omega/omega4/missile_spawner" classname="actionent" name="missile_spot" nocollide="true" smartent="false" />
+    <entity actleader="true" actmatchteam="true" actscript="act1/omega/omega4/modok_arena_in" boxcollision="true" classname="scripttriggerent" deactscript="act1/omega/omega4/modok_arena_out" name="modok_arena_trig" nocollide="true" smartent="false" startenabled="false" team="hero" />
+    <entity actleader="true" actmatchteam="true" actscript="act1/omega/omega4/rain" boxcollision="true" classname="scripttriggerent" deactscript="act1/omega/omega4/rain" name="trigger_area01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/glass_roof_intro" acttargets="ss_aimtrooper_b01 ss_aimtrooper_b02 ss_aimtrooper_b03" actteamplayer="true" boxcollision="true" classname="gameent" name="glass_roof_intro_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/copter_destroy_guns" actteamplayer="true" boxcollision="true" classname="gameent" name="copter_destroy_guns_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/copter_flyby" actteamplayer="true" boxcollision="true" classname="gameent" name="copter_flyby_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actinactivedelay="1" actmatchteam="true" actontouch="false" actonuse="true" actscript="act1/omega/omega4/hero_spot02" acttargets="rain" actteamplayer="true" boxcollision="true" classname="gameent" description="Go inside" name="to_hero_spot02" nocollide="true" quickuse="true" smartent="false" startenabled="true" team="hero" />
+    <entity actinactivedelay="1" actmatchteam="true" actontouch="false" actonuse="true" actscript="act1/omega/omega4/hero_spot01" acttargets="rain" actteamplayer="true" boxcollision="true" classname="gameent" description="Go outside" name="to_hero_spot01" nocollide="true" quickuse="true" smartent="false" startenabled="true" team="hero" />
+    <entity actinactivedelay="1" actmatchteam="true" actontouch="false" actonuse="true" actscript="act1/omega/omega4/hero_spot04" acttargets="rain" actteamplayer="true" boxcollision="true" classname="gameent" description="Go outside" name="to_hero_spot04" nocollide="false" quickuse="true" smartent="false" startenabled="true" team="hero" toggleonact="false" />
+    <entity actinactivedelay="1" actmatchteam="true" actontouch="false" actonuse="true" actscript="act1/omega/omega4/hero_spot03" acttargets="rain" actteamplayer="true" boxcollision="true" classname="gameent" description="Go inside" name="to_hero_spot03" nocollide="true" quickuse="true" smartent="false" startenabled="true" team="hero" toggleonact="false" />
+    <entity actsoundloop="zone_shared/omega/helicopter" classname="actionent" name="helisound03" nocollide="true" smartent="false" toggleonact="true" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/helipad_new" acttargets="ss_aimtrooper_b01 ss_aimtrooper_b02 ss_aimtrooper_b03" actteamplayer="true" boxcollision="true" classname="gameent" name="glass_roof_intro_trig01" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/copter_destroy_spire" actteamplayer="true" boxcollision="true" classname="gameent" name="copter_destroy_spire_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/security_agent" actteamplayer="true" boxcollision="true" classname="gameent" name="security_agent_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega4/modok_intro" acttargets="modok_spawner" actteamplayer="true" boxcollision="true" classname="gameent" name="modok_trigger" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actonuse="true" actscript="act1/omega/omega4/destroy_copter_new" boxcollision="true" classname="gameent" description="Anti-Aircraft Gun" hinttype="use" name="destroy_copter_trig" nocollide="true" smartent="false" startenabled="false" team="none" />
+    <entity actinactivedelay="1" actonuse="true" acttargets="glass_breaker_chal" boxcollision="true" classname="gameent" description="Push Over Crate" name="pres_chal_trig" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none" />
+    <entity actscript="act1/omega/omega4/modok_guard_attack" beeline="true" classname="waypointent" name="wp_guardpath_03" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" actscript="act1/omega/omega4/glass_railguy_wp" classname="waypointent" name="wp_raildestroy02" nocollide="true" smartent="false" speed="1" />
+    <entity beeline="true" classname="waypointent" name="wp_guardpath_02" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" classname="waypointent" name="wp_securityagentpath03" nocollide="true" smartent="false" speed="1" />
+    <entity beeline="true" classname="waypointent" name="wp_mroom2_01" nocollide="true" smartent="false" speed="1" />
+    <entity classname="waypointent" name="wp_modokspot01" nocollide="true" smartent="false" />
+    <entity actscript="act1/omega/omega4/face_modok" beeline="true" classname="waypointent" name="wp_mrun3_03" nocollide="true" smartent="false" speed="1" />
+    <entity classname="physent" material="solid_metal" model="omega/anti_aircraft_gun_omega_a" name="anti_aircraft_gun" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="10" heaviness="0" material="solid_metal" model="omega/barrel_omega_th" name="barrel_omega_th05" randompickups="5" structure="0" />
+    <entity buttonseq="X" challengetype="tap" classname="challengeent" heroanim="ea_zone1" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" material="solid_metal" model="omega/cargo_container_omega_c" name="glass_breaker_chal" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" winscript="act1/omega/omega4/pressure_chal_win" wintime="4.1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="omega/catwalk_railing_10ft_omega_b" name="glass_railing" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="50" heaviness="0" material="solid_metal" model="omega/chair_omega_th" name="chair_omega_th06" randompickups="0" structure="0" targetlockable="false" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="omega/console_01_stump_omega_b" name="console_01_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="omega/console_02_stump_omega_b" name="console_02_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="omega/console_desk_stump_omega_b" name="console_desk_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" material="solid_metal" model="omega/copter_enemy_omega_a" name="copter_flyby" nogravity="true" nopickup="false" nopush="false" smartent="false" structure="2" />
+    <entity classname="moverent" deatheffect="map/heli/jet_crash_explode" material="solid_metal" model="omega/copter_enemy_omega_m" move="0 730 0" moveduration="2" name="destroyable_copter" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity classname="moverent" material="solid_metal" model="omega/copter_enemy_omega_m" move="0 0 320" moveduration="2" name="spire_copter" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="crate_omega_th04" randompickups="5" stackphysics="true" structure="0" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" interactsoundloop="hero_challenges/push_pull/metal" material="solid_metal" model="omega/crate_push_pull_omega_p" name="glass_breaker_crate" nopush="true" quickuse="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="cube_omega_th04" randompickups="5" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="omega/desk_omega_b" name="desk_omega_b06" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" targetlockable="false" />
+    <entity actcountdisable="1" actonuse="false" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_invulnerable_omega_d" name="door_invulnerable_omega_d02" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" pathignore="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_invulnerable_omega_d" name="security_door" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_invulnerable_omega_d" name="door_invulnerable_omega_d03" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/girder_20ft_omega_e" name="girder_20ft_omega_e14" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity actontouch="true" classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="glass_ceiling_omega_b_d" fxlevel="3" health="75" material="glass" model="omega/glass_ceiling_omega_b" name="glass_roof" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" smartent="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" fxlevel="3" health="75" mass="0" material="glass" model="omega/glass_ceiling_stump_omega_b" name="glass_ceiling_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity actonuse="true" actscript="act1/omega/omega4/master_control" actsound="zone_shared/object/console_fighter" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" description="Console" fxlevel="3" health="150" hinttype="objective" material="electronics" model="omega/master_control_station_omega_b" name="teh_master" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" startenabled="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="100" mass="0" material="hollow_metal" model="omega/pipe_curved_01_stump_omega_b" name="pipe_curved_01_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity actcountdisable="1" classname="physent" material="solid_metal" model="omega/spire_omega_a" name="spire_animated" nodistancecull="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity actondeath="false" camerafadeout="true" classname="physent" deathscript="act1/omega/omega4/spire_deathscript" material="solid_metal" model="omega/spire_omega_e" name="spire" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/u_copter_enemy_omega_a" name="destroyable_copter_init" noclip="true" nocollide="true" nodistancecull="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="omega/wall_screen_stump_omega_b" name="wall_screen_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+</world>

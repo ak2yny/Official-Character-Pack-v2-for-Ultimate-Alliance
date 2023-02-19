@@ -1,0 +1,623 @@
+<world>
+    <entity act="1" killz="-600" level="10" name="world" next_gen_partylight="0.96 0.96 0.81" next_gen_partylightradius="200" partylight="0.71 0.9 0.99" partylightradius="200" soundfile="china3" zonescript="act1/mandarin/mandarin3/mandarin3" />
+    <precache filename="act1/mandarin/mandarin3/1_mandarin3_010" type="conversation" />
+    <precache filename="common/end_cs" type="script" />
+    <entity actcountremove="1" character="ShaolinHealer_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_shaolinhealer_a" nocollide="true" />
+    <entity actcountremove="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_shaolinmonk_b" nocollide="true" />
+    <entity actcountremove="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_shaolinmonk_b_leader" nocollide="true" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept05.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="5" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art5" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity animstarton="true" camerafadeout="true" classname="physent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_m" fxlevel="2" material="wood" model="mandarin/banner_man_a_b" name="banner_man_a_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="mandarin/catwalk_middle_man_e" name="catwalk_middle_man_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/column_10ft_red_man_e" name="column_10ft_red_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="mandarin/column_15ft_stone_man_e" name="column_15ft_stone_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="mandarin/column_20ft_flag_man_e" name="column_20ft_flag_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/column_30x10_dragon_man_e" name="column_30x10_dragon_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/column_30x5_dragon_man_e" name="column_30x5_dragon_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="mandarin/column_40x10_stone_man_e" name="column_40x10_stone_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_l" fxlevel="3" material="wood" model="mandarin/door_30ft_man_d" name="door_30ft_man_d" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" structure="0" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/mandain/round_door_open" autoclosedelay="0" classname="doorent" material="solid_metal" model="mandarin/door_round_man_a" name="door_round_man_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/mandarin/trap_door" autoclosedelay="0" classname="doorent" material="hollow_metal" model="mandarin/floor_pit_spawner_man_a" name="floor_pit_spawner_man_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity classname="moverent" material="Wood" model="mandarin/floor_switch_man_m" move="0 0 0" moveduration="1" name="floor_switch_man_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" structure="2" toggleonact="true" />
+    <entity aishootme="true" classname="physent" deatheffect="base/material/explode/exp_metal" deathsound="death_style/ds_explosive_m" deathspawn=" explosion_med" fxlevel="2" material="hollow_metal" model="mandarin/gunpowder_barrel_man_th" name="gunpowder_barrel_man_th" xdeathspawn=" explosion_med" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/hanging_light_01_man_e" name="hanging_light_01_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/hanging_light_02_man_e" name="hanging_light_02_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" loopfx="map/mandarin/lamp_7ft_short" loopfxstarton="true" material="rock" model="mandarin/lamp_7ft_01_man_e" name="lamp_7ft_01_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" loopfx="map/mandarin/lamp_7ft_short" loopfxstarton="true" material="Wood" model="mandarin/lamp_7ft_03_man_e" name="lamp_7ft_03_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_m" fxlevel="2" material="wood" model="mandarin/pedestal_man_b" name="pedestal_man_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="pressureplateent" material="Wood" model="mandarin/pressure_plate_01_man_a" name="pressure_plate_01_man_a" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" material="Wood" model="mandarin/push_pull_crate_man_p" name="push_pull_crate_man_p" nopush="true" quickuse="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="mandarin/statue_20ft_dragon_man_e" name="statue_20ft_dragon_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="mandarin/statue_30ft_dragon_man_e" name="statue_30ft_dragon_man_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_l" deathspawn="statue_buddha_8ft_man_b_d" fxlevel="3" health="100" material="rock" model="mandarin/statue_buddha_8ft_man_b" name="statue_buddha_8ft_man_b" nogravity="true" nopickup="true" nopush="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" deathspawn="statue_buddha_man_b_d" fxlevel="2" material="rock" model="mandarin/statue_buddha_man_b" name="statue_buddha_man_b" nogravity="true" nopickup="true" nopush="true" structure="1" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actmatchteam="true" actonuse="true" actsound="common/game/treasure" animstarton="false" classname="treasureent" count="1000" description="weapon cache" material="hollow_wood" model="mandarin/treasure_chest_man_a" name="treasure_chest_spawn_man_a" nogravity="true" nopickup="true" nopush="true" structure="2" team="hero" toggleonact="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_tile_m" fxlevel="2" health="10" heaviness="0" material="tile" model="mandarin/vase_01_man_b" name="vase_01_man_b" randompickups="3" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_tile_m" fxlevel="2" health="10" heaviness="0" material="tile" model="mandarin/vase_02_man_th" name="vase_02_man_th" randompickups="3" structure="0" />
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="pressure_plate_invisible" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="actionent" name="relay" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity alpha="0.7" alphanextgen="0.5" ambienteffect="base/misc/misc_waterambient" classname="waterent" colornextgen="0 0.2 0.85" density="10" diffusemap="textures/white" name="water" nocollide="true" normalmap="textures/nextgen/subtleripples_n" specularmap="textures/white" splasheffect="base/misc/misc_watersplash" texture="textures/water.png" texturescalenextgen="1" wakeeffect="base/misc/misc_waterwake" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity actcountremove="1" character="Ultimo_b" classname="monsterspawnerent" monster_deathspawn="Ultimo_b_treasure" monster_team="enemy" name="sp_ultimo_b" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entinst type="heal01">
+        <inst extents="-12 -18 0 36 18 84" name="heal01" pos="5274 2340 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="heal01_a" orient="0 0 -1.5708" pos="5580 2622 0" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="heal01_b" orient="0 0 1.5708" pos="5580 2058 0" />
+    </entinst>
+    <entinst type="ss_shaolinhealer_a01">
+        <inst extents="-12 -18 0 36 18 84" name="ss_shaolinhealer_a01" pos="4260 3660 -120" />
+    </entinst>
+    <entinst type="ss_shaolinhealer_a">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_shaolinhealer_a" orient="0 0 -1.5708" pos="4621.3 5549.49 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_shaolinhealer_a" orient="0 0 1.5708" pos="4500 2334 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shaolinhealer_a" orient="0 0 -1.5708" pos="4581.44 4938.58 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b">
+        <inst extents="-11.9998 -18.0002 0 36.0002 17.9998 84" name="ss_shaolinmonk_b" orient="0 0 2.44346" pos="7173.36 3548.01 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_shaolinmonk_b" pos="4295.45 4831.71 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_shaolinmonk_b" pos="4380.87 4761.6 -120" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shaolinmonk_b" orient="0 0 2.53073" pos="4836.1 4762.72 -120" />
+        <inst extents="-11.9997 -17.9998 0 36.0003 18.0002 84" name="ss_shaolinmonk_b" orient="0 0 2.96706" pos="4875.21 4823.29 -120" />
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="ss_shaolinmonk_b" orient="0 0 -2.96706" pos="7170.91 3774.16 0" />
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="ss_shaolinmonk_b" orient="0 0 1.65806" pos="4466.07 2404.62 0" />
+        <inst extents="-11.9998 -17.9998 0 36.0002 18.0002 84" name="ss_shaolinmonk_b" orient="0 0 1.65806" pos="4508.84 2474 0" />
+        <inst extents="-12.0001 -18.0004 0 35.9999 17.9996 84" name="ss_shaolinmonk_b" orient="0 0 1.309" pos="4548.24 2400.52 0" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_shaolinmonk_b" orient="0 0 -1.39626" pos="4618.93 5318.21 -120" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_shaolinmonk_b" orient="0 0 -1.39626" pos="4516.77 5361.76 -120" />
+        <inst extents="-12.0004 -17.9998 0 35.9996 18.0002 84" name="ss_shaolinmonk_b" orient="0 0 -2.70526" pos="4723.18 4872.81 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_shaolinmonk_b" orient="0 0 -1.91986" pos="4727.55 5362.08 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b10">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shaolinmonk_b10" orient="0 0 3.14159" pos="4560 3720 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b17">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shaolinmonk_b17" orient="0 0 3.14159" pos="4560 3600 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b18">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shaolinmonk_b18" orient="0 0 3.14159" pos="4620 3660 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b19">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_shaolinmonk_b19" orient="0 0 -1.5708" pos="4500 3900 -120" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b20">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_shaolinmonk_b20" orient="0 0 1.5708" pos="4500 3420 -120" />
+    </entinst>
+    <entinst type="monk01">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="monk01" orient="0 0 -1.5708" pos="5700 2580 0" />
+    </entinst>
+    <entinst type="monk03">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="monk03" orient="0 0 1.5708" pos="5700 2100 0" />
+    </entinst>
+    <entinst type="main_monk01">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="main_monk01" orient="0 0 3.14159" pos="4380 3420 -120" />
+    </entinst>
+    <entinst type="main_monk04">
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="main_monk04" orient="0 0 -3.14159" pos="4380 3900 -120" />
+    </entinst>
+    <entinst type="monk02">
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="monk02" orient="0 0 -1.5708" pos="5460 2580 0" />
+    </entinst>
+    <entinst type="main_monk02">
+        <inst extents="-12 -18 0 36 18 84" name="main_monk02" orient="0 0 3.14159" pos="4620 3420 -120" />
+    </entinst>
+    <entinst type="main_monk03">
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="main_monk03" orient="0 0 3.14159" pos="4620 3900 -120" />
+    </entinst>
+    <entinst type="monk04">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="monk04" orient="0 0 1.5708" pos="5460 2100 0" />
+    </entinst>
+    <entinst type="ss_shaolinmonk_b_leader">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shaolinmonk_b_leader" orient="0 0 2.96706" pos="7119.65 3651.37 0" />
+    </entinst>
+    <entinst type="concept_art5">
+        <inst name="concept_art5" pos="4080 5100 -120" />
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="7200 3480 0" />
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="7200 3840 0" />
+    </entinst>
+    <entinst type="banner_man_a_b">
+        <inst name="banner_man_a_b" orient="-1.74846e-007 0.0 -1.5708" pos="7300 3460 0" />
+        <inst name="banner_man_a_b" orient="-1.74846e-007 0.0 -1.5708" pos="7300 3860 0" />
+    </entinst>
+    <entinst type="catwalk_middle_man_e">
+        <inst name="catwalk_middle_man_e" pos="4920 2400 -1" />
+        <inst name="catwalk_middle_man_e" orient="0 0 -3.14159" pos="5040 2280 -1" />
+        <inst name="catwalk_middle_man_e" pos="5040 2400 -1" />
+        <inst name="catwalk_middle_man_e" orient="0 0 -3.14159" pos="5160 2280 -1" />
+        <inst name="catwalk_middle_man_e" pos="5160 2400 -1" />
+        <inst name="catwalk_middle_man_e" pos="4800 2400 -1" />
+        <inst name="catwalk_middle_man_e" orient="0 0 -3.14159" pos="4800 2280 -1" />
+        <inst name="catwalk_middle_man_e" orient="0 0 -3.14159" pos="4920 2280 -1" />
+    </entinst>
+    <entinst type="column_10ft_red_man_e">
+        <inst name="column_10ft_red_man_e" pos="3990 3750 0" />
+        <inst name="column_10ft_red_man_e" pos="3570 3570 0" />
+        <inst name="column_10ft_red_man_e" pos="3570 3750 0" />
+        <inst name="column_10ft_red_man_e" pos="4290 2250 0" />
+        <inst name="column_10ft_red_man_e" pos="3990 3570 0" />
+        <inst name="column_10ft_red_man_e" pos="4710 2430 0" />
+        <inst name="column_10ft_red_man_e" pos="3720 3570 0" />
+        <inst name="column_10ft_red_man_e" pos="3840 3750 0" />
+        <inst name="column_10ft_red_man_e" pos="3840 3570 0" />
+        <inst name="column_10ft_red_man_e" pos="4950 3750 0" />
+        <inst name="column_10ft_red_man_e" pos="4950 3570 0" />
+        <inst name="column_10ft_red_man_e" pos="4710 2250 0" />
+        <inst name="column_10ft_red_man_e" pos="4398 4158 0" />
+        <inst name="column_10ft_red_man_e" pos="4602 4158 0" />
+        <inst name="column_10ft_red_man_e" pos="4398 3162 0" />
+        <inst name="column_10ft_red_man_e" pos="4602 3162 0" />
+        <inst name="column_10ft_red_man_e" pos="4290 2430 0" />
+        <inst name="column_10ft_red_man_e" pos="3720 3750 0" />
+    </entinst>
+    <entinst type="column_15ft_stone_man_e">
+        <inst name="column_15ft_stone_man_e" pos="6060 3780 -120" />
+        <inst name="column_15ft_stone_man_e" pos="6060 3540 -120" />
+        <inst name="column_15ft_stone_man_e" pos="6720 3540 72" />
+        <inst name="column_15ft_stone_man_e" pos="6720 3780 72" />
+        <inst name="column_15ft_stone_man_e" pos="6060 3780 72" />
+        <inst name="column_15ft_stone_man_e" pos="6060 3540 72" />
+        <inst name="column_15ft_stone_man_e" pos="6720 3780 -120" />
+        <inst name="column_15ft_stone_man_e" pos="6720 3540 -120" />
+    </entinst>
+    <entinst type="column_20ft_flag_man_e">
+        <inst name="column_20ft_flag_man_e" pos="4580 1800 0" />
+        <inst name="column_20ft_flag_man_e" pos="4540 5760 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4420 1800 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 1920 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 1920 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 2040 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 2040 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 2160 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 2160 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 2520 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 2520 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 3000 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 3000 0" />
+        <inst name="column_20ft_flag_man_e" pos="4420 2760 0" />
+        <inst name="column_20ft_flag_man_e" pos="4580 2760 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7800 3480 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7800 3840 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7560 3840 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7560 3480 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7800 3720 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7800 3600 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7560 3600 0" />
+        <inst name="column_20ft_flag_man_e" orient="0 0 1.5708" pos="7560 3720 0" />
+        <inst name="column_20ft_flag_man_e" pos="4700 5880 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4540 5880 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4700 6000 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4540 6000 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4700 6120 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4540 6120 -120" />
+        <inst name="column_20ft_flag_man_e" pos="4700 5760 -120" />
+    </entinst>
+    <entinst type="column_30x10_dragon_man_e">
+        <inst name="column_30x10_dragon_man_e" pos="4260 5460 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4740 4140 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4740 3180 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4260 3180 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4980 5460 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4260 4740 -120" />
+        <inst name="column_30x10_dragon_man_e" pos="4260 4140 -120" />
+    </entinst>
+    <entinst type="column_30x5_dragon_man_e17">
+        <inst name="column_30x5_dragon_man_e17" orient="0 0 1.5708" pos="4584 4531 -120" />
+        <inst name="column_30x5_dragon_man_e17" orient="0 0 1.5708" pos="4414 4531 -120" />
+        <inst name="column_30x5_dragon_man_e17" pos="4831 3576 -120" />
+        <inst name="column_30x5_dragon_man_e17" pos="4831 3746 -120" />
+        <inst name="column_30x5_dragon_man_e17" pos="4051 3746 -120" />
+        <inst name="column_30x5_dragon_man_e17" pos="4051 3576 -120" />
+    </entinst>
+    <entinst type="column_30x5_dragon_man_e">
+        <inst name="column_30x5_dragon_man_e" pos="4200 5160 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4320 5160 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4320 5040 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4920 5160 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4920 5040 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="5040 5160 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="5040 5040 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4350 3510 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4650 3510 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4650 3810 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4350 3810 -120" />
+        <inst name="column_30x5_dragon_man_e" pos="4200 5040 -120" />
+    </entinst>
+    <entinst type="column_40x10_stone_man_e11">
+        <inst name="column_40x10_stone_man_e11" pos="5940 1980 -240" />
+        <inst name="column_40x10_stone_man_e11" pos="5220 1980 -240" />
+        <inst name="column_40x10_stone_man_e11" pos="5220 2700 -240" />
+        <inst name="column_40x10_stone_man_e11" pos="5940 2700 -240" />
+        <inst name="column_40x10_stone_man_e11" pos="5940 2700 -719.943" />
+        <inst name="column_40x10_stone_man_e11" pos="5220 2700 -719.943" />
+        <inst name="column_40x10_stone_man_e11" pos="5940 1980 -719.943" />
+        <inst name="column_40x10_stone_man_e11" pos="5220 1980 -719.943" />
+    </entinst>
+    <entinst type="column_40x10_stone_man_e">
+        <inst name="column_40x10_stone_man_e" pos="6550 4270 -241" />
+        <inst name="column_40x10_stone_man_e" pos="6360 4350 -241" />
+        <inst name="column_40x10_stone_man_e" pos="6170 4270 -241" />
+        <inst name="column_40x10_stone_man_e" pos="6170 3050 -241" />
+        <inst name="column_40x10_stone_man_e" pos="6360 2970 -241" />
+        <inst name="column_40x10_stone_man_e" pos="6960 3860 -120" />
+        <inst name="column_40x10_stone_man_e" pos="6960 3460 -120" />
+        <inst name="column_40x10_stone_man_e" pos="6550 3050 -241" />
+    </entinst>
+    <entinst type="door_30ft02">
+        <inst name="door_30ft02" orient="0 0 -1.5708" pos="5450.09 3660 0" />
+        <inst name="door_30ft01" orient="0 0 1.5708" pos="5470.09 3660 0" />
+    </entinst>
+    <entinst type="door_shadow01">
+        <inst name="door_shadow01" orient="0 0 -1.5708" pos="4740 2340 0" />
+    </entinst>
+    <entinst type="door_round_man_a">
+        <inst name="door_round_man_a" orient="0 0 1.5708" pos="3540 3660 0" />
+    </entinst>
+    <entinst type="main_pit02">
+        <inst name="main_pit02" pos="4620 3420 -120" />
+        <inst name="pit_shadow01" orient="0 0 1.5708" pos="5823.23 2340.95 0" />
+        <inst name="main_pit01" pos="4380 3420 -120" />
+        <inst name="main_pit04" pos="4380 3900 -120" />
+        <inst name="main_pit03" pos="4620 3900 -120" />
+    </entinst>
+    <entinst type="floor_pit_west">
+        <inst name="floor_pit_west" pos="4620 5690 -120" />
+    </entinst>
+    <entinst type="floor_switch_west">
+        <inst name="floor_switch_west" orient="0 0 3.14159" pos="4620 5690 -312" />
+    </entinst>
+    <entinst type="floor_switch02">
+        <inst name="floor_switch02" pos="5761.69 2893.69 480" />
+    </entinst>
+    <entinst type="floor_switch01">
+        <inst name="floor_switch01" orient="0 0 1.5708" pos="5820 2340 -192" />
+    </entinst>
+    <entinst type="floor_switch03">
+        <inst name="floor_switch03" orient="0 0 3.14159" pos="4610 5943.94 480" />
+    </entinst>
+    <entinst type="gunpowder_barrel_man_th">
+        <inst name="gunpowder_barrel_man_th" orient="0 0 0.349066" pos="4374.28 5293.63 -120" />
+        <inst name="gunpowder_barrel_man_th" orient="0 0 0.523599" pos="4794.47 5179.12 -120" />
+        <inst name="gunpowder_barrel_man_th" pos="4337.82 5284.46 -120" />
+        <inst name="gunpowder_barrel_man_th" orient="0 0 -0.610865" pos="4414.51 5149.42 -120" />
+        <inst name="gunpowder_barrel_man_th" pos="4338.79 4915.44 -120" />
+        <inst name="gunpowder_barrel_man_th" orient="0 0 -0.436332" pos="4856.82 4905.36 -120" />
+        <inst name="gunpowder_barrel_man_th" orient="0 0 0.698132" pos="4820.84 4909.17 -120" />
+        <inst name="gunpowder_barrel_man_th" pos="4899.67 5286.54 -120" />
+    </entinst>
+    <entinst type="hanging_light_01_man_e">
+        <inst name="hanging_light_01_man_e" pos="4500 4260 144" />
+        <inst name="hanging_light_01_man_e" pos="4500 2340 144" />
+        <inst name="hanging_light_01_man_e" pos="4920 3660 144" />
+        <inst name="hanging_light_01_man_e" pos="7300 3580 144" />
+        <inst name="hanging_light_01_man_e" pos="7300 3740 144" />
+        <inst name="hanging_light_01_man_e" pos="3900 3660 144" />
+        <inst name="hanging_light_01_man_e" pos="4620 5700 96" />
+        <inst name="hanging_light_01_man_e" pos="3660 3660 144" />
+        <inst name="hanging_light_01_man_e" pos="4500 3060 144" />
+    </entinst>
+    <entinst type="hanging_light_02_man_e">
+        <inst name="hanging_light_02_man_e" pos="6840 3480 144" />
+        <inst name="hanging_light_02_man_e" pos="5580 3420 144" />
+        <inst name="hanging_light_02_man_e" pos="5580 3900 144" />
+        <inst name="hanging_light_02_man_e" pos="6840 3780 144" />
+        <inst name="hanging_light_02_man_e" pos="5700 3900 144" />
+        <inst name="hanging_light_02_man_e" pos="5700 3420 144" />
+    </entinst>
+    <entinst type="lamp_7ft_01_man_e">
+        <inst name="lamp_7ft_01_man_e" pos="5220 3540 0" />
+    </entinst>
+    <entinst type="lamp_7ft_03_man_e">
+        <inst name="lamp_7ft_03_man_e" pos="4980 2436 0" />
+        <inst name="lamp_7ft_03_man_e" pos="3900 3744 0" />
+    </entinst>
+    <entinst type="pedestal_man_b">
+        <inst name="pedestal_man_b01" pos="4068 3960 -120" />
+        <inst name="pedestal_man_b02" pos="4932 3960 -120" />
+        <inst name="pedestal_man_b12" pos="3900 3567.6 0" />
+        <inst name="pedestal_man_b03" pos="4932 3360 -120" />
+        <inst name="pedestal_man_b09" pos="3660 3752.4 0" />
+        <inst name="pedestal_man_b04" pos="4068 3360 -120" />
+    </entinst>
+    <entinst type="pressure_plate_02">
+        <inst name="pressure_plate_02" pos="4740 5100 -120" />
+    </entinst>
+    <entinst type="pressure_plate_03">
+        <inst name="pressure_plate_03" pos="4619 5457.6 -120" />
+    </entinst>
+    <entinst type="pressure_plate_01">
+        <inst name="pressure_plate_01" pos="4500 5100 -120" />
+    </entinst>
+    <entinst type="push_pull_crate_man_p02">
+        <inst name="push_pull_crate_man_p02" pos="4730 4680 -120" />
+        <inst name="push_pull_crate_man_p02" pos="4200 5340 -120" />
+    </entinst>
+    <entinst type="crate02">
+        <inst name="crate02" pos="5580 2292 0" />
+    </entinst>
+    <entinst type="crate01">
+        <inst name="crate01" pos="5580 2388 0" />
+    </entinst>
+    <entinst type="statue_20ft_dragon_man_e">
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -1.5708" pos="5340.0 3516.46 4.09475e-005" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -3.14159" pos="4360 2640 0" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -2.35619" pos="6060 3300 -251.199" />
+        <inst name="statue_20ft_dragon_man_e" pos="4640 2640 0" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 0.872665" pos="6540 4020 -251.199" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -1.5708" pos="5640.0 3420.0 4.09474e-005" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 1.5708" pos="5340.0 3799.86 4.09475e-005" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 2.26893" pos="6060 4020 -251.199" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -0.785398" pos="6540 3300 -251.199" />
+        <inst name="statue_20ft_dragon_man_e" pos="4640 2880 0" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 -3.14159" pos="4360 2880 0" />
+        <inst name="statue_20ft_dragon_man_e" orient="0 0 1.5708" pos="5640.0 3900.0 4.09474e-005" />
+    </entinst>
+    <entinst type="statue_30ft_dragon_man_e">
+        <inst name="statue_30ft_dragon_man_e" orient="0 0 1.5708" pos="4620 5951.24 -120" />
+        <inst name="statue_30ft_dragon_man_e" orient="0 0 -1.5708" pos="4500 1968.76 0" />
+    </entinst>
+    <entinst type="statue_buddha_8ft_man_b">
+        <inst name="statue_buddha_8ft_man_b" orient="0 0 2.35619" pos="4392.51 5233.45 -120" />
+        <inst name="statue_buddha_8ft_man_b" orient="0 0 0.785398" pos="4393.45 4967.49 -120" />
+        <inst name="statue_buddha_8ft_man_b" orient="0 0 -0.785398" pos="4847.21 4966.83 -120" />
+        <inst name="statue_buddha_8ft_man_b" orient="0 0 -2.35619" pos="4846.27 5232.79 -120" />
+    </entinst>
+    <entinst type="statue_buddha_man_b">
+        <inst name="statue_buddha_man_b" orient="0 0 1.5708" pos="4323.88 2340 0" />
+        <inst name="statue_buddha_man_b" orient="0 0 1.5708" pos="4320 4320 0" />
+        <inst name="statue_buddha_man_b" orient="0 0 -1.5708" pos="4670 4320 0" />
+    </entinst>
+    <entinst type="treasure_chest_spawn_man_a">
+        <inst name="treasure_chest_spawn_man_a" orient="0 0 -1.5708" pos="5160.08 4741.09 0" />
+    </entinst>
+    <entinst type="vase_01_man_b">
+        <inst name="vase_01_man_b04" parent="pedestal_man_b04" pos="4068 3360 -72" />
+        <inst name="vase_01_man_b01" parent="pedestal_man_b01" pos="4068 3960 -72" />
+        <inst name="vase_01_man_b03" parent="pedestal_man_b03" pos="4932 3360 -72" />
+        <inst name="vase_01_man_b02" parent="pedestal_man_b02" pos="4932 3960 -72" />
+    </entinst>
+    <entinst type="vase_02_man_th">
+        <inst name="vase_02_man_th05" parent="pedestal_man_b09" pos="3660 3752.4 48" />
+        <inst name="vase_02_man_th08" parent="pedestal_man_b12" pos="3900 3567.6 48" />
+    </entinst>
+    <entinst type="ninja_light01">
+        <inst extents="-6 -6 -6 6 6 6" name="ninja_light01" pos="4380 3420 -170.529" />
+        <inst extents="-6 -6 -6 6 6 6" name="ninja_light03" pos="4620 3900 -170.529" />
+        <inst extents="-6 -6 -6 6 6 6" name="ninja_light04" pos="4380 3900 -170.529" />
+        <inst extents="-6 -6 -6 6 6 6" name="ninja_light02" pos="4620 3420 -170.529" />
+    </entinst>
+    <entinst type="light_shad_door">
+        <inst extents="-6 -6 -6 6 6 6" name="light_shad_door" pos="4790 2340 60" />
+    </entinst>
+    <entinst type="lightent_west01">
+        <inst extents="-6 -6 -6 6 6 6" name="lightent_west01" pos="7510 3660 120" />
+    </entinst>
+    <entinst type="fx_torch27">
+        <inst extents="-5.99987 -5.9998 -6 6.00013 6.0002 6" name="fx_torch27" orient="0 0 -1.5708" pos="5188.28 4740 104.207" />
+        <inst extents="-6.00007 -5.99996 -6 5.99993 6.00004 6" name="fx_torch27" orient="0 0 3.14159" pos="3660 3571.72 104.207" />
+        <inst extents="-5.99996 -6.00013 -6 6.00004 5.99987 6" name="fx_torch27" orient="0 0 2.35619" pos="4371.04 2571.04 104.207" />
+        <inst extents="-5.9999 -5.99997 -6 6.0001 6.00003 6" name="fx_torch27" orient="0 0 -2.35619" pos="4630.79 2210.41 104.207" />
+        <inst extents="-6.00012 -6.00003 -6 5.99988 5.99997 6" name="fx_torch27" orient="0 0 1.5708" pos="4389.26 2340 46.5739" />
+        <inst extents="-6.00008 -6.00011 -6 5.99992 5.99989 6" name="fx_torch27" orient="0 0 1.5708" pos="4590.5 4440 46.5739" />
+        <inst extents="-5.99996 -6.00002 -6 6.00004 5.99998 6" name="fx_torch27" orient="0 0 0.785398" pos="4370.41 2949.59 104.207" />
+    </entinst>
+    <entinst type="loop_effect05">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect05" pos="4980 5100 -87.5891" />
+    </entinst>
+    <entinst type="loop_effect04">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect04" pos="4260 5100 -87.5891" />
+    </entinst>
+    <entinst type="loop_effect03">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="loop_effect03" pos="5700 2340 6" />
+        <inst extents="-6.0001 -6.00022 -6 5.9999 5.99978 6" name="loop_effect03" orient="0 0 1.5708" pos="4500 3900 6" />
+        <inst extents="-6 -6.00007 -6 6 5.99993 6" name="loop_effect03" orient="0 0 -1.5708" pos="4500 3420 6" />
+    </entinst>
+    <entinst type="fx_water04">
+        <inst extents="-6.00008 -6.00007 -6 5.99992 5.99993 6" name="fx_water04" orient="0 0 1.5708" parent="monk04" pos="5460 2100 0" />
+        <inst extents="-5.99995 -5.99993 -6 6.00005 6.00007 6" name="fx_water01" orient="0 0 -1.5708" parent="monk01" pos="5700 2580 0" />
+        <inst extents="-5.99997 -6.00007 -6 6.00003 5.99993 6" name="fx_water03" orient="0 0 1.5708" parent="monk03" pos="5700 2100 0" />
+        <inst extents="-5.99991 -5.99993 -6 6.00009 6.00007 6" name="fx_water02" orient="0 0 -1.5708" parent="monk02" pos="5460 2580 0" />
+    </entinst>
+    <entinst type="fx_beam_slanted01">
+        <inst extents="-6.00014 -6.00005 -6 5.99986 5.99995 6" name="fx_beam_slanted01" orient="0 0 3.14159" pos="6300 3660 -120" />
+    </entinst>
+    <entinst type="null_shadow">
+        <inst extents="-6 -6 -6 6 6 6" name="null_shadow" pos="5460 2340 0" />
+        <inst extents="-5.99999 -5.99982 -6 6.00001 6.00018 6" name="cam_ultimo" orient="0 0 -0.785398" pos="6360 3720 0" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" pos="3660 3660 0" />
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0242 -95.2952 0 71.9758 48.7833 83.9544" name="player_start_all02" orient="0 0 -3.14159" pos="7230 3660 0" />
+    </entinst>
+    <entinst type="plate04">
+        <inst extents="-20 -20 0 20 20 1" name="plate04" pos="5460 2100 0" />
+    </entinst>
+    <entinst type="plate03">
+        <inst extents="-20 -20 0 20 20 1" name="plate03" pos="5700 2100 0" />
+    </entinst>
+    <entinst type="plate02">
+        <inst extents="-20 -20 0 20 20 1" name="plate02" pos="5460 2580 0" />
+    </entinst>
+    <entinst type="plate01">
+        <inst extents="-20 -20 0 20 20 1" name="plate01" pos="5700 2580 0" />
+    </entinst>
+    <entinst type="relay_monk04">
+        <inst extents="-6 -6 0 6 6 12" name="relay_monk04" pos="5460 2016 0" />
+    </entinst>
+    <entinst type="relay_heal01">
+        <inst extents="-6 -6 0 6 6 12" name="relay_heal01" pos="5328 2340 0" />
+    </entinst>
+    <entinst type="relay_wave01">
+        <inst extents="-6 -6 0 6 6 12" name="relay_wave01" pos="4260 3780 -120" />
+    </entinst>
+    <entinst type="relay_wave02">
+        <inst extents="-6 -6 0 6 6 12" name="relay_wave02" pos="4260 3840 -120" />
+    </entinst>
+    <entinst type="relay_monk01">
+        <inst extents="-6 -6 0 6 6 12" name="relay_monk01" pos="5700 2664 0" />
+    </entinst>
+    <entinst type="relay_monk03">
+        <inst extents="-6 -6 0 6 6 12" name="relay_monk03" pos="5700 2016 0" />
+    </entinst>
+    <entinst type="relay_shadow01">
+        <inst extents="-6 -6 0 6 6 12" name="relay_shadow01" pos="6042 2350 0" />
+    </entinst>
+    <entinst type="relay_west_sw">
+        <inst extents="-6 -6 0 6 6 12" name="relay_west_sw" pos="4620 5460 -120" />
+    </entinst>
+    <entinst type="relay_2doors">
+        <inst extents="-6 -6 0 6 6 12" name="relay_2doors" pos="5220 3660 0" />
+    </entinst>
+    <entinst type="relay_monk02">
+        <inst extents="-6 -6 0 6 6 12" name="relay_monk02" pos="5460 2664 0" />
+    </entinst>
+    <entinst type="relay_lock01">
+        <inst extents="-6 -6 0 6 6 12" name="relay_lock01" pos="7160 3620 0" />
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-690 -420 0 690 420 120" name="trigger_area01" pos="5310 2340 0" />
+    </entinst>
+    <entinst type="trig_ultimo_arena">
+        <inst extents="-900 -540 0 900 540 288" name="trig_ultimo_arena" pos="6420 3660 -120" />
+    </entinst>
+    <entinst type="trig_ninja01">
+        <inst extents="-25 -170 0 25 170 290" name="trig_ninja01" pos="4055 3650 0" />
+    </entinst>
+    <entinst type="trig_ultimo">
+        <inst extents="-11.9998 -240 0 12.0002 240 120" name="trig_ultimo" orient="0 0 3.14159" pos="5532 3660 0" />
+    </entinst>
+    <entinst type="trigger_touch">
+        <inst extents="-12 -120 0 12 120 120" name="trigger_touch" orient="0 0 1.5708" pos="4498.89 2519.39 0" />
+    </entinst>
+    <entinst type="trig_monk_pools">
+        <inst extents="-12 -660 0 12 660 240" name="trig_monk_pools" pos="5292 2400 -120" />
+    </entinst>
+    <entinst type="trigger_use_west">
+        <inst extents="-20 -15 0 20 15 60" name="trigger_use_west" pos="4620 5645 -96" />
+    </entinst>
+    <entinst type="trigger_use01">
+        <inst extents="-9.83611 -15 0 9.83611 15 60" name="trigger_use01" pos="5800 2340 0" />
+    </entinst>
+    <entinst type="water01">
+        <inst extents="-720 -630 0 720 630 24" name="water01" pos="6660 3750 -240" />
+        <inst extents="-300 -90.0001 0 300 90.0001 24" name="water01" pos="6360 3030 -240" />
+    </entinst>
+    <entinst type="wp_monk2_back01">
+        <inst extents="-5.99994 -6.0001 -6 6.00006 5.9999 6" name="wp_monk2_back01" orient="0 0 2.87979" pos="4346.82 3619.36 -120" />
+        <inst extents="-5.99993 -5.99992 -6 6.00007 6.00008 6" name="wp_monk3_back01" orient="0 0 3.14159" pos="4336.63 3691.03 -120" />
+    </entinst>
+    <entinst type="wp_monk4_front01">
+        <inst extents="-5.99993 -5.99991 -6 6.00007 6.00009 6" name="wp_monk4_front01" orient="0 0 3.14159" pos="4240.8 3691.03 -120" />
+    </entinst>
+    <entinst type="wp_home_ultimo01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_home_ultimo01" pos="6300 3660 -120" />
+    </entinst>
+    <entinst type="wp_monk1_front01">
+        <inst extents="-5.99994 -5.99991 -6 6.00006 6.00009 6" name="wp_monk1_front01" orient="0 0 3.14159" pos="4225.19 3627.92 -120" />
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" orient="0 0 -1.5708" pos="5340 3660 0" />
+    </entinst>
+    <entinst type="link_mandarin2">
+        <inst extents="-12 -96 0 12 96 120" name="link_mandarin2" pos="3504 3660 0" />
+    </entinst>
+    <entinst type="link_mandarin4">
+        <inst extents="-30 -230 0 30 230 190" name="link_mandarin4" pos="7414.95 3660 0" />
+    </entinst>
+    <entinst type="s_ultimo">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="s_ultimo" orient="0 0 3.14159" pos="6420 3660 -120" />
+    </entinst>
+    <entity actcountremove="1" actdelay="0.5" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinHealer_a" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinhealer_a01" nocollide="true" smartent="false" />
+    <entity actcountremove="4" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinHealer_a" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_deathscript="act1/mandarin/mandarin3/death_heal01" monster_name="shad_heal01" monster_smartent="true" monster_spawnexactlocation="true" name="heal01" nocollide="true" smartent="false" />
+    <entity actcountremove="4" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/water_1ss" instantspawn="false" monster_deathscript="act1/mandarin/mandarin3/death_monk04" monster_name="shad_monk04" monster_smartent="true" monster_spawnexactlocation="true" name="monk04" nocollide="true" smartent="false" />
+    <entity actcountdisable="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="relay_wave01 relay_wave02" monster_guarddistance="1200" monster_name="shad_monk02" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act1/mandarin/mandarin3/monk_pit_spawn3" name="main_monk03" nocollide="true" smartent="false" />
+    <entity actcountdisable="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="relay_wave01 relay_wave02" monster_guarddistance="1200" monster_name="shad_monk02" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act1/mandarin/mandarin3/monk_pit_spawn2" name="main_monk02" nocollide="true" smartent="false" />
+    <entity actcountremove="4" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/water_1ss" instantspawn="false" monster_deathscript="act1/mandarin/mandarin3/death_monk02" monster_name="shad_monk02" monster_smartent="true" monster_spawnexactlocation="true" name="monk02" nocollide="true" smartent="false" />
+    <entity actcountdisable="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="relay_wave01 relay_wave02" monster_guarddistance="1200" monster_name="shad_monk02" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/mandarin/mandarin3/monk_pit_spawn4" name="main_monk04" nocollide="true" smartent="false" />
+    <entity actcountdisable="1" character="ShaolinMonk_b" classname="monsterspawnerent" instantspawn="false" monster_deathtargets="relay_wave01 relay_wave02" monster_guarddistance="1200" monster_name="shad_monk02" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act1/mandarin/mandarin3/monk_pit_spawn1" name="main_monk01" nocollide="true" smartent="false" />
+    <entity actcountremove="4" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/water_1ss" instantspawn="false" monster_deathscript="act1/mandarin/mandarin3/death_monk03" monster_name="shad_monk04" monster_smartent="true" monster_spawnexactlocation="true" name="monk03" nocollide="true" smartent="false" />
+    <entity actcountremove="4" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/water_1ss" instantspawn="false" monster_deathscript="act1/mandarin/mandarin3/death_monk01" monster_name="shad_monk01" monster_smartent="true" monster_spawnexactlocation="true" name="monk01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actdelay="0.25" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinmonk_b20" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinmonk_b19" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actdelay="0.5" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_deathtargets="relay_wave02" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinmonk_b18" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actdelay="0.25" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_deathtargets="relay_wave02" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinmonk_b17" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acteffect="map/mandarin/monk_puff_spawn" character="ShaolinMonk_b" classname="monsterspawnerent" firstspawnscript="act1/mandarin/mandarin3/smoke_1ss" instantspawn="false" monster_deathtargets="relay_wave02" monster_smartent="true" monster_spawnexactlocation="true" name="ss_shaolinmonk_b10" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="1" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="2" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="mandarin/column_30x5_dragon_man_e" name="column_30x5_dragon_man_e17" nogravity="true" nopickup="true" nopush="true" scale="0.8" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="mandarin/column_40x10_stone_man_e" name="column_40x10_stone_man_e11" nogravity="true" nokillz="true" nopickup="true" nopush="true" structure="2" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/mandarin/big_door_slide" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_l" fxlevel="3" material="wood" model="mandarin/door_30ft_man_d" name="door_30ft02" nogravity="true" nopickup="true" nopush="true" openduration="2" openposition="0.9" openupdown="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/mandain/round_door_open" autoclosedelay="0" classname="doorent" material="solid_metal" model="mandarin/door_round_man_a" name="door_shadow01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/mandarin/trap_door" autoclosedelay="3" classname="doorent" material="hollow_metal" model="mandarin/floor_pit_spawner_man_a" name="floor_pit_west" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actonuse="false" actsound="zone_shared/mandarin/trap_door" autoclosedelay="3" classname="doorent" material="hollow_metal" model="mandarin/floor_pit_spawner_man_a" name="main_pit02" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actscript="act1/mandarin/mandarin3/open_lock02" classname="moverent" material="Wood" model="mandarin/floor_switch_man_m" move="0 0 0" moveduration="1" name="floor_switch03" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/mandarin/mandarin_main_door" acttogglesanim="false" classname="moverent" material="Wood" model="mandarin/floor_switch_man_m" move="0 0 72" moveduration="2" name="floor_switch01" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actscript="act1/mandarin/mandarin3/open_lock01" classname="moverent" material="Wood" model="mandarin/floor_switch_man_m" move="0 0 0" moveduration="1" name="floor_switch02" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity actsound="zone_shared/mandarin/mandarin_main_door" acttogglesanim="false" classname="moverent" material="Wood" model="mandarin/floor_switch_man_m" move="0 0 72" moveduration="2" name="floor_switch_west" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/pressure01_on" actsound="hero_challenge/pressure_plate/stone_down" classname="pressureplateent" deactscript="act1/mandarin/mandarin3/pressure01_off" deactsound="hero_challenge/pressure_plate/stone_up" material="Wood" model="mandarin/pressure_plate_01_man_a" name="pressure_plate_01" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" team="hero" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/pressure03_on" actsound="hero_challenge/pressure_plate/stone_down" classname="pressureplateent" deactscript="act1/mandarin/mandarin3/pressure03_off" deactsound="hero_challenge/pressure_plate/stone_up" material="Wood" model="mandarin/pressure_plate_01_man_a" name="pressure_plate_03" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" team="hero" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/pressure02_on" actsound="hero_challenge/pressure_plate/stone_down" classname="pressureplateent" deactscript="act1/mandarin/mandarin3/pressure02_off" deactsound="hero_challenge/pressure_plate/stone_up" material="Wood" model="mandarin/pressure_plate_01_man_a" name="pressure_plate_02" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" team="hero" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" interactsoundloop="hero_challenge/push_pull/stone" material="Wood" model="mandarin/push_pull_crate_man_p" name="crate01" nopush="true" quickuse="true" smartent="false" startenabled="true" structure="2" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" interactsoundloop="hero_challenge/push_pull/stone" material="Wood" model="mandarin/push_pull_crate_man_p" name="crate02" nopush="true" quickuse="true" smartent="false" structure="2" />
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="length_aa" interactsoundloop="hero_challenge/push_pull/stone" material="Wood" model="mandarin/push_pull_crate_man_p" name="push_pull_crate_man_p02" nopush="true" quickuse="true" structure="2" team="hero" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_l" fxlevel="3" health="100" mass="0" material="rock" model="mandarin/statue_buddha_8ft_stump_man_b" name="statue_buddha_8ft_man_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" mass="0" material="rock" model="mandarin/statue_buddha_stump_man_b" name="statue_buddha_man_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity acttogglesloopfx="true" classname="lightent" lightcolor="0.81 0.56 0.02" lightradius="200" name="lightent_west01" nocollide="true" smartent="false" startoff="true" toggleonact="true" togglestarton="false" />
+    <entity classname="lightent" lightcolor="0.71 0.52 0" lightradius="200" name="light_shad_door" nocollide="true" smartent="false" startoff="true" toggleonact="true" togglestarton="false" />
+    <entity acttogglesloopfx="true" classname="lightent" lightcolor="0.83 0.63 0.03" lightradius="200" name="ninja_light01" nocollide="true" smartent="false" startoff="true" toggleonact="true" togglestarton="false" />
+    <entity acttogglesloopfx="true" classname="actionent" fxlevel="2" loopfx="map/mandarin/mandarin_lightbeam" loopfxstarton="true" name="fx_beam_slanted01" nocollide="true" smartent="true" />
+    <entity acteffect="map/mandarin/monk_pool_spawn" acttogglesloopfx="false" classname="actionent" loopfx="map/mandarin/monk_pool_loop" loopfxstarton="true" name="fx_water04" nocollide="true" smartent="false" />
+    <entity acttogglesloopfx="true" classname="actionent" fxlevel="4" loopfx="map/mandarin/mandarin_lightbeam" loopfxstarton="true" name="loop_effect03" nocollide="true" smartent="true" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_medium" loopfxstarton="true" name="loop_effect04" nocollide="true" smartent="true" spawnsoundloop="zone_shared/fx/fire_med" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_medium" loopfxstarton="true" name="loop_effect05" nocollide="true" smartent="true" spawnsoundloop="eng/zone_shared/fx/fire_med" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_torch" loopfxstarton="true" name="fx_torch27" nocollide="true" smartent="true" spawnsoundloop="zone_shared/mandarin/torches" />
+    <entity classname="ent" name="null_shadow" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_mandarin3" prevzone="mandarin4" />
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_mandarin3" prevzone="mandarin2" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/plate01" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="plate01" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/plate02" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="plate02" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/plate03" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="plate03" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity actmatchteam="true" actscript="act1/mandarin/mandarin3/plate04" boxcollision="true" classname="pressureplateent" extent="-20 -20 0 20 20 1" name="plate04" nocollide="false" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity actcountremove="1" actscript="act1/mandarin/mandarin3/open_lock01" classname="actionent" name="relay_lock01" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="1" actscript="act1/mandarin/mandarin3/gamevar_monk02" classname="actionent" name="relay_monk02" nocollide="true" smartent="false" />
+    <entity actcountact="2" actcountremove="1" actscript="act1/mandarin/mandarin3/relay_2doors" classname="actionent" name="relay_2doors" nocollide="true" smartent="false" />
+    <entity actscript="act1/mandarin/mandarin3/west_switch_on" classname="actionent" name="relay_west_sw" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actscript="act1/mandarin/mandarin3/shadow_room_crank" classname="actionent" name="relay_shadow01" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="1" actscript="act1/mandarin/mandarin3/gamevar_monk03" classname="actionent" name="relay_monk03" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="1" actscript="act1/mandarin/mandarin3/gamevar_monk01" classname="actionent" name="relay_monk01" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="1" acttargets="ss_shaolinmonk_b19 ss_shaolinhealer_a01 ss_shaolinmonk_b20" classname="actionent" name="relay_wave02" nocollide="true" smartent="false" />
+    <entity actcountact="2" actcountremove="1" acttargets="ss_shaolinmonk_b10 ss_shaolinmonk_b18 ss_shaolinmonk_b17" classname="actionent" name="relay_wave01" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="4" actscript="act1/mandarin/mandarin3/gamevar_heal01" classname="actionent" name="relay_heal01" nocollide="true" smartent="false" />
+    <entity actcountact="4" actcountremove="1" actscript="act1/mandarin/mandarin3/gamevar_monk04" classname="actionent" name="relay_monk04" nocollide="true" smartent="false" />
+    <entity actleader="true" actmatchteam="true" actscript="act1/mandarin/mandarin3/ultimo_arena_in" boxcollision="true" classname="scripttriggerent" deactscript="act1/mandarin/mandarin3/ultimo_arena_out" name="trig_ultimo_arena" nocollide="true" smartent="false" startenabled="false" team="hero" />
+    <entity actleader="true" actmatchteam="true" actscript="common/disable_blink" boxcollision="true" classname="scripttriggerent" deactscript="common/enable_blink" name="trigger_area01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/mandarin/mandarin3/shadow_room_start" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_monk_pools" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/mandarin/mandarin3/ultimo_spawn" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_ultimo" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/mandarin/mandarin3/main_spawn_new" acttargets="main_monk01 main_monk02 main_monk04 main_monk03" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_ninja01" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actonuse="true" actsound="zone_shared/mandarin/lever" acttargets="floor_switch02" boxcollision="true" classname="gameent" description="Lever" name="trigger_use01" nocollide="true" smartent="false" startenabled="false" team="none" />
+    <entity actcountremove="1" actonuse="true" actsound="zone_shared/mandarin/lever" acttargets="floor_switch03" boxcollision="true" classname="gameent" description="Lever" name="trigger_use_west" nocollide="true" smartent="false" startenabled="false" team="none" />
+    <entity alpha="0.5" alphanextgen="0.5" ambienteffect="base/misc/misc_waterambient" classname="waterent" colornextgen="0 0.2 0.85" density="10" diffusemap="textures/white" name="water01" nocollide="true" normalmap="textures/nextgen/subtleripples_n" specularmap="textures/white" splasheffect="base/misc/misc_watersplash" texture="textures/water.png" texturescalenextgen="1" wakeeffect="base/misc/misc_waterwake" />
+    <entity actscript="setWaypointPath('_ACTIVATOR_','',0)" classname="waypointent" name="wp_monk1_front01" nocollide="true" smartent="false" speed="0.75" />
+    <entity actscript="common/set_wppath_null" classname="waypointent" name="wp_home_ultimo01" nocollide="true" smartent="false" />
+    <entity actscript="setWaypointPath('_ACTIVATOR_','',0)" classname="waypointent" name="wp_monk4_front01" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="setWaypointPath('_ACTIVATOR_','',0)" beeline="true" classname="waypointent" name="wp_monk2_back01" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Forbidden Passage" name="link_mandarin4" nextzone="mandarin4" nocollide="false" quickuse="true" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Golden Court" name="link_mandarin2" nextzone="mandarin2" nocollide="false" team="hero" />
+    <entity actcountremove="1" character="Ultimo_b" classname="monsterspawnerent" monster_deathscript="act1/mandarin/mandarin3/ultimo_death" monster_deathspawn="Ultimo_b_treasure" monster_name="ultimo" monster_spawnscript="common/set_visible" monster_team="enemy" name="s_ultimo" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" monster_deathspawn="Ultimo_b_treasure" name="Ultimo_b_treasure" nocollide="true" treasurelevel="0" />
+</world>

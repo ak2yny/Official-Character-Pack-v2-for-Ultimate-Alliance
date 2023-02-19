@@ -1,0 +1,103 @@
+<conversation>
+    <startCondition conditionscriptfile="act5/doomstark/check_gizmos">
+        <participant name="default">
+            <line soundtoplay="voice/PYM/5_DOOMSTARK1B_050_056_PYM" text="%HANKPYM%: Very good. Now I have both of the things I need. Give me a second.">
+                <response text="%MORE%">
+                    <line soundtoplay="voice/PYM/5_DOOMSTARK1B_050_057_PYM" text="%HANKPYM%: There. This device should help you against any lightning attack by Dr. Doom.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act5/doomstark/got_manual" noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/PYM/5_DOOMSTARK1B_050_054_PYM" text="%HANKPYM%: Great. You have the technical manual. But you still need to bring me the magnetic dampener.">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act5/doomstark/got_magnetic_dampner" noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/PYM/5_DOOMSTARK1B_050_052_PYM" text="%HANKPYM%: Ah, good. You found the magnetic dampener. But you still need to bring me the technical manual for it.">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv_run_once/run_once22" noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/PYM/5_DOOMSTARK1B_050_000_PYM" text="%HANKPYM%: If you could give me a hand, I'd be willing to build you a device that might help you fight Dr. Doom.">
+                <response text="%PLAYER%: I'd take any help I can get against Doom. What do you need?">
+                    <line notalkanim="true" soundtoplay="voice/PYM/5_DOOMSTARK1B_050_002_PYM" text="%HANKPYM%: There's a magnetic dampener located somewhere in Stark Tower and there's also a technical manual for calibrating it. If you could bring me those two items I think I can set you up with some protection.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/spiderman" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_040_pym" text="%HANKPYM%: Hey, Spider-Man. Are you looking forward to taking on Dr. Doom in this final mission?">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/spiderman/NOWORK" text="%SPIDERMAN%: I don't think so.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/thor" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_050_pym" text="%HANKPYM%: Thor, do you think the team's ready for this final mission against Dr. Doom?">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/thor/5_doomstark1b_050_051_tho" text="%THOR%: We have no choice but to succeed, Hank. My father is depending on us.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act5/doomstark/xor_pym_convs" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_060_pym" text="%HANKPYM%: So your final mission is to throw down with Dr. Doom, huh? That should be interesting.">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_070_pym" text="%HANKPYM%: Hey, did you need something else?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" tagindex="autogen_tag_1" text="%PLAYER%">
+                <response soundtoplay="voice/player/5_doomstark1b_050_200_tl" text="Is Doom really damaging reality?">
+                    <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_201_pym" text="%HANKPYM%: There's no doubt about it. I've detected several areas near Earth that are beginning to show sign of dysfunction.">
+                        <response soundtoplay="voice/player/5_doomstark1b_050_202_tl" text="%PLAYER%: What do you mean dysfunction?">
+                            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_203_pym" text="%HANKPYM%: They're areas where the rules of our universe break down - where chaos is becoming evident. Once chaos becomes fully active, a tear develops.">
+                                <response chosenscriptfile="setGameFlag('dstark', 4,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'dstark', 4 )" soundtoplay="voice/player/5_doomstark1b_050_300_tl" text="What will a tear in reality do?">
+                    <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_301_pym" text="%HANKPYM%: If the tear becomes large enough, there's no force in the universe that can stop it - even Doom's powers. The rip will continue to grow until it envelopes everything and chaos reigns.">
+                        <response soundtoplay="voice/player/5_doomstark1b_050_302_tl" text="%PLAYER%: What then?">
+                            <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_303_pym" text="%HANKPYM%: Our universe will become a lifeless, useless void.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response soundtoplay="voice/player/4_doomstark1b_050_400_tl" text="Thanks, Hank.">
+                    <line notalkanim="true" soundtoplay="voice/pym/5_doomstark1b_050_401_pym" text="%HANKPYM%: Wish I had better news to give you.">
+                        <response chosenscriptfile="act5/doomstark/talk_pym_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

@@ -1,0 +1,29 @@
+<conversation>
+    <startCondition enableai="true" noreturntogamecamatend="true">
+        <participant name="default">
+            <line text="%PLAYER%: Who are you and how'd you get in here?">
+                <response chosenscriptfile="faceEntity('weasel','_HERO2_' )" text="%BLANK%">
+                    <line soundtoplay="voice/weasel/1_stark2_320_011_wea" text="%WEASEL%: Uh, yeah, the name's Jack Hammer. But you can call me Weasel. Everyone does. And don't worry, I came in through the back. No one saw me.">
+                        <response chosenscriptfile="faceEntity('weasel','_HERO1_' )" text="%PLAYER%: What do you want?">
+                            <line soundtoplay="voice/weasel/1_stark2_320_013_wea" text="%WEASEL%: Uh, Wyatt Wingfoot gave me a damaged laptop. Said you heroes wanted to know what data was on it.">
+                                <response chosenscriptfile="faceEntity('weasel','_HERO3_' )" text="%PLAYER%: Did you find anything out?">
+                                    <line soundtoplay="voice/weasel/1_stark2_320_015_wea" text="%WEASEL%: Yeah. That laptop holds security information for a building called 'The Imperium'.">
+                                        <response chosenscriptfile="faceEntity('weasel','_HERO4_' )" text="%PLAYER%: What's The Imperium?">
+                                            <line soundtoplay="voice/weasel/1_stark2_320_017_wea" text="%WEASEL%: I can find out but you'll have to get me the password into S.H.I.E.L.D.'s priority files.">
+                                                <response chosenscriptfile="faceEntity('weasel','_ACTIVE_HERO_' )" text="%BLANK%">
+                                                    <line soundtoplay="voice/weasel/1_stark2_320_018_wea" text="%WEASEL%: Oh, there's three possibilities: Jacob Fury, Baron Strucker or Gabriel Jones. Talk to Vision, he'll be able to help.">
+                                                        <response chosenscriptfile="act1/stark/weasel_walk" conversationend="true" text="%BLANK%" />
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

@@ -1,0 +1,25 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line text="%CaptainAmericaSimple%Stop, Winter Solider!  It's gone far enough!">
+                <response text="%BLANK%">
+                    <line text="%WINTERSOLDIER%So you disarmed my bombs, eh?  Brings back memories, doesn't it?">
+                        <response text="%CaptainAmericaSimple%Sad memories, yes.  I only wish we had been successful at defusing the bomb on that plane.  Then we wouldn't be in this situation now.">
+                            <line text="%WINTERSOLDIER%You always were lucky, old man.  Who else could have survived falling into the ocean and then be thawed out decades later?  No matter... I have orders to give New York City a nice little fireworks display.">
+                                <response text="%CaptainAmericaSimple%Winter Soldier, stop this madness!  You'll kill millions!">
+                                    <line text="%WINTERSOLDIER%You used to be a soldier too, Cap.  I thought you'd understand that.  Nothing you say matters any more.  I will complete my mission.">
+                                        <response text="%CaptainAmericaSimple%Not if I stop you first, Kid.">
+                                            <line text="%WINTERSOLDIER%Hah!  I have the only key to cancel the launch.  The only thing you could possibly manage to do is delay it with the proper console sequence, but you don't know the correct order!  Give up, Cap!  It's over!">
+                                                <response chosenscriptfile="sim/heli1/Move_to_launch_console" conversationend="true" text="%END%" />
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

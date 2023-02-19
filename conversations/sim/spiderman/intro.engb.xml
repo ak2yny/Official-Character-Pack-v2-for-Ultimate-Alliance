@@ -1,0 +1,17 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/spiderman/6_heromission_050_010_spm" text="%SPIDERMANsimple%: If I knew then, what I know now, would I have gone to that exhibit? Would I have let that radioactive spider bite me? That's a very tough question.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/spiderman/6_heromission_050_011_spm" text="%SPIDERMANsimple%: Sure, because of that bite, I now have super strength, can climb walls and have a sixth sense for danger. But fighting crime really puts a crimp in my social life.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/spiderman/6_heromission_050_012_spm" text="%SPIDERMANsimple%: And then there's the army of lunatics out there who'd love to play hockey with my skull. So being Spider-Man isn't all money and glamour... well, there is no money or glamour. But I do get to kick the stuffing out of guys like The Scorpion...">
+                                <response conversationend="true" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

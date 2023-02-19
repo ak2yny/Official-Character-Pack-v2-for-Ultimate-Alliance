@@ -1,0 +1,17 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/arcade/2_murder3_010_010_arc" text="%ARCADE%: Hi, kids. Welcome to a little pinball game I call 'Sudden Death'. It's been a smashing success with everyone who's played it ... may they rest in peace.">
+                <response text="%PLAYER%: What do you think this is, Arcade? Some kind of game?">
+                    <line soundtoplay="voice/arcade/2_murder3_010_012_arc" text="%ARCADE%: Indeed I do. And of course I'll only run a fair game, so all you have to do is get 1 million points to win. How hard can that be?">
+                        <response text="%PLAYER%: Arcade, we're not going to take part in this sadistic trap of yours.">
+                            <line soundtoplay="voice/arcade/2_murder3_010_014_arc" text="%ARCADE%: I can see you're anxious to play. So get ready ... get set ... GO!">
+                                <response conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

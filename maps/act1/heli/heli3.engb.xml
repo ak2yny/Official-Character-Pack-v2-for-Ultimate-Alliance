@@ -1,0 +1,948 @@
+<world>
+    <entity act="1" bigconvmap="true" extent_max="5094 1471 1000" extent_min="-4919 -4654 -1199" killz="-900" level="2" name="world" next_gen_partylight="0 0 0" partylight="0.69 0.82 0.82" partylightradius="120" soundfile="heli3" zonescript="act1/heli/heli3/heli3" />
+    <precache filename="act1/heli/heli3/1_heli3_022" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_024" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_028" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_029_1" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_029_2" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_029_3" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_030" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_032" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_033_1" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_033_2" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_036" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_038" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_039" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_040" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_050" type="conversation" />
+    <precache filename="act1/heli/heli3/1_heli3_060" type="conversation" />
+    <precache filename="base/material/explode/exp_generic_med" type="fx" />
+    <precache filename="map/heli/forcefield_10ft_expire" type="fx" />
+    <precache filename="map/heli/forcefield_20ft_expire" type="fx" />
+    <precache filename="map/heli/heli_floor_shot" type="fx" />
+    <precache filename="map/sewers/dust_drip" type="fx" />
+    <precache filename="act1/heli/heli3/1_heli3_010_end" type="script" />
+    <precache filename="act1/heli/heli3/1_heli3_028_end" type="script" />
+    <precache filename="act1/heli/heli3/agent_intro_cam_switch" type="script" />
+    <precache filename="act1/heli/heli3/agent_intro_end" type="script" />
+    <precache filename="act1/heli/heli3/agent_intro_end_new" type="script" />
+    <precache filename="act1/heli/heli3/agent_intro_start_new" type="script" />
+    <precache filename="act1/heli/heli3/enable_elevator" type="script" />
+    <precache filename="act1/heli/heli3/end_cut_scene" type="script" />
+    <precache filename="act1/heli/heli3/huh_cam_move01" type="script" />
+    <precache filename="act1/heli/heli3/huh_end" type="script" />
+    <precache filename="act1/heli/heli3/laptop_conv_end" type="script" />
+    <precache filename="act1/heli/heli3/laser_end" type="script" />
+    <precache filename="act1/heli/heli3/laser_end_new" type="script" />
+    <precache filename="act1/heli/heli3/shield_agent_cam" type="script" />
+    <precache filename="act1/heli/heli3/there_they_go_end" type="script" />
+    <precache filename="act1/heli/heli3/villain_encounter01_end" type="script" />
+    <precache filename="act1/heli/heli3/villain_final_encounter_end" type="script" />
+    <precache filename="act1/heli/heli3/villain_intro_end" type="script" />
+    <precache filename="music/heli3_x" type="sound" />
+    <precache filename="zone_shared/fx/screen_shake" type="sound" />
+    <precache filename="zone_shared/heli/console" type="sound" />
+    <precache filename="zone_shared/heli/xwing_laser" type="sound" />
+    <precache filename="zone_shared/object/forcefield_down" type="sound" />
+    <precache filename="zone_shared/object/forcefield_up" type="sound" />
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" name="sp_shieldagent" nocollide="true" />
+    <entity actcountremove="1" character="DoomBot_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_doombot_a" nocollide="true" nofadeondeath="true" />
+    <entity actcountremove="1" character="DoomBot_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_doombot_a_leader" nocollide="true" nofadeondeath="true" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_ultronstriker_b" nocollide="true" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_ultronstriker_b_leader" nocollide="true" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="heli_carrier/barrel_01_heli_th" name="barrel_01_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" material="plastic" model="heli_carrier/black_widows_laptop_heli_e" name="black_widows_laptop_heli_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_upholstery" deathsound="death_style/ds_upholstery_m" fxlevel="2" health="100" material="carpet" model="heli_carrier/bunk_heli_b" name="bunk_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="console_02_heli_b_b_d" fxlevel="2" health="150" material="solid_metal" model="heli_carrier/console_02_heli_b" name="console_02_heli_b_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" material="solid_metal" model="heli_carrier/console_button_glow_heli_a" name="console_button_glow_heli_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="heli_carrier/console_button_heli_a" name="console_button_heli_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="1" material="hollow_metal" model="heli_carrier/container_03_heli_th" name="container_03_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="heli_carrier/desk_heli_b" name="desk_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity classname="moverent" material="hollow_metal" model="heli_carrier/elevator_lift_heli_m" move="0 0 0" moveduration="1" name="elevator_lift_heli_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/energy_core_heli_a" name="enegry_core_heli_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/heli/energy_core" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/fan_wall_heli_a" name="fan_wall_heli_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/fan/fan_loop" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/fan_wall_int_05_heli_a" name="fan_wall_int_05_heli_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/fan/fan_loop" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/fan_wall_int_06_heli_a" name="fan_wall_int_06_heli_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/fan/fan_loop" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_10ft_heli_a" name="force_field_10ft_heli_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_20ft_heli_a" name="force_field_20ft_heli_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="100" material="hollow_metal" model="heli_carrier/lockers_heli_b" name="lockers_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="2" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" deathspawn="machine_01_heli_b_d" fxlevel="3" health="200" material="solid_metal" model="heli_carrier/machine_01_heli_b" name="machine_01_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="heli_carrier/pillar_20ft_heli_e" name="pillar_20ft_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_5x15_curved_heli_e" name="pipe_5x15_curved_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_5x20_heli_e" name="pipe_5x20_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" deathspawn="pipe_curved_01_heli_b_d" fxlevel="3" health="100" material="hollow_metal" model="heli_carrier/pipe_curved_01_heli_b" name="pipe_curved_01_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" description="Wield" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="heli_carrier/pipe_heli_w" name="pipe_heli_w" nogravity="false" nopush="true" quickuse="true" randompickups="0" structure="2" weapon="wp_onehanded" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/turbine_support_engine_heli_a" name="turbine_support_engine_heli_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity cameracollide="false" camerafadeout="true" classname="physent" material="solid_metal" model="heli_carrier/u_wallpiece_heli_e" name="u_wallpiece_heli_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" deathspawn="window_03_heli_b_d" fxlevel="2" health="50" material="glass" model="heli_carrier/window_03_heli_b" name="window_03_heli_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity boxcollision="true" classname="gameent" name="dynamic_clip" nocollide="false" />
+    <entity classname="laserent" name="laser_ent" nogravity="true" nopickup="true" nopush="true" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity classname="actionent" name="relay" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="holdent" loopfx="base/misc/interact_multihero" loopfxstarton="true" name="trigger_holdai" nocollide="true" team="hero" />
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="false" animstarton="true" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="true" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" team="hero" toggleonact="false" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_large" loopfxstarton="true" name="fire_large" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false" />
+    <entity boxdamage="true" classname="affectableharment" damage="11 13" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-30 -30 0 30 30 36" health="1" knockback="200" loopfx="map/common/fire_medium" loopfxstarton="true" name="fire_med" radiusdamage="false" reactpower="extinguish" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_med" />
+    <entity boxdamage="true" classname="affectableharment" damage="10 12" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-15 -15 0 15 15 30" health="1" knockback="200" loopfx="map/common/fire_small" loopfxstarton="true" name="fire_sm" radiusdamage="false" reactpower="extinguish" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_sm" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" monster_deathspawn="Radioactiveman_treasure" monster_team="enemy" name="sp_radioactiveman" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" monster_deathspawn="WinterSoldier_treasure" monster_team="enemy" name="sp_wintersoldier" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entinst type="sp_shieldagent09">
+        <inst extents="-12 -18 0 36 18 84" name="sp_shieldagent09" orient="0 0 -3.14159" pos="-1920 300 0" />
+    </entinst>
+    <entinst type="sp_shieldagent02">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_shieldagent02" orient="0 0 -1.5708" pos="-2700 470 0" />
+    </entinst>
+    <entinst type="sp_shieldagent03">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_shieldagent03" orient="0 0 -1.5708" pos="-2340 460 0" />
+    </entinst>
+    <entinst type="ss_doombot_a">
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_a" orient="0 0 -0.698132" pos="-1050 30 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_a" orient="0 0 -2.44346" pos="260 -460 0" />
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_doombot_a" orient="0 0 -2.87979" pos="2100 -1260 0" />
+        <inst extents="-12.0001 -17.9998 0 35.9999 18.0002 84" name="ss_doombot_a" orient="0 0 -1.8326" pos="2340 -1020 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_doombot_a" orient="0 0 2.35619" pos="2910 -1860 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_doombot_a" orient="0 0 1.0472" pos="2580 -2460 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_a" orient="0 0 -0.872665" pos="-630.0 450.0 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_doombot_a" orient="0 0 2.35619" pos="-1510 -1260 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_a" orient="0 0 -2.44346" pos="-820 -1260 -118" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_a" orient="0 0 2.18166" pos="1480 -1250 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_a" orient="0 0 -2.79253" pos="-1980 -1380 -120" />
+        <inst extents="-12.0002 -18.0001 0 35.9998 17.9999 84" name="ss_doombot_a" orient="0 0 1.0472" pos="-2400 -1320 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_a" orient="0 0 -1.74533" pos="-1680 -300 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_doombot_a" orient="0 0 1.91986" pos="-2340 -1140 -120" />
+    </entinst>
+    <entinst type="doombot01">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="doombot01" orient="0 0 1.5708" pos="-2700 -830 -120" />
+    </entinst>
+    <entinst type="doombot02">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="doombot02" orient="0 0 1.5708" pos="-2340 -830 -120" />
+    </entinst>
+    <entinst type="ss_doombot_a_leader">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_doombot_a_leader" orient="0 0 2.61799" pos="2250.0 -1360.0 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_doombot_a_leader" orient="0 0 2.79253" pos="-1210 -1400 -120" />
+    </entinst>
+    <entinst type="ss_ultronstriker_b">
+        <inst extents="-12 -18 0 36 18 84" name="ss_ultronstriker_b" orient="0 0 2.53073" pos="-1710 -640 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_ultronstriker_b" orient="0 0 0.610865" pos="-940 460 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_ultronstriker_b" orient="0 0 -2.0944" pos="2420.0 -870.0 3.19178e-005" />
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_ultronstriker_b" orient="0 0 2.44346" pos="2570 -1650 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_ultronstriker_b" orient="0 0 1.5708" pos="2610 -2010 -120" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_ultronstriker_b" orient="0 0 1.309" pos="-2700 -180 0" />
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="ss_ultronstriker_b" orient="0 0 1.74533" pos="-2340 -60 0" />
+    </entinst>
+    <entinst type="striker_spawner01">
+        <inst extents="-12 -18 0 36 18 84" name="striker_spawner01" orient="0 0 -1.5708" pos="1320 -230 1.2" />
+    </entinst>
+    <entinst type="striker_spawner03">
+        <inst extents="-12 -18 0 36 18 84" name="striker_spawner03" orient="0 0 -1.5708" pos="1440 -230 1.2" />
+    </entinst>
+    <entinst type="striker_spawner04">
+        <inst extents="-12 -18 0 36 18 84" name="striker_spawner04" orient="0 0 -1.5708" pos="1380 -20 0" />
+    </entinst>
+    <entinst type="striker_spawner02">
+        <inst extents="-12 -18 0 36 18 84" name="striker_spawner02" orient="0 0 -1.5708" pos="1380 -90 0" />
+    </entinst>
+    <entinst type="ff_striker_spawner01">
+        <inst extents="-12 -18 0 36 18 84" name="ff_striker_spawner01" orient="0 0 -2.35619" pos="-840 -20 1.2" />
+    </entinst>
+    <entinst type="ff_striker_spawner02">
+        <inst extents="-12 -18 0 36 18 84" name="ff_striker_spawner02" orient="0 0 -0.785398" pos="-720 -20 1.2" />
+    </entinst>
+    <entinst type="ss_ultronstriker_b_leader">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_ultronstriker_b_leader" orient="0 0 1.8326" pos="2730 -1910 0" />
+    </entinst>
+    <entinst type="comic_ocp01">
+        <inst name="comic_ocp01" pos="3360 -3780 0" />
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="2040 -3780 0" />
+    </entinst>
+    <entinst type="upgrade_striking01">
+        <inst name="upgrade_striking01" pos="1380 20 0" />
+    </entinst>
+    <entinst type="barrel_01_heli_th">
+        <inst name="barrel_01_heli_th" orient="0 0 0.436332" pos="2730 -2100 0" />
+        <inst name="barrel_01_heli_th" pos="2850 -1540 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.872665" pos="140 -330 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.959931" pos="100 -340 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.13446" pos="1220 -690 -120" />
+        <inst name="barrel_01_heli_th" pos="1180 -680 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.436332" pos="1570 -680 -120" />
+        <inst name="barrel_01_heli_th" pos="2320 -1640 0" />
+        <inst name="barrel_01_heli_th" pos="2300 -1680 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.0472" pos="2260.0 -1140.0 1.38585e-005" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="1670 -610 -120" />
+        <inst name="barrel_01_heli_th" pos="2530 -2520 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="1210 -650 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.13446" pos="1630.55 -620.689 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.523599" pos="-1550 -280 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.523599" pos="1680 -490 -120" />
+        <inst name="barrel_01_heli_th" pos="2510 -2480 0" />
+        <inst name="barrel_01_heli_th" pos="2550 -2490 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.959931" pos="2760 -2070 0" />
+        <inst name="barrel_01_heli_th" pos="2900 -2470 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.349066" pos="-1760 -220 0" />
+        <inst name="barrel_01_heli_th" pos="2740 -1980 0" />
+        <inst name="barrel_01_heli_th" pos="2900 -1650 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.436332" pos="-10 -490 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.349066" pos="-500 610 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.0472" pos="-1810 -270 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.261799" pos="-2540 -260 0" />
+        <inst name="barrel_01_heli_th" pos="2900 -2510 0" />
+        <inst name="barrel_01_heli_th" pos="2270 -1640 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.436332" pos="2260.0 -1100.0 2.5898e-005" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.261799" pos="2310 -710 0" />
+        <inst name="barrel_01_heli_th" pos="-2262.97 -695.739 -120" />
+        <inst name="barrel_01_heli_th" pos="-2410 10 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.698132" pos="-2500 -230 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.436332" pos="-2960 390 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.174533" pos="-2282.97 -733.477 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.349066" pos="-50 -460 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.785398" pos="-2650 -726.021 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.959931" pos="-2760 -726.021 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.39626" pos="-4532.71 386.993 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.872665" pos="-4572.17 379.421 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.349066" pos="-1800 -710 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="20 -460 0" />
+        <inst name="barrel_01_heli_th" orient="1.5708 0 1.22173" pos="-1779.35 -260 16.7793" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="-1820 -330 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.261799" pos="-1570 -220 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.174533" pos="-2910 380 0" />
+        <inst name="barrel_01_heli_th" pos="-2260 10 0" />
+        <inst name="barrel_01_heli_th" pos="-2780 -40 0" />
+        <inst name="barrel_01_heli_th" pos="-2770 0 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.261799" pos="-2500 -270 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.698132" pos="2480 -700 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.698132" pos="-1750 -720 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.872665" pos="-1070 -590 -120" />
+        <inst name="barrel_01_heli_th" orient="-1.5708 0.523599 0.349066" pos="-899.625 -450 -104.484" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.785398" pos="-660 -492.274 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.872665" pos="-1090 70 -120" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.436332" pos="-790 650 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.0472" pos="-1090 340 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="-470 350 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="-4517.43 214.401 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.0472" pos="-4557.96 215.906 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.959931" pos="1320 -1310 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 0.698132" pos="1310 -1270 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -2.44346" pos="1360 -1330 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.0872664" pos="-970 340 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.610865" pos="-1020 330 0" />
+    </entinst>
+    <entinst type="barrel05">
+        <inst name="barrel05" orient="0 0 -0.610865" pos="-2990 870 0" />
+        <inst name="barrel06" orient="0 0 0.174533" pos="-3024.74 853.133 0" />
+        <inst name="barrel04" orient="0 0 -0.436332" pos="-3020 930 0" />
+    </entinst>
+    <entinst type="barrel01">
+        <inst name="barrel01" orient="0 0 -0.610865" pos="-3260 930 0" />
+        <inst name="barrel02" orient="0 0 0.174533" pos="-3250 870 0" />
+        <inst name="barrel03" orient="0 0 -0.436332" pos="-3219.37 845.872 0" />
+        <inst name="barrel08" orient="0 0 2.18166" pos="670 -460 -120" />
+        <inst name="barrel07" orient="0 0 -0.959931" pos="600 -460 -120" />
+    </entinst>
+    <entinst type="black_widows_laptop">
+        <inst name="black_widows_laptop" orient="0 0 2.18166" pos="-3792.01 324.871 -120" />
+    </entinst>
+    <entinst type="bunk_heli_b">
+        <inst name="bunk_heli_b" orient="0 0 3.14159" pos="-1860 230 0" />
+        <inst name="bunk_heli_b" orient="0 0 -1.5708" pos="-2410 540 0" />
+        <inst name="bunk_heli_b" orient="0 0 -1.5708" pos="-2630 540 0" />
+    </entinst>
+    <entinst type="console_02_heli_b_b">
+        <inst name="console_02_heli_b_b" orient="0 0 1.5708" pos="-860 180 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 -1.5708" pos="-700 300 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 -1.5708" pos="-700 180 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 -2.35619" pos="2470.0 -910.0 1.98783e-005" />
+        <inst name="console_02_heli_b_b" orient="0 0 -1.91986" pos="3000 -2080 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 -0.785398" pos="2460.0 -1500.0 2.28882e-005" />
+        <inst name="console_02_heli_b_b" orient="0 0 -1.5708" pos="-686.214 -682.057 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 1.5708" pos="-873.378 -682.057 0" />
+        <inst name="console_02_heli_b_b" orient="0 0 2.35619" pos="2210.0 -1390.0 1.98783e-005" />
+    </entinst>
+    <entinst type="console_02_heli_b_b26">
+        <inst name="console_02_heli_b_b26" orient="0 0 1.5708" pos="2435.01 -2040 -120" />
+    </entinst>
+    <entinst type="agent_console">
+        <inst name="agent_console" pos="-3120 1200 0" />
+    </entinst>
+    <entinst type="elev_button">
+        <inst name="elev_button" pos="2970 -770 0" />
+    </entinst>
+    <entinst type="ff_button02">
+        <inst name="ff_button02" orient="0 0 -2.35619" pos="-690 -50 0" />
+        <inst name="ff_button01" orient="0 0 2.44346" pos="-870 -50 0" />
+    </entinst>
+    <entinst type="console_button_heli_a">
+        <inst name="console_button_heli_a" orient="0 0 0.785398" pos="-3210 1170 0" />
+        <inst name="console_button_heli_a" orient="0 0 -0.785398" pos="-3030 1170 0" />
+    </entinst>
+    <entinst type="container_03_heli_th">
+        <inst name="container_03_heli_th" pos="-2270 630 0" />
+        <inst name="container_03_heli_th" pos="-2770 630 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -0.698132" pos="-1550 -350 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 0.698132" pos="-960 60 -120" />
+        <inst name="container_03_heli_th" pos="-470 300 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -1.5708" pos="-1770 370 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -0.261799" pos="1740 -1200 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -2.00713" pos="2540 -710 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -0.523601" pos="2270 -750 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 0.174533" pos="2730 -2030 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 0.610865" pos="2210.0 -1150.0 2.5898e-005" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 1.48353" pos="-600.614 -560 -120" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 2.00713" pos="1810 -1200 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -0.0872664" pos="-2520 -110 0" />
+        <inst name="container_03_heli_th" pos="2350 -1690 0" />
+        <inst name="container_03_heli_th" pos="2890 -1590 0" />
+        <inst name="container_03_heli_th" orient="0.0 -1.74846e-007 -0.261799" pos="-840 640 0" />
+    </entinst>
+    <entinst type="desk_heli_b03">
+        <inst name="desk_heli_b03" orient="0 0 -2.35619" pos="-1690 240 0" />
+    </entinst>
+    <entinst type="desk_heli_b04">
+        <inst name="desk_heli_b04" orient="0 0 0.785398" pos="-2390 720 0" />
+    </entinst>
+    <entinst type="desk_heli_b01">
+        <inst name="desk_heli_b01" orient="0 0 -0.785398" pos="-2640 710 0" />
+    </entinst>
+    <entinst type="door_02_heli_d08">
+        <inst name="door_02_heli_d08" pos="-4860.88 300.222 1.32557" />
+    </entinst>
+    <entinst type="door_02_heli_d07">
+        <inst name="door_02_heli_d07" pos="3420 -3780 0" />
+        <inst name="door_02_heli_d07" pos="1980 -3780 0" />
+    </entinst>
+    <entinst type="door_02_heli_d02">
+        <inst name="door_02_heli_d02" orient="0 0 -1.5708" pos="1380 180 -2.99577" />
+    </entinst>
+    <entinst type="door_02_heli_d01">
+        <inst name="door_02_heli_d01" orient="0 0 -1.5708" pos="-1260 -1140 0" />
+    </entinst>
+    <entinst type="elevator">
+        <inst name="elevator" orient="0 0 -1.5708" pos="2820 -780 0" />
+    </entinst>
+    <entinst type="enegry_core_heli_a">
+        <inst name="enegry_core_heli_a" orient="0 0 -0.785398" pos="2110 -1490 -120" />
+        <inst name="enegry_core_heli_a" pos="1770 -540 -120" />
+        <inst name="enegry_core_heli_a" orient="0 0 0.785398" pos="2570 -1010 -120" />
+        <inst name="enegry_core_heli_a" orient="0 0 1.5708" pos="-1140.61 -179.576 -120" />
+        <inst name="enegry_core_heli_a" orient="0 0 -1.5708" pos="-420.42 -179.576 -120" />
+    </entinst>
+    <entinst type="fan_wall_heli_a04">
+        <inst name="fan_wall_heli_a04" pos="-1980 -1272 -120" />
+        <inst name="fan_wall_heli_a04" pos="2940 -3072 0" />
+        <inst name="fan_wall_heli_a04" pos="2460 -3072 0" />
+        <inst name="fan_wall_heli_a04" pos="2700 -3432 -120" />
+    </entinst>
+    <entinst type="fan_wall_int_05_heli_a03">
+        <inst name="fan_wall_int_05_heli_a03" orient="0 0 -1.5708" pos="2448 -1260 0.0556564" />
+        <inst name="fan_wall_int_05_heli_a03" orient="0 0 1.5708" pos="-2808 -180 0" />
+        <inst name="fan_wall_int_05_heli_a03" pos="-780 768 0" />
+    </entinst>
+    <entinst type="fan_wall_int_06_heli_a">
+        <inst name="fan_wall_int_06_heli_a" orient="0 0 3.14159" pos="-2940 192 0" />
+        <inst name="fan_wall_int_06_heli_a" orient="0 0 3.14159" pos="-2100 192 0" />
+        <inst name="fan_wall_int_06_heli_a" pos="-3780 528 -120" />
+    </entinst>
+    <entinst type="security_ff04">
+        <inst name="security_ff04" orient="0 0 3.14159" pos="-2340 60 0" />
+        <inst name="security_ff02" pos="-2340 420 0" />
+        <inst name="security_ff01" pos="-2700 420 0" />
+        <inst name="security_ff03" orient="0 0 -1.5708" pos="-1980 300 0" />
+    </entinst>
+    <entinst type="outside_force_field">
+        <inst name="outside_force_field" pos="2460 -2880 0" />
+    </entinst>
+    <entinst type="force_field02">
+        <inst name="force_field02" orient="0 0 1.5708" pos="-1380 -220 0" />
+        <inst name="force_field03" orient="0 0 1.5708" pos="-1930 -540 0" />
+        <inst name="force_field01" orient="0 0 1.5708" pos="-1440 -540 0" />
+    </entinst>
+    <entinst type="force_field_20ft_heli_a">
+        <inst name="force_field_20ft_heli_a" pos="1380 60 0" />
+    </entinst>
+    <entinst type="lockers_heli_b">
+        <inst name="lockers_heli_b" orient="0 0 1.5708" pos="-2780 540 0" />
+        <inst name="lockers_heli_b" orient="0 0 -1.5708" pos="-2260 540 0" />
+        <inst name="lockers_heli_b" pos="-1860 380 0" />
+    </entinst>
+    <entinst type="machine_01_heli_b">
+        <inst name="machine_01_heli_b" orient="0 0 -1.5708" pos="-1020 171.624 -120" />
+        <inst name="machine_01_heli_b" orient="0 0 1.5708" pos="-1020 -668.093 -120" />
+        <inst name="machine_01_heli_b" pos="3060 -1860 0" />
+        <inst name="machine_01_heli_b" orient="0 0 1.5708" pos="-540 -660 -120" />
+        <inst name="machine_01_heli_b" pos="3060 -2220 0" />
+    </entinst>
+    <entinst type="machine_01_heli_b08">
+        <inst name="machine_01_heli_b08" orient="0 0 1.5708" pos="1290 -330 -120" />
+        <inst name="machine_01_heli_b08" orient="0 0 1.5708" pos="1470 -330 -120" />
+        <inst name="machine_01_heli_b08" orient="0 0 -1.5708" pos="1470 -750 -120" />
+        <inst name="machine_01_heli_b08" orient="0 0 -1.5708" pos="1290 -750 -120" />
+    </entinst>
+    <entinst type="pillar_20ft_heli_e">
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-1310 -460 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-620 110 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-460 110 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-700 -470 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-860 -470 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-250 -460 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-250 -620 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="700 -700 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="860 -700 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="490 -460 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="490 -620 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="700 -380 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="860 -380 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="1200 -770 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="1560 -770 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="1560 -310 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="1200 -310 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="1750 -620 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="1750 -460 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="2520 -1100 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="2660 -970 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="2500 -1810 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="2660 -1810 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="2660 -2270 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="2500 -2270 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 -1.5708 0" pos="3160 -1780 40" />
+        <inst name="pillar_20ft_heli_e" orient="0 -1.5708 0" pos="3160 -1930 40" />
+        <inst name="pillar_20ft_heli_e" orient="0 -1.5708 0" pos="3160 -2290 40" />
+        <inst name="pillar_20ft_heli_e" orient="0 -1.5708 0" pos="3160 -2140 40" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="2020 -1440 -120" />
+        <inst name="pillar_20ft_heli_e" pos="2150 -1580 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="2400 -1910 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="2400 -2170 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-3960.04 571.035 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-4080.04 571.035 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-3479.65 571.035 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-3599.65 571.035 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-3959.47 31.8715 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-4079.47 31.8715 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-3479.63 31.8715 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-3599.63 31.8715 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-1310 -620 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-4320 220 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-4320 380 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-3240 380 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-3240 220 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-2050 -620 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-2050 -460 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-400 -260 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-1160 -100 -120" />
+        <inst name="pillar_20ft_heli_e" pos="-1160 -260 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-620 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-460 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-940 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-1100 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-2430 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-2610 -710 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-2270 -370 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-2780 -370 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-2520 -370 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-2420 -370 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-2620 -370 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-3840 120 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -1.5708" pos="-3720 120 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-3720 480 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 1.5708" pos="-3840 480 -120" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 3.14159" pos="-400 -100 -120" />
+    </entinst>
+    <entinst type="pipe_5x15_curved_heli_e">
+        <inst name="pipe_5x15_curved_heli_e" orient="3.14159 1.21865e-007 1.5708" pos="750 -700 120" />
+        <inst name="pipe_5x15_curved_heli_e" orient="3.14159 1.21865e-007 1.5708" pos="810 -700 120" />
+        <inst name="pipe_5x15_curved_heli_e" orient="3.14159 0 -1.5708" pos="810 -380 120" />
+        <inst name="pipe_5x15_curved_heli_e" orient="3.14159 0 -1.5708" pos="750 -380 120" />
+        <inst name="pipe_5x15_curved_heli_e" orient="-3.14159 0 0" pos="2380 -1970 140" />
+        <inst name="pipe_5x15_curved_heli_e" orient="-3.14159 0 0" pos="2380 -2040 140" />
+        <inst name="pipe_5x15_curved_heli_e" orient="-3.14159 0 0" pos="2380 -2110 140" />
+    </entinst>
+    <entinst type="pipe_5x20_heli_e">
+        <inst name="pipe_5x20_heli_e" orient="0 0 3.14159" pos="-3780 120 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-2470 -360 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-960 -1080 -240" />
+        <inst name="pipe_5x20_heli_e" pos="-960 -1080 0" />
+        <inst name="pipe_5x20_heli_e" pos="-1440 -1080 0" />
+        <inst name="pipe_5x20_heli_e" pos="-1440 -1080 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.5708" pos="1800 -1440 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.5708" pos="1560 -1440 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.5708" pos="1680 -1080 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-2480 -720 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-2560 -720 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-3539.63 35.7144 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-4019.47 35.7144 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 3.14159" pos="-3539.65 567.193 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 3.14159" pos="-4020.04 567.193 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-3240 700 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-3240 620 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.5708" pos="2040 -1560 -120" />
+        <inst name="pipe_5x20_heli_e" pos="2640 -1080 -120" />
+        <inst name="pipe_5x20_heli_e" pos="-2570 -360 -120" />
+    </entinst>
+    <entinst type="pipe_5x20_heli_e20">
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 -1.5708" pos="1020 -300 156" />
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 -1.5708" pos="1020 -540 156" />
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 0" pos="2460 -2910 156" />
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 0" pos="2700 -2910 156" />
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 0" pos="2700 -2730 156" />
+        <inst name="pipe_5x20_heli_e20" orient="0 1.5708 0" pos="2460 -2730 156" />
+    </entinst>
+    <entinst type="pipe_curved_01_heli_b">
+        <inst name="pipe_curved_01_heli_b" orient="0 0 -1.5708" pos="-1710 -1080 -120" />
+        <inst name="pipe_curved_01_heli_b" orient="0 0 -1.5708" pos="-1530 -1080 -120" />
+        <inst name="pipe_curved_01_heli_b" orient="0 0 1.5708" pos="260 -710 0" />
+        <inst name="pipe_curved_01_heli_b" orient="0 0 -1.5708" pos="-870 -1080 -120" />
+        <inst name="pipe_curved_01_heli_b" orient="0 0 -1.5708" pos="-690 -1080 -120" />
+        <inst name="pipe_curved_01_heli_b" orient="0 0 1.5708" pos="100 -710 0" />
+    </entinst>
+    <entinst type="laser_pipe01">
+        <inst name="laser_pipe01" pos="-3230 1020 0" />
+    </entinst>
+    <entinst type="pipe_heli_w">
+        <inst name="pipe_heli_w" orient="-1.5708 0 1.22173" pos="3240 -3750 -114" />
+        <inst name="pipe_heli_w" orient="-1.5708 0 -3.05433" pos="2510 -2390 6" />
+        <inst name="pipe_heli_w" orient="-1.5708 0 0" pos="-470 510 6" />
+    </entinst>
+    <entinst type="turbine_support_engine_heli_a01">
+        <inst name="turbine_support_engine_heli_a01" orient="0 0 3.14159" pos="2700 -4430 -590" />
+    </entinst>
+    <entinst type="u_wallpiece_heli_e">
+        <inst name="u_wallpiece_heli_e" pos="-2520 -780 0" />
+    </entinst>
+    <entinst type="doombot_window02">
+        <inst name="doombot_window02" pos="-2340 -780 -120" />
+        <inst name="doombot_window01" pos="-2700 -780 -120" />
+    </entinst>
+    <entinst type="laser_clip02">
+        <inst extents="-20 -120 0 20 120 12" name="laser_clip02" pos="630 -540 -120" />
+        <inst extents="-180 -20 0 180 20 12" name="laser_clip01" pos="-3120 900 0" />
+    </entinst>
+    <entinst type="laser02">
+        <inst extents="-6.00001 -5.99999 -6 5.99999 6.00001 6" name="laser02" orient="0 0 -1.5708" pos="630 -430 -114" />
+    </entinst>
+    <entinst type="laser01">
+        <inst extents="-6 -6 -6 6 6 6" name="laser01" pos="-3280 900 6" />
+    </entinst>
+    <entinst type="loop_effect16">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="-2140 -1530 3" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="2260 -4300 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="2780 -3940 90" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="3080 -4270 3" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="-1170 -1660 3" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="-1540 -1910 3" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="-2850 -1260 3" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect16" pos="-600 -1800 96" />
+    </entinst>
+    <entinst type="laser_explode03">
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="laser_explode03" orient="0 0 -3.14159" pos="630 -450 -114" />
+        <inst extents="-5.99989 -6.00003 -6 6.00011 5.99997 6" name="laser_explode02" orient="0 0 -3.14159" pos="-3020 900 40" />
+    </entinst>
+    <entinst type="laser_smoke">
+        <inst extents="-6 -6 -6 6 6 6" name="laser_smoke" pos="-3230 1020 0" />
+    </entinst>
+    <entinst type="laser_sparks">
+        <inst extents="-5.99999 -5.99991 -16.2321 6.00001 6.00009 -4.23206" name="laser_sparks" orient="-0.253886 -1.10159 -2.20272" pos="-3090.11 881.829 -49.3387" />
+    </entinst>
+    <entinst type="laser_explode01">
+        <inst extents="-6 -6 -6 6 6 6" name="laser_explode01" pos="-3220 900 40" />
+    </entinst>
+    <entinst type="loop_effect03">
+        <inst extents="-6.00009 -6 -2.05213 5.99991 6 9.94787" name="loop_effect03" orient="0 -0.610865 0" pos="-2770.56 -520.334 -82.4025" />
+        <inst extents="-5.99998 -6 -4.59626 6.00002 6 7.40374" name="loop_effect03" orient="0.152624 -0.315167 -0.46063" pos="-846.299 281.462 31.6761" />
+        <inst extents="-6.00001 -6.00002 -3.8944 5.99999 5.99998 8.1056" name="loop_effect03" orient="0 0.349066 -1.74533" pos="-1688.51 -239.543 68.7845" />
+        <inst extents="-6.00001 -5.99988 -11.8911 5.99999 6.00012 0.108897" name="loop_effect03" orient="-0.158154 -0.408389 -2.75971" pos="2988.89 -1985.36 44.6397" />
+        <inst extents="-6.00001 -5.99996 -12.5387 5.99999 6.00004 -0.538721" name="loop_effect03" orient="0 -0.436332 -2.00713" pos="-2539.67 372.411 57.8654" />
+    </entinst>
+    <entinst type="outside_force_field_spot">
+        <inst extents="-6 -6 -6 6 6 6" name="outside_force_field_spot" pos="2700 -3060 0" />
+        <inst extents="-5.99995 -5.99994 -6 6.00005 6.00006 6" name="hero_spot04" orient="0 0 -1.5708" pos="2700 -3360 0" />
+        <inst extents="-6.00012 -5.99989 -6 5.99988 6.00011 6" name="inside_spot" orient="0 0 1.5708" pos="2700 -2460 1.2" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="ff_spot02" orient="0 0 1.5708" pos="-120 -540 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="cam_here2" pos="-3408.64 292.02 -113.85" />
+        <inst extents="-6 -6.00003 -6 6 5.99997 6" name="ws_spot02" orient="0 0 2.70526" pos="-480 -470 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot03" pos="1140 -540 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot02" pos="360 -540 0" />
+        <inst extents="-5.99997 -5.99988 -6 6.00003 6.00012 6" name="elev_button_spot" orient="0 0 -1.5708" pos="2890 -780 0" />
+        <inst extents="-6.00003 -5.99997 -6 5.99997 6.00003 6" name="laser_target02" orient="0 0 1.5708" pos="630 -650 -114" />
+        <inst extents="-5.99989 -6.00002 -6 6.00011 5.99998 6" name="laser_target01" orient="0 0 -3.14159" pos="-2960 900 6" />
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="rm_spot02" orient="0 0 2.44346" pos="-520 -510 -120" />
+        <inst extents="-6.00001 -6.00003 -6 5.99999 5.99997 6" name="hero_spot05" orient="0 0 -0.698132" pos="-590 -410 -120" />
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="hero_spot01" orient="0 0 1.5708" pos="-780 -660 0" />
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0245 -95.2953 0 71.9755 48.7832 83.9544" name="player_start_all02" orient="0 0 3.14159" pos="2680 -780 0" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0241 -95.2953 0 71.9759 48.7832 83.9544" name="player_start_all01" pos="-4500 300 0" />
+    </entinst>
+    <entinst type="skiff_laser09">
+        <inst extents="-5.99987 -6 0 6.00013 6 12" name="skiff_laser09" orient="0 0 -0.959931" pos="2970 -3720 -120" />
+        <inst extents="-6.0001 -6.00008 0 5.9999 5.99992 12" name="skiff_laser06" orient="0 0 -1.5708" pos="2260 -3840 -120" />
+        <inst extents="-5.99998 -5.99993 0 6.00002 6.00007 12" name="skiff_laser18" orient="0 0 -1.22173" pos="-2220 -1473.33 -120" />
+        <inst extents="-6.00001 -6.00002 0 5.99999 5.99998 12" name="skiff_laser15" orient="0 0 -1.65806" pos="-900 -1463.33 -120" />
+        <inst extents="-6.00015 -6.00005 0 5.99985 5.99995 12" name="skiff_laser01" orient="0 0 -1.22173" pos="3000 -3270 0" />
+        <inst extents="-5.99995 -6.00003 0 6.00005 5.99997 12" name="skiff_laser21" orient="0 0 -2.00713" pos="-2420 -1063.33 -120" />
+        <inst extents="-5.99998 -5.99995 0 6.00002 6.00005 12" name="skiff_laser12" orient="0 0 -1.22173" pos="-1480 -1473.33 -120" />
+    </entinst>
+    <entinst type="skiff_laser08">
+        <inst extents="-5.99991 -5.99999 0 6.00009 6.00001 12" name="skiff_laser08" orient="0 0 -0.959931" pos="2900 -3670 -120" />
+        <inst extents="-5.99991 -6 0 6.00009 6 12" name="skiff_laser02" orient="0 0 -1.22173" pos="2960 -3240 0" />
+        <inst extents="-5.99998 -6.00003 0 6.00002 5.99997 12" name="skiff_laser10" orient="0 0 -1.22173" pos="-1520 -1443.33 -120" />
+        <inst extents="-5.99998 -5.99988 0 6.00002 6.00012 12" name="skiff_laser16" orient="0 0 -1.22173" pos="-2260 -1443.33 -120" />
+        <inst extents="-6.00001 -5.99996 0 5.99999 6.00004 12" name="skiff_laser20" orient="0 0 -2.18166" pos="-2460 -1033.33 -120" />
+        <inst extents="-5.99996 -5.99998 0 6.00004 6.00002 12" name="skiff_laser13" orient="0 0 -1.8326" pos="-940 -1433.33 -120" />
+        <inst extents="-6.0001 -6.00008 0 5.9999 5.99992 12" name="skiff_laser05" orient="0 0 -1.5708" pos="2220 -3810 -120" />
+    </entinst>
+    <entinst type="skiff_laser03">
+        <inst extents="-5.9999 -5.99995 0 6.0001 6.00005 12" name="skiff_laser03" orient="0 0 -1.22173" pos="2980 -3200 0" />
+        <inst extents="-5.99998 -6 0 6.00002 6 12" name="skiff_laser07" orient="0 0 -0.959931" pos="2940 -3620 -120" />
+        <inst extents="-5.99999 -6 0 6.00001 6 12" name="skiff_laser19" orient="0 0 -2.00713" pos="-2440 -993.333 -120" />
+        <inst extents="-5.99997 -6.00008 0 6.00003 5.99992 12" name="skiff_laser17" orient="0 0 -1.22173" pos="-2240 -1403.33 -120" />
+        <inst extents="-6.00006 -6.00001 0 5.99994 5.99999 12" name="skiff_laser14" orient="0 0 -1.74533" pos="-920 -1393.33 -120" />
+        <inst extents="-6.0001 -6.00008 0 5.9999 5.99992 12" name="skiff_laser04" orient="0 0 -1.5708" pos="2260 -3750 -120" />
+        <inst extents="-6.00003 -5.99998 0 5.99997 6.00002 12" name="skiff_laser11" orient="0 0 -1.22173" pos="-1500 -1403.33 -120" />
+    </entinst>
+    <entinst type="playtime_over_relay">
+        <inst extents="-6 -6 0 6 6 12" name="playtime_over_relay" pos="-780 -300 -120" />
+    </entinst>
+    <entinst type="villain_death_relay">
+        <inst extents="-6 -6 0 6 6 12" name="villain_death_relay" pos="2700 -3520 0" />
+    </entinst>
+    <entinst type="hint_holdai">
+        <inst extents="-180 -120 0 180 120 120" name="hint_holdai" pos="-3120 1000 0" />
+    </entinst>
+    <entinst type="trigger_area02">
+        <inst extents="-800 -620 0 800 620 288" name="trigger_area02" pos="2700 -3680 -120" />
+        <inst extents="-1140 -575 0 1140 575 288" name="trigger_area02" pos="-1740 -1355 -120" />
+    </entinst>
+    <entinst type="hint_orbs2">
+        <inst extents="-300 -120 0 300 120 120" name="hint_orbs2" pos="-2520 -180 0" />
+    </entinst>
+    <entinst type="hint_grabattack">
+        <inst extents="-210 -149.049 0 210 149.049 240" name="hint_grabattack" pos="-1950 -1409.05 -120" />
+    </entinst>
+    <entinst type="hint_doublejump">
+        <inst extents="-240 -120 0 240 120 240" name="hint_doublejump" pos="1380 -660 -120" />
+    </entinst>
+    <entinst type="hint_jumpsmash">
+        <inst extents="-300 -180 0 300 180 240" name="hint_jumpsmash" pos="2810 -2040 -120" />
+    </entinst>
+    <entinst type="trigger_holdai02">
+        <inst extents="-20 -20 0 20 20 72" name="trigger_holdai02" pos="-3050 1150 0" />
+        <inst extents="-20 -20 0 20 20 72" name="trigger_holdai01" pos="-3190 1150 0" />
+    </entinst>
+    <entinst type="trigger_touch04">
+        <inst extents="-30 -120 0 30 120 120" name="trigger_touch04" pos="-2520 300 0" />
+        <inst extents="-120 -120 0 120 120 120" name="trigger_touch04" pos="-1680 -600 0" />
+        <inst extents="-120 -25 0 120 25 120" name="trigger_touch04" pos="2700 -2855 0" />
+        <inst extents="-35 -120 0 35 120 120" name="trigger_touch04" pos="1605 -1260 0" />
+        <inst extents="-120 -30 0 120 30 120" name="trigger_touch04" pos="-780 -560 0" />
+    </entinst>
+    <entinst type="doombot_trig01">
+        <inst extents="-60 -105 0 60 105 240" name="doombot_trig01" pos="-2700 -345 0" />
+    </entinst>
+    <entinst type="trigger_touch12">
+        <inst extents="-90 -90 0 90 90 240" name="trigger_touch12" pos="-2450 -1000 -120" />
+    </entinst>
+    <entinst type="trigger_touch03">
+        <inst extents="-120 -120 0 120 120 240" name="trigger_touch03" pos="3000 -3240 0" />
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-120 -120 0 120 120 240" name="trigger_touch02" pos="2940 -3660 -120" />
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-120 -120 0 120 120 240" name="trigger_touch01" pos="2280 -3840 -120" />
+    </entinst>
+    <entinst type="trigger_touch11">
+        <inst extents="-90 -90 0 90 90 240" name="trigger_touch11" pos="-2250 -1410 -120" />
+    </entinst>
+    <entinst type="trigger_touch10">
+        <inst extents="-90 -90 0 90 90 240" name="trigger_touch10" pos="-920 -1440 -120" />
+    </entinst>
+    <entinst type="trigger_touch09">
+        <inst extents="-90 -90 0 90 90 240" name="trigger_touch09" pos="-1500 -1440 -120" />
+    </entinst>
+    <entinst type="save_buddies_intro_trig">
+        <inst extents="-60 -120 0 60 120 120" name="save_buddies_intro_trig" pos="-2760 300 0" />
+    </entinst>
+    <entinst type="saved_buddies_trig">
+        <inst extents="-60 -120 0 60 120 120" name="saved_buddies_trig" pos="-2880 300 0" />
+    </entinst>
+    <entinst type="laptop_trig">
+        <inst extents="-30 -240 0 30 240 240" name="laptop_trig" pos="-3690 300 -120" />
+    </entinst>
+    <entinst type="villain_trig03">
+        <inst extents="-30 -180 0 30 180 240" name="villain_trig03" pos="1170 -540 -120" />
+    </entinst>
+    <entinst type="villain_encounter05">
+        <inst extents="-30 -150 0 30 150 120" name="villain_encounter05" pos="2490 -1590 0" />
+    </entinst>
+    <entinst type="villain_encounter04">
+        <inst extents="-480 -30 0 480 30 300" name="villain_encounter04" pos="2700 -3270 0" />
+    </entinst>
+    <entinst type="villain_trig02">
+        <inst extents="-30 -120 0 30 120 120" name="villain_trig02" pos="270 -540 0" />
+    </entinst>
+    <entinst type="villain_trig01">
+        <inst extents="-360 -120 0 360 120 120" name="villain_trig01" pos="-780 -660 0" />
+    </entinst>
+    <entinst type="doombot_trig02">
+        <inst extents="-60 -105 0 60 105 240" name="doombot_trig02" pos="-2340 -345 0" />
+    </entinst>
+    <entinst type="elevator_trig">
+        <inst extents="-30 -120 0 30 120 120" name="elevator_trig" pos="2880 -780 0" />
+    </entinst>
+    <entinst type="trigger_use02">
+        <inst extents="-20 -20 0 20 20 60" name="trigger_use02" pos="-3030 1170 0" />
+        <inst extents="-20 -20 0 20 20 60" name="trigger_use01" pos="-3210 1170 0" />
+    </entinst>
+    <entinst type="wp_ws02">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_ws02" pos="900 -570 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_ws03" pos="1140 -560 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_rm02" pos="900 -510 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_ws01" pos="660 -570 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_rm01" pos="660 -510 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_rm03" pos="1140 -520 -120" />
+    </entinst>
+    <entinst type="wp_villainpath01">
+        <inst extents="-5.99998 -5.99998 -6 6.00002 6.00002 6" name="wp_villainpath01" orient="0 0 -1.5708" pos="1380 -900 0" />
+        <inst extents="-5.99995 -6.00002 -6 6.00005 5.99998 6" name="wp_pathfive01" orient="0 0 -1.8326" pos="2820 -2160 0" />
+        <inst extents="-5.99997 -5.99996 -6 6.00003 6.00004 6" name="wp_pathfive02" orient="0 0 -1.65806" pos="2790 -2260 0" />
+        <inst extents="-5.99999 -6.00002 -6 6.00001 5.99998 6" name="wp_pathfive03" orient="0 0 -1.8326" pos="2730 -2370 0" />
+        <inst extents="-5.99995 -6.00008 -6 6.00005 5.99992 6" name="wp_pathfive04" orient="0 0 -1.5708" pos="2700 -2520 0" />
+        <inst extents="-5.99995 -6.00007 -6 6.00005 5.99993 6" name="wp_pathfive05" orient="0 0 -1.5708" pos="2700 -2580 0" />
+    </entinst>
+    <entinst type="wp_villainpath02">
+        <inst extents="-5.99998 -5.99995 -6 6.00002 6.00005 6" name="wp_villainpath02" orient="0 0 -1.5708" pos="1380 -1040 0" />
+        <inst extents="-5.99995 -6.00005 -6 6.00005 5.99995 6" name="wp_pathfive06" orient="0 0 -1.5708" pos="2700 -2670 0" />
+    </entinst>
+    <entinst type="wp_villainpatha01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_villainpatha01" pos="-420 -540 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_villainpatha02" pos="-360 -540 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_villainpatha03" pos="-150 -540 0" />
+    </entinst>
+    <entinst type="wp_villainpatha04">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_villainpatha04" pos="-10 -540 0" />
+    </entinst>
+    <entinst type="wp_strikerone01">
+        <inst extents="-6 -5.99996 -6 6 6.00004 6" name="wp_strikerone01" orient="0 0 -1.5708" pos="1300 -260 0" />
+        <inst extents="-5.99999 -5.99996 -6 6.00001 6.00004 6" name="wp_strikerthree01" orient="0 0 -1.5708" pos="1460 -260 0" />
+    </entinst>
+    <entinst type="wp_strikerone02">
+        <inst extents="-6 -6.00005 -6 6 5.99995 6" name="wp_strikerone02" orient="0 0 -1.5708" pos="1300 -460 -120" />
+        <inst extents="-5.99999 -6.00005 -6 6.00001 5.99995 6" name="wp_strikerthree02" orient="0 0 -1.5708" pos="1460 -460 -120" />
+    </entinst>
+    <entinst type="wp_strikermid02">
+        <inst extents="-6.00001 -5.99996 -6 5.99999 6.00004 6" name="wp_strikermid02" orient="0 0 -1.5708" pos="1380 -260 0" />
+        <inst extents="-6 -5.99997 -6 6 6.00003 6" name="wp_strikermid01" orient="0 0 -1.5708" pos="1380 -180 0" />
+    </entinst>
+    <entinst type="wp_strikermid03">
+        <inst extents="-6.00001 -6.00005 -6 5.99999 5.99995 6" name="wp_strikermid03" orient="0 0 -1.5708" pos="1380 -420 -120" />
+    </entinst>
+    <entinst type="wp_rmfinal01">
+        <inst extents="-6.00005 -6.00002 -6 5.99995 5.99998 6" name="wp_rmfinal01" orient="0 0 0.872665" pos="2560 -3640 -120" />
+        <inst extents="-6 -6.0001 -6 6 5.9999 6" name="wp_wsfinal01" orient="0 0 0.610865" pos="2790 -3560 -120" />
+        <inst extents="-5.99999 -6.00007 -6 6.00001 5.99993 6" name="wp_buddypathone01" orient="0 0 -1.5708" pos="-2700 420 0" />
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_buddypathone02" orient="0 0 -1.74533" pos="-2700 370 0" />
+        <inst extents="-6.0001 -5.99997 -6 5.9999 6.00003 6" name="wp_buddypathone03" orient="0 0 -2.53073" pos="-2890 300 0" />
+        <inst extents="-5.99998 -6.00007 -6 6.00002 5.99993 6" name="wp_buddypathtwo01" orient="0 0 -1.5708" pos="-2340 420 0" />
+        <inst extents="-6.00001 -5.99991 -6 5.99999 6.00009 6" name="wp_buddypathtwo02" orient="0 0 -1.91986" pos="-2370 320 0" />
+        <inst extents="-6.00003 -6.00005 -6 5.99997 5.99995 6" name="wp_buddypathtwo03" orient="0 0 -0.959931" pos="-2400 190 0" />
+        <inst extents="-6.00001 -5.99999 -6 5.99999 6.00001 6" name="wp_buddypaththree01" orient="0 0 3.14159" pos="-1980 300 0" />
+        <inst extents="-5.99988 -6.00001 -6 6.00012 5.99999 6" name="wp_buddypaththree02" orient="0 0 3.14159" pos="-2080 300 0" />
+        <inst extents="-5.99997 -5.99995 -6 6.00003 6.00005 6" name="wp_buddypaththree03" orient="0 0 -2.61799" pos="-2200 300 0" />
+    </entinst>
+    <entinst type="wp_rmfinal02">
+        <inst extents="-6.00004 -6.0001 -6 5.99996 5.9999 6" name="wp_rmfinal02" orient="0 0 1.39626" pos="2580 -3580 -120" />
+        <inst extents="-5.99993 -6.00006 -6 6.00007 5.99994 6" name="wp_wsfinal02" orient="0 0 1.65806" pos="2940 -3540 -120" />
+    </entinst>
+    <entinst type="wp_agentremove01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_agentremove01" pos="-4620 300 0" />
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" pos="-3950 430 -120" />
+    </entinst>
+    <entinst type="link_heli2">
+        <inst extents="-30 -120 0 30 120 120" name="link_heli2" pos="-4710 300 0" />
+    </entinst>
+    <entinst type="link_heli4">
+        <inst extents="-60 -120 0 60 120 120" name="link_heli4" pos="2940 -780 0" />
+    </entinst>
+    <entinst type="fire_large">
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="2209.62 -3938.73 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="3260 -3620 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-3543.66 477.521 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2348.56 -244.659 0" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="1180 -430 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2693.66 177.521 0" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-740.382 -1428.73 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-4019.54 204.51 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-1390.38 -1218.73 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2480.38 -458.729 -120" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="-2310.38 -978.729 -120" />
+    </entinst>
+    <entinst type="fire_med">
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="-1430 -1590 -120" />
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="-960 -1680 -120" />
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="3170 -3950 -120" />
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="2270 -3550 -120" />
+        <inst extents="-30 -30 0 30 30 36" name="fire_med" pos="-2626.57 221.125 10.5284" />
+    </entinst>
+    <entinst type="fire_sm">
+        <inst extents="-15 -15 0 15 15 30" name="fire_sm" pos="2989.01 -2021.92 0" />
+        <inst extents="-15 -15 0 15 15 30" name="fire_sm" pos="-2771.29 -566.267 -120" />
+    </entinst>
+    <entinst type="rm_spawner04">
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="rm_spawner04" orient="0 0 1.5708" pos="2550 -3730 -120" />
+    </entinst>
+    <entinst type="rm_spawner03">
+        <inst extents="-12 -18 0 36 18 84" name="rm_spawner03" orient="0 0 1.5708" pos="1340 -830 1.2" />
+    </entinst>
+    <entinst type="rm_spawner01">
+        <inst extents="-12 -18 0 36 18 84" name="rm_spawner01" orient="0 0 -2.35619" pos="-720 -270 -120" />
+    </entinst>
+    <entinst type="rm_spawner02">
+        <inst extents="-12 -18 0 36 18 84" name="rm_spawner02" pos="610 -510 -120" />
+    </entinst>
+    <entinst type="rm_spawner05">
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="rm_spawner05" orient="0 0 1.91986" pos="2880 -2030 0" />
+    </entinst>
+    <entinst type="ws_spawner03">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ws_spawner03" orient="0 0 1.5708" pos="1420 -830 1.2" />
+    </entinst>
+    <entinst type="ws_spawner04">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ws_spawner04" orient="0 0 -1.5708" pos="2700 -3580 -120" />
+    </entinst>
+    <entinst type="ws_spawner05">
+        <inst extents="-11.9998 -18.0001 0 36.0002 17.9999 84" name="ws_spawner05" orient="0 0 2.00713" pos="2820 -2110 0" />
+    </entinst>
+    <entinst type="ws_spawner01">
+        <inst extents="-12 -18 0 36 18 84" name="ws_spawner01" orient="0 0 -0.785398" pos="-840 -270 -120" />
+    </entinst>
+    <entinst type="ws_spawner02">
+        <inst extents="-12 -18 0 36 18 84" name="ws_spawner02" pos="610 -570 -120" />
+    </entinst>
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_name="buddy02" monster_spawnscript="act1/heli/heli3/buddy_spawnscript" monster_team="hero" name="sp_shieldagent03" nocollide="true" />
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_name="buddy01" monster_spawnscript="act1/heli/heli3/buddy_spawnscript" monster_team="hero" name="sp_shieldagent02" nocollide="true" />
+    <entity actcountremove="1" character="ShieldAgent" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_name="buddy03" monster_spawnscript="act1/heli/heli3/buddy_spawnscript" monster_team="hero" name="sp_shieldagent09" nocollide="true" />
+    <entity actcountremove="1" character="DoomBot_a" classname="monsterspawnerent" instantspawn="false" monster_nodistancecull="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/doombot_spawnscript02" name="doombot02" nocollide="true" nofadeondeath="true" smartent="false" />
+    <entity actcountremove="1" character="DoomBot_a" classname="monsterspawnerent" instantspawn="false" monster_nodistancecull="true" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/doombot_spawnscript01" name="doombot01" nocollide="true" nofadeondeath="true" smartent="false" />
+    <entity character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="ff_striker02" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="ff_striker_spawner02" nocollide="true" smartent="false" />
+    <entity character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="ff_striker01" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="ff_striker_spawner01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="striker03" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="striker_spawner02" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="striker04" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="striker_spawner04" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="striker02" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="striker_spawner03" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="UltronStriker_b" classname="monsterspawnerent" instantspawn="false" monster_name="striker01" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" name="striker_spawner01" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMPAIBOK')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="29" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_ocp01" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="6" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" idnum="7" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="heli_carrier/barrel_01_heli_th" name="barrel01" randompickups="3" smartent="false" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="heli_carrier/barrel_01_heli_th" name="barrel05" nodistancecull="true" randompickups="3" smartent="false" stackphysics="true" structure="0" />
+    <entity actcountremove="1" actonuse="true" actscript="act1/heli/heli3/got_laptop" classname="physent" description="Pickup Black Widow's Laptop" hinttype="use" material="plastic" model="heli_carrier/black_widows_laptop_heli_e" name="black_widows_laptop" nogravity="true" nopickup="true" nopush="true" quickuse="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="console_02_heli_b_b_d" fxlevel="2" health="150" material="solid_metal" model="heli_carrier/console_02_heli_b" name="agent_console" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" />
+    <entity actinactivedelay="1" actonuse="true" actscript="startConversation('act1/heli/heli3/1_heli3_033_1')" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="console_02_heli_b_b_d" description="Console" fxlevel="2" health="150" hinttype="usetoggle" material="solid_metal" model="heli_carrier/console_02_heli_b" name="console_02_heli_b_b26" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="150" mass="0" material="solid_metal" model="heli_carrier/console_02_stump_heli_b" name="console_02_heli_b_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" material="solid_metal" model="heli_carrier/console_button_glow_heli_a" name="ff_button02" noclip="true" nocollide="true" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity classname="physent" material="solid_metal" model="heli_carrier/console_button_glow_heli_a" name="elev_button" noclip="true" nocollide="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity actinactivedelay="1" actonuse="true" actscript="startConversation('act1/heli/heli3/1_heli3_029_1')" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" description="Console" fxlevel="2" health="100" hinttype="usetoggle" material="solid_metal" model="heli_carrier/desk_heli_b" name="desk_heli_b01" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity actinactivedelay="1" actonuse="true" actscript="startConversation('act1/heli/heli3/1_heli3_029_2')" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" description="Console" fxlevel="2" health="100" hinttype="usetoggle" material="solid_metal" model="heli_carrier/desk_heli_b" name="desk_heli_b04" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity actinactivedelay="1" actonuse="true" actscript="startConversation('act1/heli/heli3/1_heli3_029_3')" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" description="Console" fxlevel="2" health="100" hinttype="usetoggle" material="solid_metal" model="heli_carrier/desk_heli_b" name="desk_heli_b03" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d01" nogravity="true" nopickup="true" nopush="true" randompickups="0" startenabled="false" structure="2" toggleonact="true" />
+    <entity actontouch="false" actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d02" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d07" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d08" nogravity="true" nopickup="true" nopush="true" randompickups="0" startenabled="false" structure="2" toggleonact="false" togglestarton="false" />
+    <entity classname="moverent" material="hollow_metal" model="heli_carrier/elevator_lift_heli_m" move="0 0 240" moveduration="2" name="elevator" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/fan_wall_heli_a" name="fan_wall_heli_a04" nogravity="true" nopickup="true" nopush="true" pathignore="true" spawnsoundloop="zone_shared/fan/fan_loop" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="heli_carrier/fan_wall_int_05_heli_a" name="fan_wall_int_05_heli_a03" nogravity="true" nopickup="true" nopush="true" pathignore="true" spawnsoundloop="zone_shared/fan/fan_loop" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_10ft_heli_a" name="outside_force_field" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity actscript="act1/heli/heli3/force_field_actscript" animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_10ft_heli_a" name="security_ff04" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_20ft_heli_a" name="force_field02" nogravity="true" nopickup="true" nopush="true" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" deathspawn="machine_01_heli_b_d" fxlevel="3" health="200" material="solid_metal" model="heli_carrier/machine_01_heli_b" name="machine_01_heli_b08" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" fxlevel="3" health="200" mass="0" material="solid_metal" model="heli_carrier/machine_01_stump_heli_b" name="machine_01_heli_b_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_5x20_heli_e" name="pipe_5x20_heli_e20" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" deathspawn="pipe_curved_01_heli_b_d" fxlevel="3" health="100" material="hollow_metal" model="heli_carrier/pipe_curved_01_heli_b" name="laser_pipe01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="1" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" fxlevel="3" health="100" mass="0" material="hollow_metal" model="heli_carrier/pipe_curved_01_stump_heli_b" name="pipe_curved_01_heli_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity alwaysvisible="true" animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/turbine_support_engine_heli_a" name="turbine_support_engine_heli_a01" nodistancecull="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" deathspawn="window_03_heli_b_d" fxlevel="2" health="1" material="glass" model="heli_carrier/window_03_heli_b" name="doombot_window02" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" fxlevel="2" health="50" mass="0" material="glass" model="heli_carrier/window_03_stump_heli_b" name="window_03_heli_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity boxcollision="true" classname="gameent" name="laser_clip02" nocollide="true" smartent="false" />
+    <entity actscript="act1/heli/heli3/laser_explode" beamfx="test/beam_pf" classname="laserent" informai="true" loopfxstarton="true" name="laser01" nogravity="true" nopickup="true" nopush="true" smartent="false" targetent="laser_target01" />
+    <entity actscript="act1/heli/heli3/laser_explode02" beamfx="test/beam_pf" classname="laserent" informai="true" loopfxstarton="true" name="laser02" nogravity="true" nopickup="true" nopush="true" smartent="false" startenabled="false" targetent="laser_target02" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/sparks" loopfxstarton="true" name="loop_effect03" nocollide="true" smartent="true" />
+    <entity actcountremove="1" acttogglesloopfx="true" classname="actionent" loopfx="base/material/explode/exp_generic_lrg" loopfxstarton="false" name="laser_explode01" nocollide="true" smartent="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/sparks" loopfxstarton="false" name="laser_sparks" nocollide="true" smartent="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/steam_large" loopfxstarton="false" name="laser_smoke" nocollide="true" smartent="false" />
+    <entity actcountremove="1" acttogglesloopfx="true" classname="actionent" loopfx="base/material/explode/exp_generic_lrg" loopfxstarton="false" name="laser_explode03" nocollide="true" nodistancecull="true" smartent="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/heli/cloud_puff" loopfxstarton="true" name="loop_effect16" nocollide="true" smartent="true" />
+    <entity classname="ent" name="outside_force_field_spot" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_heli3" prevzone="heli2" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_heli3" prevzone="heli4" />
+    <entity actcountact="2" actscript="act1/heli/heli3/villain_final_encounter_death" classname="actionent" name="villain_death_relay" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actscript="act1/heli/heli3/playtime_over" classname="actionent" name="playtime_over_relay" nocollide="true" smartent="false" />
+    <entity actdelay="0.25" actscript="act1/heli/heli1/ultron_strafe" classname="actionent" name="skiff_laser03" nocollide="true" smartent="false" />
+    <entity actdelay="0.125" actscript="act1/heli/heli1/ultron_strafe" classname="actionent" name="skiff_laser08" nocollide="true" smartent="false" />
+    <entity actscript="act1/heli/heli1/ultron_strafe" classname="actionent" name="skiff_laser09" nocollide="true" smartent="false" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="hint_jumpsmash" nocollide="true" team="hero" tipid="17" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="hint_doublejump" nocollide="true" team="hero" tipid="16" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="hint_grabattack" nocollide="true" team="hero" tipid="9" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="hint_orbs2" nocollide="true" team="hero" tipid="21" />
+    <entity actleader="true" actmatchteam="true" actscript="act1/heli/heli3/wind_on" boxcollision="true" classname="scripttriggerent" deactscript="act1/heli/heli3/wind_off" name="trigger_area02" nocollide="true" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="hint_holdai" nocollide="true" team="hero" tipid="29" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="holdent" loopfx="base/misc/interact_multihero" loopfxstarton="true" name="trigger_holdai02" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/doombot_intro02" acttargets="doombot02" actteamplayer="true" boxcollision="true" classname="gameent" name="doombot_trig02" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/villain_intro" acttargets="ws_spawner01 rm_spawner01 ff_striker_spawner01 ff_striker_spawner02" actteamplayer="true" boxcollision="true" classname="gameent" name="villain_trig01" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/villain_encounter02" acttargets="rm_spawner02 ws_spawner02" actteamplayer="true" boxcollision="true" classname="gameent" name="villain_trig02" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/villain_final_encounter" acttargets="rm_spawner04 ws_spawner04" actteamplayer="true" boxcollision="true" classname="gameent" name="villain_encounter04" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/villain_encounter05" acttargets="rm_spawner05 ws_spawner05" actteamplayer="true" boxcollision="true" classname="gameent" name="villain_encounter05" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/villain_encounter03" acttargets="rm_spawner03 ws_spawner03 striker_spawner04 striker_spawner01 striker_spawner02 striker_spawner03" actteamplayer="true" boxcollision="true" classname="gameent" name="villain_trig03" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/skipped_laptop" actteamplayer="true" boxcollision="true" classname="gameent" name="laptop_trig" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="startConversation('act1/heli/heli3/1_heli3_028')" actteamplayer="true" boxcollision="true" classname="gameent" name="saved_buddies_trig" nocollide="true" smartent="false" startenabled="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/shield_agent_intro" actteamplayer="true" boxcollision="true" classname="gameent" name="save_buddies_intro_trig" nocollide="true" smartent="false" startenabled="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser12 skiff_laser10 skiff_laser11" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch09" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser14 skiff_laser13 skiff_laser15" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch10" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser18 skiff_laser16 skiff_laser17" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch11" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser04 skiff_laser05 skiff_laser06" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser07 skiff_laser08 skiff_laser09" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch02" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser01 skiff_laser02 skiff_laser03" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch03" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="skiff_laser19 skiff_laser20 skiff_laser21" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch12" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/doombot_intro01" acttargets="doombot01" actteamplayer="true" boxcollision="true" classname="gameent" name="doombot_trig01" nocollide="true" smartent="false" team="hero" />
+    <entity actcountdisable="1" actmatchteam="true" actontouch="true" actscript="act1/heli/heli3/shake" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch04" nocollide="true" team="hero" />
+    <entity actinactivedelay="1" actonuse="true" actscript="act1/heli/heli3/security_terminals" boxcollision="true" classname="gameent" description="Console" hinttype="usetoggle" name="trigger_use02" nocollide="true" quickuse="true" smartent="false" team="none" />
+    <entity actinactivedelay="1" actonuse="true" actscript="act1/heli/heli3/elevator" actsound="Zone_shared/heli/console" boxcollision="true" classname="gameent" description="Elevator" name="elevator_trig" nocollide="true" smartent="false" startenabled="true" team="none" />
+    <entity beeline="false" classname="waypointent" name="wp_agentremove01" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" actscript="act1/heli/heli3/activator_no_wp" classname="waypointent" name="wp_rmfinal02" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" classname="waypointent" name="wp_rmfinal01" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="act1/heli/heli3/activator_no_wp" beeline="false" classname="waypointent" name="wp_strikermid03" nocollide="true" smartent="false" speed="0.8" />
+    <entity beeline="false" classname="waypointent" name="wp_strikermid02" nocollide="true" smartent="false" speed="0.8" />
+    <entity actcountremove="1" actscript="act1/heli/heli3/activator_no_wp" beeline="false" classname="waypointent" name="wp_strikerone02" nocollide="true" smartent="false" speed="0.8" />
+    <entity actcountremove="1" beeline="false" classname="waypointent" name="wp_strikerone01" nocollide="true" smartent="false" speed="0.8" />
+    <entity actscript="act1/heli/heli3/remove_activator_wp" beeline="true" classname="waypointent" name="wp_villainpatha04" nocollide="true" smartent="false" speed="0.8" />
+    <entity beeline="true" classname="waypointent" name="wp_villainpatha01" nocollide="true" smartent="false" speed="0.8" />
+    <entity actscript="act1/heli/heli3/remove_activator_wp" beeline="true" classname="waypointent" name="wp_villainpath02" nocollide="true" smartent="false" speed="1" />
+    <entity beeline="true" classname="waypointent" name="wp_villainpath01" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" beeline="true" classname="waypointent" name="wp_ws02" nocollide="true" smartent="false" speed="1" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" actsound="zone_shared/heli/console" boxcollision="true" classname="zonelinkent" description="Upper Batteries" name="link_heli4" nextzone="heli4" nocollide="false" smartent="false" startenabled="false" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Command Deck" name="link_heli2" nextzone="heli2" nocollide="false" smartent="false" team="hero" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="Radioactiveman_treasure" monster_name="rm05" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="rm_spawner05" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="Radioactiveman_treasure" monster_name="rm02" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="rm_spawner02" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="Radioactiveman_treasure" monster_name="rm01" monster_painscript="act1/heli/heli3/villain_painscript" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" monster_undying="true" name="rm_spawner01" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="Radioactiveman_treasure" monster_name="rm03" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="rm_spawner03" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="Radioactiveman" classname="monsterspawnerent" instantspawn="false" monster_deathscript="common/defeatnamedvillain" monster_deathspawn="Radioactiveman_treasure" monster_deathtargets="villain_death_relay" monster_name="rm04" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="rm_spawner04" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="Radioactiveman" monster_deathspawn="Radioactiveman_treasure" name="Radioactiveman_treasure" nocollide="true" treasurelevel="0" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="WinterSoldier_treasure" monster_name="ws02" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="ws_spawner02" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="WinterSoldier_treasure" monster_name="ws01" monster_painscript="act1/heli/heli3/villain_painscript" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" monster_undying="true" name="ws_spawner01" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="WinterSoldier_treasure" monster_name="ws05" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="ws_spawner05" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" instantspawn="false" monster_deathscript="common/defeatnamedvillain" monster_deathspawn="WinterSoldier_treasure" monster_deathtargets="villain_death_relay" monster_name="ws04" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/ws_hacking_gun_spawn" monster_team="enemy" name="ws_spawner04" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountremove="1" character="WinterSoldier" classname="monsterspawnerent" instantspawn="false" monster_deathspawn="WinterSoldier_treasure" monster_name="ws03" monster_spawnexactlocation="true" monster_spawnscript="act1/heli/heli3/villain_spawn" monster_team="enemy" name="ws_spawner03" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="WinterSoldier" monster_deathspawn="WinterSoldier_treasure" name="WinterSoldier_treasure" nocollide="true" treasurelevel="0" />
+</world>

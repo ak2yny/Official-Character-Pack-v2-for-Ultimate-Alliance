@@ -1,0 +1,37 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/arcade/2_murder3_012_010_arc" text="%ARCADE%: Hi, Reed, may I say you're looking fantastic? I hope you're ready to have some real fun now.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/mrfantastic/2_murder3_012_011_mf" text="%MRFANTASTIC%: What is this place, Arcade? It looks like a giant pinball machine.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/arcade/2_murder3_012_012_arc" text="%ARCADE%: Ooo, you are the smart one, aren't you? As a matter of fact, it is a pinball machine. I call it 'Sudden Death'.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/mrfantastic/2_murder3_012_013_mf" text="%MRFANTASTIC%: Interesting name. I don't suppose it's called that just to make things colorful.">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/arcade/2_murder3_012_014_arc" text="%ARCADE%: No. You should take the name very literally. But don't worry, everyone who's played thinks it's a killer of a game.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/arcade/2_murder3_012_015_arc" text="%ARCADE%: Now, all you have to do is get 1 million points and you'll win. No one's done it yet, but you could be the first.">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/mrfantastic/2_murder3_012_016_tl" text="%MRFANTASTIC%: Arcade, has anyone ever told you that you're psychotic?">
+                                                                <response text="%BLANK%">
+                                                                    <line soundtoplay="voice/arcade/2_murder3_012_017_arc" text="%ARCADE%: My therapist said that once, may he rest in peace. But enough about me, it's game time! On your mark ... get set ... GO!">
+                                                                        <response conversationend="true" text="%BLANK%" />
+                                                                    </line>
+                                                                </response>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>
