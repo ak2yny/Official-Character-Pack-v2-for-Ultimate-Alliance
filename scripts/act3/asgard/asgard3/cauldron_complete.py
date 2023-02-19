@@ -32,7 +32,7 @@ if check == 0
      waittimed ( 2.000 )
      cameraPan(" 0.000 40.000 270.000 ", 2.000, "FALSE" )
      sound (  "PLAY_SOUND", "zone_shared/asgard/metal_cooling", "", "" )
-     setMusicOverride("music/asgard3_x", 1.000 )
+     setMusicOverride("music/asgrd3_x", 1.000 )
      waittimed ( 2.000 )
      startConversation("act3/asgard/asgard3/3_asgard3_030" )
 endif
