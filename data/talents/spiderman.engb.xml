@@ -6,7 +6,7 @@
         </talentvalues>
         <level count="1"/>
     </talent>
-    <talent descname="Web Zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/spiderman_icons.png" name="spider_zip" type="ability">
+    <talent descname="Web zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/spiderman_icons.png" name="spider_zip" type="ability">
         <talentvalues>
             <talentvalue level="1" name="spider_zip_req" value="1"/>
             <talentvalue level="1" name="spider_zip_dmg" value="13 15"/>
@@ -390,7 +390,7 @@
             <talentvalue level="1" name="spider_outfit42_pct" value="3"/>
             <talentvalue level="9" name="spider_outfit42_pct" value="15"/>
         </talentvalues>
-        <level count="9" description="+%spider_outfit42_pct Striking">
+        <level count="9" description="+%spider_outfit42_pct striking">
             <powerup life="-1">
                 <affecter attribute="strength" level="%spider_outfit42_pct"/>
             </powerup>

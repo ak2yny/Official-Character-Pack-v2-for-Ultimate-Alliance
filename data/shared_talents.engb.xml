@@ -40,7 +40,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Combat Moves" description="~3Grab Attack ($GUARD, $ATTACK)~~ \n\n~3Grab Smash ($GUARD, $SMASH)~~ \n\n~3Jump Smash ($MOVE, $SMASH or $MOVE, $ATTACK)~~\n\n~3Trip ($ATTACK, $SMASH, $ATTACK)~~\n\n~3Stun ($ATTACK, $SMASH, $SMASH)~~\n\n~3Popup ($ATTACK, $ATTACK, $SMASH)~~\n\n~3Knockback (hold $SMASH)~~" name="melee_moves" type="ability" />
+    <talent descname="Melee combat moves" description="~3Grab Attack ($GUARD, $ATTACK)~~ \n\n~3Grab Smash ($GUARD, $SMASH)~~ \n\n~3Jump Smash ($MOVE, $SMASH or $MOVE, $ATTACK)~~\n\n~3Trip ($ATTACK, $SMASH, $ATTACK)~~\n\n~3Stun ($ATTACK, $SMASH, $SMASH)~~\n\n~3Popup ($ATTACK, $ATTACK, $SMASH)~~\n\n~3Knockback (hold $SMASH)~~" name="melee_moves" type="ability" />
     <talent descname="Might" description="Can lift ^Massive objects.\nCan damage ^Reinforced walls and objects." icon="3" icon_texture="textures/ui/talent_icons.png" name="might" type="ability">
         <talentvalues>
             <talentvalue level="1" name="might_heaviness" value="2" />
@@ -60,11 +60,11 @@
         </talentvalues>
         <level count="1" />
     </talent>
-    <talent descname="Healing Factor" description="Regenerates health over time." icon="-1" icon_texture="textures/ui/talent_icons.png" name="healing_factor" type="ability">
+    <talent descname="Healing factor" description="Regenerates health over time." icon="-1" icon_texture="textures/ui/talent_icons.png" name="healing_factor" type="ability">
         <talentvalues>
             <talentvalue level="1" name="healingf_hp_sec" value="0.02" />
         </talentvalues>
-        <level description="Regen %wolv_regen_health_p% health every %wolv_regen_health_t seconds">
+        <level description="Regenerates %wolv_regen_health_p% health every %wolv_regen_health_t seconds">
             <powerup life="-1">
                 <affecter attribute="health_regen_pct" level="%healingf_hp_sec" />
             </powerup>

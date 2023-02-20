@@ -292,7 +292,7 @@
             <talentvalue level="1" name="storm_outfit12_pct" value="3" />
             <talentvalue level="9" name="storm_outfit12_pct" value="15" />
         </talentvalues>
-        <level count="9" description="+%storm_outfit12_pct Focus">
+        <level count="9" description="+%storm_outfit12_pct focus">
             <powerup life="-1">
                 <affecter attribute="mind" level="%storm_outfit12_pct" />
             </powerup>
@@ -309,7 +309,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Combo Bonus XP" description="Gives bonus experience points for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="storm_outfit21" skin="1" type="passive">
+    <talent descname="Combo Bonus Experience Points" description="Gives bonus experience points for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="storm_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="storm_outfit21_pct" value="0.25" />
             <talentvalue level="9" name="storm_outfit21_pct" value="1.25" />

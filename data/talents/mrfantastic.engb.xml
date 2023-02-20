@@ -238,7 +238,7 @@
             <require cat="level" level="%mrfan_p8_req"/>
         </level>
     </talent>
-    <talent descname="Energy Regen" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="mrfan_outfit11" skin="0" type="passive">
+    <talent descname="Energy Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="mrfan_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mrfan_outfit11_pct" value="1.01"/>
             <talentvalue level="9" name="mrfan_outfit11_pct" value="1.05"/>
@@ -306,7 +306,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Combo Bonus XP" description="Gives bonus experience points for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="mrfan_outfit31" skin="2" type="passive">
+    <talent descname="Combo Bonus Experience Points" description="Gives bonus experience points for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="mrfan_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mrfan_outfit31_pct" value="0.25"/>
             <talentvalue level="9" name="mrfan_outfit31_pct" value="1.25"/>
@@ -358,7 +358,7 @@
             <talentvalue level="1" name="mrfan_outfit42_pct" value="3"/>
             <talentvalue level="9" name="mrfan_outfit42_pct" value="15"/>
         </talentvalues>
-        <level count="9" description="+%mrfan_outfit42_pct Focus">
+        <level count="9" description="+%mrfan_outfit42_pct focus">
             <powerup life="-1">
                 <affecter attribute="mind" level="%mrfan_outfit42_pct"/>
             </powerup>
