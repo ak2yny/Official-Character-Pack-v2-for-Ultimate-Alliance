@@ -254,7 +254,7 @@
             <require cat="level" level="%scar_misfortune_req"/>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increases maximum $HP." icon="21" icon_texture="textures/ui/talent_icons.png" name="switch_outfit11" skin="0" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum health." icon="21" icon_texture="textures/ui/talent_icons.png" name="switch_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit11_pct" value="1.02"/>
             <talentvalue level="9" name="switch_outfit11_pct" value="1.2"/>
@@ -276,7 +276,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit13_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit13_dr" value="9"/>
@@ -307,7 +307,7 @@
             <powerup apply_ally="all" chance="%switch_outfit22_pct" class="resurrect" life="-1" maxhealthpercent="1"/>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit23_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit23_dr" value="9"/>
@@ -318,7 +318,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Hex Mastery" description="Increases the $DMG of all powers." icon="11" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit31" skin="2" type="passive">
+    <talent descname="Hex Mastery" description="Increases power damage." icon="11" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="switch_outfit31_pct" value="1.15"/>
@@ -340,7 +340,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit33_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit33_dr" value="9"/>
@@ -373,7 +373,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit43_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit43_dr" value="9"/>

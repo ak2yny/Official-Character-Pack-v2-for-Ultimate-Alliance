@@ -267,14 +267,14 @@
             <require cat="level" level="%blade_p9_req" />
         </level>
     </talent>
-    <talent descname="Health Regen" description="Increases $HP regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit11" skin="0" type="passive">
+    <talent descname="Health Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit11_hlth" value="0.004" />
             <talentvalue level="9" name="blade_outfit11_hlth" value="0.012" />
             <talentvalue level="1" name="blade_outfit11_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit11_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit11_show:f% Max $HP regenerated per sec">
+        <level count="9" description="%blade_outfit11_show:f% Maximum $HP regenerated per second">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit11_hlth" />
             </powerup>
@@ -291,7 +291,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit13_dr" value="1" />
             <talentvalue level="9" name="blade_outfit13_dr" value="9" />
@@ -313,7 +313,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="blade_outfit22" skin="1" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="blade_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit22_pct" value="1.04" />
             <talentvalue level="9" name="blade_outfit22_pct" value="1.2" />
@@ -324,7 +324,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit23_dr" value="1" />
             <talentvalue level="9" name="blade_outfit23_dr" value="9" />
@@ -335,7 +335,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Weapon Damage" description="Increases the amount of $DMG done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="blade_outfit31" skin="2" type="passive">
+    <talent descname="Weapon Damage" description="Increases the amount of damage done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="blade_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="blade_outfit31_pct" value="1.15" />
@@ -348,20 +348,20 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Regen" description="Increases $HP regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit32" skin="2" type="passive">
+    <talent descname="Health Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="blade_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit32_hlth" value="0.004" />
             <talentvalue level="9" name="blade_outfit32_hlth" value="0.012" />
             <talentvalue level="1" name="blade_outfit32_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit32_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit32_show:f% Max $HP regenerated per sec">
+        <level count="9" description="%blade_outfit32_show:f% Maximum $HP regenerated per second">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit32_hlth" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit33_dr" value="1" />
             <talentvalue level="9" name="blade_outfit33_dr" value="9" />
@@ -372,7 +372,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases Melee $DMG." icon="1" icon_texture="textures/ui/talent_icons.png" name="blade_outfit41" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases melee damage." icon="1" icon_texture="textures/ui/talent_icons.png" name="blade_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit41_pct" value="1.04" />
             <talentvalue level="9" name="blade_outfit41_pct" value="1.2" />
@@ -383,7 +383,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Per Kill" description="Regain $HP per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="blade_outfit42" skin="3" type="passive">
+    <talent descname="Health Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="blade_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit42_hlth" value="6" />
             <talentvalue level="9" name="blade_outfit42_hlth" value="30" />
@@ -394,7 +394,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="blade_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="blade_outfit43_dr" value="1" />
             <talentvalue level="9" name="blade_outfit43_dr" value="9" />

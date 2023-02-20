@@ -335,7 +335,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit13_dr" value="1" />
             <talentvalue level="9" name="cable_outfit13_dr" value="9" />
@@ -374,7 +374,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit23_dr" value="1" />
             <talentvalue level="9" name="cable_outfit23_dr" value="9" />
@@ -385,12 +385,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="cable_outfit31" skin="2" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="cable_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit31_hlt" value="1.05" />
             <talentvalue level="9" name="cable_outfit31_hlt" value="1.25" />
         </talentvalues>
-        <level count="9" description="%cable_outfit31_hlt:s Max $HP">
+        <level count="9" description="%cable_outfit31_hlt:s Maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%cable_outfit31_hlt" />
             </powerup>
@@ -443,7 +443,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="cable_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit43_dr" value="1" />
             <talentvalue level="9" name="cable_outfit43_dr" value="9" />

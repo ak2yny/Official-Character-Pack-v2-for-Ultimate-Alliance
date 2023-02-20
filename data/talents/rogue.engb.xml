@@ -195,7 +195,7 @@
             <require cat="level" level="%rog_taunt_req" />
         </level>
     </talent>
-    <talent descname="Southern Shout" description="Increases $HP and $EP maximums of entire team for a time." descshort="Boost" icon="3" icon_texture="textures/ui/rogue_icons.png" name="rogue_shout" power="power4" type="boost">
+    <talent descname="Southern Shout" description="Increases health and energy maximums of entire team for a time." descshort="Boost" icon="3" icon_texture="textures/ui/rogue_icons.png" name="rogue_shout" power="power4" type="boost">
         <talentvalues>
             <talentvalue level="1" name="rog_shout_req" value="14" />
             <talentvalue level="2" name="rog_shout_req" value="17" />
@@ -248,7 +248,7 @@
             <require cat="level" level="%rog_xtreme_req" />
         </level>
     </talent>
-    <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="panther_outfit11" skin="0" type="passive">
+    <talent descname="Reflect Damage" description="Reflects some damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="panther_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit11_pct" value="0.25" />
             <talentvalue level="9" name="panth_outfit11_pct" value="1.25" />
@@ -262,7 +262,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="panther_outfit12" skin="0" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="panther_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit12_pct" value="1.04" />
             <talentvalue level="9" name="panth_outfit12_pct" value="1.2" />
@@ -273,7 +273,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit13_dr" value="1" />
             <talentvalue level="9" name="panth_outfit13_dr" value="9" />
@@ -295,7 +295,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Increased Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
+    <talent descname="Increased Power Damage" description="Increases power damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit22_pct" value="1.03" />
             <talentvalue level="9" name="panth_outfit22_pct" value="1.15" />
@@ -306,7 +306,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit23_dr" value="1" />
             <talentvalue level="9" name="panth_outfit23_dr" value="9" />
@@ -328,7 +328,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Increased Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
+    <talent descname="Increased Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit32_pct" value="1.04" />
             <talentvalue level="9" name="panth_outfit32_pct" value="1.2" />
@@ -339,7 +339,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit33_dr" value="1" />
             <talentvalue level="9" name="panth_outfit33_dr" value="9" />
@@ -350,7 +350,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Bleed Damage" description="Adds a chance to cause $DMG_BLEED to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="panther_outfit41" skin="3" type="passive">
+    <talent descname="Bleed Damage" description="Adds a chance to cause bleed damage to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="panther_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit41_dmg" value="0.03" />
             <talentvalue level="9" name="panth_outfit41_dmg" value="0.15" />
@@ -363,7 +363,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="panther_outfit42" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="panther_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="panth_outfit42_pct" value="1.25" />
@@ -374,7 +374,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit43_dr" value="1" />
             <talentvalue level="9" name="panth_outfit43_dr" value="9" />

@@ -37,7 +37,7 @@
             <require cat="level" level="%blackwidow_p1_req"/>
         </level>
     </talent>
-    <talent descname="Weeping Widow" description="Blasting out a tear gas that will inflict initial $DMG and also a small amount of $DMG over time" descshort="Radial" icon="1" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p2" power="power2">
+    <talent descname="Weeping Widow" description="Blasting out a tear gas that will inflict initial damage and also a small amount of damage over time." descshort="Radial" icon="1" icon_texture="textures/ui/blackwidow_icons.png" name="blackwidow_p2" power="power2">
         <talentvalues>
             <talentvalue level="1" name="blackwidow_p2_req" value="5"/>
             <talentvalue level="4" name="blackwidow_p2_req" value="14"/>
@@ -317,7 +317,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit13_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit13_dr" value="9"/>
@@ -352,7 +352,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit23_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit23_dr" value="9"/>
@@ -385,7 +385,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit33_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit33_dr" value="9"/>
@@ -407,7 +407,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy per Kill" description="Regain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="widow_outfit42" skin="3" type="passive">
+    <talent descname="Energy Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="widow_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit42_pct" value="5"/>
             <talentvalue level="9" name="widow_outfit42_pct" value="25"/>
@@ -418,7 +418,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit43_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit43_dr" value="9"/>

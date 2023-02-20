@@ -258,7 +258,7 @@
             <require cat="level" level="%magma_p8_req"/>
         </level>
     </talent>
-    <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="magma_outfit11" skin="0" type="passive">
+    <talent descname="Reflect Damage" description="Reflects some damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="magma_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit11_pct" value="0.25"/>
             <talentvalue level="9" name="magma_outfit11_pct" value="1.25"/>
@@ -272,7 +272,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="magma_outfit12" skin="0" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="magma_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="magma_outfit12_pct" value="1.2"/>
@@ -283,7 +283,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit13_dr" value="1"/>
             <talentvalue level="9" name="magma_outfit13_dr" value="9"/>
@@ -316,7 +316,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit23" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit23" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit23_dr" value="1"/>
             <talentvalue level="9" name="magma_outfit23_dr" value="9"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Magma Mastery" description="Increases the $DMG of all powers." icon="8" icon_texture="textures/ui/magma_icons.png" name="magma_outfit32" skin="1" type="passive">
+    <talent descname="Magma Mastery" description="Increases power damage." icon="8" icon_texture="textures/ui/magma_icons.png" name="magma_outfit32" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit32_pct" value="1.03"/>
             <talentvalue level="9" name="magma_outfit32_pct" value="1.15"/>
@@ -349,7 +349,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit33" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit33" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit33_dr" value="1"/>
             <talentvalue level="9" name="magma_outfit33_dr" value="9"/>
@@ -360,7 +360,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="magma_outfit41" skin="3" type="passive">
+    <talent descname="XP" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="magma_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit41_pct" value="1.02"/>
             <talentvalue level="9" name="magma_outfit41_pct" value="1.1"/>
@@ -371,7 +371,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="magma_outfit42" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="magma_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit42_pct" value="1.05"/>
             <talentvalue level="9" name="magma_outfit42_pct" value="1.25"/>
@@ -382,7 +382,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="magma_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="magma_outfit43_dr" value="1"/>
             <talentvalue level="9" name="magma_outfit43_dr" value="9"/>

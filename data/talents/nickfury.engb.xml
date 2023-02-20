@@ -251,12 +251,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increase max $EP" icon="21" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit22" skin="1" type="passive">
+    <talent descname="Maximum Energy" description="Increase maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="nickf_outfit22_mep" value="1.04" />
             <talentvalue level="9" name="nickf_outfit22_mep" value="1.2" />
         </talentvalues>
-        <level count="9" description="%nickf_outfit22_mep:s max $EP">
+        <level count="9" description="%nickf_outfit22_mep:s Maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%nickf_outfit22_mep" />
             </powerup>
@@ -309,12 +309,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit41" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="nickf_outfit41_hlt" value="1.05" />
             <talentvalue level="9" name="nickf_outfit41_hlt" value="1.25" />
         </talentvalues>
-        <level count="9" description="%nickf_outfit41_hlt:s Max $HP">
+        <level count="9" description="%nickf_outfit41_hlt:s Maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%nickf_outfit41_hlt" />
             </powerup>

@@ -187,7 +187,7 @@
             <require cat="level" level="%colos_p6_req"/>
         </level>
     </talent>
-    <talent descname="Thick Skin" description="Reduces $DMG taken by the entire team for a time." descshort="Boost" icon="6" icon_texture="textures/ui/colossus_icons.png" name="colos_power7" power="power7" type="boost">
+    <talent descname="Thick Skin" description="Reduces damage taken by the entire team for a time." descshort="Boost" icon="6" icon_texture="textures/ui/colossus_icons.png" name="colos_power7" power="power7" type="boost">
         <talentvalues>
             <talentvalue level="1" name="colos_p7_req" value="17"/>
             <talentvalue level="4" name="colos_p7_req" value="26"/>
@@ -250,7 +250,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit13" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit13" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit13_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit13_dr" value="9"/>
@@ -261,7 +261,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost $XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="colos_outfit21" skin="0" type="passive">
+    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="colos_outfit21" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit21_pct" value="1.02"/>
             <talentvalue level="9" name="colos_outfit21_pct" value="1.1"/>
@@ -283,7 +283,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit23" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit23" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit23_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit23_dr" value="9"/>
@@ -316,7 +316,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit33_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit33_dr" value="9"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit42_pct" value="1.05"/>
             <talentvalue level="9" name="colos_outfit42_pct" value="1.25"/>
@@ -349,7 +349,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit43_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit43_dr" value="9"/>

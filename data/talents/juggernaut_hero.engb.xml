@@ -257,7 +257,7 @@
             <require cat="level" level="%jug_cosmos_req"/>
         </level>
     </talent>
-    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit11" skin="0" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit11_pct" value="1.02"/>
             <talentvalue level="9" name="jugger_outfit11_pct" value="1.2"/>
@@ -268,7 +268,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases melee $DMG." icon="3" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases melee damage." icon="3" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="jugger_outfit12_pct" value="1.2"/>
@@ -279,7 +279,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit13_dr" value="1"/>
             <talentvalue level="9" name="jugger_outfit13_dr" value="9"/>
@@ -290,7 +290,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the $DMG from powers." icon="11" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit21" skin="1" type="passive">
+    <talent descname="Power Damage" description="Increases the damage from powers." icon="11" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit21_dmg" value="1.03"/>
             <talentvalue level="9" name="jugger_outfit21_dmg" value="1.15"/>
@@ -312,7 +312,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit23" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit23_dr" value="1"/>
             <talentvalue level="9" name="jugger_outfit23_dr" value="9"/>
@@ -323,7 +323,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit31" skin="2" type="passive">
+    <talent descname="Energy Regen" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit31_pct" value="1.01"/>
             <talentvalue level="9" name="jugger_outfit31_pct" value="1.05"/>
@@ -347,7 +347,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit33_dr" value="1"/>
             <talentvalue level="9" name="jugger_outfit33_dr" value="9"/>
@@ -358,7 +358,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Reflect Damage" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit41" skin="3" type="passive">
+    <talent descname="Reflect Damage" description="Reflects some damage back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit41_pct" value="0.25"/>
             <talentvalue level="9" name="jugger_outfit41_pct" value="1.25"/>
@@ -372,7 +372,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit42" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit42_pct" value="1.05"/>
             <talentvalue level="9" name="jugger_outfit42_pct" value="1.25"/>
@@ -383,7 +383,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit43" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="jugger_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit43_dr" value="1"/>
             <talentvalue level="9" name="jugger_outfit43_dr" value="9"/>

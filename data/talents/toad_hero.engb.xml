@@ -304,7 +304,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit23" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit23" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit23_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit23_dr" value="9"/>
@@ -339,7 +339,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit13_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit13_dr" value="9"/>
@@ -363,18 +363,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max $HP" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="toa_outfit32" skin="2" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="toa_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit32_scl" value="1.05"/>
             <talentvalue level="9" name="toa_outfit32_scl" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%toa_outfit32_scl:s Max $HP">
+        <level count="9" description="%toa_outfit32_scl:s Maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%toa_outfit32_scl"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit33" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit33_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit33_dr" value="9"/>
@@ -385,7 +385,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max $EP" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="toa_outfit41" skin="1" type="passive">
+    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="toa_outfit41" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit41_ep" value="1.04"/>
             <talentvalue level="9" name="toa_outfit41_ep" value="1.2"/>
@@ -407,7 +407,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit43" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit43" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit43_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit43_dr" value="9"/>

@@ -274,7 +274,7 @@
             <require cat="level" level="%venom_p8_req"/>
         </level>
     </talent>
-    <talent descname="Reflect Melee" description="Reflects a percentage of melee $DMG back at attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="venom_outfit11" skin="0" type="passive">
+    <talent descname="Reflect Melee" description="Reflects a percentage of melee damage back at attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="venom_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit11_pct" value="0.25"/>
             <talentvalue level="9" name="venom_outfit11_pct" value="1.25"/>
@@ -299,7 +299,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit13" skin="0" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit13_dr" value="1"/>
             <talentvalue level="9" name="venom_outfit13_dr" value="9"/>
@@ -321,7 +321,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="venom_outfit32" skin="1" type="passive">
+    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="venom_outfit32" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit32_pct" value="1.04"/>
             <talentvalue level="9" name="venom_outfit32_pct" value="1.20"/>
@@ -332,7 +332,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit33" skin="1" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit33" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit33_dr" value="1"/>
             <talentvalue level="9" name="venom_outfit33_dr" value="9"/>
@@ -368,7 +368,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit43" skin="2" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit43" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit43_dr" value="1"/>
             <talentvalue level="9" name="venom_outfit43_dr" value="9"/>
@@ -379,7 +379,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="venom_outfit21" skin="3" type="passive">
+    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="venom_outfit21" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="venom_outfit21_pct" value="1.24"/>
@@ -401,7 +401,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit23" skin="3" type="passive">
+    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="venom_outfit23" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="venom_outfit23_dr" value="1"/>
             <talentvalue level="9" name="venom_outfit23_dr" value="9"/>
