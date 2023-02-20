@@ -93,8 +93,8 @@
         </talentvalues>
         <level description="%thor_p3_dmg initial $DMG_ELECTRICITY\n%thor_p3_num target(s)\n%thor_p3_dmg2 chained $DMG_ELECTRICITY per tap\n%thor_p3_pwr $EP">
             <tier cost="2" count="3"/>
-            <tier cost="3" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%thor_p3_req"/>
         </level>
@@ -122,8 +122,8 @@
         </talentvalues>
         <level description="%thor_p4_dmg $DMG_WIND per second\n%thor_p4_pwr $EP per second">
             <tier cost="2" count="4"/>
-            <tier cost="3" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%thor_p4_req"/>
         </level>
@@ -155,8 +155,8 @@
         <level description="%thor_p5_dmg $DMG_PHYSICAL\n%thor_p5_pwr $EP">
             <tier cost="1" count="3"/>
             <tier cost="2" count="4"/>
-            <tier cost="3" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%thor_p5_req"/>
         </level>
@@ -222,8 +222,8 @@
         <level description="+%thor_p7_ski points to skills.\n%thor_p7_lif seconds.\n%thor_p7_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
-            <tier cost="3" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%thor_p7_req"/>
         </level>

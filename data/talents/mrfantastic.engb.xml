@@ -20,8 +20,8 @@
         </talentvalues>
         <level description="%bounce_roll_dmg contact $DMG_PHYSICAL\n%mrfan_p1_pwr $EP per second">
             <tier cost="1" count="4"/>
-            <tier cost="2" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="2" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%mrfan_p1_req"/>
         </level>

@@ -172,8 +172,8 @@
         </talentvalues>
         <level description="%magma_p5_dmg $DMG_FIRE\n%magma_p5_pwr $EP">
             <tier cost="2" count="3"/>
-            <tier cost="3" count="4"/>
-            <tier cost="3" count="1" difficulty="hard"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
             <require cat="level" level="%magma_p5_req"/>
         </level>
