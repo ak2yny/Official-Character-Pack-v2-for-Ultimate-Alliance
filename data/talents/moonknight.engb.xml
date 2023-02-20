@@ -1,368 +1,368 @@
 <talents>
     <talent descname="Crescent Darts" description="Launch a spread of Crescent Darts, inflicting $DMG_ENERGY." descshort="Projectile" icon="0" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p1_req" value="1" />
-            <talentvalue level="5" name="moonk_p1_req" value="13" />
-            <talentvalue level="6" name="moonk_p1_req" value="16" />
-            <talentvalue level="9" name="moonk_p1_req" value="25" />
-            <talentvalue level="10" name="moonk_p1_req" value="28" />
-            <talentvalue level="14" name="moonk_p1_req" value="52" />
-            <talentvalue level="15" name="moonk_p1_req" value="72" />
-            <talentvalue level="1" name="moonk_p1_dmg" value="10 12" />
-            <talentvalue level="5" name="moonk_p1_dmg" value="17 19" />
-            <talentvalue level="6" name="moonk_p1_dmg" value="17 19" />
-            <talentvalue level="9" name="moonk_p1_dmg" value="27 30" />
-            <talentvalue level="10" name="moonk_p1_dmg" value="27 30" />
-            <talentvalue level="14" name="moonk_p1_dmg" value="41 45" />
-            <talentvalue level="15" name="moonk_p1_dmg" value="41 45" />
-            <talentvalue interpolate="false" level="1" name="moonk_p1_num" value="2" />
-            <talentvalue interpolate="false" level="6" name="moonk_p1_num" value="3" />
-            <talentvalue interpolate="false" level="10" name="moonk_p1_num" value="4" />
-            <talentvalue interpolate="false" level="15" name="moonk_p1_num" value="6" />
-            <talentvalue level="1" name="moonk_p1_pwr" value="8" />
-            <talentvalue level="5" name="moonk_p1_pwr" value="17" />
-            <talentvalue level="6" name="moonk_p1_pwr" value="19" />
-            <talentvalue level="9" name="moonk_p1_pwr" value="24" />
-            <talentvalue level="10" name="moonk_p1_pwr" value="26" />
-            <talentvalue level="14" name="moonk_p1_pwr" value="41" />
-            <talentvalue level="15" name="moonk_p1_pwr" value="52" />
+            <talentvalue level="1" name="moonk_p1_req" value="1"/>
+            <talentvalue level="5" name="moonk_p1_req" value="13"/>
+            <talentvalue level="6" name="moonk_p1_req" value="16"/>
+            <talentvalue level="9" name="moonk_p1_req" value="25"/>
+            <talentvalue level="10" name="moonk_p1_req" value="28"/>
+            <talentvalue level="14" name="moonk_p1_req" value="52"/>
+            <talentvalue level="15" name="moonk_p1_req" value="72"/>
+            <talentvalue level="1" name="moonk_p1_dmg" value="10 12"/>
+            <talentvalue level="5" name="moonk_p1_dmg" value="17 19"/>
+            <talentvalue level="6" name="moonk_p1_dmg" value="17 19"/>
+            <talentvalue level="9" name="moonk_p1_dmg" value="27 30"/>
+            <talentvalue level="10" name="moonk_p1_dmg" value="27 30"/>
+            <talentvalue level="14" name="moonk_p1_dmg" value="41 45"/>
+            <talentvalue level="15" name="moonk_p1_dmg" value="41 45"/>
+            <talentvalue interpolate="false" level="1" name="moonk_p1_num" value="2"/>
+            <talentvalue interpolate="false" level="6" name="moonk_p1_num" value="3"/>
+            <talentvalue interpolate="false" level="10" name="moonk_p1_num" value="4"/>
+            <talentvalue interpolate="false" level="15" name="moonk_p1_num" value="6"/>
+            <talentvalue level="1" name="moonk_p1_pwr" value="8"/>
+            <talentvalue level="5" name="moonk_p1_pwr" value="17"/>
+            <talentvalue level="6" name="moonk_p1_pwr" value="19"/>
+            <talentvalue level="9" name="moonk_p1_pwr" value="24"/>
+            <talentvalue level="10" name="moonk_p1_pwr" value="26"/>
+            <talentvalue level="14" name="moonk_p1_pwr" value="41"/>
+            <talentvalue level="15" name="moonk_p1_pwr" value="52"/>
         </talentvalues>
-        <level description="%moonk_p1_dmg $DMG_ENERGY per dart\n%moonk_p1_num Darts\n%moonk_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p1_req" />
+        <level description="%moonk_p1_dmg $DMG_ENERGY per dart\n%moonk_p1_num darts\n%moonk_p1_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p1_req"/>
         </level>
     </talent>
     <talent descname="Cable Shot" description="Launch a cable towards enemies, reaching farther when charged. $PT_CHARGE." descshort="Melee" icon="1" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p2_req" value="10" />
-            <talentvalue level="3" name="moonk_p2_req" value="13" />
-            <talentvalue level="4" name="moonk_p2_req" value="16" />
-            <talentvalue level="7" name="moonk_p2_req" value="25" />
-            <talentvalue level="8" name="moonk_p2_req" value="28" />
-            <talentvalue level="12" name="moonk_p2_req" value="52" />
-            <talentvalue level="13" name="moonk_p2_req" value="72" />
-            <talentvalue level="1" name="moonk_p2_dmg" value="27 30" value_charged_scale="2.0" />
-            <talentvalue level="3" name="moonk_p2_dmg" value="31 34" value_charged_scale="2.0" />
-            <talentvalue level="4" name="moonk_p2_dmg" value="44 49" value_charged_scale="2.0" />
-            <talentvalue level="7" name="moonk_p2_dmg" value="61 68" value_charged_scale="2.0" />
-            <talentvalue level="8" name="moonk_p2_dmg" value="82 90" value_charged_scale="2.0" />
-            <talentvalue level="12" name="moonk_p2_dmg" value="129 143" value_charged_scale="2.0" />
-            <talentvalue level="13" name="moonk_p2_dmg" value="190 210" value_charged_scale="2.0" />
-            <talentvalue level="1" name="moonk_p2_lif" value="0.75" value_charged="1" />
-            <talentvalue level="1" name="moonk_p2_pwr" value="14" />
-            <talentvalue level="3" name="moonk_p2_pwr" value="17" />
-            <talentvalue level="4" name="moonk_p2_pwr" value="19" />
-            <talentvalue level="7" name="moonk_p2_pwr" value="24" />
-            <talentvalue level="8" name="moonk_p2_pwr" value="26" />
-            <talentvalue level="12" name="moonk_p2_pwr" value="41" />
-            <talentvalue level="13" name="moonk_p2_pwr" value="52" />
+            <talentvalue level="1" name="moonk_p2_req" value="10"/>
+            <talentvalue level="3" name="moonk_p2_req" value="13"/>
+            <talentvalue level="4" name="moonk_p2_req" value="16"/>
+            <talentvalue level="7" name="moonk_p2_req" value="25"/>
+            <talentvalue level="8" name="moonk_p2_req" value="28"/>
+            <talentvalue level="12" name="moonk_p2_req" value="52"/>
+            <talentvalue level="13" name="moonk_p2_req" value="72"/>
+            <talentvalue level="1" name="moonk_p2_dmg" value="27 30" value_charged_scale="2.0"/>
+            <talentvalue level="3" name="moonk_p2_dmg" value="31 34" value_charged_scale="2.0"/>
+            <talentvalue level="4" name="moonk_p2_dmg" value="44 49" value_charged_scale="2.0"/>
+            <talentvalue level="7" name="moonk_p2_dmg" value="61 68" value_charged_scale="2.0"/>
+            <talentvalue level="8" name="moonk_p2_dmg" value="82 90" value_charged_scale="2.0"/>
+            <talentvalue level="12" name="moonk_p2_dmg" value="129 143" value_charged_scale="2.0"/>
+            <talentvalue level="13" name="moonk_p2_dmg" value="190 210" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="moonk_p2_lif" value="0.75" value_charged="1"/>
+            <talentvalue level="1" name="moonk_p2_pwr" value="14"/>
+            <talentvalue level="3" name="moonk_p2_pwr" value="17"/>
+            <talentvalue level="4" name="moonk_p2_pwr" value="19"/>
+            <talentvalue level="7" name="moonk_p2_pwr" value="24"/>
+            <talentvalue level="8" name="moonk_p2_pwr" value="26"/>
+            <talentvalue level="12" name="moonk_p2_pwr" value="41"/>
+            <talentvalue level="13" name="moonk_p2_pwr" value="52"/>
         </talentvalues>
         <level description="%moonk_p2_dmg $DMG_PHYSICAL\n%moonk_p2_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p2_req" />
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p2_req"/>
         </level>
     </talent>
     <talent descname="Staff Slam" description="Leap in the air and slam adamantium staff into the ground, creating a shockwave of $DMG_PHYSICAL." descshort="Radial" icon="2" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p3_req" value="5" />
-            <talentvalue level="5" name="moonk_p3_req" value="14" />
-            <talentvalue level="6" name="moonk_p3_req" value="17" />
-            <talentvalue level="9" name="moonk_p3_req" value="26" />
-            <talentvalue level="10" name="moonk_p3_req" value="29" />
-            <talentvalue level="14" name="moonk_p3_req" value="53" />
-            <talentvalue level="15" name="moonk_p3_req" value="73" />
-            <talentvalue level="1" name="moonk_p3_dmg" value="11 13" />
-            <talentvalue level="5" name="moonk_p3_dmg" value="20 23" />
-            <talentvalue level="6" name="moonk_p3_dmg" value="31 34" />
-            <talentvalue level="9" name="moonk_p3_dmg" value="41 45" />
-            <talentvalue level="10" name="moonk_p3_dmg" value="54 60" />
-            <talentvalue level="14" name="moonk_p3_dmg" value="85 94" />
-            <talentvalue level="15" name="moonk_p3_dmg" value="126 139" />
-            <talentvalue level="1" name="moonk_p3_pwr" value="13" />
-            <talentvalue level="5" name="moonk_p3_pwr" value="21" />
-            <talentvalue level="6" name="moonk_p3_pwr" value="22" />
-            <talentvalue level="9" name="moonk_p3_pwr" value="30" />
-            <talentvalue level="10" name="moonk_p3_pwr" value="33" />
-            <talentvalue level="14" name="moonk_p3_pwr" value="49" />
-            <talentvalue level="15" name="moonk_p3_pwr" value="61" />
+            <talentvalue level="1" name="moonk_p3_req" value="5"/>
+            <talentvalue level="5" name="moonk_p3_req" value="14"/>
+            <talentvalue level="6" name="moonk_p3_req" value="17"/>
+            <talentvalue level="9" name="moonk_p3_req" value="26"/>
+            <talentvalue level="10" name="moonk_p3_req" value="29"/>
+            <talentvalue level="14" name="moonk_p3_req" value="53"/>
+            <talentvalue level="15" name="moonk_p3_req" value="73"/>
+            <talentvalue level="1" name="moonk_p3_dmg" value="11 13"/>
+            <talentvalue level="5" name="moonk_p3_dmg" value="20 23"/>
+            <talentvalue level="6" name="moonk_p3_dmg" value="31 34"/>
+            <talentvalue level="9" name="moonk_p3_dmg" value="41 45"/>
+            <talentvalue level="10" name="moonk_p3_dmg" value="54 60"/>
+            <talentvalue level="14" name="moonk_p3_dmg" value="85 94"/>
+            <talentvalue level="15" name="moonk_p3_dmg" value="126 139"/>
+            <talentvalue level="1" name="moonk_p3_pwr" value="13"/>
+            <talentvalue level="5" name="moonk_p3_pwr" value="21"/>
+            <talentvalue level="6" name="moonk_p3_pwr" value="22"/>
+            <talentvalue level="9" name="moonk_p3_pwr" value="30"/>
+            <talentvalue level="10" name="moonk_p3_pwr" value="33"/>
+            <talentvalue level="14" name="moonk_p3_pwr" value="49"/>
+            <talentvalue level="15" name="moonk_p3_pwr" value="61"/>
         </talentvalues>
         <level description="%moonk_p3_dmg $DMG_PHYSICAL\n%moonk_p3_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p3_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p3_req"/>
         </level>
     </talent>
     <talent descname="Boomerang" description="Throw a Crescent boomerang. Hits multiple enemies as you steer it around. $PT_HOLD." descshort="Projectile" icon="3" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p4_req" value="17" />
-            <talentvalue level="4" name="moonk_p4_req" value="26" />
-            <talentvalue level="5" name="moonk_p4_req" value="29" />
-            <talentvalue level="9" name="moonk_p4_req" value="53" />
-            <talentvalue level="10" name="moonk_p4_req" value="73" />
-            <talentvalue level="1" name="moonk_p4_dmg" value="20 23" />
-            <talentvalue level="4" name="moonk_p4_dmg" value="31 34" />
-            <talentvalue level="5" name="moonk_p4_dmg" value="37 41" />
-            <talentvalue level="9" name="moonk_p4_dmg" value="65 71" />
-            <talentvalue level="10" name="moonk_p4_dmg" value="92 101" />
-            <talentvalue level="1" name="moonk_p4_pwr" value="19" />
-            <talentvalue level="4" name="moonk_p4_pwr" value="25" />
-            <talentvalue level="5" name="moonk_p4_pwr" value="28" />
-            <talentvalue level="9" name="moonk_p4_pwr" value="42" />
-            <talentvalue level="10" name="moonk_p4_pwr" value="52" />
+            <talentvalue level="1" name="moonk_p4_req" value="17"/>
+            <talentvalue level="4" name="moonk_p4_req" value="26"/>
+            <talentvalue level="5" name="moonk_p4_req" value="29"/>
+            <talentvalue level="9" name="moonk_p4_req" value="53"/>
+            <talentvalue level="10" name="moonk_p4_req" value="73"/>
+            <talentvalue level="1" name="moonk_p4_dmg" value="20 23"/>
+            <talentvalue level="4" name="moonk_p4_dmg" value="31 34"/>
+            <talentvalue level="5" name="moonk_p4_dmg" value="37 41"/>
+            <talentvalue level="9" name="moonk_p4_dmg" value="65 71"/>
+            <talentvalue level="10" name="moonk_p4_dmg" value="92 101"/>
+            <talentvalue level="1" name="moonk_p4_pwr" value="19"/>
+            <talentvalue level="4" name="moonk_p4_pwr" value="25"/>
+            <talentvalue level="5" name="moonk_p4_pwr" value="28"/>
+            <talentvalue level="9" name="moonk_p4_pwr" value="42"/>
+            <talentvalue level="10" name="moonk_p4_pwr" value="52"/>
         </talentvalues>
         <level description="%moonk_p4_dmg $DMG_ENERGY\n%moonk_p4_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p4_req" />
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p4_req"/>
         </level>
     </talent>
     <talent descname="Nunchuks" description="Rapidly swing nunchuks in a forward arc. Speeds up as more enemies are hit. $PT_TAP." descshort="Melee" icon="4" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p5" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p5_req" value="20" />
-            <talentvalue level="3" name="moonk_p5_req" value="29" />
-            <talentvalue level="4" name="moonk_p5_req" value="32" />
-            <talentvalue level="8" name="moonk_p5_req" value="56" />
-            <talentvalue level="9" name="moonk_p5_req" value="76" />
-            <talentvalue level="1" name="moonk_p5_dmg" value="61 68" />
-            <talentvalue level="3" name="moonk_p5_dmg" value="75 83" />
-            <talentvalue level="4" name="moonk_p5_dmg" value="99 109" />
-            <talentvalue level="8" name="moonk_p5_dmg" value="153 169" />
-            <talentvalue level="9" name="moonk_p5_dmg" value="224 248" />
-            <talentvalue level="1" name="moonk_p5_lif" value="2" />
-            <talentvalue level="1" name="moonk_p5_inc" value="0.1" />
-            <talentvalue level="9" name="moonk_p5_inc" value="0.17" />
-            <talentvalue level="1" name="moonk_p5_pwr" value="11" />
-            <talentvalue level="3" name="moonk_p5_pwr" value="14" />
-            <talentvalue level="4" name="moonk_p5_pwr" value="15" />
-            <talentvalue level="8" name="moonk_p5_pwr" value="23" />
-            <talentvalue level="9" name="moonk_p5_pwr" value="28" />
+            <talentvalue level="1" name="moonk_p5_req" value="20"/>
+            <talentvalue level="3" name="moonk_p5_req" value="29"/>
+            <talentvalue level="4" name="moonk_p5_req" value="32"/>
+            <talentvalue level="8" name="moonk_p5_req" value="56"/>
+            <talentvalue level="9" name="moonk_p5_req" value="76"/>
+            <talentvalue level="1" name="moonk_p5_dmg" value="61 68"/>
+            <talentvalue level="3" name="moonk_p5_dmg" value="75 83"/>
+            <talentvalue level="4" name="moonk_p5_dmg" value="99 109"/>
+            <talentvalue level="8" name="moonk_p5_dmg" value="153 169"/>
+            <talentvalue level="9" name="moonk_p5_dmg" value="224 248"/>
+            <talentvalue level="1" name="moonk_p5_lif" value="2"/>
+            <talentvalue level="1" name="moonk_p5_inc" value="0.1"/>
+            <talentvalue level="9" name="moonk_p5_inc" value="0.17"/>
+            <talentvalue level="1" name="moonk_p5_pwr" value="11"/>
+            <talentvalue level="3" name="moonk_p5_pwr" value="14"/>
+            <talentvalue level="4" name="moonk_p5_pwr" value="15"/>
+            <talentvalue level="8" name="moonk_p5_pwr" value="23"/>
+            <talentvalue level="9" name="moonk_p5_pwr" value="28"/>
         </talentvalues>
-        <level description="%moonk_p5_dmg $DMG_PHYSICAL\n%moonk_p5_inc:p Speed increase per hit\n%moonk_p5_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p5_req" />
+        <level description="%moonk_p5_dmg $DMG_PHYSICAL\n%moonk_p5_inc:p speed increase per hit\n%moonk_p5_pwr $EP">
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p5_req"/>
         </level>
     </talent>
     <talent descname="Staff Combat" description="Enables staff melee combat for a time, and increases melee $DMG." descshort="Boost" icon="5" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p6_req" value="2" />
-            <talentvalue level="5" name="moonk_p6_req" value="14" />
-            <talentvalue level="6" name="moonk_p6_req" value="17" />
-            <talentvalue level="9" name="moonk_p6_req" value="26" />
-            <talentvalue level="10" name="moonk_p6_req" value="29" />
-            <talentvalue level="14" name="moonk_p6_req" value="53" />
-            <talentvalue level="15" name="moonk_p6_req" value="73" />
-            <talentvalue level="1" name="moonk_p6_lif" value="20" />
-            <talentvalue level="5" name="moonk_p6_lif" value="40" />
-            <talentvalue level="6" name="moonk_p6_lif" value="50" />
-            <talentvalue level="9" name="moonk_p6_lif" value="65" />
-            <talentvalue level="10" name="moonk_p6_lif" value="80" />
-            <talentvalue level="14" name="moonk_p6_lif" value="120" />
-            <talentvalue level="15" name="moonk_p6_lif" value="180" />
-            <talentvalue level="1" name="moonk_p6_dmg" value="1.2" />
-            <talentvalue level="15" name="moonk_p6_dmg" value="1.5" />
-            <talentvalue level="1" name="moonk_p6_pwr" value="32" />
-            <talentvalue level="5" name="moonk_p6_pwr" value="64" />
-            <talentvalue level="6" name="moonk_p6_pwr" value="68" />
-            <talentvalue level="9" name="moonk_p6_pwr" value="92" />
-            <talentvalue level="10" name="moonk_p6_pwr" value="100" />
-            <talentvalue level="14" name="moonk_p6_pwr" value="152" />
-            <talentvalue level="15" name="moonk_p6_pwr" value="188" />
+            <talentvalue level="1" name="moonk_p6_req" value="2"/>
+            <talentvalue level="5" name="moonk_p6_req" value="14"/>
+            <talentvalue level="6" name="moonk_p6_req" value="17"/>
+            <talentvalue level="9" name="moonk_p6_req" value="26"/>
+            <talentvalue level="10" name="moonk_p6_req" value="29"/>
+            <talentvalue level="14" name="moonk_p6_req" value="53"/>
+            <talentvalue level="15" name="moonk_p6_req" value="73"/>
+            <talentvalue level="1" name="moonk_p6_lif" value="20"/>
+            <talentvalue level="5" name="moonk_p6_lif" value="40"/>
+            <talentvalue level="6" name="moonk_p6_lif" value="50"/>
+            <talentvalue level="9" name="moonk_p6_lif" value="65"/>
+            <talentvalue level="10" name="moonk_p6_lif" value="80"/>
+            <talentvalue level="14" name="moonk_p6_lif" value="120"/>
+            <talentvalue level="15" name="moonk_p6_lif" value="180"/>
+            <talentvalue level="1" name="moonk_p6_dmg" value="1.2"/>
+            <talentvalue level="15" name="moonk_p6_dmg" value="1.5"/>
+            <talentvalue level="1" name="moonk_p6_pwr" value="32"/>
+            <talentvalue level="5" name="moonk_p6_pwr" value="64"/>
+            <talentvalue level="6" name="moonk_p6_pwr" value="68"/>
+            <talentvalue level="9" name="moonk_p6_pwr" value="92"/>
+            <talentvalue level="10" name="moonk_p6_pwr" value="100"/>
+            <talentvalue level="14" name="moonk_p6_pwr" value="152"/>
+            <talentvalue level="15" name="moonk_p6_pwr" value="188"/>
         </talentvalues>
-        <level description="%moonk_p6_dmg:s melee $DMG\n%moonk_p6_lif Seconds\n%moonk_p6_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p6_req" />
+        <level description="%moonk_p6_dmg:s melee $DMG\n%moonk_p6_lif seconds\n%moonk_p6_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p6_req"/>
         </level>
     </talent>
     <talent descname="Full Moon" description="Enhances Moon Knight's senses, showing nearby enemies on the map, and increasing chance to dodge." descshort="Boost" icon="6" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p7_req" value="14" />
-            <talentvalue level="2" name="moonk_p7_req" value="17" />
-            <talentvalue level="5" name="moonk_p7_req" value="26" />
-            <talentvalue level="6" name="moonk_p7_req" value="29" />
-            <talentvalue level="10" name="moonk_p7_req" value="53" />
-            <talentvalue level="11" name="moonk_p7_req" value="73" />
-            <talentvalue level="1" name="moonk_p7_pwr" value="64" />
-            <talentvalue level="2" name="moonk_p7_pwr" value="68" />
-            <talentvalue level="5" name="moonk_p7_pwr" value="92" />
-            <talentvalue level="6" name="moonk_p7_pwr" value="100" />
-            <talentvalue level="10" name="moonk_p7_pwr" value="152" />
-            <talentvalue level="11" name="moonk_p7_pwr" value="188" />
-            <talentvalue level="1" name="moonk_p7_dodge" value="0.15" />
-            <talentvalue level="11" name="moonk_p7_dodge" value="0.5" />
-            <talentvalue level="1" name="moonk_p7_lif" value="40" />
-            <talentvalue level="2" name="moonk_p7_lif" value="50" />
-            <talentvalue level="5" name="moonk_p7_lif" value="65" />
-            <talentvalue level="6" name="moonk_p7_lif" value="80" />
-            <talentvalue level="10" name="moonk_p7_lif" value="120" />
-            <talentvalue level="11" name="moonk_p7_lif" value="180" />
+            <talentvalue level="1" name="moonk_p7_req" value="14"/>
+            <talentvalue level="2" name="moonk_p7_req" value="17"/>
+            <talentvalue level="5" name="moonk_p7_req" value="26"/>
+            <talentvalue level="6" name="moonk_p7_req" value="29"/>
+            <talentvalue level="10" name="moonk_p7_req" value="53"/>
+            <talentvalue level="11" name="moonk_p7_req" value="73"/>
+            <talentvalue level="1" name="moonk_p7_pwr" value="64"/>
+            <talentvalue level="2" name="moonk_p7_pwr" value="68"/>
+            <talentvalue level="5" name="moonk_p7_pwr" value="92"/>
+            <talentvalue level="6" name="moonk_p7_pwr" value="100"/>
+            <talentvalue level="10" name="moonk_p7_pwr" value="152"/>
+            <talentvalue level="11" name="moonk_p7_pwr" value="188"/>
+            <talentvalue level="1" name="moonk_p7_dodge" value="0.15"/>
+            <talentvalue level="11" name="moonk_p7_dodge" value="0.5"/>
+            <talentvalue level="1" name="moonk_p7_lif" value="40"/>
+            <talentvalue level="2" name="moonk_p7_lif" value="50"/>
+            <talentvalue level="5" name="moonk_p7_lif" value="65"/>
+            <talentvalue level="6" name="moonk_p7_lif" value="80"/>
+            <talentvalue level="10" name="moonk_p7_lif" value="120"/>
+            <talentvalue level="11" name="moonk_p7_lif" value="180"/>
         </talentvalues>
-        <level description="%moonk_p7_dodge:p dodge chance\n%moonk_p7_lif Seconds\n%moonk_p7_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%moonk_p7_req" />
+        <level description="%moonk_p7_dodge:p dodge chance\n%moonk_p7_lif seconds\n%moonk_p7_pwr $EP">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%moonk_p7_req"/>
         </level>
     </talent>
     <talent descname="Lunar Eclipse" description="Throw Crescent Darts in a radius,  bouncing off walls and lasting several seconds." descshort="Xtreme" icon="7" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p8" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="moonk_p8_req" value="10" />
-            <talentvalue level="8" name="moonk_p8_req" value="45" />
-            <talentvalue level="1" name="moonk_p8_dmg" value="34 38" />
-            <talentvalue level="8" name="moonk_p8_dmg" value="102 113" />
+            <talentvalue level="1" name="moonk_p8_req" value="10"/>
+            <talentvalue level="8" name="moonk_p8_req" value="45"/>
+            <talentvalue level="1" name="moonk_p8_dmg" value="34 38"/>
+            <talentvalue level="8" name="moonk_p8_dmg" value="102 113"/>
         </talentvalues>
         <level description="%moonk_p8_dmg $DMG_ENERGY">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%moonk_p8_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%moonk_p8_req"/>
         </level>
     </talent>
-    <talent descname="Health Regen" description="Increase $HP regen rate." icon="30" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit11" skin="0" type="passive">
+    <talent descname="Health Regen" description="Increases $HP regen rate." icon="30" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit11_hlt" value="0.004" />
-            <talentvalue level="9" name="moonk_outfit11_hlt" value="0.012" />
-            <talentvalue level="1" name="moonk_outfit11_shw" value="0.4" />
-            <talentvalue level="9" name="moonk_outfit11_shw" value="1.2" />
+            <talentvalue level="1" name="moonk_outfit11_hlt" value="0.004"/>
+            <talentvalue level="9" name="moonk_outfit11_hlt" value="0.012"/>
+            <talentvalue level="1" name="moonk_outfit11_shw" value="0.4"/>
+            <talentvalue level="9" name="moonk_outfit11_shw" value="1.2"/>
         </talentvalues>
-        <level count="9" description="+%moonk_outfit11_shw:f% $HP Per Second">
+        <level count="9" description="+%moonk_outfit11_shw:f% $HP per second">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="health_regen_pct" level="%moonk_outfit11_hlt" />
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%moonk_outfit11_hlt"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Attack Speed" description="Increases Attack speed for melee moves and powers" icon="8" icon_texture="textures/ui/moonknight_icons.png" name="moonk_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit12_spd" value="1.05" />
-            <talentvalue level="9" name="moonk_outfit12_spd" value="1.2" />
+            <talentvalue level="1" name="moonk_outfit12_spd" value="1.05"/>
+            <talentvalue level="9" name="moonk_outfit12_spd" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit12_spd:s Attack Speed">
+        <level count="9" description="%moonk_outfit12_spd:s attack speed">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="move_attack" level="%moonk_outfit12_spd" />
+                <affecter affect_type="scale" attribute="move_attack" level="%moonk_outfit12_spd"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit13_dr" value="1" />
-            <talentvalue level="9" name="moonk_outfit13_dr" value="9" />
+            <talentvalue level="1" name="moonk_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="moonk_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%moonk_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%moonk_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%moonk_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Critical Chance" description="Increase chance of critical hits for attacks." icon="1" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit21" skin="1" type="passive">
+    <talent descname="Critical Chance" description="Increases chance of critical hits for all attacks." icon="1" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit21_cri" value="0.02" />
-            <talentvalue level="9" name="moonk_outfit21_cri" value="0.1" />
+            <talentvalue level="1" name="moonk_outfit21_cri" value="0.02"/>
+            <talentvalue level="9" name="moonk_outfit21_cri" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%moonk_outfit21_cri:p Critical Chance">
+        <level count="9" description="+%moonk_outfit21_cri:p critical chance">
             <powerup life="-1">
-                <affecter attribute="critical" level="%moonk_outfit21_cri" />
+                <affecter attribute="critical" level="%moonk_outfit21_cri"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Crescent Damage" description="Increase $DMG with all Crescent powers" icon="9" icon_texture="textures/ui/moonknight_icons.png" name="moonk_outfit22" skin="1" type="passive">
+    <talent descname="Crescent Damage" description="Increases $DMG with all Crescent powers" icon="9" icon_texture="textures/ui/moonknight_icons.png" name="moonk_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit22_dmg" value="1.05" />
-            <talentvalue level="9" name="moonk_outfit22_dmg" value="1.2" />
+            <talentvalue level="1" name="moonk_outfit22_dmg" value="1.05"/>
+            <talentvalue level="9" name="moonk_outfit22_dmg" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit22_dmg:s $DMG" />
+        <level count="9" description="%moonk_outfit22_dmg:s $DMG"/>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit23_dr" value="1" />
-            <talentvalue level="9" name="moonk_outfit23_dr" value="9" />
+            <talentvalue level="1" name="moonk_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="moonk_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%moonk_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%moonk_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%moonk_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Boxing" description="Increase non-power melee $DMG" icon="5" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit31" skin="2" type="passive">
+    <talent descname="Boxing" description="Increases non-power melee $DMG" icon="5" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit31_dmg" value="1.04" />
-            <talentvalue level="9" name="moonk_outfit31_dmg" value="1.2" />
+            <talentvalue level="1" name="moonk_outfit31_dmg" value="1.04"/>
+            <talentvalue level="9" name="moonk_outfit31_dmg" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit31_dmg:s Melee $DMG">
+        <level count="9" description="%moonk_outfit31_dmg:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%moonk_outfit31_dmg" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%moonk_outfit31_dmg" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Regen" description="Increase $EP regen rate." icon="31" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit32" skin="2" type="passive">
+    <talent descname="Energy Regen" description="Increases $EP regen rate." icon="31" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit32_pct" value="1.01" />
-            <talentvalue level="9" name="moonk_outfit32_pct" value="1.05" />
+            <talentvalue level="1" name="moonk_outfit32_pct" value="1.01"/>
+            <talentvalue level="9" name="moonk_outfit32_pct" value="1.05"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit32_pct:s $EP Per Second">
+        <level count="9" description="%moonk_outfit32_pct:s $EP per second">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="energy_regen" level="%moonk_outfit32_pct" />
+                <affecter affect_type="scale" attribute="energy_regen" level="%moonk_outfit32_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit33_dr" value="1" />
-            <talentvalue level="9" name="moonk_outfit33_dr" value="9" />
+            <talentvalue level="1" name="moonk_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="moonk_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%moonk_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%moonk_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%moonk_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Resurrect Ally" description="Gives a chance to resurrect fallen allies automatically." icon="23" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit41_pct" value="0.1" />
-            <talentvalue level="9" name="moonk_outfit41_pct" value="0.5" />
+            <talentvalue level="1" name="moonk_outfit41_pct" value="0.1"/>
+            <talentvalue level="9" name="moonk_outfit41_pct" value="0.5"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit41_pct:p Chance to resurrect allies">
-            <powerup apply_ally="all" chance="%moonk_outfit41_pct" class="resurrect" life="-1" maxhealthpercent="1" />
+        <level count="9" description="%moonk_outfit41_pct:p chance to resurrect allies">
+            <powerup apply_ally="all" chance="%moonk_outfit41_pct" class="resurrect" life="-1" maxhealthpercent="1"/>
         </level>
     </talent>
-    <talent descname="Boxing" description="Increase non-power melee $DMG" icon="5" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit42" skin="3" type="passive">
+    <talent descname="Boxing" description="Increases non-power melee $DMG" icon="5" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit42_dmg" value="1.04" />
-            <talentvalue level="9" name="moonk_outfit42_dmg" value="1.2" />
+            <talentvalue level="1" name="moonk_outfit42_dmg" value="1.04"/>
+            <talentvalue level="9" name="moonk_outfit42_dmg" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit42_dmg:s Melee $DMG">
+        <level count="9" description="%moonk_outfit42_dmg:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%moonk_outfit42_dmg" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%moonk_outfit42_dmg" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="moonk_outfit43_dr" value="1" />
-            <talentvalue level="9" name="moonk_outfit43_dr" value="9" />
+            <talentvalue level="1" name="moonk_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="moonk_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%moonk_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%moonk_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%moonk_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

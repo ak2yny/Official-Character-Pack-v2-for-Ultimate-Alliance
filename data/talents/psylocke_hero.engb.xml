@@ -221,7 +221,7 @@
             <talentvalue level="1" name="psyloc_outfit11_pct" value="0.03" />
             <talentvalue level="9" name="psyloc_outfit11_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%psyloc_outfit11_pct:p Dodge Chance">
+        <level count="9" description="+%psyloc_outfit11_pct:p Dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%psyloc_outfit11_pct" />
             </powerup>
@@ -232,7 +232,7 @@
             <talentvalue level="1" name="psyloc_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="psyloc_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%psyloc_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%psyloc_outfit12_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%psyloc_outfit12_pct" />
             </powerup>
@@ -298,7 +298,7 @@
             <talentvalue level="1" name="psyloc_outfit32_pct" value="1.05" />
             <talentvalue level="9" name="psyloc_outfit32_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="%psyloc_outfit32_pct:s Maximum $HP">
+        <level count="9" description="%psyloc_outfit32_pct:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%psyloc_outfit32_pct" />
             </powerup>
@@ -315,7 +315,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Mental Mastery" description="Increases the $DMG of mental attacks." icon="0" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit41" skin="3" type="passive">
+    <talent descname="Mental Mastery" description="Increases the $DMG of all mental attacks." icon="0" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="psyloc_outfit41_pct" value="1.03" />
             <talentvalue level="9" name="psyloc_outfit41_pct" value="1.15" />

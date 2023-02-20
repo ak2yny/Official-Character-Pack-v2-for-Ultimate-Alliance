@@ -1,392 +1,392 @@
 <talents>
     <talent descname="Psychic Spike" description="Fires a mental homing projectile" descshort="Projectile" icon="0" icon_texture="textures/ui/phoenix_icons1.png" name="pho_ment_burst" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="pho_ment_burst_req" value="5" />
-            <talentvalue level="4" name="pho_ment_burst_req" value="14" />
-            <talentvalue level="5" name="pho_ment_burst_req" value="17" />
-            <talentvalue level="8" name="pho_ment_burst_req" value="26" />
-            <talentvalue level="9" name="pho_ment_burst_req" value="29" />
-            <talentvalue level="13" name="pho_ment_burst_req" value="53" />
-            <talentvalue level="15" name="pho_ment_burst_req" value="73" />
-            <talentvalue level="1" name="pho_ment_burst_dmg" value="30 36" />
-            <talentvalue level="3" name="pho_ment_burst_dmg" value="48 55" />
-            <talentvalue level="4" name="pho_ment_burst_dmg" value="56 62" />
-            <talentvalue level="7" name="pho_ment_burst_dmg" value="104 115" />
-            <talentvalue level="8" name="pho_ment_burst_dmg" value="116 124" />
-            <talentvalue level="12" name="pho_ment_burst_dmg" value="177 196" />
-            <talentvalue level="13" name="pho_ment_burst_dmg" value="195 217" />
-            <talentvalue level="15" name="pho_ment_burst_dmg" value="292 307" />
-            <talentvalue level="1" name="pho_ment_burst_pwr" value="6" />
-            <talentvalue level="3" name="pho_ment_burst_pwr" value="12" />
-            <talentvalue level="4" name="pho_ment_burst_pwr" value="16" />
-            <talentvalue level="7" name="pho_ment_burst_pwr" value="24" />
-            <talentvalue level="8" name="pho_ment_burst_pwr" value="27" />
-            <talentvalue level="12" name="pho_ment_burst_pwr" value="39" />
-            <talentvalue level="13" name="pho_ment_burst_pwr" value="43" />
-            <talentvalue level="15" name="pho_ment_burst_pwr" value="57" />
+            <talentvalue level="1" name="pho_ment_burst_req" value="5"/>
+            <talentvalue level="4" name="pho_ment_burst_req" value="14"/>
+            <talentvalue level="5" name="pho_ment_burst_req" value="17"/>
+            <talentvalue level="8" name="pho_ment_burst_req" value="26"/>
+            <talentvalue level="9" name="pho_ment_burst_req" value="29"/>
+            <talentvalue level="13" name="pho_ment_burst_req" value="53"/>
+            <talentvalue level="15" name="pho_ment_burst_req" value="73"/>
+            <talentvalue level="1" name="pho_ment_burst_dmg" value="30 36"/>
+            <talentvalue level="3" name="pho_ment_burst_dmg" value="48 55"/>
+            <talentvalue level="4" name="pho_ment_burst_dmg" value="56 62"/>
+            <talentvalue level="7" name="pho_ment_burst_dmg" value="104 115"/>
+            <talentvalue level="8" name="pho_ment_burst_dmg" value="116 124"/>
+            <talentvalue level="12" name="pho_ment_burst_dmg" value="177 196"/>
+            <talentvalue level="13" name="pho_ment_burst_dmg" value="195 217"/>
+            <talentvalue level="15" name="pho_ment_burst_dmg" value="292 307"/>
+            <talentvalue level="1" name="pho_ment_burst_pwr" value="6"/>
+            <talentvalue level="3" name="pho_ment_burst_pwr" value="12"/>
+            <talentvalue level="4" name="pho_ment_burst_pwr" value="16"/>
+            <talentvalue level="7" name="pho_ment_burst_pwr" value="24"/>
+            <talentvalue level="8" name="pho_ment_burst_pwr" value="27"/>
+            <talentvalue level="12" name="pho_ment_burst_pwr" value="39"/>
+            <talentvalue level="13" name="pho_ment_burst_pwr" value="43"/>
+            <talentvalue level="15" name="pho_ment_burst_pwr" value="57"/>
         </talentvalues>
         <level description="%pho_ment_burst_dmg $DMG_MENTAL\n%pho_ment_burst_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_ment_burst_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_ment_burst_req"/>
         </level>
     </talent>
     <talent descname="Telekinesis" description="Gives Jean the ability to lift and throw objects and enemies.\n(~41Press And Hold~~)" descshort="Special" icon="1" icon_texture="textures/ui/phoenix_icons1.png" name="pho_telek" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="pho_telek_req" value="1" />
-            <talentvalue level="5" name="pho_telek_req" value="13" />
-            <talentvalue level="6" name="pho_telek_req" value="16" />
-            <talentvalue level="9" name="pho_telek_req" value="25" />
-            <talentvalue level="10" name="pho_telek_req" value="28" />
-            <talentvalue level="14" name="pho_telek_req" value="52" />
-            <talentvalue level="15" name="pho_telek_req" value="72" />
-            <talentvalue level="1" name="pho_telek_pwr" value="5" />
-            <talentvalue level="15" name="pho_telek_pwr" value="47" />
-            <talentvalue level="1" name="pho_telek_dm1" value="11 15" />
-            <talentvalue level="15" name="pho_telek_dm1" value="195 217" />
-            <talentvalue level="1" name="pho_telek_dm2" value="8 11" />
-            <talentvalue level="15" name="pho_telek_dm2" value="79 89" />
-            <talentvalue interpolate="false" level="1" name="pho_telek_hvy" value="1" />
-            <talentvalue interpolate="false" level="8" name="pho_telek_hvy" value="2" />
-            <talentvalue interpolate="false" level="15" name="pho_telek_hvy" value="2" />
+            <talentvalue level="1" name="pho_telek_req" value="1"/>
+            <talentvalue level="5" name="pho_telek_req" value="13"/>
+            <talentvalue level="6" name="pho_telek_req" value="16"/>
+            <talentvalue level="9" name="pho_telek_req" value="25"/>
+            <talentvalue level="10" name="pho_telek_req" value="28"/>
+            <talentvalue level="14" name="pho_telek_req" value="52"/>
+            <talentvalue level="15" name="pho_telek_req" value="72"/>
+            <talentvalue level="1" name="pho_telek_pwr" value="5"/>
+            <talentvalue level="15" name="pho_telek_pwr" value="47"/>
+            <talentvalue level="1" name="pho_telek_dm1" value="11 15"/>
+            <talentvalue level="15" name="pho_telek_dm1" value="195 217"/>
+            <talentvalue level="1" name="pho_telek_dm2" value="8 11"/>
+            <talentvalue level="15" name="pho_telek_dm2" value="79 89"/>
+            <talentvalue interpolate="false" level="1" name="pho_telek_hvy" value="1"/>
+            <talentvalue interpolate="false" level="8" name="pho_telek_hvy" value="2"/>
+            <talentvalue interpolate="false" level="15" name="pho_telek_hvy" value="2"/>
         </talentvalues>
-        <level description="^Heavy objects\n%pho_telek_dm1 $DMG_MENTAL at lift\n%pho_telek_dm2 $DMG_PHYSICAL at impact\n%pho_telek_pwr $EP/sec">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="3" />
-            <require cat="level" level="%pho_telek_req" />
+        <level description="^Heavy objects\n%pho_telek_dm1 $DMG_MENTAL at lift\n%pho_telek_dm2 $DMG_PHYSICAL at impact\n%pho_telek_pwr $EP per second">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="3"/>
+            <require cat="level" level="%pho_telek_req"/>
         </level>
-        <level description="^Massive objects\n%pho_telek_dm1 $DMG_MENTAL at lift\n%pho_telek_dm2 $DMG_PHYSICAL at impact\n%pho_telek_pwr $EP/s">
-            <tier cost="2" count="1" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_telek_req" />
+        <level description="^Massive objects\n%pho_telek_dm1 $DMG_MENTAL at lift\n%pho_telek_dm2 $DMG_PHYSICAL at impact\n%pho_telek_pwr $EP per second">
+            <tier cost="2" count="1"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_telek_req"/>
         </level>
     </talent>
     <talent descname="Psionic Boom" description="A radial mental attack inflicting pain on enemies and reducing their damage for a time" descshort="Radial" icon="2" icon_texture="textures/ui/phoenix_icons1.png" name="pho_mind_blast" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="pho_mind_blast_req" value="15" />
-            <talentvalue level="4" name="pho_mind_blast_req" value="26" />
-            <talentvalue level="5" name="pho_mind_blast_req" value="29" />
-            <talentvalue level="12" name="pho_mind_blast_req" value="53" />
-            <talentvalue level="13" name="pho_mind_blast_req" value="73" />
-            <talentvalue level="1" name="pho_mind_blast_dmg" value="21 26" />
-            <talentvalue level="13" name="pho_mind_blast_dmg" value="94 105" />
-            <talentvalue level="1" name="pho_mind_blast_pwr" value="20" />
-            <talentvalue level="13" name="pho_mind_blast_pwr" value="52" />
-            <talentvalue level="1" name="pho_mind_blast_atk" value="0.75" />
-            <talentvalue level="13" name="pho_mind_blast_atk" value="0.5" />
-            <talentvalue level="1" name="pho_mind_blast_lif" value="5" />
-            <talentvalue level="13" name="pho_mind_blast_lif" value="15" />
-            <talentvalue level="1" name="pho_mind_blast_rad" value="120" />
-            <talentvalue level="13" name="pho_mind_blast_rad" value="144" />
+            <talentvalue level="1" name="pho_mind_blast_req" value="15"/>
+            <talentvalue level="4" name="pho_mind_blast_req" value="26"/>
+            <talentvalue level="5" name="pho_mind_blast_req" value="29"/>
+            <talentvalue level="12" name="pho_mind_blast_req" value="53"/>
+            <talentvalue level="13" name="pho_mind_blast_req" value="73"/>
+            <talentvalue level="1" name="pho_mind_blast_dmg" value="21 26"/>
+            <talentvalue level="13" name="pho_mind_blast_dmg" value="94 105"/>
+            <talentvalue level="1" name="pho_mind_blast_pwr" value="20"/>
+            <talentvalue level="13" name="pho_mind_blast_pwr" value="52"/>
+            <talentvalue level="1" name="pho_mind_blast_atk" value="0.75"/>
+            <talentvalue level="13" name="pho_mind_blast_atk" value="0.5"/>
+            <talentvalue level="1" name="pho_mind_blast_lif" value="5"/>
+            <talentvalue level="13" name="pho_mind_blast_lif" value="15"/>
+            <talentvalue level="1" name="pho_mind_blast_rad" value="120"/>
+            <talentvalue level="13" name="pho_mind_blast_rad" value="144"/>
         </talentvalues>
-        <level description="%pho_mind_blast_dmg $DMG_MENTAL\n%pho_mind_blast_atk:s $DMG reduction\n%pho_mind_blast_lif Seconds\n%pho_mind_blast_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_mind_blast_req" />
+        <level description="%pho_mind_blast_dmg $DMG_MENTAL\n%pho_mind_blast_atk:s $DMG reduction\n%pho_mind_blast_lif seconds\n%pho_mind_blast_pwr $EP">
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_mind_blast_req"/>
         </level>
     </talent>
     <talent descname="Psychic Fury" description="Gives Jean and allies mental damage bonus on all Melee attacks for a time." descshort="Boost" icon="3" icon_texture="textures/ui/phoenix_icons1.png" name="pho_psych_fury" power="power4" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="pho_psych_fury_req" value="2" />
-            <talentvalue level="5" name="pho_psych_fury_req" value="14" />
-            <talentvalue level="6" name="pho_psych_fury_req" value="17" />
-            <talentvalue level="9" name="pho_psych_fury_req" value="26" />
-            <talentvalue level="10" name="pho_psych_fury_req" value="29" />
-            <talentvalue level="14" name="pho_psych_fury_req" value="53" />
-            <talentvalue level="15" name="pho_psych_fury_req" value="73" />
-            <talentvalue level="1" name="pho_psych_fury_pwr" value="64" />
-            <talentvalue level="16" name="pho_psych_fury_pwr" value="188" />
-            <talentvalue level="1" name="pho_psych_fury_dmg" value="0.05" />
-            <talentvalue level="16" name="pho_psych_fury_dmg" value="0.47" />
-            <talentvalue level="1" name="pho_psych_fury_atk" value="1.2" />
-            <talentvalue level="16" name="pho_psych_fury_atk" value="2.6" />
-            <talentvalue level="1" name="pho_psych_fury_lif" value="13" />
-            <talentvalue level="16" name="pho_psych_fury_lif" value="55" />
+            <talentvalue level="1" name="pho_psych_fury_req" value="2"/>
+            <talentvalue level="5" name="pho_psych_fury_req" value="14"/>
+            <talentvalue level="6" name="pho_psych_fury_req" value="17"/>
+            <talentvalue level="9" name="pho_psych_fury_req" value="26"/>
+            <talentvalue level="10" name="pho_psych_fury_req" value="29"/>
+            <talentvalue level="14" name="pho_psych_fury_req" value="53"/>
+            <talentvalue level="15" name="pho_psych_fury_req" value="73"/>
+            <talentvalue level="1" name="pho_psych_fury_pwr" value="64"/>
+            <talentvalue level="16" name="pho_psych_fury_pwr" value="188"/>
+            <talentvalue level="1" name="pho_psych_fury_dmg" value="0.05"/>
+            <talentvalue level="16" name="pho_psych_fury_dmg" value="0.47"/>
+            <talentvalue level="1" name="pho_psych_fury_atk" value="1.2"/>
+            <talentvalue level="16" name="pho_psych_fury_atk" value="2.6"/>
+            <talentvalue level="1" name="pho_psych_fury_lif" value="13"/>
+            <talentvalue level="16" name="pho_psych_fury_lif" value="55"/>
         </talentvalues>
         <level description="%pho_psych_fury_dmg:p $DMG as $DMG_MENTAL\n%pho_psych_fury_atk:s $AR\n%pho_psych_fury_lif seconds\n%pho_psych_fury_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_psych_fury_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_psych_fury_req"/>
         </level>
     </talent>
     <talent descname="Calming Presence" description="Increase $EP regeneration rate of entire party for a time" descshort="Boost" icon="4" icon_texture="textures/ui/phoenix_icons1.png" name="pho_calm_pres" power="power5" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="pho_calm_pres_req" value="14" />
-            <talentvalue level="2" name="pho_calm_pres_req" value="17" />
-            <talentvalue level="5" name="pho_calm_pres_req" value="26" />
-            <talentvalue level="6" name="pho_calm_pres_req" value="29" />
-            <talentvalue level="10" name="pho_calm_pres_req" value="53" />
-            <talentvalue level="11" name="pho_calm_pres_req" value="73" />
-            <talentvalue level="1" name="pho_calm_pres_pwr" value="64" />
-            <talentvalue level="11" name="pho_calm_pres_pwr" value="188" />
-            <talentvalue level="1" name="pho_calm_pres_reg" value="1.25" />
-            <talentvalue level="11" name="pho_calm_pres_reg" value="2" />
-            <talentvalue level="1" name="pho_calm_pres_lif" value="10" />
-            <talentvalue level="11" name="pho_calm_pres_lif" value="110" />
+            <talentvalue level="1" name="pho_calm_pres_req" value="14"/>
+            <talentvalue level="2" name="pho_calm_pres_req" value="17"/>
+            <talentvalue level="5" name="pho_calm_pres_req" value="26"/>
+            <talentvalue level="6" name="pho_calm_pres_req" value="29"/>
+            <talentvalue level="10" name="pho_calm_pres_req" value="53"/>
+            <talentvalue level="11" name="pho_calm_pres_req" value="73"/>
+            <talentvalue level="1" name="pho_calm_pres_pwr" value="64"/>
+            <talentvalue level="11" name="pho_calm_pres_pwr" value="188"/>
+            <talentvalue level="1" name="pho_calm_pres_reg" value="1.25"/>
+            <talentvalue level="11" name="pho_calm_pres_reg" value="2"/>
+            <talentvalue level="1" name="pho_calm_pres_lif" value="10"/>
+            <talentvalue level="11" name="pho_calm_pres_lif" value="110"/>
         </talentvalues>
         <level description="%pho_calm_pres_reg:s $EP regeneration rate\n%pho_calm_pres_lif seconds\n%pho_calm_pres_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_calm_pres_req" />
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_calm_pres_req"/>
         </level>
     </talent>
     <talent descname="Memory Wipe" description="A radial blast of mental energy that confuses enemies and makes them flee" descshort="Radial" icon="7" icon_texture="textures/ui/phoenix_icons1.png" name="pho_mind_fry" power="power8">
         <talentvalues>
-            <talentvalue level="1" name="pho_mind_fry_req" value="20" />
-            <talentvalue level="3" name="pho_mind_fry_req" value="26" />
-            <talentvalue level="4" name="pho_mind_fry_req" value="29" />
-            <talentvalue level="8" name="pho_mind_fry_req" value="53" />
-            <talentvalue level="9" name="pho_mind_fry_req" value="73" />
-            <talentvalue level="1" name="pho_mind_fry_pwr" value="22" />
-            <talentvalue level="9" name="pho_mind_fry_pwr" value="56" />
-            <talentvalue level="1" name="pho_mind_fry_dmg" value="30 36" />
-            <talentvalue level="7" name="pho_mind_fry_dmg" value="82 93" />
-            <talentvalue level="9" name="pho_mind_fry_dmg" value="123 141" />
-            <talentvalue level="1" name="pho_mind_fry_time" value="0.5" />
-            <talentvalue level="9" name="pho_mind_fry_time" value="3" />
-            <talentvalue level="1" name="pho_mind_fry_pct" value="0.2" />
-            <talentvalue level="9" name="pho_mind_fry_pct" value="0.75" />
+            <talentvalue level="1" name="pho_mind_fry_req" value="20"/>
+            <talentvalue level="3" name="pho_mind_fry_req" value="26"/>
+            <talentvalue level="4" name="pho_mind_fry_req" value="29"/>
+            <talentvalue level="8" name="pho_mind_fry_req" value="53"/>
+            <talentvalue level="9" name="pho_mind_fry_req" value="73"/>
+            <talentvalue level="1" name="pho_mind_fry_pwr" value="22"/>
+            <talentvalue level="9" name="pho_mind_fry_pwr" value="56"/>
+            <talentvalue level="1" name="pho_mind_fry_dmg" value="30 36"/>
+            <talentvalue level="7" name="pho_mind_fry_dmg" value="82 93"/>
+            <talentvalue level="9" name="pho_mind_fry_dmg" value="123 141"/>
+            <talentvalue level="1" name="pho_mind_fry_time" value="0.5"/>
+            <talentvalue level="9" name="pho_mind_fry_time" value="3"/>
+            <talentvalue level="1" name="pho_mind_fry_pct" value="0.2"/>
+            <talentvalue level="9" name="pho_mind_fry_pct" value="0.75"/>
         </talentvalues>
         <level description="%pho_mind_fry_dmg $DMG_MENTAL\n%pho_mind_fry_pct:p chance to flee\n%pho_mind_fry_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_mind_fry_req" />
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_mind_fry_req"/>
         </level>
     </talent>
     <talent descname="Phoenix Force" description="Xtreme radial attack dealing mental damage with a chance to convert enemies." descshort="Xtreme" icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_pho_force" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="pho_pho_force_req" value="10" />
-            <talentvalue level="1" name="pho_pho_force_dmg" value="85 96" />
-            <talentvalue level="8" name="pho_pho_force_dmg" value="279 309" />
-            <talentvalue level="1" name="pho_pho_force_pct" value="0.08" />
-            <talentvalue level="7" name="pho_pho_force_pct" value="0.5" />
-            <talentvalue level="1" name="pho_pho_force_lif" value="20" />
-            <talentvalue level="7" name="pho_pho_force_lif" value="34" />
+            <talentvalue level="1" name="pho_pho_force_req" value="10"/>
+            <talentvalue level="1" name="pho_pho_force_dmg" value="85 96"/>
+            <talentvalue level="8" name="pho_pho_force_dmg" value="279 309"/>
+            <talentvalue level="1" name="pho_pho_force_pct" value="0.08"/>
+            <talentvalue level="7" name="pho_pho_force_pct" value="0.5"/>
+            <talentvalue level="1" name="pho_pho_force_lif" value="20"/>
+            <talentvalue level="7" name="pho_pho_force_lif" value="34"/>
         </talentvalues>
-        <level description="%pho_pho_force_dmg $DMG_MENTAL\n%pho_pho_force_pct:p chance to convert\n%pho_pho_force_lif second conversion duration">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%pho_pho_force_req" />
+        <level description="%pho_pho_force_dmg $DMG_MENTAL\n%pho_pho_force_pct:p chance to convert\n%pho_pho_force_lif seconds conversion duration">
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%pho_pho_force_req"/>
         </level>
     </talent>
     <talent descname="Dark Phoenix" description="Inflicts a mental blast in a radius, and causes a $DMG_PHYSICAL explosion around fallen enemies." descshort="Blast" icon="9" icon_texture="textures/ui/phoenix_icons1.png" name="pho_dark_phoenx" power="power11">
         <talentvalues>
-            <talentvalue level="1" name="pho_dark_phoenx_req" value="17" />
-            <talentvalue level="4" name="pho_dark_phoenx_req" value="26" />
-            <talentvalue level="5" name="pho_dark_phoenx_req" value="29" />
-            <talentvalue level="9" name="pho_dark_phoenx_req" value="53" />
-            <talentvalue level="10" name="pho_dark_phoenx_req" value="73" />
-            <talentvalue level="1" name="pho_dark_phoenx_pwr" value="21" />
-            <talentvalue level="11" name="pho_dark_phoenx_pwr" value="47" />
-            <talentvalue level="1" name="pho_dark_phoenx_dm1" value="43 50" />
-            <talentvalue level="10" name="pho_dark_phoenx_dm1" value="135 144" />
-            <talentvalue level="1" name="pho_dark_phoenx_dm2" value="0.25" />
-            <talentvalue level="10" name="pho_dark_phoenx_dm2" value="0.5" />
-            <talentvalue level="1" name="pho_dark_phoenx_num" value="1" />
-            <talentvalue level="10" name="pho_dark_phoenx_num" value="6" />
+            <talentvalue level="1" name="pho_dark_phoenx_req" value="17"/>
+            <talentvalue level="4" name="pho_dark_phoenx_req" value="26"/>
+            <talentvalue level="5" name="pho_dark_phoenx_req" value="29"/>
+            <talentvalue level="9" name="pho_dark_phoenx_req" value="53"/>
+            <talentvalue level="10" name="pho_dark_phoenx_req" value="73"/>
+            <talentvalue level="1" name="pho_dark_phoenx_pwr" value="21"/>
+            <talentvalue level="11" name="pho_dark_phoenx_pwr" value="47"/>
+            <talentvalue level="1" name="pho_dark_phoenx_dm1" value="43 50"/>
+            <talentvalue level="10" name="pho_dark_phoenx_dm1" value="135 144"/>
+            <talentvalue level="1" name="pho_dark_phoenx_dm2" value="0.25"/>
+            <talentvalue level="10" name="pho_dark_phoenx_dm2" value="0.5"/>
+            <talentvalue level="1" name="pho_dark_phoenx_num" value="1"/>
+            <talentvalue level="10" name="pho_dark_phoenx_num" value="6"/>
         </talentvalues>
-        <level description="%pho_dark_phoenx_dm1 $DMG_MENTAL\n%pho_dark_phoenx_dm2:p of foe's max $HP as $DMG_PHYSICAL\n%pho_dark_phoenx_num blasts\n%pho_dark_phoenx_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="5" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%pho_dark_phoenx_req" />
+        <level description="%pho_dark_phoenx_dm1 $DMG_MENTAL\n%pho_dark_phoenx_dm2:p of foe's maximum $HP as $DMG_PHYSICAL\n%pho_dark_phoenx_num blasts\n%pho_dark_phoenx_pwr $EP">
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="5" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%pho_dark_phoenx_req"/>
         </level>
     </talent>
     <talent hidden="true" name="pho_psionic">
         <level count="1">
             <powerup class="trail_replace" life="-1">
-                <special_fx effect="char/phoenx/special_trail" how_used="custom" />
+                <special_fx effect="char/phoenx/special_trail" how_used="custom"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="pho_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit11_pct" value="1.04" />
-            <talentvalue level="9" name="pho_outfit11_pct" value="1.2" />
+            <talentvalue level="1" name="pho_outfit11_pct" value="1.04"/>
+            <talentvalue level="9" name="pho_outfit11_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%pho_outfit11_pct:s Maximum $EP">
+        <level count="9" description="%pho_outfit11_pct:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%pho_outfit11_pct" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%pho_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="pho_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit12_pct" value="0.02" />
-            <talentvalue level="9" name="pho_outfit12_pct" value="0.1" />
+            <talentvalue level="1" name="pho_outfit12_pct" value="0.02"/>
+            <talentvalue level="9" name="pho_outfit12_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%pho_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%pho_outfit12_pct:p critical chance">
             <powerup life="-1">
-                <affecter attribute="atk_critical" level="%pho_outfit12_pct" />
+                <affecter attribute="atk_critical" level="%pho_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pho_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit13_dr" value="1" />
-            <talentvalue level="9" name="pho_outfit13_dr" value="9" />
+            <talentvalue level="1" name="pho_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="pho_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%pho_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%pho_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Mental Mastery" description="Increases the $DMG_MENTAL of psychic attacks." icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_outfit21" skin="1" type="passive">
+    <talent descname="Mental Mastery" description="Increases the $DMG_MENTAL of all psychic attacks." icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit21_pct" value="1.03" />
-            <talentvalue level="9" name="pho_outfit21_pct" value="1.15" />
+            <talentvalue level="1" name="pho_outfit21_pct" value="1.03"/>
+            <talentvalue level="9" name="pho_outfit21_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%pho_outfit21_pct:s Mental $DMG_MENTAL">
+        <level count="9" description="%pho_outfit21_pct:s $DMG_MENTAL">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%pho_outfit21_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%pho_outfit21_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Unstoppable Force" description="Reflects $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="pho_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit22_pct" value="0.25" />
-            <talentvalue level="9" name="pho_outfit22_pct" value="1.25" />
+            <talentvalue level="1" name="pho_outfit22_pct" value="0.25"/>
+            <talentvalue level="9" name="pho_outfit22_pct" value="1.25"/>
         </talentvalues>
         <level count="9" description="%pho_outfit22_pct:p $DMG reflected">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="reflect_damage" level="%pho_outfit22_pct" scope_non_powers="true">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pho_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit23_dr" value="1" />
-            <talentvalue level="9" name="pho_outfit23_dr" value="9" />
+            <talentvalue level="1" name="pho_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="pho_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%pho_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%pho_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Mental Mastery" description="Increases the $DMG_MENTAL of psychic attacks." icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_outfit31" skin="2" type="passive">
+    <talent descname="Mental Mastery" description="Increases the $DMG_MENTAL of all psychic attacks." icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit31_pct" value="1.03" />
-            <talentvalue level="9" name="pho_outfit31_pct" value="1.15" />
+            <talentvalue level="1" name="pho_outfit31_pct" value="1.03"/>
+            <talentvalue level="9" name="pho_outfit31_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%pho_outfit31_pct:s Mental $DMG_MENTAL">
+        <level count="9" description="%pho_outfit31_pct:s $DMG_MENTAL">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%pho_outfit31_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%pho_outfit31_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Protective Forces" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="pho_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit32_pct" value="0.02" />
-            <talentvalue level="9" name="pho_outfit32_pct" value="0.1" />
-            <talentvalue level="1" name="pho_outfit32_shw" value="2" />
-            <talentvalue level="9" name="pho_outfit32_shw" value="10" />
+            <talentvalue level="1" name="pho_outfit32_pct" value="0.02"/>
+            <talentvalue level="9" name="pho_outfit32_pct" value="0.1"/>
+            <talentvalue level="1" name="pho_outfit32_shw" value="2"/>
+            <talentvalue level="9" name="pho_outfit32_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%pho_outfit32_shw Resist all">
+        <level count="9" description="+%pho_outfit32_shw resist all">
             <powerup life="-1">
-                <affecter attribute="resist_all" level="%pho_outfit32_pct" />
+                <affecter attribute="resist_all" level="%pho_outfit32_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pho_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit33_dr" value="1" />
-            <talentvalue level="9" name="pho_outfit33_dr" value="9" />
+            <talentvalue level="1" name="pho_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="pho_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%pho_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%pho_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Elusiveness" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="pho_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit41_pct" value="0.03" />
-            <talentvalue level="9" name="pho_outfit41_pct" value="0.15" />
+            <talentvalue level="1" name="pho_outfit41_pct" value="0.03"/>
+            <talentvalue level="9" name="pho_outfit41_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="+%pho_outfit41_pct:p Dodge Chance">
+        <level count="9" description="+%pho_outfit41_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%pho_outfit41_pct" />
+                <affecter attribute="def_dodge" level="%pho_outfit41_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Cosmic Reserves" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="pho_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit42_pct" value="2" />
-            <talentvalue level="9" name="pho_outfit42_pct" value="10" />
+            <talentvalue level="1" name="pho_outfit42_pct" value="2"/>
+            <talentvalue level="9" name="pho_outfit42_pct" value="10"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit42_pct Body\n+%pho_outfit42_pct Focus\n+%pho_outfit42_pct Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="%pho_outfit42_pct" />
+                <affecter attribute="traits" level="%pho_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pho_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit43_dr" value="1" />
-            <talentvalue level="9" name="pho_outfit43_dr" value="9" />
+            <talentvalue level="1" name="pho_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="pho_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%pho_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%pho_outfit43_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Energy" description="Increases maximum $EP." icon="20" icon_texture="textures/ui/talent_icons.png" name="pho_outfit51" skin="4" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit51_pct" value="1.04" />
-            <talentvalue level="9" name="pho_outfit51_pct" value="1.2" />
+            <talentvalue level="1" name="pho_outfit51_pct" value="1.04"/>
+            <talentvalue level="9" name="pho_outfit51_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%pho_outfit51_pct:s Maximum $EP">
+        <level count="9" description="%pho_outfit51_pct:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%pho_outfit51_pct" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%pho_outfit51_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Mutant Master" description="Provides a large boost to Focus" icon="13" icon_texture="textures/ui/talent_icons.png" name="pho_outfit52" skin="4" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit52_pct" value="5" />
-            <talentvalue level="9" name="pho_outfit52_pct" value="25" />
+            <talentvalue level="1" name="pho_outfit52_pct" value="5"/>
+            <talentvalue level="9" name="pho_outfit52_pct" value="25"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit52_pct Focus">
             <powerup life="-1">
-                <affecter attribute="traits" level="%pho_outfit52_pct" />
+                <affecter attribute="traits" level="%pho_outfit52_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="pho_outfit53" skin="4" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="pho_outfit53_dr" value="1" />
-            <talentvalue level="9" name="pho_outfit53_dr" value="9" />
+            <talentvalue level="1" name="pho_outfit53_dr" value="1"/>
+            <talentvalue level="9" name="pho_outfit53_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%pho_outfit53_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%pho_outfit53_dr" />
+                <affecter attribute="defense_rating" level="%pho_outfit53_dr"/>
             </powerup>
         </level>
     </talent>

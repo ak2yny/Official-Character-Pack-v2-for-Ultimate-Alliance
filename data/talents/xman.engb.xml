@@ -1,393 +1,393 @@
 <talents>
     <talent descname="Plasma Bolt" description="Fires a projectile of mental plasma energy." descshort="Projectile" icon="0" icon_texture="textures/ui/xman_icons.png" name="xman_bolt" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="xman_bolt_req" value="1" />
-            <talentvalue level="5" name="xman_bolt_req" value="13" />
-            <talentvalue level="6" name="xman_bolt_req" value="16" />
-            <talentvalue level="9" name="xman_bolt_req" value="25" />
-            <talentvalue level="10" name="xman_bolt_req" value="28" />
-            <talentvalue level="14" name="xman_bolt_req" value="52" />
-            <talentvalue level="15" name="xman_bolt_req" value="72" />
-            <talentvalue level="1" name="xman_bolt_dmg" value="30 36" />
-            <talentvalue level="3" name="xman_bolt_dmg" value="48 55" />
-            <talentvalue level="4" name="xman_bolt_dmg" value="56 62" />
-            <talentvalue level="7" name="xman_bolt_dmg" value="104 115" />
-            <talentvalue level="8" name="xman_bolt_dmg" value="116 124" />
-            <talentvalue level="12" name="xman_bolt_dmg" value="177 196" />
-            <talentvalue level="13" name="xman_bolt_dmg" value="195 217" />
-            <talentvalue level="15" name="xman_bolt_dmg" value="292 307" />
-            <talentvalue level="1" name="xman_bolt_pwr" value="6" />
-            <talentvalue level="3" name="xman_bolt_pwr" value="12" />
-            <talentvalue level="4" name="xman_bolt_pwr" value="16" />
-            <talentvalue level="7" name="xman_bolt_pwr" value="24" />
-            <talentvalue level="8" name="xman_bolt_pwr" value="27" />
-            <talentvalue level="12" name="xman_bolt_pwr" value="39" />
-            <talentvalue level="13" name="xman_bolt_pwr" value="43" />
-            <talentvalue level="15" name="xman_bolt_pwr" value="57" />
+            <talentvalue level="1" name="xman_bolt_req" value="1"/>
+            <talentvalue level="5" name="xman_bolt_req" value="13"/>
+            <talentvalue level="6" name="xman_bolt_req" value="16"/>
+            <talentvalue level="9" name="xman_bolt_req" value="25"/>
+            <talentvalue level="10" name="xman_bolt_req" value="28"/>
+            <talentvalue level="14" name="xman_bolt_req" value="52"/>
+            <talentvalue level="15" name="xman_bolt_req" value="72"/>
+            <talentvalue level="1" name="xman_bolt_dmg" value="30 36"/>
+            <talentvalue level="3" name="xman_bolt_dmg" value="48 55"/>
+            <talentvalue level="4" name="xman_bolt_dmg" value="56 62"/>
+            <talentvalue level="7" name="xman_bolt_dmg" value="104 115"/>
+            <talentvalue level="8" name="xman_bolt_dmg" value="116 124"/>
+            <talentvalue level="12" name="xman_bolt_dmg" value="177 196"/>
+            <talentvalue level="13" name="xman_bolt_dmg" value="195 217"/>
+            <talentvalue level="15" name="xman_bolt_dmg" value="292 307"/>
+            <talentvalue level="1" name="xman_bolt_pwr" value="6"/>
+            <talentvalue level="3" name="xman_bolt_pwr" value="12"/>
+            <talentvalue level="4" name="xman_bolt_pwr" value="16"/>
+            <talentvalue level="7" name="xman_bolt_pwr" value="24"/>
+            <talentvalue level="8" name="xman_bolt_pwr" value="27"/>
+            <talentvalue level="12" name="xman_bolt_pwr" value="39"/>
+            <talentvalue level="13" name="xman_bolt_pwr" value="43"/>
+            <talentvalue level="15" name="xman_bolt_pwr" value="57"/>
         </talentvalues>
         <level description="%xman_bolt_dmg $DMG_MENTAL\n%xman_bolt_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_bolt_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_bolt_req"/>
         </level>
     </talent>
     <talent descname="Brainwash" description="A radial blast of mental energy that has a chance of converting enemies." descshort="Radial" icon="1" icon_texture="textures/ui/xman_icons.png" name="xman_wash" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="xman_wash_req" value="20" />
-            <talentvalue level="3" name="xman_wash_req" value="26" />
-            <talentvalue level="4" name="xman_wash_req" value="29" />
-            <talentvalue level="8" name="xman_wash_req" value="53" />
-            <talentvalue level="9" name="xman_wash_req" value="73" />
-            <talentvalue level="1" name="xman_wash_pwr" value="22" />
-            <talentvalue level="9" name="xman_wash_pwr" value="56" />
-            <talentvalue level="1" name="xman_wash_dmg" value="30 36" />
-            <talentvalue level="7" name="xman_wash_dmg" value="82 93" />
-            <talentvalue level="9" name="xman_wash_dmg" value="123 141" />
-            <talentvalue level="1" name="xman_wash_lif" value="10" />
-            <talentvalue level="9" name="xman_wash_lif" value="10" />
-            <talentvalue level="1" name="xman_wash_pct" value="0.2" />
-            <talentvalue level="9" name="xman_wash_pct" value="0.75" />
+            <talentvalue level="1" name="xman_wash_req" value="20"/>
+            <talentvalue level="3" name="xman_wash_req" value="26"/>
+            <talentvalue level="4" name="xman_wash_req" value="29"/>
+            <talentvalue level="8" name="xman_wash_req" value="53"/>
+            <talentvalue level="9" name="xman_wash_req" value="73"/>
+            <talentvalue level="1" name="xman_wash_pwr" value="22"/>
+            <talentvalue level="9" name="xman_wash_pwr" value="56"/>
+            <talentvalue level="1" name="xman_wash_dmg" value="30 36"/>
+            <talentvalue level="7" name="xman_wash_dmg" value="82 93"/>
+            <talentvalue level="9" name="xman_wash_dmg" value="123 141"/>
+            <talentvalue level="1" name="xman_wash_lif" value="10"/>
+            <talentvalue level="9" name="xman_wash_lif" value="10"/>
+            <talentvalue level="1" name="xman_wash_pct" value=".2"/>
+            <talentvalue level="9" name="xman_wash_pct" value=".75"/>
         </talentvalues>
         <level description="%xman_wash_dmg $DMG_MENTAL\n%xman_wash_pct:p chance of converting\n%xman_wash_lif second conversion\n%xman_wash_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_wash_req" />
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_wash_req"/>
         </level>
     </talent>
     <talent descname="Plasma Shield" description="Plasma armor takes damage instead of X-Man." descshort="Boost" icon="2" icon_texture="textures/ui/xman_icons.png" name="xman_shield" power="power3" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="xman_shield_req" value="14" />
-            <talentvalue level="2" name="xman_shield_req" value="17" />
-            <talentvalue level="5" name="xman_shield_req" value="26" />
-            <talentvalue level="6" name="xman_shield_req" value="29" />
-            <talentvalue level="10" name="xman_shield_req" value="53" />
-            <talentvalue level="11" name="xman_shield_req" value="73" />
-            <talentvalue level="1" name="xman_shield_res" value="80" />
-            <talentvalue level="11" name="xman_shield_res" value="400" />
-            <talentvalue level="1" name="xman_shield_pwr" value="64" />
-            <talentvalue level="11" name="xman_shield_pwr" value="188" />
+            <talentvalue level="1" name="xman_shield_req" value="14"/>
+            <talentvalue level="2" name="xman_shield_req" value="17"/>
+            <talentvalue level="5" name="xman_shield_req" value="26"/>
+            <talentvalue level="6" name="xman_shield_req" value="29"/>
+            <talentvalue level="10" name="xman_shield_req" value="53"/>
+            <talentvalue level="11" name="xman_shield_req" value="73"/>
+            <talentvalue level="1" name="xman_shield_res" value="80"/>
+            <talentvalue level="11" name="xman_shield_res" value="400"/>
+            <talentvalue level="1" name="xman_shield_pwr" value="64"/>
+            <talentvalue level="11" name="xman_shield_pwr" value="188"/>
         </talentvalues>
         <level description="%xman_shield_res $DMG_PHYSICAL absorbed\n%xman_shield_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_shield_req" />
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_shield_req"/>
         </level>
     </talent>
     <talent descname="Telekinesis" description="Gives X-Man the ability to lift and throw objects and enemies.\n(~41Press And Hold~~)" descshort="Special" icon="3" icon_texture="textures/ui/xman_icons.png" name="xman_tele" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="xman_tele_req" value="5" />
-            <talentvalue level="5" name="xman_tele_req" value="14" />
-            <talentvalue level="6" name="xman_tele_req" value="17" />
-            <talentvalue level="9" name="xman_tele_req" value="26" />
-            <talentvalue level="10" name="xman_tele_req" value="29" />
-            <talentvalue level="14" name="xman_tele_req" value="53" />
-            <talentvalue level="15" name="xman_tele_req" value="73" />
-            <talentvalue level="1" name="xman_tele_power" value="21" />
-            <talentvalue level="5" name="xman_tele_power" value="33" />
-            <talentvalue level="6" name="xman_tele_power" value="33" />
-            <talentvalue level="9" name="xman_tele_power" value="45" />
-            <talentvalue level="10" name="xman_tele_power" value="51" />
-            <talentvalue level="14" name="xman_tele_power" value="75" />
-            <talentvalue level="15" name="xman_tele_power" value="93" />
-            <talentvalue level="1" name="xman_tele_pps" value="7" />
-            <talentvalue level="5" name="xman_tele_pps" value="11" />
-            <talentvalue level="6" name="xman_tele_pps" value="11" />
-            <talentvalue level="9" name="xman_tele_pps" value="15" />
-            <talentvalue level="10" name="xman_tele_pps" value="17" />
-            <talentvalue level="14" name="xman_tele_pps" value="25" />
-            <talentvalue level="15" name="xman_tele_pps" value="31" />
-            <talentvalue level="1" name="xman_tele_dm1" value="13 15" />
-            <talentvalue level="5" name="xman_tele_dm1" value="24 26" />
-            <talentvalue level="6" name="xman_tele_dm1" value="34 38" />
-            <talentvalue level="9" name="xman_tele_dm1" value="44 49" />
-            <talentvalue level="10" name="xman_tele_dm1" value="58 64" />
-            <talentvalue level="14" name="xman_tele_dm1" value="92 101" />
-            <talentvalue level="15" name="xman_tele_dm1" value="132 147" />
-            <talentvalue level="1" name="xman_tele_dm2" value="10 12" />
-            <talentvalue level="5" name="xman_tele_dm2" value="11 13" />
-            <talentvalue level="6" name="xman_tele_dm2" value="13 15" />
-            <talentvalue level="9" name="xman_tele_dm2" value="13 15" />
-            <talentvalue level="10" name="xman_tele_dm2" value="17 19" />
-            <talentvalue level="14" name="xman_tele_dm2" value="27 30" />
-            <talentvalue level="15" name="xman_tele_dm2" value="37 41" />
-            <talentvalue interpolate="false" level="1" name="xman_tele_hvy" value="1" />
-            <talentvalue interpolate="false" level="8" name="xman_tele_hvy" value="2" />
-            <talentvalue interpolate="false" level="15" name="xman_tele_hvy" value="2" />
+            <talentvalue level="1" name="xman_tele_req" value="5"/>
+            <talentvalue level="5" name="xman_tele_req" value="14"/>
+            <talentvalue level="6" name="xman_tele_req" value="17"/>
+            <talentvalue level="9" name="xman_tele_req" value="26"/>
+            <talentvalue level="10" name="xman_tele_req" value="29"/>
+            <talentvalue level="14" name="xman_tele_req" value="53"/>
+            <talentvalue level="15" name="xman_tele_req" value="73"/>
+            <talentvalue level="1" name="xman_tele_power" value="21"/>
+            <talentvalue level="5" name="xman_tele_power" value="33"/>
+            <talentvalue level="6" name="xman_tele_power" value="33"/>
+            <talentvalue level="9" name="xman_tele_power" value="45"/>
+            <talentvalue level="10" name="xman_tele_power" value="51"/>
+            <talentvalue level="14" name="xman_tele_power" value="75"/>
+            <talentvalue level="15" name="xman_tele_power" value="93"/>
+            <talentvalue level="1" name="xman_tele_pps" value="7"/>
+            <talentvalue level="5" name="xman_tele_pps" value="11"/>
+            <talentvalue level="6" name="xman_tele_pps" value="11"/>
+            <talentvalue level="9" name="xman_tele_pps" value="15"/>
+            <talentvalue level="10" name="xman_tele_pps" value="17"/>
+            <talentvalue level="14" name="xman_tele_pps" value="25"/>
+            <talentvalue level="15" name="xman_tele_pps" value="31"/>
+            <talentvalue level="1" name="xman_tele_dm1" value="13 15"/>
+            <talentvalue level="5" name="xman_tele_dm1" value="24 26"/>
+            <talentvalue level="6" name="xman_tele_dm1" value="34 38"/>
+            <talentvalue level="9" name="xman_tele_dm1" value="44 49"/>
+            <talentvalue level="10" name="xman_tele_dm1" value="58 64"/>
+            <talentvalue level="14" name="xman_tele_dm1" value="92 101"/>
+            <talentvalue level="15" name="xman_tele_dm1" value="132 147"/>
+            <talentvalue level="1" name="xman_tele_dm2" value="10 12"/>
+            <talentvalue level="5" name="xman_tele_dm2" value="11 13"/>
+            <talentvalue level="6" name="xman_tele_dm2" value="13 15"/>
+            <talentvalue level="9" name="xman_tele_dm2" value="13 15"/>
+            <talentvalue level="10" name="xman_tele_dm2" value="17 19"/>
+            <talentvalue level="14" name="xman_tele_dm2" value="27 30"/>
+            <talentvalue level="15" name="xman_tele_dm2" value="37 41"/>
+            <talentvalue interpolate="false" level="1" name="xman_tele_hvy" value="1"/>
+            <talentvalue interpolate="false" level="8" name="xman_tele_hvy" value="2"/>
+            <talentvalue interpolate="false" level="15" name="xman_tele_hvy" value="2"/>
         </talentvalues>
         <level description="%xman_tele_dm1 $DMG_PHYSICAL\n%xman_tele_dm2 $DMG_PHYSICAL when thrown\n^Light objects\n%xman_tele_power $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="2" />
-            <require cat="level" level="%xman_tele_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="2"/>
+            <require cat="level" level="%xman_tele_req"/>
         </level>
         <level description="%xman_tele_dm1 $DMG_PHYSICAL\n%xman_tele_dm2 $DMG_PHYSICAL when thrown\n^Heavy objects\n%xman_tele_power $EP">
-            <tier cost="2" count="2" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_tele_req" />
+            <tier cost="2" count="2"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_tele_req"/>
         </level>
     </talent>
     <talent descname="Plasma Pulse" description="A radial blast of plasma energy that knocks enemies back." descshort="Radial" icon="4" icon_texture="textures/ui/xman_icons.png" name="xman_pulse" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="xman_pulse_req" value="10" />
-            <talentvalue level="3" name="xman_pulse_req" value="13" />
-            <talentvalue level="4" name="xman_pulse_req" value="16" />
-            <talentvalue level="7" name="xman_pulse_req" value="25" />
-            <talentvalue level="8" name="xman_pulse_req" value="28" />
-            <talentvalue level="12" name="xman_pulse_req" value="52" />
-            <talentvalue level="13" name="xman_pulse_req" value="72" />
-            <talentvalue level="1" name="xman_pulse_life" value="5" />
-            <talentvalue level="13" name="xman_pulse_life" value="15" />
-            <talentvalue level="1" name="xman_pulse_res" value="0.75" />
-            <talentvalue level="13" name="xman_pulse_res" value="0.5" />
-            <talentvalue level="1" name="xman_pulse_kb" value="190" />
-            <talentvalue level="13" name="xman_pulse_kb" value="430" />
-            <talentvalue level="1" name="xman_pulse_dmg" value="17 19" />
-            <talentvalue level="3" name="xman_pulse_dmg" value="20 23" />
-            <talentvalue level="4" name="xman_pulse_dmg" value="27 30" />
-            <talentvalue level="7" name="xman_pulse_dmg" value="41 45" />
-            <talentvalue level="8" name="xman_pulse_dmg" value="51 56" />
-            <talentvalue level="12" name="xman_pulse_dmg" value="85 94" />
-            <talentvalue level="13" name="xman_pulse_dmg" value="126 139" />
-            <talentvalue level="1" name="xman_pulse_pwr" value="17" />
-            <talentvalue level="3" name="xman_pulse_pwr" value="20" />
-            <talentvalue level="4" name="xman_pulse_pwr" value="22" />
-            <talentvalue level="7" name="xman_pulse_pwr" value="29" />
-            <talentvalue level="8" name="xman_pulse_pwr" value="31" />
-            <talentvalue level="12" name="xman_pulse_pwr" value="48" />
-            <talentvalue level="13" name="xman_pulse_pwr" value="61" />
+            <talentvalue level="1" name="xman_pulse_req" value="10"/>
+            <talentvalue level="3" name="xman_pulse_req" value="13"/>
+            <talentvalue level="4" name="xman_pulse_req" value="16"/>
+            <talentvalue level="7" name="xman_pulse_req" value="25"/>
+            <talentvalue level="8" name="xman_pulse_req" value="28"/>
+            <talentvalue level="12" name="xman_pulse_req" value="52"/>
+            <talentvalue level="13" name="xman_pulse_req" value="72"/>
+            <talentvalue level="1" name="xman_pulse_life" value="5"/>
+            <talentvalue level="13" name="xman_pulse_life" value="15"/>
+            <talentvalue level="1" name="xman_pulse_res" value="0.75"/>
+            <talentvalue level="13" name="xman_pulse_res" value="0.5"/>
+            <talentvalue level="1" name="xman_pulse_kb" value="190"/>
+            <talentvalue level="13" name="xman_pulse_kb" value="430"/>
+            <talentvalue level="1" name="xman_pulse_dmg" value="17 19"/>
+            <talentvalue level="3" name="xman_pulse_dmg" value="20 23"/>
+            <talentvalue level="4" name="xman_pulse_dmg" value="27 30"/>
+            <talentvalue level="7" name="xman_pulse_dmg" value="41 45"/>
+            <talentvalue level="8" name="xman_pulse_dmg" value="51 56"/>
+            <talentvalue level="12" name="xman_pulse_dmg" value="85 94"/>
+            <talentvalue level="13" name="xman_pulse_dmg" value="126 139"/>
+            <talentvalue level="1" name="xman_pulse_pwr" value="17"/>
+            <talentvalue level="3" name="xman_pulse_pwr" value="20"/>
+            <talentvalue level="4" name="xman_pulse_pwr" value="22"/>
+            <talentvalue level="7" name="xman_pulse_pwr" value="29"/>
+            <talentvalue level="8" name="xman_pulse_pwr" value="31"/>
+            <talentvalue level="12" name="xman_pulse_pwr" value="48"/>
+            <talentvalue level="13" name="xman_pulse_pwr" value="61"/>
         </talentvalues>
         <level description="%xman_pulse_dmg $DMG_MENTAL\n%xman_pulse_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_pulse_req" />
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_pulse_req"/>
         </level>
     </talent>
     <talent descname="Plasma Charge" description="Charge enemies, causing them to explode and take massive damage." descshort="Special" icon="5" icon_texture="textures/ui/xman_icons.png" name="xman_charge" power="power6">
         <talentvalues>
-            <talentvalue level="1" name="xman_charge_req" value="17" />
-            <talentvalue level="4" name="xman_charge_req" value="26" />
-            <talentvalue level="5" name="xman_charge_req" value="29" />
-            <talentvalue level="9" name="xman_charge_req" value="53" />
-            <talentvalue level="10" name="xman_charge_req" value="73" />
-            <talentvalue level="1" name="xman_charge_kb" value="190" />
-            <talentvalue level="10" name="xman_charge_kb" value="430" />
-            <talentvalue level="1" name="xman_charge_pwr" value="15" />
-            <talentvalue level="2" name="xman_charge_pwr" value="17" />
-            <talentvalue level="5" name="xman_charge_pwr" value="22" />
-            <talentvalue level="6" name="xman_charge_pwr" value="24" />
-            <talentvalue level="9" name="xman_charge_pwr" value="37" />
-            <talentvalue level="10" name="xman_charge_pwr" value="47" />
-            <talentvalue level="1" name="xman_charge_dmg" value="17 19" />
-            <talentvalue level="2" name="xman_charge_dmg" value="20 23" />
-            <talentvalue level="5" name="xman_charge_dmg" value="31 34" />
-            <talentvalue level="6" name="xman_charge_dmg" value="41 45" />
-            <talentvalue level="9" name="xman_charge_dmg" value="65 71" />
-            <talentvalue level="10" name="xman_charge_dmg" value="95 105" />
+            <talentvalue level="1" name="xman_charge_req" value="17"/>
+            <talentvalue level="4" name="xman_charge_req" value="26"/>
+            <talentvalue level="5" name="xman_charge_req" value="29"/>
+            <talentvalue level="9" name="xman_charge_req" value="53"/>
+            <talentvalue level="10" name="xman_charge_req" value="73"/>
+            <talentvalue level="1" name="xman_charge_kb" value="190"/>
+            <talentvalue level="10" name="xman_charge_kb" value="430"/>
+            <talentvalue level="1" name="xman_charge_pwr" value="15"/>
+            <talentvalue level="2" name="xman_charge_pwr" value="17"/>
+            <talentvalue level="5" name="xman_charge_pwr" value="22"/>
+            <talentvalue level="6" name="xman_charge_pwr" value="24"/>
+            <talentvalue level="9" name="xman_charge_pwr" value="37"/>
+            <talentvalue level="10" name="xman_charge_pwr" value="47"/>
+            <talentvalue level="1" name="xman_charge_dmg" value="17 19"/>
+            <talentvalue level="2" name="xman_charge_dmg" value="20 23"/>
+            <talentvalue level="5" name="xman_charge_dmg" value="31 34"/>
+            <talentvalue level="6" name="xman_charge_dmg" value="41 45"/>
+            <talentvalue level="9" name="xman_charge_dmg" value="65 71"/>
+            <talentvalue level="10" name="xman_charge_dmg" value="95 105"/>
         </talentvalues>
         <level description="%xman_charge_dmg $DMG on explosion\n%xman_charge_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_charge_req" />
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_charge_req"/>
         </level>
     </talent>
     <talent descname="Plasma Guardian" description="Summons a plasma guardian entity that attacks enemies." descshort="Xtreme" icon="6" icon_texture="textures/ui/xman_icons.png" name="xman_guard" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="xman_guard_req" value="10" />
-            <talentvalue level="8" name="xman_guard_req" value="45" />
-            <talentvalue level="1" name="xman_guard_dmg" value="108 121" />
-            <talentvalue level="8" name="xman_guard_dmg" value="214 238" />
-            <talentvalue level="1" name="xman_guard_hth" value="40" />
-            <talentvalue level="8" name="xman_guard_hth" value="82" />
-            <talentvalue level="1" name="xman_guard_lif" value="12" />
-            <talentvalue level="8" name="xman_guard_lif" value="35" />
+            <talentvalue level="1" name="xman_guard_req" value="10"/>
+            <talentvalue level="8" name="xman_guard_req" value="45"/>
+            <talentvalue level="1" name="xman_guard_dmg" value="108 121"/>
+            <talentvalue level="8" name="xman_guard_dmg" value="214 238"/>
+            <talentvalue level="1" name="xman_guard_hth" value="40"/>
+            <talentvalue level="8" name="xman_guard_hth" value="82"/>
+            <talentvalue level="1" name="xman_guard_lif" value="12"/>
+            <talentvalue level="8" name="xman_guard_lif" value="35"/>
         </talentvalues>
         <level description="%xman_guard_dmg $DMG_MENTAL\n%xman_guard_hth health\n%xman_guard_lif seconds">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%xman_guard_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%xman_guard_req"/>
         </level>
     </talent>
     <talent descname="Plasma Fist" description="Adds $DMG_MENTAL to melee attacks for a time." descshort="Boost" icon="7" icon_texture="textures/ui/xman_icons.png" name="xman_fist" power="power8" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="xman_fist_req" value="2" />
-            <talentvalue level="5" name="xman_fist_req" value="14" />
-            <talentvalue level="6" name="xman_fist_req" value="17" />
-            <talentvalue level="9" name="xman_fist_req" value="26" />
-            <talentvalue level="10" name="xman_fist_req" value="29" />
-            <talentvalue level="14" name="xman_fist_req" value="53" />
-            <talentvalue level="15" name="xman_fist_req" value="73" />
-            <talentvalue level="1" name="xman_fist_life" value="20" />
-            <talentvalue level="5" name="xman_fist_life" value="40" />
-            <talentvalue level="6" name="xman_fist_life" value="50" />
-            <talentvalue level="9" name="xman_fist_life" value="65" />
-            <talentvalue level="10" name="xman_fist_life" value="80" />
-            <talentvalue level="14" name="xman_fist_life" value="120" />
-            <talentvalue level="15" name="xman_fist_life" value="180" />
-            <talentvalue level="1" name="xman_fist_pct" value="0.05" />
-            <talentvalue level="15" name="xman_fist_pct" value="0.47" />
-            <talentvalue level="1" name="xman_fist_pwr" value="32" />
-            <talentvalue level="5" name="xman_fist_pwr" value="60" />
-            <talentvalue level="6" name="xman_fist_pwr" value="68" />
-            <talentvalue level="9" name="xman_fist_pwr" value="88" />
-            <talentvalue level="10" name="xman_fist_pwr" value="92" />
-            <talentvalue level="14" name="xman_fist_pwr" value="140" />
-            <talentvalue level="15" name="xman_fist_pwr" value="172" />
+            <talentvalue level="1" name="xman_fist_req" value="2"/>
+            <talentvalue level="5" name="xman_fist_req" value="14"/>
+            <talentvalue level="6" name="xman_fist_req" value="17"/>
+            <talentvalue level="9" name="xman_fist_req" value="26"/>
+            <talentvalue level="10" name="xman_fist_req" value="29"/>
+            <talentvalue level="14" name="xman_fist_req" value="53"/>
+            <talentvalue level="15" name="xman_fist_req" value="73"/>
+            <talentvalue level="1" name="xman_fist_life" value="20"/>
+            <talentvalue level="5" name="xman_fist_life" value="40"/>
+            <talentvalue level="6" name="xman_fist_life" value="50"/>
+            <talentvalue level="9" name="xman_fist_life" value="65"/>
+            <talentvalue level="10" name="xman_fist_life" value="80"/>
+            <talentvalue level="14" name="xman_fist_life" value="120"/>
+            <talentvalue level="15" name="xman_fist_life" value="180"/>
+            <talentvalue level="1" name="xman_fist_pct" value="0.05"/>
+            <talentvalue level="15" name="xman_fist_pct" value="0.47"/>
+            <talentvalue level="1" name="xman_fist_pwr" value="32"/>
+            <talentvalue level="5" name="xman_fist_pwr" value="60"/>
+            <talentvalue level="6" name="xman_fist_pwr" value="68"/>
+            <talentvalue level="9" name="xman_fist_pwr" value="88"/>
+            <talentvalue level="10" name="xman_fist_pwr" value="92"/>
+            <talentvalue level="14" name="xman_fist_pwr" value="140"/>
+            <talentvalue level="15" name="xman_fist_pwr" value="172"/>
         </talentvalues>
         <level description="%xman_fist_pct:p $DMG_MENTAL\n%xman_fist_life seconds\n%xman_fist_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%xman_fist_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%xman_fist_req"/>
         </level>
     </talent>
     <talent descname="Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="xman_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit11_pct" value="1.03" />
-            <talentvalue level="9" name="xman_outfit11_pct" value="1.15" />
+            <talentvalue level="1" name="xman_outfit11_pct" value="1.03"/>
+            <talentvalue level="9" name="xman_outfit11_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%xman_outfit11_pct:s Power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit11_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit11_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="xman_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit12_pct" value="1.05" />
-            <talentvalue level="9" name="xman_outfit12_pct" value="1.25" />
+            <talentvalue level="1" name="xman_outfit12_pct" value="1.05"/>
+            <talentvalue level="9" name="xman_outfit12_pct" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%xman_outfit12_pct:s Maximum $HP">
+        <level count="9" description="%xman_outfit12_pct:s maximum $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%xman_outfit12_pct" />
+                <affecter affect_type="scale" attribute="maxhealth" level="%xman_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="xman_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit13_dr" value="1" />
-            <talentvalue level="9" name="xman_outfit13_dr" value="9" />
+            <talentvalue level="1" name="xman_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="xman_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%xman_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%xman_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%xman_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="xman_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit21_crit" value="0.02" />
-            <talentvalue level="9" name="xman_outfit21_crit" value="0.1" />
+            <talentvalue level="1" name="xman_outfit21_crit" value="0.02"/>
+            <talentvalue level="9" name="xman_outfit21_crit" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%xman_outfit21_crit:p Critical Chance">
+        <level count="9" description="+%xman_outfit21_crit:p critical chance">
             <powerup life="-1">
-                <affecter attribute="atk_critical" level="%xman_outfit21_crit" />
+                <affecter attribute="atk_critical" level="%xman_outfit21_crit"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="xman_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit22_pct" value="0.03" />
-            <talentvalue level="9" name="xman_outfit22_pct" value="0.15" />
+            <talentvalue level="1" name="xman_outfit22_pct" value="0.03"/>
+            <talentvalue level="9" name="xman_outfit22_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="+%xman_outfit22_pct:p Dodge Chance">
+        <level count="9" description="+%xman_outfit22_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%xman_outfit22_pct" scope_damage="dmg_physical" />
+                <affecter attribute="def_dodge" level="%xman_outfit22_pct" scope_damage="dmg_physical"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="xman_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit23_dr" value="1" />
-            <talentvalue level="9" name="xman_outfit23_dr" value="9" />
+            <talentvalue level="1" name="xman_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="xman_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%xman_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%xman_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%xman_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="xman_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit31_pct" value="1.03" />
-            <talentvalue level="9" name="xman_outfit31_pct" value="1.15" />
+            <talentvalue level="1" name="xman_outfit31_pct" value="1.03"/>
+            <talentvalue level="9" name="xman_outfit31_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%xman_outfit31_pct:s Power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit31_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit31_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Increased Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="xman_outfit32" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="xman_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit32_pct" value="1.04" />
-            <talentvalue level="9" name="xman_outfit32_pct" value="1.2" />
+            <talentvalue level="1" name="xman_outfit32_pct" value="1.04"/>
+            <talentvalue level="9" name="xman_outfit32_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%xman_outfit32_pct:s Melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit32_pct" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%xman_outfit32_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="xman_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit33_dr" value="1" />
-            <talentvalue level="9" name="xman_outfit33_dr" value="9" />
+            <talentvalue level="1" name="xman_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="xman_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%xman_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%xman_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%xman_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="xman_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit41_pct" value="0.25" />
-            <talentvalue level="9" name="xman_outfit41_pct" value="1.25" />
+            <talentvalue level="1" name="xman_outfit41_pct" value="0.25"/>
+            <talentvalue level="9" name="xman_outfit41_pct" value="1.25"/>
         </talentvalues>
         <level count="9" description="%xman_outfit41_pct:p $DMG reflected">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="reflect_damage" level="%xman_outfit41_pct" scope_non_powers="true">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="xman_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit42_pct" value="1.04" />
-            <talentvalue level="9" name="xman_outfit42_pct" value="1.2" />
+            <talentvalue level="1" name="xman_outfit42_pct" value="1.04"/>
+            <talentvalue level="9" name="xman_outfit42_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%xman_outfit42_pct:s Maximum $EP">
+        <level count="9" description="%xman_outfit42_pct:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%xman_outfit42_pct" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%xman_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="xman_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="xman_outfit43_dr" value="1" />
-            <talentvalue level="9" name="xman_outfit43_dr" value="9" />
+            <talentvalue level="1" name="xman_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="xman_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%xman_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%xman_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%xman_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

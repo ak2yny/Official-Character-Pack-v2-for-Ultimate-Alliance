@@ -1,380 +1,380 @@
 <talents>
     <talent descname="Cosmic Beam" description="A powerful piercing beam.  $PT_CHARGE" descshort="Beam" icon="0" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="silver_p1_req" value="1" />
-            <talentvalue level="5" name="silver_p1_req" value="13" />
-            <talentvalue level="6" name="silver_p1_req" value="16" />
-            <talentvalue level="9" name="silver_p1_req" value="25" />
-            <talentvalue level="10" name="silver_p1_req" value="28" />
-            <talentvalue level="14" name="silver_p1_req" value="52" />
-            <talentvalue level="15" name="silver_p1_req" value="72" />
-            <talentvalue level="1" name="silver_p1_dmg" value="17 19" value_charged_scale="2.0" />
-            <talentvalue level="5" name="silver_p1_dmg" value="58 64" value_charged_scale="2.0" />
-            <talentvalue level="6" name="silver_p1_dmg" value="78 86" value_charged_scale="2.0" />
-            <talentvalue level="9" name="silver_p1_dmg" value="109 120" value_charged_scale="2.0" />
-            <talentvalue level="10" name="silver_p1_dmg" value="139 154" value_charged_scale="2.0" />
-            <talentvalue level="14" name="silver_p1_dmg" value="221 244" value_charged_scale="2.0" />
-            <talentvalue level="15" name="silver_p1_dmg" value="319 353" value_charged_scale="2.0" />
-            <talentvalue level="1" name="silver_p1_pwr" value="7" />
-            <talentvalue level="5" name="silver_p1_pwr" value="15" />
-            <talentvalue level="6" name="silver_p1_pwr" value="17" />
-            <talentvalue level="9" name="silver_p1_pwr" value="22" />
-            <talentvalue level="10" name="silver_p1_pwr" value="24" />
-            <talentvalue level="14" name="silver_p1_pwr" value="37" />
-            <talentvalue level="15" name="silver_p1_pwr" value="47" />
+            <talentvalue level="1" name="silver_p1_req" value="1"/>
+            <talentvalue level="5" name="silver_p1_req" value="13"/>
+            <talentvalue level="6" name="silver_p1_req" value="16"/>
+            <talentvalue level="9" name="silver_p1_req" value="25"/>
+            <talentvalue level="10" name="silver_p1_req" value="28"/>
+            <talentvalue level="14" name="silver_p1_req" value="52"/>
+            <talentvalue level="15" name="silver_p1_req" value="72"/>
+            <talentvalue level="1" name="silver_p1_dmg" value="17 19" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="silver_p1_dmg" value="58 64" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="silver_p1_dmg" value="78 86" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="silver_p1_dmg" value="109 120" value_charged_scale="2.0"/>
+            <talentvalue level="10" name="silver_p1_dmg" value="139 154" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="silver_p1_dmg" value="221 244" value_charged_scale="2.0"/>
+            <talentvalue level="15" name="silver_p1_dmg" value="319 353" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="silver_p1_pwr" value="7"/>
+            <talentvalue level="5" name="silver_p1_pwr" value="15"/>
+            <talentvalue level="6" name="silver_p1_pwr" value="17"/>
+            <talentvalue level="9" name="silver_p1_pwr" value="22"/>
+            <talentvalue level="10" name="silver_p1_pwr" value="24"/>
+            <talentvalue level="14" name="silver_p1_pwr" value="37"/>
+            <talentvalue level="15" name="silver_p1_pwr" value="47"/>
         </talentvalues>
         <level description="%silver_p1_dmg  $DMG_ENERGY\n%silver_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p1_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p1_req"/>
         </level>
     </talent>
     <talent descname="Silver Dash" description="Quick burst forward on board, knocks enemies back and damages them." descshort="Charge" icon="1" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="silver_p2_req" value="5" />
-            <talentvalue level="5" name="silver_p2_req" value="14" />
-            <talentvalue level="6" name="silver_p2_req" value="17" />
-            <talentvalue level="9" name="silver_p2_req" value="26" />
-            <talentvalue level="10" name="silver_p2_req" value="29" />
-            <talentvalue level="14" name="silver_p2_req" value="53" />
-            <talentvalue level="15" name="silver_p2_req" value="73" />
-            <talentvalue level="1" name="silver_p2_dmg" value="11 13" />
-            <talentvalue level="5" name="silver_p2_dmg" value="20 23" />
-            <talentvalue level="6" name="silver_p2_dmg" value="31 34" />
-            <talentvalue level="9" name="silver_p2_dmg" value="44 49" />
-            <talentvalue level="10" name="silver_p2_dmg" value="58 64" />
-            <talentvalue level="14" name="silver_p2_dmg" value="92 101" />
-            <talentvalue level="15" name="silver_p2_dmg" value="132 147" />
-            <talentvalue level="1" name="silver_p2_kb" value="40" />
-            <talentvalue level="15" name="silver_p2_kb" value="370" />
-            <talentvalue level="1" name="silver_p2_pwr" value="7" />
-            <talentvalue level="5" name="silver_p2_pwr" value="11" />
-            <talentvalue level="6" name="silver_p2_pwr" value="11" />
-            <talentvalue level="9" name="silver_p2_pwr" value="15" />
-            <talentvalue level="10" name="silver_p2_pwr" value="17" />
-            <talentvalue level="14" name="silver_p2_pwr" value="25" />
-            <talentvalue level="15" name="silver_p2_pwr" value="31" />
+            <talentvalue level="1" name="silver_p2_req" value="5"/>
+            <talentvalue level="5" name="silver_p2_req" value="14"/>
+            <talentvalue level="6" name="silver_p2_req" value="17"/>
+            <talentvalue level="9" name="silver_p2_req" value="26"/>
+            <talentvalue level="10" name="silver_p2_req" value="29"/>
+            <talentvalue level="14" name="silver_p2_req" value="53"/>
+            <talentvalue level="15" name="silver_p2_req" value="73"/>
+            <talentvalue level="1" name="silver_p2_dmg" value="11 13"/>
+            <talentvalue level="5" name="silver_p2_dmg" value="20 23"/>
+            <talentvalue level="6" name="silver_p2_dmg" value="31 34"/>
+            <talentvalue level="9" name="silver_p2_dmg" value="44 49"/>
+            <talentvalue level="10" name="silver_p2_dmg" value="58 64"/>
+            <talentvalue level="14" name="silver_p2_dmg" value="92 101"/>
+            <talentvalue level="15" name="silver_p2_dmg" value="132 147"/>
+            <talentvalue level="1" name="silver_p2_kb" value="40"/>
+            <talentvalue level="15" name="silver_p2_kb" value="370"/>
+            <talentvalue level="1" name="silver_p2_pwr" value="7"/>
+            <talentvalue level="5" name="silver_p2_pwr" value="11"/>
+            <talentvalue level="6" name="silver_p2_pwr" value="11"/>
+            <talentvalue level="9" name="silver_p2_pwr" value="15"/>
+            <talentvalue level="10" name="silver_p2_pwr" value="17"/>
+            <talentvalue level="14" name="silver_p2_pwr" value="25"/>
+            <talentvalue level="15" name="silver_p2_pwr" value="31"/>
         </talentvalues>
         <level description="%silver_p2_dmg $DMG_PHYSICAL\n%silver_p2_kb $KB\n%silver_p2_pwr $EP\n">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p2_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p2_req"/>
         </level>
     </talent>
     <talent descname="Power Surge" description="A radial blast of cosmic energy that stuns enemies." descshort="Radial" icon="2" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="silver_p3_req" value="10" />
-            <talentvalue level="3" name="silver_p3_req" value="13" />
-            <talentvalue level="4" name="silver_p3_req" value="16" />
-            <talentvalue level="7" name="silver_p3_req" value="25" />
-            <talentvalue level="8" name="silver_p3_req" value="28" />
-            <talentvalue level="12" name="silver_p3_req" value="52" />
-            <talentvalue level="13" name="silver_p3_req" value="72" />
-            <talentvalue level="1" name="silver_p3_dmg" value="17 19" />
-            <talentvalue level="3" name="silver_p3_dmg" value="20 23" />
-            <talentvalue level="4" name="silver_p3_dmg" value="27 30" />
-            <talentvalue level="7" name="silver_p3_dmg" value="41 45" />
-            <talentvalue level="8" name="silver_p3_dmg" value="51 56" />
-            <talentvalue level="12" name="silver_p3_dmg" value="85 94" />
-            <talentvalue level="13" name="silver_p3_dmg" value="126 139" />
-            <talentvalue level="1" name="silver_p3_pwr" value="17" />
-            <talentvalue level="3" name="silver_p3_pwr" value="20" />
-            <talentvalue level="4" name="silver_p3_pwr" value="22" />
-            <talentvalue level="7" name="silver_p3_pwr" value="29" />
-            <talentvalue level="8" name="silver_p3_pwr" value="31" />
-            <talentvalue level="12" name="silver_p3_pwr" value="48" />
-            <talentvalue level="13" name="silver_p3_pwr" value="61" />
-            <talentvalue level="1" name="silver_p3_kb" value="40" />
-            <talentvalue level="13" name="silver_p3_kb" value="305" />
+            <talentvalue level="1" name="silver_p3_req" value="10"/>
+            <talentvalue level="3" name="silver_p3_req" value="13"/>
+            <talentvalue level="4" name="silver_p3_req" value="16"/>
+            <talentvalue level="7" name="silver_p3_req" value="25"/>
+            <talentvalue level="8" name="silver_p3_req" value="28"/>
+            <talentvalue level="12" name="silver_p3_req" value="52"/>
+            <talentvalue level="13" name="silver_p3_req" value="72"/>
+            <talentvalue level="1" name="silver_p3_dmg" value="17 19"/>
+            <talentvalue level="3" name="silver_p3_dmg" value="20 23"/>
+            <talentvalue level="4" name="silver_p3_dmg" value="27 30"/>
+            <talentvalue level="7" name="silver_p3_dmg" value="41 45"/>
+            <talentvalue level="8" name="silver_p3_dmg" value="51 56"/>
+            <talentvalue level="12" name="silver_p3_dmg" value="85 94"/>
+            <talentvalue level="13" name="silver_p3_dmg" value="126 139"/>
+            <talentvalue level="1" name="silver_p3_pwr" value="17"/>
+            <talentvalue level="3" name="silver_p3_pwr" value="20"/>
+            <talentvalue level="4" name="silver_p3_pwr" value="22"/>
+            <talentvalue level="7" name="silver_p3_pwr" value="29"/>
+            <talentvalue level="8" name="silver_p3_pwr" value="31"/>
+            <talentvalue level="12" name="silver_p3_pwr" value="48"/>
+            <talentvalue level="13" name="silver_p3_pwr" value="61"/>
+            <talentvalue level="1" name="silver_p3_kb" value="40"/>
+            <talentvalue level="13" name="silver_p3_kb" value="305"/>
         </talentvalues>
         <level description="%silver_p3_dmg  $DMG_ENERGY\n%silver_p3_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p3_req" />
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p3_req"/>
         </level>
     </talent>
     <talent descname="Surfer's Rage" description="Create arcs of energy to enemies, dealing initial $DMG, and chaining to up to 4 extra enemies with each button tap. $PT_TAP" descshort="Charge" icon="3" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="silver_p4_req" value="17" />
-            <talentvalue level="4" name="silver_p4_req" value="26" />
-            <talentvalue level="5" name="silver_p4_req" value="29" />
-            <talentvalue level="9" name="silver_p4_req" value="53" />
-            <talentvalue level="10" name="silver_p4_req" value="73" />
-            <talentvalue level="1" name="silver_p4_dmg" value="48 53" />
-            <talentvalue level="4" name="silver_p4_dmg" value="65 71" />
-            <talentvalue level="5" name="silver_p4_dmg" value="82 90" />
-            <talentvalue level="9" name="silver_p4_dmg" value="132 147" />
-            <talentvalue level="10" name="silver_p4_dmg" value="190 210" />
-            <talentvalue level="1" name="silver_p4_dmg2" value="5" />
-            <talentvalue level="10" name="silver_p4_dmg2" value="20" />
-            <talentvalue level="1" name="silver_p4_pwr" value="19" />
-            <talentvalue level="4" name="silver_p4_pwr" value="25" />
-            <talentvalue level="5" name="silver_p4_pwr" value="29" />
-            <talentvalue level="9" name="silver_p4_pwr" value="42" />
-            <talentvalue level="10" name="silver_p4_pwr" value="52" />
-            <talentvalue level="1" name="silver_p4_kb" value="120" />
-            <talentvalue level="10" name="silver_p4_kb" value="245" />
+            <talentvalue level="1" name="silver_p4_req" value="17"/>
+            <talentvalue level="4" name="silver_p4_req" value="26"/>
+            <talentvalue level="5" name="silver_p4_req" value="29"/>
+            <talentvalue level="9" name="silver_p4_req" value="53"/>
+            <talentvalue level="10" name="silver_p4_req" value="73"/>
+            <talentvalue level="1" name="silver_p4_dmg" value="48 53"/>
+            <talentvalue level="4" name="silver_p4_dmg" value="65 71"/>
+            <talentvalue level="5" name="silver_p4_dmg" value="82 90"/>
+            <talentvalue level="9" name="silver_p4_dmg" value="132 147"/>
+            <talentvalue level="10" name="silver_p4_dmg" value="190 210"/>
+            <talentvalue level="1" name="silver_p4_dmg2" value="5"/>
+            <talentvalue level="10" name="silver_p4_dmg2" value="20"/>
+            <talentvalue level="1" name="silver_p4_pwr" value="19"/>
+            <talentvalue level="4" name="silver_p4_pwr" value="25"/>
+            <talentvalue level="5" name="silver_p4_pwr" value="29"/>
+            <talentvalue level="9" name="silver_p4_pwr" value="42"/>
+            <talentvalue level="10" name="silver_p4_pwr" value="52"/>
+            <talentvalue level="1" name="silver_p4_kb" value="120"/>
+            <talentvalue level="10" name="silver_p4_kb" value="245"/>
         </talentvalues>
         <level description="%silver_p4_dmg initial $DMG_ENERGY\n%silver_p4_dmg2 additional $DMG_ENERGY per tap\n%silver_p4_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p4_req" />
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p4_req"/>
         </level>
     </talent>
     <talent descname="Molecular Mix-up" description="Re-arrange molecules in targeted enemy, causing internal $DMG." descshort="Special" icon="4" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p5" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="silver_p5_req" value="20" />
-            <talentvalue level="3" name="silver_p5_req" value="26" />
-            <talentvalue level="4" name="silver_p5_req" value="29" />
-            <talentvalue level="8" name="silver_p5_req" value="53" />
-            <talentvalue level="9" name="silver_p5_req" value="73" />
-            <talentvalue level="1" name="silver_p5_dmg" value="92 101" />
-            <talentvalue level="3" name="silver_p5_dmg" value="112 124" />
-            <talentvalue level="4" name="silver_p5_dmg" value="143 157" />
-            <talentvalue level="8" name="silver_p5_dmg" value="224 248" />
-            <talentvalue level="9" name="silver_p5_dmg" value="322 356" />
-            <talentvalue level="1" name="silver_p5_pwr" value="19" />
-            <talentvalue level="3" name="silver_p5_pwr" value="23" />
-            <talentvalue level="4" name="silver_p5_pwr" value="25" />
-            <talentvalue level="8" name="silver_p5_pwr" value="38" />
-            <talentvalue level="9" name="silver_p5_pwr" value="47" />
+            <talentvalue level="1" name="silver_p5_req" value="20"/>
+            <talentvalue level="3" name="silver_p5_req" value="26"/>
+            <talentvalue level="4" name="silver_p5_req" value="29"/>
+            <talentvalue level="8" name="silver_p5_req" value="53"/>
+            <talentvalue level="9" name="silver_p5_req" value="73"/>
+            <talentvalue level="1" name="silver_p5_dmg" value="92 101"/>
+            <talentvalue level="3" name="silver_p5_dmg" value="112 124"/>
+            <talentvalue level="4" name="silver_p5_dmg" value="143 157"/>
+            <talentvalue level="8" name="silver_p5_dmg" value="224 248"/>
+            <talentvalue level="9" name="silver_p5_dmg" value="322 356"/>
+            <talentvalue level="1" name="silver_p5_pwr" value="19"/>
+            <talentvalue level="3" name="silver_p5_pwr" value="23"/>
+            <talentvalue level="4" name="silver_p5_pwr" value="25"/>
+            <talentvalue level="8" name="silver_p5_pwr" value="38"/>
+            <talentvalue level="9" name="silver_p5_pwr" value="47"/>
         </talentvalues>
         <level description="%silver_p5_dmg $DMG\n%silver_p5_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p5_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p5_req"/>
         </level>
     </talent>
     <talent descname="Heal" description="Heal all nearby allies." descshort="Boost" icon="5" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="silver_p6_req" value="14" />
-            <talentvalue level="2" name="silver_p6_req" value="17" />
-            <talentvalue level="5" name="silver_p6_req" value="26" />
-            <talentvalue level="6" name="silver_p6_req" value="29" />
-            <talentvalue level="10" name="silver_p6_req" value="53" />
-            <talentvalue level="11" name="silver_p6_req" value="73" />
-            <talentvalue level="1" name="silver_p6_pct" value="0.5" />
-            <talentvalue level="11" name="silver_p6_pct" value="0.85" />
-            <talentvalue level="1" name="silver_p6_pwr" value="64" />
-            <talentvalue level="2" name="silver_p6_pwr" value="68" />
-            <talentvalue level="5" name="silver_p6_pwr" value="92" />
-            <talentvalue level="6" name="silver_p6_pwr" value="100" />
-            <talentvalue level="10" name="silver_p6_pwr" value="152" />
-            <talentvalue level="11" name="silver_p6_pwr" value="188" />
+            <talentvalue level="1" name="silver_p6_req" value="14"/>
+            <talentvalue level="2" name="silver_p6_req" value="17"/>
+            <talentvalue level="5" name="silver_p6_req" value="26"/>
+            <talentvalue level="6" name="silver_p6_req" value="29"/>
+            <talentvalue level="10" name="silver_p6_req" value="53"/>
+            <talentvalue level="11" name="silver_p6_req" value="73"/>
+            <talentvalue level="1" name="silver_p6_pct" value="0.5"/>
+            <talentvalue level="11" name="silver_p6_pct" value="0.85"/>
+            <talentvalue level="1" name="silver_p6_pwr" value="64"/>
+            <talentvalue level="2" name="silver_p6_pwr" value="68"/>
+            <talentvalue level="5" name="silver_p6_pwr" value="92"/>
+            <talentvalue level="6" name="silver_p6_pwr" value="100"/>
+            <talentvalue level="10" name="silver_p6_pwr" value="152"/>
+            <talentvalue level="11" name="silver_p6_pwr" value="188"/>
         </talentvalues>
         <level description="%silver_p6_pct:p of max $HP restored\n%silver_p6_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p6_req" />
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p6_req"/>
         </level>
     </talent>
     <talent descname="Slow Time" description="Slow down time except for Silver Surfer and his allies." descshort="Boost" icon="6" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="silver_p7_req" value="2" />
-            <talentvalue level="5" name="silver_p7_req" value="14" />
-            <talentvalue level="6" name="silver_p7_req" value="17" />
-            <talentvalue level="9" name="silver_p7_req" value="26" />
-            <talentvalue level="10" name="silver_p7_req" value="29" />
-            <talentvalue level="14" name="silver_p7_req" value="53" />
-            <talentvalue level="15" name="silver_p7_req" value="73" />
-            <talentvalue level="1" name="silver_p7_spd" value="2" />
-            <talentvalue level="1" name="silver_p7_wrld" value="0.5" />
-            <talentvalue level="1" name="silver_p7_lif" value="5" />
-            <talentvalue level="5" name="silver_p7_lif" value="7.5" />
-            <talentvalue level="6" name="silver_p7_lif" value="8.5" />
-            <talentvalue level="9" name="silver_p7_lif" value="10" />
-            <talentvalue level="10" name="silver_p7_lif" value="11" />
-            <talentvalue level="14" name="silver_p7_lif" value="13" />
-            <talentvalue level="15" name="silver_p7_lif" value="14" />
-            <talentvalue level="1" name="silver_p7_lif2" value="10" />
-            <talentvalue level="5" name="silver_p7_lif2" value="15" />
-            <talentvalue level="6" name="silver_p7_lif2" value="17" />
-            <talentvalue level="9" name="silver_p7_lif2" value="20" />
-            <talentvalue level="10" name="silver_p7_lif2" value="22" />
-            <talentvalue level="14" name="silver_p7_lif2" value="26" />
-            <talentvalue level="15" name="silver_p7_lif2" value="28" />
-            <talentvalue level="1" name="silver_p7_pwr" value="32" />
-            <talentvalue level="5" name="silver_p7_pwr" value="64" />
-            <talentvalue level="6" name="silver_p7_pwr" value="68" />
-            <talentvalue level="9" name="silver_p7_pwr" value="92" />
-            <talentvalue level="10" name="silver_p7_pwr" value="100" />
-            <talentvalue level="14" name="silver_p7_pwr" value="152" />
-            <talentvalue level="15" name="silver_p7_pwr" value="188" />
+            <talentvalue level="1" name="silver_p7_req" value="2"/>
+            <talentvalue level="5" name="silver_p7_req" value="14"/>
+            <talentvalue level="6" name="silver_p7_req" value="17"/>
+            <talentvalue level="9" name="silver_p7_req" value="26"/>
+            <talentvalue level="10" name="silver_p7_req" value="29"/>
+            <talentvalue level="14" name="silver_p7_req" value="53"/>
+            <talentvalue level="15" name="silver_p7_req" value="73"/>
+            <talentvalue level="1" name="silver_p7_spd" value="2"/>
+            <talentvalue level="1" name="silver_p7_wrld" value="0.5"/>
+            <talentvalue level="1" name="silver_p7_lif" value="5"/>
+            <talentvalue level="5" name="silver_p7_lif" value="7.5"/>
+            <talentvalue level="6" name="silver_p7_lif" value="8.5"/>
+            <talentvalue level="9" name="silver_p7_lif" value="10"/>
+            <talentvalue level="10" name="silver_p7_lif" value="11"/>
+            <talentvalue level="14" name="silver_p7_lif" value="13"/>
+            <talentvalue level="15" name="silver_p7_lif" value="14"/>
+            <talentvalue level="1" name="silver_p7_lif2" value="10"/>
+            <talentvalue level="5" name="silver_p7_lif2" value="15"/>
+            <talentvalue level="6" name="silver_p7_lif2" value="17"/>
+            <talentvalue level="9" name="silver_p7_lif2" value="20"/>
+            <talentvalue level="10" name="silver_p7_lif2" value="22"/>
+            <talentvalue level="14" name="silver_p7_lif2" value="26"/>
+            <talentvalue level="15" name="silver_p7_lif2" value="28"/>
+            <talentvalue level="1" name="silver_p7_pwr" value="32"/>
+            <talentvalue level="5" name="silver_p7_pwr" value="64"/>
+            <talentvalue level="6" name="silver_p7_pwr" value="68"/>
+            <talentvalue level="9" name="silver_p7_pwr" value="92"/>
+            <talentvalue level="10" name="silver_p7_pwr" value="100"/>
+            <talentvalue level="14" name="silver_p7_pwr" value="152"/>
+            <talentvalue level="15" name="silver_p7_pwr" value="188"/>
         </talentvalues>
         <level description="%silver_p7_lif2 Seconds\n%silver_p7_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%silver_p7_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%silver_p7_req"/>
         </level>
     </talent>
     <talent descname="Galactic Might" description="Calls down a beam from the cosmos, building up and energizing nearby enemies. Deals extra damage if victim is slowed, frozen, or stunned. Also restores party $HP and $EP." descshort="Xtreme" icon="8" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p9" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="silver_p9_req" value="10" />
-            <talentvalue level="8" name="silver_p9_req" value="45" />
-            <talentvalue level="1" name="silver_p9_dmg" value="85 94" />
-            <talentvalue level="8" name="silver_p9_dmg" value="339 375" />
-            <talentvalue level="1" name="silver_p9_dmg2" value="21" />
-            <talentvalue level="8" name="silver_p9_dmg2" value="85" />
-            <talentvalue level="1" name="silver_p9_res" value="0.25" />
-            <talentvalue level="8" name="silver_p9_res" value="0.33" />
+            <talentvalue level="1" name="silver_p9_req" value="10"/>
+            <talentvalue level="8" name="silver_p9_req" value="45"/>
+            <talentvalue level="1" name="silver_p9_dmg" value="85 94"/>
+            <talentvalue level="8" name="silver_p9_dmg" value="339 375"/>
+            <talentvalue level="1" name="silver_p9_dmg2" value="21"/>
+            <talentvalue level="8" name="silver_p9_dmg2" value="85"/>
+            <talentvalue level="1" name="silver_p9_res" value="0.25"/>
+            <talentvalue level="8" name="silver_p9_res" value="0.33"/>
         </talentvalues>
         <level description="%silver_p9_dmg $DMG_ENERGY\n%silver_p9_dmg2 extra $DMG_ENERGY\n%silver_p9_res:p $HP/$EP restored">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%silver_p9_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%silver_p9_req"/>
         </level>
     </talent>
     <talent descname="Energy Regen" description="Increases $EP regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="silver_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit11_pct" value="1.01" />
-            <talentvalue level="9" name="silvr_outfit11_pct" value="1.05" />
-            <talentvalue level="1" name="silvr_outfit11_shw" value="1" />
-            <talentvalue level="9" name="silvr_outfit11_shw" value="5" />
+            <talentvalue level="1" name="silvr_outfit11_pct" value="1.01"/>
+            <talentvalue level="9" name="silvr_outfit11_pct" value="1.05"/>
+            <talentvalue level="1" name="silvr_outfit11_shw" value="1"/>
+            <talentvalue level="9" name="silvr_outfit11_shw" value="5"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit11_shw:f% $EP regeneration">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="energy_regen" level="%silvr_outfit11_pct" />
+                <affecter affect_type="scale" attribute="energy_regen" level="%silvr_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Cosmic Mastery" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
+    <talent descname="Cosmic Mastery" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit12_pct" value="1.03" />
-            <talentvalue level="9" name="silvr_outfit12_pct" value="1.15" />
+            <talentvalue level="1" name="silvr_outfit12_pct" value="1.03"/>
+            <talentvalue level="9" name="silvr_outfit12_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%silvr_outfit12_pct:s Power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit12_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit12_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit13_dr" value="1" />
-            <talentvalue level="9" name="silvr_outfit13_dr" value="9" />
+            <talentvalue level="1" name="silvr_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="silvr_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%silvr_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%silvr_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="silver_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit21_pct" value="4" />
-            <talentvalue level="9" name="silvr_outfit21_pct" value="12" />
+            <talentvalue level="1" name="silvr_outfit21_pct" value="4"/>
+            <talentvalue level="9" name="silvr_outfit21_pct" value="12"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit21_pct Body\n+%silvr_outfit21_pct Focus\n+%silvr_outfit21_pct Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="%silvr_outfit21_pct" />
+                <affecter attribute="traits" level="%silvr_outfit21_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="silver_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit22_pct" value="1.04" />
-            <talentvalue level="9" name="silvr_outfit22_pct" value="1.2" />
+            <talentvalue level="1" name="silvr_outfit22_pct" value="1.04"/>
+            <talentvalue level="9" name="silvr_outfit22_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%silvr_outfit22_pct:s $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="%silvr_outfit22_pct" />
+                <affecter affect_type="scale" attribute="xp" level="%silvr_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit23_dr" value="1" />
-            <talentvalue level="9" name="silvr_outfit23_dr" value="9" />
+            <talentvalue level="1" name="silvr_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="silvr_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%silvr_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%silvr_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Power $DMG" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
+    <talent descname="Power $DMG" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit31_pct" value="1.03" />
-            <talentvalue level="9" name="silvr_outfit31_pct" value="1.15" />
+            <talentvalue level="1" name="silvr_outfit31_pct" value="1.03"/>
+            <talentvalue level="9" name="silvr_outfit31_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%silvr_outfit31_pct:s Power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit31_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit31_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Health Per Knockout" description="Regain $HP per knockout." icon="14" icon_texture="textures/ui/talent_icons.png" name="silver_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit32_pct" value="6" />
-            <talentvalue level="9" name="silvr_outfit32_pct" value="30" />
+            <talentvalue level="1" name="silvr_outfit32_pct" value="6"/>
+            <talentvalue level="9" name="silvr_outfit32_pct" value="30"/>
         </talentvalues>
         <level count="9" description="%silvr_outfit32_pct $HP per knockout">
             <powerup life="-1">
-                <affecter attribute="health_per_kill" level="%silvr_outfit32_pct" />
+                <affecter attribute="health_per_kill" level="%silvr_outfit32_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit33_dr" value="1" />
-            <talentvalue level="9" name="silvr_outfit33_dr" value="9" />
+            <talentvalue level="1" name="silvr_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="silvr_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%silvr_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%silvr_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit41_pct" value="1.04" />
-            <talentvalue level="9" name="silvr_outfit41_pct" value="1.2" />
+            <talentvalue level="1" name="silvr_outfit41_pct" value="1.04"/>
+            <talentvalue level="9" name="silvr_outfit41_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%silvr_outfit41_pct:s Melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit41_pct" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit41_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Critical Chance" description="Increase chance of Critical hits." icon="8" icon_texture="textures/ui/talent_icons.png" name="silver_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit42_cri" value="0.02" />
-            <talentvalue level="9" name="silvr_outfit42_cri" value="0.1" />
+            <talentvalue level="1" name="silvr_outfit42_cri" value="0.02"/>
+            <talentvalue level="9" name="silvr_outfit42_cri" value="0.1"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit42_cri:p Chance">
             <powerup life="-1">
-                <affecter attribute="critical" level="%silvr_outfit42_cri" />
+                <affecter attribute="critical" level="%silvr_outfit42_cri"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="silvr_outfit43_dr" value="1" />
-            <talentvalue level="9" name="silvr_outfit43_dr" value="9" />
+            <talentvalue level="1" name="silvr_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="silvr_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%silvr_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%silvr_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%silvr_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

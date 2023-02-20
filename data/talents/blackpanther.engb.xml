@@ -1,0 +1,401 @@
+<talents>
+    <talent descname="Panther Claw" description="Slash at enemies with Black Panther's claws.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p1" power="power1" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p1_req" value="1" />
+            <talentvalue level="5" name="panther_p1_req" value="13" />
+            <talentvalue level="6" name="panther_p1_req" value="16" />
+            <talentvalue level="9" name="panther_p1_req" value="25" />
+            <talentvalue level="10" name="panther_p1_req" value="28" />
+            <talentvalue level="14" name="panther_p1_req" value="52" />
+            <talentvalue level="15" name="panther_p1_req" value="72" />
+            <talentvalue level="1" name="panther_p1_pwr" value="8" />
+            <talentvalue level="5" name="panther_p1_pwr" value="17" />
+            <talentvalue level="6" name="panther_p1_pwr" value="19" />
+            <talentvalue level="9" name="panther_p1_pwr" value="26" />
+            <talentvalue level="10" name="panther_p1_pwr" value="28" />
+            <talentvalue level="14" name="panther_p1_pwr" value="44" />
+            <talentvalue level="15" name="panther_p1_pwr" value="55" />
+            <talentvalue level="1" name="panther_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="panther_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="panther_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="panther_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="panther_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="panther_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="panther_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="panther_p1_arc" value="15" value_charged="45" />
+            <talentvalue level="15" name="panther_p1_arc" value="30" value_charged="90" />
+            <talentvalue level="1" name="panther_p1_fx1" value="1" value_charged="2" />
+        </talentvalues>
+        <level description="%panther_p1_dmg $DMG_PHYSICAL\n%panther_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Energy Daggers" description="Throws out several daggers in a spread pattern doing $DMG_ENERGY." descshort="Projectile" icon="1" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p2" power="power2" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p2_req" value="5" />
+            <talentvalue level="5" name="panther_p2_req" value="14" />
+            <talentvalue level="6" name="panther_p2_req" value="17" />
+            <talentvalue level="9" name="panther_p2_req" value="26" />
+            <talentvalue level="10" name="panther_p2_req" value="29" />
+            <talentvalue level="14" name="panther_p2_req" value="53" />
+            <talentvalue level="15" name="panther_p2_req" value="73" />
+            <talentvalue level="1" name="panther_p2_pwr" value="12" />
+            <talentvalue level="5" name="panther_p2_pwr" value="20" />
+            <talentvalue level="6" name="panther_p2_pwr" value="22" />
+            <talentvalue level="9" name="panther_p2_pwr" value="30" />
+            <talentvalue level="10" name="panther_p2_pwr" value="32" />
+            <talentvalue level="14" name="panther_p2_pwr" value="50" />
+            <talentvalue level="15" name="panther_p2_pwr" value="62" />
+            <talentvalue level="1" name="panther_p2_dmg" value="17 19" />
+            <talentvalue level="5" name="panther_p2_dmg" value="34 38" />
+            <talentvalue level="6" name="panther_p2_dmg" value="48 53" />
+            <talentvalue level="9" name="panther_p2_dmg" value="65 71" />
+            <talentvalue level="10" name="panther_p2_dmg" value="85 94" />
+            <talentvalue level="14" name="panther_p2_dmg" value="132 147" />
+            <talentvalue level="15" name="panther_p2_dmg" value="190 210" />
+            <talentvalue level="1" name="panther_p2_cnt" value="1" />
+            <talentvalue level="5" name="panther_p2_cnt" value="1" />
+            <talentvalue level="6" name="panther_p2_cnt" value="2" />
+            <talentvalue level="9" name="panther_p2_cnt" value="2" />
+            <talentvalue level="10" name="panther_p2_cnt" value="3" />
+            <talentvalue level="14" name="panther_p2_cnt" value="3" />
+            <talentvalue level="15" name="panther_p2_cnt" value="5" />
+            <talentvalue level="1" name="panther_p2_arc" value="0" />
+            <talentvalue level="15" name="panther_p2_arc" value="15" />
+        </talentvalues>
+        <level description="%panther_p2_dmg $DMG_ENERGY per dagger\n%panther_p2_cnt Daggers\n%panther_p2_arc Degree spread\n%panther_p2_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Razor Cyclone" description="Spin around with daggers outward, damaging nearby enemies with an additional chance of doing $DMG_BLEED." descshort="Radial" icon="2" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p3" power="power3" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p3_req" value="10" />
+            <talentvalue level="3" name="panther_p3_req" value="13" />
+            <talentvalue level="4" name="panther_p3_req" value="16" />
+            <talentvalue level="7" name="panther_p3_req" value="25" />
+            <talentvalue level="8" name="panther_p3_req" value="28" />
+            <talentvalue level="12" name="panther_p3_req" value="52" />
+            <talentvalue level="13" name="panther_p3_req" value="72" />
+            <talentvalue level="1" name="panther_p3_pwr" value="20" />
+            <talentvalue level="3" name="panther_p3_pwr" value="22" />
+            <talentvalue level="4" name="panther_p3_pwr" value="25" />
+            <talentvalue level="7" name="panther_p3_pwr" value="34" />
+            <talentvalue level="8" name="panther_p3_pwr" value="36" />
+            <talentvalue level="12" name="panther_p3_pwr" value="57" />
+            <talentvalue level="13" name="panther_p3_pwr" value="72" />
+            <talentvalue level="1" name="panther_p3_dmg" value="17 19" />
+            <talentvalue level="3" name="panther_p3_dmg" value="20 23" />
+            <talentvalue level="4" name="panther_p3_dmg" value="31 34" />
+            <talentvalue level="7" name="panther_p3_dmg" value="41 45" />
+            <talentvalue level="8" name="panther_p3_dmg" value="54 60" />
+            <talentvalue level="12" name="panther_p3_dmg" value="85 94" />
+            <talentvalue level="13" name="panther_p3_dmg" value="126 139" />
+            <talentvalue level="1" name="panther_p3_bld" value="11 13" />
+            <talentvalue level="3" name="panther_p3_bld" value="11 13" />
+            <talentvalue level="4" name="panther_p3_bld" value="11 13" />
+            <talentvalue level="7" name="panther_p3_bld" value="13 15" />
+            <talentvalue level="8" name="panther_p3_bld" value="15 17" />
+            <talentvalue level="12" name="panther_p3_bld" value="24 26" />
+            <talentvalue level="13" name="panther_p3_bld" value="37 41" />
+            <talentvalue level="1" name="panther_p3_chnc" value="0.1" />
+            <talentvalue level="13" name="panther_p3_chnc" value="0.5" />
+        </talentvalues>
+        <level description="%panther_p3_dmg $DMG_PHYSICAL\n%panther_p3_chnc:p Chance\n%panther_p3_bld% $DMG_BLEED\n%panther_p3_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Crippling Blow" description="Slash attack with a high chance of getting a critical hit." descshort="Melee" icon="3" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p4" power="power4" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p4_req" value="17" />
+            <talentvalue level="4" name="panther_p4_req" value="26" />
+            <talentvalue level="5" name="panther_p4_req" value="29" />
+            <talentvalue level="9" name="panther_p4_req" value="53" />
+            <talentvalue level="10" name="panther_p4_req" value="73" />
+            <talentvalue level="1" name="panther_p4_pwr" value="20" />
+            <talentvalue level="4" name="panther_p4_pwr" value="27" />
+            <talentvalue level="5" name="panther_p4_pwr" value="29" />
+            <talentvalue level="9" name="panther_p4_pwr" value="45" />
+            <talentvalue level="10" name="panther_p4_pwr" value="56" />
+            <talentvalue level="1" name="panther_p4_dmg" value="82 90" />
+            <talentvalue level="4" name="panther_p4_dmg" value="112 124" />
+            <talentvalue level="5" name="panther_p4_dmg" value="143 157" />
+            <talentvalue level="9" name="panther_p4_dmg" value="224 248" />
+            <talentvalue level="10" name="panther_p4_dmg" value="322 356" />
+            <talentvalue level="1" name="panther_p4_crit" value="0.1" />
+            <talentvalue level="10" name="panther_p4_crit" value="0.5" />
+        </talentvalues>
+        <level description="%panther_p4_dmg $DMG_PHYSICAL\n+%panther_p4_crit:p Critical chance\n%panther_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Pounce" description="Tackle an enemy and stab them multiple times." descshort="Melee" icon="4" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p5" power="power5" type="attack">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p5_req" value="20" />
+            <talentvalue level="3" name="panther_p5_req" value="26" />
+            <talentvalue level="4" name="panther_p5_req" value="29" />
+            <talentvalue level="8" name="panther_p5_req" value="53" />
+            <talentvalue level="9" name="panther_p5_req" value="73" />
+            <talentvalue level="1" name="panther_p5_pwr" value="24" />
+            <talentvalue level="3" name="panther_p5_pwr" value="30" />
+            <talentvalue level="4" name="panther_p5_pwr" value="32" />
+            <talentvalue level="8" name="panther_p5_pwr" value="50" />
+            <talentvalue level="9" name="panther_p5_pwr" value="62" />
+            <talentvalue level="1" name="panther_p5_dmg" value="51 56" />
+            <talentvalue level="3" name="panther_p5_dmg" value="65 71" />
+            <talentvalue level="4" name="panther_p5_dmg" value="82 90" />
+            <talentvalue level="8" name="panther_p5_dmg" value="132 147" />
+            <talentvalue level="9" name="panther_p5_dmg" value="190 210" />
+            <talentvalue level="1" name="panther_p5_kb" value="620" />
+            <talentvalue level="9" name="panther_p5_kb" value="620" />
+        </talentvalues>
+        <level description="%panther_p5_dmg $DMG_PHYSICAL\n%panther_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Stealth" description="Become invisible to enemies, decreases $DMG taken, and boosts critical hit $DMG to take away 33% of an enemy's current $HP." descshort="Buff" icon="5" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p6_req" value="2" />
+            <talentvalue level="5" name="panther_p6_req" value="14" />
+            <talentvalue level="6" name="panther_p6_req" value="17" />
+            <talentvalue level="9" name="panther_p6_req" value="26" />
+            <talentvalue level="10" name="panther_p6_req" value="29" />
+            <talentvalue level="14" name="panther_p6_req" value="53" />
+            <talentvalue level="15" name="panther_p6_req" value="73" />
+            <talentvalue level="1" name="panther_p6_pwr" value="32" />
+            <talentvalue level="5" name="panther_p6_pwr" value="72" />
+            <talentvalue level="6" name="panther_p6_pwr" value="80" />
+            <talentvalue level="9" name="panther_p6_pwr" value="108" />
+            <talentvalue level="10" name="panther_p6_pwr" value="116" />
+            <talentvalue level="14" name="panther_p6_pwr" value="180" />
+            <talentvalue level="15" name="panther_p6_pwr" value="224" />
+            <talentvalue level="1" name="panther_p6_lif" value="20" />
+            <talentvalue level="5" name="panther_p6_lif" value="40" />
+            <talentvalue level="6" name="panther_p6_lif" value="50" />
+            <talentvalue level="9" name="panther_p6_lif" value="65" />
+            <talentvalue level="10" name="panther_p6_lif" value="80" />
+            <talentvalue level="14" name="panther_p6_lif" value="120" />
+            <talentvalue level="15" name="panther_p6_lif" value="180" />
+            <talentvalue level="1" name="panther_p6_def" value="0.94" />
+            <talentvalue level="15" name="panther_p6_def" value="0.85" />
+        </talentvalues>
+        <level description="%panther_p6_lif Seconds\n%panther_p6_def:s $DMG taken\n%panther_p6_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Master Hunter" description="Increases team's defense against projectiles, decreases $DMG taken, and reveals enemies on the minimap." descshort="Boost" icon="6" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p7_req" value="14" />
+            <talentvalue level="2" name="panther_p7_req" value="17" />
+            <talentvalue level="5" name="panther_p7_req" value="26" />
+            <talentvalue level="6" name="panther_p7_req" value="29" />
+            <talentvalue level="10" name="panther_p7_req" value="53" />
+            <talentvalue level="11" name="panther_p7_req" value="73" />
+            <talentvalue level="1" name="panther_p7_pwr" value="72" />
+            <talentvalue level="2" name="panther_p7_pwr" value="80" />
+            <talentvalue level="5" name="panther_p7_pwr" value="108" />
+            <talentvalue level="6" name="panther_p7_pwr" value="116" />
+            <talentvalue level="10" name="panther_p7_pwr" value="180" />
+            <talentvalue level="11" name="panther_p7_pwr" value="224" />
+            <talentvalue level="1" name="panther_p7_lif" value="40" />
+            <talentvalue level="2" name="panther_p7_lif" value="50" />
+            <talentvalue level="5" name="panther_p7_lif" value="65" />
+            <talentvalue level="6" name="panther_p7_lif" value="80" />
+            <talentvalue level="10" name="panther_p7_lif" value="120" />
+            <talentvalue level="11" name="panther_p7_lif" value="180" />
+            <talentvalue level="1" name="panther_p7_dmg" value="0.96" />
+            <talentvalue level="2" name="panther_p7_dmg" value="0.94" />
+            <talentvalue level="5" name="panther_p7_dmg" value="0.94" />
+            <talentvalue level="6" name="panther_p7_dmg" value="0.92" />
+            <talentvalue level="10" name="panther_p7_dmg" value="0.92" />
+            <talentvalue level="11" name="panther_p7_dmg" value="0.9" />
+            <talentvalue level="1" name="panther_p7_def" value="10" />
+            <talentvalue level="11" name="panther_p7_def" value="100" />
+        </talentvalues>
+        <level description="+%panther_p7_def Defense\n%panther_p7_dmg:s $DMG taken\n%panther_p7_lif Seconds\n%panther_p7_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%panther_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Panther's Might" description="Black Panther jumps into the air and leaps down on his enemies, doing massive $DMG_PHYSICAL with a 25% chance for an instant kill.  Also boosts $DMG of team's xtreme powers by 50%." descshort="Xtreme" icon="7" icon_texture="textures/ui/blackpanther_icons.png" name="panther_p8" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="panther_p8_req" value="10" />
+            <talentvalue level="8" name="panther_p8_req" value="45" />
+            <talentvalue level="1" name="panther_p8_dmg" value="51 56" />
+            <talentvalue level="8" name="panther_p8_dmg" value="204 225" />
+        </talentvalues>
+        <level description="%panther_p8_dmg $DMG_PHYSICAL\n+50% Team xtreme $DMG">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%panther_p8_req" />
+        </level>
+    </talent>
+    <talent descname="Reflect Damage" description="Reflects some $DMG back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="panther_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit11_pct" value="0.25" />
+            <talentvalue level="9" name="panth_outfit11_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit11_pct:p $DMG reflected">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="reflect_damage" level="%panth_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch" />
+                    <scope scope_attack="kick" />
+                </affecter>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="panther_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="panth_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit12_pct:s maximum $EP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxenergy" level="%panth_outfit12_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit13_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="panther_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit21_crit" value="0.02" />
+            <talentvalue level="9" name="panth_outfit21_crit" value="0.1" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit21_crit:p Critical chance">
+            <powerup life="-1">
+                <affecter attribute="atk_critical" level="%panth_outfit21_crit" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Increased Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit22_pct" value="1.03" />
+            <talentvalue level="9" name="panth_outfit22_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit22_pct:s Power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%panth_outfit22_pct" scope_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit23_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="panther_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit31_pct" value="0.03" />
+            <talentvalue level="9" name="panth_outfit31_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit31_pct:p Dodge chance">
+            <powerup life="-1">
+                <affecter attribute="def_dodge" level="%panth_outfit31_pct" scope_damage="dmg_physical" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Increased Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit32_pct" value="1.04" />
+            <talentvalue level="9" name="panth_outfit32_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit32_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%panth_outfit32_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit33_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Bleed Damage" description="Adds a chance to cause $DMG_BLEED to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="panther_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit41_dmg" value="0.03" />
+            <talentvalue level="9" name="panth_outfit41_dmg" value="0.15" />
+            <talentvalue level="1" name="panth_outfit41_pct" value="0.03" />
+            <talentvalue level="9" name="panth_outfit41_pct" value="0.15" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit41_pct:p Chance\n+%panth_outfit41_dmg:p as $DMG_BLEED">
+            <powerup chance="%panth_outfit41_pct" class="add_harming" damagepercent="%panth_outfit41_dmg" life="-1">
+                <affecter attribute="powerup_scope" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="panther_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit42_pct" value="1.05" />
+            <talentvalue level="9" name="panth_outfit42_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%panth_outfit42_pct:s maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%panth_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="panther_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="panth_outfit43_dr" value="1" />
+            <talentvalue level="9" name="panth_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%panth_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%panth_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

@@ -314,7 +314,7 @@
             <talentvalue level="1" name="war_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="war_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%war_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%war_outfit12_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%war_outfit12_pct" />
             </powerup>
@@ -364,7 +364,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Photon Damage" description="Increases the $DMG of powers." icon="7" icon_texture="textures/ui/warbird_icons.png" name="war_outfit31" skin="2" type="passive">
+    <talent descname="Photon Damage" description="Increases the $DMG of all powers." icon="7" icon_texture="textures/ui/warbird_icons.png" name="war_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="war_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="war_outfit31_pct" value="1.15" />
@@ -382,7 +382,7 @@
             <talentvalue level="1" name="war_outfit32_shw" value="2" />
             <talentvalue level="9" name="war_outfit32_shw" value="10" />
         </talentvalues>
-        <level count="9" description="+%war_outfit32_shw All Resistances">
+        <level count="9" description="+%war_outfit32_shw Resist all">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%war_outfit32_pct" />
             </powerup>
@@ -404,13 +404,13 @@
             <talentvalue level="1" name="war_outfit41_pct" value="1.04" />
             <talentvalue level="9" name="war_outfit41_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%war_outfit41_pct:s Maximum $EP">
+        <level count="9" description="%war_outfit41_pct:s maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%war_outfit41_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Photon Damage" description="Increases the $DMG of powers." icon="7" icon_texture="textures/ui/warbird_icons.png" name="war_outfit42" skin="3" type="passive">
+    <talent descname="Photon Damage" description="Increases the $DMG of all powers." icon="7" icon_texture="textures/ui/warbird_icons.png" name="war_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="war_outfit42_pct" value="1.03" />
             <talentvalue level="9" name="war_outfit42_pct" value="1.15" />

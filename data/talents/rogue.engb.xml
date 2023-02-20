@@ -267,7 +267,7 @@
             <talentvalue level="1" name="panth_outfit12_pct" value="1.04" />
             <talentvalue level="9" name="panth_outfit12_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%panth_outfit12_pct:s Maximum $EP">
+        <level count="9" description="%panth_outfit12_pct:s maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%panth_outfit12_pct" />
             </powerup>
@@ -289,13 +289,13 @@
             <talentvalue level="1" name="panth_outfit21_crit" value="0.02" />
             <talentvalue level="9" name="panth_outfit21_crit" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%panth_outfit21_crit:p Critical Chance">
+        <level count="9" description="+%panth_outfit21_crit:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%panth_outfit21_crit" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Increased Power Damage" description="Increases the $DMG of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
+    <talent descname="Increased Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="panther_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit22_pct" value="1.03" />
             <talentvalue level="9" name="panth_outfit22_pct" value="1.15" />
@@ -322,13 +322,13 @@
             <talentvalue level="1" name="panth_outfit31_pct" value="0.03" />
             <talentvalue level="9" name="panth_outfit31_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%panth_outfit31_pct:p Dodge Chance">
+        <level count="9" description="+%panth_outfit31_pct:p Dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%panth_outfit31_pct" scope_damage="dmg_physical" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the $DMG of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
+    <talent descname="Increased Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="panther_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="panth_outfit32_pct" value="1.04" />
             <talentvalue level="9" name="panth_outfit32_pct" value="1.2" />
@@ -368,7 +368,7 @@
             <talentvalue level="1" name="panth_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="panth_outfit42_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="%panth_outfit42_pct:s Maximum $HP">
+        <level count="9" description="%panth_outfit42_pct:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%panth_outfit42_pct" />
             </powerup>

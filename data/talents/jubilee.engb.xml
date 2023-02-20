@@ -1,392 +1,392 @@
 <talents>
     <talent descname="Fireworks" description="Multiple globule projectile attack." descshort="Projectile" icon="0" icon_texture="textures/ui/jubilee_icons.png" name="jub_fworks" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="jub_fworks_req" value="1" />
-            <talentvalue level="5" name="jub_fworks_req" value="13" />
-            <talentvalue level="6" name="jub_fworks_req" value="16" />
-            <talentvalue level="9" name="jub_fworks_req" value="25" />
-            <talentvalue level="10" name="jub_fworks_req" value="28" />
-            <talentvalue level="14" name="jub_fworks_req" value="52" />
-            <talentvalue level="15" name="jub_fworks_req" value="72" />
-            <talentvalue level="1" name="jub_fworks_dmg" value="8 10" />
-            <talentvalue level="5" name="jub_fworks_dmg" value="13 15" />
-            <talentvalue level="6" name="jub_fworks_dmg" value="15 17" />
-            <talentvalue level="9" name="jub_fworks_dmg" value="23 25" />
-            <talentvalue level="10" name="jub_fworks_dmg" value="25 29" />
-            <talentvalue level="14" name="jub_fworks_dmg" value="40 43" />
-            <talentvalue level="15" name="jub_fworks_dmg" value="45 50" />
-            <talentvalue level="1" name="jub_fworks_num" value="2" />
-            <talentvalue level="2" name="jub_fworks_num" value="3" />
-            <talentvalue level="6" name="jub_fworks_num" value="5" />
-            <talentvalue level="10" name="jub_fworks_num" value="7" />
-            <talentvalue level="14" name="jub_fworks_num" value="9" />
-            <talentvalue level="15" name="jub_fworks_num" value="10" />
-            <talentvalue level="1" name="jub_fworks_pwr" value="8" />
-            <talentvalue level="5" name="jub_fworks_pwr" value="17" />
-            <talentvalue level="6" name="jub_fworks_pwr" value="19" />
-            <talentvalue level="9" name="jub_fworks_pwr" value="24" />
-            <talentvalue level="10" name="jub_fworks_pwr" value="26" />
-            <talentvalue level="14" name="jub_fworks_pwr" value="41" />
-            <talentvalue level="15" name="jub_fworks_pwr" value="52" />
+            <talentvalue level="1" name="jub_fworks_req" value="1"/>
+            <talentvalue level="5" name="jub_fworks_req" value="13"/>
+            <talentvalue level="6" name="jub_fworks_req" value="16"/>
+            <talentvalue level="9" name="jub_fworks_req" value="25"/>
+            <talentvalue level="10" name="jub_fworks_req" value="28"/>
+            <talentvalue level="14" name="jub_fworks_req" value="52"/>
+            <talentvalue level="15" name="jub_fworks_req" value="72"/>
+            <talentvalue level="1" name="jub_fworks_dmg" value="8 10"/>
+            <talentvalue level="5" name="jub_fworks_dmg" value="13 15"/>
+            <talentvalue level="6" name="jub_fworks_dmg" value="15 17"/>
+            <talentvalue level="9" name="jub_fworks_dmg" value="23 25"/>
+            <talentvalue level="10" name="jub_fworks_dmg" value="25 29"/>
+            <talentvalue level="14" name="jub_fworks_dmg" value="40 43"/>
+            <talentvalue level="15" name="jub_fworks_dmg" value="45 50"/>
+            <talentvalue level="1" name="jub_fworks_num" value="2"/>
+            <talentvalue level="2" name="jub_fworks_num" value="3"/>
+            <talentvalue level="6" name="jub_fworks_num" value="5"/>
+            <talentvalue level="10" name="jub_fworks_num" value="7"/>
+            <talentvalue level="14" name="jub_fworks_num" value="9"/>
+            <talentvalue level="15" name="jub_fworks_num" value="10"/>
+            <talentvalue level="1" name="jub_fworks_pwr" value="8"/>
+            <talentvalue level="5" name="jub_fworks_pwr" value="17"/>
+            <talentvalue level="6" name="jub_fworks_pwr" value="19"/>
+            <talentvalue level="9" name="jub_fworks_pwr" value="24"/>
+            <talentvalue level="10" name="jub_fworks_pwr" value="26"/>
+            <talentvalue level="14" name="jub_fworks_pwr" value="41"/>
+            <talentvalue level="15" name="jub_fworks_pwr" value="52"/>
         </talentvalues>
-        <level description="%jub_fworks_dmg $DMG_ENERGY\n%jub_fworks_num Globules\n%jub_fworks_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_fworks_req" />
+        <level description="%jub_fworks_dmg $DMG_ENERGY\n%jub_fworks_num globules\n%jub_fworks_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_fworks_req"/>
         </level>
     </talent>
     <talent descname="Strobe Flash" description="Radial light attack that temporarily stuns enemies." descshort="Debuff" icon="1" icon_texture="textures/ui/jubilee_icons.png" name="jub_flash" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="jub_flash_req" value="5" />
-            <talentvalue level="5" name="jub_flash_req" value="14" />
-            <talentvalue level="6" name="jub_flash_req" value="17" />
-            <talentvalue level="9" name="jub_flash_req" value="26" />
-            <talentvalue level="10" name="jub_flash_req" value="29" />
-            <talentvalue level="14" name="jub_flash_req" value="53" />
-            <talentvalue level="15" name="jub_flash_req" value="73" />
-            <talentvalue level="1" name="jub_flash_pwr" value="21" />
-            <talentvalue level="5" name="jub_flash_pwr" value="33" />
-            <talentvalue level="6" name="jub_flash_pwr" value="33" />
-            <talentvalue level="9" name="jub_flash_pwr" value="45" />
-            <talentvalue level="10" name="jub_flash_pwr" value="51" />
-            <talentvalue level="14" name="jub_flash_pwr" value="75" />
-            <talentvalue level="15" name="jub_flash_pwr" value="93" />
-            <talentvalue level="1" name="jub_flash_life" value="1 3" />
-            <talentvalue level="3" name="jub_flash_life" value="2 4" />
-            <talentvalue level="5" name="jub_flash_life" value="3 5" />
-            <talentvalue level="7" name="jub_flash_life" value="4 6" />
-            <talentvalue level="9" name="jub_flash_life" value="5 7" />
-            <talentvalue level="11" name="jub_flash_life" value="6 8" />
-            <talentvalue level="13" name="jub_flash_life" value="7 9" />
-            <talentvalue level="14" name="jub_flash_life" value="8 10" />
-            <talentvalue level="15" name="jub_flash_life" value="10 12" />
+            <talentvalue level="1" name="jub_flash_req" value="5"/>
+            <talentvalue level="5" name="jub_flash_req" value="14"/>
+            <talentvalue level="6" name="jub_flash_req" value="17"/>
+            <talentvalue level="9" name="jub_flash_req" value="26"/>
+            <talentvalue level="10" name="jub_flash_req" value="29"/>
+            <talentvalue level="14" name="jub_flash_req" value="53"/>
+            <talentvalue level="15" name="jub_flash_req" value="73"/>
+            <talentvalue level="1" name="jub_flash_pwr" value="21"/>
+            <talentvalue level="5" name="jub_flash_pwr" value="33"/>
+            <talentvalue level="6" name="jub_flash_pwr" value="33"/>
+            <talentvalue level="9" name="jub_flash_pwr" value="45"/>
+            <talentvalue level="10" name="jub_flash_pwr" value="51"/>
+            <talentvalue level="14" name="jub_flash_pwr" value="75"/>
+            <talentvalue level="15" name="jub_flash_pwr" value="93"/>
+            <talentvalue level="1" name="jub_flash_life" value="1 3"/>
+            <talentvalue level="3" name="jub_flash_life" value="2 4"/>
+            <talentvalue level="5" name="jub_flash_life" value="3 5"/>
+            <talentvalue level="7" name="jub_flash_life" value="4 6"/>
+            <talentvalue level="9" name="jub_flash_life" value="5 7"/>
+            <talentvalue level="11" name="jub_flash_life" value="6 8"/>
+            <talentvalue level="13" name="jub_flash_life" value="7 9"/>
+            <talentvalue level="14" name="jub_flash_life" value="8 10"/>
+            <talentvalue level="15" name="jub_flash_life" value="10 12"/>
         </talentvalues>
         <level description="%jub_flash_life seconds\n%jub_flash_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_flash_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_flash_req"/>
         </level>
     </talent>
     <talent descname="Paf Balls" description="Throws globules at enemies.  $PT_TAP" descshort="Projectile" icon="2" icon_texture="textures/ui/jubilee_icons.png" name="jub_paf" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="jub_paf_req" value="10" />
-            <talentvalue level="3" name="jub_paf_req" value="13" />
-            <talentvalue level="4" name="jub_paf_req" value="16" />
-            <talentvalue level="7" name="jub_paf_req" value="25" />
-            <talentvalue level="8" name="jub_paf_req" value="28" />
-            <talentvalue level="12" name="jub_paf_req" value="52" />
-            <talentvalue level="13" name="jub_paf_req" value="72" />
-            <talentvalue level="1" name="jub_paf_dmg" value="17 19" />
-            <talentvalue level="3" name="jub_paf_dmg" value="24 27" />
-            <talentvalue level="4" name="jub_paf_dmg" value="28 32" />
-            <talentvalue level="7" name="jub_paf_dmg" value="41 45" />
-            <talentvalue level="8" name="jub_paf_dmg" value="46 49" />
-            <talentvalue level="12" name="jub_paf_dmg" value="75 83" />
-            <talentvalue level="13" name="jub_paf_dmg" value="109 120" />
-            <talentvalue level="1" name="jub_paf_pwr" value="8" />
-            <talentvalue level="3" name="jub_paf_pwr" value="9" />
-            <talentvalue level="4" name="jub_paf_pwr" value="10" />
-            <talentvalue level="7" name="jub_paf_pwr" value="13" />
-            <talentvalue level="8" name="jub_paf_pwr" value="14" />
-            <talentvalue level="12" name="jub_paf_pwr" value="22" />
-            <talentvalue level="13" name="jub_paf_pwr" value="28" />
+            <talentvalue level="1" name="jub_paf_req" value="10"/>
+            <talentvalue level="3" name="jub_paf_req" value="13"/>
+            <talentvalue level="4" name="jub_paf_req" value="16"/>
+            <talentvalue level="7" name="jub_paf_req" value="25"/>
+            <talentvalue level="8" name="jub_paf_req" value="28"/>
+            <talentvalue level="12" name="jub_paf_req" value="52"/>
+            <talentvalue level="13" name="jub_paf_req" value="72"/>
+            <talentvalue level="1" name="jub_paf_dmg" value="17 19"/>
+            <talentvalue level="3" name="jub_paf_dmg" value="24 27"/>
+            <talentvalue level="4" name="jub_paf_dmg" value="28 32"/>
+            <talentvalue level="7" name="jub_paf_dmg" value="41 45"/>
+            <talentvalue level="8" name="jub_paf_dmg" value="46 49"/>
+            <talentvalue level="12" name="jub_paf_dmg" value="75 83"/>
+            <talentvalue level="13" name="jub_paf_dmg" value="109 120"/>
+            <talentvalue level="1" name="jub_paf_pwr" value="8"/>
+            <talentvalue level="3" name="jub_paf_pwr" value="9"/>
+            <talentvalue level="4" name="jub_paf_pwr" value="10"/>
+            <talentvalue level="7" name="jub_paf_pwr" value="13"/>
+            <talentvalue level="8" name="jub_paf_pwr" value="14"/>
+            <talentvalue level="12" name="jub_paf_pwr" value="22"/>
+            <talentvalue level="13" name="jub_paf_pwr" value="28"/>
         </talentvalues>
-        <level description="%jub_paf_dmg $DMG_ENERGY\n%jub_paf_pwr $EP/s">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_paf_req" />
+        <level description="%jub_paf_dmg $DMG_ENERGY\n%jub_paf_pwr $EP per second">
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_paf_req"/>
         </level>
     </talent>
     <talent descname="Scorching Plasma" description="Create an outward blast of plasma, damaging enemies in a radius." descshort="Radial" icon="3" icon_texture="textures/ui/jubilee_icons.png" name="jub_plasma" power="power6">
         <talentvalues>
-            <talentvalue level="1" name="jub_plasma_req" value="17" />
-            <talentvalue level="4" name="jub_plasma_req" value="26" />
-            <talentvalue level="5" name="jub_plasma_req" value="29" />
-            <talentvalue level="9" name="jub_plasma_req" value="53" />
-            <talentvalue level="10" name="jub_plasma_req" value="73" />
-            <talentvalue level="1" name="jub_plasma_dmg" value="17 19" />
-            <talentvalue level="3" name="jub_plasma_dmg" value="20 23" />
-            <talentvalue level="4" name="jub_plasma_dmg" value="31 34" />
-            <talentvalue level="7" name="jub_plasma_dmg" value="41 45" />
-            <talentvalue level="8" name="jub_plasma_dmg" value="54 60" />
-            <talentvalue level="10" name="jub_plasma_dmg" value="89 100" />
-            <talentvalue level="1" name="jub_plasma_pwr" value="17" />
-            <talentvalue level="3" name="jub_plasma_pwr" value="20" />
-            <talentvalue level="4" name="jub_plasma_pwr" value="22" />
-            <talentvalue level="7" name="jub_plasma_pwr" value="29" />
-            <talentvalue level="8" name="jub_plasma_pwr" value="31" />
-            <talentvalue level="10" name="jub_plasma_pwr" value="48" />
+            <talentvalue level="1" name="jub_plasma_req" value="17"/>
+            <talentvalue level="4" name="jub_plasma_req" value="26"/>
+            <talentvalue level="5" name="jub_plasma_req" value="29"/>
+            <talentvalue level="9" name="jub_plasma_req" value="53"/>
+            <talentvalue level="10" name="jub_plasma_req" value="73"/>
+            <talentvalue level="1" name="jub_plasma_dmg" value="17 19"/>
+            <talentvalue level="3" name="jub_plasma_dmg" value="20 23"/>
+            <talentvalue level="4" name="jub_plasma_dmg" value="31 34"/>
+            <talentvalue level="7" name="jub_plasma_dmg" value="41 45"/>
+            <talentvalue level="8" name="jub_plasma_dmg" value="54 60"/>
+            <talentvalue level="10" name="jub_plasma_dmg" value="89 100"/>
+            <talentvalue level="1" name="jub_plasma_pwr" value="17"/>
+            <talentvalue level="3" name="jub_plasma_pwr" value="20"/>
+            <talentvalue level="4" name="jub_plasma_pwr" value="22"/>
+            <talentvalue level="7" name="jub_plasma_pwr" value="29"/>
+            <talentvalue level="8" name="jub_plasma_pwr" value="31"/>
+            <talentvalue level="10" name="jub_plasma_pwr" value="48"/>
         </talentvalues>
         <level description="%jub_plasma_dmg $DMG_FIRE\n%jub_plasma_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_plasma_req" />
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_plasma_req"/>
         </level>
     </talent>
     <talent descname="Pep Rally" description="Damages and affects enemies, reflecting damage back on themselves for a time." descshort="Debuff" icon="4" icon_texture="textures/ui/jubilee_icons.png" name="jub_pep" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="jub_pep_req" value="20" />
-            <talentvalue level="3" name="jub_pep_req" value="26" />
-            <talentvalue level="4" name="jub_pep_req" value="29" />
-            <talentvalue level="8" name="jub_pep_req" value="53" />
-            <talentvalue level="9" name="jub_pep_req" value="73" />
-            <talentvalue level="1" name="jub_pep_pwr" value="40" />
-            <talentvalue level="3" name="jub_pep_pwr" value="47" />
-            <talentvalue level="4" name="jub_pep_pwr" value="50" />
-            <talentvalue level="8" name="jub_pep_pwr" value="68" />
-            <talentvalue level="9" name="jub_pep_pwr" value="76" />
-            <talentvalue level="1" name="jub_pep_life" value="12" />
-            <talentvalue level="3" name="jub_pep_life" value="24" />
-            <talentvalue level="4" name="jub_pep_life" value="30" />
-            <talentvalue level="8" name="jub_pep_life" value="54" />
-            <talentvalue level="9" name="jub_pep_life" value="60" />
-            <talentvalue level="1" name="jub_pep_dmg" value="34 38" />
-            <talentvalue level="2" name="jub_pep_dmg" value="39 43" />
-            <talentvalue level="3" name="jub_pep_dmg" value="44 49" />
-            <talentvalue level="4" name="jub_pep_dmg" value="54 60" />
-            <talentvalue level="5" name="jub_pep_dmg" value="64 68" />
-            <talentvalue level="6" name="jub_pep_dmg" value="69 73" />
-            <talentvalue level="7" name="jub_pep_dmg" value="76 83" />
-            <talentvalue level="8" name="jub_pep_dmg" value="88 98" />
-            <talentvalue level="9" name="jub_pep_dmg" value="126 139" />
-            <talentvalue level="1" name="jub_pep_pct" value="0.55 0.6" />
-            <talentvalue level="2" name="jub_pep_pct" value="0.6 0.65" />
-            <talentvalue level="3" name="jub_pep_pct" value="0.65 0.7" />
-            <talentvalue level="4" name="jub_pep_pct" value="0.7 0.75" />
-            <talentvalue level="5" name="jub_pep_pct" value="0.75 0.8" />
-            <talentvalue level="6" name="jub_pep_pct" value="0.8 0.85" />
-            <talentvalue level="7" name="jub_pep_pct" value="0.85 0.9" />
-            <talentvalue level="8" name="jub_pep_pct" value="0.9 0.95" />
-            <talentvalue level="9" name="jub_pep_pct" value="1 1.05" />
+            <talentvalue level="1" name="jub_pep_req" value="20"/>
+            <talentvalue level="3" name="jub_pep_req" value="26"/>
+            <talentvalue level="4" name="jub_pep_req" value="29"/>
+            <talentvalue level="8" name="jub_pep_req" value="53"/>
+            <talentvalue level="9" name="jub_pep_req" value="73"/>
+            <talentvalue level="1" name="jub_pep_pwr" value="40"/>
+            <talentvalue level="3" name="jub_pep_pwr" value="47"/>
+            <talentvalue level="4" name="jub_pep_pwr" value="50"/>
+            <talentvalue level="8" name="jub_pep_pwr" value="68"/>
+            <talentvalue level="9" name="jub_pep_pwr" value="76"/>
+            <talentvalue level="1" name="jub_pep_life" value="12"/>
+            <talentvalue level="3" name="jub_pep_life" value="24"/>
+            <talentvalue level="4" name="jub_pep_life" value="30"/>
+            <talentvalue level="8" name="jub_pep_life" value="54"/>
+            <talentvalue level="9" name="jub_pep_life" value="60"/>
+            <talentvalue level="1" name="jub_pep_dmg" value="34 38"/>
+            <talentvalue level="2" name="jub_pep_dmg" value="39 43"/>
+            <talentvalue level="3" name="jub_pep_dmg" value="44 49"/>
+            <talentvalue level="4" name="jub_pep_dmg" value="54 60"/>
+            <talentvalue level="5" name="jub_pep_dmg" value="64 68"/>
+            <talentvalue level="6" name="jub_pep_dmg" value="69 73"/>
+            <talentvalue level="7" name="jub_pep_dmg" value="76 83"/>
+            <talentvalue level="8" name="jub_pep_dmg" value="88 98"/>
+            <talentvalue level="9" name="jub_pep_dmg" value="126 139"/>
+            <talentvalue level="1" name="jub_pep_pct" value="0.55 0.6"/>
+            <talentvalue level="2" name="jub_pep_pct" value="0.6 0.65"/>
+            <talentvalue level="3" name="jub_pep_pct" value="0.65 0.7"/>
+            <talentvalue level="4" name="jub_pep_pct" value="0.7 0.75"/>
+            <talentvalue level="5" name="jub_pep_pct" value="0.75 0.8"/>
+            <talentvalue level="6" name="jub_pep_pct" value="0.8 0.85"/>
+            <talentvalue level="7" name="jub_pep_pct" value="0.85 0.9"/>
+            <talentvalue level="8" name="jub_pep_pct" value="0.9 0.95"/>
+            <talentvalue level="9" name="jub_pep_pct" value="1 1.05"/>
         </talentvalues>
-        <level description="%jub_pep_dmg $DMG_ENERGY\n%jub_pep_pct:p $DMG reflected\n%jub_pep_life Seconds\n%jub_pep_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_pep_req" />
+        <level description="%jub_pep_dmg $DMG_ENERGY\n%jub_pep_pct:p $DMG reflected\n%jub_pep_life seconds\n%jub_pep_pwr $EP">
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_pep_req"/>
         </level>
     </talent>
     <talent descname="Stressful Situation" description="Boosts personal attack speed and adds additional $DMG_ENERGY to all powers temporarily." descshort="Boost" icon="6" icon_texture="textures/ui/jubilee_icons.png" name="jub_boost" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="jub_boost_req" value="14" />
-            <talentvalue level="2" name="jub_boost_req" value="17" />
-            <talentvalue level="5" name="jub_boost_req" value="26" />
-            <talentvalue level="6" name="jub_boost_req" value="29" />
-            <talentvalue level="10" name="jub_boost_req" value="53" />
-            <talentvalue level="11" name="jub_boost_req" value="73" />
-            <talentvalue level="1" name="jub_boost_pwr" value="60" />
-            <talentvalue level="2" name="jub_boost_pwr" value="68" />
-            <talentvalue level="5" name="jub_boost_pwr" value="88" />
-            <talentvalue level="6" name="jub_boost_pwr" value="92" />
-            <talentvalue level="10" name="jub_boost_pwr" value="140" />
-            <talentvalue level="11" name="jub_boost_pwr" value="172" />
-            <talentvalue level="1" name="jub_boost_life" value="40" />
-            <talentvalue level="2" name="jub_boost_life" value="50" />
-            <talentvalue level="5" name="jub_boost_life" value="65" />
-            <talentvalue level="6" name="jub_boost_life" value="80" />
-            <talentvalue level="10" name="jub_boost_life" value="120" />
-            <talentvalue level="11" name="jub_boost_life" value="180" />
-            <talentvalue level="1" name="jub_boost_spd" value="1.01" />
-            <talentvalue level="11" name="jub_boost_spd" value="1.15" />
-            <talentvalue level="1" name="jub_boost_dmg" value="10 12" />
-            <talentvalue level="11" name="jub_boost_dmg" value="51 56" />
+            <talentvalue level="1" name="jub_boost_req" value="14"/>
+            <talentvalue level="2" name="jub_boost_req" value="17"/>
+            <talentvalue level="5" name="jub_boost_req" value="26"/>
+            <talentvalue level="6" name="jub_boost_req" value="29"/>
+            <talentvalue level="10" name="jub_boost_req" value="53"/>
+            <talentvalue level="11" name="jub_boost_req" value="73"/>
+            <talentvalue level="1" name="jub_boost_pwr" value="60"/>
+            <talentvalue level="2" name="jub_boost_pwr" value="68"/>
+            <talentvalue level="5" name="jub_boost_pwr" value="88"/>
+            <talentvalue level="6" name="jub_boost_pwr" value="92"/>
+            <talentvalue level="10" name="jub_boost_pwr" value="140"/>
+            <talentvalue level="11" name="jub_boost_pwr" value="172"/>
+            <talentvalue level="1" name="jub_boost_life" value="40"/>
+            <talentvalue level="2" name="jub_boost_life" value="50"/>
+            <talentvalue level="5" name="jub_boost_life" value="65"/>
+            <talentvalue level="6" name="jub_boost_life" value="80"/>
+            <talentvalue level="10" name="jub_boost_life" value="120"/>
+            <talentvalue level="11" name="jub_boost_life" value="180"/>
+            <talentvalue level="1" name="jub_boost_spd" value="1.01"/>
+            <talentvalue level="11" name="jub_boost_spd" value="1.15"/>
+            <talentvalue level="1" name="jub_boost_dmg" value="10 12"/>
+            <talentvalue level="11" name="jub_boost_dmg" value="51 56"/>
         </talentvalues>
-        <level description="+%jub_boost_dmg $DMG_ENERGY\n%jub_boost_spd:s Speed\n%jub_boost_life Seconds\n%jub_boost_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_boost_req" />
+        <level description="+%jub_boost_dmg $DMG_ENERGY\n%jub_boost_spd:s speed\n%jub_boost_life seconds\n%jub_boost_pwr $EP">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_boost_req"/>
         </level>
     </talent>
     <talent descname="Independence Day" description="Fills the sky with brilliant fireworks." descshort="Xtreme" icon="7" icon_texture="textures/ui/jubilee_icons.png" name="jub_xtreme" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="jub_xtreme_req" value="10" />
-            <talentvalue level="8" name="jub_xtreme_req" value="45" />
-            <talentvalue level="1" name="jub_xtreme_damage" value="85 94" />
-            <talentvalue level="8" name="jub_xtreme_damage" value="339 375" />
+            <talentvalue level="1" name="jub_xtreme_req" value="10"/>
+            <talentvalue level="8" name="jub_xtreme_req" value="45"/>
+            <talentvalue level="1" name="jub_xtreme_damage" value="85 94"/>
+            <talentvalue level="8" name="jub_xtreme_damage" value="339 375"/>
         </talentvalues>
         <level description="%jub_xtreme_damage $DMG_ENERGY">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%jub_xtreme_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%jub_xtreme_req"/>
         </level>
     </talent>
     <talent descname="Sparkling Fists" description="Adds $DMG_ENERGY to melee attacks for self and allies." descshort="Boost" icon="5" icon_texture="textures/ui/jubilee_icons.png" name="jub_spark" power="power9" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="jub_spark_req" value="2" />
-            <talentvalue level="5" name="jub_spark_req" value="14" />
-            <talentvalue level="6" name="jub_spark_req" value="17" />
-            <talentvalue level="9" name="jub_spark_req" value="26" />
-            <talentvalue level="10" name="jub_spark_req" value="29" />
-            <talentvalue level="14" name="jub_spark_req" value="53" />
-            <talentvalue level="15" name="jub_spark_req" value="73" />
-            <talentvalue level="1" name="jub_spark_pdmg" value="0.05" />
-            <talentvalue level="10" name="jub_spark_pdmg" value="0.33" />
-            <talentvalue level="15" name="jub_spark_pdmg" value="0.47" />
-            <talentvalue level="1" name="jub_spark_pwr" value="65" />
-            <talentvalue level="10" name="jub_spark_pwr" value="85" />
-            <talentvalue level="15" name="jub_spark_pwr" value="100" />
-            <talentvalue level="1" name="jub_spark_life" value="35" />
-            <talentvalue level="10" name="jub_spark_life" value="75" />
-            <talentvalue level="15" name="jub_spark_life" value="90" />
+            <talentvalue level="1" name="jub_spark_req" value="2"/>
+            <talentvalue level="5" name="jub_spark_req" value="14"/>
+            <talentvalue level="6" name="jub_spark_req" value="17"/>
+            <talentvalue level="9" name="jub_spark_req" value="26"/>
+            <talentvalue level="10" name="jub_spark_req" value="29"/>
+            <talentvalue level="14" name="jub_spark_req" value="53"/>
+            <talentvalue level="15" name="jub_spark_req" value="73"/>
+            <talentvalue level="1" name="jub_spark_pdmg" value="0.05"/>
+            <talentvalue level="10" name="jub_spark_pdmg" value="0.33"/>
+            <talentvalue level="15" name="jub_spark_pdmg" value="0.47"/>
+            <talentvalue level="1" name="jub_spark_pwr" value="65"/>
+            <talentvalue level="10" name="jub_spark_pwr" value="85"/>
+            <talentvalue level="15" name="jub_spark_pwr" value="100"/>
+            <talentvalue level="1" name="jub_spark_life" value="35"/>
+            <talentvalue level="10" name="jub_spark_life" value="75"/>
+            <talentvalue level="15" name="jub_spark_life" value="90"/>
         </talentvalues>
         <level description="+%jub_spark_pdmg:p $DMG_ENERGY\n%jub_spark_life seconds\n%jub_spark_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%jub_spark_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%jub_spark_req"/>
         </level>
     </talent>
     <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="jub_outfit11" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit11_pct" value="1.04" />
-            <talentvalue level="9" name="jub_outfit11_pct" value="1.2" />
+            <talentvalue level="1" name="jub_outfit11_pct" value="1.04"/>
+            <talentvalue level="9" name="jub_outfit11_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%jub_outfit11_pct:s Maximum $EP">
+        <level count="9" description="%jub_outfit11_pct:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%jub_outfit11_pct" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%jub_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="jub_outfit12" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit12_pct" value="0.02" />
-            <talentvalue level="9" name="jub_outfit12_pct" value="0.1" />
+            <talentvalue level="1" name="jub_outfit12_pct" value="0.02"/>
+            <talentvalue level="9" name="jub_outfit12_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%jub_outfit12_pct:p critical chance">
             <powerup life="-1">
-                <affecter attribute="atk_critical" level="%jub_outfit12_pct" />
+                <affecter attribute="atk_critical" level="%jub_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jub_outfit13" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit13_dr" value="1" />
-            <talentvalue level="9" name="jub_outfit13_dr" value="9" />
+            <talentvalue level="1" name="jub_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="jub_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%jub_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%jub_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%jub_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Energized Fists" description="Adds $DMG_ENERGY to all melee attacks." icon="17" icon_texture="textures/ui/talent_icons.png" name="jub_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit21_pct" value="0.04" />
-            <talentvalue level="9" name="jub_outfit21_pct" value="0.2" />
+            <talentvalue level="1" name="jub_outfit21_pct" value="0.04"/>
+            <talentvalue level="9" name="jub_outfit21_pct" value="0.2"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit21_pct:p Added $DMG_ENERGY">
+        <level count="9" description="+%jub_outfit21_pct:p added $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%jub_outfit21_pct" damagetype="dmg_energy" life="-1">
-                <special_fx effect="char/jubile/p1_charge" how_used="custom" />
+                <special_fx effect="char/jubile/p1_charge" how_used="custom"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_non_powers="true" />
+                    <scope scope_non_powers="true"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Point Blank" description="Adds $DMG to all powers that hit enemies within 6 feet of Jubilee." icon="8" icon_texture="textures/ui/jubilee_icons.png" name="jub_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit22_pct" value="0.04" />
-            <talentvalue level="9" name="jub_outfit22_pct" value="0.2" />
+            <talentvalue level="1" name="jub_outfit22_pct" value="0.04"/>
+            <talentvalue level="9" name="jub_outfit22_pct" value="0.2"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit22_pct:p Added $DMG">
+        <level count="9" description="+%jub_outfit22_pct:p added $DMG">
             <powerup class="add_attack" damagepercent="%jub_outfit22_pct" life="-1" max_distance="72">
-                <affecter attribute="powerup_scope" scope_powers="true" />
+                <affecter attribute="powerup_scope" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jub_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit23_dr" value="1" />
-            <talentvalue level="9" name="jub_outfit23_dr" value="9" />
+            <talentvalue level="1" name="jub_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="jub_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%jub_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%jub_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%jub_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Paf Mastery" description="Increases the $DMG of mutant attacks." icon="9" icon_texture="textures/ui/jubilee_icons.png" name="jub_outfit31" skin="2" type="passive">
+    <talent descname="Paf Mastery" description="Increases the $DMG of all mutant attacks." icon="9" icon_texture="textures/ui/jubilee_icons.png" name="jub_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit31_pct" value="1.03" />
-            <talentvalue level="9" name="jub_outfit31_pct" value="1.15" />
+            <talentvalue level="1" name="jub_outfit31_pct" value="1.03"/>
+            <talentvalue level="9" name="jub_outfit31_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%jub_outfit31_pct:s Mutant $DMG">
+        <level count="9" description="%jub_outfit31_pct:s $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%jub_outfit31_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%jub_outfit31_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Protective Forces" description="Increases all resistances." icon="10" icon_texture="textures/ui/jubilee_icons.png" name="jub_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit32_pct" value="0.02" />
-            <talentvalue level="9" name="jub_outfit32_pct" value="0.1" />
-            <talentvalue level="1" name="jub_outfit32_shw" value="2" />
-            <talentvalue level="9" name="jub_outfit32_shw" value="10" />
+            <talentvalue level="1" name="jub_outfit32_pct" value="0.02"/>
+            <talentvalue level="9" name="jub_outfit32_pct" value="0.1"/>
+            <talentvalue level="1" name="jub_outfit32_shw" value="2"/>
+            <talentvalue level="9" name="jub_outfit32_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit32_shw Resist all">
+        <level count="9" description="+%jub_outfit32_shw resist all">
             <powerup life="-1">
-                <affecter attribute="resist_all" level="%jub_outfit32_pct" />
+                <affecter attribute="resist_all" level="%jub_outfit32_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jub_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit33_dr" value="1" />
-            <talentvalue level="9" name="jub_outfit33_dr" value="9" />
+            <talentvalue level="1" name="jub_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="jub_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%jub_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%jub_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%jub_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Agility" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="jub_outfit41" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit41_pct" value="0.03" />
-            <talentvalue level="9" name="jub_outfit41_pct" value="0.15" />
+            <talentvalue level="1" name="jub_outfit41_pct" value="0.03"/>
+            <talentvalue level="9" name="jub_outfit41_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit41_pct:p Dodge Chance">
+        <level count="9" description="+%jub_outfit41_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%jub_outfit41_pct" />
+                <affecter attribute="def_dodge" level="%jub_outfit41_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="jub_outfit42" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit42_pct" value="2" />
-            <talentvalue level="9" name="jub_outfit42_pct" value="10" />
+            <talentvalue level="1" name="jub_outfit42_pct" value="2"/>
+            <talentvalue level="9" name="jub_outfit42_pct" value="10"/>
         </talentvalues>
         <level count="9" description="+%jub_outfit42_pct Body\n+%jub_outfit42_pct Focus\n+%jub_outfit42_pct Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="%jub_outfit42_pct" />
+                <affecter attribute="traits" level="%jub_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="jub_outfit43" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="jub_outfit43_dr" value="1" />
-            <talentvalue level="9" name="jub_outfit43_dr" value="9" />
+            <talentvalue level="1" name="jub_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="jub_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%jub_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%jub_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%jub_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

@@ -1,346 +1,346 @@
 <talents>
     <talent descname="Shield Throw" description="Throws shield at enemy. Hold button and use the $LEFT_STICK to steer projectile." descshort="Projectile" icon="0" icon_texture="textures/ui/america_icons.png" name="captam_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="captam_p1_req" value="1" />
-            <talentvalue level="5" name="captam_p1_req" value="13" />
-            <talentvalue level="6" name="captam_p1_req" value="16" />
-            <talentvalue level="9" name="captam_p1_req" value="25" />
-            <talentvalue level="10" name="captam_p1_req" value="28" />
-            <talentvalue level="14" name="captam_p1_req" value="52" />
-            <talentvalue level="15" name="captam_p1_req" value="72" />
-            <talentvalue level="1" name="captam_p1_dmg" value="13 15" />
-            <talentvalue level="5" name="captam_p1_dmg" value="34 38" />
-            <talentvalue level="6" name="captam_p1_dmg" value="44 49" />
-            <talentvalue level="9" name="captam_p1_dmg" value="65 71" />
-            <talentvalue level="10" name="captam_p1_dmg" value="82 90" />
-            <talentvalue level="14" name="captam_p1_dmg" value="129 143" />
-            <talentvalue level="15" name="captam_p1_dmg" value="190 210" />
-            <talentvalue level="1" name="captam_p1_lif" value="2" />
-            <talentvalue level="15" name="captam_p1_lif" value="8" />
-            <talentvalue level="1" name="captam_p1_pwr" value="5" />
-            <talentvalue level="5" name="captam_p1_pwr" value="11" />
-            <talentvalue level="6" name="captam_p1_pwr" value="13" />
-            <talentvalue level="9" name="captam_p1_pwr" value="17" />
-            <talentvalue level="10" name="captam_p1_pwr" value="18" />
-            <talentvalue level="14" name="captam_p1_pwr" value="29" />
-            <talentvalue level="15" name="captam_p1_pwr" value="36" />
+            <talentvalue level="1" name="captam_p1_req" value="1"/>
+            <talentvalue level="5" name="captam_p1_req" value="13"/>
+            <talentvalue level="6" name="captam_p1_req" value="16"/>
+            <talentvalue level="9" name="captam_p1_req" value="25"/>
+            <talentvalue level="10" name="captam_p1_req" value="28"/>
+            <talentvalue level="14" name="captam_p1_req" value="52"/>
+            <talentvalue level="15" name="captam_p1_req" value="72"/>
+            <talentvalue level="1" name="captam_p1_dmg" value="13 15"/>
+            <talentvalue level="5" name="captam_p1_dmg" value="34 38"/>
+            <talentvalue level="6" name="captam_p1_dmg" value="44 49"/>
+            <talentvalue level="9" name="captam_p1_dmg" value="65 71"/>
+            <talentvalue level="10" name="captam_p1_dmg" value="82 90"/>
+            <talentvalue level="14" name="captam_p1_dmg" value="129 143"/>
+            <talentvalue level="15" name="captam_p1_dmg" value="190 210"/>
+            <talentvalue level="1" name="captam_p1_lif" value="2"/>
+            <talentvalue level="15" name="captam_p1_lif" value="8"/>
+            <talentvalue level="1" name="captam_p1_pwr" value="5"/>
+            <talentvalue level="5" name="captam_p1_pwr" value="11"/>
+            <talentvalue level="6" name="captam_p1_pwr" value="13"/>
+            <talentvalue level="9" name="captam_p1_pwr" value="17"/>
+            <talentvalue level="10" name="captam_p1_pwr" value="18"/>
+            <talentvalue level="14" name="captam_p1_pwr" value="29"/>
+            <talentvalue level="15" name="captam_p1_pwr" value="36"/>
         </talentvalues>
-        <level description="%captam_p1_dmg  $DMG_PHYSICAL\n%captam_p1_lif shield movement time.\n%captam_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p1_req" />
+        <level description="%captam_p1_dmg  $DMG_PHYSICAL\n%captam_p1_lif shield movement time\n%captam_p1_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p1_req"/>
         </level>
     </talent>
     <talent descname="Shield Bash" description="Thrusts his shield forward, stunning his opponent.  $PT_CHARGE" descshort="Melee" icon="1" icon_texture="textures/ui/america_icons.png" name="captam_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="captam_p2_req" value="5" />
-            <talentvalue level="5" name="captam_p2_req" value="14" />
-            <talentvalue level="6" name="captam_p2_req" value="17" />
-            <talentvalue level="9" name="captam_p2_req" value="26" />
-            <talentvalue level="10" name="captam_p2_req" value="29" />
-            <talentvalue level="14" name="captam_p2_req" value="53" />
-            <talentvalue level="15" name="captam_p2_req" value="73" />
-            <talentvalue level="1" name="captam_p2_dmg" value="31 34" value_charged_scale="2.0" />
-            <talentvalue level="5" name="captam_p2_dmg" value="61 68" value_charged_scale="2.0" />
-            <talentvalue level="6" name="captam_p2_dmg" value="82 90" value_charged_scale="2.0" />
-            <talentvalue level="9" name="captam_p2_dmg" value="112 124" value_charged_scale="2.0" />
-            <talentvalue level="10" name="captam_p2_dmg" value="143 157" value_charged_scale="2.0" />
-            <talentvalue level="14" name="captam_p2_dmg" value="224 248" value_charged_scale="2.0" />
-            <talentvalue level="15" name="captam_p2_dmg" value="322 356" value_charged_scale="2.0" />
-            <talentvalue level="1" name="captam_p2_kb" value="40" value_charged="120" />
-            <talentvalue level="15" name="captam_p2_kb" value="370" value_charged="430" />
-            <talentvalue level="1" name="captam_p2_pwr" value="11" />
-            <talentvalue level="5" name="captam_p2_pwr" value="18" />
-            <talentvalue level="6" name="captam_p2_pwr" value="20" />
-            <talentvalue level="9" name="captam_p2_pwr" value="27" />
-            <talentvalue level="10" name="captam_p2_pwr" value="29" />
-            <talentvalue level="14" name="captam_p2_pwr" value="45" />
-            <talentvalue level="15" name="captam_p2_pwr" value="56" />
+            <talentvalue level="1" name="captam_p2_req" value="5"/>
+            <talentvalue level="5" name="captam_p2_req" value="14"/>
+            <talentvalue level="6" name="captam_p2_req" value="17"/>
+            <talentvalue level="9" name="captam_p2_req" value="26"/>
+            <talentvalue level="10" name="captam_p2_req" value="29"/>
+            <talentvalue level="14" name="captam_p2_req" value="53"/>
+            <talentvalue level="15" name="captam_p2_req" value="73"/>
+            <talentvalue level="1" name="captam_p2_dmg" value="31 34" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="captam_p2_dmg" value="61 68" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="captam_p2_dmg" value="82 90" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="captam_p2_dmg" value="112 124" value_charged_scale="2.0"/>
+            <talentvalue level="10" name="captam_p2_dmg" value="143 157" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="captam_p2_dmg" value="224 248" value_charged_scale="2.0"/>
+            <talentvalue level="15" name="captam_p2_dmg" value="322 356" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="captam_p2_kb" value="40" value_charged="120"/>
+            <talentvalue level="15" name="captam_p2_kb" value="370" value_charged="430"/>
+            <talentvalue level="1" name="captam_p2_pwr" value="11"/>
+            <talentvalue level="5" name="captam_p2_pwr" value="18"/>
+            <talentvalue level="6" name="captam_p2_pwr" value="20"/>
+            <talentvalue level="9" name="captam_p2_pwr" value="27"/>
+            <talentvalue level="10" name="captam_p2_pwr" value="29"/>
+            <talentvalue level="14" name="captam_p2_pwr" value="45"/>
+            <talentvalue level="15" name="captam_p2_pwr" value="56"/>
         </talentvalues>
-        <level description="%captam_p2_dmg $DMG_PHYSICAL\n%captam_p2_kb Knockback\n%captam_p2_pwr $EP/s\n">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p2_req" />
+        <level description="%captam_p2_dmg $DMG_PHYSICAL\n%captam_p2_kb $KB\n%captam_p2_pwr $EP per second">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p2_req"/>
         </level>
     </talent>
     <talent descname="Energy Shield" description="Spins around, cutting through enemies and objects in a radius with his energized shield." descshort="Radial" icon="2" icon_texture="textures/ui/america_icons.png" name="captam_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="captam_p3_req" value="10" />
-            <talentvalue level="3" name="captam_p3_req" value="13" />
-            <talentvalue level="4" name="captam_p3_req" value="16" />
-            <talentvalue level="7" name="captam_p3_req" value="25" />
-            <talentvalue level="8" name="captam_p3_req" value="28" />
-            <talentvalue level="12" name="captam_p3_req" value="52" />
-            <talentvalue level="13" name="captam_p3_req" value="72" />
-            <talentvalue level="1" name="captam_p3_dmg" value="17 19" />
-            <talentvalue level="3" name="captam_p3_dmg" value="20 23" />
-            <talentvalue level="4" name="captam_p3_dmg" value="31 34" />
-            <talentvalue level="7" name="captam_p3_dmg" value="41 45" />
-            <talentvalue level="8" name="captam_p3_dmg" value="54 60" />
-            <talentvalue level="12" name="captam_p3_dmg" value="85 94" />
-            <talentvalue level="13" name="captam_p3_dmg" value="126 139" />
-            <talentvalue level="1" name="captam_p3_pwr" value="20" />
-            <talentvalue level="3" name="captam_p3_pwr" value="22" />
-            <talentvalue level="4" name="captam_p3_pwr" value="25" />
-            <talentvalue level="7" name="captam_p3_pwr" value="34" />
-            <talentvalue level="8" name="captam_p3_pwr" value="36" />
-            <talentvalue level="12" name="captam_p3_pwr" value="57" />
-            <talentvalue level="13" name="captam_p3_pwr" value="72" />
-            <talentvalue level="1" name="captam_p3_kb" value="40" />
-            <talentvalue level="13" name="captam_p3_kb" value="305" />
+            <talentvalue level="1" name="captam_p3_req" value="10"/>
+            <talentvalue level="3" name="captam_p3_req" value="13"/>
+            <talentvalue level="4" name="captam_p3_req" value="16"/>
+            <talentvalue level="7" name="captam_p3_req" value="25"/>
+            <talentvalue level="8" name="captam_p3_req" value="28"/>
+            <talentvalue level="12" name="captam_p3_req" value="52"/>
+            <talentvalue level="13" name="captam_p3_req" value="72"/>
+            <talentvalue level="1" name="captam_p3_dmg" value="17 19"/>
+            <talentvalue level="3" name="captam_p3_dmg" value="20 23"/>
+            <talentvalue level="4" name="captam_p3_dmg" value="31 34"/>
+            <talentvalue level="7" name="captam_p3_dmg" value="41 45"/>
+            <talentvalue level="8" name="captam_p3_dmg" value="54 60"/>
+            <talentvalue level="12" name="captam_p3_dmg" value="85 94"/>
+            <talentvalue level="13" name="captam_p3_dmg" value="126 139"/>
+            <talentvalue level="1" name="captam_p3_pwr" value="20"/>
+            <talentvalue level="3" name="captam_p3_pwr" value="22"/>
+            <talentvalue level="4" name="captam_p3_pwr" value="25"/>
+            <talentvalue level="7" name="captam_p3_pwr" value="34"/>
+            <talentvalue level="8" name="captam_p3_pwr" value="36"/>
+            <talentvalue level="12" name="captam_p3_pwr" value="57"/>
+            <talentvalue level="13" name="captam_p3_pwr" value="72"/>
+            <talentvalue level="1" name="captam_p3_kb" value="40"/>
+            <talentvalue level="13" name="captam_p3_kb" value="305"/>
         </talentvalues>
         <level description="%captam_p3_dmg  $DMG_PHYSICAL\n%captam_p3_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p3_req" />
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p3_req"/>
         </level>
     </talent>
     <talent descname="Shield Charge" description="Uses shield as a battering ram, charge towards opponents as long as button is held, knocking them out of the way." descshort="Charge" icon="3" icon_texture="textures/ui/america_icons.png" name="captam_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="captam_p4_req" value="17" />
-            <talentvalue level="4" name="captam_p4_req" value="26" />
-            <talentvalue level="5" name="captam_p4_req" value="29" />
-            <talentvalue level="9" name="captam_p4_req" value="53" />
-            <talentvalue level="10" name="captam_p4_req" value="73" />
-            <talentvalue level="1" name="captam_p4_dmg" value="34 38" />
-            <talentvalue level="4" name="captam_p4_dmg" value="44 49" />
-            <talentvalue level="5" name="captam_p4_dmg" value="58 64" />
-            <talentvalue level="9" name="captam_p4_dmg" value="92 101" />
-            <talentvalue level="10" name="captam_p4_dmg" value="132 147" />
-            <talentvalue level="1" name="captam_p4_pwr" value="13" />
-            <talentvalue level="4" name="captam_p4_pwr" value="18" />
-            <talentvalue level="5" name="captam_p4_pwr" value="19" />
-            <talentvalue level="9" name="captam_p4_pwr" value="30" />
-            <talentvalue level="10" name="captam_p4_pwr" value="37" />
+            <talentvalue level="1" name="captam_p4_req" value="17"/>
+            <talentvalue level="4" name="captam_p4_req" value="26"/>
+            <talentvalue level="5" name="captam_p4_req" value="29"/>
+            <talentvalue level="9" name="captam_p4_req" value="53"/>
+            <talentvalue level="10" name="captam_p4_req" value="73"/>
+            <talentvalue level="1" name="captam_p4_dmg" value="34 38"/>
+            <talentvalue level="4" name="captam_p4_dmg" value="44 49"/>
+            <talentvalue level="5" name="captam_p4_dmg" value="58 64"/>
+            <talentvalue level="9" name="captam_p4_dmg" value="92 101"/>
+            <talentvalue level="10" name="captam_p4_dmg" value="132 147"/>
+            <talentvalue level="1" name="captam_p4_pwr" value="13"/>
+            <talentvalue level="4" name="captam_p4_pwr" value="18"/>
+            <talentvalue level="5" name="captam_p4_pwr" value="19"/>
+            <talentvalue level="9" name="captam_p4_pwr" value="30"/>
+            <talentvalue level="10" name="captam_p4_pwr" value="37"/>
         </talentvalues>
-        <level description="%captam_p4_dmg  $DMG_PHYSICAL\n%captam_p4_pwr $EP/sec">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p4_req" />
+        <level description="%captam_p4_dmg  $DMG_PHYSICAL\n%captam_p4_pwr $EP per second">
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p4_req"/>
         </level>
     </talent>
     <talent descname="Reserve Strength" description="Taps into a reserve of strength and agility beyond that of peak human development, increasing speed and damage." descshort="Boost" icon="4" icon_texture="textures/ui/america_icons.png" name="captam_p5" power="power5" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="captam_p5_req" value="2" />
-            <talentvalue level="5" name="captam_p5_req" value="14" />
-            <talentvalue level="6" name="captam_p5_req" value="17" />
-            <talentvalue level="9" name="captam_p5_req" value="26" />
-            <talentvalue level="10" name="captam_p5_req" value="29" />
-            <talentvalue level="14" name="captam_p5_req" value="53" />
-            <talentvalue level="15" name="captam_p5_req" value="73" />
-            <talentvalue level="1" name="captam_p5_life" value="20" />
-            <talentvalue level="15" name="captam_p5_life" value="180" />
-            <talentvalue level="1" name="captam_p5_spd" value="1.2" />
-            <talentvalue level="15" name="captam_p5_spd" value="1.4" />
-            <talentvalue level="1" name="captam_p5_dmg" value="1.05" />
-            <talentvalue level="20" name="captam_p5_dmg" value="1.11" />
-            <talentvalue level="1" name="captam_p5_pwr" value="32" />
-            <talentvalue level="5" name="captam_p5_pwr" value="72" />
-            <talentvalue level="6" name="captam_p5_pwr" value="80" />
-            <talentvalue level="9" name="captam_p5_pwr" value="108" />
-            <talentvalue level="10" name="captam_p5_pwr" value="116" />
-            <talentvalue level="14" name="captam_p5_pwr" value="180" />
-            <talentvalue level="15" name="captam_p5_pwr" value="224" />
+            <talentvalue level="1" name="captam_p5_req" value="2"/>
+            <talentvalue level="5" name="captam_p5_req" value="14"/>
+            <talentvalue level="6" name="captam_p5_req" value="17"/>
+            <talentvalue level="9" name="captam_p5_req" value="26"/>
+            <talentvalue level="10" name="captam_p5_req" value="29"/>
+            <talentvalue level="14" name="captam_p5_req" value="53"/>
+            <talentvalue level="15" name="captam_p5_req" value="73"/>
+            <talentvalue level="1" name="captam_p5_life" value="20"/>
+            <talentvalue level="15" name="captam_p5_life" value="180"/>
+            <talentvalue level="1" name="captam_p5_spd" value="1.2"/>
+            <talentvalue level="15" name="captam_p5_spd" value="1.4"/>
+            <talentvalue level="1" name="captam_p5_dmg" value="1.05"/>
+            <talentvalue level="20" name="captam_p5_dmg" value="1.11"/>
+            <talentvalue level="1" name="captam_p5_pwr" value="32"/>
+            <talentvalue level="5" name="captam_p5_pwr" value="72"/>
+            <talentvalue level="6" name="captam_p5_pwr" value="80"/>
+            <talentvalue level="9" name="captam_p5_pwr" value="108"/>
+            <talentvalue level="10" name="captam_p5_pwr" value="116"/>
+            <talentvalue level="14" name="captam_p5_pwr" value="180"/>
+            <talentvalue level="15" name="captam_p5_pwr" value="224"/>
         </talentvalues>
-        <level description="%captam_p5_spd:s Attack Speed,\n%captam_p5_dmg:s Melee $DMG\n%captam_p5_life Seconds\n%captam_p5_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p5_req" />
+        <level description="%captam_p5_spd:s attack speed,\n%captam_p5_dmg:s melee $DMG\n%captam_p5_life seconds\n%captam_p5_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p5_req"/>
         </level>
     </talent>
     <talent descname="Heroism" description="Reduce the damage taken for the entire team." descshort="Boost" icon="7" icon_texture="textures/ui/america_icons.png" name="captam_p8" power="power8" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="captam_p8_req" value="14" />
-            <talentvalue level="2" name="captam_p8_req" value="17" />
-            <talentvalue level="5" name="captam_p8_req" value="26" />
-            <talentvalue level="6" name="captam_p8_req" value="29" />
-            <talentvalue level="10" name="captam_p8_req" value="53" />
-            <talentvalue level="11" name="captam_p8_req" value="73" />
-            <talentvalue level="1" name="captam_p8_dmg" value="0.96" />
-            <talentvalue level="2" name="captam_p8_dmg" value="0.94" />
-            <talentvalue level="6" name="captam_p8_dmg" value="0.92" />
-            <talentvalue level="11" name="captam_p8_dmg" value="0.9" />
-            <talentvalue level="1" name="captam_p8_lif" value="40" />
-            <talentvalue level="2" name="captam_p8_lif" value="50" />
-            <talentvalue level="5" name="captam_p8_lif" value="65" />
-            <talentvalue level="6" name="captam_p8_lif" value="80" />
-            <talentvalue level="10" name="captam_p8_lif" value="120" />
-            <talentvalue level="11" name="captam_p8_lif" value="180" />
-            <talentvalue level="1" name="captam_p8_pwr" value="72" />
-            <talentvalue level="2" name="captam_p8_pwr" value="80" />
-            <talentvalue level="5" name="captam_p8_pwr" value="108" />
-            <talentvalue level="6" name="captam_p8_pwr" value="116" />
-            <talentvalue level="10" name="captam_p8_pwr" value="180" />
-            <talentvalue level="11" name="captam_p8_pwr" value="224" />
+            <talentvalue level="1" name="captam_p8_req" value="14"/>
+            <talentvalue level="2" name="captam_p8_req" value="17"/>
+            <talentvalue level="5" name="captam_p8_req" value="26"/>
+            <talentvalue level="6" name="captam_p8_req" value="29"/>
+            <talentvalue level="10" name="captam_p8_req" value="53"/>
+            <talentvalue level="11" name="captam_p8_req" value="73"/>
+            <talentvalue level="1" name="captam_p8_dmg" value="0.96"/>
+            <talentvalue level="2" name="captam_p8_dmg" value="0.94"/>
+            <talentvalue level="6" name="captam_p8_dmg" value="0.92"/>
+            <talentvalue level="11" name="captam_p8_dmg" value="0.9"/>
+            <talentvalue level="1" name="captam_p8_lif" value="40"/>
+            <talentvalue level="2" name="captam_p8_lif" value="50"/>
+            <talentvalue level="5" name="captam_p8_lif" value="65"/>
+            <talentvalue level="6" name="captam_p8_lif" value="80"/>
+            <talentvalue level="10" name="captam_p8_lif" value="120"/>
+            <talentvalue level="11" name="captam_p8_lif" value="180"/>
+            <talentvalue level="1" name="captam_p8_pwr" value="72"/>
+            <talentvalue level="2" name="captam_p8_pwr" value="80"/>
+            <talentvalue level="5" name="captam_p8_pwr" value="108"/>
+            <talentvalue level="6" name="captam_p8_pwr" value="116"/>
+            <talentvalue level="10" name="captam_p8_pwr" value="180"/>
+            <talentvalue level="11" name="captam_p8_pwr" value="224"/>
         </talentvalues>
-        <level description="%captam_p8_dmg:s  $DMG\n%captam_p8_pwr $EP\n%captam_p8_lif Seconds">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%captam_p8_req" />
+        <level description="%captam_p8_dmg:s $DMG\n%captam_p8_pwr $EP\n%captam_p8_lif seconds">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%captam_p8_req"/>
         </level>
     </talent>
     <talent descname="Avenger's Shield" description="Greatly increase the damage done by all other team Xtreme attacks.\nThrow shield in a giant arc, circling around and striking all enemies in the area with massive $DMG_PHYSICAL." descshort="Xtreme" icon="8" icon_texture="textures/ui/america_icons.png" name="captam_p9" power="team_xtreme" type="xtreme">
         <talentvalues>
-            <talentvalue level="1" name="captam_p9_req" value="10" />
-            <talentvalue level="8" name="captam_p9_req" value="54" />
-            <talentvalue level="1" name="captam_p9_dmg" value="51 56" />
-            <talentvalue level="8" name="captam_p9_dmg" value="204 225" />
-            <talentvalue level="1" name="captam_p9_dmgs" value="1.25" />
-            <talentvalue level="8" name="captam_p9_dmgs" value="1.6" />
+            <talentvalue level="1" name="captam_p9_req" value="10"/>
+            <talentvalue level="8" name="captam_p9_req" value="54"/>
+            <talentvalue level="1" name="captam_p9_dmg" value="51 56"/>
+            <talentvalue level="8" name="captam_p9_dmg" value="204 225"/>
+            <talentvalue level="1" name="captam_p9_dmgs" value="1.25"/>
+            <talentvalue level="8" name="captam_p9_dmgs" value="1.6"/>
         </talentvalues>
         <level description="%captam_p9_dmgs:s $DMG increase\n%captam_p9_dmg $DMG_PHYSICAL">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%captam_p9_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%captam_p9_req"/>
         </level>
     </talent>
     <talent descname="Shield Mastery" description="Increases shield damage." icon="5" icon_texture="textures/ui/america_icons.png" name="captam_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit11_pct" value="1.05" />
-            <talentvalue level="9" name="captam_outfit11_pct" value="1.15" />
+            <talentvalue level="1" name="captam_outfit11_pct" value="1.05"/>
+            <talentvalue level="9" name="captam_outfit11_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit11_pct:s Shield $DMG">
+        <level count="9" description="%captam_outfit11_pct:s shield $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%captam_outfit11_pct" scope_node="captam_shield" />
+                <affecter affect_type="scale" attribute="damage" level="%captam_outfit11_pct" scope_node="captam_shield"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost XP" description="Increases the amount of XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="captam_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit12_pct" value="1.02" />
-            <talentvalue level="9" name="captam_outfit12_pct" value="1.1" />
+            <talentvalue level="1" name="captam_outfit12_pct" value="1.02"/>
+            <talentvalue level="9" name="captam_outfit12_pct" value="1.1"/>
         </talentvalues>
         <level count="9" description="%captam_outfit12_pct:s $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="%captam_outfit12_pct" />
+                <affecter affect_type="scale" attribute="xp" level="%captam_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="captam_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit13_dr" value="1" />
-            <talentvalue level="9" name="captam_outfit13_dr" value="9" />
+            <talentvalue level="1" name="captam_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="captam_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%captam_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%captam_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%captam_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Critical Chance" description="Increases melee critical hit chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="captam_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit21_pct" value="0.05" />
-            <talentvalue level="9" name="captam_outfit21_pct" value="0.13" />
+            <talentvalue level="1" name="captam_outfit21_pct" value="0.05"/>
+            <talentvalue level="9" name="captam_outfit21_pct" value="0.13"/>
         </talentvalues>
-        <level count="9" description="+%captam_outfit21_pct:p Chance">
+        <level count="9" description="+%captam_outfit21_pct:p chance">
             <powerup life="-1">
-                <affecter attribute="atk_critical" level="%captam_outfit21_pct" />
+                <affecter attribute="atk_critical" level="%captam_outfit21_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Energy" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="captam_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit22_pct" value="1.02" />
-            <talentvalue level="9" name="captam_outfit22_pct" value="1.2" />
+            <talentvalue level="1" name="captam_outfit22_pct" value="1.02"/>
+            <talentvalue level="9" name="captam_outfit22_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit22_pct:s Maximum $EP">
+        <level count="9" description="%captam_outfit22_pct:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%captam_outfit22_pct" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%captam_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="captam_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit23_dr" value="1" />
-            <talentvalue level="9" name="captam_outfit23_dr" value="9" />
+            <talentvalue level="1" name="captam_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="captam_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%captam_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%captam_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%captam_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Skill Boost" description="Gives entire team chance to execute powers at 3 ranks higher than normal." icon="18" icon_texture="textures/ui/talent_icons.png" name="captam_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit31_pct" value="0.05" />
-            <talentvalue level="9" name="captam_outfit31_pct" value="0.15" />
+            <talentvalue level="1" name="captam_outfit31_pct" value="0.05"/>
+            <talentvalue level="9" name="captam_outfit31_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit31_pct:p Chance">
-            <powerup apply_ally="all" chance="%captam_outfit31_pct" class="skillincrease" level="3" life="-1" />
+        <level count="9" description="%captam_outfit31_pct:p chance">
+            <powerup apply_ally="all" chance="%captam_outfit31_pct" class="skillincrease" level="3" life="-1"/>
         </level>
     </talent>
     <talent descname="Melee $DMG" description="Increases melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="captam_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit32_pct" value="1.04" />
-            <talentvalue level="9" name="captam_outfit32_pct" value="1.2" />
+            <talentvalue level="1" name="captam_outfit32_pct" value="1.04"/>
+            <talentvalue level="9" name="captam_outfit32_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit32_pct:s Melee $DMG">
+        <level count="9" description="%captam_outfit32_pct:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="%captam_outfit32_pct" scope_non_powers="true">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="captam_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit33_dr" value="1" />
-            <talentvalue level="9" name="captam_outfit33_dr" value="9" />
+            <talentvalue level="1" name="captam_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="captam_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%captam_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%captam_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%captam_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Patriot's Strength" description="Increases Max Health." icon="20" icon_texture="textures/ui/talent_icons.png" name="captam_outfit41" skin="3" type="passive">
+    <talent descname="Patriot's Strength" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="captam_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit41_pct" value="1.04" />
-            <talentvalue level="9" name="captam_outfit41_pct" value="1.24" />
+            <talentvalue level="1" name="captam_outfit41_pct" value="1.04"/>
+            <talentvalue level="9" name="captam_outfit41_pct" value="1.24"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit41_pct:s Max $HP">
+        <level count="9" description="%captam_outfit41_pct:s maximum $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%captam_outfit41_pct" />
+                <affecter affect_type="scale" attribute="maxhealth" level="%captam_outfit41_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Momentum Rate" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="captam_outfit42" skin="3" type="passive">
+    <talent descname="Momentum Rate" description="Gains momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="captam_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit42_pct" value="1.05" />
-            <talentvalue level="9" name="captam_outfit42_pct" value="1.15" />
+            <talentvalue level="1" name="captam_outfit42_pct" value="1.05"/>
+            <talentvalue level="9" name="captam_outfit42_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%captam_outfit42_pct:s Momentum Rate">
+        <level count="9" description="%captam_outfit42_pct:s momentum rate">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="momentum" level="%captam_outfit42_pct" />
+                <affecter affect_type="scale" attribute="momentum" level="%captam_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="captam_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="captam_outfit43_dr" value="1" />
-            <talentvalue level="9" name="captam_outfit43_dr" value="9" />
+            <talentvalue level="1" name="captam_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="captam_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%captam_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%captam_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%captam_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

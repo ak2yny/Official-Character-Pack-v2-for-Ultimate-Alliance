@@ -1,0 +1,376 @@
+<talents>
+    <talent descname="Fire Immunity" description="100% immune to $DMG_FIRE." name="ghost_resist" type="ability">
+        <level count="1">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Ravaging Flame" description="Spontaneously combust enemy. Ignites enemies if fully charged, dealing extra burning $DMG.  $PT_CHARGE" descshort="Blast" icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p1" power="power1">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p1_req" value="1" />
+            <talentvalue level="5" name="ghost_p1_req" value="13" />
+            <talentvalue level="6" name="ghost_p1_req" value="16" />
+            <talentvalue level="9" name="ghost_p1_req" value="25" />
+            <talentvalue level="10" name="ghost_p1_req" value="28" />
+            <talentvalue level="14" name="ghost_p1_req" value="52" />
+            <talentvalue level="15" name="ghost_p1_req" value="72" />
+            <talentvalue level="1" name="ghost_p1_dmg" value="17 19" value_charged_scale="2.0" />
+            <talentvalue level="5" name="ghost_p1_dmg" value="58 64" value_charged_scale="2.0" />
+            <talentvalue level="6" name="ghost_p1_dmg" value="78 86" value_charged_scale="2.0" />
+            <talentvalue level="9" name="ghost_p1_dmg" value="109 120" value_charged_scale="2.0" />
+            <talentvalue level="10" name="ghost_p1_dmg" value="139 154" value_charged_scale="2.0" />
+            <talentvalue level="14" name="ghost_p1_dmg" value="221 244" value_charged_scale="2.0" />
+            <talentvalue level="15" name="ghost_p1_dmg" value="319 353" value_charged_scale="2.0" />
+            <talentvalue level="1" name="ghost_p1_dmg2" value="11 13" />
+            <talentvalue level="15" name="ghost_p1_dmg2" value="95 105" />
+            <talentvalue level="1" name="ghost_p1_lif" value="5" />
+            <talentvalue level="1" name="ghost_p1_pwr" value="7" />
+            <talentvalue level="5" name="ghost_p1_pwr" value="14" />
+            <talentvalue level="6" name="ghost_p1_pwr" value="16" />
+            <talentvalue level="9" name="ghost_p1_pwr" value="21" />
+            <talentvalue level="10" name="ghost_p1_pwr" value="23" />
+            <talentvalue level="14" name="ghost_p1_pwr" value="34" />
+            <talentvalue level="15" name="ghost_p1_pwr" value="43" />
+        </talentvalues>
+        <level description="%ghost_p1_dmg  $DMG_FIRE\n+%ghost_p1_dmg2 burning $DMG \n%ghost_p1_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p1_req" />
+        </level>
+    </talent>
+    <talent descname="Fiendish Chains" description="Uses chains to fling an enemy into the air.  Charge longer to increase the distance the enemy will soar.  $PT_CHARGE" descshort="Special" icon="1" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p2" power="power2">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p2_req" value="10" />
+            <talentvalue level="3" name="ghost_p2_req" value="13" />
+            <talentvalue level="4" name="ghost_p2_req" value="16" />
+            <talentvalue level="7" name="ghost_p2_req" value="25" />
+            <talentvalue level="8" name="ghost_p2_req" value="28" />
+            <talentvalue level="12" name="ghost_p2_req" value="52" />
+            <talentvalue level="13" name="ghost_p2_req" value="72" />
+            <talentvalue level="1" name="ghost_p2_dmg" value="48 53" />
+            <talentvalue level="3" name="ghost_p2_dmg" value="58 64" />
+            <talentvalue level="4" name="ghost_p2_dmg" value="78 86" />
+            <talentvalue level="7" name="ghost_p2_dmg" value="109 120" />
+            <talentvalue level="8" name="ghost_p2_dmg" value="139 154" />
+            <talentvalue level="12" name="ghost_p2_dmg" value="221 244" />
+            <talentvalue level="13" name="ghost_p2_dmg" value="319 353" />
+            <talentvalue level="1" name="ghost_p2_pwr" value="13" />
+            <talentvalue level="3" name="ghost_p2_pwr" value="14" />
+            <talentvalue level="4" name="ghost_p2_pwr" value="16" />
+            <talentvalue level="7" name="ghost_p2_pwr" value="21" />
+            <talentvalue level="8" name="ghost_p2_pwr" value="23" />
+            <talentvalue level="12" name="ghost_p2_pwr" value="34" />
+            <talentvalue level="13" name="ghost_p2_pwr" value="43" />
+            <talentvalue level="1" name="ghost_p2_throw_spd" value="100" value_charged="1000" />
+        </talentvalues>
+        <level description="%ghost_p2_dmg $DMG_PHYSICAL\n%ghost_p2_pwr $EP">
+            <tier cost="1" count="3" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p2_req" />
+        </level>
+    </talent>
+    <talent descname="Chain Flechette" description="Rakes chains together and breaks them into tiny pieces, doing $DMG and massive $KB. 100% chance of critical hit if you shoot an enemy that is airborne." descshort="Projectile" icon="2" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p3" power="power3">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p3_req" value="5" />
+            <talentvalue level="5" name="ghost_p3_req" value="14" />
+            <talentvalue level="6" name="ghost_p3_req" value="17" />
+            <talentvalue level="9" name="ghost_p3_req" value="26" />
+            <talentvalue level="10" name="ghost_p3_req" value="29" />
+            <talentvalue level="14" name="ghost_p3_req" value="53" />
+            <talentvalue level="15" name="ghost_p3_req" value="73" />
+            <talentvalue level="1" name="ghost_p3_dmg" value="17 19" />
+            <talentvalue level="5" name="ghost_p3_dmg" value="34 38" />
+            <talentvalue level="6" name="ghost_p3_dmg" value="48 53" />
+            <talentvalue level="9" name="ghost_p3_dmg" value="65 71" />
+            <talentvalue level="10" name="ghost_p3_dmg" value="85 94" />
+            <talentvalue level="14" name="ghost_p3_dmg" value="132 147" />
+            <talentvalue level="15" name="ghost_p3_dmg" value="190 210" />
+            <talentvalue level="1" name="ghost_p3_kb" value="190" />
+            <talentvalue level="15" name="ghost_p3_kb" value="305" />
+            <talentvalue level="1" name="ghost_p3_pwr" value="11" />
+            <talentvalue level="5" name="ghost_p3_pwr" value="17" />
+            <talentvalue level="6" name="ghost_p3_pwr" value="19" />
+            <talentvalue level="9" name="ghost_p3_pwr" value="24" />
+            <talentvalue level="10" name="ghost_p3_pwr" value="25" />
+            <talentvalue level="14" name="ghost_p3_pwr" value="39" />
+            <talentvalue level="15" name="ghost_p3_pwr" value="47" />
+        </talentvalues>
+        <level description="%ghost_p3_dmg $DMG_FIRE\n%ghost_p3_kb $KB\n%ghost_p3_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p3_req" />
+        </level>
+    </talent>
+    <talent descname="Chains of Retribution" description="Spins and swings chains around, dealing radial damage. Pops up enemies if fully charged.  $PT_CHARGE\n" descshort="Radial" icon="3" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p4" power="power4">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p4_req" value="17" />
+            <talentvalue level="4" name="ghost_p4_req" value="26" />
+            <talentvalue level="5" name="ghost_p4_req" value="29" />
+            <talentvalue level="9" name="ghost_p4_req" value="53" />
+            <talentvalue level="10" name="ghost_p4_req" value="73" />
+            <talentvalue level="1" name="ghost_p4_dmg" value="31 34" value_charged_scale="2.0" />
+            <talentvalue level="4" name="ghost_p4_dmg" value="44 49" value_charged_scale="2.0" />
+            <talentvalue level="5" name="ghost_p4_dmg" value="54 60" value_charged_scale="2.0" />
+            <talentvalue level="9" name="ghost_p4_dmg" value="88 98" value_charged_scale="2.0" />
+            <talentvalue level="10" name="ghost_p4_dmg" value="126 139" value_charged_scale="2.0" />
+            <talentvalue level="1" name="ghost_p4_pwr" value="22" />
+            <talentvalue level="4" name="ghost_p4_pwr" value="29" />
+            <talentvalue level="5" name="ghost_p4_pwr" value="30" />
+            <talentvalue level="9" name="ghost_p4_pwr" value="46" />
+            <talentvalue level="10" name="ghost_p4_pwr" value="56" />
+        </talentvalues>
+        <level description="%ghost_p4_dmg $DMG_FIRE\n%ghost_p4_pwr $EP">
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p4_req" />
+        </level>
+    </talent>
+    <talent descname="Damnation" description="Breath fire on enemies. Enemies run in confusion, igniting additional foes as they go." descshort="Special" icon="4" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p5" power="power5">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p5_req" value="20" />
+            <talentvalue level="3" name="ghost_p5_req" value="29" />
+            <talentvalue level="4" name="ghost_p5_req" value="32" />
+            <talentvalue level="8" name="ghost_p5_req" value="56" />
+            <talentvalue level="9" name="ghost_p5_req" value="76" />
+            <talentvalue level="1" name="ghost_p5_dmg" value="92 101" />
+            <talentvalue level="3" name="ghost_p5_dmg" value="122 135" />
+            <talentvalue level="4" name="ghost_p5_dmg" value="153 169" />
+            <talentvalue level="8" name="ghost_p5_dmg" value="234 259" />
+            <talentvalue level="9" name="ghost_p5_dmg" value="333 368" />
+            <talentvalue level="1" name="ghost_p5_pwr" value="18" />
+            <talentvalue level="3" name="ghost_p5_pwr" value="23" />
+            <talentvalue level="4" name="ghost_p5_pwr" value="25" />
+            <talentvalue level="8" name="ghost_p5_pwr" value="36" />
+            <talentvalue level="9" name="ghost_p5_pwr" value="44" />
+        </talentvalues>
+        <level description="%ghost_p5_dmg $DMG_FIRE\n%ghost_p5_pwr $EP">
+            <tier cost="2" count="3" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p5_req" />
+        </level>
+    </talent>
+    <talent descname="Penance Stare" description="Scares enemies into feeling remorse for the sins they've commited. For a time, any damage inflicted on them will come back as $EP for Ghost Rider." descshort="Debuff" icon="5" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p6" power="power6" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p6_req" value="14" />
+            <talentvalue level="2" name="ghost_p6_req" value="17" />
+            <talentvalue level="5" name="ghost_p6_req" value="26" />
+            <talentvalue level="6" name="ghost_p6_req" value="29" />
+            <talentvalue level="10" name="ghost_p6_req" value="53" />
+            <talentvalue level="11" name="ghost_p6_req" value="73" />
+            <talentvalue level="1" name="ghost_p6_pct" value="0.1" />
+            <talentvalue level="15" name="ghost_p6_pct" value="0.5" />
+            <talentvalue level="1" name="ghost_p6_lif" value="40" />
+            <talentvalue level="2" name="ghost_p6_lif" value="50" />
+            <talentvalue level="5" name="ghost_p6_lif" value="65" />
+            <talentvalue level="6" name="ghost_p6_lif" value="80" />
+            <talentvalue level="10" name="ghost_p6_lif" value="120" />
+            <talentvalue level="11" name="ghost_p6_lif" value="180" />
+            <talentvalue level="1" name="ghost_p6_pwr" value="60" />
+            <talentvalue level="2" name="ghost_p6_pwr" value="68" />
+            <talentvalue level="5" name="ghost_p6_pwr" value="88" />
+            <talentvalue level="6" name="ghost_p6_pwr" value="92" />
+            <talentvalue level="10" name="ghost_p6_pwr" value="140" />
+            <talentvalue level="11" name="ghost_p6_pwr" value="172" />
+        </talentvalues>
+        <level description="%ghost_p6_pct:p of $DMG inflicted\n%ghost_p6_lif Seconds\n%ghost_p6_pwr $EP">
+            <tier cost="1" count="1" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p6_req" />
+        </level>
+    </talent>
+    <talent descname="Fear" description="Terrifies nearby enemies, decreasing their defenses and causing them to run in fear." descshort="Debuff" icon="6" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p7" power="power7" type="boost">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p7_req" value="2" />
+            <talentvalue level="5" name="ghost_p7_req" value="14" />
+            <talentvalue level="6" name="ghost_p7_req" value="17" />
+            <talentvalue level="9" name="ghost_p7_req" value="26" />
+            <talentvalue level="10" name="ghost_p7_req" value="29" />
+            <talentvalue level="14" name="ghost_p7_req" value="53" />
+            <talentvalue level="15" name="ghost_p7_req" value="73" />
+            <talentvalue level="1" name="ghost_p7_pwr" value="32" />
+            <talentvalue level="5" name="ghost_p7_pwr" value="60" />
+            <talentvalue level="6" name="ghost_p7_pwr" value="68" />
+            <talentvalue level="9" name="ghost_p7_pwr" value="88" />
+            <talentvalue level="10" name="ghost_p7_pwr" value="92" />
+            <talentvalue level="14" name="ghost_p7_pwr" value="140" />
+            <talentvalue level="15" name="ghost_p7_pwr" value="172" />
+            <talentvalue level="1" name="ghost_p7_lif" value="20" />
+            <talentvalue level="5" name="ghost_p7_lif" value="40" />
+            <talentvalue level="6" name="ghost_p7_lif" value="50" />
+            <talentvalue level="9" name="ghost_p7_lif" value="65" />
+            <talentvalue level="10" name="ghost_p7_lif" value="80" />
+            <talentvalue level="14" name="ghost_p7_lif" value="120" />
+            <talentvalue level="15" name="ghost_p7_lif" value="180" />
+            <talentvalue level="1" name="ghost_p7_dmg" value="1.1" />
+            <talentvalue level="15" name="ghost_p7_dmg" value="1.5" />
+        </talentvalues>
+        <level description="%ghost_p7_dmg:s $DMG to terrified foes\n%ghost_p7_lif Seconds\n%ghost_p7_pwr $EP">
+            <tier cost="1" count="5" />
+            <tier cost="2" count="4" />
+            <tier cost="3" count="1" />
+            <tier cost="3" count="4" difficulty="hard" />
+            <tier cost="4" count="1" difficulty="hard" />
+            <require cat="level" level="%ghost_p7_req" />
+        </level>
+    </talent>
+    <talent descname="Vengeance" description="Team Xtreme power that will steal the life from enemies and distribute it among the active party members." descshort="Xtreme" icon="8" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p9" power="team_xtreme" type="team_xtreme">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_p9_req" value="10" />
+            <talentvalue level="8" name="ghost_p9_req" value="45" />
+            <talentvalue level="1" name="ghost_p9_dmg" value="68 75" />
+            <talentvalue level="8" name="ghost_p9_dmg" value="221 244" />
+        </talentvalues>
+        <level description="%ghost_p9_dmg $HP stolen per enemy">
+            <tier cost="2" count="1" />
+            <tier cost="0" count="7" />
+            <require cat="level" level="%ghost_p9_req" />
+        </level>
+    </talent>
+    <talent descname="Hellfire Damage" description="Increases Hellfire $DMG." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit11" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit11_pct" value="1.03" />
+            <talentvalue level="9" name="ghost_outfit11_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit11_pct:s Hellfire $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit11_pct" scope_node="ghost_hellfire_atk" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases Melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit12" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit12_pct" value="1.04" />
+            <talentvalue level="9" name="ghost_outfit12_pct" value="1.2" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit12_pct:s Melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit12_pct" scope_non_powers="true" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit13" skin="0" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit13_dr" value="1" />
+            <talentvalue level="9" name="ghost_outfit13_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%ghost_outfit13_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%ghost_outfit13_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Chain Damage" description="Increases Chain $DMG." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit21" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit21_pct" value="1.03" />
+            <talentvalue level="9" name="ghost_outfit21_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit21_pct:s Chain $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit21_pct" scope_node="ghost_chain_atk" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resurrect Ally" description="Gives a chance to resurrect fallen allies automatically." icon="8" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit22" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit22_pct" value="0.1" />
+            <talentvalue level="9" name="ghost_outfit22_pct" value="0.5" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit22_pct:p Chance to resurrect allies">
+            <powerup apply_ally="all" chance="%ghost_outfit22_pct" class="resurrect" life="-1" maxhealthpercent="1" />
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit23_dr" value="1" />
+            <talentvalue level="9" name="ghost_outfit23_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%ghost_outfit23_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%ghost_outfit23_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Hellfire Damage" description="Increases Hellfire $DMG." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit31" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit31_pct" value="1.03" />
+            <talentvalue level="9" name="ghost_outfit31_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit31_pct:s Hellfire $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit31_pct" scope_node="ghost_hellfire_atk" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit32" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit32_pct" value="1.05" />
+            <talentvalue level="9" name="ghost_outfit32_pct" value="1.25" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit32_pct:s maximum $HP">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="maxhealth" level="%ghost_outfit32_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit33_dr" value="1" />
+            <talentvalue level="9" name="ghost_outfit33_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%ghost_outfit33_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%ghost_outfit33_dr" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Chain Damage" description="Increases Chain $DMG." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit41_pct" value="1.03" />
+            <talentvalue level="9" name="ghost_outfit41_pct" value="1.15" />
+        </talentvalues>
+        <level count="9" description="%ghost_outfit41_pct:s Chain $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit41_pct" scope_node="ghost_chain_atk" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Energy Per Kill" description="Gain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit42_pct" value="5" />
+            <talentvalue level="9" name="ghost_outfit42_pct" value="25" />
+        </talentvalues>
+        <level count="9" description="+%ghost_outfit42_pct $EP per kill">
+            <powerup life="-1">
+                <affecter attribute="energy_per_kill" level="%ghost_outfit42_pct" />
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="ghost_outfit43_dr" value="1" />
+            <talentvalue level="9" name="ghost_outfit43_dr" value="9" />
+        </talentvalues>
+        <level count="9" description="+%ghost_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%ghost_outfit43_dr" />
+            </powerup>
+        </level>
+    </talent>
+</talents>

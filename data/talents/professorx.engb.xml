@@ -186,7 +186,7 @@
             <talentvalue level="1" name="prof_outfit11_pct" value="0.03" />
             <talentvalue level="9" name="prof_outfit11_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%prof_outfit11_pct:p Dodge Chance">
+        <level count="9" description="+%prof_outfit11_pct:p Dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%prof_outfit11_pct" />
             </powerup>
@@ -216,12 +216,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Telepathic Mastery" description="Increases the $DMG_MENTAL of psychic attacks." icon="27" icon_texture="textures/ui/talent_icons.png" name="prof_outfit21" skin="0" type="passive">
+    <talent descname="Telepathic Mastery" description="Increases the $DMG_MENTAL of all psychic attacks." icon="27" icon_texture="textures/ui/talent_icons.png" name="prof_outfit21" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="prof_outfit21_pct" value="1.03" />
             <talentvalue level="9" name="prof_outfit21_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%prof_outfit21_pct:s Mental $DMG_MENTAL">
+        <level count="9" description="%prof_outfit21_pct:s $DMG_MENTAL">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%prof_outfit21_pct" scope_powers="true" />
             </powerup>
@@ -257,7 +257,7 @@
             <talentvalue level="1" name="prof_outfit31_pct" value="1.04" />
             <talentvalue level="9" name="prof_outfit31_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%prof_outfit31_pct:s Maximum $EP">
+        <level count="9" description="%prof_outfit31_pct:s maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%prof_outfit31_pct" />
             </powerup>
@@ -268,7 +268,7 @@
             <talentvalue level="1" name="prof_outfit32_pct" value="0.05" />
             <talentvalue level="9" name="prof_outfit32_pct" value="0.25" />
         </talentvalues>
-        <level count="9" description="%prof_outfit32_pct:p Chance">
+        <level count="9" description="%prof_outfit32_pct:p chance">
             <powerup chance="%prof_outfit32_pct" class="skillincrease" level="1" life="-1" />
         </level>
     </talent>
@@ -299,7 +299,7 @@
             <talentvalue level="1" name="prof_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="prof_outfit42_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="%prof_outfit42_pct:s Maximum $HP">
+        <level count="9" description="%prof_outfit42_pct:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%prof_outfit42_pct" />
             </powerup>

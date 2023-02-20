@@ -298,7 +298,7 @@
             <require cat="level" level="%gam_pickup_req" />
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases $DMG of powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit11_pct" value="1.03" />
             <talentvalue level="9" name="gam_outfit11_pct" value="1.15" />
@@ -338,7 +338,7 @@
             <talentvalue level="1" name="gam_outfit21_pct" value="0.03" />
             <talentvalue level="9" name="gam_outfit21_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit21_pct:p Dodge Chance">
+        <level count="9" description="+%gam_outfit21_pct:p Dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%gam_outfit21_pct" />
             </powerup>
@@ -374,7 +374,7 @@
             <talentvalue level="1" name="gam_outfit31_dmg" value="1.04" />
             <talentvalue level="9" name="gam_outfit31_dmg" value="1.2" />
         </talentvalues>
-        <level count="9" description="%gam_outfit31_dmg:s Melee $DMG">
+        <level count="9" description="%gam_outfit31_dmg:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%gam_outfit31_dmg" scope_non_powers="true" />
             </powerup>
@@ -407,7 +407,7 @@
             <talentvalue level="1" name="gam_outfit41_pct" value="0.02" />
             <talentvalue level="9" name="gam_outfit41_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit41_pct:p Critical Chance">
+        <level count="9" description="+%gam_outfit41_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%gam_outfit41_pct" />
             </powerup>

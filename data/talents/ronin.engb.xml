@@ -1,428 +1,428 @@
 <talents>
     <talent descname="Flying Nunchaku" description="Ronin spins around, knocking all enemies back and dealing damage." descshort="Radial" icon="0" icon_texture="textures/ui/ronin_icons.png" name="ronin_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p1_req" value="1" />
-            <talentvalue level="5" name="ronin_p1_req" value="13" />
-            <talentvalue level="6" name="ronin_p1_req" value="16" />
-            <talentvalue level="9" name="ronin_p1_req" value="25" />
-            <talentvalue level="10" name="ronin_p1_req" value="28" />
-            <talentvalue level="14" name="ronin_p1_req" value="52" />
-            <talentvalue level="15" name="ronin_p1_req" value="72" />
-            <talentvalue level="1" name="ronin_p1_pwr" value="9" />
-            <talentvalue level="5" name="ronin_p1_pwr" value="19" />
-            <talentvalue level="6" name="ronin_p1_pwr" value="21" />
-            <talentvalue level="9" name="ronin_p1_pwr" value="29" />
-            <talentvalue level="10" name="ronin_p1_pwr" value="31" />
-            <talentvalue level="14" name="ronin_p1_pwr" value="48" />
-            <talentvalue level="15" name="ronin_p1_pwr" value="61" />
-            <talentvalue level="1" name="ronin_p1_dmg" value="13 15" />
-            <talentvalue level="5" name="ronin_p1_dmg" value="34 38" />
-            <talentvalue level="6" name="ronin_p1_dmg" value="44 49" />
-            <talentvalue level="9" name="ronin_p1_dmg" value="65 71" />
-            <talentvalue level="10" name="ronin_p1_dmg" value="82 90" />
-            <talentvalue level="14" name="ronin_p1_dmg" value="217 240" />
-            <talentvalue level="15" name="ronin_p1_dmg" value="190 210" />
-            <talentvalue level="1" name="ronin_p1_rad" value="48" value_charged="120" />
-            <talentvalue level="1" name="ronin_p1_fx1" value="1" value_charged="2" />
+            <talentvalue level="1" name="ronin_p1_req" value="1"/>
+            <talentvalue level="5" name="ronin_p1_req" value="13"/>
+            <talentvalue level="6" name="ronin_p1_req" value="16"/>
+            <talentvalue level="9" name="ronin_p1_req" value="25"/>
+            <talentvalue level="10" name="ronin_p1_req" value="28"/>
+            <talentvalue level="14" name="ronin_p1_req" value="52"/>
+            <talentvalue level="15" name="ronin_p1_req" value="72"/>
+            <talentvalue level="1" name="ronin_p1_pwr" value="9"/>
+            <talentvalue level="5" name="ronin_p1_pwr" value="19"/>
+            <talentvalue level="6" name="ronin_p1_pwr" value="21"/>
+            <talentvalue level="9" name="ronin_p1_pwr" value="29"/>
+            <talentvalue level="10" name="ronin_p1_pwr" value="31"/>
+            <talentvalue level="14" name="ronin_p1_pwr" value="48"/>
+            <talentvalue level="15" name="ronin_p1_pwr" value="61"/>
+            <talentvalue level="1" name="ronin_p1_dmg" value="13 15"/>
+            <talentvalue level="5" name="ronin_p1_dmg" value="34 38"/>
+            <talentvalue level="6" name="ronin_p1_dmg" value="44 49"/>
+            <talentvalue level="9" name="ronin_p1_dmg" value="65 71"/>
+            <talentvalue level="10" name="ronin_p1_dmg" value="82 90"/>
+            <talentvalue level="14" name="ronin_p1_dmg" value="217 240"/>
+            <talentvalue level="15" name="ronin_p1_dmg" value="190 210"/>
+            <talentvalue level="1" name="ronin_p1_rad" value="48" value_charged="120"/>
+            <talentvalue level="1" name="ronin_p1_fx1" value="1" value_charged="2"/>
         </talentvalues>
         <level description="%ronin_p1_dmg $DMG \n%ronin_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p1_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p1_req"/>
         </level>
     </talent>
     <talent descname="Shining Shuriken" description="If charged, Ronin will toss multiple throwing knives. $PT_CHARGE" descshort="Projectile" icon="1" icon_texture="textures/ui/ronin_icons.png" name="ronin_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p2_req" value="5" />
-            <talentvalue level="4" name="ronin_p2_req" value="14" />
-            <talentvalue level="5" name="ronin_p2_req" value="17" />
-            <talentvalue level="8" name="ronin_p2_req" value="26" />
-            <talentvalue level="9" name="ronin_p2_req" value="29" />
-            <talentvalue level="13" name="ronin_p2_req" value="53" />
-            <talentvalue level="14" name="ronin_p2_req" value="73" />
-            <talentvalue level="1" name="ronin_p2_dmg" value="31 34" value_charged_scale="2.0" />
-            <talentvalue level="4" name="ronin_p2_dmg" value="61 68" value_charged_scale="2.0" />
-            <talentvalue level="5" name="ronin_p2_dmg" value="82 90" value_charged_scale="2.0" />
-            <talentvalue level="8" name="ronin_p2_dmg" value="112 124" value_charged_scale="2.0" />
-            <talentvalue level="9" name="ronin_p2_dmg" value="143 157" value_charged_scale="2.0" />
-            <talentvalue level="13" name="ronin_p2_dmg" value="224 248" value_charged_scale="2.0" />
-            <talentvalue level="14" name="ronin_p2_dmg" value="322 356" value_charged_scale="2.0" />
-            <talentvalue level="1" name="ronin_p2_pwr" value="11" />
-            <talentvalue level="4" name="ronin_p2_pwr" value="18" />
-            <talentvalue level="5" name="ronin_p2_pwr" value="20" />
-            <talentvalue level="8" name="ronin_p2_pwr" value="27" />
-            <talentvalue level="9" name="ronin_p2_pwr" value="29" />
-            <talentvalue level="13" name="ronin_p2_pwr" value="45" />
-            <talentvalue level="14" name="ronin_p2_pwr" value="56" />
-            <talentvalue level="1" name="ronin_p2_cnt" value="1" value_charged="3" />
-            <talentvalue level="7" name="ronin_p2_cnt" value="1" value_charged="5" />
-            <talentvalue level="14" name="ronin_p2_cnt" value="1" value_charged="7" />
+            <talentvalue level="1" name="ronin_p2_req" value="5"/>
+            <talentvalue level="4" name="ronin_p2_req" value="14"/>
+            <talentvalue level="5" name="ronin_p2_req" value="17"/>
+            <talentvalue level="8" name="ronin_p2_req" value="26"/>
+            <talentvalue level="9" name="ronin_p2_req" value="29"/>
+            <talentvalue level="13" name="ronin_p2_req" value="53"/>
+            <talentvalue level="14" name="ronin_p2_req" value="73"/>
+            <talentvalue level="1" name="ronin_p2_dmg" value="31 34" value_charged_scale="2.0"/>
+            <talentvalue level="4" name="ronin_p2_dmg" value="61 68" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="ronin_p2_dmg" value="82 90" value_charged_scale="2.0"/>
+            <talentvalue level="8" name="ronin_p2_dmg" value="112 124" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="ronin_p2_dmg" value="143 157" value_charged_scale="2.0"/>
+            <talentvalue level="13" name="ronin_p2_dmg" value="224 248" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="ronin_p2_dmg" value="322 356" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="ronin_p2_pwr" value="11"/>
+            <talentvalue level="4" name="ronin_p2_pwr" value="18"/>
+            <talentvalue level="5" name="ronin_p2_pwr" value="20"/>
+            <talentvalue level="8" name="ronin_p2_pwr" value="27"/>
+            <talentvalue level="9" name="ronin_p2_pwr" value="29"/>
+            <talentvalue level="13" name="ronin_p2_pwr" value="45"/>
+            <talentvalue level="14" name="ronin_p2_pwr" value="56"/>
+            <talentvalue level="1" name="ronin_p2_cnt" value="1" value_charged="3"/>
+            <talentvalue level="7" name="ronin_p2_cnt" value="1" value_charged="5"/>
+            <talentvalue level="14" name="ronin_p2_cnt" value="1" value_charged="7"/>
         </talentvalues>
         <level description="%ronin_p2_dmg $DMG \n%ronin_p2_pow $EP \n%ronin_p2_cnt knives thrown if charged">
-            <tier cost="1" count="4" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p2_req" />
+            <tier cost="1" count="4"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p2_req"/>
         </level>
     </talent>
     <talent descname="Spine Teaser" description="She does a flip through the air to an enemy, draws a sword and stabs the enemy. The attack is so powerful that it has a high chance of scoring a critical blow." descshort="Special" icon="2" icon_texture="textures/ui/ronin_icons.png" name="ronin_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p3_req" value="10" />
-            <talentvalue level="2" name="ronin_p3_req" value="13" />
-            <talentvalue level="3" name="ronin_p3_req" value="16" />
-            <talentvalue level="6" name="ronin_p3_req" value="25" />
-            <talentvalue level="7" name="ronin_p3_req" value="28" />
-            <talentvalue level="11" name="ronin_p3_req" value="44" />
-            <talentvalue level="12" name="ronin_p3_req" value="55" />
-            <talentvalue level="1" name="ronin_p3_dmg" value="48 53" />
-            <talentvalue level="2" name="ronin_p3_dmg" value="58 64" />
-            <talentvalue level="3" name="ronin_p3_dmg" value="78 86" />
-            <talentvalue level="6" name="ronin_p3_dmg" value="109 120" />
-            <talentvalue level="7" name="ronin_p3_dmg" value="139 154" />
-            <talentvalue level="11" name="ronin_p3_dmg" value="221 244" />
-            <talentvalue level="12" name="ronin_p3_dmg" value="319 353" />
-            <talentvalue level="1" name="ronin_p3_kb" value="120" />
-            <talentvalue level="12" name="ronin_p3_kb" value="245" />
-            <talentvalue level="1" name="ronin_p3_pwr" value="15" />
-            <talentvalue level="2" name="ronin_p3_pwr" value="17" />
-            <talentvalue level="3" name="ronin_p3_pwr" value="19" />
-            <talentvalue level="6" name="ronin_p3_pwr" value="26" />
-            <talentvalue level="7" name="ronin_p3_pwr" value="28" />
-            <talentvalue level="11" name="ronin_p3_pwr" value="44" />
-            <talentvalue level="12" name="ronin_p3_pwr" value="55" />
+            <talentvalue level="1" name="ronin_p3_req" value="10"/>
+            <talentvalue level="2" name="ronin_p3_req" value="13"/>
+            <talentvalue level="3" name="ronin_p3_req" value="16"/>
+            <talentvalue level="6" name="ronin_p3_req" value="25"/>
+            <talentvalue level="7" name="ronin_p3_req" value="28"/>
+            <talentvalue level="11" name="ronin_p3_req" value="44"/>
+            <talentvalue level="12" name="ronin_p3_req" value="55"/>
+            <talentvalue level="1" name="ronin_p3_dmg" value="48 53"/>
+            <talentvalue level="2" name="ronin_p3_dmg" value="58 64"/>
+            <talentvalue level="3" name="ronin_p3_dmg" value="78 86"/>
+            <talentvalue level="6" name="ronin_p3_dmg" value="109 120"/>
+            <talentvalue level="7" name="ronin_p3_dmg" value="139 154"/>
+            <talentvalue level="11" name="ronin_p3_dmg" value="221 244"/>
+            <talentvalue level="12" name="ronin_p3_dmg" value="319 353"/>
+            <talentvalue level="1" name="ronin_p3_kb" value="120"/>
+            <talentvalue level="12" name="ronin_p3_kb" value="245"/>
+            <talentvalue level="1" name="ronin_p3_pwr" value="15"/>
+            <talentvalue level="2" name="ronin_p3_pwr" value="17"/>
+            <talentvalue level="3" name="ronin_p3_pwr" value="19"/>
+            <talentvalue level="6" name="ronin_p3_pwr" value="26"/>
+            <talentvalue level="7" name="ronin_p3_pwr" value="28"/>
+            <talentvalue level="11" name="ronin_p3_pwr" value="44"/>
+            <talentvalue level="12" name="ronin_p3_pwr" value="55"/>
         </talentvalues>
         <level description="%ronin_p3_dmg $DMG \n%ronin_p3_pwr $EP">
-            <tier cost="1" count="2" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p3_req" />
+            <tier cost="1" count="2"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p3_req"/>
         </level>
     </talent>
     <talent descname="Slice and Dice" description="Wielding both sword and knife, Ronin performs a deadly combo slash dealing damage to any enemies that are in range of her." descshort="Melee" icon="3" icon_texture="textures/ui/ronin_icons.png" name="ronin_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p4_req" value="17" />
-            <talentvalue level="4" name="ronin_p4_req" value="26" />
-            <talentvalue level="5" name="ronin_p4_req" value="29" />
-            <talentvalue level="9" name="ronin_p4_req" value="53" />
-            <talentvalue level="10" name="ronin_p4_req" value="73" />
-            <talentvalue level="1" name="ronin_p4_dmg" value="31 34" />
-            <talentvalue level="4" name="ronin_p4_dmg" value="44 49" />
-            <talentvalue level="5" name="ronin_p4_dmg" value="54 60" />
-            <talentvalue level="9" name="ronin_p4_dmg" value="88 98" />
-            <talentvalue level="10" name="ronin_p4_dmg" value="126 139" />
-            <talentvalue level="1" name="ronin_p4_bld" value="13 15" />
-            <talentvalue level="4" name="ronin_p4_bld" value="13 15" />
-            <talentvalue level="5" name="ronin_p4_bld" value="17 19" />
-            <talentvalue level="9" name="ronin_p4_bld" value="24 26" />
-            <talentvalue level="10" name="ronin_p4_bld" value="37 41" />
-            <talentvalue level="1" name="ronin_p4_pwr" value="26" />
-            <talentvalue level="4" name="ronin_p4_pwr" value="35" />
-            <talentvalue level="5" name="ronin_p4_pwr" value="38" />
-            <talentvalue level="9" name="ronin_p4_pwr" value="59" />
-            <talentvalue level="10" name="ronin_p4_pwr" value="73" />
-            <talentvalue level="1" name="ronin_p4_lif" value="2" />
-            <talentvalue level="10" name="ronin_p4_lif" value="8" />
+            <talentvalue level="1" name="ronin_p4_req" value="17"/>
+            <talentvalue level="4" name="ronin_p4_req" value="26"/>
+            <talentvalue level="5" name="ronin_p4_req" value="29"/>
+            <talentvalue level="9" name="ronin_p4_req" value="53"/>
+            <talentvalue level="10" name="ronin_p4_req" value="73"/>
+            <talentvalue level="1" name="ronin_p4_dmg" value="31 34"/>
+            <talentvalue level="4" name="ronin_p4_dmg" value="44 49"/>
+            <talentvalue level="5" name="ronin_p4_dmg" value="54 60"/>
+            <talentvalue level="9" name="ronin_p4_dmg" value="88 98"/>
+            <talentvalue level="10" name="ronin_p4_dmg" value="126 139"/>
+            <talentvalue level="1" name="ronin_p4_bld" value="13 15"/>
+            <talentvalue level="4" name="ronin_p4_bld" value="13 15"/>
+            <talentvalue level="5" name="ronin_p4_bld" value="17 19"/>
+            <talentvalue level="9" name="ronin_p4_bld" value="24 26"/>
+            <talentvalue level="10" name="ronin_p4_bld" value="37 41"/>
+            <talentvalue level="1" name="ronin_p4_pwr" value="26"/>
+            <talentvalue level="4" name="ronin_p4_pwr" value="35"/>
+            <talentvalue level="5" name="ronin_p4_pwr" value="38"/>
+            <talentvalue level="9" name="ronin_p4_pwr" value="59"/>
+            <talentvalue level="10" name="ronin_p4_pwr" value="73"/>
+            <talentvalue level="1" name="ronin_p4_lif" value="2"/>
+            <talentvalue level="10" name="ronin_p4_lif" value="8"/>
         </talentvalues>
         <level description="%ronin_p4_dmg $DMG \n%ronin_p4_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p4_req" />
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p4_req"/>
         </level>
     </talent>
     <talent descname="Echo Effect" description="Using her photographic reflexes, Ronin will duplicate attacks from other heroes exactly." descshort="Special" icon="7" icon_texture="textures/ui/ronin_icons.png" name="ronin_p5" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p5_req" value="20" />
-            <talentvalue level="3" name="ronin_p5_req" value="26" />
-            <talentvalue level="4" name="ronin_p5_req" value="29" />
-            <talentvalue level="8" name="ronin_p5_req" value="53" />
-            <talentvalue level="9" name="ronin_p5_req" value="73" />
-            <talentvalue level="1" name="ronin_p5_dmg" value="92 101" value_charged_scale="2.0" />
-            <talentvalue level="3" name="ronin_p5_dmg" value="112 124" value_charged_scale="2.0" />
-            <talentvalue level="4" name="ronin_p5_dmg" value="143 157" value_charged_scale="2.0" />
-            <talentvalue level="8" name="ronin_p5_dmg" value="224 248" value_charged_scale="2.0" />
-            <talentvalue level="9" name="ronin_p5_dmg" value="322 356" value_charged="326 360" />
-            <talentvalue level="1" name="ronin_p5_rdmg" value="34 38" value_charged_scale="2.0" />
-            <talentvalue level="3" name="ronin_p5_rdmg" value="44 49" value_charged_scale="2.0" />
-            <talentvalue level="4" name="ronin_p5_rdmg" value="54 60" value_charged_scale="2.0" />
-            <talentvalue level="8" name="ronin_p5_rdmg" value="88 98" value_charged_scale="2.0" />
-            <talentvalue level="9" name="ronin_p5_rdmg" value="126 139" value_charged_scale="2.0" />
-            <talentvalue level="1" name="ronin_p5_pwr" value="22" />
-            <talentvalue level="3" name="ronin_p5_pwr" value="27" />
-            <talentvalue level="4" name="ronin_p5_pwr" value="29" />
-            <talentvalue level="8" name="ronin_p5_pwr" value="45" />
-            <talentvalue level="9" name="ronin_p5_pwr" value="56" />
-            <talentvalue level="1" name="ron_p5_v_chance" value="0.05" />
-            <talentvalue level="4" name="ron_p5_v_chance" value="0.09" />
-            <talentvalue level="5" name="ron_p5_v_chance" value="0.11" />
-            <talentvalue level="9" name="ron_p5_v_chance" value="0.15" />
-            <talentvalue level="10" name="ron_p5_v_chance" value="0.2" />
-            <talentvalue level="1" name="ronin_p5_vamp" value="0.02" />
-            <talentvalue level="3" name="ronin_p5_vamp" value="0.05" />
-            <talentvalue level="4" name="ronin_p5_vamp" value="0.07" />
-            <talentvalue level="8" name="ronin_p5_vamp" value="0.1" />
-            <talentvalue level="9" name="ronin_p5_vamp" value="0.15" />
-            <talentvalue level="1" name="ronin_p5_scale" value="0.25" value_charged="1" />
-            <talentvalue level="1" name="r_p5_rng_scale" value="0.75" value_charged="1" />
-            <talentvalue level="1" name="ronin_p5_rng" value="48.75" value_charged="65" />
+            <talentvalue level="1" name="ronin_p5_req" value="20"/>
+            <talentvalue level="3" name="ronin_p5_req" value="26"/>
+            <talentvalue level="4" name="ronin_p5_req" value="29"/>
+            <talentvalue level="8" name="ronin_p5_req" value="53"/>
+            <talentvalue level="9" name="ronin_p5_req" value="73"/>
+            <talentvalue level="1" name="ronin_p5_dmg" value="92 101" value_charged_scale="2.0"/>
+            <talentvalue level="3" name="ronin_p5_dmg" value="112 124" value_charged_scale="2.0"/>
+            <talentvalue level="4" name="ronin_p5_dmg" value="143 157" value_charged_scale="2.0"/>
+            <talentvalue level="8" name="ronin_p5_dmg" value="224 248" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="ronin_p5_dmg" value="322 356" value_charged="326 360"/>
+            <talentvalue level="1" name="ronin_p5_rdmg" value="34 38" value_charged_scale="2.0"/>
+            <talentvalue level="3" name="ronin_p5_rdmg" value="44 49" value_charged_scale="2.0"/>
+            <talentvalue level="4" name="ronin_p5_rdmg" value="54 60" value_charged_scale="2.0"/>
+            <talentvalue level="8" name="ronin_p5_rdmg" value="88 98" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="ronin_p5_rdmg" value="126 139" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="ronin_p5_pwr" value="22"/>
+            <talentvalue level="3" name="ronin_p5_pwr" value="27"/>
+            <talentvalue level="4" name="ronin_p5_pwr" value="29"/>
+            <talentvalue level="8" name="ronin_p5_pwr" value="45"/>
+            <talentvalue level="9" name="ronin_p5_pwr" value="56"/>
+            <talentvalue level="1" name="ron_p5_v_chance" value="0.05"/>
+            <talentvalue level="4" name="ron_p5_v_chance" value="0.09"/>
+            <talentvalue level="5" name="ron_p5_v_chance" value="0.11"/>
+            <talentvalue level="9" name="ron_p5_v_chance" value="0.15"/>
+            <talentvalue level="10" name="ron_p5_v_chance" value="0.2"/>
+            <talentvalue level="1" name="ronin_p5_vamp" value="0.02"/>
+            <talentvalue level="3" name="ronin_p5_vamp" value="0.05"/>
+            <talentvalue level="4" name="ronin_p5_vamp" value="0.07"/>
+            <talentvalue level="8" name="ronin_p5_vamp" value="0.1"/>
+            <talentvalue level="9" name="ronin_p5_vamp" value="0.15"/>
+            <talentvalue level="1" name="ronin_p5_scale" value="0.25" value_charged="1"/>
+            <talentvalue level="1" name="r_p5_rng_scale" value="0.75" value_charged="1"/>
+            <talentvalue level="1" name="ronin_p5_rng" value="48.75" value_charged="65"/>
         </talentvalues>
         <level description="Varies depending what attack Ronin uses!">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p5_req" />
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p5_req"/>
         </level>
     </talent>
     <talent descname="Focus" description="Focusing her chi, Ronin is able to deal more damage for a short time." descshort="Boost" icon="5" icon_texture="textures/ui/ronin_icons.png" name="ronin_p6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p6_req" value="2" />
-            <talentvalue level="5" name="ronin_p6_req" value="14" />
-            <talentvalue level="6" name="ronin_p6_req" value="17" />
-            <talentvalue level="9" name="ronin_p6_req" value="26" />
-            <talentvalue level="10" name="ronin_p6_req" value="29" />
-            <talentvalue level="14" name="ronin_p6_req" value="53" />
-            <talentvalue level="15" name="ronin_p6_req" value="73" />
-            <talentvalue level="1" name="ronin_p6_pwr" value="32" />
-            <talentvalue level="5" name="ronin_p6_pwr" value="72" />
-            <talentvalue level="6" name="ronin_p6_pwr" value="80" />
-            <talentvalue level="9" name="ronin_p6_pwr" value="108" />
-            <talentvalue level="10" name="ronin_p6_pwr" value="116" />
-            <talentvalue level="14" name="ronin_p6_pwr" value="180" />
-            <talentvalue level="15" name="ronin_p6_pwr" value="224" />
-            <talentvalue level="1" name="ronin_p6_dmg" value="1.05" />
-            <talentvalue level="5" name="ronin_p6_dmg" value="1.07" />
-            <talentvalue level="6" name="ronin_p6_dmg" value="1.09" />
-            <talentvalue level="9" name="ronin_p6_dmg" value="1.11" />
-            <talentvalue level="10" name="ronin_p6_dmg" value="1.13" />
-            <talentvalue level="14" name="ronin_p6_dmg" value="1.18" />
-            <talentvalue level="15" name="ronin_p6_dmg" value="1.25" />
-            <talentvalue level="1" name="ronin_p6_lif" value="20" />
-            <talentvalue level="5" name="ronin_p6_lif" value="40" />
-            <talentvalue level="6" name="ronin_p6_lif" value="50" />
-            <talentvalue level="9" name="ronin_p6_lif" value="65" />
-            <talentvalue level="10" name="ronin_p6_lif" value="80" />
-            <talentvalue level="14" name="ronin_p6_lif" value="120" />
-            <talentvalue level="15" name="ronin_p6_lif" value="180" />
+            <talentvalue level="1" name="ronin_p6_req" value="2"/>
+            <talentvalue level="5" name="ronin_p6_req" value="14"/>
+            <talentvalue level="6" name="ronin_p6_req" value="17"/>
+            <talentvalue level="9" name="ronin_p6_req" value="26"/>
+            <talentvalue level="10" name="ronin_p6_req" value="29"/>
+            <talentvalue level="14" name="ronin_p6_req" value="53"/>
+            <talentvalue level="15" name="ronin_p6_req" value="73"/>
+            <talentvalue level="1" name="ronin_p6_pwr" value="32"/>
+            <talentvalue level="5" name="ronin_p6_pwr" value="72"/>
+            <talentvalue level="6" name="ronin_p6_pwr" value="80"/>
+            <talentvalue level="9" name="ronin_p6_pwr" value="108"/>
+            <talentvalue level="10" name="ronin_p6_pwr" value="116"/>
+            <talentvalue level="14" name="ronin_p6_pwr" value="180"/>
+            <talentvalue level="15" name="ronin_p6_pwr" value="224"/>
+            <talentvalue level="1" name="ronin_p6_dmg" value="1.05"/>
+            <talentvalue level="5" name="ronin_p6_dmg" value="1.07"/>
+            <talentvalue level="6" name="ronin_p6_dmg" value="1.09"/>
+            <talentvalue level="9" name="ronin_p6_dmg" value="1.11"/>
+            <talentvalue level="10" name="ronin_p6_dmg" value="1.13"/>
+            <talentvalue level="14" name="ronin_p6_dmg" value="1.18"/>
+            <talentvalue level="15" name="ronin_p6_dmg" value="1.25"/>
+            <talentvalue level="1" name="ronin_p6_lif" value="20"/>
+            <talentvalue level="5" name="ronin_p6_lif" value="40"/>
+            <talentvalue level="6" name="ronin_p6_lif" value="50"/>
+            <talentvalue level="9" name="ronin_p6_lif" value="65"/>
+            <talentvalue level="10" name="ronin_p6_lif" value="80"/>
+            <talentvalue level="14" name="ronin_p6_lif" value="120"/>
+            <talentvalue level="15" name="ronin_p6_lif" value="180"/>
         </talentvalues>
-        <level description="%ronin_p6_dmg:s $DMG\n%ronin_p6_pwr $EP \n%ronin_p6_lif Seconds">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p6_req" />
+        <level description="%ronin_p6_dmg:s $DMG\n%ronin_p6_pwr $EP \n%ronin_p6_lif seconds">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p6_req"/>
         </level>
     </talent>
     <talent descname="Backlash" description="Ronin uses her chi to increase her speed and reflexes." descshort="Boost" icon="6" icon_texture="textures/ui/ronin_icons.png" name="ronin_p7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p7_req" value="14" />
-            <talentvalue level="2" name="ronin_p7_req" value="17" />
-            <talentvalue level="5" name="ronin_p7_req" value="26" />
-            <talentvalue level="6" name="ronin_p7_req" value="29" />
-            <talentvalue level="10" name="ronin_p7_req" value="53" />
-            <talentvalue level="11" name="ronin_p7_req" value="73" />
-            <talentvalue level="1" name="ronin_p7_pwr" value="72" />
-            <talentvalue level="2" name="ronin_p7_pwr" value="80" />
-            <talentvalue level="5" name="ronin_p7_pwr" value="108" />
-            <talentvalue level="6" name="ronin_p7_pwr" value="116" />
-            <talentvalue level="10" name="ronin_p7_pwr" value="180" />
-            <talentvalue level="11" name="ronin_p7_pwr" value="224" />
-            <talentvalue level="1" name="ronin_p7_def" value="1.1" />
-            <talentvalue level="2" name="ronin_p7_def" value="1.13" />
-            <talentvalue level="5" name="ronin_p7_def" value="1.25" />
-            <talentvalue level="6" name="ronin_p7_def" value="1.3" />
-            <talentvalue level="10" name="ronin_p7_def" value="1.6" />
-            <talentvalue level="11" name="ronin_p7_def" value="1.8" />
-            <talentvalue level="1" name="ronin_p7_ar" value="1.1" />
-            <talentvalue level="2" name="ronin_p7_ar" value="1.13" />
-            <talentvalue level="5" name="ronin_p7_ar" value="1.25" />
-            <talentvalue level="6" name="ronin_p7_ar" value="1.3" />
-            <talentvalue level="10" name="ronin_p7_ar" value="1.6" />
-            <talentvalue level="11" name="ronin_p7_ar" value="1.8" />
-            <talentvalue level="1" name="ronin_p7_spe" value="1.05" />
-            <talentvalue level="2" name="ronin_p7_spe" value="1.08" />
-            <talentvalue level="5" name="ronin_p7_spe" value="1.13" />
-            <talentvalue level="6" name="ronin_p7_spe" value="1.17" />
-            <talentvalue level="10" name="ronin_p7_spe" value="1.2" />
-            <talentvalue level="11" name="ronin_p7_spe" value="1.25" />
-            <talentvalue level="1" name="ronin_p7_lif" value="72" />
-            <talentvalue level="20" name="ronin_p7_lif" value="80" />
-            <talentvalue level="1" name="ronin_p7_lif" value="108" />
-            <talentvalue level="20" name="ronin_p7_lif" value="116" />
-            <talentvalue level="1" name="ronin_p7_lif" value="180" />
-            <talentvalue level="20" name="ronin_p7_lif" value="224" />
+            <talentvalue level="1" name="ronin_p7_req" value="14"/>
+            <talentvalue level="2" name="ronin_p7_req" value="17"/>
+            <talentvalue level="5" name="ronin_p7_req" value="26"/>
+            <talentvalue level="6" name="ronin_p7_req" value="29"/>
+            <talentvalue level="10" name="ronin_p7_req" value="53"/>
+            <talentvalue level="11" name="ronin_p7_req" value="73"/>
+            <talentvalue level="1" name="ronin_p7_pwr" value="72"/>
+            <talentvalue level="2" name="ronin_p7_pwr" value="80"/>
+            <talentvalue level="5" name="ronin_p7_pwr" value="108"/>
+            <talentvalue level="6" name="ronin_p7_pwr" value="116"/>
+            <talentvalue level="10" name="ronin_p7_pwr" value="180"/>
+            <talentvalue level="11" name="ronin_p7_pwr" value="224"/>
+            <talentvalue level="1" name="ronin_p7_def" value="1.1"/>
+            <talentvalue level="2" name="ronin_p7_def" value="1.13"/>
+            <talentvalue level="5" name="ronin_p7_def" value="1.25"/>
+            <talentvalue level="6" name="ronin_p7_def" value="1.3"/>
+            <talentvalue level="10" name="ronin_p7_def" value="1.6"/>
+            <talentvalue level="11" name="ronin_p7_def" value="1.8"/>
+            <talentvalue level="1" name="ronin_p7_ar" value="1.1"/>
+            <talentvalue level="2" name="ronin_p7_ar" value="1.13"/>
+            <talentvalue level="5" name="ronin_p7_ar" value="1.25"/>
+            <talentvalue level="6" name="ronin_p7_ar" value="1.3"/>
+            <talentvalue level="10" name="ronin_p7_ar" value="1.6"/>
+            <talentvalue level="11" name="ronin_p7_ar" value="1.8"/>
+            <talentvalue level="1" name="ronin_p7_spe" value="1.05"/>
+            <talentvalue level="2" name="ronin_p7_spe" value="1.08"/>
+            <talentvalue level="5" name="ronin_p7_spe" value="1.13"/>
+            <talentvalue level="6" name="ronin_p7_spe" value="1.17"/>
+            <talentvalue level="10" name="ronin_p7_spe" value="1.2"/>
+            <talentvalue level="11" name="ronin_p7_spe" value="1.25"/>
+            <talentvalue level="1" name="ronin_p7_lif" value="72"/>
+            <talentvalue level="20" name="ronin_p7_lif" value="80"/>
+            <talentvalue level="1" name="ronin_p7_lif" value="108"/>
+            <talentvalue level="20" name="ronin_p7_lif" value="116"/>
+            <talentvalue level="1" name="ronin_p7_lif" value="180"/>
+            <talentvalue level="20" name="ronin_p7_lif" value="224"/>
         </talentvalues>
-        <level description="%ronin_p7_spe:p Speed Increase\n%ronin_p7_ar:p $AR\n%ronin_p7_def:p Defense Boost\n%ronin_p7_lif Seconds">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%ronin_p7_req" />
+        <level description="%ronin_p7_spe:p speed increase\n%ronin_p7_ar:p $AR\n%ronin_p7_def:p defense boost\n%ronin_p7_lif seconds">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%ronin_p7_req"/>
         </level>
     </talent>
     <talent descname="Power Strike" description="Chargeable power where she pulls a sword off her back quickly to send an arc of white hot anger out at enemies" descshort="Xtreme" icon="4" icon_texture="textures/ui/ronin_icons.png" name="ronin_p8" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="ronin_p8_req" value="10" />
-            <talentvalue level="3" name="ronin_p8_req" value="25" />
-            <talentvalue level="4" name="ronin_p8_req" value="30" />
-            <talentvalue level="6" name="ronin_p8_req" value="48" />
-            <talentvalue level="1" name="ronin_p8_dmg" value="51 56" />
-            <talentvalue level="3" name="ronin_p8_dmg" value="85 94" />
-            <talentvalue level="4" name="ronin_p8_dmg" value="102 113" />
-            <talentvalue level="6" name="ronin_p8_dmg" value="136 150" />
+            <talentvalue level="1" name="ronin_p8_req" value="10"/>
+            <talentvalue level="3" name="ronin_p8_req" value="25"/>
+            <talentvalue level="4" name="ronin_p8_req" value="30"/>
+            <talentvalue level="6" name="ronin_p8_req" value="48"/>
+            <talentvalue level="1" name="ronin_p8_dmg" value="51 56"/>
+            <talentvalue level="3" name="ronin_p8_dmg" value="85 94"/>
+            <talentvalue level="4" name="ronin_p8_dmg" value="102 113"/>
+            <talentvalue level="6" name="ronin_p8_dmg" value="136 150"/>
         </talentvalues>
         <level description="%ronin_p8_dmg $DMG">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%ronin_p8_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%ronin_p8_req"/>
         </level>
     </talent>
     <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit11_pct" value="0.03" />
-            <talentvalue level="9" name="ronin_outfit11_pct" value="0.15" />
+            <talentvalue level="1" name="ronin_outfit11_pct" value="0.03"/>
+            <talentvalue level="9" name="ronin_outfit11_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="+%ronin_outfit11_pct:p Dodge Chance">
+        <level count="9" description="+%ronin_outfit11_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%ronin_outfit11_pct" scope_damage="dmg_physical" />
+                <affecter attribute="def_dodge" level="%ronin_outfit11_pct" scope_damage="dmg_physical"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Gain Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit12_pct" value="1.05" />
-            <talentvalue level="9" name="ronin_outfit12_pct" value="1.15" />
+            <talentvalue level="1" name="ronin_outfit12_pct" value="1.05"/>
+            <talentvalue level="9" name="ronin_outfit12_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%ronin_outfit12_pct:s Momentum Rate">
+        <level count="9" description="%ronin_outfit12_pct:s momentum rate">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="momentum" level="%ronin_outfit12_pct" />
+                <affecter affect_type="scale" attribute="momentum" level="%ronin_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit13_dr" value="1" />
-            <talentvalue level="9" name="ronin_outfit13_dr" value="9" />
+            <talentvalue level="1" name="ronin_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="ronin_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%ronin_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%ronin_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases melee damage of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases damage of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit21_pct" value="1.04" />
-            <talentvalue level="9" name="ronin_outfit21_pct" value="1.2" />
+            <talentvalue level="1" name="ronin_outfit21_pct" value="1.04"/>
+            <talentvalue level="9" name="ronin_outfit21_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%ronin_outfit21_pct:s Melee $DMG">
+        <level count="9" description="%ronin_outfit21_pct:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="%ronin_outfit21_pct">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
     <talent descname="Health Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit22_hlth" value="6" />
-            <talentvalue level="9" name="ronin_outfit22_hlth" value="30" />
+            <talentvalue level="1" name="ronin_outfit22_hlth" value="6"/>
+            <talentvalue level="9" name="ronin_outfit22_hlth" value="30"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit22_hlth $HP per kill">
             <powerup life="-1">
-                <affecter attribute="health_per_kill" level="%ronin_outfit22_hlth" />
+                <affecter attribute="health_per_kill" level="%ronin_outfit22_hlth"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit23_dr" value="1" />
-            <talentvalue level="9" name="ronin_outfit23_dr" value="9" />
+            <talentvalue level="1" name="ronin_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="ronin_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%ronin_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%ronin_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Resist All" description="Increases all resistances" icon="16" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit31_pct" value="0.02" />
-            <talentvalue level="9" name="ronin_outfit31_pct" value="0.1" />
-            <talentvalue level="1" name="ronin_outfit31_shw" value="2" />
-            <talentvalue level="9" name="ronin_outfit31_shw" value="10" />
+            <talentvalue level="1" name="ronin_outfit31_pct" value="0.02"/>
+            <talentvalue level="9" name="ronin_outfit31_pct" value="0.1"/>
+            <talentvalue level="1" name="ronin_outfit31_shw" value="2"/>
+            <talentvalue level="9" name="ronin_outfit31_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%ronin_outfit31_pct:p All resistances">
+        <level count="9" description="+%ronin_outfit31_pct:p all resistances">
             <powerup life="-1">
-                <affecter attribute="resist_all" level="%ronin_outfit31_pct" />
+                <affecter attribute="resist_all" level="%ronin_outfit31_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Sword Mastery" description="Increased Damage for Sword Attacks." icon="10" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit32_pct" value="1.03" />
-            <talentvalue level="9" name="ronin_outfit32_pct" value="1.15" />
+            <talentvalue level="1" name="ronin_outfit32_pct" value="1.03"/>
+            <talentvalue level="9" name="ronin_outfit32_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%ronin_outfit32_pct:p $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%ronin_outfit32_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%ronin_outfit32_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit33_dr" value="1" />
-            <talentvalue level="9" name="ronin_outfit33_dr" value="9" />
+            <talentvalue level="1" name="ronin_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="ronin_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%ronin_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%ronin_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Bleeding" description="Chance to cause bleeding damage on attacks." icon="8" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit41_dmg" value="0.03" />
-            <talentvalue level="9" name="ronin_outfit41_dmg" value="0.15" />
-            <talentvalue level="1" name="ronin_outfit41_pct" value="0.03" />
-            <talentvalue level="9" name="ronin_outfit41_pct" value="0.15" />
+            <talentvalue level="1" name="ronin_outfit41_dmg" value="0.03"/>
+            <talentvalue level="9" name="ronin_outfit41_dmg" value="0.15"/>
+            <talentvalue level="1" name="ronin_outfit41_pct" value="0.03"/>
+            <talentvalue level="9" name="ronin_outfit41_pct" value="0.15"/>
         </talentvalues>
-        <level count="9" description="+%ronin_outfit41_pct:p Chance\n+%ronin_outfit41_dmg:p as $DMG_BLEED">
+        <level count="9" description="+%ronin_outfit41_pct:p chance\n+%ronin_outfit41_dmg:p as $DMG_BLEED">
             <powerup chance="%ronin_outfit41_pct" class="add_harming" damagepercent="%ronin_outfit41_dmg" life="-1">
-                <affecter attribute="powerup_scope" scope_non_powers="true" />
+                <affecter attribute="powerup_scope" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost Stats" description="Boost all stats." icon="18" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit42_pct" value="2" />
-            <talentvalue level="9" name="ronin_outfit42_pct" value="10" />
+            <talentvalue level="1" name="ronin_outfit42_pct" value="2"/>
+            <talentvalue level="9" name="ronin_outfit42_pct" value="10"/>
         </talentvalues>
-        <level count="9" description="+%ronin_outfit42_pct All stats">
+        <level count="9" description="+%ronin_outfit42_pct all stats">
             <powerup life="-1">
-                <affecter attribute="traits" level="%ronin_outfit42_pct" />
+                <affecter attribute="traits" level="%ronin_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="ronin_outfit43_dr" value="1" />
-            <talentvalue level="9" name="ronin_outfit43_dr" value="9" />
+            <talentvalue level="1" name="ronin_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="ronin_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%ronin_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%ronin_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

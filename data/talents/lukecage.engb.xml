@@ -1,384 +1,384 @@
 <talents>
     <talent descname="Jab" description="A powerful melee punch.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p1_req" value="1" />
-            <talentvalue level="5" name="lukec_p1_req" value="13" />
-            <talentvalue level="6" name="lukec_p1_req" value="16" />
-            <talentvalue level="9" name="lukec_p1_req" value="25" />
-            <talentvalue level="10" name="lukec_p1_req" value="28" />
-            <talentvalue level="14" name="lukec_p1_req" value="52" />
-            <talentvalue level="15" name="lukec_p1_req" value="72" />
-            <talentvalue level="1" name="lukec_p1_dmg" value="17 19" value_charged_scale="2.0" />
-            <talentvalue level="5" name="lukec_p1_dmg" value="58 64" value_charged_scale="2.0" />
-            <talentvalue level="6" name="lukec_p1_dmg" value="78 86" value_charged_scale="2.0" />
-            <talentvalue level="9" name="lukec_p1_dmg" value="109 120" value_charged_scale="2.0" />
-            <talentvalue level="10" name="lukec_p1_dmg" value="139 154" value_charged_scale="2.0" />
-            <talentvalue level="14" name="lukec_p1_dmg" value="221 244" value_charged_scale="2.0" />
-            <talentvalue level="15" name="lukec_p1_dmg" value="319 353" value_charged_scale="2.0" />
-            <talentvalue level="1" name="lukec_p1_kb" value="40" value_charged="305" />
-            <talentvalue level="1" name="lukec_p1_pwr" value="7" />
-            <talentvalue level="5" name="lukec_p1_pwr" value="14" />
-            <talentvalue level="6" name="lukec_p1_pwr" value="16" />
-            <talentvalue level="9" name="lukec_p1_pwr" value="21" />
-            <talentvalue level="10" name="lukec_p1_pwr" value="23" />
-            <talentvalue level="14" name="lukec_p1_pwr" value="34" />
-            <talentvalue level="15" name="lukec_p1_pwr" value="43" />
+            <talentvalue level="1" name="lukec_p1_req" value="1"/>
+            <talentvalue level="5" name="lukec_p1_req" value="13"/>
+            <talentvalue level="6" name="lukec_p1_req" value="16"/>
+            <talentvalue level="9" name="lukec_p1_req" value="25"/>
+            <talentvalue level="10" name="lukec_p1_req" value="28"/>
+            <talentvalue level="14" name="lukec_p1_req" value="52"/>
+            <talentvalue level="15" name="lukec_p1_req" value="72"/>
+            <talentvalue level="1" name="lukec_p1_dmg" value="17 19" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="lukec_p1_dmg" value="58 64" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="lukec_p1_dmg" value="78 86" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="lukec_p1_dmg" value="109 120" value_charged_scale="2.0"/>
+            <talentvalue level="10" name="lukec_p1_dmg" value="139 154" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="lukec_p1_dmg" value="221 244" value_charged_scale="2.0"/>
+            <talentvalue level="15" name="lukec_p1_dmg" value="319 353" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="lukec_p1_kb" value="40" value_charged="305"/>
+            <talentvalue level="1" name="lukec_p1_pwr" value="7"/>
+            <talentvalue level="5" name="lukec_p1_pwr" value="14"/>
+            <talentvalue level="6" name="lukec_p1_pwr" value="16"/>
+            <talentvalue level="9" name="lukec_p1_pwr" value="21"/>
+            <talentvalue level="10" name="lukec_p1_pwr" value="23"/>
+            <talentvalue level="14" name="lukec_p1_pwr" value="34"/>
+            <talentvalue level="15" name="lukec_p1_pwr" value="43"/>
         </talentvalues>
         <level description="%lukec_p1_dmg  $DMG_PHYSICAL\n%lukec_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p1_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p1_req"/>
         </level>
     </talent>
     <talent descname="Chain Strike" description="Quick forward chain swipe, can hit several enemies, popping them up." descshort="Special" icon="1" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p2_req" value="5" />
-            <talentvalue level="5" name="lukec_p2_req" value="14" />
-            <talentvalue level="6" name="lukec_p2_req" value="17" />
-            <talentvalue level="9" name="lukec_p2_req" value="26" />
-            <talentvalue level="10" name="lukec_p2_req" value="29" />
-            <talentvalue level="14" name="lukec_p2_req" value="53" />
-            <talentvalue level="15" name="lukec_p2_req" value="73" />
-            <talentvalue level="1" name="lukec_p2_dmg" value="17 19" />
-            <talentvalue level="5" name="lukec_p2_dmg" value="34 38" />
-            <talentvalue level="6" name="lukec_p2_dmg" value="48 53" />
-            <talentvalue level="9" name="lukec_p2_dmg" value="65 71" />
-            <talentvalue level="10" name="lukec_p2_dmg" value="82 90" />
-            <talentvalue level="14" name="lukec_p2_dmg" value="132 147" />
-            <talentvalue level="15" name="lukec_p2_dmg" value="190 210" />
-            <talentvalue level="1" name="lukec_p2_pwr" value="12" />
-            <talentvalue level="5" name="lukec_p2_pwr" value="20" />
-            <talentvalue level="6" name="lukec_p2_pwr" value="22" />
-            <talentvalue level="9" name="lukec_p2_pwr" value="30" />
-            <talentvalue level="10" name="lukec_p2_pwr" value="32" />
-            <talentvalue level="14" name="lukec_p2_pwr" value="50" />
-            <talentvalue level="15" name="lukec_p2_pwr" value="62" />
+            <talentvalue level="1" name="lukec_p2_req" value="5"/>
+            <talentvalue level="5" name="lukec_p2_req" value="14"/>
+            <talentvalue level="6" name="lukec_p2_req" value="17"/>
+            <talentvalue level="9" name="lukec_p2_req" value="26"/>
+            <talentvalue level="10" name="lukec_p2_req" value="29"/>
+            <talentvalue level="14" name="lukec_p2_req" value="53"/>
+            <talentvalue level="15" name="lukec_p2_req" value="73"/>
+            <talentvalue level="1" name="lukec_p2_dmg" value="17 19"/>
+            <talentvalue level="5" name="lukec_p2_dmg" value="34 38"/>
+            <talentvalue level="6" name="lukec_p2_dmg" value="48 53"/>
+            <talentvalue level="9" name="lukec_p2_dmg" value="65 71"/>
+            <talentvalue level="10" name="lukec_p2_dmg" value="82 90"/>
+            <talentvalue level="14" name="lukec_p2_dmg" value="132 147"/>
+            <talentvalue level="15" name="lukec_p2_dmg" value="190 210"/>
+            <talentvalue level="1" name="lukec_p2_pwr" value="12"/>
+            <talentvalue level="5" name="lukec_p2_pwr" value="20"/>
+            <talentvalue level="6" name="lukec_p2_pwr" value="22"/>
+            <talentvalue level="9" name="lukec_p2_pwr" value="30"/>
+            <talentvalue level="10" name="lukec_p2_pwr" value="32"/>
+            <talentvalue level="14" name="lukec_p2_pwr" value="50"/>
+            <talentvalue level="15" name="lukec_p2_pwr" value="62"/>
         </talentvalues>
         <level description="%lukec_p2_dmg $DMG_PHYSICAL\n%lukec_p2_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p2_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p2_req"/>
         </level>
     </talent>
     <talent descname="Block Party" description="Luke pounds the ground with his fists, damaging enemies in an increasing radius.  $PT_TAP" descshort="Radial" icon="2" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p3_req" value="10" />
-            <talentvalue level="3" name="lukec_p3_req" value="13" />
-            <talentvalue level="4" name="lukec_p3_req" value="16" />
-            <talentvalue level="7" name="lukec_p3_req" value="25" />
-            <talentvalue level="8" name="lukec_p3_req" value="28" />
-            <talentvalue level="12" name="lukec_p3_req" value="52" />
-            <talentvalue level="13" name="lukec_p3_req" value="72" />
-            <talentvalue level="1" name="lukec_p3_dmg" value="17 19" />
-            <talentvalue level="3" name="lukec_p3_dmg" value="20 23" />
-            <talentvalue level="4" name="lukec_p3_dmg" value="27 30" />
-            <talentvalue level="7" name="lukec_p3_dmg" value="41 45" />
-            <talentvalue level="8" name="lukec_p3_dmg" value="51 56" />
-            <talentvalue level="12" name="lukec_p3_dmg" value="85 94" />
-            <talentvalue level="13" name="lukec_p3_dmg" value="126 139" />
-            <talentvalue level="1" name="lukec_p3_dmg2" value="2" />
-            <talentvalue level="13" name="lukec_p3_dmg2" value="13" />
-            <talentvalue level="1" name="lukec_p3_rng" value="64" value_charged="130" />
-            <talentvalue level="1" name="lukec_p3_spd" value="1" value_charged="1.8" />
-            <talentvalue level="1" name="lukec_p3_fxscale" value="0.5" value_charged="1" />
-            <talentvalue level="1" name="lukec_p3_pwr" value="20" />
-            <talentvalue level="3" name="lukec_p3_pwr" value="22" />
-            <talentvalue level="4" name="lukec_p3_pwr" value="25" />
-            <talentvalue level="7" name="lukec_p3_pwr" value="34" />
-            <talentvalue level="8" name="lukec_p3_pwr" value="36" />
-            <talentvalue level="12" name="lukec_p3_pwr" value="57" />
-            <talentvalue level="13" name="lukec_p3_pwr" value="72" />
+            <talentvalue level="1" name="lukec_p3_req" value="10"/>
+            <talentvalue level="3" name="lukec_p3_req" value="13"/>
+            <talentvalue level="4" name="lukec_p3_req" value="16"/>
+            <talentvalue level="7" name="lukec_p3_req" value="25"/>
+            <talentvalue level="8" name="lukec_p3_req" value="28"/>
+            <talentvalue level="12" name="lukec_p3_req" value="52"/>
+            <talentvalue level="13" name="lukec_p3_req" value="72"/>
+            <talentvalue level="1" name="lukec_p3_dmg" value="17 19"/>
+            <talentvalue level="3" name="lukec_p3_dmg" value="20 23"/>
+            <talentvalue level="4" name="lukec_p3_dmg" value="27 30"/>
+            <talentvalue level="7" name="lukec_p3_dmg" value="41 45"/>
+            <talentvalue level="8" name="lukec_p3_dmg" value="51 56"/>
+            <talentvalue level="12" name="lukec_p3_dmg" value="85 94"/>
+            <talentvalue level="13" name="lukec_p3_dmg" value="126 139"/>
+            <talentvalue level="1" name="lukec_p3_dmg2" value="2"/>
+            <talentvalue level="13" name="lukec_p3_dmg2" value="13"/>
+            <talentvalue level="1" name="lukec_p3_rng" value="64" value_charged="130"/>
+            <talentvalue level="1" name="lukec_p3_spd" value="1" value_charged="1.8"/>
+            <talentvalue level="1" name="lukec_p3_fxscale" value="0.5" value_charged="1"/>
+            <talentvalue level="1" name="lukec_p3_pwr" value="20"/>
+            <talentvalue level="3" name="lukec_p3_pwr" value="22"/>
+            <talentvalue level="4" name="lukec_p3_pwr" value="25"/>
+            <talentvalue level="7" name="lukec_p3_pwr" value="34"/>
+            <talentvalue level="8" name="lukec_p3_pwr" value="36"/>
+            <talentvalue level="12" name="lukec_p3_pwr" value="57"/>
+            <talentvalue level="13" name="lukec_p3_pwr" value="72"/>
         </talentvalues>
         <level description="%lukec_p3_dmg $DMG_PHYSICAL\n%lukec_p3_dmg2 $DMG_PHYSICAL with each additional tap\n%lukec_p3_pwr $EP">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p3_req" />
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p3_req"/>
         </level>
     </talent>
     <talent descname="Hammer Toss" description="Grab nearby victims, swinging them around and throwing them on release.  $PT_HOLD\n" descshort="Radial" icon="3" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p4_req" value="17" />
-            <talentvalue level="4" name="lukec_p4_req" value="26" />
-            <talentvalue level="5" name="lukec_p4_req" value="29" />
-            <talentvalue level="9" name="lukec_p4_req" value="53" />
-            <talentvalue level="10" name="lukec_p4_req" value="73" />
-            <talentvalue level="1" name="lukec_p4_dmg" value="20 23" />
-            <talentvalue level="4" name="lukec_p4_dmg" value="27 30" />
-            <talentvalue level="5" name="lukec_p4_dmg" value="37 41" />
-            <talentvalue level="9" name="lukec_p4_dmg" value="58 64" />
-            <talentvalue level="10" name="lukec_p4_dmg" value="85 94" />
-            <talentvalue level="1" name="lukec_p4_pwr" value="16" />
-            <talentvalue level="4" name="lukec_p4_pwr" value="21" />
-            <talentvalue level="5" name="lukec_p4_pwr" value="23" />
-            <talentvalue level="9" name="lukec_p4_pwr" value="35" />
-            <talentvalue level="10" name="lukec_p4_pwr" value="44" />
+            <talentvalue level="1" name="lukec_p4_req" value="17"/>
+            <talentvalue level="4" name="lukec_p4_req" value="26"/>
+            <talentvalue level="5" name="lukec_p4_req" value="29"/>
+            <talentvalue level="9" name="lukec_p4_req" value="53"/>
+            <talentvalue level="10" name="lukec_p4_req" value="73"/>
+            <talentvalue level="1" name="lukec_p4_dmg" value="20 23"/>
+            <talentvalue level="4" name="lukec_p4_dmg" value="27 30"/>
+            <talentvalue level="5" name="lukec_p4_dmg" value="37 41"/>
+            <talentvalue level="9" name="lukec_p4_dmg" value="58 64"/>
+            <talentvalue level="10" name="lukec_p4_dmg" value="85 94"/>
+            <talentvalue level="1" name="lukec_p4_pwr" value="16"/>
+            <talentvalue level="4" name="lukec_p4_pwr" value="21"/>
+            <talentvalue level="5" name="lukec_p4_pwr" value="23"/>
+            <talentvalue level="9" name="lukec_p4_pwr" value="35"/>
+            <talentvalue level="10" name="lukec_p4_pwr" value="44"/>
         </talentvalues>
-        <level description="%lukec_p4_dmg $DMG_PHYSICAL\n%lukec_p4_pwr $EP/Sec">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p4_req" />
+        <level description="%lukec_p4_dmg $DMG_PHYSICAL\n%lukec_p4_pwr $EP per second">
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p4_req"/>
         </level>
     </talent>
     <talent descname="Drill Bit" description="Leap into the air and drill into the ground, damaging and knocking back nearby enemies." descshort="Radial" icon="4" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p5" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p5_req" value="20" />
-            <talentvalue level="3" name="lukec_p5_req" value="26" />
-            <talentvalue level="4" name="lukec_p5_req" value="29" />
-            <talentvalue level="8" name="lukec_p5_req" value="53" />
-            <talentvalue level="9" name="lukec_p5_req" value="73" />
-            <talentvalue level="1" name="lukec_p5_dmg" value="92 101" />
-            <talentvalue level="3" name="lukec_p5_dmg" value="112 124" />
-            <talentvalue level="4" name="lukec_p5_dmg" value="143 157" />
-            <talentvalue level="8" name="lukec_p5_dmg" value="224 248" />
-            <talentvalue level="9" name="lukec_p5_dmg" value="322 356" />
-            <talentvalue level="1" name="lukec_p5_pwr" value="22" />
-            <talentvalue level="3" name="lukec_p5_pwr" value="27" />
-            <talentvalue level="4" name="lukec_p5_pwr" value="29" />
-            <talentvalue level="8" name="lukec_p5_pwr" value="45" />
-            <talentvalue level="9" name="lukec_p5_pwr" value="56" />
+            <talentvalue level="1" name="lukec_p5_req" value="20"/>
+            <talentvalue level="3" name="lukec_p5_req" value="26"/>
+            <talentvalue level="4" name="lukec_p5_req" value="29"/>
+            <talentvalue level="8" name="lukec_p5_req" value="53"/>
+            <talentvalue level="9" name="lukec_p5_req" value="73"/>
+            <talentvalue level="1" name="lukec_p5_dmg" value="92 101"/>
+            <talentvalue level="3" name="lukec_p5_dmg" value="112 124"/>
+            <talentvalue level="4" name="lukec_p5_dmg" value="143 157"/>
+            <talentvalue level="8" name="lukec_p5_dmg" value="224 248"/>
+            <talentvalue level="9" name="lukec_p5_dmg" value="322 356"/>
+            <talentvalue level="1" name="lukec_p5_pwr" value="22"/>
+            <talentvalue level="3" name="lukec_p5_pwr" value="27"/>
+            <talentvalue level="4" name="lukec_p5_pwr" value="29"/>
+            <talentvalue level="8" name="lukec_p5_pwr" value="45"/>
+            <talentvalue level="9" name="lukec_p5_pwr" value="56"/>
         </talentvalues>
         <level description="%lukec_p5_dmg $DMG_PHYSICAL\n%lukec_p5_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p5_req" />
+            <tier cost="2" count="3"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p5_req"/>
         </level>
     </talent>
     <talent descname="Rebound" description="Causes all nearby enemies to attack Luke for the duration of boost. Reduces damage taken, and reflects all projectiles back at attackers." descshort="Boost" icon="5" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p6_req" value="2" />
-            <talentvalue level="5" name="lukec_p6_req" value="14" />
-            <talentvalue level="6" name="lukec_p6_req" value="17" />
-            <talentvalue level="9" name="lukec_p6_req" value="26" />
-            <talentvalue level="10" name="lukec_p6_req" value="29" />
-            <talentvalue level="14" name="lukec_p6_req" value="53" />
-            <talentvalue level="15" name="lukec_p6_req" value="73" />
-            <talentvalue level="1" name="lukec_p6_dmg" value="0.8" />
-            <talentvalue level="14" name="lukec_p6_dmg" value="0.7" />
-            <talentvalue level="1" name="lukec_p6_lif" value="20" />
-            <talentvalue level="5" name="lukec_p6_lif" value="40" />
-            <talentvalue level="6" name="lukec_p6_lif" value="50" />
-            <talentvalue level="9" name="lukec_p6_lif" value="65" />
-            <talentvalue level="10" name="lukec_p6_lif" value="80" />
-            <talentvalue level="14" name="lukec_p6_lif" value="120" />
-            <talentvalue level="15" name="lukec_p6_lif" value="180" />
-            <talentvalue level="1" name="lukec_p6_pwr" value="32" />
-            <talentvalue level="5" name="lukec_p6_pwr" value="72" />
-            <talentvalue level="6" name="lukec_p6_pwr" value="80" />
-            <talentvalue level="9" name="lukec_p6_pwr" value="108" />
-            <talentvalue level="10" name="lukec_p6_pwr" value="116" />
-            <talentvalue level="14" name="lukec_p6_pwr" value="180" />
-            <talentvalue level="15" name="lukec_p6_pwr" value="224" />
+            <talentvalue level="1" name="lukec_p6_req" value="2"/>
+            <talentvalue level="5" name="lukec_p6_req" value="14"/>
+            <talentvalue level="6" name="lukec_p6_req" value="17"/>
+            <talentvalue level="9" name="lukec_p6_req" value="26"/>
+            <talentvalue level="10" name="lukec_p6_req" value="29"/>
+            <talentvalue level="14" name="lukec_p6_req" value="53"/>
+            <talentvalue level="15" name="lukec_p6_req" value="73"/>
+            <talentvalue level="1" name="lukec_p6_dmg" value="0.8"/>
+            <talentvalue level="14" name="lukec_p6_dmg" value="0.7"/>
+            <talentvalue level="1" name="lukec_p6_lif" value="20"/>
+            <talentvalue level="5" name="lukec_p6_lif" value="40"/>
+            <talentvalue level="6" name="lukec_p6_lif" value="50"/>
+            <talentvalue level="9" name="lukec_p6_lif" value="65"/>
+            <talentvalue level="10" name="lukec_p6_lif" value="80"/>
+            <talentvalue level="14" name="lukec_p6_lif" value="120"/>
+            <talentvalue level="15" name="lukec_p6_lif" value="180"/>
+            <talentvalue level="1" name="lukec_p6_pwr" value="32"/>
+            <talentvalue level="5" name="lukec_p6_pwr" value="72"/>
+            <talentvalue level="6" name="lukec_p6_pwr" value="80"/>
+            <talentvalue level="9" name="lukec_p6_pwr" value="108"/>
+            <talentvalue level="10" name="lukec_p6_pwr" value="116"/>
+            <talentvalue level="14" name="lukec_p6_pwr" value="180"/>
+            <talentvalue level="15" name="lukec_p6_pwr" value="224"/>
         </talentvalues>
-        <level description="%lukec_p6_dmg:s $DMG taken\n%lukec_p6_lif Seconds\n%lukec_p6_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p6_req" />
+        <level description="%lukec_p6_dmg:s $DMG taken\n%lukec_p6_lif seconds\n%lukec_p6_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p6_req"/>
         </level>
     </talent>
     <talent descname="Street Smarts" description="Raises Max $HP and Striking for a time." descshort="Boost" icon="6" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p7_req" value="14" />
-            <talentvalue level="2" name="lukec_p7_req" value="17" />
-            <talentvalue level="5" name="lukec_p7_req" value="26" />
-            <talentvalue level="6" name="lukec_p7_req" value="29" />
-            <talentvalue level="10" name="lukec_p7_req" value="53" />
-            <talentvalue level="11" name="lukec_p7_req" value="73" />
-            <talentvalue level="1" name="lukec_p7_pwr" value="72" />
-            <talentvalue level="2" name="lukec_p7_pwr" value="80" />
-            <talentvalue level="5" name="lukec_p7_pwr" value="108" />
-            <talentvalue level="6" name="lukec_p7_pwr" value="116" />
-            <talentvalue level="10" name="lukec_p7_pwr" value="180" />
-            <talentvalue level="11" name="lukec_p7_pwr" value="224" />
-            <talentvalue level="1" name="lukec_p7_hlt" value="1.5" />
-            <talentvalue level="11" name="lukec_p7_hlt" value="2" />
-            <talentvalue level="1" name="lukec_p7_str" value="1.25" />
-            <talentvalue level="11" name="lukec_p7_str" value="1.5" />
-            <talentvalue level="1" name="lukec_p7_lif" value="40" />
-            <talentvalue level="2" name="lukec_p7_lif" value="50" />
-            <talentvalue level="5" name="lukec_p7_lif" value="65" />
-            <talentvalue level="6" name="lukec_p7_lif" value="80" />
-            <talentvalue level="10" name="lukec_p7_lif" value="120" />
-            <talentvalue level="11" name="lukec_p7_lif" value="180" />
+            <talentvalue level="1" name="lukec_p7_req" value="14"/>
+            <talentvalue level="2" name="lukec_p7_req" value="17"/>
+            <talentvalue level="5" name="lukec_p7_req" value="26"/>
+            <talentvalue level="6" name="lukec_p7_req" value="29"/>
+            <talentvalue level="10" name="lukec_p7_req" value="53"/>
+            <talentvalue level="11" name="lukec_p7_req" value="73"/>
+            <talentvalue level="1" name="lukec_p7_pwr" value="72"/>
+            <talentvalue level="2" name="lukec_p7_pwr" value="80"/>
+            <talentvalue level="5" name="lukec_p7_pwr" value="108"/>
+            <talentvalue level="6" name="lukec_p7_pwr" value="116"/>
+            <talentvalue level="10" name="lukec_p7_pwr" value="180"/>
+            <talentvalue level="11" name="lukec_p7_pwr" value="224"/>
+            <talentvalue level="1" name="lukec_p7_hlt" value="1.5"/>
+            <talentvalue level="11" name="lukec_p7_hlt" value="2"/>
+            <talentvalue level="1" name="lukec_p7_str" value="1.25"/>
+            <talentvalue level="11" name="lukec_p7_str" value="1.5"/>
+            <talentvalue level="1" name="lukec_p7_lif" value="40"/>
+            <talentvalue level="2" name="lukec_p7_lif" value="50"/>
+            <talentvalue level="5" name="lukec_p7_lif" value="65"/>
+            <talentvalue level="6" name="lukec_p7_lif" value="80"/>
+            <talentvalue level="10" name="lukec_p7_lif" value="120"/>
+            <talentvalue level="11" name="lukec_p7_lif" value="180"/>
         </talentvalues>
-        <level description="%lukec_p7_hlt:p Max $HP\n%lukec_p7_str:s Striking\n%lukec_p7_lif Seconds">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%lukec_p7_req" />
+        <level description="%lukec_p7_hlt:p maximum $HP\n%lukec_p7_str:s Striking\n%lukec_p7_lif seconds">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%lukec_p7_req"/>
         </level>
     </talent>
     <talent descname="Sweet Christmas" description="Leap in the air and slam to the ground, causing massive $DMG_PHYSICAL. Also increases Shield Credit drops for enemies defeated during attack sequence." descshort="Xtreme" icon="7" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p8" power="team_xtreme" type="xtreme">
         <talentvalues>
-            <talentvalue level="1" name="lukec_p8_req" value="10" />
-            <talentvalue level="8" name="lukec_p8_req" value="45" />
-            <talentvalue level="1" name="lukec_p8_dmg" value="85 94" />
-            <talentvalue level="8" name="lukec_p8_dmg" value="339 375" />
-            <talentvalue level="1" name="lukec_p8_mon" value="4" />
-            <talentvalue level="8" name="lukec_p8_mon" value="6" />
+            <talentvalue level="1" name="lukec_p8_req" value="10"/>
+            <talentvalue level="8" name="lukec_p8_req" value="45"/>
+            <talentvalue level="1" name="lukec_p8_dmg" value="85 94"/>
+            <talentvalue level="8" name="lukec_p8_dmg" value="339 375"/>
+            <talentvalue level="1" name="lukec_p8_mon" value="4"/>
+            <talentvalue level="8" name="lukec_p8_mon" value="6"/>
         </talentvalues>
         <level description="%lukec_p8_dmg $DMG_PHYSICAL\n%lukec_p8_mon:s Shield Credits from enemies">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%lukec_p8_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%lukec_p8_req"/>
         </level>
     </talent>
     <talent hidden="true" name="lukec_grabsma" type="ability">
         <talentvalues>
-            <talentvalue level="1" name="lukec_grabsmash_spd" value="1" value_charged="2" />
+            <talentvalue level="1" name="lukec_grabsmash_spd" value="1" value_charged="2"/>
         </talentvalues>
-        <level />
+        <level/>
     </talent>
     <talent descname="Health Regen" description="Increases $HP regen rate." icon="30" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit11_hlt" value="0.004" />
-            <talentvalue level="9" name="lukec_outfit11_hlt" value="0.012" />
-            <talentvalue level="1" name="lukec_outfit11_shw" value="0.4" />
-            <talentvalue level="9" name="lukec_outfit11_shw" value="1.2" />
+            <talentvalue level="1" name="lukec_outfit11_hlt" value="0.004"/>
+            <talentvalue level="9" name="lukec_outfit11_hlt" value="0.012"/>
+            <talentvalue level="1" name="lukec_outfit11_shw" value="0.4"/>
+            <talentvalue level="9" name="lukec_outfit11_shw" value="1.2"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit11_shw:f% Max $HP Regenerated Per Second">
+        <level count="9" description="+%lukec_outfit11_shw:f% maximum $HP regenerated per second">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="health_regen_pct" level="%lukec_outfit11_hlt" />
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="Max $EP" description="Increases max $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit13" skin="0" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="lukec_outfit13_ep" value="1.04" />
-            <talentvalue level="9" name="lukec_outfit13_ep" value="1.2" />
-        </talentvalues>
-        <level count="9" description="%lukec_outfit13_ep:s Max $EP">
-            <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%lukec_outfit13_ep" />
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%lukec_outfit11_hlt"/>
             </powerup>
         </level>
     </talent>
     <talent descname="$DR" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit12_dr" value="1" />
-            <talentvalue level="9" name="lukec_outfit12_dr" value="9" />
+            <talentvalue level="1" name="lukec_outfit12_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit12_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%lukec_outfit12_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit12_dr" />
+                <affecter attribute="defense_rating" level="%lukec_outfit12_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Critical Strike" description="Increase the chance of critical hits." icon="1" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit21" skin="1" type="passive">
+    <talent descname="Max $EP" description="Increases maximum $EP." icon="21" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit21_cri" value="0.02" />
-            <talentvalue level="9" name="lukec_outfit21_cri" value="0.1" />
+            <talentvalue level="1" name="lukec_outfit13_ep" value="1.04"/>
+            <talentvalue level="9" name="lukec_outfit13_ep" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit21_cri:p Chance">
+        <level count="9" description="%lukec_outfit13_ep:s maximum $EP">
             <powerup life="-1">
-                <affecter attribute="critical" level="%lukec_outfit21_cri" />
+                <affecter affect_type="scale" attribute="maxenergy" level="%lukec_outfit13_ep"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the damage from powers." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit23" skin="1" type="passive">
+    <talent descname="Critical Strike" description="Increases the chance of critical hits." icon="1" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit23_dmg" value="1.03" />
-            <talentvalue level="9" name="lukec_outfit23_dmg" value="1.15" />
+            <talentvalue level="1" name="lukec_outfit21_cri" value="0.02"/>
+            <talentvalue level="9" name="lukec_outfit21_cri" value="0.1"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit23_dmg:s Power $DMG">
+        <level count="9" description="%lukec_outfit21_cri:p chance">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit23_dmg" scope_powers="true" />
+                <affecter attribute="critical" level="%lukec_outfit21_cri"/>
             </powerup>
         </level>
     </talent>
     <talent descname="$DR" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit22_dr" value="1" />
-            <talentvalue level="9" name="lukec_outfit22_dr" value="9" />
+            <talentvalue level="1" name="lukec_outfit22_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit22_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%lukec_outfit22_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit22_dr" />
+                <affecter attribute="defense_rating" level="%lukec_outfit22_dr"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit23" skin="1" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="lukec_outfit23_dmg" value="1.03"/>
+            <talentvalue level="9" name="lukec_outfit23_dmg" value="1.15"/>
+        </talentvalues>
+        <level count="9" description="%lukec_outfit23_dmg:s power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit23_dmg" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Melee Mastery" description="Increases melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit31_dmg" value="1.04" />
-            <talentvalue level="9" name="lukec_outfit31_dmg" value="1.2" />
+            <talentvalue level="1" name="lukec_outfit31_dmg" value="1.04"/>
+            <talentvalue level="9" name="lukec_outfit31_dmg" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit31_dmg:s Melee $DMG">
+        <level count="9" description="%lukec_outfit31_dmg:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit31_dmg" scope_non_powers="true" />
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit33" skin="2" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="lukec_outfit33_res" value="0.02" />
-            <talentvalue level="9" name="lukec_outfit33_res" value="0.1" />
-            <talentvalue level="1" name="lukec_outfit33_pctd" value="2" />
-            <talentvalue level="9" name="lukec_outfit33_pctd" value="10" />
-        </talentvalues>
-        <level count="9" description="+%lukec_outfit33_pctd All Resistances">
-            <powerup life="-1">
-                <affecter attribute="resist_all" level="%lukec_outfit33_res" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit31_dmg" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="$DR" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit32_dr" value="1" />
-            <talentvalue level="9" name="lukec_outfit32_dr" value="9" />
+            <talentvalue level="1" name="lukec_outfit32_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit32_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%lukec_outfit32_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit32_dr" />
+                <affecter attribute="defense_rating" level="%lukec_outfit32_dr"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit33" skin="2" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="lukec_outfit33_res" value="0.02"/>
+            <talentvalue level="9" name="lukec_outfit33_res" value="0.1"/>
+            <talentvalue level="1" name="lukec_outfit33_pctd" value="2"/>
+            <talentvalue level="9" name="lukec_outfit33_pctd" value="10"/>
+        </talentvalues>
+        <level count="9" description="+%lukec_outfit33_pctd All Resistances">
+            <powerup life="-1">
+                <affecter attribute="resist_all" level="%lukec_outfit33_res"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Max Health" description="Increases max $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit41_hlt" value="1.05" />
-            <talentvalue level="9" name="lukec_outfit41_hlt" value="1.25" />
+            <talentvalue level="1" name="lukec_outfit41_hlt" value="1.05"/>
+            <talentvalue level="9" name="lukec_outfit41_hlt" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit41_hlt:s Max $HP">
+        <level count="9" description="%lukec_outfit41_hlt:s maximum $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%lukec_outfit41_hlt" />
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="Power Damage" description="Increases the damage from powers." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit43" skin="3" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="lukec_outfit43_dmg" value="1.03" />
-            <talentvalue level="9" name="lukec_outfit43_dmg" value="1.15" />
-        </talentvalues>
-        <level count="9" description="%lukec_outfit43_dmg:s Power $DMG">
-            <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit43_dmg" scope_powers="true" />
+                <affecter affect_type="scale" attribute="maxhealth" level="%lukec_outfit41_hlt"/>
             </powerup>
         </level>
     </talent>
     <talent descname="$DR" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit42_dr" value="1" />
-            <talentvalue level="9" name="lukec_outfit42_dr" value="9" />
+            <talentvalue level="1" name="lukec_outfit42_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit42_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%lukec_outfit42_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit42_dr" />
+                <affecter attribute="defense_rating" level="%lukec_outfit42_dr"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="lukec_outfit43_dmg" value="1.03"/>
+            <talentvalue level="9" name="lukec_outfit43_dmg" value="1.15"/>
+        </talentvalues>
+        <level count="9" description="%lukec_outfit43_dmg:s power $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit43_dmg" scope_powers="true"/>
             </powerup>
         </level>
     </talent>

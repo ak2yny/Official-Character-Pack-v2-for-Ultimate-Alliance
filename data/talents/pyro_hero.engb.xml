@@ -250,7 +250,7 @@
             <talentvalue level="1" name="pyro_outfit11_pct" value="1.04" />
             <talentvalue level="9" name="pyro_outfit11_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%pyro_outfit11_pct:s Maximum $EP">
+        <level count="9" description="%pyro_outfit11_pct:s maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%pyro_outfit11_pct" />
             </powerup>

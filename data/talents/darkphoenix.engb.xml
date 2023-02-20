@@ -1,482 +1,482 @@
 <talents>
     <talent descname="From the Ashes" description="Gives the Phoenix Force a chance to ressurect its vessel upon Dark Phoenix's death." icon="8" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_ashes" type="ability">
         <talentvalues>
-            <talentvalue level="1" name="darkp_ashes_req" value="1" />
-            <talentvalue level="15" name="darkp_ashes_req" value="99" />
-            <talentvalue level="1" name="darkp_ashes_hlth" value="0.1" />
-            <talentvalue level="15" name="darkp_ashes_hlth" value="1" />
-            <talentvalue level="1" name="darkp_ashes_pct" value="0.1" />
-            <talentvalue level="15" name="darkp_ashes_pct" value="0.5" />
+            <talentvalue level="1" name="darkp_ashes_req" value="1"/>
+            <talentvalue level="15" name="darkp_ashes_req" value="99"/>
+            <talentvalue level="1" name="darkp_ashes_hlth" value="0.1"/>
+            <talentvalue level="15" name="darkp_ashes_hlth" value="1"/>
+            <talentvalue level="1" name="darkp_ashes_pct" value="0.1"/>
+            <talentvalue level="15" name="darkp_ashes_pct" value="0.5"/>
         </talentvalues>
         <level count="15" description="+%darkp_ashes_pct:p chance for ressurection with %darkp_ashes_hlth:p $HP">
-            <require cat="level" level="%darkp_ashes_req" />
+            <require cat="level" level="%darkp_ashes_req"/>
             <powerup life="-1">
-                <affecter attribute="resist_mental" level="0.2" />
-                <affecter attribute="resist_radiation" level="0.1" />
-                <affecter attribute="resist_energy" level="0.1" />
-                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_mental" level="0.66" />
-                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0.66" />
+                <affecter attribute="resist_mental" level="0.2"/>
+                <affecter attribute="resist_radiation" level="0.1"/>
+                <affecter attribute="resist_energy" level="0.1"/>
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_mental" level="0.66"/>
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0.66"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Mind Erode" description="This is a psychic attack that causes the targeted enemy to loose health over time." descshort="Debuff" icon="0" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p1_req" value="1" />
-            <talentvalue level="5" name="darkp_p1_req" value="13" />
-            <talentvalue level="6" name="darkp_p1_req" value="17" />
-            <talentvalue level="9" name="darkp_p1_req" value="25" />
-            <talentvalue level="10" name="darkp_p1_req" value="29" />
-            <talentvalue level="14" name="darkp_p1_req" value="52" />
-            <talentvalue level="15" name="darkp_p1_req" value="72" />
-            <talentvalue level="1" name="darkp_p1_pwr" value="6" />
-            <talentvalue level="3" name="darkp_p1_pwr" value="12" />
-            <talentvalue level="4" name="darkp_p1_pwr" value="16" />
-            <talentvalue level="7" name="darkp_p1_pwr" value="23" />
-            <talentvalue level="8" name="darkp_p1_pwr" value="26" />
-            <talentvalue level="12" name="darkp_p1_pwr" value="39" />
-            <talentvalue level="13" name="darkp_p1_pwr" value="43" />
-            <talentvalue level="15" name="darkp_p1_pwr" value="55" />
-            <talentvalue level="1" name="darkp_p1_radmg" value="36 40" />
-            <talentvalue level="3" name="darkp_p1_radmg" value="49 56" />
-            <talentvalue level="7" name="darkp_p1_radmg" value="113 125" />
-            <talentvalue level="8" name="darkp_p1_radmg" value="156 174" />
-            <talentvalue level="12" name="darkp_p1_radmg" value="186 202" />
-            <talentvalue level="13" name="darkp_p1_radmg" value="211 232" />
-            <talentvalue level="15" name="darkp_p1_radmg" value="304 325" />
-            <talentvalue level="1" name="darkp_p1_stun" value="0.08" />
-            <talentvalue level="15" name="darkp_p1_stun" value="0.5" />
+            <talentvalue level="1" name="darkp_p1_req" value="1"/>
+            <talentvalue level="5" name="darkp_p1_req" value="13"/>
+            <talentvalue level="6" name="darkp_p1_req" value="17"/>
+            <talentvalue level="9" name="darkp_p1_req" value="25"/>
+            <talentvalue level="10" name="darkp_p1_req" value="29"/>
+            <talentvalue level="14" name="darkp_p1_req" value="52"/>
+            <talentvalue level="15" name="darkp_p1_req" value="72"/>
+            <talentvalue level="1" name="darkp_p1_pwr" value="6"/>
+            <talentvalue level="3" name="darkp_p1_pwr" value="12"/>
+            <talentvalue level="4" name="darkp_p1_pwr" value="16"/>
+            <talentvalue level="7" name="darkp_p1_pwr" value="23"/>
+            <talentvalue level="8" name="darkp_p1_pwr" value="26"/>
+            <talentvalue level="12" name="darkp_p1_pwr" value="39"/>
+            <talentvalue level="13" name="darkp_p1_pwr" value="43"/>
+            <talentvalue level="15" name="darkp_p1_pwr" value="55"/>
+            <talentvalue level="1" name="darkp_p1_radmg" value="36 40"/>
+            <talentvalue level="3" name="darkp_p1_radmg" value="49 56"/>
+            <talentvalue level="7" name="darkp_p1_radmg" value="113 125"/>
+            <talentvalue level="8" name="darkp_p1_radmg" value="156 174"/>
+            <talentvalue level="12" name="darkp_p1_radmg" value="186 202"/>
+            <talentvalue level="13" name="darkp_p1_radmg" value="211 232"/>
+            <talentvalue level="15" name="darkp_p1_radmg" value="304 325"/>
+            <talentvalue level="1" name="darkp_p1_stun" value="0.08"/>
+            <talentvalue level="15" name="darkp_p1_stun" value="0.5"/>
         </talentvalues>
         <level description="%darkp_p1_radmg $DMG_MENTAL over 5 seconds\n%darkp_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="2" />
-            <tier cost="3" count="3" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p1_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="2"/>
+            <tier cost="3" count="3" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p1_req"/>
         </level>
     </talent>
     <talent descname="Phoenix Force" description="This is a psychic attack that deals damage and has a chance to turn the targeted enemy against its comrades." descshort="Blast" icon="1" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p2_req" value="5" />
-            <talentvalue level="4" name="darkp_p2_req" value="14" />
-            <talentvalue level="5" name="darkp_p2_req" value="17" />
-            <talentvalue level="8" name="darkp_p2_req" value="26" />
-            <talentvalue level="9" name="darkp_p2_req" value="29" />
-            <talentvalue level="13" name="darkp_p2_req" value="53" />
-            <talentvalue level="15" name="darkp_p2_req" value="74" />
-            <talentvalue level="1" name="darkp_p2_pwr" value="7" />
-            <talentvalue level="3" name="darkp_p2_pwr" value="12" />
-            <talentvalue level="4" name="darkp_p2_pwr" value="16" />
-            <talentvalue level="7" name="darkp_p2_pwr" value="24" />
-            <talentvalue level="8" name="darkp_p2_pwr" value="27" />
-            <talentvalue level="12" name="darkp_p2_pwr" value="39" />
-            <talentvalue level="13" name="darkp_p2_pwr" value="45" />
-            <talentvalue level="15" name="darkp_p2_pwr" value="64" />
-            <talentvalue level="1" name="darkp_p2_dmg" value="38 44" />
-            <talentvalue level="4" name="darkp_p2_dmg" value="62 68" />
-            <talentvalue level="5" name="darkp_p2_dmg" value="72 88" />
-            <talentvalue level="8" name="darkp_p2_dmg" value="102 118" />
-            <talentvalue level="9" name="darkp_p2_dmg" value="122 138" />
-            <talentvalue level="10" name="darkp_p2_dmg" value="142 158" />
-            <talentvalue level="11" name="darkp_p2_dmg" value="164 180" />
-            <talentvalue level="14" name="darkp_p2_dmg" value="218 224" />
-            <talentvalue level="15" name="darkp_p2_dmg" value="251 274" />
-            <talentvalue level="1" name="darkp_p2_pct" value="0.35" />
-            <talentvalue level="4" name="darkp_p2_pct" value="0.39" />
-            <talentvalue level="5" name="darkp_p2_pct" value="0.41" />
-            <talentvalue level="8" name="darkp_p2_pct" value="0.47" />
-            <talentvalue level="9" name="darkp_p2_pct" value="0.5" />
-            <talentvalue level="10" name="darkp_p2_pct" value="0.53" />
-            <talentvalue level="11" name="darkp_p2_pct" value="0.57" />
-            <talentvalue level="14" name="darkp_p2_pct" value="0.66" />
-            <talentvalue level="15" name="darkp_p2_pct" value="0.71" />
-            <talentvalue level="1" name="darkp_p2_life" value="10" />
-            <talentvalue level="4" name="darkp_p2_life" value="13" />
-            <talentvalue level="5" name="darkp_p2_life" value="15" />
-            <talentvalue level="6" name="darkp_p2_life" value="15" />
-            <talentvalue level="8" name="darkp_p2_life" value="19" />
-            <talentvalue level="9" name="darkp_p2_life" value="22" />
-            <talentvalue level="10" name="darkp_p2_life" value="22" />
-            <talentvalue level="14" name="darkp_p2_life" value="31" />
-            <talentvalue level="15" name="darkp_p2_life" value="37" />
+            <talentvalue level="1" name="darkp_p2_req" value="5"/>
+            <talentvalue level="4" name="darkp_p2_req" value="14"/>
+            <talentvalue level="5" name="darkp_p2_req" value="17"/>
+            <talentvalue level="8" name="darkp_p2_req" value="26"/>
+            <talentvalue level="9" name="darkp_p2_req" value="29"/>
+            <talentvalue level="13" name="darkp_p2_req" value="53"/>
+            <talentvalue level="15" name="darkp_p2_req" value="74"/>
+            <talentvalue level="1" name="darkp_p2_pwr" value="7"/>
+            <talentvalue level="3" name="darkp_p2_pwr" value="12"/>
+            <talentvalue level="4" name="darkp_p2_pwr" value="16"/>
+            <talentvalue level="7" name="darkp_p2_pwr" value="24"/>
+            <talentvalue level="8" name="darkp_p2_pwr" value="27"/>
+            <talentvalue level="12" name="darkp_p2_pwr" value="39"/>
+            <talentvalue level="13" name="darkp_p2_pwr" value="45"/>
+            <talentvalue level="15" name="darkp_p2_pwr" value="64"/>
+            <talentvalue level="1" name="darkp_p2_dmg" value="38 44"/>
+            <talentvalue level="4" name="darkp_p2_dmg" value="62 68"/>
+            <talentvalue level="5" name="darkp_p2_dmg" value="72 88"/>
+            <talentvalue level="8" name="darkp_p2_dmg" value="102 118"/>
+            <talentvalue level="9" name="darkp_p2_dmg" value="122 138"/>
+            <talentvalue level="10" name="darkp_p2_dmg" value="142 158"/>
+            <talentvalue level="11" name="darkp_p2_dmg" value="164 180"/>
+            <talentvalue level="14" name="darkp_p2_dmg" value="218 224"/>
+            <talentvalue level="15" name="darkp_p2_dmg" value="251 274"/>
+            <talentvalue level="1" name="darkp_p2_pct" value="0.35"/>
+            <talentvalue level="4" name="darkp_p2_pct" value="0.39"/>
+            <talentvalue level="5" name="darkp_p2_pct" value="0.41"/>
+            <talentvalue level="8" name="darkp_p2_pct" value="0.47"/>
+            <talentvalue level="9" name="darkp_p2_pct" value="0.5"/>
+            <talentvalue level="10" name="darkp_p2_pct" value="0.53"/>
+            <talentvalue level="11" name="darkp_p2_pct" value="0.57"/>
+            <talentvalue level="14" name="darkp_p2_pct" value="0.66"/>
+            <talentvalue level="15" name="darkp_p2_pct" value="0.71"/>
+            <talentvalue level="1" name="darkp_p2_life" value="10"/>
+            <talentvalue level="4" name="darkp_p2_life" value="13"/>
+            <talentvalue level="5" name="darkp_p2_life" value="15"/>
+            <talentvalue level="6" name="darkp_p2_life" value="15"/>
+            <talentvalue level="8" name="darkp_p2_life" value="19"/>
+            <talentvalue level="9" name="darkp_p2_life" value="22"/>
+            <talentvalue level="10" name="darkp_p2_life" value="22"/>
+            <talentvalue level="14" name="darkp_p2_life" value="31"/>
+            <talentvalue level="15" name="darkp_p2_life" value="37"/>
         </talentvalues>
         <level description="%darkp_p2_dmg $DMG_MENTAL\n%darkp_p2_pct:p chance to convert\n%darkp_p2_life second conversion duration\n%darkp_p2_pwr $EP">
-            <tier cost="1" count="4" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="2" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p2_req" />
+            <tier cost="1" count="4"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="2"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p2_req"/>
         </level>
     </talent>
     <talent descname="Inferno" description="The Dark Phoenix draws fire power from the celestial plane and engulfs the targeted enemy in flames." descshort="Debuff" icon="2" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p3_req" value="10" />
-            <talentvalue level="3" name="darkp_p3_req" value="13" />
-            <talentvalue level="4" name="darkp_p3_req" value="17" />
-            <talentvalue level="5" name="darkp_p3_req" value="29" />
-            <talentvalue level="8" name="darkp_p3_req" value="57" />
-            <talentvalue level="12" name="darkp_p3_req" value="72" />
-            <talentvalue level="1" name="darkp_p3_pwr" value="14" />
-            <talentvalue level="3" name="darkp_p3_pwr" value="17" />
-            <talentvalue level="4" name="darkp_p3_pwr" value="19" />
-            <talentvalue level="7" name="darkp_p3_pwr" value="26" />
-            <talentvalue level="8" name="darkp_p3_pwr" value="28" />
-            <talentvalue level="12" name="darkp_p3_pwr" value="48" />
-            <talentvalue level="1" name="darkp_p3_dmg" value="21 28" />
-            <talentvalue level="3" name="darkp_p3_dmg" value="33 39" />
-            <talentvalue level="4" name="darkp_p3_dmg" value="41 49" />
-            <talentvalue level="7" name="darkp_p3_dmg" value="61 68" />
-            <talentvalue level="8" name="darkp_p3_dmg" value="67 75" />
-            <talentvalue level="11" name="darkp_p3_dmg" value="87 91" />
-            <talentvalue level="12" name="darkp_p3_dmg" value="98 104" />
-            <talentvalue level="1" name="darkp_p3_radmg" value="75 82" />
-            <talentvalue level="4" name="darkp_p3_radmg" value="99 107" />
-            <talentvalue level="5" name="darkp_p3_radmg" value="110 118" />
-            <talentvalue level="8" name="darkp_p3_radmg" value="143 152" />
-            <talentvalue level="9" name="darkp_p3_radmg" value="163 172" />
-            <talentvalue level="10" name="darkp_p3_radmg" value="187 196" />
-            <talentvalue level="11" name="darkp_p3_radmg" value="211 222" />
-            <talentvalue level="12" name="darkp_p3_radmg" value="246 274" />
+            <talentvalue level="1" name="darkp_p3_req" value="10"/>
+            <talentvalue level="3" name="darkp_p3_req" value="13"/>
+            <talentvalue level="4" name="darkp_p3_req" value="17"/>
+            <talentvalue level="5" name="darkp_p3_req" value="29"/>
+            <talentvalue level="8" name="darkp_p3_req" value="57"/>
+            <talentvalue level="12" name="darkp_p3_req" value="72"/>
+            <talentvalue level="1" name="darkp_p3_pwr" value="14"/>
+            <talentvalue level="3" name="darkp_p3_pwr" value="17"/>
+            <talentvalue level="4" name="darkp_p3_pwr" value="19"/>
+            <talentvalue level="7" name="darkp_p3_pwr" value="26"/>
+            <talentvalue level="8" name="darkp_p3_pwr" value="28"/>
+            <talentvalue level="12" name="darkp_p3_pwr" value="48"/>
+            <talentvalue level="1" name="darkp_p3_dmg" value="21 28"/>
+            <talentvalue level="3" name="darkp_p3_dmg" value="33 39"/>
+            <talentvalue level="4" name="darkp_p3_dmg" value="41 49"/>
+            <talentvalue level="7" name="darkp_p3_dmg" value="61 68"/>
+            <talentvalue level="8" name="darkp_p3_dmg" value="67 75"/>
+            <talentvalue level="11" name="darkp_p3_dmg" value="87 91"/>
+            <talentvalue level="12" name="darkp_p3_dmg" value="98 104"/>
+            <talentvalue level="1" name="darkp_p3_radmg" value="75 82"/>
+            <talentvalue level="4" name="darkp_p3_radmg" value="99 107"/>
+            <talentvalue level="5" name="darkp_p3_radmg" value="110 118"/>
+            <talentvalue level="8" name="darkp_p3_radmg" value="143 152"/>
+            <talentvalue level="9" name="darkp_p3_radmg" value="163 172"/>
+            <talentvalue level="10" name="darkp_p3_radmg" value="187 196"/>
+            <talentvalue level="11" name="darkp_p3_radmg" value="211 222"/>
+            <talentvalue level="12" name="darkp_p3_radmg" value="246 274"/>
         </talentvalues>
         <level description="%darkp_p3_dmg initial $DMG_FIRE\n%darkp_p3_radmg $DMG_FIRE over 5 seconds\n%darkp_p3_pwr $EP">
-            <tier cost="1" count="4" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="2" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p3_req" />
+            <tier cost="1" count="4"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="2" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p3_req"/>
         </level>
     </talent>
     <talent descname="Phoenix Rage" description="Use the Phoenix Force to form a circle of celestial fire and burn enemies. $PT_CHARGE" descshort="Radial" icon="3" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p4_req" value="17" />
-            <talentvalue level="3" name="darkp_p4_req" value="27" />
-            <talentvalue level="4" name="darkp_p4_req" value="31" />
-            <talentvalue level="8" name="darkp_p4_req" value="55" />
-            <talentvalue level="9" name="darkp_p4_req" value="73" />
-            <talentvalue level="1" name="darkp_p4_pwr" value="24" />
-            <talentvalue level="3" name="darkp_p4_pwr" value="30" />
-            <talentvalue level="5" name="darkp_p4_pwr" value="38" />
-            <talentvalue level="8" name="darkp_p4_pwr" value="49" />
-            <talentvalue level="9" name="darkp_p4_pwr" value="64" />
-            <talentvalue level="1" name="darkp_p4_dmg" value="44 52" value_charged_scale="2.0" />
-            <talentvalue level="5" name="darkp_p4_dmg" value="90 101" value_charged_scale="2.0" />
-            <talentvalue level="6" name="darkp_p4_dmg" value="108 118" value_charged_scale="2.0" />
-            <talentvalue level="8" name="darkp_p4_dmg" value="144 152" value_charged_scale="2.0" />
-            <talentvalue level="9" name="darkp_p4_dmg" value="195 217" value_charged_scale="2.0" />
-            <talentvalue level="1" name="darkp_p4_rad" value="100" value_charged="130" />
-            <talentvalue level="9" name="darkp_p4_rad" value="100" value_charged="130" />
+            <talentvalue level="1" name="darkp_p4_req" value="17"/>
+            <talentvalue level="3" name="darkp_p4_req" value="27"/>
+            <talentvalue level="4" name="darkp_p4_req" value="31"/>
+            <talentvalue level="8" name="darkp_p4_req" value="55"/>
+            <talentvalue level="9" name="darkp_p4_req" value="73"/>
+            <talentvalue level="1" name="darkp_p4_pwr" value="24"/>
+            <talentvalue level="3" name="darkp_p4_pwr" value="30"/>
+            <talentvalue level="5" name="darkp_p4_pwr" value="38"/>
+            <talentvalue level="8" name="darkp_p4_pwr" value="49"/>
+            <talentvalue level="9" name="darkp_p4_pwr" value="64"/>
+            <talentvalue level="1" name="darkp_p4_dmg" value="44 52" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="darkp_p4_dmg" value="90 101" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="darkp_p4_dmg" value="108 118" value_charged_scale="2.0"/>
+            <talentvalue level="8" name="darkp_p4_dmg" value="144 152" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="darkp_p4_dmg" value="195 217" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="darkp_p4_rad" value="100" value_charged="130"/>
+            <talentvalue level="9" name="darkp_p4_rad" value="100" value_charged="130"/>
         </talentvalues>
         <level description="%darkp_p4_dmg $DMG_FIRE\n%darkp_p4_pwr $EP">
-            <tier cost="2" count="5" />
-            <tier cost="3" count="3" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p4_req" />
+            <tier cost="2" count="5"/>
+            <tier cost="3" count="3" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p4_req"/>
         </level>
     </talent>
     <talent descname="Space Warp Inferno" description="Dark Phoenix teleports around the room casting Inferno on the enemies." descshort="Debuff" icon="4" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p5" power="power5">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p5_req" value="26" />
-            <talentvalue level="3" name="darkp_p5_req" value="26" />
-            <talentvalue level="4" name="darkp_p5_req" value="26" />
-            <talentvalue level="7" name="darkp_p5_req" value="26" />
-            <talentvalue level="9" name="darkp_p5_req" value="58" />
-            <talentvalue level="1" name="darkp_p5_dam_boost" value="6.5" />
-            <talentvalue level="8" name="darkp_p5_dam_boost" value="10" />
-            <talentvalue level="1" name="darkp_p5_atk_bonus" value="1.5" />
-            <talentvalue level="9" name="darkp_p5_atk_bonus" value="2.76" />
-            <talentvalue level="1" name="darkp_p5_num_att" value="3" />
-            <talentvalue level="3" name="darkp_p5_num_att" value="3" />
-            <talentvalue level="4" name="darkp_p5_num_att" value="4" />
-            <talentvalue level="5" name="darkp_p5_num_att" value="4" />
-            <talentvalue level="6" name="darkp_p5_num_att" value="5" />
-            <talentvalue level="7" name="darkp_p5_num_att" value="6" />
-            <talentvalue level="9" name="darkp_p5_num_att" value="8" />
-            <talentvalue level="1" name="darkp_p5_stun_life" value="1" />
-            <talentvalue level="9" name="darkp_p5_stun_life" value="5.2" />
-            <talentvalue level="1" name="darkp_p5_range" value="240" />
-            <talentvalue level="3" name="darkp_p5_range" value="290" />
-            <talentvalue level="4" name="darkp_p5_range" value="350" />
-            <talentvalue level="7" name="darkp_p5_range" value="600" />
-            <talentvalue level="9" name="darkp_p5_range" value="720" />
-            <talentvalue level="1" name="darkp_p5_pwr" value="21" />
-            <talentvalue level="3" name="darkp_p5_pwr" value="27" />
-            <talentvalue level="4" name="darkp_p5_pwr" value="31" />
-            <talentvalue level="7" name="darkp_p5_pwr" value="42" />
-            <talentvalue level="9" name="darkp_p5_pwr" value="72" />
-            <talentvalue level="1" name="darkp_p5_atk_life" value="5" />
-            <talentvalue level="9" name="darkp_p5_atk_life" value="15" />
+            <talentvalue level="1" name="darkp_p5_req" value="26"/>
+            <talentvalue level="3" name="darkp_p5_req" value="26"/>
+            <talentvalue level="4" name="darkp_p5_req" value="26"/>
+            <talentvalue level="7" name="darkp_p5_req" value="26"/>
+            <talentvalue level="9" name="darkp_p5_req" value="58"/>
+            <talentvalue level="1" name="darkp_p5_dam_boost" value="6.5"/>
+            <talentvalue level="8" name="darkp_p5_dam_boost" value="10"/>
+            <talentvalue level="1" name="darkp_p5_atk_bonus" value="1.5"/>
+            <talentvalue level="9" name="darkp_p5_atk_bonus" value="2.76"/>
+            <talentvalue level="1" name="darkp_p5_num_att" value="3"/>
+            <talentvalue level="3" name="darkp_p5_num_att" value="3"/>
+            <talentvalue level="4" name="darkp_p5_num_att" value="4"/>
+            <talentvalue level="5" name="darkp_p5_num_att" value="4"/>
+            <talentvalue level="6" name="darkp_p5_num_att" value="5"/>
+            <talentvalue level="7" name="darkp_p5_num_att" value="6"/>
+            <talentvalue level="9" name="darkp_p5_num_att" value="8"/>
+            <talentvalue level="1" name="darkp_p5_stun_life" value="1"/>
+            <talentvalue level="9" name="darkp_p5_stun_life" value="5.2"/>
+            <talentvalue level="1" name="darkp_p5_range" value="240"/>
+            <talentvalue level="3" name="darkp_p5_range" value="290"/>
+            <talentvalue level="4" name="darkp_p5_range" value="350"/>
+            <talentvalue level="7" name="darkp_p5_range" value="600"/>
+            <talentvalue level="9" name="darkp_p5_range" value="720"/>
+            <talentvalue level="1" name="darkp_p5_pwr" value="21"/>
+            <talentvalue level="3" name="darkp_p5_pwr" value="27"/>
+            <talentvalue level="4" name="darkp_p5_pwr" value="31"/>
+            <talentvalue level="7" name="darkp_p5_pwr" value="42"/>
+            <talentvalue level="9" name="darkp_p5_pwr" value="72"/>
+            <talentvalue level="1" name="darkp_p5_atk_life" value="5"/>
+            <talentvalue level="9" name="darkp_p5_atk_life" value="15"/>
         </talentvalues>
         <level description="%darkp_p3_dmg $DMG_FIRE\n%darkp_p5_num_att attacks\n%darkp_p5_pwr $EP">
-            <tier cost="2" count="3" />
-            <tier cost="1" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p5_req" />
-            <require cat="skill" item="darkp_p3" />
+            <tier cost="2" count="3"/>
+            <tier cost="1" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p5_req"/>
+            <require cat="skill" item="darkp_p3"/>
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_attack_rating" level="%darkp_p5_atk_bonus" scope_node="dark_power5" />
-                <affecter affect_type="scale" attribute="atk_damage" level="%darkp_p5_dam_boost" scope_node="dark_power5" />
+                <affecter affect_type="scale" attribute="atk_attack_rating" level="%darkp_p5_atk_bonus" scope_node="dark_power5"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%darkp_p5_dam_boost" scope_node="dark_power5"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Energy Feeding" description="The Dark Phoenix draws life out of the targeted enemy and absorbs some of it. Once experienced she can distribute it amongst allies as well." descshort="Debuff" icon="5" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p6_req" value="2" />
-            <talentvalue level="2" name="darkp_p6_req" value="8" />
-            <talentvalue level="3" name="darkp_p6_req" value="12" />
-            <talentvalue level="4" name="darkp_p6_req" value="16" />
-            <talentvalue level="5" name="darkp_p6_req" value="26" />
-            <talentvalue level="9" name="darkp_p6_req" value="38" />
-            <talentvalue level="12" name="darkp_p6_req" value="52" />
-            <talentvalue level="14" name="darkp_p6_req" value="72" />
-            <talentvalue level="1" name="darkp_p6_dmg" value="46 53" />
-            <talentvalue level="2" name="darkp_p6_dmg" value="58 69" />
-            <talentvalue level="3" name="darkp_p6_dmg" value="69 78" />
-            <talentvalue level="4" name="darkp_p6_dmg" value="75 87" />
-            <talentvalue level="5" name="darkp_p6_dmg" value="91 103" />
-            <talentvalue level="8" name="darkp_p6_dmg" value="125 135" />
-            <talentvalue level="12" name="darkp_p6_dmg" value="211 223" />
-            <talentvalue level="14" name="darkp_p6_dmg" value="294 339" />
-            <talentvalue level="1" name="darkp_p6_pct" value="0.05" />
-            <talentvalue level="14" name="darkp_p6_pct" value="0.18" />
-            <talentvalue level="1" name="darkp_p6_son" value="1" />
-            <talentvalue level="8" name="darkp_p6_son" value="1" />
-            <talentvalue level="9" name="darkp_p6_son" value="0" />
-            <talentvalue level="14" name="darkp_p6_son" value="0" />
-            <talentvalue level="1" name="darkp_p6_aon" value="0" />
-            <talentvalue level="8" name="darkp_p6_aon" value="0" />
-            <talentvalue level="9" name="darkp_p6_aon" value="1" />
-            <talentvalue level="14" name="darkp_p6_aon" value="1" />
-            <talentvalue level="1" name="darkp_p6_pwr" value="18" />
-            <talentvalue level="3" name="darkp_p6_pwr" value="32" />
-            <talentvalue level="4" name="darkp_p6_pwr" value="38" />
-            <talentvalue level="7" name="darkp_p6_pwr" value="68" />
-            <talentvalue level="8" name="darkp_p6_pwr" value="74" />
-            <talentvalue level="12" name="darkp_p6_pwr" value="84" />
-            <talentvalue level="14" name="darkp_p6_pwr" value="99" />
+            <talentvalue level="1" name="darkp_p6_req" value="2"/>
+            <talentvalue level="2" name="darkp_p6_req" value="8"/>
+            <talentvalue level="3" name="darkp_p6_req" value="12"/>
+            <talentvalue level="4" name="darkp_p6_req" value="16"/>
+            <talentvalue level="5" name="darkp_p6_req" value="26"/>
+            <talentvalue level="9" name="darkp_p6_req" value="38"/>
+            <talentvalue level="12" name="darkp_p6_req" value="52"/>
+            <talentvalue level="14" name="darkp_p6_req" value="72"/>
+            <talentvalue level="1" name="darkp_p6_dmg" value="46 53"/>
+            <talentvalue level="2" name="darkp_p6_dmg" value="58 69"/>
+            <talentvalue level="3" name="darkp_p6_dmg" value="69 78"/>
+            <talentvalue level="4" name="darkp_p6_dmg" value="75 87"/>
+            <talentvalue level="5" name="darkp_p6_dmg" value="91 103"/>
+            <talentvalue level="8" name="darkp_p6_dmg" value="125 135"/>
+            <talentvalue level="12" name="darkp_p6_dmg" value="211 223"/>
+            <talentvalue level="14" name="darkp_p6_dmg" value="294 339"/>
+            <talentvalue level="1" name="darkp_p6_pct" value="0.05"/>
+            <talentvalue level="14" name="darkp_p6_pct" value="0.18"/>
+            <talentvalue level="1" name="darkp_p6_son" value="1"/>
+            <talentvalue level="8" name="darkp_p6_son" value="1"/>
+            <talentvalue level="9" name="darkp_p6_son" value="0"/>
+            <talentvalue level="14" name="darkp_p6_son" value="0"/>
+            <talentvalue level="1" name="darkp_p6_aon" value="0"/>
+            <talentvalue level="8" name="darkp_p6_aon" value="0"/>
+            <talentvalue level="9" name="darkp_p6_aon" value="1"/>
+            <talentvalue level="14" name="darkp_p6_aon" value="1"/>
+            <talentvalue level="1" name="darkp_p6_pwr" value="18"/>
+            <talentvalue level="3" name="darkp_p6_pwr" value="32"/>
+            <talentvalue level="4" name="darkp_p6_pwr" value="38"/>
+            <talentvalue level="7" name="darkp_p6_pwr" value="68"/>
+            <talentvalue level="8" name="darkp_p6_pwr" value="74"/>
+            <talentvalue level="12" name="darkp_p6_pwr" value="84"/>
+            <talentvalue level="14" name="darkp_p6_pwr" value="99"/>
         </talentvalues>
         <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP/sec to self\n%darkp_p6_pwr $EP">
-            <tier cost="1" count="4" />
-            <tier cost="2" count="4" />
-            <require cat="level" level="%darkp_p6_req" />
+            <tier cost="1" count="4"/>
+            <tier cost="2" count="4"/>
+            <require cat="level" level="%darkp_p6_req"/>
         </level>
         <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP/sec to team\n%darkp_p6_pwr $EP">
-            <tier cost="3" count="2" />
-            <tier cost="3" count="3" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p6_req" />
+            <tier cost="3" count="2"/>
+            <tier cost="3" count="3" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p6_req"/>
         </level>
     </talent>
     <talent descname="Personal Shield" description="Dark Phoenix pulls energy from the space around her, using this energy to absorb heavy amounts of damage." descshort="Boost" icon="6" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p7_req" value="14" />
-            <talentvalue level="4" name="darkp_p7_req" value="24" />
-            <talentvalue level="5" name="darkp_p7_req" value="27" />
-            <talentvalue level="9" name="darkp_p7_req" value="53" />
-            <talentvalue level="10" name="darkp_p7_req" value="73" />
-            <talentvalue level="1" name="darkp_p7_res" value="400" />
-            <talentvalue level="5" name="darkp_p7_res" value="2000" />
-            <talentvalue level="6" name="darkp_p7_res" value="2500" />
-            <talentvalue level="9" name="darkp_p7_res" value="4300" />
-            <talentvalue level="10" name="darkp_p7_res" value="5000" />
-            <talentvalue level="1" name="darkp_p7_pwr" value="64" />
-            <talentvalue level="4" name="darkp_p7_pwr" value="86" />
-            <talentvalue level="5" name="darkp_p7_pwr" value="92" />
-            <talentvalue level="9" name="darkp_p7_pwr" value="130" />
-            <talentvalue level="10" name="darkp_p7_pwr" value="174" />
+            <talentvalue level="1" name="darkp_p7_req" value="14"/>
+            <talentvalue level="4" name="darkp_p7_req" value="24"/>
+            <talentvalue level="5" name="darkp_p7_req" value="27"/>
+            <talentvalue level="9" name="darkp_p7_req" value="53"/>
+            <talentvalue level="10" name="darkp_p7_req" value="73"/>
+            <talentvalue level="1" name="darkp_p7_res" value="400"/>
+            <talentvalue level="5" name="darkp_p7_res" value="2000"/>
+            <talentvalue level="6" name="darkp_p7_res" value="2500"/>
+            <talentvalue level="9" name="darkp_p7_res" value="4300"/>
+            <talentvalue level="10" name="darkp_p7_res" value="5000"/>
+            <talentvalue level="1" name="darkp_p7_pwr" value="64"/>
+            <talentvalue level="4" name="darkp_p7_pwr" value="86"/>
+            <talentvalue level="5" name="darkp_p7_pwr" value="92"/>
+            <talentvalue level="9" name="darkp_p7_pwr" value="130"/>
+            <talentvalue level="10" name="darkp_p7_pwr" value="174"/>
         </talentvalues>
         <level description="%darkp_p7_res $DMG_PHYSICAL absorbed\n%darkp_p7_pwr $EP">
-            <tier cost="2" count="5" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="3" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%darkp_p7_req" />
+            <tier cost="2" count="5"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="3" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%darkp_p7_req"/>
         </level>
     </talent>
     <talent descname="Consume Room" description="All enemies in the room have a high chance of being consumed by the Dark Phoenix." descshort="Radial" icon="7" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p8" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="darkp_p8_req" value="10" />
-            <talentvalue level="8" name="darkp_p8_req" value="45" />
-            <talentvalue level="1" name="darkp_p8_dmg" value="117 132" />
-            <talentvalue level="8" name="darkp_p8_dmg" value="314 325" />
-            <talentvalue level="1" name="darkp_p8_pct" value="0.5" />
-            <talentvalue level="8" name="darkp_p8_pct" value="0.9" />
-            <talentvalue level="1" name="darkp_p8_abs" value="0.05" />
-            <talentvalue level="6" name="darkp_p8_abs" value="0.1" />
-            <talentvalue level="7" name="darkp_p8_abs" value="0.12" />
-            <talentvalue level="8" name="darkp_p8_abs" value="0.14" />
+            <talentvalue level="1" name="darkp_p8_req" value="10"/>
+            <talentvalue level="8" name="darkp_p8_req" value="45"/>
+            <talentvalue level="1" name="darkp_p8_dmg" value="117 132"/>
+            <talentvalue level="8" name="darkp_p8_dmg" value="314 325"/>
+            <talentvalue level="1" name="darkp_p8_pct" value="0.5"/>
+            <talentvalue level="8" name="darkp_p8_pct" value="0.9"/>
+            <talentvalue level="1" name="darkp_p8_abs" value="0.05"/>
+            <talentvalue level="6" name="darkp_p8_abs" value="0.1"/>
+            <talentvalue level="7" name="darkp_p8_abs" value="0.12"/>
+            <talentvalue level="8" name="darkp_p8_abs" value="0.14"/>
         </talentvalues>
         <level description="%darkp_p8_dmg initial mental damage\n%darkp_p8_pct:p chance to be consumed\+n%darkp_p8_hlth $HP per enemy consumed">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%darkp_p8_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%darkp_p8_req"/>
         </level>
     </talent>
     <talent descname="Cosmic Immunity" description="Cosmic forces that protect Dark Phoenix by boosting her resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit11_res" value="0.06" />
-            <talentvalue level="9" name="darkp_outfit11_res" value="0.3" />
-            <talentvalue level="1" name="darkp_outfit11_frd" value="0.25" />
-            <talentvalue level="9" name="darkp_outfit11_frd" value="1" />
-            <talentvalue level="1" name="darkp_outfit11_fra" value="0.75" />
-            <talentvalue level="9" name="darkp_outfit11_fra" value="0" />
+            <talentvalue level="1" name="darkp_outfit11_res" value="0.06"/>
+            <talentvalue level="9" name="darkp_outfit11_res" value="0.3"/>
+            <talentvalue level="1" name="darkp_outfit11_frd" value="0.25"/>
+            <talentvalue level="9" name="darkp_outfit11_frd" value="1"/>
+            <talentvalue level="1" name="darkp_outfit11_fra" value="0.75"/>
+            <talentvalue level="9" name="darkp_outfit11_fra" value="0"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit11_res:p $RES_ENERGY $RES_MENTAL and $RES_RADIATION \n+%darkp_outfit11_frd:p Resistance to $DMG_FIRE">
             <powerup life="-1">
-                <affecter attribute="resist_mental" level="%darkp_outfit11_res" />
-                <affecter attribute="resist_energy" level="%darkp_outfit11_res" />
-                <affecter attribute="resist_radiation" level="%darkp_outfit11_res" />
-                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="%darkp_outfit11_fra" />
+                <affecter attribute="resist_mental" level="%darkp_outfit11_res"/>
+                <affecter attribute="resist_energy" level="%darkp_outfit11_res"/>
+                <affecter attribute="resist_radiation" level="%darkp_outfit11_res"/>
+                <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="%darkp_outfit11_fra"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Force Mastery" description="Increases damage and chance of criticals for all Mental and Fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit12_dmg" value="1.03" />
-            <talentvalue level="9" name="darkp_outfit12_dmg" value="1.15" />
-            <talentvalue level="1" name="darkp_outfit12_crit" value="0.03" />
-            <talentvalue level="8" name="darkp_outfit12_crit" value="0.1" />
-            <talentvalue level="9" name="darkp_outfit12_crit" value="0.12" />
+            <talentvalue level="1" name="darkp_outfit12_dmg" value="1.03"/>
+            <talentvalue level="9" name="darkp_outfit12_dmg" value="1.15"/>
+            <talentvalue level="1" name="darkp_outfit12_crit" value="0.03"/>
+            <talentvalue level="8" name="darkp_outfit12_crit" value="0.1"/>
+            <talentvalue level="9" name="darkp_outfit12_crit" value="0.12"/>
         </talentvalues>
         <level count="9" description="%darkp_outfit12_dmg:s $DMG_MENTAL and $DMG_FIRE\n+%darkp_outfit12_crit:p critical chance">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_mental" />
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_telekinesis" />
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_fire" />
-                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_mental" />
-                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_telekinesis" />
-                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_fire" />
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_mental"/>
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_telekinesis"/>
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit12_dmg" scope_damage="dmg_fire"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_mental"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_telekinesis"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit12_crit" scope_damage="dmg_fire"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit13_dr" value="1" />
-            <talentvalue level="9" name="darkp_outfit13_dr" value="9" />
+            <talentvalue level="1" name="darkp_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="darkp_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%darkp_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%darkp_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Force Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for focus and $EP increases" icon="8" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit21_foc" value="2" />
-            <talentvalue level="7" name="darkp_outfit21_foc" value="8" />
-            <talentvalue level="9" name="darkp_outfit21_foc" value="12" />
-            <talentvalue level="1" name="darkp_outfit21_epb" value="1.07" />
-            <talentvalue level="9" name="darkp_outfit21_epb" value="1.37" />
+            <talentvalue level="1" name="darkp_outfit21_foc" value="2"/>
+            <talentvalue level="7" name="darkp_outfit21_foc" value="8"/>
+            <talentvalue level="9" name="darkp_outfit21_foc" value="12"/>
+            <talentvalue level="1" name="darkp_outfit21_epb" value="1.07"/>
+            <talentvalue level="9" name="darkp_outfit21_epb" value="1.37"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit21_foc Focus\n%darkp_outfit21_epb:s $EP">
             <powerup life="-1">
-                <affecter attribute="mind" level="%darkp_outfit21_foc" />
-                <affecter affect_type="scale" attribute="maxenergy" level="%darkp_outfit21_epb" />
+                <affecter attribute="mind" level="%darkp_outfit21_foc"/>
+                <affecter affect_type="scale" attribute="maxenergy" level="%darkp_outfit21_epb"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Energy Parasite" description="Consumes enemies' $EP once killed." icon="15" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit22_pct" value="5" />
-            <talentvalue level="9" name="darkp_outfit22_pct" value="25" />
+            <talentvalue level="1" name="darkp_outfit22_pct" value="5"/>
+            <talentvalue level="9" name="darkp_outfit22_pct" value="25"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit22_pct $EP per kill">
             <powerup life="-1">
-                <affecter attribute="energy_per_kill" level="%darkp_outfit22_pct" />
+                <affecter attribute="energy_per_kill" level="%darkp_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit23_dr" value="1" />
-            <talentvalue level="9" name="darkp_outfit23_dr" value="9" />
+            <talentvalue level="1" name="darkp_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="darkp_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%darkp_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%darkp_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Cosmic Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for strike and $HP increases" icon="11" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit31_str" value="2" />
-            <talentvalue level="7" name="darkp_outfit31_str" value="8" />
-            <talentvalue level="9" name="darkp_outfit31_str" value="12" />
-            <talentvalue level="1" name="darkp_outfit31_hpb" value="1.07" />
-            <talentvalue level="9" name="darkp_outfit31_hpb" value="1.37" />
+            <talentvalue level="1" name="darkp_outfit31_str" value="2"/>
+            <talentvalue level="7" name="darkp_outfit31_str" value="8"/>
+            <talentvalue level="9" name="darkp_outfit31_str" value="12"/>
+            <talentvalue level="1" name="darkp_outfit31_hpb" value="1.07"/>
+            <talentvalue level="9" name="darkp_outfit31_hpb" value="1.37"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit31_str Strike\n%darkp_outfit31_hpb:s $HP">
             <powerup life="-1">
-                <affecter attribute="strength" level="%darkp_outfit31_str" />
-                <affecter affect_type="scale" attribute="maxhealth" level="%darkp_outfit31_hpb" />
+                <affecter attribute="strength" level="%darkp_outfit31_str"/>
+                <affecter affect_type="scale" attribute="maxhealth" level="%darkp_outfit31_hpb"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Dark Consumption" description="Consumes part of enemies' life force once killed." icon="14" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit32_pct" value="6" />
-            <talentvalue level="9" name="darkp_outfit32_pct" value="30" />
+            <talentvalue level="1" name="darkp_outfit32_pct" value="6"/>
+            <talentvalue level="9" name="darkp_outfit32_pct" value="30"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit32_pct $HP per kill">
             <powerup life="-1">
-                <affecter attribute="health_per_kill" level="%darkp_outfit32_hlth" />
+                <affecter attribute="health_per_kill" level="%darkp_outfit32_hlth"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit33_dr" value="1" />
-            <talentvalue level="9" name="darkp_outfit33_dr" value="9" />
+            <talentvalue level="1" name="darkp_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="darkp_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%darkp_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%darkp_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Force Mastery" description="Increases damage and chance of criticals for all Mental and Fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit41_dmg" value="1.03" />
-            <talentvalue level="9" name="darkp_outfit41_dmg" value="1.15" />
-            <talentvalue level="1" name="darkp_outfit41_crit" value="0.03" />
-            <talentvalue level="8" name="darkp_outfit41_crit" value="0.1" />
-            <talentvalue level="9" name="darkp_outfit41_crit" value="0.12" />
+            <talentvalue level="1" name="darkp_outfit41_dmg" value="1.03"/>
+            <talentvalue level="9" name="darkp_outfit41_dmg" value="1.15"/>
+            <talentvalue level="1" name="darkp_outfit41_crit" value="0.03"/>
+            <talentvalue level="8" name="darkp_outfit41_crit" value="0.1"/>
+            <talentvalue level="9" name="darkp_outfit41_crit" value="0.12"/>
         </talentvalues>
         <level count="9" description="%darkp_outfit41_dmg:s $DMG_MENTAL and $DMG_FIRE\n+%darkp_outfit41_crit:p critical chance">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_mental" />
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_telekinesis" />
-                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_fire" />
-                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_mental" />
-                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_telekinesis" />
-                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_fire" />
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_mental"/>
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_telekinesis"/>
+                <affecter affect_type="scale" attribute="damage" level="%darkp_outfit41_dmg" scope_damage="dmg_fire"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_mental"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_telekinesis"/>
+                <affecter attribute="atk_critical" level="%darkp_outfit41_crit" scope_damage="dmg_fire"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Cosmic Goddess" description="Uses the Phoenix Force's phenomenal cosmic power for $HP and $EP increases" icon="10" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit42_hpb" value="1.03" />
-            <talentvalue level="9" name="darkp_outfit42_hpb" value="1.37" />
-            <talentvalue level="1" name="darkp_outfit42_epb" value="1.03" />
-            <talentvalue level="9" name="darkp_outfit42_epb" value="1.37" />
+            <talentvalue level="1" name="darkp_outfit42_hpb" value="1.03"/>
+            <talentvalue level="9" name="darkp_outfit42_hpb" value="1.37"/>
+            <talentvalue level="1" name="darkp_outfit42_epb" value="1.03"/>
+            <talentvalue level="9" name="darkp_outfit42_epb" value="1.37"/>
         </talentvalues>
         <level count="9" description="%darkp_outfit42_hpb:s $HP \n%darkp_outfit42_epb:s $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%darkp_outfit42_hpb" />
-                <affecter affect_type="scale" attribute="maxenergy" level="%darkp_outfit42_epb" />
+                <affecter affect_type="scale" attribute="maxhealth" level="%darkp_outfit42_hpb"/>
+                <affecter affect_type="scale" attribute="maxenergy" level="%darkp_outfit42_epb"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="darkp_outfit43_dr" value="1" />
-            <talentvalue level="9" name="darkp_outfit43_dr" value="9" />
+            <talentvalue level="1" name="darkp_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="darkp_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%darkp_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%darkp_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%darkp_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

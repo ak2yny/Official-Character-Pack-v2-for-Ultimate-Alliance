@@ -272,7 +272,7 @@
             <talentvalue level="1" name="humant_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="humant_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%humant_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%humant_outfit12_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%humant_outfit12_pct" />
             </powerup>
@@ -380,7 +380,7 @@
             <talentvalue level="1" name="humant_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="humant_outfit42_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="%humant_outfit42_pct:s Maximum $HP">
+        <level count="9" description="%humant_outfit42_pct:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%humant_outfit42_pct" />
             </powerup>

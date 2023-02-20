@@ -274,7 +274,7 @@
             <talentvalue level="1" name="blade_outfit11_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit11_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit11_show:f% Max $HP Regenerated Per Second">
+        <level count="9" description="%blade_outfit11_show:f% Max $HP regenerated per sec">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit11_hlth" />
             </powerup>
@@ -307,7 +307,7 @@
             <talentvalue level="1" name="blade_outfit21_crit" value="0.02" />
             <talentvalue level="9" name="blade_outfit21_crit" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%blade_outfit21_crit:p Critical Chance">
+        <level count="9" description="+%blade_outfit21_crit:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%blade_outfit21_crit" scope_non_powers="true" />
             </powerup>
@@ -318,7 +318,7 @@
             <talentvalue level="1" name="blade_outfit22_pct" value="1.04" />
             <talentvalue level="9" name="blade_outfit22_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit22_pct:s Maximum $EP">
+        <level count="9" description="%blade_outfit22_pct:s maximum $EP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxenergy" level="%blade_outfit22_pct" />
             </powerup>
@@ -355,7 +355,7 @@
             <talentvalue level="1" name="blade_outfit32_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit32_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit32_show:f% Max $HP Regenerated Per Second">
+        <level count="9" description="%blade_outfit32_show:f% Max $HP regenerated per sec">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit32_hlth" />
             </powerup>

@@ -1,362 +1,362 @@
 <talents>
     <talent descname="Pulverizing Punch" description="Devastating two-hit punch that will stun enemies for a time.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/colossus_icons.png" name="colos_power1" power="power1">
         <talentvalues>
-            <talentvalue level="1" name="colos_p1_req" value="1" />
-            <talentvalue level="5" name="colos_p1_req" value="13" />
-            <talentvalue level="6" name="colos_p1_req" value="16" />
-            <talentvalue level="9" name="colos_p1_req" value="25" />
-            <talentvalue level="10" name="colos_p1_req" value="28" />
-            <talentvalue level="14" name="colos_p1_req" value="52" />
-            <talentvalue level="15" name="colos_p1_req" value="72" />
-            <talentvalue level="1" name="colos_p1_pwr" value="8" />
-            <talentvalue level="5" name="colos_p1_pwr" value="17" />
-            <talentvalue level="6" name="colos_p1_pwr" value="19" />
-            <talentvalue level="9" name="colos_p1_pwr" value="26" />
-            <talentvalue level="10" name="colos_p1_pwr" value="28" />
-            <talentvalue level="14" name="colos_p1_pwr" value="44" />
-            <talentvalue level="15" name="colos_p1_pwr" value="55" />
-            <talentvalue level="1" name="colos_p1_dmg" value="17 19" value_charged_scale="2.0" />
-            <talentvalue level="5" name="colos_p1_dmg" value="27 30" value_charged_scale="2.0" />
-            <talentvalue level="6" name="colos_p1_dmg" value="37 41" value_charged_scale="2.0" />
-            <talentvalue level="9" name="colos_p1_dmg" value="51 56" value_charged_scale="2.0" />
-            <talentvalue level="10" name="colos_p1_dmg" value="68 75" value_charged_scale="2.0" />
-            <talentvalue level="14" name="colos_p1_dmg" value="109 120" value_charged_scale="2.0" />
-            <talentvalue level="15" name="colos_p1_dmg" value="156 173" value_charged_scale="2.0" />
-            <talentvalue level="1" name="colos_p1_dmg2" value="17 19" value_charged_scale="2.0" />
-            <talentvalue level="5" name="colos_p1_dmg2" value="27 30" value_charged_scale="2.0" />
-            <talentvalue level="6" name="colos_p1_dmg2" value="37 41" value_charged_scale="2.0" />
-            <talentvalue level="9" name="colos_p1_dmg2" value="51 56" value_charged_scale="2.0" />
-            <talentvalue level="10" name="colos_p1_dmg2" value="68 75" value_charged_scale="2.0" />
-            <talentvalue level="14" name="colos_p1_dmg2" value="109 120" value_charged_scale="2.0" />
-            <talentvalue level="15" name="colos_p1_dmg2" value="156 173" value_charged_scale="2.0" />
-            <talentvalue level="1" name="colos_p1_life" value="3" />
-            <talentvalue level="15" name="colos_p1_life" value="20" />
+            <talentvalue level="1" name="colos_p1_req" value="1"/>
+            <talentvalue level="5" name="colos_p1_req" value="13"/>
+            <talentvalue level="6" name="colos_p1_req" value="16"/>
+            <talentvalue level="9" name="colos_p1_req" value="25"/>
+            <talentvalue level="10" name="colos_p1_req" value="28"/>
+            <talentvalue level="14" name="colos_p1_req" value="52"/>
+            <talentvalue level="15" name="colos_p1_req" value="72"/>
+            <talentvalue level="1" name="colos_p1_pwr" value="8"/>
+            <talentvalue level="5" name="colos_p1_pwr" value="17"/>
+            <talentvalue level="6" name="colos_p1_pwr" value="19"/>
+            <talentvalue level="9" name="colos_p1_pwr" value="26"/>
+            <talentvalue level="10" name="colos_p1_pwr" value="28"/>
+            <talentvalue level="14" name="colos_p1_pwr" value="44"/>
+            <talentvalue level="15" name="colos_p1_pwr" value="55"/>
+            <talentvalue level="1" name="colos_p1_dmg" value="17 19" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="colos_p1_dmg" value="27 30" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="colos_p1_dmg" value="37 41" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="colos_p1_dmg" value="51 56" value_charged_scale="2.0"/>
+            <talentvalue level="10" name="colos_p1_dmg" value="68 75" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="colos_p1_dmg" value="109 120" value_charged_scale="2.0"/>
+            <talentvalue level="15" name="colos_p1_dmg" value="156 173" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="colos_p1_dmg2" value="17 19" value_charged_scale="2.0"/>
+            <talentvalue level="5" name="colos_p1_dmg2" value="27 30" value_charged_scale="2.0"/>
+            <talentvalue level="6" name="colos_p1_dmg2" value="37 41" value_charged_scale="2.0"/>
+            <talentvalue level="9" name="colos_p1_dmg2" value="51 56" value_charged_scale="2.0"/>
+            <talentvalue level="10" name="colos_p1_dmg2" value="68 75" value_charged_scale="2.0"/>
+            <talentvalue level="14" name="colos_p1_dmg2" value="109 120" value_charged_scale="2.0"/>
+            <talentvalue level="15" name="colos_p1_dmg2" value="156 173" value_charged_scale="2.0"/>
+            <talentvalue level="1" name="colos_p1_life" value="3"/>
+            <talentvalue level="15" name="colos_p1_life" value="20"/>
         </talentvalues>
-        <level description="%colos_p1_dmg $DMG_PHYSICAL\n%colos_p1_life Seconds\n%colos_p1_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p1_req" />
+        <level description="%colos_p1_dmg $DMG_PHYSICAL\n%colos_p1_life seconds\n%colos_p1_pwr $EP">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p1_req"/>
         </level>
     </talent>
     <talent descname="Earthquake" description="Colossus pounds the ground with his fists, damaging enemies in an increasing radius.  $PT_TAP" descshort="Radial" icon="1" icon_texture="textures/ui/colossus_icons.png" name="colos_power2" power="power2">
         <talentvalues>
-            <talentvalue level="1" name="colos_p2_req" value="2" />
-            <talentvalue level="5" name="colos_p2_req" value="14" />
-            <talentvalue level="6" name="colos_p2_req" value="17" />
-            <talentvalue level="9" name="colos_p2_req" value="26" />
-            <talentvalue level="10" name="colos_p2_req" value="29" />
-            <talentvalue level="14" name="colos_p2_req" value="53" />
-            <talentvalue level="15" name="colos_p2_req" value="73" />
-            <talentvalue level="1" name="colos_p2_pwr" value="9" />
-            <talentvalue level="5" name="colos_p2_pwr" value="20" />
-            <talentvalue level="6" name="colos_p2_pwr" value="22" />
-            <talentvalue level="9" name="colos_p2_pwr" value="30" />
-            <talentvalue level="10" name="colos_p2_pwr" value="32" />
-            <talentvalue level="14" name="colos_p2_pwr" value="50" />
-            <talentvalue level="15" name="colos_p2_pwr" value="62" />
-            <talentvalue level="1" name="colos_p2_rng" value="64" value_charged="130" />
-            <talentvalue level="1" name="colos_p2_spd" value="1" value_charged="1.8" />
-            <talentvalue level="1" name="colos_p2_fxscale" value="0.5" value_charged="1" />
-            <talentvalue level="1" name="colos_p2_dmg" value="11 13" />
-            <talentvalue level="5" name="colos_p2_dmg" value="34 38" />
-            <talentvalue level="6" name="colos_p2_dmg" value="48 53" />
-            <talentvalue level="9" name="colos_p2_dmg" value="65 71" />
-            <talentvalue level="10" name="colos_p2_dmg" value="82 90" />
-            <talentvalue level="14" name="colos_p2_dmg" value="132 147" />
-            <talentvalue level="15" name="colos_p2_dmg" value="190 210" />
-            <talentvalue level="1" name="colos_p2_dmg2" value="11 13" />
-            <talentvalue level="5" name="colos_p2_dmg2" value="11 13" />
-            <talentvalue level="6" name="colos_p2_dmg2" value="11 13" />
-            <talentvalue level="9" name="colos_p2_dmg2" value="17 19" />
-            <talentvalue level="10" name="colos_p2_dmg2" value="20 23" />
-            <talentvalue level="14" name="colos_p2_dmg2" value="37 41" />
-            <talentvalue level="15" name="colos_p2_dmg2" value="54 60" />
+            <talentvalue level="1" name="colos_p2_req" value="2"/>
+            <talentvalue level="5" name="colos_p2_req" value="14"/>
+            <talentvalue level="6" name="colos_p2_req" value="17"/>
+            <talentvalue level="9" name="colos_p2_req" value="26"/>
+            <talentvalue level="10" name="colos_p2_req" value="29"/>
+            <talentvalue level="14" name="colos_p2_req" value="53"/>
+            <talentvalue level="15" name="colos_p2_req" value="73"/>
+            <talentvalue level="1" name="colos_p2_pwr" value="9"/>
+            <talentvalue level="5" name="colos_p2_pwr" value="20"/>
+            <talentvalue level="6" name="colos_p2_pwr" value="22"/>
+            <talentvalue level="9" name="colos_p2_pwr" value="30"/>
+            <talentvalue level="10" name="colos_p2_pwr" value="32"/>
+            <talentvalue level="14" name="colos_p2_pwr" value="50"/>
+            <talentvalue level="15" name="colos_p2_pwr" value="62"/>
+            <talentvalue level="1" name="colos_p2_rng" value="64" value_charged="130"/>
+            <talentvalue level="1" name="colos_p2_spd" value="1" value_charged="1.8"/>
+            <talentvalue level="1" name="colos_p2_fxscale" value="0.5" value_charged="1"/>
+            <talentvalue level="1" name="colos_p2_dmg" value="11 13"/>
+            <talentvalue level="5" name="colos_p2_dmg" value="34 38"/>
+            <talentvalue level="6" name="colos_p2_dmg" value="48 53"/>
+            <talentvalue level="9" name="colos_p2_dmg" value="65 71"/>
+            <talentvalue level="10" name="colos_p2_dmg" value="82 90"/>
+            <talentvalue level="14" name="colos_p2_dmg" value="132 147"/>
+            <talentvalue level="15" name="colos_p2_dmg" value="190 210"/>
+            <talentvalue level="1" name="colos_p2_dmg2" value="11 13"/>
+            <talentvalue level="5" name="colos_p2_dmg2" value="11 13"/>
+            <talentvalue level="6" name="colos_p2_dmg2" value="11 13"/>
+            <talentvalue level="9" name="colos_p2_dmg2" value="17 19"/>
+            <talentvalue level="10" name="colos_p2_dmg2" value="20 23"/>
+            <talentvalue level="14" name="colos_p2_dmg2" value="37 41"/>
+            <talentvalue level="15" name="colos_p2_dmg2" value="54 60"/>
         </talentvalues>
-        <level description="%colos_p2_dmg $DMG_PHYSICAL\n%colos_p2_pwr $EP/s">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p2_req" />
+        <level description="%colos_p2_dmg $DMG_PHYSICAL\n%colos_p2_pwr $EP per second">
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p2_req"/>
         </level>
     </talent>
     <talent descname="Soaring Strike" description="Jumps into the air and comes back down hard doing radial damage." descshort="Radial" icon="2" icon_texture="textures/ui/colossus_icons.png" name="colos_power3" power="power3">
         <talentvalues>
-            <talentvalue level="1" name="colos_p3_req" value="5" />
-            <talentvalue level="5" name="colos_p3_req" value="14" />
-            <talentvalue level="6" name="colos_p3_req" value="17" />
-            <talentvalue level="9" name="colos_p3_req" value="26" />
-            <talentvalue level="10" name="colos_p3_req" value="29" />
-            <talentvalue level="14" name="colos_p3_req" value="53" />
-            <talentvalue level="15" name="colos_p3_req" value="73" />
-            <talentvalue level="1" name="colos_p3_pwr" value="14" />
-            <talentvalue level="5" name="colos_p3_pwr" value="23" />
-            <talentvalue level="6" name="colos_p3_pwr" value="26" />
-            <talentvalue level="9" name="colos_p3_pwr" value="35" />
-            <talentvalue level="10" name="colos_p3_pwr" value="38" />
-            <talentvalue level="14" name="colos_p3_pwr" value="59" />
-            <talentvalue level="15" name="colos_p3_pwr" value="73" />
-            <talentvalue level="1" name="colos_p3_dmg" value="11 13" />
-            <talentvalue level="5" name="colos_p3_dmg" value="20 23" />
-            <talentvalue level="6" name="colos_p3_dmg" value="31 34" />
-            <talentvalue level="9" name="colos_p3_dmg" value="41 45" />
-            <talentvalue level="10" name="colos_p3_dmg" value="54 60" />
-            <talentvalue level="14" name="colos_p3_dmg" value="85 94" />
-            <talentvalue level="15" name="colos_p3_dmg" value="126 139" />
+            <talentvalue level="1" name="colos_p3_req" value="5"/>
+            <talentvalue level="5" name="colos_p3_req" value="14"/>
+            <talentvalue level="6" name="colos_p3_req" value="17"/>
+            <talentvalue level="9" name="colos_p3_req" value="26"/>
+            <talentvalue level="10" name="colos_p3_req" value="29"/>
+            <talentvalue level="14" name="colos_p3_req" value="53"/>
+            <talentvalue level="15" name="colos_p3_req" value="73"/>
+            <talentvalue level="1" name="colos_p3_pwr" value="14"/>
+            <talentvalue level="5" name="colos_p3_pwr" value="23"/>
+            <talentvalue level="6" name="colos_p3_pwr" value="26"/>
+            <talentvalue level="9" name="colos_p3_pwr" value="35"/>
+            <talentvalue level="10" name="colos_p3_pwr" value="38"/>
+            <talentvalue level="14" name="colos_p3_pwr" value="59"/>
+            <talentvalue level="15" name="colos_p3_pwr" value="73"/>
+            <talentvalue level="1" name="colos_p3_dmg" value="11 13"/>
+            <talentvalue level="5" name="colos_p3_dmg" value="20 23"/>
+            <talentvalue level="6" name="colos_p3_dmg" value="31 34"/>
+            <talentvalue level="9" name="colos_p3_dmg" value="41 45"/>
+            <talentvalue level="10" name="colos_p3_dmg" value="54 60"/>
+            <talentvalue level="14" name="colos_p3_dmg" value="85 94"/>
+            <talentvalue level="15" name="colos_p3_dmg" value="126 139"/>
         </talentvalues>
         <level description="%colos_p3_dmg $DMG_PHYSICAL\n%colos_p3_pwr $EP">
-            <tier cost="1" count="5" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p3_req" />
+            <tier cost="1" count="5"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p3_req"/>
         </level>
     </talent>
     <talent descname="Take Down" description="Charges forward, tackling an enemy and beating him mercilessly." descshort="Special" icon="3" icon_texture="textures/ui/colossus_icons.png" name="colos_power4" power="power4">
         <talentvalues>
-            <talentvalue level="1" name="colos_p4_req" value="10" />
-            <talentvalue level="3" name="colos_p4_req" value="13" />
-            <talentvalue level="4" name="colos_p4_req" value="16" />
-            <talentvalue level="7" name="colos_p4_req" value="25" />
-            <talentvalue level="8" name="colos_p4_req" value="28" />
-            <talentvalue level="12" name="colos_p4_req" value="52" />
-            <talentvalue level="13" name="colos_p4_req" value="72" />
-            <talentvalue level="1" name="colos_p4_pwr" value="17" />
-            <talentvalue level="3" name="colos_p4_pwr" value="19" />
-            <talentvalue level="4" name="colos_p4_pwr" value="21" />
-            <talentvalue level="7" name="colos_p4_pwr" value="29" />
-            <talentvalue level="8" name="colos_p4_pwr" value="31" />
-            <talentvalue level="12" name="colos_p4_pwr" value="48" />
-            <talentvalue level="13" name="colos_p4_pwr" value="61" />
-            <talentvalue level="1" name="colos_p4_dmg" value="27 30" />
-            <talentvalue level="3" name="colos_p4_dmg" value="31 34" />
-            <talentvalue level="4" name="colos_p4_dmg" value="44 49" />
-            <talentvalue level="7" name="colos_p4_dmg" value="61 68" />
-            <talentvalue level="8" name="colos_p4_dmg" value="82 90" />
-            <talentvalue level="12" name="colos_p4_dmg" value="129 143" />
-            <talentvalue level="13" name="colos_p4_dmg" value="190 210" />
-            <talentvalue level="1" name="colos_p4_dmg2" value="10 12" />
-            <talentvalue level="3" name="colos_p4_dmg2" value="10 12" />
-            <talentvalue level="4" name="colos_p4_dmg2" value="11 13" />
-            <talentvalue level="7" name="colos_p4_dmg2" value="15 17" />
-            <talentvalue level="8" name="colos_p4_dmg2" value="20 23" />
-            <talentvalue level="12" name="colos_p4_dmg2" value="34 38" />
-            <talentvalue level="13" name="colos_p4_dmg2" value="54 60" />
+            <talentvalue level="1" name="colos_p4_req" value="10"/>
+            <talentvalue level="3" name="colos_p4_req" value="13"/>
+            <talentvalue level="4" name="colos_p4_req" value="16"/>
+            <talentvalue level="7" name="colos_p4_req" value="25"/>
+            <talentvalue level="8" name="colos_p4_req" value="28"/>
+            <talentvalue level="12" name="colos_p4_req" value="52"/>
+            <talentvalue level="13" name="colos_p4_req" value="72"/>
+            <talentvalue level="1" name="colos_p4_pwr" value="17"/>
+            <talentvalue level="3" name="colos_p4_pwr" value="19"/>
+            <talentvalue level="4" name="colos_p4_pwr" value="21"/>
+            <talentvalue level="7" name="colos_p4_pwr" value="29"/>
+            <talentvalue level="8" name="colos_p4_pwr" value="31"/>
+            <talentvalue level="12" name="colos_p4_pwr" value="48"/>
+            <talentvalue level="13" name="colos_p4_pwr" value="61"/>
+            <talentvalue level="1" name="colos_p4_dmg" value="27 30"/>
+            <talentvalue level="3" name="colos_p4_dmg" value="31 34"/>
+            <talentvalue level="4" name="colos_p4_dmg" value="44 49"/>
+            <talentvalue level="7" name="colos_p4_dmg" value="61 68"/>
+            <talentvalue level="8" name="colos_p4_dmg" value="82 90"/>
+            <talentvalue level="12" name="colos_p4_dmg" value="129 143"/>
+            <talentvalue level="13" name="colos_p4_dmg" value="190 210"/>
+            <talentvalue level="1" name="colos_p4_dmg2" value="10 12"/>
+            <talentvalue level="3" name="colos_p4_dmg2" value="10 12"/>
+            <talentvalue level="4" name="colos_p4_dmg2" value="11 13"/>
+            <talentvalue level="7" name="colos_p4_dmg2" value="15 17"/>
+            <talentvalue level="8" name="colos_p4_dmg2" value="20 23"/>
+            <talentvalue level="12" name="colos_p4_dmg2" value="34 38"/>
+            <talentvalue level="13" name="colos_p4_dmg2" value="54 60"/>
         </talentvalues>
-        <level description="%colos_p4_dmg $DMG_PHYSICAL from tackle\n%colos_p4_dmg2 $DMG_PHYSICAL per hit\n%colos_p4_pwr $EP/s">
-            <tier cost="1" count="3" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p4_req" />
+        <level description="%colos_p4_dmg $DMG_PHYSICAL from tackle\n%colos_p4_dmg2 $DMG_PHYSICAL per hit\n%colos_p4_pwr $EP per second">
+            <tier cost="1" count="3"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p4_req"/>
         </level>
     </talent>
     <talent descname="Intimidation" description="Debuff that will frighten enemies for a time." descshort="Debuff" icon="5" icon_texture="textures/ui/colossus_icons.png" name="colos_power6" power="power6" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="colos_p6_req" value="14" />
-            <talentvalue level="2" name="colos_p6_req" value="17" />
-            <talentvalue level="5" name="colos_p6_req" value="26" />
-            <talentvalue level="6" name="colos_p6_req" value="29" />
-            <talentvalue level="10" name="colos_p6_req" value="53" />
-            <talentvalue level="11" name="colos_p6_req" value="73" />
-            <talentvalue level="1" name="colos_p6_pwr" value="72" />
-            <talentvalue level="2" name="colos_p6_pwr" value="80" />
-            <talentvalue level="5" name="colos_p6_pwr" value="108" />
-            <talentvalue level="6" name="colos_p6_pwr" value="116" />
-            <talentvalue level="10" name="colos_p6_pwr" value="180" />
-            <talentvalue level="11" name="colos_p6_pwr" value="224" />
-            <talentvalue level="1" name="colos_p6_lif" value="3" />
-            <talentvalue level="2" name="colos_p6_lif" value="4" />
-            <talentvalue level="5" name="colos_p6_lif" value="7" />
-            <talentvalue level="6" name="colos_p6_lif" value="8" />
-            <talentvalue level="10" name="colos_p6_lif" value="12" />
-            <talentvalue level="11" name="colos_p6_lif" value="15" />
+            <talentvalue level="1" name="colos_p6_req" value="14"/>
+            <talentvalue level="2" name="colos_p6_req" value="17"/>
+            <talentvalue level="5" name="colos_p6_req" value="26"/>
+            <talentvalue level="6" name="colos_p6_req" value="29"/>
+            <talentvalue level="10" name="colos_p6_req" value="53"/>
+            <talentvalue level="11" name="colos_p6_req" value="73"/>
+            <talentvalue level="1" name="colos_p6_pwr" value="72"/>
+            <talentvalue level="2" name="colos_p6_pwr" value="80"/>
+            <talentvalue level="5" name="colos_p6_pwr" value="108"/>
+            <talentvalue level="6" name="colos_p6_pwr" value="116"/>
+            <talentvalue level="10" name="colos_p6_pwr" value="180"/>
+            <talentvalue level="11" name="colos_p6_pwr" value="224"/>
+            <talentvalue level="1" name="colos_p6_lif" value="3"/>
+            <talentvalue level="2" name="colos_p6_lif" value="4"/>
+            <talentvalue level="5" name="colos_p6_lif" value="7"/>
+            <talentvalue level="6" name="colos_p6_lif" value="8"/>
+            <talentvalue level="10" name="colos_p6_lif" value="12"/>
+            <talentvalue level="11" name="colos_p6_lif" value="15"/>
         </talentvalues>
-        <level description="%colos_p6_lif Seconds\n%colos_p6_pwr $EP">
-            <tier cost="1" count="1" />
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p6_req" />
+        <level description="%colos_p6_lif seconds\n%colos_p6_pwr $EP">
+            <tier cost="1" count="1"/>
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p6_req"/>
         </level>
     </talent>
     <talent descname="Thick Skin" description="Reduces $DMG taken by the entire team for a time." descshort="Boost" icon="6" icon_texture="textures/ui/colossus_icons.png" name="colos_power7" power="power7" type="boost">
         <talentvalues>
-            <talentvalue level="1" name="colos_p7_req" value="17" />
-            <talentvalue level="4" name="colos_p7_req" value="26" />
-            <talentvalue level="5" name="colos_p7_req" value="29" />
-            <talentvalue level="9" name="colos_p7_req" value="53" />
-            <talentvalue level="10" name="colos_p7_req" value="73" />
-            <talentvalue level="1" name="colos_p7_pwr" value="48" />
-            <talentvalue level="4" name="colos_p7_pwr" value="65" />
-            <talentvalue level="5" name="colos_p7_pwr" value="70" />
-            <talentvalue level="9" name="colos_p7_pwr" value="108" />
-            <talentvalue level="10" name="colos_p7_pwr" value="134" />
-            <talentvalue level="1" name="colos_p7_lif" value="50" />
-            <talentvalue level="4" name="colos_p7_lif" value="65" />
-            <talentvalue level="5" name="colos_p7_lif" value="80" />
-            <talentvalue level="9" name="colos_p7_lif" value="120" />
-            <talentvalue level="10" name="colos_p7_lif" value="180" />
-            <talentvalue level="1" name="colos_p7_def" value="0.94" />
-            <talentvalue level="10" name="colos_p7_def" value="0.85" />
+            <talentvalue level="1" name="colos_p7_req" value="17"/>
+            <talentvalue level="4" name="colos_p7_req" value="26"/>
+            <talentvalue level="5" name="colos_p7_req" value="29"/>
+            <talentvalue level="9" name="colos_p7_req" value="53"/>
+            <talentvalue level="10" name="colos_p7_req" value="73"/>
+            <talentvalue level="1" name="colos_p7_pwr" value="48"/>
+            <talentvalue level="4" name="colos_p7_pwr" value="65"/>
+            <talentvalue level="5" name="colos_p7_pwr" value="70"/>
+            <talentvalue level="9" name="colos_p7_pwr" value="108"/>
+            <talentvalue level="10" name="colos_p7_pwr" value="134"/>
+            <talentvalue level="1" name="colos_p7_lif" value="50"/>
+            <talentvalue level="4" name="colos_p7_lif" value="65"/>
+            <talentvalue level="5" name="colos_p7_lif" value="80"/>
+            <talentvalue level="9" name="colos_p7_lif" value="120"/>
+            <talentvalue level="10" name="colos_p7_lif" value="180"/>
+            <talentvalue level="1" name="colos_p7_def" value="0.94"/>
+            <talentvalue level="10" name="colos_p7_def" value="0.85"/>
         </talentvalues>
-        <level description="%colos_p7_def:s $DMG taken\n%colos_p7_lif Seconds\n%colos_p7_pwr $EP">
-            <tier cost="2" count="4" />
-            <tier cost="3" count="1" />
-            <tier cost="3" count="4" difficulty="hard" />
-            <tier cost="4" count="1" difficulty="hard" />
-            <require cat="level" level="%colos_p7_req" />
+        <level description="%colos_p7_def:s $DMG taken\n%colos_p7_lif seconds\n%colos_p7_pwr $EP">
+            <tier cost="2" count="4"/>
+            <tier cost="3" count="1"/>
+            <tier cost="3" count="4" difficulty="hard"/>
+            <tier cost="4" count="1" difficulty="hard"/>
+            <require cat="level" level="%colos_p7_req"/>
         </level>
     </talent>
     <talent descname="Colossal Crash" description="Leaps into the air and comes back down doing massive radial damage." descshort="Xtreme" icon="8" icon_texture="textures/ui/colossus_icons.png" name="colos_power9" power="team_xtreme" type="team_xtreme">
         <talentvalues>
-            <talentvalue level="1" name="colos_p9_req" value="10" />
-            <talentvalue level="8" name="colos_p9_req" value="45" />
-            <talentvalue level="1" name="colos_p9_dmg" value="85 94" />
-            <talentvalue level="8" name="colos_p9_dmg" value="339 375" />
+            <talentvalue level="1" name="colos_p9_req" value="10"/>
+            <talentvalue level="8" name="colos_p9_req" value="45"/>
+            <talentvalue level="1" name="colos_p9_dmg" value="85 94"/>
+            <talentvalue level="8" name="colos_p9_dmg" value="339 375"/>
         </talentvalues>
         <level description="%colos_p9_dmg $DMG">
-            <tier cost="2" count="1" />
-            <tier cost="0" count="7" />
-            <require cat="level" level="%colos_p9_req" />
+            <tier cost="2" count="1"/>
+            <tier cost="0" count="7"/>
+            <require cat="level" level="%colos_p9_req"/>
         </level>
     </talent>
     <talent descname="Critical Chance" description="Raises the chance of landing critical hits." icon="1" icon_texture="textures/ui/talent_icons.png" name="colos_outfit11" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit11_pct" value="0.02" />
-            <talentvalue level="9" name="colos_outfit11_pct" value="0.1" />
+            <talentvalue level="1" name="colos_outfit11_pct" value="0.02"/>
+            <talentvalue level="9" name="colos_outfit11_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%colos_outfit11_pct:p Critical Chance">
+        <level count="9" description="+%colos_outfit11_pct:p critical chance">
             <powerup life="-1">
-                <affecter attribute="atk_critical" level="%colos_outfit11_pct" />
+                <affecter attribute="atk_critical" level="%colos_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Melee Damage" description="Increases damage done by melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit12" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit12_pct" value="1.04" />
-            <talentvalue level="9" name="colos_outfit12_pct" value="1.2" />
+            <talentvalue level="1" name="colos_outfit12_pct" value="1.04"/>
+            <talentvalue level="9" name="colos_outfit12_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%colos_outfit12_pct:s Melee $DMG">
+        <level count="9" description="%colos_outfit12_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit12_pct" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit12_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit13" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit13_dr" value="1" />
-            <talentvalue level="9" name="colos_outfit13_dr" value="9" />
+            <talentvalue level="1" name="colos_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="colos_outfit13_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%colos_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%colos_outfit13_dr" />
+                <affecter attribute="defense_rating" level="%colos_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost $XP" description="Increases $XP earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="colos_outfit21" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit21_pct" value="1.02" />
-            <talentvalue level="9" name="colos_outfit21_pct" value="1.1" />
+            <talentvalue level="1" name="colos_outfit21_pct" value="1.02"/>
+            <talentvalue level="9" name="colos_outfit21_pct" value="1.1"/>
         </talentvalues>
         <level count="9" description="%colos_outfit21_pct:s $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="%colos_outfit21_pct" />
+                <affecter affect_type="scale" attribute="xp" level="%colos_outfit21_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="colos_outfit22" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit22_pct" value="2" />
-            <talentvalue level="9" name="colos_outfit22_pct" value="10" />
+            <talentvalue level="1" name="colos_outfit22_pct" value="2"/>
+            <talentvalue level="9" name="colos_outfit22_pct" value="10"/>
         </talentvalues>
         <level count="9" description="+%colos_outfit22_pct Body\n+%colos_outfit22_pct Focus\n+%colos_outfit22_pct Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="%colos_outfit22_pct" />
+                <affecter attribute="traits" level="%colos_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit23" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit23_dr" value="1" />
-            <talentvalue level="9" name="colos_outfit23_dr" value="9" />
+            <talentvalue level="1" name="colos_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="colos_outfit23_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%colos_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%colos_outfit23_dr" />
+                <affecter attribute="defense_rating" level="%colos_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Melee Damage" description="Increases damage done by melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit31" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit31_pct" value="1.04" />
-            <talentvalue level="9" name="colos_outfit31_pct" value="1.2" />
+            <talentvalue level="1" name="colos_outfit31_pct" value="1.04"/>
+            <talentvalue level="9" name="colos_outfit31_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%colos_outfit31_pct:s Melee $DMG">
+        <level count="9" description="%colos_outfit31_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit31_pct" scope_non_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit31_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Power Damage" description="Increases damage done by powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit32_pct" value="1.03" />
-            <talentvalue level="9" name="colos_outfit32_pct" value="1.15" />
+            <talentvalue level="1" name="colos_outfit32_pct" value="1.03"/>
+            <talentvalue level="9" name="colos_outfit32_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%colos_outfit32_pct:s Power $DMG">
+        <level count="9" description="%colos_outfit32_pct:s power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit32_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit32_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit33_dr" value="1" />
-            <talentvalue level="9" name="colos_outfit33_dr" value="9" />
+            <talentvalue level="1" name="colos_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="colos_outfit33_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%colos_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%colos_outfit33_dr" />
+                <affecter attribute="defense_rating" level="%colos_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Power Damage" description="Increases damage done by powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit41" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit41_pct" value="1.03" />
-            <talentvalue level="9" name="colos_outfit41_pct" value="1.15" />
+            <talentvalue level="1" name="colos_outfit41_pct" value="1.03"/>
+            <talentvalue level="9" name="colos_outfit41_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%colos_outfit41_pct:s Power $DMG">
+        <level count="9" description="%colos_outfit41_pct:s power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit41_pct" scope_powers="true" />
+                <affecter affect_type="scale" attribute="atk_damage" level="%colos_outfit41_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Max Health" description="Increases Max Health." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
+    <talent descname="Max Health" description="Increases maximum $HP." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit42_pct" value="1.05" />
-            <talentvalue level="9" name="colos_outfit42_pct" value="1.25" />
+            <talentvalue level="1" name="colos_outfit42_pct" value="1.05"/>
+            <talentvalue level="9" name="colos_outfit42_pct" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%colos_outfit42_pct:s Max $HP">
+        <level count="9" description="%colos_outfit42_pct:s maximum $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%colos_outfit42_pct" />
+                <affecter affect_type="scale" attribute="maxhealth" level="%colos_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
     <talent descname="Defense" description="Increases $DR." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="colos_outfit43_dr" value="1" />
-            <talentvalue level="9" name="colos_outfit43_dr" value="9" />
+            <talentvalue level="1" name="colos_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="colos_outfit43_dr" value="9"/>
         </talentvalues>
         <level count="9" description="+%colos_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%colos_outfit43_dr" />
+                <affecter attribute="defense_rating" level="%colos_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

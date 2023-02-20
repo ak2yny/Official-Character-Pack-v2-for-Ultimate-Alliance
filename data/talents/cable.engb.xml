@@ -396,7 +396,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="cable_outfit32" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="cable_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit32_pct" value="1.04" />
             <talentvalue level="9" name="cable_outfit32_pct" value="1.2" />
@@ -418,7 +418,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Dominus Objective" description="Overwhelming data load increases the damage of powers." icon="25" icon_texture="textures/ui/talent_icons.png" name="cable_outfit41" skin="3" type="passive">
+    <talent descname="Dominus Objective" description="Overwhelming data load increases the damage of all power attacks." icon="25" icon_texture="textures/ui/talent_icons.png" name="cable_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit41_pct" value="1.03" />
             <talentvalue level="9" name="cable_outfit41_pct" value="1.15" />

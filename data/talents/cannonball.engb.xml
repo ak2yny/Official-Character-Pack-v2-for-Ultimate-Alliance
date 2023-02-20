@@ -230,7 +230,7 @@
             <talentvalue level="1" name="can_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="can_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%can_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%can_outfit12_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%can_outfit12_pct" />
             </powerup>
@@ -293,7 +293,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Blast Mastery" description="Increases the $DMG of powers." icon="7" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit32" skin="2" type="passive">
+    <talent descname="Blast Mastery" description="Increases the $DMG of all powers." icon="7" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="can_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="can_outfit31_pct" value="1.15" />
@@ -320,7 +320,7 @@
             <talentvalue level="1" name="can_outfit21_pct" value="1.05" />
             <talentvalue level="9" name="can_outfit21_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%can_outfit21_pct:s Momentum Rate">
+        <level count="9" description="%can_outfit21_pct:s momentum rate">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="momentum" level="%can_outfit21_pct" />
             </powerup>
@@ -331,7 +331,7 @@
             <talentvalue level="1" name="can_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="can_outfit42_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="%can_outfit42_pct:s Maximum $HP">
+        <level count="9" description="%can_outfit42_pct:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%can_outfit42_pct" />
             </powerup>

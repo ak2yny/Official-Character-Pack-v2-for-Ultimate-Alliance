@@ -314,7 +314,7 @@
             <talentvalue level="1" name="invis_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="invis_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit12_pct:p Critical Chance">
+        <level count="9" description="+%invis_outfit12_pct:p Critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%invis_outfit12_pct" />
             </powerup>
@@ -331,7 +331,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Concussive Mastery" description="Increases the $DMG of concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit21" skin="1" type="passive">
+    <talent descname="Concussive Mastery" description="Increases the $DMG of all concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit21_pct" value="1.03" />
             <talentvalue level="9" name="invis_outfit21_pct" value="1.15" />
@@ -367,7 +367,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Concussive Mastery" description="Increases the $DMG of concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit31" skin="2" type="passive">
+    <talent descname="Concussive Mastery" description="Increases the $DMG of all concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="invis_outfit31_pct" value="1.15" />
@@ -385,7 +385,7 @@
             <talentvalue level="1" name="invis_outfit32_shw" value="2" />
             <talentvalue level="9" name="invis_outfit32_shw" value="10" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit32_shw All Resistances">
+        <level count="9" description="+%invis_outfit32_shw Resist all">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%invis_outfit32_pct" />
             </powerup>
@@ -407,7 +407,7 @@
             <talentvalue level="1" name="invis_outfit41_pct" value="0.03" />
             <talentvalue level="9" name="invis_outfit41_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit41_pct:p Dodge Chance">
+        <level count="9" description="+%invis_outfit41_pct:p Dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%invis_outfit41_pct" />
             </powerup>
