@@ -1,4 +1,4 @@
-<talents>
+﻿<talents>
     <talent descname="Jab" description="A powerful melee punch.  $PT_CHARGE" descshort="Melee" icon="0" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p1" power="power1">
         <talentvalues>
             <talentvalue level="1" name="lukec_p1_req" value="1"/>
@@ -104,7 +104,7 @@
             <require cat="level" level="%lukec_p3_req"/>
         </level>
     </talent>
-    <talent descname="Hammer Toss" description="Grab nearby victims, swinging them around and throwing them on release.  $PT_HOLD\n" descshort="Radial" icon="3" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p4" power="power4">
+    <talent descname="Hammer Toss" description="Grab nearby victims, swinging them around and throwing them on release.  $PT_HOLD" descshort="Radial" icon="3" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p4" power="power4">
         <talentvalues>
             <talentvalue level="1" name="lukec_p4_req" value="17"/>
             <talentvalue level="4" name="lukec_p4_req" value="26"/>
@@ -191,7 +191,7 @@
             <require cat="level" level="%lukec_p6_req"/>
         </level>
     </talent>
-    <talent descname="Street Smarts" description="Raises Maximum health and Striking for a time." descshort="Boost" icon="6" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p7" power="power7" type="boost">
+    <talent descname="Street Smarts" description="Raises maximum health and Strike for a time." descshort="Boost" icon="6" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p7" power="power7" type="boost">
         <talentvalues>
             <talentvalue level="1" name="lukec_p7_req" value="14"/>
             <talentvalue level="2" name="lukec_p7_req" value="17"/>
@@ -216,7 +216,7 @@
             <talentvalue level="10" name="lukec_p7_lif" value="120"/>
             <talentvalue level="11" name="lukec_p7_lif" value="180"/>
         </talentvalues>
-        <level description="%lukec_p7_hlt:p maximum $HP\n%lukec_p7_str:s Striking\n%lukec_p7_lif seconds">
+        <level description="%lukec_p7_hlt:p maximum $HP\n%lukec_p7_str:s Strike\n%lukec_p7_lif seconds">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -225,7 +225,7 @@
             <require cat="level" level="%lukec_p7_req"/>
         </level>
     </talent>
-    <talent descname="Sweet Christmas" description="Leap in the air and slam to the ground, causing massive $DMG_PHYSICAL. Also increases Shield Credit drops for enemies defeated during attack sequence." descshort="Xtreme" icon="7" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p8" power="team_xtreme" type="xtreme">
+    <talent descname="Sweet Christmas" description="Leap in the air and slam to the ground, causing massive $DMG_PHYSICAL. Also increases S.H.I.E.L.D. credits dropped for enemies defeated during attack sequence." descshort="Xtreme" icon="7" icon_texture="textures/ui/lukecage_icons.png" name="lukec_p8" power="team_xtreme" type="xtreme">
         <talentvalues>
             <talentvalue level="1" name="lukec_p8_req" value="10"/>
             <talentvalue level="8" name="lukec_p8_req" value="45"/>
@@ -234,7 +234,7 @@
             <talentvalue level="1" name="lukec_p8_mon" value="4"/>
             <talentvalue level="8" name="lukec_p8_mon" value="6"/>
         </talentvalues>
-        <level description="%lukec_p8_dmg $DMG_PHYSICAL\n%lukec_p8_mon:s Shield Credits from enemies">
+        <level description="%lukec_p8_dmg $DMG_PHYSICAL\n%lukec_p8_mon:s S.H.I.E.L.D. credits">
             <tier cost="2" count="1"/>
             <tier cost="0" count="7"/>
             <require cat="level" level="%lukec_p8_req"/>
@@ -246,7 +246,7 @@
         </talentvalues>
         <level/>
     </talent>
-    <talent descname="Health Regeneration" description="Increases health regeneration rate." icon="30" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit11" skin="0" type="passive">
+    <talent descname="$HP Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="lukec_outfit11_hlt" value="0.004"/>
             <talentvalue level="9" name="lukec_outfit11_hlt" value="0.012"/>
@@ -259,62 +259,62 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit13" skin="0" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit13_ep" value="1.04"/>
-            <talentvalue level="9" name="lukec_outfit13_ep" value="1.2"/>
+            <talentvalue level="1" name="lukec_outfit12_ep" value="1.04"/>
+            <talentvalue level="9" name="lukec_outfit12_ep" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit13_ep:s maximum $EP">
+        <level count="9" description="%lukec_outfit12_ep:s maximum $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="%lukec_outfit13_ep"/>
+                <affecter affect_type="scale" attribute="maxenergy" level="%lukec_outfit12_ep"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit12" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit13" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit12_dr" value="1"/>
-            <talentvalue level="9" name="lukec_outfit12_dr" value="9"/>
+            <talentvalue level="1" name="lukec_outfit13_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit13_dr" value="9"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit12_dr $DR">
+        <level count="9" description="+%lukec_outfit13_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit12_dr"/>
+                <affecter attribute="defense_rating" level="%lukec_outfit13_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Critical Strike" description="Increases the chance of critical hits." icon="1" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit21" skin="1" type="passive">
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="lukec_outfit21_cri" value="0.02"/>
             <talentvalue level="9" name="lukec_outfit21_cri" value="0.1"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit21_cri:p chance">
+        <level count="9" description="%lukec_outfit21_cri:p critical chance">
             <powerup life="-1">
                 <affecter attribute="critical" level="%lukec_outfit21_cri"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases power damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit23" skin="1" type="passive">
+    <talent descname="Power Damage" description="Increases power damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit23_dmg" value="1.03"/>
-            <talentvalue level="9" name="lukec_outfit23_dmg" value="1.15"/>
+            <talentvalue level="1" name="lukec_outfit22_dmg" value="1.03"/>
+            <talentvalue level="9" name="lukec_outfit22_dmg" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit23_dmg:s power $DMG">
+        <level count="9" description="%lukec_outfit22_dmg:s power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit23_dmg" scope_powers="true"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit22_dmg" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit22" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit23" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit22_dr" value="1"/>
-            <talentvalue level="9" name="lukec_outfit22_dr" value="9"/>
+            <talentvalue level="1" name="lukec_outfit23_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit23_dr" value="9"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit22_dr $DR">
+        <level count="9" description="+%lukec_outfit23_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit22_dr"/>
+                <affecter attribute="defense_rating" level="%lukec_outfit23_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Mastery" description="Increases melee damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit31" skin="2" type="passive">
+    <talent descname="Melee Mastery" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="lukec_outfit31_dmg" value="1.04"/>
             <talentvalue level="9" name="lukec_outfit31_dmg" value="1.2"/>
@@ -325,31 +325,31 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit33" skin="2" type="passive">
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit33_res" value="0.02"/>
-            <talentvalue level="9" name="lukec_outfit33_res" value="0.1"/>
-            <talentvalue level="1" name="lukec_outfit33_pctd" value="2"/>
-            <talentvalue level="9" name="lukec_outfit33_pctd" value="10"/>
+            <talentvalue level="1" name="lukec_outfit32_res" value="0.02"/>
+            <talentvalue level="9" name="lukec_outfit32_res" value="0.1"/>
+            <talentvalue level="1" name="lukec_outfit32_pctd" value="2"/>
+            <talentvalue level="9" name="lukec_outfit32_pctd" value="10"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit33_pctd all resistances">
+        <level count="9" description="+%lukec_outfit32_pctd all resistances">
             <powerup life="-1">
-                <affecter attribute="resist_all" level="%lukec_outfit33_res"/>
+                <affecter attribute="resist_all" level="%lukec_outfit32_res"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit32" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit33" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit32_dr" value="1"/>
-            <talentvalue level="9" name="lukec_outfit32_dr" value="9"/>
+            <talentvalue level="1" name="lukec_outfit33_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit33_dr" value="9"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit32_dr $DR">
+        <level count="9" description="+%lukec_outfit33_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit32_dr"/>
+                <affecter attribute="defense_rating" level="%lukec_outfit33_dr"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit41" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="lukec_outfit41_hlt" value="1.05"/>
             <talentvalue level="9" name="lukec_outfit41_hlt" value="1.25"/>
@@ -360,25 +360,25 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases power damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit43" skin="3" type="passive">
+    <talent descname="Power Damage" description="Increases power damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit42" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit43_dmg" value="1.03"/>
-            <talentvalue level="9" name="lukec_outfit43_dmg" value="1.15"/>
+            <talentvalue level="1" name="lukec_outfit42_dmg" value="1.03"/>
+            <talentvalue level="9" name="lukec_outfit42_dmg" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%lukec_outfit43_dmg:s power $DMG">
+        <level count="9" description="%lukec_outfit42_dmg:s power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit43_dmg" scope_powers="true"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%lukec_outfit42_dmg" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit42" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="lukec_outfit43" skin="3" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="lukec_outfit42_dr" value="1"/>
-            <talentvalue level="9" name="lukec_outfit42_dr" value="9"/>
+            <talentvalue level="1" name="lukec_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="lukec_outfit43_dr" value="9"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit42_dr $DR">
+        <level count="9" description="+%lukec_outfit43_dr $DR">
             <powerup life="-1">
-                <affecter attribute="defense_rating" level="%lukec_outfit42_dr"/>
+                <affecter attribute="defense_rating" level="%lukec_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

@@ -103,7 +103,7 @@
             <require cat="level" level="%humant_p3_req" />
         </level>
     </talent>
-    <talent descname="Fireballs" description="Rapidly launch fireballs at enemies, doing $DMG_FIRE and keeping popped up enemies in the air longer.  $PT_TAP\n" descshort="Projectile" icon="3" icon_texture="textures/ui/humantorch_icons.png" name="humant_p4" power="power4">
+    <talent descname="Fireballs" description="Rapidly launch fireballs at enemies, doing $DMG_FIRE and keeping popped up enemies in the air longer.  $PT_TAP" descshort="Projectile" icon="3" icon_texture="textures/ui/humantorch_icons.png" name="humant_p4" power="power4">
         <talentvalues>
             <talentvalue level="1" name="humant_p4_req" value="17" />
             <talentvalue level="4" name="humant_p4_req" value="26" />
@@ -195,7 +195,7 @@
             <talentvalue level="14" name="humant_p6_pwr" value="152" />
             <talentvalue level="15" name="humant_p6_pwr" value="188" />
         </talentvalues>
-        <level description="%humant_p6_dmg burning $DMG_FIRE/sec\n%humant_p6_dmg2:p melee $DMG_FIRE\n%humant_p6_lif Seconds\n%humant_p6_pwr $EP">
+        <level description="%humant_p6_dmg burning $DMG_FIRE per second\n%humant_p6_dmg2:p melee $DMG_FIRE\n%humant_p6_lif seconds\n%humant_p6_pwr $EP">
             <tier cost="1" count="5" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -231,7 +231,7 @@
             <talentvalue level="10" name="humant_p7_pwr" value="152" />
             <talentvalue level="11" name="humant_p7_pwr" value="188" />
         </talentvalues>
-        <level description="%humant_p7_pct:p chance, %humant_p7_dmg $DMG_FIRE\n%humant_p7_def:s $DMG taken\n%humant_p7_lif Seconds\n%humant_p7_pwr $EP">
+        <level description="%humant_p7_pct:p chance, %humant_p7_dmg $DMG_FIRE\n%humant_p7_def:s $DMG taken\n%humant_p7_lif seconds\n%humant_p7_pwr $EP">
             <tier cost="1" count="1" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -272,13 +272,13 @@
             <talentvalue level="1" name="humant_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="humant_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%humant_outfit12_pct:p Critical chance">
+        <level count="9" description="+%humant_outfit12_pct:p critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%humant_outfit12_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit13_dr" value="1" />
             <talentvalue level="9" name="humant_outfit13_dr" value="9" />
@@ -294,13 +294,13 @@
             <talentvalue level="1" name="humant_outfit21_pct" value="0.04" />
             <talentvalue level="9" name="humant_outfit21_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%humant_outfit21_pct:p Added $DMG">
+        <level count="9" description="+%humant_outfit21_pct:p added $DMG">
             <powerup class="add_attack" damagepercent="%humant_outfit21_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_attack="projectile" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="humant_outfit22" skin="1" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="humant_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit22_pct" value="2" />
             <talentvalue level="9" name="humant_outfit22_pct" value="10" />
@@ -311,7 +311,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit23_dr" value="1" />
             <talentvalue level="9" name="humant_outfit23_dr" value="9" />
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="humant_outfit31" skin="2" type="passive">
+    <talent descname="$EP Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="humant_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit31_pct" value="1.01" />
             <talentvalue level="9" name="humant_outfit31_pct" value="1.05" />
@@ -346,7 +346,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit33_dr" value="1" />
             <talentvalue level="9" name="humant_outfit33_dr" value="9" />
@@ -366,7 +366,7 @@
             <talentvalue level="1" name="humant_outfit41_lif" value="5" />
             <talentvalue level="9" name="humant_outfit41_lif" value="5" />
         </talentvalues>
-        <level count="9" description="%humant_outfit41_pct:p Chance\n%humant_outfit41_dmg $DMG_FIRE\n%humant_outfit41_lif Secs">
+        <level count="9" description="%humant_outfit41_pct:p chance\n%humant_outfit41_dmg $DMG_FIRE\n%humant_outfit41_lif Secs">
             <powerup chance="%humant_outfit41_pct" class="add_harming" damage="%humant_outfit41_dmg" harming_powerup_tag="shared_burn" life="-1" time="%humant_outfit41_lif">
                 <affecter attribute="powerup_scope">
                     <scope scope_damage="dmg_punch" />
@@ -375,7 +375,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="humant_outfit42" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="humant_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit42_pct" value="1.05" />
             <talentvalue level="9" name="humant_outfit42_pct" value="1.25" />
@@ -386,7 +386,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="humant_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="humant_outfit43_dr" value="1" />
             <talentvalue level="9" name="humant_outfit43_dr" value="9" />

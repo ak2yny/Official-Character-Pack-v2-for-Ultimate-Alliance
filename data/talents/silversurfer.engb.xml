@@ -58,7 +58,7 @@
             <talentvalue level="14" name="silver_p2_pwr" value="25"/>
             <talentvalue level="15" name="silver_p2_pwr" value="31"/>
         </talentvalues>
-        <level description="%silver_p2_dmg $DMG_PHYSICAL\n%silver_p2_kb $KB\n%silver_p2_pwr $EP\n">
+        <level description="%silver_p2_dmg $DMG_PHYSICAL\n%silver_p2_kb $KB\n%silver_p2_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -218,7 +218,7 @@
             <talentvalue level="14" name="silver_p7_pwr" value="152"/>
             <talentvalue level="15" name="silver_p7_pwr" value="188"/>
         </talentvalues>
-        <level description="%silver_p7_lif2 Seconds\n%silver_p7_pwr $EP">
+        <level description="%silver_p7_lif2 seconds\n%silver_p7_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -244,7 +244,7 @@
             <require cat="level" level="%silver_p9_req"/>
         </level>
     </talent>
-    <talent descname="Energy Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="silver_outfit11" skin="0" type="passive">
+    <talent descname="$EP Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="silver_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit11_pct" value="1.01"/>
             <talentvalue level="9" name="silvr_outfit11_pct" value="1.05"/>
@@ -257,18 +257,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Cosmic Mastery" description="Increases power damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
+    <talent descname="Cosmic Mastery" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="silvr_outfit12_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%silvr_outfit12_pct:s Power $DMG">
+        <level count="9" description="%silvr_outfit12_pct:s power $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit12_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit13_dr" value="1"/>
             <talentvalue level="9" name="silvr_outfit13_dr" value="9"/>
@@ -279,7 +279,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="silver_outfit21" skin="1" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="silver_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit21_pct" value="4"/>
             <talentvalue level="9" name="silvr_outfit21_pct" value="12"/>
@@ -290,7 +290,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="silver_outfit22" skin="1" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="silver_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit22_pct" value="1.04"/>
             <talentvalue level="9" name="silvr_outfit22_pct" value="1.2"/>
@@ -301,7 +301,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit23_dr" value="1"/>
             <talentvalue level="9" name="silvr_outfit23_dr" value="9"/>
@@ -312,29 +312,29 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power $DMG" description="Increases power damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="silvr_outfit31_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%silvr_outfit31_pct:s Power $DMG">
+        <level count="9" description="%silvr_outfit31_pct:s power $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit31_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Per Knockout" description="Regain health per knockout." icon="14" icon_texture="textures/ui/talent_icons.png" name="silver_outfit32" skin="2" type="passive">
+    <talent descname="$HP Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="silver_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit32_pct" value="6"/>
             <talentvalue level="9" name="silvr_outfit32_pct" value="30"/>
         </talentvalues>
-        <level count="9" description="%silvr_outfit32_pct $HP per knockout">
+        <level count="9" description="%silvr_outfit32_pct $HP per kill">
             <powerup life="-1">
                 <affecter attribute="health_per_kill" level="%silvr_outfit32_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit33_dr" value="1"/>
             <talentvalue level="9" name="silvr_outfit33_dr" value="9"/>
@@ -345,29 +345,29 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit41_pct" value="1.04"/>
             <talentvalue level="9" name="silvr_outfit41_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%silvr_outfit41_pct:s Melee $DMG">
+        <level count="9" description="%silvr_outfit41_pct:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%silvr_outfit41_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Critical Chance" description="Increase chance of Critical hits." icon="8" icon_texture="textures/ui/talent_icons.png" name="silver_outfit42" skin="3" type="passive">
+    <talent descname="Critical Chance" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="silver_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit42_cri" value="0.02"/>
             <talentvalue level="9" name="silvr_outfit42_cri" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%silvr_outfit42_cri:p Chance">
+        <level count="9" description="+%silvr_outfit42_cri:p critical chance">
             <powerup life="-1">
                 <affecter attribute="critical" level="%silvr_outfit42_cri"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="silver_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit43_dr" value="1"/>
             <talentvalue level="9" name="silvr_outfit43_dr" value="9"/>

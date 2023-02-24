@@ -242,7 +242,7 @@
             <talentvalue level="14" name="gam_form_pwr" value="152" />
             <talentvalue level="15" name="gam_form_pwr" value="188" />
         </talentvalues>
-        <level description="+%gam_form_def_boost $DR\n%gam_form_move_scale:s Speed\n%gam_form_time Seconds\n%gam_form_pwr $EP">
+        <level description="+%gam_form_def_boost $DR\n%gam_form_move_scale:s speed\n%gam_form_time seconds\n%gam_form_pwr $EP">
             <tier cost="1" count="5" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -274,7 +274,7 @@
             <talentvalue level="10" name="gam_fury_pwr" value="152" />
             <talentvalue level="11" name="gam_fury_pwr" value="188" />
         </talentvalues>
-        <level description="+%gam_fury_dam_boost:p Melee $DMG as $DMG_ENERGY\n%gam_fury_time Seconds\n%gam_fury_pwr $EP">
+        <level description="+%gam_fury_dam_boost:p melee $DMG as $DMG_ENERGY\n%gam_fury_time seconds\n%gam_fury_pwr $EP">
             <tier cost="1" count="1" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -283,7 +283,7 @@
             <require cat="level" level="%gam_fury_req" />
         </level>
     </talent>
-    <talent descname="52 Pickup" description="Throws cards into the air which rain down $DMG_ENERGY. Also increases Shield Credit dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/gambit_icons.png" name="gam_52_pickup" power="team_xtreme" type="team_xtreme">
+    <talent descname="52 Pickup" description="Throws cards into the air which rain down $DMG_ENERGY. Also increases S.H.I.E.L.D. credits dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/gambit_icons.png" name="gam_52_pickup" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="gam_pickup_req" value="10" />
             <talentvalue level="8" name="gam_pickup_req" value="45" />
@@ -292,24 +292,24 @@
             <talentvalue level="1" name="gam_pickup_money" value="4" />
             <talentvalue level="8" name="gam_pickup_money" value="6" />
         </talentvalues>
-        <level description="%gam_pickup_damage $DMG_ENERGY\n%gam_pickup_money:s Shield Credit from enemies">
+        <level description="%gam_pickup_damage $DMG_ENERGY\n%gam_pickup_money:s S.H.I.E.L.D. credits">
             <tier cost="2" count="1" />
             <tier cost="0" count="7" />
             <require cat="level" level="%gam_pickup_req" />
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases power damage." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit11_pct" value="1.03" />
             <talentvalue level="9" name="gam_outfit11_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%gam_outfit11_pct:s Power $DMG">
+        <level count="9" description="%gam_outfit11_pct:s power $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%gam_outfit11_pct" scope_powers="true" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="gam_outfit12" skin="0" type="passive">
+    <talent descname="$EP Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="gam_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit12_pct" value="1.01" />
             <talentvalue level="9" name="gam_outfit12_pct" value="1.05" />
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit13_dr" value="1" />
             <talentvalue level="9" name="gam_outfit13_dr" value="9" />
@@ -333,12 +333,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Increased Reflexes" description="Increases chance to dodge attacks." icon="11" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit21" skin="1" type="passive">
+    <talent descname="Increased Reflexes" description="Increases the chance to dodge attacks." icon="11" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit21_pct" value="0.03" />
             <talentvalue level="9" name="gam_outfit21_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit21_pct:p Dodge chance">
+        <level count="9" description="+%gam_outfit21_pct:p dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%gam_outfit21_pct" />
             </powerup>
@@ -349,7 +349,7 @@
             <talentvalue level="1" name="gam_outfit22_pct" value="0.04" />
             <talentvalue level="9" name="gam_outfit22_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit22_pct:p Added $DMG_ENERGY">
+        <level count="9" description="+%gam_outfit22_pct:p added $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%gam_outfit22_pct" damagetype="dmg_energy" life="-1">
                 <special_fx effect="char/gambit/special_trail" how_used="custom" />
                 <affecter attribute="powerup_scope">
@@ -358,7 +358,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit23_dr" value="1" />
             <talentvalue level="9" name="gam_outfit23_dr" value="9" />
@@ -369,7 +369,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="gam_outfit31" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="gam_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit31_dmg" value="1.04" />
             <talentvalue level="9" name="gam_outfit31_dmg" value="1.2" />
@@ -380,18 +380,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="gam_outfit32" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="gam_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit32_hlt" value="1.05" />
             <talentvalue level="9" name="gam_outfit32_hlt" value="1.25" />
         </talentvalues>
-        <level count="9" description="%gam_outfit32_hlt:s Maximum $HP">
+        <level count="9" description="%gam_outfit32_hlt:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%gam_outfit32_hlt" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit33_dr" value="1" />
             <talentvalue level="9" name="gam_outfit33_dr" value="9" />
@@ -407,13 +407,13 @@
             <talentvalue level="1" name="gam_outfit41_pct" value="0.02" />
             <talentvalue level="9" name="gam_outfit41_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit41_pct:p Critical chance">
+        <level count="9" description="+%gam_outfit41_pct:p critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%gam_outfit41_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Ace of Spades" description="Boosts body, focus, and strike stats." icon="3" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit42" skin="3" type="passive">
+    <talent descname="Ace of Spades" description="Boosts Body, Focus, and Strike stats." icon="3" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit42_pct" value="2" />
             <talentvalue level="9" name="gam_outfit42_pct" value="10" />
@@ -424,7 +424,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="gam_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit43_dr" value="1" />
             <talentvalue level="9" name="gam_outfit43_dr" value="9" />

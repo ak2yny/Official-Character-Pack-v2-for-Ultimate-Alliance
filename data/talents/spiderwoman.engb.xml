@@ -257,13 +257,13 @@
             <talentvalue level="1" name="spdwm_outfit11_pct" value="0.02"/>
             <talentvalue level="9" name="spdwm_outfit11_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%spdwm_outfit11_pct:p resist all">
+        <level count="9" description="+%spdwm_outfit11_pct:p all resistances">
             <powerup life="-1">
                 <affecter affect_type="sum" attribute="resist_all" level="%spdwm_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Bio Energy Mastery" description="Increases $DMG_ENERGY done by all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit12" skin="0" type="passive">
+    <talent descname="Bio Energy Mastery" description="Increases the amount of $DMG_ENERGY done with all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="spdwm_outfit12_pct" value="1.15"/>
@@ -274,7 +274,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit13_dr" value="1"/>
             <talentvalue level="9" name="spdwm_outfit13_dr" value="9"/>
@@ -285,18 +285,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit21" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="spdwm_outfit21_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%spdwm_outfit21_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%spdwm_outfit21_pct" scope_non_powers="true"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%spdwm_outfit21_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge Melee Attacks" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit22" skin="1" type="passive">
+    <talent descname="Dodge Melee" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit22_pct" value="0.03"/>
             <talentvalue level="9" name="spdwm_outfit22_pct" value="0.15"/>
@@ -310,7 +310,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit23_dr" value="1"/>
             <talentvalue level="9" name="spdwm_outfit23_dr" value="9"/>
@@ -321,7 +321,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Rank Increase" description="Adds a chance to temporarily increase the skill level of all powers by 1 when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit31" skin="2" type="passive">
+    <talent descname="Skill Boost" description="Adds a chance to temporarily increase the skill level of all powers by 1 when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit31_chan" value="0.05"/>
             <talentvalue level="9" name="spdwm_outfit31_chan" value="0.25"/>
@@ -330,7 +330,7 @@
             <powerup chance="%spdwm_outfit31_chan" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit32" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit32_scl" value="1.05"/>
             <talentvalue level="9" name="spdwm_outfit32_scl" value="1.25"/>
@@ -341,7 +341,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit33_dr" value="1"/>
             <talentvalue level="9" name="spdwm_outfit33_dr" value="9"/>
@@ -352,7 +352,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Bio Energy Mastery" description="Increases $DMG_ENERGY done by all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit41" skin="3" type="passive">
+    <talent descname="Bio Energy Mastery" description="Increases the amount of $DMG_ENERGY done with all attacks." icon="8" icon_texture="textures/ui/spiderwoman_icons.png" name="spdwm_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="spdwm_outfit41_pct" value="1.15"/>
@@ -363,7 +363,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit42" skin="3" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit42_pct" value="1.02"/>
             <talentvalue level="9" name="spdwm_outfit42_pct" value="1.1"/>
@@ -374,7 +374,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spdwm_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spdwm_outfit43_dr" value="1"/>
             <talentvalue level="9" name="spdwm_outfit43_dr" value="9"/>

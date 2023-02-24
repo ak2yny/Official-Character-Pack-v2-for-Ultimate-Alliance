@@ -274,7 +274,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit12" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit12" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="sabre_outfit12_pct" value="1.2"/>
@@ -285,7 +285,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit13" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit13" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit13_dr" value="1"/>
             <talentvalue level="9" name="sabre_outfit13_dr" value="9"/>
@@ -305,7 +305,7 @@
             <powerup chance="%sabre_outfit21_pct" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit22" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit22" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit22_pct" value="1.04"/>
             <talentvalue level="9" name="sabre_outfit22_pct" value="1.2"/>
@@ -316,7 +316,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit23" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit23" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit23_dr" value="1"/>
             <talentvalue level="9" name="sabre_outfit23_dr" value="9"/>
@@ -327,7 +327,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Claw Damage" description="Increases $DMG done with claws." icon="8" icon_texture="textures/ui/sabre_icons.png" name="sabre_outfit31" skin="2" type="passive">
+    <talent descname="Claw Damage" description="Increases the amount of $DMG done with claws." icon="8" icon_texture="textures/ui/sabre_icons.png" name="sabre_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="sabre_outfit31_pct" value="1.15"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit32" skin="2" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit32_pct" value="1.02"/>
             <talentvalue level="9" name="sabre_outfit32_pct" value="1.1"/>
@@ -349,7 +349,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit33_dr" value="1"/>
             <talentvalue level="9" name="sabre_outfit33_dr" value="9"/>
@@ -360,7 +360,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit41" skin="3" type="passive">
+    <talent descname="Dodge" description="Increases the chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit41_pct" value="0.03"/>
             <talentvalue level="9" name="sabre_outfit41_pct" value="0.15"/>
@@ -371,7 +371,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Claw Damage" description="Increases $DMG done with claws." icon="8" icon_texture="textures/ui/sabre_icons.png" name="sabre_outfit42" skin="3" type="passive">
+    <talent descname="Claw Damage" description="Increases the amount of $DMG done with claws." icon="8" icon_texture="textures/ui/sabre_icons.png" name="sabre_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit42_pct" value="1.03"/>
             <talentvalue level="9" name="sabre_outfit42_pct" value="1.15"/>
@@ -382,7 +382,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sabre_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sabre_outfit43_dr" value="1"/>
             <talentvalue level="9" name="sabre_outfit43_dr" value="9"/>

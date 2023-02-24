@@ -71,7 +71,7 @@
             <talentvalue level="12" name="inviswm_p2_pwr" value="22" />
             <talentvalue level="13" name="inviswm_p2_pwr" value="28" />
         </talentvalues>
-        <level description="%inviswm_p2_dmg $DMG_PHYSICAL\n%inviswm_p2_pwr $EP/s">
+        <level description="%inviswm_p2_dmg $DMG_PHYSICAL\n%inviswm_p2_pwr $EP per second">
             <tier cost="1" count="3" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -100,7 +100,7 @@
             <talentvalue level="1" name="inviswm_p3_rng" value="50" value_charged="150" />
             <talentvalue level="1" name="inviswm_p3_fxscale" value="0.33" value_charged="1" />
         </talentvalues>
-        <level description="%inviswm_p3_dmg $DMG_PHYSICAL\n%inviswm_p3_pwr $EP/s">
+        <level description="%inviswm_p3_dmg $DMG_PHYSICAL\n%inviswm_p3_pwr $EP per second">
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
             <tier cost="3" count="4" difficulty="hard" />
@@ -192,7 +192,7 @@
             <talentvalue level="1" name="invwm_p5_expl_kb" value="120" />
             <talentvalue level="10" name="invwm_p5_expl_kb" value="245" />
         </talentvalues>
-        <level description="%invwm_p5_crush_dmg $DMG_CRUSH/s\n%invwm_p5_expl_dmg $DMG_PHYSICAL\n%inviswm_p5_life seconds\n%inviswm_p5_pwr $EP">
+        <level description="%invwm_p5_crush_dmg $DMG_CRUSH per second\n%invwm_p5_expl_dmg $DMG_PHYSICAL\n%inviswm_p5_life seconds\n%inviswm_p5_pwr $EP">
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
             <tier cost="3" count="4" difficulty="hard" />
@@ -292,13 +292,13 @@
             <talentvalue level="1" name="inviswm_p8_life" value="20" />
             <talentvalue level="8" name="inviswm_p8_life" value="55" />
         </talentvalues>
-        <level description="%inviswm_p8_dmg $DMG_PHYSICAL\n%inviswm_p8_life Seconds">
+        <level description="%inviswm_p8_dmg $DMG_PHYSICAL\n%inviswm_p8_life seconds">
             <tier cost="2" count="1" />
             <tier cost="0" count="7" />
             <require cat="level" level="%inviswm_p8_req" />
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="invis_outfit11" skin="0" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="invis_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit11_pct" value="1.04" />
             <talentvalue level="9" name="invis_outfit11_pct" value="1.2" />
@@ -314,13 +314,13 @@
             <talentvalue level="1" name="invis_outfit12_pct" value="0.02" />
             <talentvalue level="9" name="invis_outfit12_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit12_pct:p Critical chance">
+        <level count="9" description="+%invis_outfit12_pct:p critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%invis_outfit12_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit13_dr" value="1" />
             <talentvalue level="9" name="invis_outfit13_dr" value="9" />
@@ -331,18 +331,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Concussive Mastery" description="Increases the damage of all concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit21" skin="1" type="passive">
+    <talent descname="Concussive Mastery" description="Increases the amount of $DMG done with concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit21_pct" value="1.03" />
             <talentvalue level="9" name="invis_outfit21_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%invis_outfit21_pct:s Concussive $DMG">
+        <level count="9" description="%invis_outfit21_pct:s concussive $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%invis_outfit21_pct" scope_powers="true" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Unstoppable Force" description="Reflects damage back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="invis_outfit22" skin="1" type="passive">
+    <talent descname="Unstoppable Force" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="invis_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit22_pct" value="0.25" />
             <talentvalue level="9" name="invis_outfit22_pct" value="1.25" />
@@ -356,7 +356,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit23_dr" value="1" />
             <talentvalue level="9" name="invis_outfit23_dr" value="9" />
@@ -367,12 +367,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Concussive Mastery" description="Increases the damage of all concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit31" skin="2" type="passive">
+    <talent descname="Concussive Mastery" description="Increases the amount of $DMG done with concussive force attacks." icon="8" icon_texture="textures/ui/invisiblewoman_icons.png" name="invis_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="invis_outfit31_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%invis_outfit31_pct:s Concussive $DMG">
+        <level count="9" description="%invis_outfit31_pct:s concussive $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%invis_outfit31_pct" scope_powers="true" />
             </powerup>
@@ -385,13 +385,13 @@
             <talentvalue level="1" name="invis_outfit32_shw" value="2" />
             <talentvalue level="9" name="invis_outfit32_shw" value="10" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit32_shw Resist all">
+        <level count="9" description="+%invis_outfit32_shw all resistances">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%invis_outfit32_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit33_dr" value="1" />
             <talentvalue level="9" name="invis_outfit33_dr" value="9" />
@@ -402,18 +402,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Elusiveness" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="invis_outfit41" skin="3" type="passive">
+    <talent descname="Elusiveness" description="Increases the chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="invis_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit41_pct" value="0.03" />
             <talentvalue level="9" name="invis_outfit41_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%invis_outfit41_pct:p Dodge chance">
+        <level count="9" description="+%invis_outfit41_pct:p dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%invis_outfit41_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="invis_outfit42" skin="3" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="invis_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit42_pct" value="2" />
             <talentvalue level="9" name="invis_outfit42_pct" value="10" />
@@ -424,7 +424,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit43_dr" value="1" />
             <talentvalue level="9" name="invis_outfit43_dr" value="9" />

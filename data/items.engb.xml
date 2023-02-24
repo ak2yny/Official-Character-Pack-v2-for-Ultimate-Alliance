@@ -1,1332 +1,1332 @@
 <inventory>
     <AffecterCostList>
-        <affecter_entry affecter="damage" max_cost="25000" max_scale="2.5" max_value="20" min_cost="1250" min_scale="1.1" min_value="1" />
-        <affecter_entry affecter="special" max_value="20" min_value="1" />
-        <affecter_entry affecter="def_damage" max_scale="1.75" max_value="25" min_value="1" />
-        <affecter_entry affecter="resist_physical" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01" />
-        <affecter_entry affecter="resist_mental" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01" />
-        <affecter_entry affecter="resist_energy" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01" />
-        <affecter_entry affecter="resist_radiation" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01" />
-        <affecter_entry affecter="resist_elemental" max_cost="50000" max_scale="1.75" max_value="0.4" min_cost="5000" min_value="0.01" />
-        <affecter_entry affecter="resist_all" max_cost="150000" max_scale="1.75" max_value="0.25" min_cost="25000" min_value="0.01" />
-        <affecter_entry affecter="health_per_kill" max_value="25" min_value="1" />
-        <affecter_entry affecter="energy_per_kill" max_value="50" min_value="1" />
-        <affecter_entry affecter="maxhealth" max_value="100" min_value="2" />
-        <affecter_entry affecter="strength" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1" />
-        <affecter_entry affecter="body" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1" />
-        <affecter_entry affecter="mind" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1" />
-        <affecter_entry affecter="defense_rating" max_cost="10000" max_value="25" min_cost="500" min_value="1" />
-        <affecter_entry affecter="maxenergy" max_value="100" min_value="2" />
-        <affecter_entry affecter="talent" max_value="3" min_value="1" />
+        <affecter_entry affecter="damage" max_cost="25000" max_scale="2.5" max_value="20" min_cost="1250" min_scale="1.1" min_value="1"/>
+        <affecter_entry affecter="special" max_value="20" min_value="1"/>
+        <affecter_entry affecter="def_damage" max_scale="1.75" max_value="25" min_value="1"/>
+        <affecter_entry affecter="resist_physical" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01"/>
+        <affecter_entry affecter="resist_mental" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01"/>
+        <affecter_entry affecter="resist_energy" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01"/>
+        <affecter_entry affecter="resist_radiation" max_cost="10000" max_scale="1.75" max_value="0.4" min_cost="1000" min_value="0.01"/>
+        <affecter_entry affecter="resist_elemental" max_cost="50000" max_scale="1.75" max_value="0.4" min_cost="5000" min_value="0.01"/>
+        <affecter_entry affecter="resist_all" max_cost="150000" max_scale="1.75" max_value="0.25" min_cost="25000" min_value="0.01"/>
+        <affecter_entry affecter="health_per_kill" max_value="25" min_value="1"/>
+        <affecter_entry affecter="energy_per_kill" max_value="50" min_value="1"/>
+        <affecter_entry affecter="maxhealth" max_value="100" min_value="2"/>
+        <affecter_entry affecter="strength" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1"/>
+        <affecter_entry affecter="body" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1"/>
+        <affecter_entry affecter="mind" max_cost="10000" max_scale="1.75" max_value="27" min_cost="1000" min_scale="1.1" min_value="1"/>
+        <affecter_entry affecter="defense_rating" max_cost="10000" max_value="25" min_cost="500" min_value="1"/>
+        <affecter_entry affecter="maxenergy" max_value="100" min_value="2"/>
+        <affecter_entry affecter="talent" max_value="3" min_value="1"/>
     </AffecterCostList>
-    <prefixes />
-    <suffixes />
+    <prefixes/>
+    <suffixes/>
     <ItemNames>
-        <rare name="Inhuman" />
-        <rare name="Raven" />
-        <rare name="Shi'ar" />
-        <rare name="Chaos" />
-        <rare name="Death" />
-        <rare name="Marvel" />
-        <rare name="Excelsior" />
-        <rare name="Legion" />
-        <rare name="Legacy" />
-        <rare name="Traskium" />
-        <rare name="Z'nox" />
-        <rare name="Dimensional" />
-        <rare name="Wundagore" />
-        <rare name="Kree" />
-        <rare name="Alpha" />
-        <rare name="Excalibur" />
-        <rare name="Hellfire" />
-        <rare name="Millennium" />
-        <rare name="Askani" />
-        <rare name="Sidrian" />
-        <rare name="Sinister" />
-        <rare name="Genesis" />
-        <rare name="Horsemen" />
-        <rare name="Legend" />
-        <rare name="Eternal" />
-        <rare name="Ageless" />
-        <rare name="Origin" />
-        <rare name="Omega" />
+        <rare name="Inhuman"/>
+        <rare name="Raven"/>
+        <rare name="Shi'ar"/>
+        <rare name="Chaos"/>
+        <rare name="Death"/>
+        <rare name="Marvel"/>
+        <rare name="Excelsior"/>
+        <rare name="Legion"/>
+        <rare name="Legacy"/>
+        <rare name="Traskium"/>
+        <rare name="Z'nox"/>
+        <rare name="Dimensional"/>
+        <rare name="Wundagore"/>
+        <rare name="Kree"/>
+        <rare name="Alpha"/>
+        <rare name="Excalibur"/>
+        <rare name="Hellfire"/>
+        <rare name="Millennium"/>
+        <rare name="Askani"/>
+        <rare name="Sidrian"/>
+        <rare name="Sinister"/>
+        <rare name="Genesis"/>
+        <rare name="Horsemen"/>
+        <rare name="Legend"/>
+        <rare name="Eternal"/>
+        <rare name="Ageless"/>
+        <rare name="Origin"/>
+        <rare name="Omega"/>
     </ItemNames>
     <ClassNames>
-        <RareClass attribute="defense_rating" class="belt" name="Buckle" />
-        <RareClass attribute="defense_rating" class="belt" name="Cord" />
-        <RareClass attribute="defense_rating" class="belt" name="Harness" />
-        <RareClass attribute="defense_rating" class="belt" name="Belt" />
-        <RareClass attribute="defense_rating" class="belt" name="Coil" />
-        <RareClass attribute="defense_rating" class="belt" name="Nanobelt" />
-        <RareClass attribute="defense_rating" class="belt" name="War Belt" />
-        <RareClass attribute="damage" class="gloves" name="Gauntlets" />
-        <RareClass attribute="damage" class="gloves" name="Gloves" />
-        <RareClass attribute="damage" class="gloves" name="Bracers" />
-        <RareClass attribute="damage" class="gloves" name="Bands" />
-        <RareClass attribute="damage" class="gloves" name="Mitts" />
-        <RareClass attribute="damage" class="gloves" name="Fists" />
-        <RareClass attribute="damage" class="gloves" name="Wristbands" />
-        <RareClass attribute="damage" class="gloves" name="Sheaths" />
-        <RareClass attribute="defense_rating" class="armor" name="Cloak" />
-        <RareClass attribute="defense_rating" class="armor" name="Coat" />
-        <RareClass attribute="defense_rating" class="armor" name="Mantle" />
-        <RareClass attribute="defense_rating" class="armor" name="Armor" />
-        <RareClass attribute="defense_rating" class="armor" name="Suit" />
-        <RareClass attribute="defense_rating" class="armor" name="Gear" />
-        <RareClass attribute="defense_rating" class="armor" name="Nanofiber Plate" />
-        <RareClass attribute="defense_rating" class="armor" name="Uniform" />
+        <RareClass attribute="defense_rating" class="belt" name="Buckle"/>
+        <RareClass attribute="defense_rating" class="belt" name="Cord"/>
+        <RareClass attribute="defense_rating" class="belt" name="Harness"/>
+        <RareClass attribute="defense_rating" class="belt" name="Belt"/>
+        <RareClass attribute="defense_rating" class="belt" name="Coil"/>
+        <RareClass attribute="defense_rating" class="belt" name="Nanobelt"/>
+        <RareClass attribute="defense_rating" class="belt" name="War Belt"/>
+        <RareClass attribute="damage" class="gloves" name="Gauntlets"/>
+        <RareClass attribute="damage" class="gloves" name="Gloves"/>
+        <RareClass attribute="damage" class="gloves" name="Bracers"/>
+        <RareClass attribute="damage" class="gloves" name="Bands"/>
+        <RareClass attribute="damage" class="gloves" name="Mitts"/>
+        <RareClass attribute="damage" class="gloves" name="Fists"/>
+        <RareClass attribute="damage" class="gloves" name="Wristbands"/>
+        <RareClass attribute="damage" class="gloves" name="Sheaths"/>
+        <RareClass attribute="defense_rating" class="armor" name="Cloak"/>
+        <RareClass attribute="defense_rating" class="armor" name="Coat"/>
+        <RareClass attribute="defense_rating" class="armor" name="Mantle"/>
+        <RareClass attribute="defense_rating" class="armor" name="Armor"/>
+        <RareClass attribute="defense_rating" class="armor" name="Suit"/>
+        <RareClass attribute="defense_rating" class="armor" name="Gear"/>
+        <RareClass attribute="defense_rating" class="armor" name="Nanofiber Plate"/>
+        <RareClass attribute="defense_rating" class="armor" name="Uniform"/>
     </ClassNames>
-    <item description="Used for buying stuff." displayname="S.H.I.E.L.D. Credits" enemy_level="0" model="pickups/tech_01" name="MONEY1" type="money" />
-    <item description="Opens doors" displayname="Iron Key" name="KEY1" type="item" />
-    <item description="Opens doors" displayname="Silver Key" name="KEY2" type="item" />
-    <item description="Opens doors" displayname="Gold Key" name="KEY3" type="item" />
-    <item description="Opens doors" displayname="Proximity Keycard" name="KEYCARD1" type="item" />
-    <item description="Opens doors" displayname="ID Card" name="KEYCARD2" type="item" />
-    <item description="Opens doors" displayname="Access Card" name="KEYCARD3" type="item" />
-    <item activateonpickup="true" cost="1500" description="Collect to use XTreme Powers" displayname="XTreme Power Core" enemy_level="0" model="pickups/xtreme_pip" name="XTREME_PIP" onactivate="addXtremePip()" type="item" />
-    <item cost="0" description="Recovers 25% max health" displayname="Health Pack" enemy_level="0" name="HEALTH_ITEM" type="potion" />
-    <item cost="0" description="Recovers 25% max energy" displayname="Energy Pack" enemy_level="0" name="ENERGY_ITEM" type="potion" />
+    <item description="Used for buying stuff." displayname="S.H.I.E.L.D. Credits" enemy_level="0" model="pickups/tech_01" name="MONEY1" type="money"/>
+    <item description="Opens doors" displayname="Iron Key" name="KEY1" type="item"/>
+    <item description="Opens doors" displayname="Silver Key" name="KEY2" type="item"/>
+    <item description="Opens doors" displayname="Gold Key" name="KEY3" type="item"/>
+    <item description="Opens doors" displayname="Proximity Keycard" name="KEYCARD1" type="item"/>
+    <item description="Opens doors" displayname="ID Card" name="KEYCARD2" type="item"/>
+    <item description="Opens doors" displayname="Access Card" name="KEYCARD3" type="item"/>
+    <item activateonpickup="true" cost="1500" description="Collect to use XTreme Powers" displayname="XTreme Power Core" enemy_level="0" model="pickups/xtreme_pip" name="XTREME_PIP" onactivate="addXtremePip()" type="item"/>
+    <item cost="0" description="Recovers 25% max health" displayname="Health Pack" enemy_level="0" name="HEALTH_ITEM" type="potion"/>
+    <item cost="0" description="Recovers 25% max energy" displayname="Energy Pack" enemy_level="0" name="ENERGY_ITEM" type="potion"/>
     <item class="belt" cost="1000" displayname="Waistband" enemy_level="1" model="pickups/equip_belt_a" name="BELT_STD_LGT" quality="standard" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="1 1" />
+                <affecter attribute="defense_rating" level="1 1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="2000" displayname="Waistband" enemy_level="10" model="pickups/equip_belt_a" name="BELT_STD_MED" quality="standard" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="2 2" />
+                <affecter attribute="defense_rating" level="2 2"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="3000" displayname="Waistband" enemy_level="15" model="pickups/equip_belt_a" name="BELT_STD_HVY" quality="standard" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="3 3" />
+                <affecter attribute="defense_rating" level="3 3"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="5000" displayname="Waistband" enemy_level="20" model="pickups/equip_belt_a" name="BELT_ADV_LGT" quality="advanced" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="4 5" />
+                <affecter attribute="defense_rating" level="4 5"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="7000" displayname="Waistband" enemy_level="30" model="pickups/equip_belt_a" name="BELT_ADV_MED" quality="advanced" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="6 7" />
+                <affecter attribute="defense_rating" level="6 7"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="9000" displayname="Waistband" enemy_level="40" model="pickups/equip_belt_a" name="BELT_ADV_HVY" quality="advanced" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="8 9" />
+                <affecter attribute="defense_rating" level="8 9"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="12000" displayname="Waistband" enemy_level="50" model="pickups/equip_belt_a" name="BELT_LGD_LGT" quality="legend" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="10 11" />
+                <affecter attribute="defense_rating" level="10 11"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="15000" displayname="Waistband" enemy_level="60" model="pickups/equip_belt_a" name="BELT_LGD_MED" quality="legend" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="12 13" />
+                <affecter attribute="defense_rating" level="12 13"/>
             </powerup>
         </enhancement>
     </item>
     <item class="belt" cost="18000" displayname="Waistband" enemy_level="70" model="pickups/equip_belt_a" name="BELT_LGD_HVY" quality="legend" type="equipment">
         <enhancement description="^%d $DR">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="defense_rating" level="14 15" />
+                <affecter attribute="defense_rating" level="14 15"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="1000" displayname="Bands" enemy_level="1" model="pickups/equip_belt_a" name="GLOVES_STD_LGT" quality="standard" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="1 1" />
+                <affecter attribute="damage" level="1 1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="2000" displayname="Bands" enemy_level="10" model="pickups/equip_belt_a" name="GLOVES_STD_MED" quality="standard" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="2 2" />
+                <affecter attribute="damage" level="2 2"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="3000" displayname="Bands" enemy_level="15" model="pickups/equip_belt_a" name="GLOVES_STD_HVY" quality="standard" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="3 3" />
+                <affecter attribute="damage" level="3 3"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="5000" displayname="Bands" enemy_level="20" model="pickups/equip_belt_a" name="GLOVES_ADV_LGT" quality="advanced" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="4 5" />
+                <affecter attribute="damage" level="4 5"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="7000" displayname="Bands" enemy_level="30" model="pickups/equip_belt_a" name="GLOVES_ADV_MED" quality="advanced" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="6 7" />
+                <affecter attribute="damage" level="6 7"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="9000" displayname="Bands" enemy_level="40" model="pickups/equip_belt_a" name="GLOVES_ADV_HVY" quality="advanced" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="8 9" />
+                <affecter attribute="damage" level="8 9"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="12000" displayname="Bands" enemy_level="50" model="pickups/equip_belt_a" name="GLOVES_LGD_LGT" quality="legend" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="10 11" />
+                <affecter attribute="damage" level="10 11"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="15000" displayname="Bands" enemy_level="60" model="pickups/equip_belt_a" name="GLOVES_LGD_MED" quality="legend" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="12 13" />
+                <affecter attribute="damage" level="12 13"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="18000" displayname="Bands" enemy_level="70" model="pickups/equip_belt_a" name="GLOVES_LGD_HVY" quality="legend" type="equipment">
         <enhancement description="+^%d Damage">
             <powerup life="-1" std_enhancement="true">
-                <affecter attribute="damage" level="14 15" />
+                <affecter attribute="damage" level="14 15"/>
             </powerup>
         </enhancement>
     </item>
     <tr_item displayname="Black Panther's">
-        <require cat="character" item="BlackPanther" />
+        <require cat="character" item="BlackPanther"/>
         <enhancement description="+^%d to Panther Claw" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="panther_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="panther_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Black Panther's">
-        <require cat="character" item="BlackPanther" />
+        <require cat="character" item="BlackPanther"/>
         <enhancement description="+^%d to Energy Daggers" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="panther_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="panther_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Black Panther's">
-        <require cat="character" item="BlackPanther" />
+        <require cat="character" item="BlackPanther"/>
         <enhancement description="+^%d to Razor Cyclone" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="panther_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="panther_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Black Panther's">
-        <require cat="character" item="BlackPanther" />
+        <require cat="character" item="BlackPanther"/>
         <enhancement description="+^%d to Crippling Blow" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="panther_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="panther_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Black Panther's">
-        <require cat="character" item="BlackPanther" />
+        <require cat="character" item="BlackPanther"/>
         <enhancement description="+^%d to Pounce" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="panther_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="panther_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Blade's">
-        <require cat="character" item="Blade" />
+        <require cat="character" item="Blade"/>
         <enhancement description="+^%d to Slayer Slash" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="blade_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="blade_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Blade's">
-        <require cat="character" item="Blade" />
+        <require cat="character" item="Blade"/>
         <enhancement description="+^%d to Gun Blast" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="blade_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="blade_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Blade's">
-        <require cat="character" item="Blade" />
+        <require cat="character" item="Blade"/>
         <enhancement description="+^%d to Glaive Strike" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="blade_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="blade_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Blade's">
-        <require cat="character" item="Blade" />
+        <require cat="character" item="Blade"/>
         <enhancement description="+^%d to Circle of Death" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="blade_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="blade_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Blade's">
-        <require cat="character" item="Blade" />
+        <require cat="character" item="Blade"/>
         <enhancement description="+^%d to Spike of Destruction" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="blade_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="blade_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain America's">
-        <require cat="character" item="CaptainAmerica" />
+        <require cat="character" item="CaptainAmerica"/>
         <enhancement description="+^%d to Shield Throw" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captam_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="captam_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain America's">
-        <require cat="character" item="CaptainAmerica" />
+        <require cat="character" item="CaptainAmerica"/>
         <enhancement description="+^%d to Shield Bash" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captam_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="captam_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain America's">
-        <require cat="character" item="CaptainAmerica" />
+        <require cat="character" item="CaptainAmerica"/>
         <enhancement description="+^%d to Energy Shield" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captam_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="captam_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain America's">
-        <require cat="character" item="CaptainAmerica" />
+        <require cat="character" item="CaptainAmerica"/>
         <enhancement description="+^%d to Shield Charge" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captam_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="captam_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain Marvel's">
-        <require cat="character" item="CaptainMarvel" />
+        <require cat="character" item="CaptainMarvel"/>
         <enhancement description="+^%d to Nebula Beam" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captma_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="captma_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain Marvel's">
-        <require cat="character" item="CaptainMarvel" />
+        <require cat="character" item="CaptainMarvel"/>
         <enhancement description="+^%d to Negablast" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captma_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="captma_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain Marvel's">
-        <require cat="character" item="CaptainMarvel" />
+        <require cat="character" item="CaptainMarvel"/>
         <enhancement description="+^%d to Star Beam" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captma_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="captma_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain Marvel's">
-        <require cat="character" item="CaptainMarvel" />
+        <require cat="character" item="CaptainMarvel"/>
         <enhancement description="+^%d to Shooting Stars" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captma_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="captma_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Captain Marvel's">
-        <require cat="character" item="CaptainMarvel" />
+        <require cat="character" item="CaptainMarvel"/>
         <enhancement description="+^%d to Star Fall" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="captma_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="captma_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Daredevil's">
-        <require cat="character" item="Daredevil" />
+        <require cat="character" item="Daredevil"/>
         <enhancement description="+^%d to Baton Smash" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="devil_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="devil_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Daredevil's">
-        <require cat="character" item="Daredevil" />
+        <require cat="character" item="Daredevil"/>
         <enhancement description="+^%d to Baton Sweep" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="devil_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="devil_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Daredevil's">
-        <require cat="character" item="Daredevil" />
+        <require cat="character" item="Daredevil"/>
         <enhancement description="+^%d to Extensive Strike" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="devil_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="devil_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Daredevil's">
-        <require cat="character" item="Daredevil" />
+        <require cat="character" item="Daredevil"/>
         <enhancement description="+^%d to Devastation" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="devil_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="devil_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Daredevil's">
-        <require cat="character" item="Daredevil" />
+        <require cat="character" item="Daredevil"/>
         <enhancement description="+^%d to Charge" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="devil_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="devil_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Deadpool's">
-        <require cat="character" item="Deadpool" />
+        <require cat="character" item="Deadpool"/>
         <enhancement description="+^%d to Assassin Strike" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="dead_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="dead_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Deadpool's">
-        <require cat="character" item="Deadpool" />
+        <require cat="character" item="Deadpool"/>
         <enhancement description="+^%d to Dual Shot" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="dead_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="dead_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Deadpool's">
-        <require cat="character" item="Deadpool" />
+        <require cat="character" item="Deadpool"/>
         <enhancement description="+^%d to Teleport Flurry" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="dead_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="dead_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Deadpool's">
-        <require cat="character" item="Deadpool" />
+        <require cat="character" item="Deadpool"/>
         <enhancement description="+^%d to Blade Cyclone" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="dead_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="dead_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Deadpool's">
-        <require cat="character" item="Deadpool" />
+        <require cat="character" item="Deadpool"/>
         <enhancement description="+^%d to Grenade Toss" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="dead_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="dead_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Doctor Strange's">
-        <require cat="character" item="DrStrange" />
+        <require cat="character" item="DrStrange"/>
         <enhancement description="+^%d to Mystic Bolts" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="drstr_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="drstr_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Doctor Strange's">
-        <require cat="character" item="DrStrange" />
+        <require cat="character" item="DrStrange"/>
         <enhancement description="+^%d to Levitation" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="drstr_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="drstr_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Doctor Strange's">
-        <require cat="character" item="DrStrange" />
+        <require cat="character" item="DrStrange"/>
         <enhancement description="+^%d to Falteen Flame" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="drstr_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="drstr_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Doctor Strange's">
-        <require cat="character" item="DrStrange" />
+        <require cat="character" item="DrStrange"/>
         <enhancement description="+^%d to Black Magic" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="drstr_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="drstr_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Doctor Strange's">
-        <require cat="character" item="DrStrange" />
+        <require cat="character" item="DrStrange"/>
         <enhancement description="+^%d to Mind Wipe" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="drstr_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="drstr_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Elektra's">
-        <require cat="character" item="Elektra" />
+        <require cat="character" item="Elektra"/>
         <enhancement description="+^%d to Nerve Strike" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="elektra_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="elektra_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Elektra's">
-        <require cat="character" item="Elektra" />
+        <require cat="character" item="Elektra"/>
         <enhancement description="+^%d to Ninja Stars" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="elektra_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="elektra_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Elektra's">
-        <require cat="character" item="Elektra" />
+        <require cat="character" item="Elektra"/>
         <enhancement description="+^%d to Sai Stab" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="elektra_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="elektra_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Elektra's">
-        <require cat="character" item="Elektra" />
+        <require cat="character" item="Elektra"/>
         <enhancement description="+^%d to Spin Kick" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="elektra_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="elektra_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Elektra's">
-        <require cat="character" item="Elektra" />
+        <require cat="character" item="Elektra"/>
         <enhancement description="+^%d to Death's Touch" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="elektra_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="elektra_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ghost Rider's">
-        <require cat="character" item="GhostRider" />
+        <require cat="character" item="GhostRider"/>
         <enhancement description="+^%d to Ravaging Flame" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ghost_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="ghost_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ghost Rider's">
-        <require cat="character" item="GhostRider" />
+        <require cat="character" item="GhostRider"/>
         <enhancement description="+^%d to Chain Flechette" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ghost_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="ghost_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ghost Rider's">
-        <require cat="character" item="GhostRider" />
+        <require cat="character" item="GhostRider"/>
         <enhancement description="+^%d to Fiendish Chains" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ghost_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="ghost_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ghost Rider's">
-        <require cat="character" item="GhostRider" />
+        <require cat="character" item="GhostRider"/>
         <enhancement description="+^%d to Chains of Retribution" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ghost_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="ghost_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ghost Rider's">
-        <require cat="character" item="GhostRider" />
+        <require cat="character" item="GhostRider"/>
         <enhancement description="+^%d to Damnation" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ghost_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="ghost_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Human Torch's">
-        <require cat="character" item="HumanTorch" />
+        <require cat="character" item="HumanTorch"/>
         <enhancement description="+^%d to Flame Thrower" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="humant_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="humant_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Human Torch's">
-        <require cat="character" item="HumanTorch" />
+        <require cat="character" item="HumanTorch"/>
         <enhancement description="+^%d to Inferno" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="humant_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="humant_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Human Torch's">
-        <require cat="character" item="HumanTorch" />
+        <require cat="character" item="HumanTorch"/>
         <enhancement description="+^%d to Wildfire" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="humant_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="humant_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Human Torch's">
-        <require cat="character" item="HumanTorch" />
+        <require cat="character" item="HumanTorch"/>
         <enhancement description="+^%d to Fireballs" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="humant_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="humant_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Human Torch's">
-        <require cat="character" item="HumanTorch" />
+        <require cat="character" item="HumanTorch"/>
         <enhancement description="+^%d to Fire Storm" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="humant_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="humant_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iceman's">
-        <require cat="character" item="Iceman" />
+        <require cat="character" item="Iceman"/>
         <enhancement description="+^%d to Ice Shards" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="iceman_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="iceman_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iceman's">
-        <require cat="character" item="Iceman" />
+        <require cat="character" item="Iceman"/>
         <enhancement description="+^%d to Polar Explosion" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="iceman_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="iceman_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iceman's">
-        <require cat="character" item="Iceman" />
+        <require cat="character" item="Iceman"/>
         <enhancement description="+^%d to Freeze Beam" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="iceman_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="iceman_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iceman's">
-        <require cat="character" item="Iceman" />
+        <require cat="character" item="Iceman"/>
         <enhancement description="+^%d to Ice Slide" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="iceman_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="iceman_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iceman's">
-        <require cat="character" item="Iceman" />
+        <require cat="character" item="Iceman"/>
         <enhancement description="+^%d to Blizzard" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="iceman_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="iceman_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Invisible Woman's">
-        <require cat="character" item="InvisibleWoman" />
+        <require cat="character" item="InvisibleWoman"/>
         <enhancement description="+^%d to Concussion Blast" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Invisible Woman's">
-        <require cat="character" item="InvisibleWoman" />
+        <require cat="character" item="InvisibleWoman"/>
         <enhancement description="+^%d to Telekinesis" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Invisible Woman's">
-        <require cat="character" item="InvisibleWoman" />
+        <require cat="character" item="InvisibleWoman"/>
         <enhancement description="+^%d to Kinetic Bolts" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Invisible Woman's">
-        <require cat="character" item="InvisibleWoman" />
+        <require cat="character" item="InvisibleWoman"/>
         <enhancement description="+^%d to Kinetic Surge" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Invisible Woman's">
-        <require cat="character" item="InvisibleWoman" />
+        <require cat="character" item="InvisibleWoman"/>
         <enhancement description="+^%d to Kinetic Snare" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="inviswm_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iron Man's">
-        <require cat="character" item="Ironman" />
+        <require cat="character" item="Ironman"/>
         <enhancement description="+^%d to Plasma Disc" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ironman_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="ironman_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iron Man's">
-        <require cat="character" item="Ironman" />
+        <require cat="character" item="Ironman"/>
         <enhancement description="+^%d to Rocket Uppercut" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ironman_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="ironman_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iron Man's">
-        <require cat="character" item="Ironman" />
+        <require cat="character" item="Ironman"/>
         <enhancement description="+^%d to Nano Assault" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ironman_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="ironman_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Iron Man's">
-        <require cat="character" item="Ironman" />
+        <require cat="character" item="Ironman"/>
         <enhancement description="+^%d to Uni-Beam" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="ironman_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="ironman_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Luke Cage's">
-        <require cat="character" item="LukeCage" />
+        <require cat="character" item="LukeCage"/>
         <enhancement description="+^%d to Jab" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="lukec_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="lukec_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Luke Cage's">
-        <require cat="character" item="LukeCage" />
+        <require cat="character" item="LukeCage"/>
         <enhancement description="+^%d to Chain Strike" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="lukec_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="lukec_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Luke Cage's">
-        <require cat="character" item="LukeCage" />
+        <require cat="character" item="LukeCage"/>
         <enhancement description="+^%d to Block Party" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="lukec_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="lukec_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Luke Cage's">
-        <require cat="character" item="LukeCage" />
+        <require cat="character" item="LukeCage"/>
         <enhancement description="+^%d to Hammer Toss" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="lukec_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="lukec_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Luke Cage's">
-        <require cat="character" item="LukeCage" />
+        <require cat="character" item="LukeCage"/>
         <enhancement description="+^%d to Drill Bit" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="lukec_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="lukec_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Moon Knight's" platform_hidden="PS">
-        <require cat="character" item="MoonKnight" />
+        <require cat="character" item="MoonKnight"/>
         <enhancement description="+^%d to Crescent Dart" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="moonk_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="moonk_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Moon Knight's" platform_hidden="PS">
-        <require cat="character" item="MoonKnight" />
+        <require cat="character" item="MoonKnight"/>
         <enhancement description="+^%d to Staff Slam" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="moonk_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="moonk_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Moon Knight's" platform_hidden="PS">
-        <require cat="character" item="MoonKnight" />
+        <require cat="character" item="MoonKnight"/>
         <enhancement description="+^%d to Cable Shot" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="moonk_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="moonk_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Moon Knight's" platform_hidden="PS">
-        <require cat="character" item="MoonKnight" />
+        <require cat="character" item="MoonKnight"/>
         <enhancement description="+^%d to Boomerang" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="moonk_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="moonk_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Moon Knight's" platform_hidden="PS">
-        <require cat="character" item="MoonKnight" />
+        <require cat="character" item="MoonKnight"/>
         <enhancement description="+^%d to Nunchucks" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="moonk_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="moonk_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Mr. Fantastic's">
-        <require cat="character" item="MrFantastic" />
+        <require cat="character" item="MrFantastic"/>
         <enhancement description="+^%d to Elastic Crush" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Mr. Fantastic's">
-        <require cat="character" item="MrFantastic" />
+        <require cat="character" item="MrFantastic"/>
         <enhancement description="+^%d to Propeller Arms" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Mr. Fantastic's">
-        <require cat="character" item="MrFantastic" />
+        <require cat="character" item="MrFantastic"/>
         <enhancement description="+^%d to Drastic Elastic" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Mr. Fantastic's">
-        <require cat="character" item="MrFantastic" />
+        <require cat="character" item="MrFantastic"/>
         <enhancement description="+^%d to Pinball" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Mr. Fantastic's">
-        <require cat="character" item="MrFantastic" />
+        <require cat="character" item="MrFantastic"/>
         <enhancement description="+^%d to Rubberband Recoil" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="mrfan_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Nick Fury's">
-        <require cat="character" item="NickFury" />
+        <require cat="character" item="NickFury"/>
         <enhancement description="+^%d to SMG" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="nickf_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="nickf_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Nick Fury's">
-        <require cat="character" item="NickFury" />
+        <require cat="character" item="NickFury"/>
         <enhancement description="+^%d to Frag" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="nickf_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="nickf_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Nick Fury's">
-        <require cat="character" item="NickFury" />
+        <require cat="character" item="NickFury"/>
         <enhancement description="+^%d to Sniper" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="nickf_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="nickf_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Silver Surfer's">
-        <require cat="character" item="SilverSurfer" />
+        <require cat="character" item="SilverSurfer"/>
         <enhancement description="+^%d to Cosmic Beam" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="silver_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="silver_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Silver Surfer's">
-        <require cat="character" item="SilverSurfer" />
+        <require cat="character" item="SilverSurfer"/>
         <enhancement description="+^%d to Silver Dash" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="silver_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="silver_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Silver Surfer's">
-        <require cat="character" item="SilverSurfer" />
+        <require cat="character" item="SilverSurfer"/>
         <enhancement description="+^%d to Power Surge" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="silver_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="silver_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Man's">
-        <require cat="character" item="Spiderman" />
+        <require cat="character" item="Spiderman"/>
         <enhancement description="+^%d to Web Snare" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spider_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="spider_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Man's">
-        <require cat="character" item="Spiderman" />
+        <require cat="character" item="Spiderman"/>
         <enhancement description="+^%d to Web Bullets" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spider_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="spider_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Man's">
-        <require cat="character" item="Spiderman" />
+        <require cat="character" item="Spiderman"/>
         <enhancement description="+^%d to Web Throw" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spider_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="spider_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Man's">
-        <require cat="character" item="Spiderman" />
+        <require cat="character" item="Spiderman"/>
         <enhancement description="+^%d to Slingshot" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spider_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="spider_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Man's">
-        <require cat="character" item="Spiderman" />
+        <require cat="character" item="Spiderman"/>
         <enhancement description="+^%d to Web Warrior" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spider_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="spider_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Woman's">
-        <require cat="character" item="SpiderWoman" />
+        <require cat="character" item="SpiderWoman"/>
         <enhancement description="+^%d to Venom Blast" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power1" />
+                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Woman's">
-        <require cat="character" item="SpiderWoman" />
+        <require cat="character" item="SpiderWoman"/>
         <enhancement description="+^%d to Ensnare" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power2" />
+                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Woman's">
-        <require cat="character" item="SpiderWoman" />
+        <require cat="character" item="SpiderWoman"/>
         <enhancement description="+^%d to Spider's Blood" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power3" />
+                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Woman's">
-        <require cat="character" item="SpiderWoman" />
+        <require cat="character" item="SpiderWoman"/>
         <enhancement description="+^%d to Bio-Electric Surge" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power4" />
+                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Spider-Woman's">
-        <require cat="character" item="SpiderWoman" />
+        <require cat="character" item="SpiderWoman"/>
         <enhancement description="+^%d to Spider's Bite" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power5" />
+                <affecter attribute="talent" level="1 3" scope_talent="spdwm_power5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Storm's">
-        <require cat="character" item="Storm" />
+        <require cat="character" item="Storm"/>
         <enhancement description="+^%d to Lightning Strike" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="storm_strike" />
+                <affecter attribute="talent" level="1 3" scope_talent="storm_strike"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Storm's">
-        <require cat="character" item="Storm" />
+        <require cat="character" item="Storm"/>
         <enhancement description="+^%d to Whirlwind" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="storm_whirlwind" />
+                <affecter attribute="talent" level="1 3" scope_talent="storm_whirlwind"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Storm's">
-        <require cat="character" item="Storm" />
+        <require cat="character" item="Storm"/>
         <enhancement description="+^%d to Chain Lightning" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="storm_chain" />
+                <affecter attribute="talent" level="1 3" scope_talent="storm_chain"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Storm's">
-        <require cat="character" item="Storm" />
+        <require cat="character" item="Storm"/>
         <enhancement description="+^%d to Conduction" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="storm_cndct" />
+                <affecter attribute="talent" level="1 3" scope_talent="storm_cndct"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Storm's">
-        <require cat="character" item="Storm" />
+        <require cat="character" item="Storm"/>
         <enhancement description="+^%d to Hail Storm" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="storm_hail" />
+                <affecter attribute="talent" level="1 3" scope_talent="storm_hail"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thing's">
-        <require cat="character" item="Thing" />
+        <require cat="character" item="Thing"/>
         <enhancement description="+^%d to Uppercut" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thing_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="thing_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thing's">
-        <require cat="character" item="Thing" />
+        <require cat="character" item="Thing"/>
         <enhancement description="+^%d to Hand Clap" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thing_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="thing_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thing's">
-        <require cat="character" item="Thing" />
+        <require cat="character" item="Thing"/>
         <enhancement description="+^%d to Earthclobber" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thing_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="thing_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thing's">
-        <require cat="character" item="Thing" />
+        <require cat="character" item="Thing"/>
         <enhancement description="+^%d to Bullrush" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thing_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="thing_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thor's">
-        <require cat="character" item="Thor" />
+        <require cat="character" item="Thor"/>
         <enhancement description="+^%d to Mjolnir's Might" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thor_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="thor_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thor's">
-        <require cat="character" item="Thor" />
+        <require cat="character" item="Thor"/>
         <enhancement description="+^%d to Mjolnir Slam" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thor_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="thor_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thor's">
-        <require cat="character" item="Thor" />
+        <require cat="character" item="Thor"/>
         <enhancement description="+^%d to Hammer Toss" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thor_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="thor_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thor's">
-        <require cat="character" item="Thor" />
+        <require cat="character" item="Thor"/>
         <enhancement description="+^%d to North Winds" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thor_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="thor_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Thor's">
-        <require cat="character" item="Thor" />
+        <require cat="character" item="Thor"/>
         <enhancement description="+^%d to Thor's Rage" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="thor_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="thor_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ms. Marvel's">
-        <require cat="character" item="Warbird" />
+        <require cat="character" item="Warbird"/>
         <enhancement description="+^%d to Luminous" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="war_power4" />
+                <affecter attribute="talent" level="1 3" scope_talent="war_power4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ms. Marvel's">
-        <require cat="character" item="Warbird" />
+        <require cat="character" item="Warbird"/>
         <enhancement description="+^%d to Photon Burst" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="war_power1" />
+                <affecter attribute="talent" level="1 3" scope_talent="war_power1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ms. Marvel's">
-        <require cat="character" item="Warbird" />
+        <require cat="character" item="Warbird"/>
         <enhancement description="+^%d to Explosive Touch" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="war_power2" />
+                <affecter attribute="talent" level="1 3" scope_talent="war_power2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ms. Marvel's">
-        <require cat="character" item="Warbird" />
+        <require cat="character" item="Warbird"/>
         <enhancement description="+^%d to Nega Blast" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="war_power5" />
+                <affecter attribute="talent" level="1 3" scope_talent="war_power5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Ms. Marvel's">
-        <require cat="character" item="Warbird" />
+        <require cat="character" item="Warbird"/>
         <enhancement description="+^%d to Prism" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="war_power3" />
+                <affecter attribute="talent" level="1 3" scope_talent="war_power3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Wolverine's">
-        <require cat="character" item="wolverine" />
+        <require cat="character" item="wolverine"/>
         <enhancement description="+^%d to Claw Slash" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="wolv_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="wolv_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Wolverine's">
-        <require cat="character" item="wolverine" />
+        <require cat="character" item="wolverine"/>
         <enhancement description="+^%d to Lethal Lunge" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="wolv_lunge" />
+                <affecter attribute="talent" level="1 3" scope_talent="wolv_lunge"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Wolverine's">
-        <require cat="character" item="wolverine" />
+        <require cat="character" item="wolverine"/>
         <enhancement description="+^%d to Eviscerate" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="wolv_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="wolv_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Wolverine's">
-        <require cat="character" item="wolverine" />
+        <require cat="character" item="wolverine"/>
         <enhancement description="+^%d to Spin Attack" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="wolv_p5" />
+                <affecter attribute="talent" level="1 3" scope_talent="wolv_p5"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Wolverine's">
-        <require cat="character" item="wolverine" />
+        <require cat="character" item="wolverine"/>
         <enhancement description="+^%d to Fury" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="wolv_p7" />
+                <affecter attribute="talent" level="1 3" scope_talent="wolv_p7"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hulk's">
-        <require cat="character" item="Hulk" />
+        <require cat="character" item="Hulk"/>
         <enhancement description="+^%d to Cyclone Punch" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hulk_power1" />
+                <affecter attribute="talent" level="1 3" scope_talent="hulk_power1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hulk's">
-        <require cat="character" item="Hulk" />
+        <require cat="character" item="Hulk"/>
         <enhancement description="+^%d to Hulk Stomp" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hulk_power2" />
+                <affecter attribute="talent" level="1 3" scope_talent="hulk_power2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hulk's">
-        <require cat="character" item="Hulk" />
+        <require cat="character" item="Hulk"/>
         <enhancement description="+^%d to Hulk Smash" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hulk_power3" />
+                <affecter attribute="talent" level="1 3" scope_talent="hulk_power3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hulk's">
-        <require cat="character" item="Hulk" />
+        <require cat="character" item="Hulk"/>
         <enhancement description="+^%d to Hulk Knock Down" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hulk_power4" />
+                <affecter attribute="talent" level="1 3" scope_talent="hulk_power4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hawkeye's">
-        <require cat="character" item="hawkeye" />
+        <require cat="character" item="hawkeye"/>
         <enhancement description="+^%d to Multishot" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hawk_p1" />
+                <affecter attribute="talent" level="1 3" scope_talent="hawk_p1"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hawkeye's">
-        <require cat="character" item="hawkeye" />
+        <require cat="character" item="hawkeye"/>
         <enhancement description="+^%d to Hyper Shot" enemy_level="7" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hawk_p6" />
+                <affecter attribute="talent" level="1 3" scope_talent="hawk_p6"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hawkeye's">
-        <require cat="character" item="hawkeye" />
+        <require cat="character" item="hawkeye"/>
         <enhancement description="+^%d to Paralyzer" enemy_level="14" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hawk_p2" />
+                <affecter attribute="talent" level="1 3" scope_talent="hawk_p2"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hawkeye's">
-        <require cat="character" item="hawkeye" />
+        <require cat="character" item="hawkeye"/>
         <enhancement description="+^%d to Adamantium Arrow" enemy_level="21" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hawk_p3" />
+                <affecter attribute="talent" level="1 3" scope_talent="hawk_p3"/>
             </powerup>
         </enhancement>
     </tr_item>
     <tr_item displayname="Hawkeye's">
-        <require cat="character" item="hawkeye" />
+        <require cat="character" item="hawkeye"/>
         <enhancement description="+^%d to Ice Pick Arrow" enemy_level="28" no_precache="true">
             <powerup life="-1">
-                <affecter attribute="talent" level="1 3" scope_talent="hawk_p4" />
+                <affecter attribute="talent" level="1 3" scope_talent="hawk_p4"/>
             </powerup>
         </enhancement>
     </tr_item>
     <item class="gloves" cost="50000" displayname="Asgard Armor" enemy_level="-1" model="pickups/equip_belt_a" name="ASGRD_AMR" quality="legend" type="equipment" unique="true">
         <enhancement description="+^%d%% $RES_ELEMENTAL">
             <powerup life="-1">
-                <affecter attribute="resist_elemental" level="0.5" />
+                <affecter attribute="resist_elemental" level="0.5"/>
             </powerup>
         </enhancement>
-        <enhancement description="+^%d%% damage to all $DMG_ELECTRICITY Powers">
+        <enhancement description="+^%d%% damage to all $DMG_ELECTRICITY powers">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.5">
-                    <scope scope_powers="true" />
-                    <scope scope_damage="dmg_electricity" />
+                    <scope scope_powers="true"/>
+                    <scope scope_damage="dmg_electricity"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Joybuzzer" enemy_level="-1" model="pickups/equip_belt_a" name="ARCADE_BUZZER" quality="legend" spawned_from="ArcadeBot" type="equipment" unique="true">
-        <enhancement description="^5%% of melee attacks will Paralyze victim">
+        <enhancement description="^5%% of melee attacks will paralyze victim">
             <powerup chance="0.05" class="chance_of_new_powerup" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
                 <powerup class="stunned" life="10">
-                    <affecter affect_type="scale" attribute="def_damage" level="2" />
-                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned" />
+                    <affecter affect_type="scale" attribute="def_damage" level="2"/>
+                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned"/>
                 </powerup>
             </powerup>
         </enhancement>
-        <enhancement description="^5% of melee damage will hurt self">
-            <powerup class="hurt_attacker" damagepercent="0.05" hurtowner="true" life="-1" onlyhurtmelee="true" />
+        <enhancement description="^5%% of melee damage will hurt self">
+            <powerup class="hurt_attacker" damagepercent="0.05" hurtowner="true" life="-1" onlyhurtmelee="true"/>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Attuma's Wrath" enemy_level="-1" model="pickups/equip_belt_a" name="ATMA_WRATH" quality="legend" spawned_from="Attuma" type="equipment" unique="true">
         <enhancement description="Increases power damage by ^25%%">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="1.25" scope_powers="true" />
+                <affecter affect_type="scale" attribute="damage" level="1.25" scope_powers="true"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Blackheart's Corruption" enemy_level="-1" model="pickups/equip_belt_a" name="BLCKHRT_CRPTN" quality="legend" spawned_from="Blackheart" type="equipment" unique="true">
         <enhancement description="^5%% of damage dealt returns as $HP and $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_vampire" level="0.05" />
-                <affecter affect_type="scale" attribute="atk_vampire_energy" level="0.05" />
+                <affecter affect_type="scale" attribute="atk_vampire" level="0.05"/>
+                <affecter affect_type="scale" attribute="atk_vampire_energy" level="0.05"/>
             </powerup>
         </enhancement>
         <enhancement description="^%d%% $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="0.95" />
+                <affecter affect_type="scale" attribute="xp" level="0.95"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Bulldozer's Helmet" enemy_level="-1" model="pickups/equip_belt_a" name="BULDZR_HELM" quality="legend" spawned_from="Bulldozer" type="equipment" unique="true">
-        <enhancement description="Reflects ^5%% of Damage">
+        <enhancement description="Reflects ^5%% of damage">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="reflect_damage" level="0.05" />
+                <affecter affect_type="scale" attribute="reflect_damage" level="0.05"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Assassin's Sight" enemy_level="-1" model="pickups/equip_belt_a" name="BULLS_SITE" quality="legend" spawned_from="Bullseye" type="equipment" unique="true">
-        <enhancement description="+^5%% chance of Criticals for ranged attacks">
+        <enhancement description="+^5%% chance of criticals for ranged attacks">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="0.05">
-                    <scope scope_attack="projectile" />
-                    <scope scope_attack="beam" />
+                    <scope scope_attack="projectile"/>
+                    <scope scope_attack="beam"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Crown of Byrrah" enemy_level="-1" model="pickups/equip_belt_a" name="BYRR_CROWN" quality="legend" spawned_from="Byrrah" type="equipment" unique="true">
-        <enhancement description="+^%d to body, focus and strike">
+        <enhancement description="+^%d to Body, Focus and Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="2" />
+                <affecter attribute="traits" level="2"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Super Soldier Serum" enemy_level="-1" model="pickups/equip_belt_a" name="DK_CAPT_SRUM" quality="legend" spawned_from="DarkCaptainAmerica" type="equipment" unique="true">
         <enhancement description="+^%d%% $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="1.1" />
+                <affecter affect_type="scale" attribute="maxhealth" level="1.1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Dark Steel" enemy_level="-1" model="pickups/equip_belt_a" name="DK_COL_STEEL" quality="legend" spawned_from="DarkColossus" type="equipment" unique="true">
         <enhancement description="+^%d%% to $DR">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25" />
+                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Crimson Dawn" enemy_level="-1" model="pickups/equip_belt_a" name="DK_PSY_DAWN" quality="legend" spawned_from="DarkPsylocke" type="equipment" unique="true">
-        <enhancement description="+^35 $EP per Knockout">
+        <enhancement description="+^35 $EP per knockout">
             <powerup life="-1">
-                <affecter attribute="energy_per_kill" level="35" />
+                <affecter attribute="energy_per_kill" level="35"/>
             </powerup>
         </enhancement>
         <enhancement description="+^%d%% $RES_MENTAL">
             <powerup life="-1">
-                <affecter attribute="resist_mental" level="0.5" />
+                <affecter attribute="resist_mental" level="0.5"/>
             </powerup>
         </enhancement>
     </item>
@@ -1334,32 +1334,32 @@
         <enhancement description="+^10%% chance to dodge melee attacks">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="0.1">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
         <enhancement description="+^20%% movement and attack speed">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="move" level="1.2" />
+                <affecter affect_type="scale" attribute="move" level="1.2"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Dark Uru Hammer" enemy_level="-1" model="pickups/equip_belt_a" name="DK_THOR_HMR" quality="legend" spawned_from="DarkThor" type="equipment" unique="true">
         <enhancement description="+^10 $DMG_ELECTRICITY to all melee attacks">
             <powerup class="add_attack" damagetype="dmg_electricity" life="-1">
-                <affecter attribute="special" level="10" />
+                <affecter attribute="special" level="10"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
-        <enhancement description="+^%d%% damage to all $DMG_ELECTRICITY Powers">
+        <enhancement description="+^%d%% damage to all $DMG_ELECTRICITY powers">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.5">
-                    <scope scope_powers="true" />
-                    <scope scope_damage="dmg_electricity" />
+                    <scope scope_powers="true"/>
+                    <scope scope_damage="dmg_electricity"/>
                 </affecter>
             </powerup>
         </enhancement>
@@ -1367,45 +1367,45 @@
     <item class="gloves" cost="50000" displayname="Deathbird's Feather" enemy_level="-1" model="pickups/equip_belt_a" name="DTHBRD_FTHR" quality="legend" spawned_from="Deathbird" type="equipment" unique="true">
         <enhancement description="^+%d $HP Regeneration">
             <powerup life="-1">
-                <affecter attribute="health_regen" level="5" />
+                <affecter attribute="health_regen" level="5"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Doom's Mask" enemy_level="-1" model="pickups/equip_belt_a" name="DOOM_MASK" quality="legend" spawned_from="DrDoom" type="equipment" unique="true">
-        <enhancement description="+^1 to All Talents">
+        <enhancement description="+^1 to all talents">
             <powerup life="-1">
-                <affecter attribute="all_talents" level="1" />
+                <affecter attribute="all_talents" level="1"/>
             </powerup>
         </enhancement>
-        <enhancement description="+10%% to $HP and $EP">
+        <enhancement description="+^10%% to $HP and $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="1.1" />
-                <affecter affect_type="scale" attribute="maxenergy" level="1.1" />
+                <affecter affect_type="scale" attribute="maxhealth" level="1.1"/>
+                <affecter affect_type="scale" attribute="maxenergy" level="1.1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Dragon Polymer" enemy_level="-1" model="pickups/equip_belt_a" name="DGNMAN_PLYMR" quality="legend" spawned_from="DragonMan" type="equipment" unique="true">
         <enhancement description="+^%d%% to $DR">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25" />
+                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25"/>
             </powerup>
         </enhancement>
-        <enhancement description="$EP regenerates at 75%% of normal rate">
+        <enhancement description="$EP regenerates at ^75%% of normal rate">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="energy_regen" level="0.75" />
+                <affecter affect_type="scale" attribute="energy_regen" level="0.75"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Aura of Seduction" enemy_level="-1" model="pickups/equip_belt_a" name="NCHNT_SDUCT" quality="legend" spawned_from="Enchantress" type="equipment" unique="true">
-        <enhancement description="5%% chance melee hit will turn enemy into ally for 30 seconds">
+        <enhancement description="^5%% chance melee hit will turn enemy into ally for 30 seconds">
             <powerup chance="0.05" class="chance_of_new_powerup" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
                 <powerup life="30">
-                    <affecter attribute="team_switch" level="1" />
-                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted" />
+                    <affecter attribute="team_switch" level="1"/>
+                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted"/>
                 </powerup>
             </powerup>
         </enhancement>
@@ -1413,21 +1413,21 @@
     <item class="gloves" cost="50000" displayname="Executioner's Axe" enemy_level="-1" model="pickups/equip_belt_a" name="XCUTNR_AXE" quality="legend" spawned_from="Executioner" type="equipment" unique="true">
         <enhancement description="Finishers do ^double damage">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="2" scope_finishers="true" />
+                <affecter affect_type="scale" attribute="damage" level="2" scope_finishers="true"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Dragon's Heart" enemy_level="-1" model="pickups/equip_belt_a" name="F3_HEART" quality="legend" spawned_from="FinFangFoom" type="equipment" unique="true">
         <enhancement description="+^%d $HP">
             <powerup life="-1">
-                <affecter attribute="maxhealth" level="25" />
+                <affecter attribute="maxhealth" level="25"/>
             </powerup>
         </enhancement>
         <enhancement description="+^%d%% critical chance on all attacks">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="0.0301">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
@@ -1435,129 +1435,129 @@
     <item class="armor" cost="50000" displayname="Armor of Galactus" enemy_level="-1" model="pickups/equip_belt_a" name="GLCTUS_AMR" quality="legend" spawned_from="Galactus" type="equipment" unique="true">
         <enhancement description="Absorbs ^10%% of $DMG and turns it into $EP">
             <powerup life="-1">
-                <affecter attribute="def_absorb_energy" level="0.1" />
+                <affecter attribute="def_absorb_energy" level="0.1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Imperial Mantle" enemy_level="-1" model="pickups/equip_belt_a" name="GLDTR_MNTL" quality="legend" spawned_from="Gladiator" type="equipment" unique="true">
-        <enhancement description="+^%d to body, focus and strike">
+        <enhancement description="+^%d to Body, Focus and Strike">
             <powerup life="-1">
-                <affecter attribute="traits" level="6" />
+                <affecter attribute="traits" level="6"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Stone Touch" enemy_level="-1" model="pickups/equip_belt_a" name="GRGYL_TUCH" quality="legend" spawned_from="GreyGargoyle" type="equipment" unique="true">
-        <enhancement description="^3% chance to turn victim into Stone">
+        <enhancement description="^3%% chance to turn victim into stone">
             <powerup chance="0.03" class="chance_of_new_powerup" life="-1">
-                <powerup class="freeze" life="30" no_shatter_on_damage="true" renderfx="chilled" shatter_on_finisher="true" />
+                <powerup class="freeze" life="30" no_shatter_on_damage="true" renderfx="chilled" shatter_on_finisher="true"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Hussar's Whip" enemy_level="-1" model="pickups/equip_belt_a" name="HUSSR_WHIP" quality="legend" spawned_from="Hussar" type="equipment" unique="true">
-        <enhancement description="+^%d $HP per Knockout">
+        <enhancement description="+^%d $HP per knockout">
             <powerup life="-1">
-                <affecter attribute="health_per_kill" level="25" />
+                <affecter attribute="health_per_kill" level="25"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Blood of the Kraken" enemy_level="-1" model="pickups/equip_belt_a" name="KRKN_BLOOD" quality="legend" spawned_from="Kraken" type="equipment" unique="true">
         <enhancement description="+^%d%% $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="1.0501" />
+                <affecter affect_type="scale" attribute="maxhealth" level="1.0501"/>
             </powerup>
         </enhancement>
         <enhancement description="^%d%% $EP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxenergy" level="0.9501" />
+                <affecter affect_type="scale" attribute="maxenergy" level="0.9501"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Atlantean Scale" enemy_level="-1" model="pickups/equip_belt_a" name="KRNG_SCALE" quality="legend" spawned_from="Krang" type="equipment" unique="true">
         <enhancement description="Finishers do +^%d%% damage">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="1.5" scope_finishers="true" />
+                <affecter affect_type="scale" attribute="damage" level="1.5" scope_finishers="true"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Dark Elf Armor" enemy_level="-1" model="pickups/equip_belt_a" name="KRUS_ARMR" quality="legend" spawned_from="Kurse" type="equipment" unique="true">
-        <enhancement description="If blocking, melee attacker is stunned for 3 seconds">
+        <enhancement description="If blocking, melee attacker is stunned for ^3 seconds">
             <powerup class="hurt_attacker" life="-1" onlyhurtmelee="true">
                 <affecter attribute="powerup_scope">
-                    <scope scope_blocking="true" />
+                    <scope scope_blocking="true"/>
                 </affecter>
                 <powerup class="stunned" life="3">
-                    <affecter affect_type="scale" attribute="def_damage" level="2" />
-                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned" />
+                    <affecter affect_type="scale" attribute="def_damage" level="2"/>
+                    <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned"/>
                 </powerup>
             </powerup>
         </enhancement>
         <enhancement description="+^%d%% to $DR">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25" />
+                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.25"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Lizard's Serum" enemy_level="-1" model="pickups/equip_belt_a" name="LIZ_SRUM" quality="legend" spawned_from="UltraLizard" type="equipment" unique="true">
-        <enhancement description="^+%d $HP Regeneration">
+        <enhancement description="+^%d $HP regeneration">
             <powerup life="-1">
-                <affecter attribute="health_regen" level="2" />
+                <affecter attribute="health_regen" level="2"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="0" displayname="Loki's Gift" enemy_level="-1" model="pickups/equip_belt_a" name="LOKI_GIFT" quality="legend" spawned_from="LokiFake" type="equipment" unique="true">
-        <enhancement description="Reduces Attack Damage by ^25%%">
+        <enhancement description="Reduces attack damage by ^25%%">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="0.75" />
+                <affecter affect_type="scale" attribute="atk_damage" level="0.75"/>
             </powerup>
         </enhancement>
-        <enhancement description="Increases Damage Taken by ^25%%">
+        <enhancement description="Increases damage taken by ^25%%">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="def_damage" level="1.25" />
+                <affecter affect_type="scale" attribute="def_damage" level="1.25"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Norn Stones" enemy_level="-1" model="pickups/equip_belt_a" name="LOKI_STON" quality="legend" spawned_from="Loki" type="equipment" unique="true">
         <enhancement description="+^%d%% $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="1.1501" />
+                <affecter affect_type="scale" attribute="xp" level="1.1501"/>
             </powerup>
         </enhancement>
         <enhancement description="+^%d%% credits">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="extra_money" level="1.3001" />
+                <affecter affect_type="scale" attribute="extra_money" level="1.3001"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="White Ring of Mandarin" enemy_level="-1" model="pickups/equip_belt_a" name="MNDRN_RING" quality="legend" spawned_from="Mandarin" type="equipment" unique="true">
         <enhancement description="+^5 $DMG_ENERGY to all melee attacks">
             <powerup class="add_attack" damagetype="dmg_energy" life="-1">
-                <affecter attribute="special" level="5" />
+                <affecter attribute="special" level="5"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
-        <enhancement description="+^35%% damage to all $DMG_ENERGY Powers">
+        <enhancement description="+^35%% $DMG to all $DMG_ENERGY powers">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.35">
-                    <scope scope_powers="true" />
-                    <scope scope_damage="dmg_energy" />
+                    <scope scope_powers="true"/>
+                    <scope scope_damage="dmg_energy"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Heart of Mephisto" enemy_level="-1" model="pickups/equip_belt_a" name="MPHST_HEART" quality="legend" spawned_from="Mephisto" type="equipment" unique="true">
-        <enhancement description="Absorbs ^10%% of Attack $DMG and turns it into $HP">
+        <enhancement description="Absorbs ^10%% of attack $DMG and turns it into $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_vampire" level="0.1" />
+                <affecter affect_type="scale" attribute="atk_vampire" level="0.1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="MODOK Chip" enemy_level="-1" model="pickups/equip_belt_a" name="MODOK_CHIP" quality="legend" spawned_from="Modok" type="equipment" unique="true">
         <enhancement description="+^%d%% $XP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="xp" level="1.0501" />
+                <affecter affect_type="scale" attribute="xp" level="1.0501"/>
             </powerup>
         </enhancement>
     </item>
@@ -1565,8 +1565,8 @@
         <enhancement description="+^10%% chance to dodge melee attacks">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="0.1">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
@@ -1575,32 +1575,32 @@
         <enhancement description="Grab moves do ^50%% more damage">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.5">
-                    <scope scope_attack="throw" />
+                    <scope scope_attack="throw"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Radioactive Touch" enemy_level="-1" model="pickups/equip_belt_a" name="RACTV_TOUCH" quality="legend" spawned_from="Radioactiveman" type="equipment" unique="true">
-        <enhancement description="+^5% Melee Damage as Radiation">
-            <powerup class="add_harming" damagepercent="0.05" life="-1" radiation="true" time="2" />
+        <enhancement description="+^5%% melee damage as $DMG_RADIATION">
+            <powerup class="add_harming" damagepercent="0.05" life="-1" radiation="true" time="2"/>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Rhino's Horn" enemy_level="-1" model="pickups/equip_belt_a" name="RHNO_HORN" quality="legend" spawned_from="Rhino" type="equipment" unique="true">
-        <enhancement description="+^10%% to All Resistances (except Mental)">
+        <enhancement description="+^10%% to all resistances (except mental)">
             <powerup life="-1">
-                <affecter attribute="resist_physical" level="0.1" />
-                <affecter attribute="resist_energy" level="0.1" />
-                <affecter attribute="resist_radiation" level="0.1" />
-                <affecter attribute="resist_elemental" level="0.1" />
+                <affecter attribute="resist_physical" level="0.1"/>
+                <affecter attribute="resist_energy" level="0.1"/>
+                <affecter attribute="resist_radiation" level="0.1"/>
+                <affecter attribute="resist_elemental" level="0.1"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Scorpion's Tail" enemy_level="-1" model="pickups/equip_belt_a" name="SCRP_TAIL" quality="legend" spawned_from="Scorpion" type="equipment" unique="true">
-        <enhancement description="+^10%% chance to cause knockdown on ranged attacks">
+        <enhancement description="+^10%% chance to cause $KB on ranged attacks">
             <powerup life="-1">
                 <affecter attribute="atk_knockback_chance" level="0.1">
-                    <scope scope_attack="projectile" />
-                    <scope scope_attack="beam" />
+                    <scope scope_attack="projectile"/>
+                    <scope scope_attack="beam"/>
                 </affecter>
             </powerup>
         </enhancement>
@@ -1608,10 +1608,10 @@
     <item class="gloves" cost="50000" displayname="Shocker's Gloves" enemy_level="-1" model="pickups/equip_belt_a" name="SHKR_GLOVS" quality="legend" spawned_from="Shocker" type="equipment" unique="true">
         <enhancement description="+^10 $DMG_ELECTRICITY to all melee attacks">
             <powerup class="add_attack" damagetype="dmg_electricity" life="-1">
-                <affecter attribute="special" level="10" />
+                <affecter attribute="special" level="10"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
@@ -1619,93 +1619,93 @@
     <item class="gloves" cost="50000" displayname="Starbolt's Flame" enemy_level="-1" model="pickups/equip_belt_a" name="STRBLT_FLAM" quality="legend" spawned_from="Starbolt" type="equipment" unique="true">
         <enhancement description="^5 $DMG_FIRE to all melee attacks">
             <powerup class="add_attack" damagetype="dmg_fire" life="-1">
-                <affecter attribute="special" level="5" />
+                <affecter attribute="special" level="5"/>
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
-        <enhancement description="+^35%% damage to all $DMG_FIRE Powers">
+        <enhancement description="+^35%% damage to all $DMG_FIRE powers">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.35">
-                    <scope scope_powers="true" />
-                    <scope scope_damage="dmg_fire" />
+                    <scope scope_powers="true"/>
+                    <scope scope_damage="dmg_fire"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Hydro Suit" enemy_level="-1" model="pickups/equip_belt_a" name="TGRSHK_SUIT" quality="legend" spawned_from="Tigershark" type="equipment" unique="true">
-        <enhancement description="+^%d $HP per Knockout">
+        <enhancement description="+^%d $HP per knockout">
             <powerup life="-1">
-                <affecter attribute="health_per_kill" level="10" />
+                <affecter attribute="health_per_kill" level="10"/>
             </powerup>
         </enhancement>
-        <enhancement description="+^%d $EP per Knockout">
+        <enhancement description="+^%d $EP per knockout">
             <powerup life="-1">
-                <affecter attribute="energy_per_kill" level="10" />
+                <affecter attribute="energy_per_kill" level="10"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Helmet of Titannus" enemy_level="-1" model="pickups/equip_belt_a" name="TITNS_HELM" quality="legend" spawned_from="Titannus" type="equipment" unique="true">
         <enhancement description="+^%d $HP">
             <powerup life="-1">
-                <affecter attribute="maxhealth" level="50" />
+                <affecter attribute="maxhealth" level="50"/>
             </powerup>
         </enhancement>
-        <enhancement description="+^%d Striking">
+        <enhancement description="+^%d Strike">
             <powerup life="-1">
-                <affecter attribute="strength" level="10" />
+                <affecter attribute="strength" level="10"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Ulik's Fists" enemy_level="-1" model="pickups/equip_belt_a" name="ULIK_FISTS" quality="legend" spawned_from="Ulik" type="equipment" unique="true">
         <enhancement description="+^%d%% critical chance on all attacks">
             <powerup life="-1">
-                <affecter attribute="critical" level="0.101" />
+                <affecter attribute="critical" level="0.101"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Ultimo's Plating" enemy_level="-1" model="pickups/equip_belt_a" name="ULTMO_PLTNG" quality="legend" spawned_from="Ultimo" type="equipment" unique="true">
         <enhancement description="^%d%% chance to deflect projectiles">
             <powerup life="-1">
-                <affecter attribute="deflect_projectiles" level="0.1" />
+                <affecter attribute="deflect_projectiles" level="0.1"/>
             </powerup>
         </enhancement>
         <enhancement description="+^%d%% to $DR">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.501" />
+                <affecter affect_type="scale" attribute="defense_rating_scale" level="1.501"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Shi'ar Battle Armor" enemy_level="-1" model="pickups/equip_belt_a" name="WRSTR_ARMR" quality="legend" spawned_from="Warstar" type="equipment" unique="true">
-        <enhancement description="Reflects ^10%% of Melee Damage">
+        <enhancement description="Reflects ^10%% of melee damage">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="reflect_damage" level="0.1">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Bionic Arm" enemy_level="-1" model="pickups/equip_belt_a" name="WNTR_ARM" quality="legend" spawned_from="WinterSoldier" type="equipment" unique="true">
-        <enhancement description="+^%d Striking">
+        <enhancement description="+^%d Strike">
             <powerup life="-1">
-                <affecter attribute="strength" level="5" />
+                <affecter attribute="strength" level="5"/>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Wrecker's Crowbar" enemy_level="-1" model="pickups/equip_belt_a" name="WREKR_CRWBR" quality="legend" spawned_from="Wrecker" type="equipment" unique="true">
         <enhancement description="^%d%% chance to deflect projectiles">
             <powerup life="-1">
-                <affecter attribute="deflect_projectiles" level="0.15" />
+                <affecter attribute="deflect_projectiles" level="0.15"/>
             </powerup>
         </enhancement>
-        <enhancement description="^+5%% Melee $DMG">
+        <enhancement description="+^5%% melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.05">
-                    <scope scope_attack="punch" />
-                    <scope scope_attack="kick" />
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </enhancement>

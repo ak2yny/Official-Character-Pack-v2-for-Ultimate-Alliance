@@ -162,7 +162,7 @@
             <talentvalue level="14" name="thing_p5_pwr" value="180"/>
             <talentvalue level="15" name="thing_p5_pwr" value="224"/>
         </talentvalues>
-        <level description="%thing_p5_pdmg:s received melee $DMG\n%thing_p5_dmg:s received non-melee $DMG\n%thing_p5_life Seconds\n%thing_p5_pwr $EP">
+        <level description="%thing_p5_pdmg:s received melee $DMG\n%thing_p5_dmg:s received non-melee $DMG\n%thing_p5_life seconds\n%thing_p5_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -195,7 +195,7 @@
             <talentvalue level="10" name="thing_p6_pwr" value="180"/>
             <talentvalue level="11" name="thing_p6_pwr" value="224"/>
         </talentvalues>
-        <level description="%thing_p6_mel:s received melee $DMG\n%thing_p6_dmg2:s received non-melee $DMG\n%thing_p6_lif Seconds\n%thing_p6_pwr $EP">
+        <level description="%thing_p6_mel:s received melee $DMG\n%thing_p6_dmg2:s received non-melee $DMG\n%thing_p6_lif seconds\n%thing_p6_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -215,7 +215,7 @@
             <talentvalue level="1" name="thing_p8_lif" value="20"/>
             <talentvalue level="8" name="thing_p8_lif" value="55"/>
         </talentvalues>
-        <level description="%thing_p8_dmg $DMG_PHYSICAL\n%thing_p8_chan:p Chance\n%thing_p8_lif Seconds">
+        <level description="%thing_p8_dmg $DMG_PHYSICAL\n%thing_p8_chan:p chance\n%thing_p8_lif seconds">
             <tier cost="2" count="1"/>
             <tier cost="0" count="7"/>
             <require cat="level" level="%thing_p8_req"/>
@@ -232,7 +232,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Rock Hard" description="Reflects some damage back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="thing_outfit12" skin="0" type="passive">
+    <talent descname="Rock Hard" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="thing_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit12_pct" value="0.25"/>
             <talentvalue level="9" name="thing_outfit12_pct" value="1.25"/>
@@ -246,7 +246,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit13_dr" value="1"/>
             <talentvalue level="9" name="thing_outfit13_dr" value="9"/>
@@ -257,7 +257,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="thing_outfit21" skin="1" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="thing_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit21_pct" value="1.02"/>
             <talentvalue level="9" name="thing_outfit21_pct" value="1.1"/>
@@ -268,7 +268,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="thing_outfit22" skin="1" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="thing_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit22_pct" value="2"/>
             <talentvalue level="9" name="thing_outfit22_pct" value="10"/>
@@ -279,7 +279,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit23_dr" value="1"/>
             <talentvalue level="9" name="thing_outfit23_dr" value="9"/>
@@ -290,29 +290,29 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="thing_outfit31" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="thing_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit31_pct" value="1.04"/>
             <talentvalue level="9" name="thing_outfit31_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%thing_outfit31_pct:s Melee $DMG">
+        <level count="9" description="%thing_outfit31_pct:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit31_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases power damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit32" skin="2" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit32_pct" value="1.03"/>
             <talentvalue level="9" name="thing_outfit32_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%thing_outfit32_pct:s Power $DMG">
+        <level count="9" description="%thing_outfit32_pct:s power $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit32_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit33_dr" value="1"/>
             <talentvalue level="9" name="thing_outfit33_dr" value="9"/>
@@ -323,18 +323,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases power damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit41" skin="3" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="thing_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="thing_outfit41_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%thing_outfit41_pct:s Power $DMG">
+        <level count="9" description="%thing_outfit41_pct:s power $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%thing_outfit41_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="thing_outfit42" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="thing_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit42_pct" value="1.05"/>
             <talentvalue level="9" name="thing_outfit42_pct" value="1.25"/>
@@ -345,7 +345,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="thing_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="thing_outfit43_dr" value="1"/>
             <talentvalue level="9" name="thing_outfit43_dr" value="9"/>

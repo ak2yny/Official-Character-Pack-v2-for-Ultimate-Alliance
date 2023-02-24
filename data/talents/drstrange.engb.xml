@@ -205,7 +205,7 @@
             <talentvalue level="15" name="drstr_p6_life" value="180"/>
             <talentvalue level="1" name="drstr_p6_regen" value="0.02"/>
         </talentvalues>
-        <level description="%drstr_p6_regen:p $HP per second regeneration\n%drstr_p6_life seconds\n-%drstr_p6_hlth_los:p $HP">
+        <level description="%drstr_p6_regen:p $HP regeneration per second\n%drstr_p6_life seconds\n-%drstr_p6_hlth_los:p $HP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -300,7 +300,7 @@
             <require cat="level" level="%drstr_p10_req"/>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit11" skin="0" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit11_pct" value="1.04"/>
             <talentvalue level="9" name="drstr_outfit11_pct" value="1.2"/>
@@ -311,7 +311,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Magic Damage" description="Increases the damage of all magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit12" skin="0" type="passive">
+    <talent descname="Magic Damage" description="Increases the amount of $DMG done with magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="drstr_outfit12_pct" value="1.15"/>
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit13_dr" value="1"/>
             <talentvalue level="9" name="drstr_outfit13_dr" value="9"/>
@@ -344,7 +344,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit22" skin="1" type="passive">
+    <talent descname="$HP Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit22_hlth" value="6"/>
             <talentvalue level="9" name="drstr_outfit22_hlth" value="30"/>
@@ -355,7 +355,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit23_dr" value="1"/>
             <talentvalue level="9" name="drstr_outfit23_dr" value="9"/>
@@ -366,7 +366,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Magic Damage" description="Increases the damage of all magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit31" skin="2" type="passive">
+    <talent descname="Magic Damage" description="Increases the amount of $DMG done with magic attacks." icon="10" icon_texture="textures/ui/drstr_icons.png" name="drstr_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="drstr_outfit31_pct" value="1.15"/>
@@ -377,7 +377,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit32" skin="2" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit32_pct" value="1.02"/>
             <talentvalue level="9" name="drstr_outfit32_pct" value="1.1"/>
@@ -388,7 +388,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit33_dr" value="1"/>
             <talentvalue level="9" name="drstr_outfit33_dr" value="9"/>
@@ -399,7 +399,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Skill Increase" description="Chance for powers to be temporarily increased 1 level when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit41" skin="3" type="passive">
+    <talent descname="Skill Boost" description="Adds a chance to temporarily increase the skill level of all powers by 1 when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit41_pct" value="0.05"/>
             <talentvalue level="9" name="drstr_outfit41_pct" value="0.25"/>
@@ -408,7 +408,7 @@
             <powerup chance="%drstr_outfit41_pct" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit42" skin="3" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit42_pct" value="2"/>
             <talentvalue level="9" name="drstr_outfit42_pct" value="10"/>
@@ -419,7 +419,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="drstr_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="drstr_outfit43_dr" value="1"/>
             <talentvalue level="9" name="drstr_outfit43_dr" value="9"/>

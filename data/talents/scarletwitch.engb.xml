@@ -23,7 +23,7 @@
             <talentvalue level="14" name="scar_amplify_lif" value="120"/>
             <talentvalue level="15" name="scar_amplify_lif" value="180"/>
         </talentvalues>
-        <level description="%scar_amplify_dmg:s $DMG\n%scar_amplify_cri:s chance of critical hit\n%scar_amplify_lif seconds\n%scar_amplify_pwr $EP">
+        <level description="%scar_amplify_dmg:s $DMG\n%scar_amplify_cri:s critical chance\n%scar_amplify_lif seconds\n%scar_amplify_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -254,7 +254,7 @@
             <require cat="level" level="%scar_misfortune_req"/>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum health." icon="21" icon_texture="textures/ui/talent_icons.png" name="switch_outfit11" skin="0" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="switch_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit11_pct" value="1.02"/>
             <talentvalue level="9" name="switch_outfit11_pct" value="1.2"/>
@@ -265,7 +265,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Witch's Touch" description="Increase melee $DMG." icon="49" icon_texture="textures/ui/talent_icons.png" name="switch_outfit12" skin="0" type="passive">
+    <talent descname="Witch's Touch" description="Increases the $DMG of all melee attacks." icon="49" icon_texture="textures/ui/talent_icons.png" name="switch_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit12_dmg" value="1.04"/>
             <talentvalue level="9" name="switch_outfit12_dmg" value="1.2"/>
@@ -276,7 +276,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit13_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit13_dr" value="9"/>
@@ -287,12 +287,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="switch_outfit21" skin="1" type="passive">
+    <talent descname="Momentum" description="Increases the amount of momentum gained from melee combat." icon="10" icon_texture="textures/ui/talent_icons.png" name="switch_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit21_pct" value="1.05"/>
             <talentvalue level="9" name="switch_outfit21_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%switch_outfit21_pct:s momentum rate">
+        <level count="9" description="%switch_outfit21_pct:s momentum">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="momentum" level="%switch_outfit21_pct"/>
             </powerup>
@@ -307,7 +307,7 @@
             <powerup apply_ally="all" chance="%switch_outfit22_pct" class="resurrect" life="-1" maxhealthpercent="1"/>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit23_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit23_dr" value="9"/>
@@ -318,7 +318,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Hex Mastery" description="Increases power damage." icon="11" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit31" skin="2" type="passive">
+    <talent descname="Hex Mastery" description="Increases the $DMG of all powers." icon="11" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="switch_outfit31_pct" value="1.15"/>
@@ -329,7 +329,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Chaos Magic" description="Boosts body, focus, and strike stats." icon="0" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit32" skin="2" type="passive">
+    <talent descname="Chaos Magic" description="Boosts Body, Focus, and Strike stats." icon="0" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit32_pct" value="2"/>
             <talentvalue level="9" name="switch_outfit32_pct" value="10"/>
@@ -340,7 +340,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit33_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit33_dr" value="9"/>
@@ -351,7 +351,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Per Kill" description="Gain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="switch_outfit41" skin="3" type="passive">
+    <talent descname="$EP Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="switch_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit41_pct" value="5"/>
             <talentvalue level="9" name="switch_outfit41_pct" value="25"/>
@@ -362,7 +362,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge attacks." icon="10" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit42" skin="3" type="passive">
+    <talent descname="Dodge" description="Increases the chance to dodge attacks." icon="10" icon_texture="textures/ui/scarletwitch_icons.png" name="switch_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit42_pct" value="0.03"/>
             <talentvalue level="9" name="switch_outfit42_pct" value="0.15"/>
@@ -373,7 +373,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="switch_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="switch_outfit43_dr" value="1"/>
             <talentvalue level="9" name="switch_outfit43_dr" value="9"/>

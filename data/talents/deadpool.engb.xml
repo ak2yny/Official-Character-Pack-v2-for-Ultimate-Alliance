@@ -223,7 +223,7 @@
             <talentvalue level="1" name="dead_p7_dmg" value="10 12"/>
             <talentvalue level="11" name="dead_p7_dmg" value="51 56"/>
         </talentvalues>
-        <level description="+%dead_p7_dmg $DMG\n%dead_p7_spd:s speed\n%dead_p7_life seconds\n%dead_p7_pwr $EP">
+        <level description="+%dead_p7_dmg $DMG\n%dead_p7_spd:s attack speed\n%dead_p7_life seconds\n%dead_p7_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -247,29 +247,35 @@
             <require cat="level" level="%dead_p8_req"/>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="dead_outfit11" skin="0" type="passive">
+    <talent descname="Dodge Melee" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="dead_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit11_pct" value="0.03"/>
             <talentvalue level="9" name="dead_outfit11_pct" value="0.15"/>
         </talentvalues>
         <level count="9" description="+%dead_outfit11_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%dead_outfit11_pct"/>
+                <affecter attribute="def_dodge" level="%dead_outfit11_pct" scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="dead_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="dead_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="dead_outfit12_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%dead_outfit12_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%dead_outfit12_pct" scope_damage="dmg_punch"/>
+                <affecter affect_type="scale" attribute="damage" level="%dead_outfit12_pct" scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit13_dr" value="1"/>
             <talentvalue level="9" name="dead_outfit13_dr" value="9"/>
@@ -280,7 +286,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="dead_outfit21" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="dead_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="dead_outfit21_pct" value="1.2"/>
@@ -291,7 +297,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="dead_outfit22" skin="1" type="passive">
+    <talent descname="$HP Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="dead_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit22_hlth" value="0.004"/>
             <talentvalue level="9" name="dead_outfit22_hlth" value="0.02"/>
@@ -304,7 +310,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit23_dr" value="1"/>
             <talentvalue level="9" name="dead_outfit23_dr" value="9"/>
@@ -315,7 +321,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="dead_outfit31" skin="2" type="passive">
+    <talent descname="$HP Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="dead_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit31_hlth" value="0.004"/>
             <talentvalue level="9" name="dead_outfit31_hlth" value="0.012"/>
@@ -339,7 +345,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit33_dr" value="1"/>
             <talentvalue level="9" name="dead_outfit33_dr" value="9"/>
@@ -350,14 +356,14 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Weapon Damage" description="Increases weapon damage." icon="0" icon_texture="textures/ui/talent_icons.png" name="dead_outfit41" skin="3" type="passive">
+    <talent descname="Weapon Damage" description="Increases the amount of $DMG done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="dead_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="dead_outfit41_pct" value="1.15"/>
         </talentvalues>
         <level count="9" description="%dead_outfit41_pct:s weapon $DMG"/>
     </talent>
-    <talent descname="Resist All" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="dead_outfit42" skin="3" type="passive">
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="dead_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit42_pct" value="0.02"/>
             <talentvalue level="9" name="dead_outfit42_pct" value="0.1"/>
@@ -370,7 +376,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="dead_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit43_dr" value="1"/>
             <talentvalue level="9" name="dead_outfit43_dr" value="9"/>

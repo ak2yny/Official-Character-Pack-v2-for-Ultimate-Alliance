@@ -234,7 +234,7 @@
             <talentvalue level="1" name="captma_p7_regen" value="0.05"/>
             <talentvalue level="11" name="captma_p7_regen" value="0.1"/>
         </talentvalues>
-        <level description="Effect lasts %captma_p7_lif seconds with a healing rate increase of %captma_p7_regen:p">
+        <level description="%captma_p7_regen:p $HP regeneration\n+%captma_p7_def $DR\n%captma_p7_lif seconds\n%captma_p7_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -260,18 +260,21 @@
             <require cat="level" level="%captma_p8_req"/>
         </level>
     </talent>
-    <talent descname="Reflect Damage" description="Reflects a percentage of damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit11" skin="1" type="passive">
+    <talent descname="Reflect Melee" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit11" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit11_pct" value="0.25"/>
             <talentvalue level="9" name="marvel_outfit11_pct" value="1.25"/>
         </talentvalues>
         <level count="9" description="%marvel_outfit11_pct:p $DMG reflected">
             <powerup life="-1">
-                <affecter attribute="reflect_damage" level="%marvel_outfit11_pct" scope_non_powers="true"/>
+                <affecter attribute="reflect_damage" level="%marvel_outfit11_pct"  scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit12" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit12" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="marvel_outfit12_pct" value="1.2"/>
@@ -282,7 +285,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit13" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit13" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit13_dr" value="1"/>
             <talentvalue level="9" name="marvel_outfit13_dr" value="9"/>
@@ -293,7 +296,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum $HP" icon="20" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit21" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit21" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit21_pct" value="1.05"/>
             <talentvalue level="9" name="marvel_outfit21_pct" value="1.25"/>
@@ -304,18 +307,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Mastery" description="Increases damage done with energy attacks." icon="9" icon_texture="textures/ui/captainmarvel_icons.png" name="marvel_outfit22" skin="2" type="passive">
+    <talent descname="Energy Mastery" description="Increases the amount of $DMG done with energy attacks." icon="9" icon_texture="textures/ui/captainmarvel_icons.png" name="marvel_outfit22" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit22_pct" value="1.03"/>
             <talentvalue level="9" name="marvel_outfit22_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%marvel_outfit22_pct:p $DMG">
+        <level count="9" description="%marvel_outfit22_pct:p $DMG_ENERGY">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%marvel_outfit22_pct" scope_attack="energy"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit23" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit23" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit23_dr" value="1"/>
             <talentvalue level="9" name="marvel_outfit23_dr" value="9"/>
@@ -326,18 +329,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Gain Momentum" description="Gains momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit31" skin="3" type="passive">
+    <talent descname="Momentum" description="Increases the amount of momentum gained from melee combat." icon="10" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit31" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit31_pct" value="1.05"/>
             <talentvalue level="9" name="marvel_outfit31_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%marvel_outfit31_pct:s momentum rate">
+        <level count="9" description="%marvel_outfit31_pct:s momentum">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="momentum" level="%marvel_outfit31_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Resist All" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit32" skin="3" type="passive">
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit32" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit32_pct" value="0.02"/>
             <talentvalue level="9" name="marvel_outfit32_pct" value="0.1"/>
@@ -350,7 +353,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit33" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit33" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit33_dr" value="1"/>
             <talentvalue level="9" name="marvel_outfit33_dr" value="9"/>
@@ -372,7 +375,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Skill Boost" description="Chance to execute powers at 1 rank higher than normal." icon="18" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit42" skin="0" type="passive">
+    <talent descname="Skill Boost" description="Adds a chance to temporarily increase the skill level of all powers by 1 when used." icon="18" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit42" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit42_pct" value="0.05"/>
             <talentvalue level="9" name="marvel_outfit42_pct" value="0.25"/>
@@ -381,7 +384,7 @@
             <powerup chance="%marvel_outfit42_pct" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit43" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="marvel_outfit43" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="marvel_outfit43_dr" value="1"/>
             <talentvalue level="9" name="marvel_outfit43_dr" value="9"/>

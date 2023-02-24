@@ -228,7 +228,7 @@
             <require cat="level" level="%colos_p9_req"/>
         </level>
     </talent>
-    <talent descname="Critical Chance" description="Raises the chance of landing critical hits." icon="1" icon_texture="textures/ui/talent_icons.png" name="colos_outfit11" skin="1" type="passive">
+    <talent descname="Critical Chance" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="colos_outfit11" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit11_pct" value="0.02"/>
             <talentvalue level="9" name="colos_outfit11_pct" value="0.1"/>
@@ -239,7 +239,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases damage done by melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit12" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit12" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="colos_outfit12_pct" value="1.2"/>
@@ -250,7 +250,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit13" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit13" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit13_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit13_dr" value="9"/>
@@ -261,7 +261,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="colos_outfit21" skin="0" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="colos_outfit21" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit21_pct" value="1.02"/>
             <talentvalue level="9" name="colos_outfit21_pct" value="1.1"/>
@@ -272,7 +272,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="colos_outfit22" skin="0" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="colos_outfit22" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit22_pct" value="2"/>
             <talentvalue level="9" name="colos_outfit22_pct" value="10"/>
@@ -283,7 +283,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit23" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit23" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit23_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit23_dr" value="9"/>
@@ -294,7 +294,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases damage done by melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit31" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="colos_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit31_pct" value="1.04"/>
             <talentvalue level="9" name="colos_outfit31_pct" value="1.2"/>
@@ -305,7 +305,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases damage done by powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit32" skin="2" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit32_pct" value="1.03"/>
             <talentvalue level="9" name="colos_outfit32_pct" value="1.15"/>
@@ -316,7 +316,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit33_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit33_dr" value="9"/>
@@ -327,7 +327,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases damage done by powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit41" skin="3" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="colos_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="colos_outfit41_pct" value="1.15"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="colos_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit42_pct" value="1.05"/>
             <talentvalue level="9" name="colos_outfit42_pct" value="1.25"/>
@@ -349,7 +349,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="colos_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="colos_outfit43_dr" value="1"/>
             <talentvalue level="9" name="colos_outfit43_dr" value="9"/>

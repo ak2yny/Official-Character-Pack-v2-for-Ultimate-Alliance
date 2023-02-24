@@ -245,7 +245,7 @@
             <require cat="level" level="%devil_p9_req"/>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="devil_outfit11" skin="0" type="passive">
+    <talent descname="Dodge" description="Increases the chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="devil_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit11_pct" value="0.03"/>
             <talentvalue level="9" name="devil_outfit11_pct" value="0.15"/>
@@ -256,7 +256,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Baton Damage" description="Increases $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit12" skin="0" type="passive">
+    <talent descname="Baton Damage" description="Increases the amount of $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="devil_outfit12_pct" value="1.15"/>
@@ -267,7 +267,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit13_dr" value="1"/>
             <talentvalue level="9" name="devil_outfit13_dr" value="9"/>
@@ -278,7 +278,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Baton Damage" description="Increases $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit21" skin="1" type="passive">
+    <talent descname="Baton Damage" description="Increases the amount of $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit21_pct" value="1.03"/>
             <talentvalue level="9" name="devil_outfit21_pct" value="1.15"/>
@@ -289,7 +289,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="devil_outfit22" skin="1" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="devil_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit22_pct" value="1.02"/>
             <talentvalue level="9" name="devil_outfit22_pct" value="1.1"/>
@@ -300,7 +300,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit23_dr" value="1"/>
             <talentvalue level="9" name="devil_outfit23_dr" value="9"/>
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="devil_outfit32" skin="2" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="devil_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit32_pct" value="1.04"/>
             <talentvalue level="9" name="devil_outfit32_pct" value="1.2"/>
@@ -333,7 +333,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit33_dr" value="1"/>
             <talentvalue level="9" name="devil_outfit33_dr" value="9"/>
@@ -353,18 +353,18 @@
             <powerup chance="%devil_outfit41_pct" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="devil_outfit42" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="devil_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit42_pct" value="1.04"/>
             <talentvalue level="9" name="devil_outfit42_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%devil_outfit42_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%devil_outfit42_pct" scope_damage="dmg_punch"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%devil_outfit42_pct" scope_non_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="devil_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit43_dr" value="1"/>
             <talentvalue level="9" name="devil_outfit43_dr" value="9"/>

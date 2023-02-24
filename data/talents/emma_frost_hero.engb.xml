@@ -152,7 +152,7 @@
             <require cat="level" level="%frost_p5_req"/>
         </level>
     </talent>
-    <talent descname="Diamond Form" description="Changes into a solid Diamond, nullifying all mutant powers for the duration. Raises Defense and Strike significantly. Block to deactivate." descshort="Boost" icon="5" icon_texture="textures/ui/frost_icons.png" name="frost_p6" power="power6" type="boost">
+    <talent descname="Diamond Form" description="Changes into a solid Diamond, nullifying all mutant powers for the duration. Raises $DR and Strike significantly. Block to deactivate." descshort="Boost" icon="5" icon_texture="textures/ui/frost_icons.png" name="frost_p6" power="power6" type="boost">
         <talentvalues>
             <talentvalue level="1" name="frost_p6_req" value="14"/>
             <talentvalue level="2" name="frost_p6_req" value="17"/>
@@ -171,7 +171,7 @@
             <talentvalue level="1" name="frost_p6_def" value="1"/>
             <talentvalue level="11" name="frost_p6_def" value="11"/>
         </talentvalues>
-        <level description="+%frost_p6_def $DR\n%frost_p6_str:s Striking\n%frost_p6_pwr $EP">
+        <level description="+%frost_p6_def $DR\n%frost_p6_str:s Strike\n%frost_p6_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -207,7 +207,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="frost_outfit12" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="frost_outfit12" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit12_pct" value="1.05"/>
             <talentvalue level="9" name="frost_outfit12_pct" value="1.25"/>
@@ -218,7 +218,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit13" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit13" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit13_dr" value="1"/>
             <talentvalue level="9" name="frost_outfit13_dr" value="9"/>
@@ -229,7 +229,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="frost_outfit21" skin="1" type="passive">
+    <talent descname="$EP Regeneration" description="Increases energy regeneration." icon="31" icon_texture="textures/ui/talent_icons.png" name="frost_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit21_pct" value="1.01"/>
             <talentvalue level="9" name="frost_outfit21_pct" value="1.05"/>
@@ -242,7 +242,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="frost_outfit22" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="frost_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit22_pct" value="1.04"/>
             <talentvalue level="9" name="frost_outfit22_pct" value="1.2"/>
@@ -253,7 +253,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit23_dr" value="1"/>
             <talentvalue level="9" name="frost_outfit23_dr" value="9"/>
@@ -264,7 +264,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Momentum" description="Increases momentum gained." icon="10" icon_texture="textures/ui/talent_icons.png" name="frost_outfit31" skin="0" type="passive">
+    <talent descname="Momentum" description="Increases the amount of momentum gained from melee combat." icon="10" icon_texture="textures/ui/talent_icons.png" name="frost_outfit31" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit31_pct" value="1.04"/>
             <talentvalue level="9" name="frost_outfit31_pct" value="1.2"/>
@@ -275,7 +275,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Rock Hard" description="Reflects some damage back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="frost_outfit32" skin="0" type="passive">
+    <talent descname="Hardness" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="frost_outfit32" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit32_pct" value="0.25"/>
             <talentvalue level="9" name="frost_outfit32_pct" value="1.25"/>
@@ -289,7 +289,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit33" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit33" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit33_dr" value="1"/>
             <talentvalue level="9" name="frost_outfit33_dr" value="9"/>
@@ -305,13 +305,13 @@
             <talentvalue level="1" name="frost_outfit41_pct" value="0.02"/>
             <talentvalue level="9" name="frost_outfit41_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%frost_outfit41_pct:p resist all">
+        <level count="9" description="+%frost_outfit41_pct:p all resistances">
             <powerup life="-1">
                 <affecter affect_type="sum" attribute="resist_all" level="%frost_outfit41_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="frost_outfit42" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="frost_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit42_pct" value="1.04"/>
             <talentvalue level="9" name="frost_outfit42_pct" value="1.2"/>
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="frost_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit43_dr" value="1"/>
             <talentvalue level="9" name="frost_outfit43_dr" value="9"/>

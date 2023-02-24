@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Claw Slash" description="Increased melee attack that causes bleed damage." descshort="Melee" icon="0" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p1" power="power4">
+    <talent descname="Claw Slash" description="Increased melee attack that causes $DMG_BLEED." descshort="Melee" icon="0" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p1" power="power4">
         <talentvalues>
             <talentvalue level="1" name="wolv_p1_req" value="1"/>
             <talentvalue level="5" name="wolv_p1_req" value="13"/>
@@ -322,7 +322,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Environment Damage" description="Increases the amount of damage done with weapons or throws." icon="0" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit11" skin="0" type="passive">
+    <talent descname="Environment Damage" description="Increases the amount of $DMG done with weapons or throws." icon="0" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit11_pct" value="1.1"/>
             <talentvalue level="9" name="wolv_outfit11_pct" value="1.3"/>
@@ -336,7 +336,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit12" skin="0" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit12_pct" value="1.02"/>
             <talentvalue level="9" name="wolv_outfit12_pct" value="1.2"/>
@@ -347,7 +347,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit13_dr" value="1"/>
             <talentvalue level="9" name="wolv_outfit13_dr" value="9"/>
@@ -358,7 +358,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Claw Damage" description="Increases the amount of damage done with claw attacks." icon="10" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_outfit21" skin="1" type="passive">
+    <talent descname="Claw Damage" description="Increases the amount of $DMG done with claw attacks." icon="10" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit21_pct" value="1.05"/>
             <talentvalue level="9" name="wolv_outfit21_pct" value="1.15"/>
@@ -369,7 +369,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Critical Strike" description="Increases critical strike chance." icon="8" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit22" skin="1" type="passive">
+    <talent descname="Critical Strike" description="Increases critical strike chance." icon="1" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit22_pct" value="0.05"/>
             <talentvalue level="9" name="wolv_outfit22_pct" value="0.13"/>
@@ -380,7 +380,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit23_dr" value="1"/>
             <talentvalue level="9" name="wolv_outfit23_dr" value="9"/>
@@ -391,7 +391,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit31" skin="2" type="passive">
+    <talent descname="$HP Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit31_pct" value="0.004"/>
             <talentvalue level="9" name="wolv_outfit31_pct" value="0.012"/>
@@ -400,11 +400,11 @@
         </talentvalues>
         <level count="9" description="+%wolv_outfit31_shw:f% maximum $HP regenerated per second">
             <powerup life="-1">
-                <affecter attribute="health_regen_pct" level="%wolv_outfit31_pct"/>
+                <affecter affect_type="scale" attribute="health_regen_pct" level="%wolv_outfit31_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Bleed Damage" description="Adds a chance to cause bleed damage to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit32" skin="2" type="passive">
+    <talent descname="Bleed Damage" description="Adds a chance to cause $DMG_BLEED to all melee attacks." icon="7" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit32_pct" value="0.05"/>
             <talentvalue level="9" name="wolv_outfit32_pct" value="0.15"/>
@@ -417,7 +417,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit33_dr" value="1"/>
             <talentvalue level="9" name="wolv_outfit33_dr" value="9"/>
@@ -428,7 +428,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit41" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit41_pct" value="1.04"/>
             <talentvalue level="9" name="wolv_outfit41_pct" value="1.24"/>
@@ -450,7 +450,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="wolv_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="wolv_outfit43_dr" value="1"/>
             <talentvalue level="9" name="wolv_outfit43_dr" value="9"/>

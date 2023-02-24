@@ -71,7 +71,7 @@
             <talentvalue level="13" name="elek_p2_chance" value="0.2" />
             <talentvalue level="1" name="elek_p2_deadlystk" value="0.33" />
         </talentvalues>
-        <level description="%elek_p2_dam $DMG_PHYSICAL\n%elek_p2_chance:p Chance\n%elek_p2_deadlystk:p $HP as Massive $DMG\n%elek_p2_pow $EP">
+        <level description="%elek_p2_dam $DMG_PHYSICAL\n%elek_p2_chance:p chance\n%elek_p2_deadlystk:p $HP as Massive $DMG\n%elek_p2_pow $EP">
             <tier cost="1" count="3" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -102,7 +102,7 @@
             <talentvalue level="1" name="elek_p3_chance" value="0.05" />
             <talentvalue level="9" name="elek_p3_chance" value="0.3" />
         </talentvalues>
-        <level description="%elek_p3_dam $DMG_PHYSICAL\n%elek_p3_chance:p Chance\n%elek_p3_pow $EP">
+        <level description="%elek_p3_dam $DMG_PHYSICAL\n%elek_p3_chance:p chance\n%elek_p3_pow $EP">
             <tier cost="2" count="3" />
             <tier cost="3" count="1" />
             <tier cost="3" count="4" difficulty="hard" />
@@ -134,7 +134,7 @@
             <talentvalue level="14" name="elek_p4_stuntime" value="16" />
             <talentvalue level="15" name="elek_p4_stuntime" value="19" />
         </talentvalues>
-        <level description="%elek_p4_stuntime Seconds stun\n%elek_p4_pow $EP">
+        <level description="%elek_p4_stuntime seconds stun\n%elek_p4_pow $EP">
             <tier cost="1" count="5" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -173,7 +173,7 @@
             <talentvalue level="1" name="elek_p5_rng" value="48.75" value_charged="65" />
             <talentvalue level="1" name="elek_p5_fxscale" value="0.75" value_charged="1" />
         </talentvalues>
-        <level description="%elek_p5_dam $DMG_PHYSICAL\n%elek_p5_v_chance:p Chance\n%elek_p5_vamp:p $DMG as $HP\n%elek_p5_pow $EP">
+        <level description="%elek_p5_dam $DMG_PHYSICAL\n%elek_p5_v_chance:p chance\n%elek_p5_vamp:p $DMG as $HP\n%elek_p5_pow $EP">
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
             <tier cost="3" count="4" difficulty="hard" />
@@ -181,7 +181,7 @@
             <require cat="level" level="%elek_p5_req" />
         </level>
     </talent>
-    <talent descname="Focused Chi" description="Boosts damage, speed, and reduces $DMG taken." descshort="Boost" icon="5" icon_texture="textures/ui/elektra_icons.png" name="elektra_p6" power="power6" type="boost">
+    <talent descname="Focused Chi" description="Boosts $DMG, speed, and reduces $DMG taken." descshort="Boost" icon="5" icon_texture="textures/ui/elektra_icons.png" name="elektra_p6" power="power6" type="boost">
         <talentvalues>
             <talentvalue level="1" name="elek_p6_req" value="2" />
             <talentvalue level="5" name="elek_p6_req" value="14" />
@@ -221,7 +221,7 @@
             <talentvalue level="14" name="elek_p6_spd_inc" value="1.3" />
             <talentvalue level="15" name="elek_p6_spd_inc" value="1.4" />
         </talentvalues>
-        <level description="%elek_p6_dam_inc:s  $DMG_PHYSICAL\n%elek_p6_def:s $DMG taken\n%elek_p6_spd_inc:s Attack speed\n%elek_p6_time Seconds\n%elek_p6_pow $EP">
+        <level description="%elek_p6_dam_inc:s  $DMG_PHYSICAL\n%elek_p6_def:s $DMG taken\n%elek_p6_spd_inc:s attack speed\n%elek_p6_time seconds\n%elek_p6_pow $EP">
             <tier cost="1" count="5" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -257,7 +257,7 @@
             <talentvalue level="10" name="elek_p7_dam_inc" value="1.16" />
             <talentvalue level="11" name="elek_p7_dam_inc" value="1.2" />
         </talentvalues>
-        <level description="%elek_p7_dam_inc:s $DMG_MELEE\n%elek_p7_time Seconds\n%elek_p7_pow $EP\n">
+        <level description="%elek_p7_dam_inc:s $DMG_MELEE\n%elek_p7_time seconds\n%elek_p7_pow $EP">
             <tier cost="1" count="1" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -276,7 +276,7 @@
             <talentvalue level="8" name="elek_p10_dmg" value="204 225" />
             <talentvalue level="1" name="elek_p10_dam" value="0.5" />
         </talentvalues>
-        <level description="%elek_p10_dmg $DMG_PHYSICAL\n%elek_p10_stuntime Seconds stun\n%elek_p10_dam:p $HP">
+        <level description="%elek_p10_dmg $DMG_PHYSICAL\n%elek_p10_stuntime seconds stun\n%elek_p10_dam:p $HP">
             <tier cost="2" count="1" />
             <tier cost="0" count="7" />
             <require cat="level" level="%elek_p10_req" />
@@ -287,13 +287,13 @@
             <talentvalue level="1" name="elek_outfit11_pct" value="0.02" />
             <talentvalue level="9" name="elek_outfit11_pct" value="0.1" />
         </talentvalues>
-        <level count="9" description="+%elek_outfit11_pct:p Critical chance">
+        <level count="9" description="+%elek_outfit11_pct:p critical chance">
             <powerup life="-1">
                 <affecter attribute="atk_critical" level="%elek_outfit11_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boosts body, focus, and strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit12" skin="0" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit12_pct" value="2" />
             <talentvalue level="9" name="elek_outfit12_pct" value="10" />
@@ -304,7 +304,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit13_dr" value="1" />
             <talentvalue level="9" name="elek_outfit13_dr" value="9" />
@@ -315,7 +315,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit21" skin="1" type="passive">
+    <talent descname="$EP Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit21_pct" value="5" />
             <talentvalue level="9" name="elek_outfit21_pct" value="25" />
@@ -326,14 +326,14 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Sai Damage" description="Increases the damage of all sai attacks." icon="7" icon_texture="textures/ui/elektra_icons.png" name="elektra_outfit22" skin="1" type="passive">
+    <talent descname="Sai Damage" description="Increases the amount of $DMG done with sai attacks." icon="7" icon_texture="textures/ui/elektra_icons.png" name="elektra_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit22_pct" value="1.03" />
             <talentvalue level="9" name="elek_outfit22_pct" value="1.15" />
         </talentvalues>
         <level count="9" description="%elek_outfit22_pct:s Sai $DMG" />
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit23_dr" value="1" />
             <talentvalue level="9" name="elek_outfit23_dr" value="9" />
@@ -344,18 +344,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee and projectile attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit31" skin="2" type="passive">
+    <talent descname="Dodge" description="Increases the chance to dodge melee and projectile attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit31_pct" value="0.03" />
             <talentvalue level="9" name="elek_outfit31_pct" value="0.15" />
         </talentvalues>
-        <level count="9" description="+%elek_outfit31_pct:p Dodge chance">
+        <level count="9" description="+%elek_outfit31_pct:p dodge chance">
             <powerup life="-1">
                 <affecter attribute="def_dodge" level="%elek_outfit31_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit32" skin="2" type="passive">
+    <talent descname="$HP Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit32_hlth" value="6" />
             <talentvalue level="9" name="elek_outfit32_hlth" value="30" />
@@ -366,7 +366,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit33_dr" value="1" />
             <talentvalue level="9" name="elek_outfit33_dr" value="9" />
@@ -377,25 +377,25 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Sai Damage" description="Increases the damage of all sai attacks." icon="7" icon_texture="textures/ui/elektra_icons.png" name="elektra_outfit41" skin="3" type="passive">
+    <talent descname="Sai Damage" description="Increases the amount of $DMG done with sai attacks." icon="7" icon_texture="textures/ui/elektra_icons.png" name="elektra_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit41_pct" value="1.03" />
             <talentvalue level="9" name="elek_outfit41_pct" value="1.15" />
         </talentvalues>
         <level count="9" description="%elek_outfit41_pct:s Sai $DMG" />
     </talent>
-    <talent descname="Momentum" description="Increases momentum gain." icon="10" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit42" skin="3" type="passive">
+    <talent descname="Momentum" description="Increases the amount of momentum gained from melee combat." icon="10" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit42_pct" value="1.04" />
             <talentvalue level="9" name="elek_outfit42_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%elek_outfit42_pct:s Momentum">
+        <level count="9" description="%elek_outfit42_pct:s momentum">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="momentum" level="%elek_outfit42_pct" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="elektra_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="elek_outfit43_dr" value="1" />
             <talentvalue level="9" name="elek_outfit43_dr" value="9" />

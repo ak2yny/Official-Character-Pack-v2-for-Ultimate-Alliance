@@ -287,29 +287,32 @@
             <require cat="level" level="%ronin_p8_req"/>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit11" skin="0" type="passive">
+    <talent descname="Dodge Melee" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit11_pct" value="0.03"/>
             <talentvalue level="9" name="ronin_outfit11_pct" value="0.15"/>
         </talentvalues>
         <level count="9" description="+%ronin_outfit11_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%ronin_outfit11_pct" scope_damage="dmg_physical"/>
+                <affecter attribute="def_dodge" level="%ronin_outfit11_pct"  scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Gain Momentum" description="Gain momentum from melee combat faster." icon="10" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit12" skin="0" type="passive">
+    <talent descname="Momentum" description="Increases the amount of momentum gained from melee combat." icon="10" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit12_pct" value="1.05"/>
             <talentvalue level="9" name="ronin_outfit12_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%ronin_outfit12_pct:s momentum rate">
+        <level count="9" description="%ronin_outfit12_pct:s momentum">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="momentum" level="%ronin_outfit12_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit13_dr" value="1"/>
             <talentvalue level="9" name="ronin_outfit13_dr" value="9"/>
@@ -320,7 +323,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases damage of melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="ronin_outfit21_pct" value="1.2"/>
@@ -334,7 +337,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit22" skin="1" type="passive">
+    <talent descname="$HP Per Kill" description="Regain health per kill." icon="14" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit22_hlth" value="6"/>
             <talentvalue level="9" name="ronin_outfit22_hlth" value="30"/>
@@ -345,7 +348,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit23_dr" value="1"/>
             <talentvalue level="9" name="ronin_outfit23_dr" value="9"/>
@@ -356,7 +359,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Resist All" description="Increases all resistances" icon="16" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit31" skin="2" type="passive">
+    <talent descname="Resistance" description="Increases all resistances" icon="16" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit31_pct" value="0.02"/>
             <talentvalue level="9" name="ronin_outfit31_pct" value="0.1"/>
@@ -369,7 +372,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Sword Mastery" description="Increased Damage for Sword Attacks." icon="10" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit32" skin="2" type="passive">
+    <talent descname="Sword Mastery" description="Increases $DMG for sword attacks." icon="10" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit32_pct" value="1.03"/>
             <talentvalue level="9" name="ronin_outfit32_pct" value="1.15"/>
@@ -380,7 +383,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit33_dr" value="1"/>
             <talentvalue level="9" name="ronin_outfit33_dr" value="9"/>
@@ -391,7 +394,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Bleeding" description="Chance to cause bleeding damage on attacks." icon="8" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit41" skin="3" type="passive">
+    <talent descname="Bleed Damage" description="Chance to cause $DMG_BLEED on attacks." icon="8" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit41_dmg" value="0.03"/>
             <talentvalue level="9" name="ronin_outfit41_dmg" value="0.15"/>
@@ -404,18 +407,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Stats" description="Boost all stats." icon="18" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit42" skin="3" type="passive">
+    <talent descname="Boost Stats" description="Boosts Body, Focus, and Strike stats." icon="13" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit42_pct" value="2"/>
             <talentvalue level="9" name="ronin_outfit42_pct" value="10"/>
         </talentvalues>
-        <level count="9" description="+%ronin_outfit42_pct all stats">
+        <level count="9" description="+%ronin_outfit42_pct Body\n+%ronin_outfit42_pct Focus\n+%ronin_outfit42_pct Strike">
             <powerup life="-1">
                 <affecter attribute="traits" level="%ronin_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense rating." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit43_dr" value="1"/>
             <talentvalue level="9" name="ronin_outfit43_dr" value="9"/>

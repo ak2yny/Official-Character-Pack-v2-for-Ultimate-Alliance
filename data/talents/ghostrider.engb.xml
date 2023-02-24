@@ -111,7 +111,7 @@
             <require cat="level" level="%ghost_p3_req" />
         </level>
     </talent>
-    <talent descname="Chains of Retribution" description="Spins and swings chains around, dealing radial damage. Pops up enemies if fully charged.  $PT_CHARGE\n" descshort="Radial" icon="3" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p4" power="power4">
+    <talent descname="Chains of Retribution" description="Spins and swings chains around, dealing radial damage. Pops up enemies if fully charged.  $PT_CHARGE" descshort="Radial" icon="3" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p4" power="power4">
         <talentvalues>
             <talentvalue level="1" name="ghost_p4_req" value="17" />
             <talentvalue level="4" name="ghost_p4_req" value="26" />
@@ -186,7 +186,7 @@
             <talentvalue level="10" name="ghost_p6_pwr" value="140" />
             <talentvalue level="11" name="ghost_p6_pwr" value="172" />
         </talentvalues>
-        <level description="%ghost_p6_pct:p of $DMG inflicted\n%ghost_p6_lif Seconds\n%ghost_p6_pwr $EP">
+        <level description="%ghost_p6_pct:p of $DMG inflicted\n%ghost_p6_lif seconds\n%ghost_p6_pwr $EP">
             <tier cost="1" count="1" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -221,7 +221,7 @@
             <talentvalue level="1" name="ghost_p7_dmg" value="1.1" />
             <talentvalue level="15" name="ghost_p7_dmg" value="1.5" />
         </talentvalues>
-        <level description="%ghost_p7_dmg:s $DMG to terrified foes\n%ghost_p7_lif Seconds\n%ghost_p7_pwr $EP">
+        <level description="%ghost_p7_dmg:s $DMG to terrified foes\n%ghost_p7_lif seconds\n%ghost_p7_pwr $EP">
             <tier cost="1" count="5" />
             <tier cost="2" count="4" />
             <tier cost="3" count="1" />
@@ -243,7 +243,7 @@
             <require cat="level" level="%ghost_p9_req" />
         </level>
     </talent>
-    <talent descname="Hellfire Damage" description="Increases Hellfire $DMG." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit11" skin="0" type="passive">
+    <talent descname="Hellfire Damage" description="Increases the amount of $DMG done with Hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit11_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit11_pct" value="1.15" />
@@ -254,18 +254,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases melee damage." icon="5" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit12_pct" value="1.04" />
             <talentvalue level="9" name="ghost_outfit12_pct" value="1.2" />
         </talentvalues>
-        <level count="9" description="%ghost_outfit12_pct:s Melee $DMG">
+        <level count="9" description="%ghost_outfit12_pct:s melee $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit12_pct" scope_non_powers="true" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit13_dr" value="1" />
             <talentvalue level="9" name="ghost_outfit13_dr" value="9" />
@@ -276,12 +276,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Chain Damage" description="Increases Chain $DMG." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit21" skin="1" type="passive">
+    <talent descname="Chain Damage" description="Increases the amount of $DMG done with chains." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit21_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit21_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%ghost_outfit21_pct:s Chain $DMG">
+        <level count="9" description="%ghost_outfit21_pct:s chain $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit21_pct" scope_node="ghost_chain_atk" />
             </powerup>
@@ -292,11 +292,11 @@
             <talentvalue level="1" name="ghost_outfit22_pct" value="0.1" />
             <talentvalue level="9" name="ghost_outfit22_pct" value="0.5" />
         </talentvalues>
-        <level count="9" description="%ghost_outfit22_pct:p Chance to resurrect allies">
+        <level count="9" description="%ghost_outfit22_pct:p chance to resurrect allies">
             <powerup apply_ally="all" chance="%ghost_outfit22_pct" class="resurrect" life="-1" maxhealthpercent="1" />
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit23_dr" value="1" />
             <talentvalue level="9" name="ghost_outfit23_dr" value="9" />
@@ -307,7 +307,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Hellfire Damage" description="Increases Hellfire $DMG." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit31" skin="2" type="passive">
+    <talent descname="Hellfire Damage" description="Increases the amount of $DMG done with Hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit31_pct" value="1.15" />
@@ -318,7 +318,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit32" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit32_pct" value="1.05" />
             <talentvalue level="9" name="ghost_outfit32_pct" value="1.25" />
@@ -329,7 +329,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit33_dr" value="1" />
             <talentvalue level="9" name="ghost_outfit33_dr" value="9" />
@@ -340,18 +340,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Chain Damage" description="Increases Chain $DMG." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit41" skin="3" type="passive">
+    <talent descname="Chain Damage" description="Increases the amount of $DMG done with chains." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit41_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit41_pct" value="1.15" />
         </talentvalues>
-        <level count="9" description="%ghost_outfit41_pct:s Chain $DMG">
+        <level count="9" description="%ghost_outfit41_pct:s chain $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="atk_damage" level="%ghost_outfit41_pct" scope_node="ghost_chain_atk" />
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Per Kill" description="Gain $EP per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit42" skin="3" type="passive">
+    <talent descname="$EP Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit42_pct" value="5" />
             <talentvalue level="9" name="ghost_outfit42_pct" value="25" />
@@ -362,7 +362,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit43_dr" value="1" />
             <talentvalue level="9" name="ghost_outfit43_dr" value="9" />

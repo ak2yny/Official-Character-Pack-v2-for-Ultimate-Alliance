@@ -121,7 +121,7 @@
             <talentvalue level="1" name="sun_ionshield_pwr" value="32"/>
             <talentvalue level="15" name="sun_ionshield_pwr" value="188"/>
         </talentvalues>
-        <level description="+%sun_ionshield_dr $DR\n%sun_ionshield_dmg $DMG_FIRE/sec\n%sun_ionshield_life seconds\n%sun_ionshield_pwr $EP">
+        <level description="+%sun_ionshield_dr $DR\n%sun_ionshield_dmg $DMG_FIRE per second\n%sun_ionshield_life seconds\n%sun_ionshield_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -162,7 +162,7 @@
             <talentvalue level="1" name="sun_rising_atk" value="1.25"/>
             <talentvalue level="11" name="sun_rising_atk" value="2"/>
         </talentvalues>
-        <level description="%sun_rising_def:p chance to ignore attacks\n%sun_rising_atk:p increased $DMG\n%sun_rising_lif Seconds\n%sun_rising_pwr $EP">
+        <level description="%sun_rising_def:p chance to ignore attacks\n%sun_rising_atk:p increased $DMG\n%sun_rising_lif seconds\n%sun_rising_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -171,7 +171,7 @@
             <require cat="level" level="%sun_rising_req"/>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit11" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit11" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit11_pct" value="1.05"/>
             <talentvalue level="9" name="sunf_outfit11_pct" value="1.25"/>
@@ -193,7 +193,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit13" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit13" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit13_dr" value="1"/>
             <talentvalue level="9" name="sunf_outfit13_dr" value="9"/>
@@ -209,24 +209,27 @@
             <talentvalue level="1" name="sunf_outfit21_pct" value="0.04"/>
             <talentvalue level="9" name="sunf_outfit21_pct" value="0.2"/>
         </talentvalues>
-        <level count="9" description="+%sunf_outfit21_pct:p Added $DMG">
+        <level count="9" description="+%sunf_outfit21_pct:p added $DMG">
             <powerup class="add_attack" damagepercent="%sunf_outfit21_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_attack="projectile"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Martial Arts" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit22" skin="1" type="passive">
+    <talent descname="Martial Arts" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit22_pct" value="1.04"/>
             <talentvalue level="9" name="sunf_outfit22_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%sunf_outfit22_pct:s melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%sunf_outfit22_pct" scope_damage="dmg_punch"/>
+                <affecter affect_type="scale" attribute="damage" level="%sunf_outfit22_pct" scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit23_dr" value="1"/>
             <talentvalue level="9" name="sunf_outfit23_dr" value="9"/>
@@ -263,7 +266,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit33" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit33" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit33_dr" value="1"/>
             <talentvalue level="9" name="sunf_outfit33_dr" value="9"/>
@@ -274,7 +277,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="XP" description="Increases experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit41" skin="3" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit41_pct" value="1.02"/>
             <talentvalue level="9" name="sunf_outfit41_pct" value="1.1"/>
@@ -296,7 +299,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit43_dr" value="1"/>
             <talentvalue level="9" name="sunf_outfit43_dr" value="9"/>

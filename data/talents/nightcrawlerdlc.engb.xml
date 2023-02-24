@@ -288,7 +288,7 @@
             <require cat="level" level="%night_p8_req"/>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit11" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit11" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit11_pct" value="1.04"/>
             <talentvalue level="9" name="night_outfit11_pct" value="1.2"/>
@@ -310,7 +310,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit13" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit13" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit13_dr" value="1"/>
             <talentvalue level="9" name="night_outfit13_dr" value="9"/>
@@ -321,7 +321,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit21" skin="0" type="passive">
+    <talent descname="Melee Mastery" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit21" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit21_dmg" value="1.04"/>
             <talentvalue level="9" name="night_outfit21_dmg" value="1.2"/>
@@ -332,20 +332,20 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Protective Forces" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="night_outfit22" skin="0" type="passive">
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="night_outfit22" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit22_pct" value="0.02"/>
             <talentvalue level="9" name="night_outfit22_pct" value="0.1"/>
             <talentvalue level="1" name="night_outfit22_shw" value="2"/>
             <talentvalue level="9" name="night_outfit22_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%night_outfit22_shw resist all">
+        <level count="9" description="+%night_outfit22_shw all resistances">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%night_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit23" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit23" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit23_dr" value="1"/>
             <talentvalue level="9" name="night_outfit23_dr" value="9"/>
@@ -356,7 +356,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Mastery" description="Increase melee $DMG." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit31" skin="3" type="passive">
+    <talent descname="Melee Mastery" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="night_outfit31" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit31_dmg" value="1.04"/>
             <talentvalue level="9" name="night_outfit31_dmg" value="1.2"/>
@@ -367,7 +367,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit32" skin="3" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="night_outfit32" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit32_pct" value="1.04"/>
             <talentvalue level="9" name="night_outfit32_pct" value="1.2"/>
@@ -378,7 +378,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit33" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit33" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit33_dr" value="1"/>
             <talentvalue level="9" name="night_outfit33_dr" value="9"/>
@@ -389,7 +389,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="night_outfit41" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="night_outfit41" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit41_hlt" value="1.05"/>
             <talentvalue level="9" name="night_outfit41_hlt" value="1.25"/>
@@ -400,7 +400,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the damage of powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="night_outfit42" skin="2" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="night_outfit42" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit42_dmg" value="1.03"/>
             <talentvalue level="9" name="night_outfit42_dmg" value="1.15"/>
@@ -411,7 +411,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit43" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="night_outfit43" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="night_outfit43_dr" value="1"/>
             <talentvalue level="9" name="night_outfit43_dr" value="9"/>

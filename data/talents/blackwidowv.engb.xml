@@ -292,21 +292,21 @@
             <require cat="level" level="%blackwidow_p9_req"/>
         </level>
     </talent>
-    <talent descname="Melee Damage Increase" description="Increases damage done by melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="widow_outfit11" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="widow_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit11_pct" value="1.04"/>
             <talentvalue level="9" name="widow_outfit11_pct" value="1.2"/>
         </talentvalues>
         <level count="9" description="%widow_outfit11_pct:p melee $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%widow_outfit11_pct">
+                <affecter affect_type="scale" attribute="damage" level="%widow_outfit11_pct" scope_non_powers="true">
                     <scope scope_attack="punch"/>
                     <scope scope_attack="kick"/>
                 </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Body" description="Increases body attribute." icon="12" icon_texture="textures/ui/talent_icons.png" name="widow_outfit12" skin="0" type="passive">
+    <talent descname="Body" description="Increases Body stat." icon="12" icon_texture="textures/ui/talent_icons.png" name="widow_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit12_pct" value="3"/>
             <talentvalue level="9" name="widow_outfit12_pct" value="15"/>
@@ -317,7 +317,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit13_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit13_dr" value="9"/>
@@ -328,7 +328,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Health Regeneration" description="Increases the rate health is regenerated." icon="30" icon_texture="textures/ui/talent_icons.png" name="widow_outfit21" skin="1" type="passive">
+    <talent descname="$HP Regeneration" description="Increases health regeneration." icon="30" icon_texture="textures/ui/talent_icons.png" name="widow_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit21_hlth" value="0.004"/>
             <talentvalue level="9" name="widow_outfit21_hlth" value="0.012"/>
@@ -341,18 +341,21 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Reflect Damage" description="Reflects a percentage of damage back to the attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="widow_outfit22" skin="1" type="passive">
+    <talent descname="Reflect Melee" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="widow_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit22_pct" value="0.25"/>
             <talentvalue level="9" name="widow_outfit22_pct" value="1.25"/>
         </talentvalues>
         <level count="9" description="%widow_outfit22_pct:p $DMG reflected">
             <powerup life="-1">
-                <affecter attribute="reflect_damage" level="%widow_outfit22_pct" scope_non_powers="true"/>
+                <affecter attribute="reflect_damage" level="%widow_outfit22_pct"  scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit23_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit23_dr" value="9"/>
@@ -363,12 +366,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Gun Mastery" description="Increases damage done when using a gun." icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="widow_outfit31" skin="2" type="passive">
+    <talent descname="Gun Mastery" description="Increases the amount of $DMG done with guns." icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="widow_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit31_pct" value="1.05"/>
             <talentvalue level="9" name="widow_outfit31_pct" value="1.15"/>
         </talentvalues>
-        <level count="9" description="%widow_outfit31_pct:s $DMG">
+        <level count="9" description="%widow_outfit31_pct:s weapon $DMG">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="%widow_outfit31_pct" scope_node="projectile"/>
             </powerup>
@@ -385,7 +388,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit33_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit33_dr" value="9"/>
@@ -396,18 +399,21 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge" description="Increases chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="widow_outfit41" skin="3" type="passive">
+    <talent descname="Dodge Melee" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="widow_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit41_pct" value="0.03"/>
             <talentvalue level="9" name="widow_outfit41_pct" value="0.15"/>
         </talentvalues>
         <level count="9" description="+%widow_outfit41_pct:p dodge chance">
             <powerup life="-1">
-                <affecter attribute="def_dodge" level="%widow_outfit41_pct"/>
+                <affecter attribute="def_dodge" level="%widow_outfit41_pct" scope_non_powers="true">
+                    <scope scope_attack="punch"/>
+                    <scope scope_attack="kick"/>
+                </affecter>
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="widow_outfit42" skin="3" type="passive">
+    <talent descname="$EP Per Kill" description="Regain energy per kill." icon="15" icon_texture="textures/ui/talent_icons.png" name="widow_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit42_pct" value="5"/>
             <talentvalue level="9" name="widow_outfit42_pct" value="25"/>
@@ -418,7 +424,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="widow_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit43_dr" value="1"/>
             <talentvalue level="9" name="widow_outfit43_dr" value="9"/>

@@ -6,7 +6,7 @@
         </talentvalues>
         <level count="1"/>
     </talent>
-    <talent descname="Web zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/spiderman_icons.png" name="spider_zip" type="ability">
+    <talent descname="Web Zip" description="($MOVE, $MOVE)" descshort="Ability" icon="16" icon_texture="textures/ui/spiderman_icons.png" name="spider_zip" type="ability">
         <talentvalues>
             <talentvalue level="1" name="spider_zip_req" value="1"/>
             <talentvalue level="1" name="spider_zip_dmg" value="13 15"/>
@@ -79,7 +79,7 @@
             <talentvalue level="15" name="spider_p2_pwr" value="43"/>
             <talentvalue level="1" name="spider_p2_fx" value="1" value_charged="2"/>
         </talentvalues>
-        <level description="%spider_p2_life seconds\n%spider_p2_dmg $DMG_PHYSICAL\n%spider_p2_pwr $EP per second\n">
+        <level description="%spider_p2_life seconds\n%spider_p2_dmg $DMG_PHYSICAL\n%spider_p2_pwr $EP per second">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -112,7 +112,7 @@
             <talentvalue level="12" name="spider_p3_pwr" value="27"/>
             <talentvalue level="13" name="spider_p3_pwr" value="34"/>
         </talentvalues>
-        <level description="%spider_p3_dmg $DMG_PHYSICAL\n%spider_p3_pwr $EP per second\n">
+        <level description="%spider_p3_dmg $DMG_PHYSICAL\n%spider_p3_pwr $EP per second">
             <tier cost="1" count="3"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -269,12 +269,12 @@
             <require cat="level" level="%spider_p10_req"/>
         </level>
     </talent>
-    <talent descname="Reflect Melee" description="Reflects a percentage of melee damage back at attacker." icon="19" icon_texture="textures/ui/talent_icons.png" name="spider_outfit11" skin="0" type="passive">
+    <talent descname="Reflect Melee" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="spider_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit11_pct" value="0.25"/>
             <talentvalue level="9" name="spider_outfit11_pct" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%spider_outfit11_pct:p melee $DMG">
+        <level count="9" description="%spider_outfit11_pct:p $DMG reflected">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="reflect_damage" level="%spider_outfit11_pct" scope_non_powers="true">
                     <scope scope_attack="punch"/>
@@ -283,7 +283,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Web Damage" description="Increases the amount of damage done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit12" skin="0" type="passive">
+    <talent descname="Web Damage" description="Increases the amount of $DMG done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit12_pct" value="1.05"/>
             <talentvalue level="9" name="spider_outfit12_pct" value="1.15"/>
@@ -294,7 +294,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit13_dr" value="1"/>
             <talentvalue level="9" name="spider_outfit13_dr" value="9"/>
@@ -305,7 +305,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="spider_outfit21" skin="1" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="spider_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="spider_outfit21_pct" value="1.24"/>
@@ -327,7 +327,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit23_dr" value="1"/>
             <talentvalue level="9" name="spider_outfit23_dr" value="9"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Web Damage" description="Increases the amount of damage done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit31" skin="2" type="passive">
+    <talent descname="Web Damage" description="Increases the amount of $DMG done with web attacks." icon="8" icon_texture="textures/ui/spiderman_icons.png" name="spider_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit31_pct" value="1.05"/>
             <talentvalue level="9" name="spider_outfit31_pct" value="1.15"/>
@@ -349,7 +349,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Boost Experience Points" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spider_outfit32" skin="2" type="passive">
+    <talent descname="Boost $XP" description="Increases the amount of experience points earned." icon="6" icon_texture="textures/ui/talent_icons.png" name="spider_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit32_pct" value="1.04"/>
             <talentvalue level="9" name="spider_outfit32_pct" value="1.2"/>
@@ -360,7 +360,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit33_dr" value="1"/>
             <talentvalue level="9" name="spider_outfit33_dr" value="9"/>
@@ -371,7 +371,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Evade" description="Increases chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spider_outfit41" skin="3" type="passive">
+    <talent descname="Evade" description="Increases the chance to dodge attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="spider_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit41_pct" value="0.05"/>
             <talentvalue level="9" name="spider_outfit41_pct" value="0.13"/>
@@ -385,18 +385,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Striking" description="Gives a striking bonus." icon="25" icon_texture="textures/ui/talent_icons.png" name="spider_outfit42" skin="3" type="passive">
+    <talent descname="Strike" description="Increases Strike stat." icon="25" icon_texture="textures/ui/talent_icons.png" name="spider_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit42_pct" value="3"/>
             <talentvalue level="9" name="spider_outfit42_pct" value="15"/>
         </talentvalues>
-        <level count="9" description="+%spider_outfit42_pct striking">
+        <level count="9" description="+%spider_outfit42_pct Strike">
             <powerup life="-1">
                 <affecter attribute="strength" level="%spider_outfit42_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="spider_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="spider_outfit43_dr" value="1"/>
             <talentvalue level="9" name="spider_outfit43_dr" value="9"/>

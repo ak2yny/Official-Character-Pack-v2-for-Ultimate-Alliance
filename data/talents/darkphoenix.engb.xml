@@ -221,7 +221,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Feeding" description="The Dark Phoenix draws life out of the targeted enemy and absorbs some of it. Once experienced she can distribute it amongst allies as well." descshort="Debuff" icon="5" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p6" power="power6" type="boost">
+    <talent descname="$EP Feeding" description="The Dark Phoenix draws life out of the targeted enemy and absorbs some of it. Once experienced she can distribute it amongst allies as well." descshort="Debuff" icon="5" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_p6" power="power6" type="boost">
         <talentvalues>
             <talentvalue level="1" name="darkp_p6_req" value="2"/>
             <talentvalue level="2" name="darkp_p6_req" value="8"/>
@@ -257,12 +257,12 @@
             <talentvalue level="12" name="darkp_p6_pwr" value="84"/>
             <talentvalue level="14" name="darkp_p6_pwr" value="99"/>
         </talentvalues>
-        <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP/sec to self\n%darkp_p6_pwr $EP">
+        <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP per second to self\n%darkp_p6_pwr $EP">
             <tier cost="1" count="4"/>
             <tier cost="2" count="4"/>
             <require cat="level" level="%darkp_p6_req"/>
         </level>
-        <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP/sec to team\n%darkp_p6_pwr $EP">
+        <level description="%darkp_p6_dmg $DMG_MENTAL\n%darkp_p6_pct:p $HP per second to team\n%darkp_p6_pwr $EP">
             <tier cost="3" count="2"/>
             <tier cost="3" count="3" difficulty="hard"/>
             <tier cost="4" count="1" difficulty="hard"/>
@@ -308,7 +308,7 @@
             <talentvalue level="7" name="darkp_p8_abs" value="0.12"/>
             <talentvalue level="8" name="darkp_p8_abs" value="0.14"/>
         </talentvalues>
-        <level description="%darkp_p8_dmg initial mental damage\n%darkp_p8_pct:p chance to be consumed\+n%darkp_p8_hlth $HP per enemy consumed">
+        <level description="%darkp_p8_dmg initial $DMG_MENTAL\n%darkp_p8_pct:p chance to be consumed\+n%darkp_p8_hlth $HP per enemy consumed">
             <tier cost="2" count="1"/>
             <tier cost="0" count="7"/>
             <require cat="level" level="%darkp_p8_req"/>
@@ -323,7 +323,7 @@
             <talentvalue level="1" name="darkp_outfit11_fra" value="0.75"/>
             <talentvalue level="9" name="darkp_outfit11_fra" value="0"/>
         </talentvalues>
-        <level count="9" description="+%darkp_outfit11_res:p $RES_ENERGY $RES_MENTAL and $RES_RADIATION \n+%darkp_outfit11_frd:p Resistance to $DMG_FIRE">
+        <level count="9" description="+%darkp_outfit11_res:p $RES_ENERGY, $RES_MENTAL and $RES_RADIATION\n+%darkp_outfit11_frd:p resistance to $DMG_FIRE">
             <powerup life="-1">
                 <affecter attribute="resist_mental" level="%darkp_outfit11_res"/>
                 <affecter attribute="resist_energy" level="%darkp_outfit11_res"/>
@@ -332,7 +332,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Force Mastery" description="Increases damage and chance of criticals for all Mental and Fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit12" skin="0" type="passive">
+    <talent descname="Force Mastery" description="Increases $DMG and chance of criticals for all mental and fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit12_dmg" value="1.03"/>
             <talentvalue level="9" name="darkp_outfit12_dmg" value="1.15"/>
@@ -351,7 +351,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit13_dr" value="1"/>
             <talentvalue level="9" name="darkp_outfit13_dr" value="9"/>
@@ -362,7 +362,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Force Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for focus and $EP increases" icon="8" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit21" skin="1" type="passive">
+    <talent descname="Force Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for Focus and $EP increases" icon="8" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit21_foc" value="2"/>
             <talentvalue level="7" name="darkp_outfit21_foc" value="8"/>
@@ -377,7 +377,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Energy Parasite" description="Consumes enemies' $EP once killed." icon="15" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit22" skin="1" type="passive">
+    <talent descname="$EP Parasite" description="Consumes enemies' $EP once killed." icon="15" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit22_pct" value="5"/>
             <talentvalue level="9" name="darkp_outfit22_pct" value="25"/>
@@ -388,7 +388,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit23_dr" value="1"/>
             <talentvalue level="9" name="darkp_outfit23_dr" value="9"/>
@@ -399,7 +399,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Cosmic Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for strike and $HP increases" icon="11" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit31" skin="2" type="passive">
+    <talent descname="Cosmic Empowerment" description="Uses the Phoenix Force's phenomenal cosmic power for Strike and $HP increases" icon="11" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit31_str" value="2"/>
             <talentvalue level="7" name="darkp_outfit31_str" value="8"/>
@@ -425,7 +425,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit33_dr" value="1"/>
             <talentvalue level="9" name="darkp_outfit33_dr" value="9"/>
@@ -436,7 +436,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Force Mastery" description="Increases damage and chance of criticals for all Mental and Fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit41" skin="3" type="passive">
+    <talent descname="Force Mastery" description="Increases $DMG and chance of criticals for all mental and fire attacks." icon="9" icon_texture="textures/ui/darkphoenix_icons1.png" name="darkp_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit41_dmg" value="1.03"/>
             <talentvalue level="9" name="darkp_outfit41_dmg" value="1.15"/>
@@ -469,7 +469,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit43" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="darkp_outfit43" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="darkp_outfit43_dr" value="1"/>
             <talentvalue level="9" name="darkp_outfit43_dr" value="9"/>

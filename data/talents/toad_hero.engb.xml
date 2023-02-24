@@ -62,7 +62,7 @@
             <talentvalue level="1" name="toa_tongue_str_lif" value="1"/>
             <talentvalue level="15" name="toa_tongue_str_lif" value="4"/>
         </talentvalues>
-        <level description="%toa_tongue_str_dmg $DMG_PHYSICAL\n%toa_tongue_str_lif Second(s) stun\n%toa_tongue_str_pwr $EP">
+        <level description="%toa_tongue_str_dmg $DMG_PHYSICAL\n%toa_tongue_str_lif second(s) stun\n%toa_tongue_str_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -97,7 +97,7 @@
             <talentvalue level="1" name="toa_sticky_spit_lif" value="4"/>
             <talentvalue level="13" name="toa_sticky_spit_lif" value="8"/>
         </talentvalues>
-        <level description="%toa_sticky_spit_dmg $DMG_PHYSICAL\n%toa_sticky_spit_lif Seconds\n%toa_sticky_spit_pwr $EP">
+        <level description="%toa_sticky_spit_dmg $DMG_PHYSICAL\n%toa_sticky_spit_lif seconds\n%toa_sticky_spit_pwr $EP">
             <tier cost="1" count="3"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -192,7 +192,7 @@
             <require cat="level" level="%toa_leap_attack_req"/>
         </level>
     </talent>
-    <talent descname="Secretion" description="Secretes pheromones that enhance party speed and increase Melee $DMG." descshort="Boost" icon="1" icon_texture="textures/ui/toad_icons.png" name="toa_secretion" power="power2" type="boost">
+    <talent descname="Secretion" description="Secretes pheromones that enhance party speed and increase melee $DMG." descshort="Boost" icon="1" icon_texture="textures/ui/toad_icons.png" name="toa_secretion" power="power2" type="boost">
         <talentvalues>
             <talentvalue level="1" name="toa_secretion_req" value="2"/>
             <talentvalue level="5" name="toa_secretion_req" value="14"/>
@@ -221,7 +221,7 @@
             <talentvalue level="14" name="toa_secretion_lif" value="120"/>
             <talentvalue level="15" name="toa_secretion_lif" value="180"/>
         </talentvalues>
-        <level description="%toa_secretion_spd:s Speed\n%toa_secretion_dmg:s Melee $DMG\n%toa_secretion_lif Seconds\n%toa_secretion_pwr $EP">
+        <level description="%toa_secretion_spd:s speed increase\n%toa_secretion_dmg:s melee $DMG\n%toa_secretion_lif seconds\n%toa_secretion_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -255,7 +255,7 @@
             <talentvalue level="10" name="toa_taunt_lif" value="120"/>
             <talentvalue level="11" name="toa_taunt_lif" value="180"/>
         </talentvalues>
-        <level description="%toa_taunt_def:s $DMG to taunted enemies\n%toa_taunt_dmg:s $DMG by taunted enemies\n%toa_taunt_lif Seconds\n%toa_taunt_pwr $EP">
+        <level description="%toa_taunt_def:s $DMG to taunted enemies\n%toa_taunt_dmg:s $DMG by taunted enemies\n%toa_taunt_lif seconds\n%toa_taunt_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -264,7 +264,7 @@
             <require cat="level" level="%toa_taunt_req"/>
         </level>
     </talent>
-    <talent descname="Tongue Whip" description="360 degree tongue strike. Increases Shield Credits dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/toad_icons.png" name="toa_extreme" power="team_xtreme" type="team_xtreme">
+    <talent descname="Tongue Whip" description="360 degree tongue strike. Increases S.H.I.E.L.D. credits dropped from enemies defeated during attack sequence." descshort="Xtreme" icon="8" icon_texture="textures/ui/toad_icons.png" name="toa_extreme" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="toa_extreme_req" value="10"/>
             <talentvalue level="8" name="toa_extreme_req" value="45"/>
@@ -273,7 +273,7 @@
             <talentvalue level="1" name="toa_extreme_mon" value="4"/>
             <talentvalue level="8" name="toa_extreme_mon" value="6"/>
         </talentvalues>
-        <level description="%toa_extreme_dmg $DMG_PHYSICAL\n%toa_extreme_mon:s Shield Credit from enemies">
+        <level description="%toa_extreme_dmg $DMG_PHYSICAL\n%toa_extreme_mon:s S.H.I.E.L.D. credits">
             <tier cost="2" count="1"/>
             <tier cost="0" count="7"/>
             <require cat="level" level="%toa_extreme_req"/>
@@ -284,13 +284,13 @@
             <talentvalue level="1" name="toa_outfit21_pct" value="0.02"/>
             <talentvalue level="9" name="toa_outfit21_pct" value="0.1"/>
         </talentvalues>
-        <level count="9" description="+%toa_outfit21_pct:p Resist All">
+        <level count="9" description="+%toa_outfit21_pct:p all resistances">
             <powerup life="-1">
                 <affecter affect_type="sum" attribute="resist_all" level="%toa_outfit21_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Dodge Melee Attacks" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="toa_outfit22" skin="3" type="passive">
+    <talent descname="Dodge Melee" description="Increases the chance to dodge melee attacks." icon="9" icon_texture="textures/ui/talent_icons.png" name="toa_outfit22" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit22_pct" value="0.03"/>
             <talentvalue level="9" name="toa_outfit22_pct" value="0.15"/>
@@ -304,7 +304,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit23" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit23" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit23_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit23_dr" value="9"/>
@@ -328,7 +328,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Radioactive Mastery" description="Increases $DMG_RADIATION done by all attacks." icon="10" icon_texture="textures/ui/toad_icons.png" name="toa_outfit12" skin="0" type="passive">
+    <talent descname="Radioactive Mastery" description="Increases the amount of $DMG_RADIATION done with all attacks." icon="10" icon_texture="textures/ui/toad_icons.png" name="toa_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="toa_outfit12_pct" value="1.15"/>
@@ -339,7 +339,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit13" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit13_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit13_dr" value="9"/>
@@ -363,18 +363,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="toa_outfit32" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="toa_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit32_scl" value="1.05"/>
             <talentvalue level="9" name="toa_outfit32_scl" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%toa_outfit32_scl:s Maximum $HP">
+        <level count="9" description="%toa_outfit32_scl:s maximum $HP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="maxhealth" level="%toa_outfit32_scl"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit33_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit33_dr" value="9"/>
@@ -385,7 +385,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="toa_outfit41" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="toa_outfit41" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit41_ep" value="1.04"/>
             <talentvalue level="9" name="toa_outfit41_ep" value="1.2"/>
@@ -396,18 +396,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Plunder" description="Increases Shield Credit drops." icon="9" icon_texture="textures/ui/toad_icons.png" name="toa_outfit42" skin="1" type="passive">
+    <talent descname="Plunder" description="Increases S.H.I.E.L.D. credits dropped." icon="9" icon_texture="textures/ui/toad_icons.png" name="toa_outfit42" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit42_mon" value="1.2"/>
             <talentvalue level="9" name="toa_outfit42_mon" value="2.0"/>
         </talentvalues>
-        <level count="9" description="%toa_outfit42_mon:s Shield Credits">
+        <level count="9" description="%toa_outfit42_mon:s S.H.I.E.L.D. credits">
             <powerup time="-1">
                 <affecter affect_type="scale" attribute="extra_money" level="%toa_outfit42_mon"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit43" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="toa_outfit43" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="toa_outfit43_dr" value="1"/>
             <talentvalue level="9" name="toa_outfit43_dr" value="9"/>
