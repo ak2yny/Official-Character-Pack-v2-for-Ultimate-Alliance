@@ -1261,7 +1261,7 @@
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Attuma's Wrath" enemy_level="-1" model="pickups/equip_belt_a" name="ATMA_WRATH" quality="legend" spawned_from="Attuma" type="equipment" unique="true">
-        <enhancement description="Increases power damage by ^25%%">
+        <enhancement description="Increases the damage of all powers by ^25%%">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="damage" level="1.25" scope_powers="true"/>
             </powerup>
