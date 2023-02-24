@@ -346,7 +346,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Leadership" description="Increases $DMG and $XP for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="cable_outfit21" skin="1" type="passive">
+    <talent descname="Leadership" description="Increases $DMG and experience points for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="cable_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit21_com" value="1.25"/>
             <talentvalue level="9" name="cable_outfit21_com" value="2.25"/>
@@ -358,12 +358,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Point Blank" description="Adds $DMG_ENERGY to all powers that hit enemies within 10 feet of Cable." icon="1" icon_texture="textures/ui/talent_icons.png" name="cable_outfit22" skin="1" type="passive">
+    <talent descname="Point Blank" description="Adds $DMG_ENERGY to all ranged attacks that hit enemies within 10 feet of Cable." icon="8" icon_texture="textures/ui/talent_icons.png" name="cable_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cable_outfit22_pct" value="0.1"/>
             <talentvalue level="9" name="cable_outfit22_pct" value="0.5"/>
         </talentvalues>
-        <level count="9" description="+%cable_outfit22_pct:p added $DMG_ENERGY">
+        <level count="9" description="+%cable_outfit22_pct:p $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%cable_outfit22_pct" damagetype="dmg_energy" life="-1">
                 <affecter attribute="powerup_scope">
                     <scope scope_attack="projectile"/>

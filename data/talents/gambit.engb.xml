@@ -349,7 +349,7 @@
             <talentvalue level="1" name="gam_outfit22_pct" value="0.04" />
             <talentvalue level="9" name="gam_outfit22_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%gam_outfit22_pct:p added $DMG_ENERGY">
+        <level count="9" description="+%gam_outfit22_pct:p $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%gam_outfit22_pct" damagetype="dmg_energy" life="-1">
                 <special_fx effect="char/gambit/special_trail" how_used="custom" />
                 <affecter attribute="powerup_scope">

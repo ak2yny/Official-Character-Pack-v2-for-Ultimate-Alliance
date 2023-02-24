@@ -331,7 +331,7 @@
             <talentvalue level="1" name="bish_outfit11_pct" value="0.04" />
             <talentvalue level="9" name="bish_outfit11_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%bish_outfit11_pct:p added $DMG_ENERGY">
+        <level count="9" description="+%bish_outfit11_pct:p $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%bish_outfit11_pct" damagetype="dmg_energy" life="-1">
                 <special_fx effect="char/bishop/special_trail" how_used="custom" />
                 <affecter attribute="powerup_scope">
@@ -381,7 +381,7 @@
             <talentvalue level="1" name="bish_outfit22_pct" value="0.04" />
             <talentvalue level="9" name="bish_outfit22_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%bish_outfit22_pct:p added $DMG">
+        <level count="9" description="+%bish_outfit22_pct:p $DMG">
             <powerup class="add_attack" damagepercent="%bish_outfit22_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_powers="true" />
             </powerup>

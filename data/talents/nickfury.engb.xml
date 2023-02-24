@@ -206,12 +206,12 @@
             <require cat="level" level="%nickf_p8_req" />
         </level>
     </talent>
-    <talent descname="Leadership" description="Increases $DMG and $XP for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit11" skin="0" type="passive">
+    <talent descname="Leadership" description="Increases $DMG and experience points for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="nickf_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="nickf_outfit11_com" value="1.25" />
             <talentvalue level="9" name="nickf_outfit11_com" value="2.25" />
         </talentvalues>
-        <level count="9" description="%nickf_outfit11_com:s Combo $DMG\n%nickf_outfit11_com:s Combo $XP">
+        <level count="9" description="%nickf_outfit11_com:s combo $DMG\n%nickf_outfit11_com:s combo $XP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="combo_damage" level="%nickf_outfit11_com" />
                 <affecter affect_type="scale" attribute="combo_xp" level="%nickf_outfit11_com" />

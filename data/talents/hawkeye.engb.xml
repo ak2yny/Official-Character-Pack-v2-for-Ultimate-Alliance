@@ -266,7 +266,7 @@
             <require cat="level" level="%hawk_p8_req"/>
         </level>
     </talent>
-    <talent descname="Point Blank" description="Increases the amount of $DMG done at close range with bow attacks." icon="8" icon_texture="textures/ui/talent_icons.png" name="hawk_outfit11" skin="2" type="passive">
+    <talent descname="Point Blank" description="Adds $DMG to bow attacks that hit enemies within 6 feet of Hawkeye." icon="8" icon_texture="textures/ui/talent_icons.png" name="hawk_outfit11" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="hawk_outfit11_pct" value="0.02"/>
             <talentvalue level="9" name="hawk_outfit11_pct" value="0.1"/>

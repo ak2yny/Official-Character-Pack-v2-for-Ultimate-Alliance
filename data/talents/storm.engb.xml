@@ -278,7 +278,7 @@
             <talentvalue level="1" name="storm_outfit11_pct" value="0.04" />
             <talentvalue level="9" name="storm_outfit11_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="%storm_outfit11_pct:p added $DMG_ELECTRICITY">
+        <level count="9" description="+%storm_outfit11_pct:p $DMG_ELECTRICITY">
             <powerup class="add_attack" damagepercent="%storm_outfit11_pct" damagetype="dmg_electricity" life="-1">
                 <special_fx effect="char/storm/special_trail" how_used="custom" />
                 <affecter attribute="powerup_scope">
@@ -309,12 +309,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Combo Bonus $XP" description="Gives bonus experience points for combos." icon="6" icon_texture="textures/ui/talent_icons.png" name="storm_outfit21" skin="1" type="passive">
+    <talent descname="Combo Bonus $XP" description="Increases experience points for all combo attacks." icon="6" icon_texture="textures/ui/talent_icons.png" name="storm_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="storm_outfit21_pct" value="0.25" />
             <talentvalue level="9" name="storm_outfit21_pct" value="1.25" />
         </talentvalues>
-        <level count="9" description="+%storm_outfit21_pct:p $XP for combos">
+        <level count="9" description="+%storm_outfit21_pct:p combo $XP">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="combo_xp" level="%storm_outfit21_pct" />
             </powerup>

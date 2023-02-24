@@ -211,7 +211,7 @@
             <require cat="level" level="%can_release_req" />
         </level>
     </talent>
-    <talent descname="Ignition Strike" description="Adds $DMG_FIRE to melee attacks." icon="2" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit11" skin="0" type="passive">
+    <talent descname="Ignition Strike" description="Adds $DMG_FIRE to all melee attacks." icon="2" icon_texture="textures/ui/cannonball_icons.png" name="can_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="can_outfit11_pct" value="0.04" />
             <talentvalue level="9" name="can_outfit11_pct" value="0.2" />
@@ -247,12 +247,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Point Blank" description="Adds $DMG to any ranged attack that hits enemies within 6 feet of Cannonball." icon="1" icon_texture="textures/ui/talent_icons.png" name="can_outfit21" skin="1" type="passive">
+    <talent descname="Point Blank" description="Adds $DMG to ranged attacks that hit enemies within 6 feet of Cannonball." icon="8" icon_texture="textures/ui/talent_icons.png" name="can_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="can_outfit21_pct" value="0.04" />
             <talentvalue level="9" name="can_outfit21_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%can_outfit21_pct:p added $DMG">
+        <level count="9" description="+%can_outfit21_pct:p $DMG">
             <powerup class="add_attack" damagepercent="%can_outfit21_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_attack="projectile" />
             </powerup>

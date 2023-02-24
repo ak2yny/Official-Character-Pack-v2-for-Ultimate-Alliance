@@ -285,13 +285,13 @@
                 <affecter attribute="defense_rating" level="%jub_outfit13_dr"/>
             </powerup>
         </level>
-    </talent>
-    <talent descname="Energized Fists" description="Adds $DMG_ENERGY to all melee attacks." icon="17" icon_texture="textures/ui/talent_icons.png" name="jub_outfit21" skin="1" type="passive">
+    </talent>52
+    <talent descname="Energized Fists" description="Adds $DMG_ENERGY to all melee attacks." icon="52" icon_texture="textures/ui/talent_icons.png" name="jub_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jub_outfit21_pct" value="0.04"/>
             <talentvalue level="9" name="jub_outfit21_pct" value="0.2"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit21_pct:p added $DMG_ENERGY">
+        <level count="9" description="+%jub_outfit21_pct:p $DMG_ENERGY">
             <powerup class="add_attack" damagepercent="%jub_outfit21_pct" damagetype="dmg_energy" life="-1">
                 <special_fx effect="char/jubile/p1_charge" how_used="custom"/>
                 <affecter attribute="powerup_scope">
@@ -305,7 +305,7 @@
             <talentvalue level="1" name="jub_outfit22_pct" value="0.04"/>
             <talentvalue level="9" name="jub_outfit22_pct" value="0.2"/>
         </talentvalues>
-        <level count="9" description="+%jub_outfit22_pct:p added $DMG">
+        <level count="9" description="+%jub_outfit22_pct:p $DMG">
             <powerup class="add_attack" damagepercent="%jub_outfit22_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_powers="true"/>
             </powerup>

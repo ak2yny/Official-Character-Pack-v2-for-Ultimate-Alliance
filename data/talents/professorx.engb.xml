@@ -192,7 +192,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Psychic Strike" description="Adds $DMG_MENTAL to melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="prof_outfit12" skin="1" type="passive">
+    <talent descname="Psychic Strike" description="Adds $DMG_MENTAL to all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="prof_outfit12" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="prof_outfit12_pct" value="0.04" />
             <talentvalue level="9" name="prof_outfit12_pct" value="0.2" />
@@ -227,7 +227,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Mutant Mentor" description="Increases $DMG and experience for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="prof_outfit22" skin="0" type="passive">
+    <talent descname="Mutant Mentor" description="Increases $DMG and experience points for all combo attacks." icon="29" icon_texture="textures/ui/talent_icons.png" name="prof_outfit22" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="prof_outfit22_com" value="1.25" />
             <talentvalue level="9" name="prof_outfit22_com" value="2" />

@@ -318,12 +318,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Scorch" description="Adds $DMG to any ranged attack that hits enemies within 6 feet of Pyro." icon="11" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit31" skin="2" type="passive">
+    <talent descname="Scorch" description="Adds $DMG to ranged attacks that hit enemies within 6 feet of Pyro." icon="11" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="pyro_outfit31_pct" value="0.04" />
             <talentvalue level="9" name="pyro_outfit31_pct" value="0.2" />
         </talentvalues>
-        <level count="9" description="+%pyro_outfit31_pct:p added $DMG">
+        <level count="9" description="+%pyro_outfit31_pct:p $DMG">
             <powerup class="add_attack" damagepercent="%pyro_outfit31_pct" life="-1" max_distance="72">
                 <affecter attribute="powerup_scope" scope_attack="projectile" />
             </powerup>
@@ -351,7 +351,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Flaming Fist" description="Adds $DMG_FIRE to melee attacks." icon="7" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit41" skin="3" type="passive">
+    <talent descname="Flaming Fist" description="Adds $DMG_FIRE to all melee attacks." icon="7" icon_texture="textures/ui/humantorch_icons.png" name="pyro_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="pyro_outfit41_pct" value="0.04" />
             <talentvalue level="9" name="pyro_outfit41_pct" value="0.2" />
