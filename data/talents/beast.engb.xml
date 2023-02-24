@@ -29,7 +29,7 @@
             <require cat="level" level="%beast_pinball_req"/>
         </level>
     </talent>
-    <talent descname="Propeller Kick" description="Spins legs around kicking any enemies within range with a chance of a Deadly Strike (33% instant $HP loss)" descshort="Radial" icon="1" icon_texture="textures/ui/beast_icons.png" name="beast_propeller" power="power2">
+    <talent descname="Propeller Kick" description="Spins legs around kicking any enemies within range and has a chance of doing a Deadly Strike (33% instant $HP loss)" descshort="Radial" icon="1" icon_texture="textures/ui/beast_icons.png" name="beast_propeller" power="power2">
         <talentvalues>
             <talentvalue level="1" name="beast_propeller_req" value="5"/>
             <talentvalue level="5" name="beast_propeller_req" value="14"/>
@@ -63,7 +63,7 @@
             <talentvalue level="14" name="beast_propeller_pwr" value="66"/>
             <talentvalue level="15" name="beast_propeller_pwr" value="72"/>
         </talentvalues>
-        <level description="%beast_propeller_dmg $DMG_ENERGY \n%beast_propeller_chc:p chance for Deadly Strike\n%beast_propeller_pwr $EP">
+        <level description="%beast_propeller_dmg $DMG_ENERGY \n%beast_propeller_chc:p chance\n%beast_propeller_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -204,7 +204,7 @@
             <talentvalue level="1" name="beast_roar_def" value="10"/>
             <talentvalue level="11" name="beast_roar_def" value="100"/>
         </talentvalues>
-        <level description="+%beast_roar_def Defense\n%beast_roar_spd:s attack speed\n%beast_roar_lif seconds\n%beast_roar_pwr $EP">
+        <level description="+%beast_roar_def defense\n%beast_roar_spd:s attack speed\n%beast_roar_lif seconds\n%beast_roar_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>
@@ -226,7 +226,7 @@
             <require cat="level" level="%beast_xtreme_req"/>
         </level>
     </talent>
-    <talent descname="Animal Agility" description="Increases chance to dodge attacks." icon="8" icon_texture="textures/ui/beast_icons.png" name="beast_outfit11" skin="3" type="passive">
+    <talent descname="Animal Agility" description="Increases the chance to dodge attacks." icon="8" icon_texture="textures/ui/beast_icons.png" name="beast_outfit11" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit11_pct" value="0.03"/>
             <talentvalue level="9" name="beast_outfit11_pct" value="0.15"/>
@@ -248,7 +248,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="invis_outfit13" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="invis_outfit13_dr" value="1"/>
             <talentvalue level="9" name="invis_outfit13_dr" value="9"/>
@@ -259,7 +259,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Energy" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="beast_outfit21" skin="1" type="passive">
+    <talent descname="Maximum $EP" description="Increases maximum energy." icon="21" icon_texture="textures/ui/talent_icons.png" name="beast_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="beast_outfit21_pct" value="1.2"/>
@@ -270,20 +270,20 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense Grid" description="Increases all resistances." icon="10" icon_texture="textures/ui/beast_icons.png" name="beast_outfit22" skin="1" type="passive">
+    <talent descname="$DR Grid" description="Increases all resistances." icon="10" icon_texture="textures/ui/beast_icons.png" name="beast_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit22_pct" value="0.02"/>
             <talentvalue level="9" name="beast_outfit22_pct" value="0.1"/>
             <talentvalue level="1" name="beast_outfit22_shw" value="2"/>
             <talentvalue level="9" name="beast_outfit22_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%beast_outfit22_shw resist all">
+        <level count="9" description="+%beast_outfit22_shw all resistances">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%beast_outfit22_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit23" skin="1" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit23_dr" value="1"/>
             <talentvalue level="9" name="beast_outfit23_dr" value="9"/>
@@ -294,7 +294,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum Health" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="beast_outfit31" skin="2" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="beast_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit31_pct" value="1.05"/>
             <talentvalue level="9" name="beast_outfit31_pct" value="1.25"/>
@@ -305,7 +305,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Special Serum" description="Boosts body, focus, and strike stats." icon="9" icon_texture="textures/ui/beast_icons.png" name="beast_outfit32" skin="2" type="passive">
+    <talent descname="Special Serum" description="Boosts Body, Focus, and Strike stats." icon="9" icon_texture="textures/ui/beast_icons.png" name="beast_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit32_pct" value="2"/>
             <talentvalue level="9" name="beast_outfit32_pct" value="10"/>
@@ -316,7 +316,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit33" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit33_dr" value="1"/>
             <talentvalue level="9" name="beast_outfit33_dr" value="9"/>
@@ -327,7 +327,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Simian Rage" description="Increases the damage of powers." icon="7" icon_texture="textures/ui/beast_icons.png" name="beast_outfit41" skin="0" type="passive">
+    <talent descname="Simian Rage" description="Increases the $DMG of all powers." icon="7" icon_texture="textures/ui/beast_icons.png" name="beast_outfit41" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="beast_outfit41_pct" value="1.15"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Reflect Melee" description="Reflects damage back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="beast_outfit42" skin="0" type="passive">
+    <talent descname="Reflect Melee" description="Reflects some $DMG back to melee attackers." icon="19" icon_texture="textures/ui/talent_icons.png" name="beast_outfit42" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit42_pct" value="0.25"/>
             <talentvalue level="9" name="beast_outfit42_pct" value="1.25"/>
@@ -352,7 +352,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Defense" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit43" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="beast_outfit43" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="beast_outfit43_dr" value="1"/>
             <talentvalue level="9" name="beast_outfit43_dr" value="9"/>
