@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Unstoppable Strength" description="Mental resist, immunity to Knockback, Grabs, Stuns and Finishers." name="jugger_resist" type="ability">
+    <talent descname="Unstoppable Strength" description="Mental resist, immunity to knockback, grabs, stuns and finishers." name="jugger_resist" type="ability">
         <level count="1">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="def_stunfreeze" level="0"/>
@@ -268,7 +268,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="3" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="3" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="jugger_outfit12_pct" value="1.2"/>
@@ -290,7 +290,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="11" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit21" skin="1" type="passive">
+    <talent descname="Power Damage" description="Increases the damage of all powers." icon="11" icon_texture="textures/ui/juggernaut_icons.png" name="jugger_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="jugger_outfit21_dmg" value="1.03"/>
             <talentvalue level="9" name="jugger_outfit21_dmg" value="1.15"/>

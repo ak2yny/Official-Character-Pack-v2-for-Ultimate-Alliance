@@ -182,7 +182,7 @@
             <require cat="level" level="%cyclops_p4_req"/>
         </level>
     </talent>
-    <talent descname="Beam Power" description="Increases damage to all beam attacks.  Also gives beam attacks an increased critical hit chance." descshort="Boost" icon="6" icon_texture="textures/ui/cyclops_icons.png" name="cyclops_p7" power="power7" type="boost">
+    <talent descname="Beam Power" description="Increases damage to all beam attacks. Also gives beam attacks an increased critical hit chance." descshort="Boost" icon="6" icon_texture="textures/ui/cyclops_icons.png" name="cyclops_p7" power="power7" type="boost">
         <talentvalues>
             <talentvalue level="1" name="cyclops_p7_req" value="2"/>
             <talentvalue level="5" name="cyclops_p7_req" value="14"/>
@@ -338,7 +338,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Optic Power" description="Increases the amount of $DMG done with optic powers." icon="8" icon_texture="textures/ui/cyclops_icons.png" name="cyc_outfit21" skin="0" type="passive">
+    <talent descname="Optic Power" description="Increases the amount of damage done with optic powers." icon="8" icon_texture="textures/ui/cyclops_icons.png" name="cyc_outfit21" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cyc_outfit21_dmg" value="1.03"/>
             <talentvalue level="9" name="cyc_outfit21_dmg" value="1.15"/>
@@ -371,7 +371,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="cyc_outfit31" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="cyc_outfit31" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cyc_outfit31_dmg" value="1.04"/>
             <talentvalue level="9" name="cyc_outfit31_dmg" value="1.2"/>
@@ -418,7 +418,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Optic Power" description="Increases the amount of $DMG done with optic powers." icon="8" icon_texture="textures/ui/cyclops_icons.png" name="cyc_outfit42" skin="2" type="passive">
+    <talent descname="Optic Power" description="Increases the amount of damage done with optic powers." icon="8" icon_texture="textures/ui/cyclops_icons.png" name="cyc_outfit42" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="cyc_outfit42_dmg" value="1.03"/>
             <talentvalue level="9" name="cyc_outfit42_dmg" value="1.15"/>
