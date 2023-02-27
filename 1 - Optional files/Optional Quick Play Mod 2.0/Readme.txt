@@ -2,7 +2,9 @@ Original Quick Play Mod by Maegawa: https://marvelmods.com/forum/index.php/topic
 
 Update by ak2yny and UltraMegaMagnus
 
+Incompatibility: Outsiders EXG mod.
 
+ 
 Features:
 - Addition of S.H.I.E.L.D. Access Point to the first area. (brandonmeek)
 - Portal activation anywhere. (brandonmeek, Maegawa)

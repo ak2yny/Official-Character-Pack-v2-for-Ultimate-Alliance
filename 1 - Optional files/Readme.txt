@@ -49,6 +49,7 @@ Other:
   Note: This is meant for mod testing.
 - "Optional Save Both Jean and Nightcrawler" contains the mod, where Magneto's able to save both X-Men in Mephosto's Realm.
   Note: This was added in OCP 1, and moved to Optional Files in OCP 2.5.
+- "Optional F4 Trusts Skrulls" allows the skrull bosses to be trusted when using any of the Fantastic Four characters in act 4.
 
 Backups:
 - "Backup obsolete character packages" contains fightstyle packages that are not included in the OCP, because they're useless for the game.
@@ -62,6 +63,6 @@ Credits:
 - Maegawa (Quick Play Mod)
 - nikita488 (roster hack)
 - epicandragon94 (roster hack)
-- Rampage (Daredevil action figure)
+- Rampage (Daredevil action figure, Optional F4 Trusts Skrulls)
 - Various: check OCP 2 main credits (skins, comic missions, stages, herostats, save both X-Men)
 - ak2yny (conversation mods by Raven Software/Shaba Games, Quick Play Mod 2.0 with UltraMegaMagnus, Optional GE stage with UMM & MrK, x_voice with UMM, Ceamonks890 & many more, Ultimate Dark Cyclops by Raven Software/Shaba Games)
