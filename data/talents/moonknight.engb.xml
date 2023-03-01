@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Crescent Darts" description="Launch a spread of Crescent Darts, inflicting $DMG_ENERGY." descshort="Projectile" icon="0" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p1" power="power1">
+    <talent descname="Crescent Darts" description="Launch a spread of crescent carts, inflicting $DMG_ENERGY." descshort="Projectile" icon="0" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p1" power="power1">
         <talentvalues>
             <talentvalue level="1" name="moonk_p1_req" value="1"/>
             <talentvalue level="5" name="moonk_p1_req" value="13"/>
@@ -103,7 +103,7 @@
             <require cat="level" level="%moonk_p3_req"/>
         </level>
     </talent>
-    <talent descname="Boomerang" description="Throw a Crescent boomerang. Hits multiple enemies as you steer it around. $PT_HOLD." descshort="Projectile" icon="3" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p4" power="power4">
+    <talent descname="Boomerang" description="Throw a crescent boomerang. Hits multiple enemies as you steer it around. $PT_HOLD." descshort="Projectile" icon="3" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p4" power="power4">
         <talentvalues>
             <talentvalue level="1" name="moonk_p4_req" value="17"/>
             <talentvalue level="4" name="moonk_p4_req" value="26"/>
@@ -225,7 +225,7 @@
             <require cat="level" level="%moonk_p7_req"/>
         </level>
     </talent>
-    <talent descname="Lunar Eclipse" description="Throw Crescent Darts in a radius,  bouncing off walls and lasting several seconds." descshort="Xtreme" icon="7" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p8" power="team_xtreme" type="team_xtreme">
+    <talent descname="Lunar Eclipse" description="Throw crescent Darts in a radius,  bouncing off walls and lasting several seconds." descshort="Xtreme" icon="7" icon_texture="textures/ui/moonknight_icons.png" name="moonk_p8" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="moonk_p8_req" value="10"/>
             <talentvalue level="8" name="moonk_p8_req" value="45"/>
@@ -284,12 +284,12 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Crescent Damage" description="Increases the amount of $DMG done with Crescent powers." icon="9" icon_texture="textures/ui/moonknight_icons.png" name="moonk_outfit22" skin="1" type="passive">
+    <talent descname="Crescent Damage" description="Increases the amount of damage done with crescent powers." icon="9" icon_texture="textures/ui/moonknight_icons.png" name="moonk_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="moonk_outfit22_dmg" value="1.05"/>
             <talentvalue level="9" name="moonk_outfit22_dmg" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit22_dmg:s $DMG"/>
+        <level count="9" description="%moonk_outfit22_dmg:s crescent $DMG"/>
     </talent>
     <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="moonk_outfit23" skin="1" type="passive">
         <talentvalues>
@@ -318,7 +318,7 @@
             <talentvalue level="1" name="moonk_outfit32_pct" value="1.01"/>
             <talentvalue level="9" name="moonk_outfit32_pct" value="1.05"/>
         </talentvalues>
-        <level count="9" description="%moonk_outfit32_pct:s $EP regeneration">
+        <level count="9" description="+%moonk_outfit32_pct:f% $EP regeneration">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="energy_regen" level="%moonk_outfit32_pct"/>
             </powerup>

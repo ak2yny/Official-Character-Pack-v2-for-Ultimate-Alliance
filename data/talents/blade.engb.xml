@@ -274,7 +274,7 @@
             <talentvalue level="1" name="blade_outfit11_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit11_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit11_show:f% maximum $HP regenerated per second">
+        <level count="9" description="+%blade_outfit11_show:f% maximum $HP regenerated per second">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit11_hlth" />
             </powerup>
@@ -355,7 +355,7 @@
             <talentvalue level="1" name="blade_outfit32_show" value="0.4" />
             <talentvalue level="9" name="blade_outfit32_show" value="1.2" />
         </talentvalues>
-        <level count="9" description="%blade_outfit32_show:f% maximum $HP regenerated per second">
+        <level count="9" description="+%blade_outfit32_show:f% maximum $HP regenerated per second">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%blade_outfit32_hlth" />
             </powerup>
