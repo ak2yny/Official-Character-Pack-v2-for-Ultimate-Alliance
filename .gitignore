@@ -1,12 +1,18 @@
 # Use this file to set up the folders/files that should not be pushed to the server and tracked in Changes / History tab
 
-#_ignore/actors_anims/ - this is example of folder exclusion
+# Examples:
 # *.txt - ignores all txt files in this repo.
+# _ignore/actors_anims/ - this is example of folder exclusion
 # _ignore/**/*.bak - ignore all "bak" files located anywhere in the "_ignore" folder
 
+# Decompiled formats:
 *.json
 *.xml
+
+# Links to OHS herostats that ak2yny uses:
 1 - Optional files/0 Data files decompiled/Herostats split
 1 - Optional files/0 Data files decompiled/Herostats split (installed).lnk
+
+# Packaging of the OCP folder (.rar and .zip) to avoid commit accidents:
 Official-Character-Pack-v2-for-Ultimate-Alliance.rar
 Official-Character-Pack-v2-for-Ultimate-Alliance.zip
