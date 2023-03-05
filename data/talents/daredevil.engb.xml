@@ -256,7 +256,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Baton Damage" description="Increases the amount of damage done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit12" skin="0" type="passive">
+    <talent descname="Baton Damage" description="Increases the amount of $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="devil_outfit12_pct" value="1.15"/>
@@ -278,7 +278,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Baton Damage" description="Increases the amount of damage done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit21" skin="1" type="passive">
+    <talent descname="Baton Damage" description="Increases the amount of $DMG done with batons." icon="3" icon_texture="textures/ui/daredevil_icons.png" name="devil_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit21_pct" value="1.03"/>
             <talentvalue level="9" name="devil_outfit21_pct" value="1.15"/>
@@ -353,7 +353,7 @@
             <powerup chance="%devil_outfit41_pct" class="skillincrease" level="1" life="-1"/>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="devil_outfit42" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="devil_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="devil_outfit42_pct" value="1.04"/>
             <talentvalue level="9" name="devil_outfit42_pct" value="1.2"/>

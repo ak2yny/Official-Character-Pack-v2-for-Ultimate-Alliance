@@ -259,7 +259,7 @@
             <require cat="level" level="%wolv_p7_req"/>
         </level>
     </talent>
-    <talent descname="Taunt" description="Forces enemies to attack Wolverine. Affected enemies do less damage and are forced to melee." descshort="Debuff" icon="7" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p8" parent="wolv_p7" type="boost">
+    <talent descname="Taunt" description="Forces enemies to attack Wolverine.  Affected enemies do less damage and are forced to melee." descshort="Debuff" icon="7" icon_texture="textures/ui/wolverine_icons1.png" name="wolv_p8" parent="wolv_p7" type="boost">
         <level description="%wolv_p8_dmg:s $DMG\n%wolv_p8_life seconds\n%wolv_p8_pwr $EP">
             <tier cost="1" count="5"/>
             <tier cost="2" count="4"/>

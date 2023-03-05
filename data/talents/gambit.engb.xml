@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Energy Immunity" description="100% Immune to $DMG_ENERGY." name="gam_resist" type="ability">
+    <talent descname="Energy Immunity" description="100% immune to $DMG_ENERGY." name="gam_resist" type="ability">
         <level count="1">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_energy" level="0" />
@@ -298,7 +298,7 @@
             <require cat="level" level="%gam_pickup_req" />
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the damage of all powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="9" icon_texture="textures/ui/gambit_icons.png" name="gam_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit11_pct" value="1.03" />
             <talentvalue level="9" name="gam_outfit11_pct" value="1.15" />
@@ -369,7 +369,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="gam_outfit31" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="gam_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="gam_outfit31_dmg" value="1.04" />
             <talentvalue level="9" name="gam_outfit31_dmg" value="1.2" />

@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Mental Immunity" description="Immunity to all mind controlling effects and mental damage." icon="27" icon_texture="textures/ui/talent_icons.png" name="mental_immune" type="ability">
+    <talent descname="Mental Immunity" description="Immunity to all mind controlling effects and $DMG_MENTAL." icon="27" icon_texture="textures/ui/talent_icons.png" name="mental_immune" type="ability">
         <level count="1" description="None">
             <powerup life="-1" remove_on_death="true">
                 <affecter attribute="resist_mental" level="1" />
@@ -282,7 +282,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Blade Mastery" description="Increases the damage of all melee attacks." icon="1" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit31" skin="2" type="passive">
+    <talent descname="Blade Mastery" description="Increases the $DMG of all melee attacks." icon="1" icon_texture="textures/ui/psylocke_icons.png" name="psylocke_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="psyloc_outfit31_pct" value="1.04" />
             <talentvalue level="9" name="psyloc_outfit31_pct" value="1.2" />

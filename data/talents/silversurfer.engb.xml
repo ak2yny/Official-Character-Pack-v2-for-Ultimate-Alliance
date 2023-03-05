@@ -227,7 +227,7 @@
             <require cat="level" level="%silver_p7_req"/>
         </level>
     </talent>
-    <talent descname="Galactic Might" description="Calls down a beam from the cosmos, building up and energizing nearby enemies. Deals extra damage if victim is slowed, frozen, or stunned. Also restores party $HP and $EP." descshort="Xtreme" icon="8" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p9" power="team_xtreme" type="team_xtreme">
+    <talent descname="Galactic Might" description="Calls down a beam from the cosmos, building up and energizing nearby enemies. Deals extra $DMG if victim is slowed, frozen, or stunned. Also restores party $HP and $EP." descshort="Xtreme" icon="8" icon_texture="textures/ui/silversurfer_icons.png" name="silver_p9" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="silver_p9_req" value="10"/>
             <talentvalue level="8" name="silver_p9_req" value="45"/>
@@ -257,7 +257,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Cosmic Mastery" description="Increases the damage of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
+    <talent descname="Cosmic Mastery" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit12_pct" value="1.03"/>
             <talentvalue level="9" name="silvr_outfit12_pct" value="1.15"/>
@@ -312,7 +312,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the damage of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="silver_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit31_pct" value="1.03"/>
             <talentvalue level="9" name="silvr_outfit31_pct" value="1.15"/>
@@ -345,7 +345,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="silver_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="silvr_outfit41_pct" value="1.04"/>
             <talentvalue level="9" name="silvr_outfit41_pct" value="1.2"/>

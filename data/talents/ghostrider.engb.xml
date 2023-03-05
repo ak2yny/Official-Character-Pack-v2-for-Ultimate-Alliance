@@ -163,7 +163,7 @@
             <require cat="level" level="%ghost_p5_req" />
         </level>
     </talent>
-    <talent descname="Penance Stare" description="Scares enemies into feeling remorse for the sins they've commited. For a time, any damage inflicted on them will come back as $EP for Ghost Rider." descshort="Debuff" icon="5" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p6" power="power6" type="boost">
+    <talent descname="Penance Stare" description="Scares enemies into feeling remorse for the sins they've commited. For a time, any $DMG inflicted on them will come back as $EP for Ghost Rider." descshort="Debuff" icon="5" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_p6" power="power6" type="boost">
         <talentvalues>
             <talentvalue level="1" name="ghost_p6_req" value="14" />
             <talentvalue level="2" name="ghost_p6_req" value="17" />
@@ -243,7 +243,7 @@
             <require cat="level" level="%ghost_p9_req" />
         </level>
     </talent>
-    <talent descname="Hellfire Damage" description="Increases the amount of damage done with hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit11" skin="0" type="passive">
+    <talent descname="Hellfire Damage" description="Increases the amount of $DMG done with Hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit11_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit11_pct" value="1.15" />
@@ -254,7 +254,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ghost_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit12_pct" value="1.04" />
             <talentvalue level="9" name="ghost_outfit12_pct" value="1.2" />
@@ -276,7 +276,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Chain Damage" description="Increases the amount of damage done with chain attacks." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit21" skin="1" type="passive">
+    <talent descname="Chain Damage" description="Increases the amount of $DMG done with chain attacks." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit21_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit21_pct" value="1.15" />
@@ -307,7 +307,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Hellfire Damage" description="Increases the amount of damage done with hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit31" skin="2" type="passive">
+    <talent descname="Hellfire Damage" description="Increases the amount of $DMG done with Hellfire attacks." icon="0" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit31_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit31_pct" value="1.15" />
@@ -340,7 +340,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Chain Damage" description="Increases the amount of damage done with chain attacks." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit41" skin="3" type="passive">
+    <talent descname="Chain Damage" description="Increases the amount of $DMG done with chain attacks." icon="7" icon_texture="textures/ui/ghostrider_icons.png" name="ghost_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ghost_outfit41_pct" value="1.03" />
             <talentvalue level="9" name="ghost_outfit41_pct" value="1.15" />

@@ -261,7 +261,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="dead_outfit12" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="dead_outfit12" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit12_pct" value="1.04"/>
             <talentvalue level="9" name="dead_outfit12_pct" value="1.2"/>
@@ -356,7 +356,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Weapon Damage" description="Increases the amount of damage done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="dead_outfit41" skin="3" type="passive">
+    <talent descname="Weapon Damage" description="Increases the amount of $DMG done with weapons." icon="0" icon_texture="textures/ui/talent_icons.png" name="dead_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="dead_outfit41_pct" value="1.03"/>
             <talentvalue level="9" name="dead_outfit41_pct" value="1.15"/>

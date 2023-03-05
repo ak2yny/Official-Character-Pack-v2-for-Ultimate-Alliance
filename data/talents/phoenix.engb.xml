@@ -93,7 +93,7 @@
             <require cat="level" level="%pho_mind_blast_req"/>
         </level>
     </talent>
-    <talent descname="Psychic Fury" description="Gives Jean and allies mental damage bonus on all melee attacks for a time." descshort="Boost" icon="3" icon_texture="textures/ui/phoenix_icons1.png" name="pho_psych_fury" power="power4" type="boost">
+    <talent descname="Psychic Fury" description="Gives Jean and allies $DMG_MENTAL bonus on all melee attacks for a time." descshort="Boost" icon="3" icon_texture="textures/ui/phoenix_icons1.png" name="pho_psych_fury" power="power4" type="boost">
         <talentvalues>
             <talentvalue level="1" name="pho_psych_fury_req" value="2"/>
             <talentvalue level="5" name="pho_psych_fury_req" value="14"/>
@@ -169,7 +169,7 @@
             <require cat="level" level="%pho_mind_fry_req"/>
         </level>
     </talent>
-    <talent descname="Phoenix Force" description="Xtreme radial attack dealing mental damage with a chance to convert enemies." descshort="Xtreme" icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_pho_force" power="team_xtreme" type="team_xtreme">
+    <talent descname="Phoenix Force" description="Xtreme radial attack dealing $DMG_MENTAL with a chance to convert enemies." descshort="Xtreme" icon="8" icon_texture="textures/ui/phoenix_icons1.png" name="pho_pho_force" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="pho_pho_force_req" value="10"/>
             <talentvalue level="1" name="pho_pho_force_dmg" value="85 96"/>

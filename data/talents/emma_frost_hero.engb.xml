@@ -180,7 +180,7 @@
             <require cat="level" level="%frost_p6_req"/>
         </level>
     </talent>
-    <talent descname="Psychic Bedlam" description="Xtreme radial attack dealing mental damage with a chance to convert enemies." descshort="Xtreme" icon="6" icon_texture="textures/ui/frost_icons.png" name="frost_p7" power="team_xtreme" type="team_xtreme">
+    <talent descname="Psychic Bedlam" description="Xtreme radial attack dealing $DMG_MENTAL with a chance to convert enemies." descshort="Xtreme" icon="6" icon_texture="textures/ui/frost_icons.png" name="frost_p7" power="team_xtreme" type="team_xtreme">
         <talentvalues>
             <talentvalue level="1" name="frost_p7_req" value="10"/>
             <talentvalue level="8" name="frost_p7_req" value="45"/>
@@ -311,7 +311,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="frost_outfit42" skin="3" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="frost_outfit42" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="frost_outfit42_pct" value="1.04"/>
             <talentvalue level="9" name="frost_outfit42_pct" value="1.2"/>

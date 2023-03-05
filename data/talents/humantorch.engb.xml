@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Fire Immunity" description="100% Immune to $DMG_FIRE." name="humant_resist" type="ability">
+    <talent descname="Fire Immunity" description="100% immune to $DMG_FIRE." name="humant_resist" type="ability">
         <level count="1">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0" />

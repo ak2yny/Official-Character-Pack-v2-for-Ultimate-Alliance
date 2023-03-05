@@ -196,7 +196,7 @@
             <require cat="level" level="%captam_p8_req"/>
         </level>
     </talent>
-    <talent descname="Avenger's Shield" description="Greatly increase the damage done by all other team Xtreme attacks.\nThrow shield in a giant arc, circling around and striking all enemies in the area with massive $DMG_PHYSICAL." descshort="Xtreme" icon="8" icon_texture="textures/ui/america_icons.png" name="captam_p9" power="team_xtreme" type="xtreme">
+    <talent descname="Avenger's Shield" description="Greatly increase the $DMG done by all other team Xtreme attacks.\nThrow shield in a giant arc, circling around and striking all enemies in the area with massive $DMG_PHYSICAL." descshort="Xtreme" icon="8" icon_texture="textures/ui/america_icons.png" name="captam_p9" power="team_xtreme" type="xtreme">
         <talentvalues>
             <talentvalue level="1" name="captam_p9_req" value="10"/>
             <talentvalue level="8" name="captam_p9_req" value="54"/>
@@ -211,7 +211,7 @@
             <require cat="level" level="%captam_p9_req"/>
         </level>
     </talent>
-    <talent descname="Shield Mastery" description="Increases the amount of damage done with his shield." icon="5" icon_texture="textures/ui/america_icons.png" name="captam_outfit11" skin="0" type="passive">
+    <talent descname="Shield Mastery" description="Increases the amount of $DMG done with his shield." icon="5" icon_texture="textures/ui/america_icons.png" name="captam_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="captam_outfit11_pct" value="1.05"/>
             <talentvalue level="9" name="captam_outfit11_pct" value="1.15"/>
@@ -286,7 +286,7 @@
             <powerup apply_ally="all" chance="%captam_outfit31_pct" class="skillincrease" level="3" life="-1"/>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="captam_outfit32" skin="2" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="captam_outfit32" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="captam_outfit32_pct" value="1.04"/>
             <talentvalue level="9" name="captam_outfit32_pct" value="1.2"/>

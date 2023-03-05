@@ -323,7 +323,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="ronin_outfit21" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit21_pct" value="1.04"/>
             <talentvalue level="9" name="ronin_outfit21_pct" value="1.2"/>
@@ -394,7 +394,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Bleed Damage" description="Chance to cause $DMG_BLEED on attacks." icon="8" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit41" skin="3" type="passive">
+    <talent descname="Bleed Damage" description="Adds a chance to cause $DMG_BLEED to all melee attacks." icon="8" icon_texture="textures/ui/ronin_icons.png" name="ronin_outfit41" skin="3" type="passive">
         <talentvalues>
             <talentvalue level="1" name="ronin_outfit41_dmg" value="0.03"/>
             <talentvalue level="9" name="ronin_outfit41_dmg" value="0.15"/>

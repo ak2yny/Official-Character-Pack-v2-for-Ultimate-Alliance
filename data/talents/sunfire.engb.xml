@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Fire Immunity" description="100% Immune to $DMG_FIRE." name="sunfire_resist" type="ability">
+    <talent descname="Fire Immunity" description="100% imune to $DMG_FIRE." name="sunfire_resist" type="ability">
         <level count="1">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="def_damage_scope" damagetype="dmg_fire" level="0"/>
@@ -215,7 +215,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Martial Arts" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit22" skin="1" type="passive">
+    <talent descname="Martial Arts" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="sunf_outfit22" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="sunf_outfit22_pct" value="1.04"/>
             <talentvalue level="9" name="sunf_outfit22_pct" value="1.2"/>

@@ -292,7 +292,7 @@
             <require cat="level" level="%blackwidow_p9_req"/>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the damage of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="widow_outfit11" skin="0" type="passive">
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="widow_outfit11" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit11_pct" value="1.04"/>
             <talentvalue level="9" name="widow_outfit11_pct" value="1.2"/>
@@ -366,7 +366,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Gun Mastery" description="Increases the amount of damage done with guns." icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="widow_outfit31" skin="2" type="passive">
+    <talent descname="Gun Mastery" description="Increases the amount of $DMG done with guns." icon="0" icon_texture="textures/ui/blackwidow_icons.png" name="widow_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="widow_outfit31_pct" value="1.05"/>
             <talentvalue level="9" name="widow_outfit31_pct" value="1.15"/>
