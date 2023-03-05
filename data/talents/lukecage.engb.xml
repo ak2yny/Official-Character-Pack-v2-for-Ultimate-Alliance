@@ -253,7 +253,7 @@
             <talentvalue level="1" name="lukec_outfit11_shw" value="0.4"/>
             <talentvalue level="9" name="lukec_outfit11_shw" value="1.2"/>
         </talentvalues>
-        <level count="9" description="+%lukec_outfit11_shw:f% maximum $HP regenerated per second">
+        <level count="9" description="%lukec_outfit11_shw:f% maximum $HP regenerated per second">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="health_regen_pct" level="%lukec_outfit11_hlt"/>
             </powerup>
