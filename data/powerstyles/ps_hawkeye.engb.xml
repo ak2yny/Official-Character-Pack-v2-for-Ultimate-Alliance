@@ -1,306 +1,292 @@
 <PowerStyle iconfile="textures/ui/hawkeye_icons.png">
     <event inherit="powerup" life="2" name="electrified" no_stack="true">
-        <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
-        <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
-        <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
-        <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true"/>
+        <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true"/>
+        <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true"/>
+        <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true"/>
     </event>
     <event class="freeze" inherit="powerup" name="freeze_powerup" no_shatter_on_damage="true" renderfx="chilled" shatter_on_finisher="true" sound1="char/hwkeye_m/p4_impact" sound2="char/hwkeye_m/p4_explode" user1="2">
-        <special_fx bolt="Bip01 Spine2" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true" />
-        <special_fx effect="char/iceman/special_frozen" fxlevel="3" how_used="primary" never_cycle="true" />
-        <special_fx effect="char/iceman/special_frozen" fxlevel="2" how_used="custom" tag="1" />
+        <special_fx bolt="Bip01 Spine2" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true"/>
+        <special_fx effect="char/iceman/special_frozen" fxlevel="3" how_used="primary" never_cycle="true"/>
+        <special_fx effect="char/iceman/special_frozen" fxlevel="2" how_used="custom" tag="1"/>
     </event>
     <event inherit="powerup" kill_fx_on_death="false" name="chill_powerup" renderfx="chilled">
-        <special_fx bolt="Bip01 Head" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 Head" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true"/>
     </event>
-    <event inherit="skinsegment" name="draw_bow" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" />
-    <event inherit="skinsegment" name="holster_bow" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" />
-    <event inherit="skinsegment" name="pull_bow" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" />
-    <event inherit="skinsegment" name="release_bow" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" />
-    <event inherit="skinsegment" name="show_arrow" show="true" skinsegment="20301_arrow_R_hand_segment" />
-    <event inherit="skinsegment" name="hide_arrow" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ball_R_hand_segment" />
-    <event inherit="skinsegment" name="show_lavaball" show="true" skinsegment="20301_ball_R_hand_segment" />
-    <event inherit="skinsegment" name="show_iceshard" show="true" skinsegment="20301_ice_R_hand_segment" />
-    <event inherit="skinsegment" name="hide_iceshard" show="false" show2="false" skinsegment="20301_ice_R_hand_segment" skinsegment2="20301_glue_R_hand_segment" />
-    <event inherit="skinsegment" name="show_glueglob" show="true" skinsegment="20301_glue_R_hand_segment" />
-    <event inherit="skinsegment" name="show_missile" show="true" skinsegment="20301_missile_R_hand_segment" />
-    <event inherit="skinsegment" name="hide_missile" show="false" show2="false" skinsegment="20301_missile_R_hand_segment" skinsegment2="20301_bird_R_hand_segment" />
-    <event inherit="skinsegment" name="show_bird" show="true" skinsegment="20301_bird_R_hand_segment" />
-    <event entity="glue_arrow" filename="ents_hawk" inherit="relative_spawn" name="glue_attack" relative="target" type="ce_atk_spawn_relative" />
     <FightMove animenum="ea_power10" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
-        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_hawkeye_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.1" />
-        <trigger damage="4 5" knockback="0" maxrange="64" name="punch" offset="-20" time="0.3" victimeventtag="1" />
-        <trigger name="sound" sound="char/hwkeye_m/draw_sword" time="0.3" />
-        <trigger class="harming" damage="2 3" life="2.0" name="powerup" tag="1" time="-1" use_trait_scale="true" />
-        <trigger name="sound" sound="char/hwkeye_m/sheath_sword" time="0.7" />
-        <trigger name="victim_release" ownertime="2" time="0.5" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.91" />
-        <chain action="idle" result="idle" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_hawkeye_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.1"/>
+        <trigger damage="4 5" knockback="0" maxrange="64" name="punch" offset="-20" time="0.3" victimeventtag="1"/>
+        <trigger name="sound" sound="char/hwkeye_m/draw_sword" time="0.3"/>
+        <trigger class="harming" damage="2 3" life="2.0" name="powerup" tag="1" time="-1" use_trait_scale="true"/>
+        <trigger name="sound" sound="char/hwkeye_m/sheath_sword" time="0.7"/>
+        <trigger name="victim_release" ownertime="2" time="0.5"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.91"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_attack_jumpslamloop" fallback="jumpsmash" handler="ch_jump_smash" name="jumpsmash" playspeed="1.0" startchaintime="0.8" turnrate="0.5">
-        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0" />
-        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" sound="common/melee/js_charge_loop" tag="100" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" sound="common/melee/js_charge_loop" tag="100" time="-1"/>
         <trigger life="-1" name="powerup" remove_on_node_end="true" time="0.0">
-            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary"/>
         </trigger>
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.3" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="-1" />
-        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
-        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
-        <trigger charge_type="stop" critical="on_interrupt" name="charge" time="-1" />
-        <chain action="idle" result="jumpsmash_release" />
-        <chain action="special" result="jumpsmash_release2" />
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.3"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="-1"/>
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8"/>
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8"/>
+        <trigger charge_type="stop" critical="on_interrupt" name="charge" time="-1"/>
+        <chain action="idle" result="jumpsmash_release"/>
+        <chain action="special" result="jumpsmash_release2"/>
     </FightMove>
     <FightMove animenum="ea_attack_jumpslamland" fallback="jumpsmash_release" lockangles="true" name="jumpsmash_release" playspeed="1.0" startchaintime="0.8">
-        <event damage="4 5" damagescale="normal" damagetype="dmg_bleed" inherit="radial" knockback="190" name="ground_smash" victimeventtag="13" />
-        <trigger class="harming" damage="1 2" life="2.0" name="powerup" tag="13" time="-1" />
-        <trigger charge_type="stop" name="charge" time="0" />
-        <trigger name="sound" sound="common/melee/dmg_knockback" time="0" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0" />
-        <trigger name="whoosh_heavy" time="0" />
-        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
-        <trigger height="-36" name="ground_smash" tag="10" time="0.1" />
-        <trigger maxrange="35" name="ground_smash" tag="11" time="0.2" />
-        <trigger maxrange="35" name="ground_smash" tag="12" time="0.3" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.8" />
-        <chain action="idle" result="idle" />
+        <event damage="4 5" damagescale="normal" damagetype="dmg_bleed" inherit="radial" knockback="190" name="ground_smash" victimeventtag="13"/>
+        <trigger class="harming" damage="1 2" life="2.0" name="powerup" tag="13" time="-1"/>
+        <trigger charge_type="stop" name="charge" time="0"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0"/>
+        <trigger name="whoosh_heavy" time="0"/>
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="8" time="0.37" width="8"/>
+        <trigger height="-36" name="ground_smash" tag="10" time="0.1"/>
+        <trigger maxrange="35" name="ground_smash" tag="11" time="0.2"/>
+        <trigger maxrange="35" name="ground_smash" tag="12" time="0.3"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.8"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove fallback="jumpsmash_release2" inherit="jumpsmash_release" name="jumpsmash_release2">
         <trigger tag="10">
-            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_auto_knockback"/>
         </trigger>
         <trigger maxrange="60" tag="11">
-            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_auto_knockback"/>
         </trigger>
         <trigger maxrange="60" tag="12">
-            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_auto_knockback"/>
         </trigger>
-        <trigger effect="base/hit/hit_jumpsmash" name="effect" time="0.16" />
+        <trigger effect="base/hit/hit_jumpsmash" name="effect" time="0.16"/>
     </FightMove>
     <FightMove aireusetime="5.0" aitype="projectile" animenum="ea_power1" icon="0" is_power="true" lockangles="true" name="power1" priority="5" storepowerbuttons="true">
-        <require cat="skill" item="hawk_p1" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p1_pwr" time="0.0" />
-        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/hwkeye_m/p1_charge" time="0.33" />
-        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0.33" />
-        <trigger bolt="Bip01 L Hand" effect="char/hawk/p3_charge" fxlevel="6" name="effect_sound" sound="char/hwkeye_m/p1_max" tag="100" time="-1" />
+        <require cat="skill" item="hawk_p1" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p1_pwr" time="0.0"/>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/hwkeye_m/p1_charge" time="0.33"/>
+        <trigger charge="0" charge_time="2" charged_eventtag="100" name="charge" time="0.33"/>
+        <trigger bolt="Bip01 L Hand" effect="char/hawk/p3_charge" fxlevel="6" name="effect_sound" sound="char/hwkeye_m/p1_max" tag="100" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="hawk_p1_link" time="0.0">
-            <special_fx bolt="Bip01 L Hand" effect="char/hawk/p3_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="char/hawk/p3_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.33" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.75" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.99" />
-        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
-        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="-1" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="-1" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="-1" />
-        <chain action="Idle" result="power1_loop" />
-        <chain action="samepowerhold" result="power1_loop" />
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.33"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.75"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.99"/>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="-1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="-1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="-1"/>
+        <chain action="Idle" result="power1_loop"/>
+        <chain action="samepowerhold" result="power1_loop"/>
     </FightMove>
     <FightMove animenum="ea_power1_loop" combotextfinisher="Shot" combotextstarter="Multi" icon="0" is_power="true" lockangles="false" locktransitionangles="true" name="power1_loop" playspeed="0.85" priority="5" storepowerbuttons="true" turnrate="0.4">
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0" />
-        <trigger min_charge="1" name="filter" passtag="10" time="0" />
-        <trigger loop_type="start" name="sound" sound="char/hwkeye_m/p1_max_loop" tag="10" time="-1" />
-        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
-        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="-1" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="-1" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="-1" />
-        <chain action="Idle" result="power1_release" />
-        <chain action="samepowerhold" result="power1_loop" />
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0"/>
+        <trigger min_charge="1" name="filter" passtag="10" time="0"/>
+        <trigger loop_type="start" name="sound" sound="char/hwkeye_m/p1_max_loop" tag="10" time="-1"/>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="-1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="-1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="-1"/>
+        <chain action="Idle" result="power1_release"/>
+        <chain action="samepowerhold" result="power1_loop"/>
     </FightMove>
     <FightMove aitype="projectile" animenum="ea_power1_end" icon="0" is_power="true" name="power1_release" priority="5">
-        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
-        <trigger effect="char/hawk/p1_power" name="effect" time="0.0" />
-        <trigger name="effect_sound" sound="char/hwkeye_m/p1_release" time="0.0" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="0.0" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="0.0" />
-        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="0.0" />
-        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 35" attacktype="projectile" count="%hawk_p1_cnt" damage="%hawk_p1_dmg" damagetype="dmg_physical" entity="porc_arrow" filename="ents_hawkeye" maxrange="800" name="projectile" pierce="true" speed="1800" time="0.0" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.6" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.0" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.0" />
-        <chain action="Idle" result="idle" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0"/>
+        <trigger effect="char/hawk/p1_power" name="effect" time="0.0"/>
+        <trigger name="effect_sound" sound="char/hwkeye_m/p1_release" time="0.0"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_max_loop" time="0.0"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/hwkeye_m/p1_charge" time="0.0"/>
+        <trigger critical="true" name="powerup" remove_tag="hawk_p1_link" time="0.0"/>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 35" attacktype="projectile" count="%hawk_p1_cnt" damage="%hawk_p1_dmg" damagetype="dmg_physical" entity="porc_arrow" filename="ents_hawkeye" maxrange="800" name="projectile" pierce="true" speed="1800" time="0.0"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.6"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.0"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.0"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aitype="projectile" animenum="ea_power2" icon="1" is_power="true" lockspeed="false" name="power2" powerup_tag="hawk_p2" priority="5" startchaintime="0.7" turnrate="0.3">
-        <require cat="skill" item="hawk_p2" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p2_pwr" time="0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.33" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.75" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.99" />
-        <chain action="Idle" result="power2_loop" />
+        <require cat="skill" item="hawk_p2" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p2_pwr" time="0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.33"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.75"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.99"/>
+        <chain action="Idle" result="power2_loop"/>
     </FightMove>
     <FightMove aitype="projectile" animenum="ea_power2_loop" blendtime="0.1" combotextfinisher="Paralyzer" combotextstarter="Paralyzer" energypersecond="%hawk_p2_pwr" icon="1" is_power="true" lockspeed="false" locktransitionangles="true" name="power2_loop" noautoaim="true" playspeed="%hawk_p2_spd" powerup_tag="hawk_p2" priority="5" startchaintime="0.8" turnrate="0.3">
         <event actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="42 -5 58" attacktype="projectile" count="3" damage="%hawk_p2_dmg" damagescale="none" damagetype="dmg_physical" entity="rapid_arrow" filename="ents_hawkeye" fulltargeting="true" inherit="projectile" knockback="120" life="0.65" maxrange="800" name="rapid_fire" pierce="true" speed="600" targetable="true">
-            <damageMod name="dmgmod_stun" />
+            <damageMod name="dmgmod_stun"/>
         </event>
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.1" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.5" />
-        <trigger name="sound" sound="char/hwkeye_m/p2_intro" time="0.5" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.8" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.75" />
-        <trigger damage="0" damagetype="dmg_physical" name="hitme" tag="102" time="-1" type="ce_atk_self" />
-        <trigger index="1" name="rapid_fire" time="0.8" />
-        <trigger bolt="Bip01 R Hand" effect="char/hawk/p2_power" fxlevel="2" name="effect" time="0.8" />
-        <trigger button="samepowerclick" name="button_hint" time="0" />
-        <trigger name="sound" sound="char/hwkeye_m/p2_power" time="0.5" />
-        <chain action="Idle" result="power2_end" />
-        <chain action="samepowerclick" result="power2_loop" />
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.1"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.5"/>
+        <trigger name="sound" sound="char/hwkeye_m/p2_intro" time="0.5"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.8"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.75"/>
+        <trigger damage="0" damagetype="dmg_physical" name="hitme" tag="102" time="-1" type="ce_atk_self"/>
+        <trigger index="1" name="rapid_fire" time="0.8"/>
+        <trigger bolt="Bip01 R Hand" effect="char/hawk/p2_power" fxlevel="2" name="effect" time="0.8"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger name="sound" sound="char/hwkeye_m/p2_power" time="0.5"/>
+        <chain action="Idle" result="power2_end"/>
+        <chain action="samepowerclick" result="power2_loop"/>
     </FightMove>
     <FightMove animenum="ea_power2_end" icon="1" is_power="true" lockspeed="false" locktransitionangles="true" name="power2_end" noautoaim="true" priority="5" turnrate="0.3">
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.0" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.0" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.6" />
-        <chain action="Idle" result="idle" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.0"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.0"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.6"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="5.0" aitype="rangednolos" animenum="ea_power3" combotextfinisher="Arrow" combotextstarter="Adamantium Hellfire" icon="2" is_power="true" lockangles="true" locktransitionangles="true" name="power3" priority="5" turnrate="0.5">
-        <require cat="skill" item="hawk_p3" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p3_pwr" time="0.0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2" />
-        <trigger name="sound" sound="char/hwkeye_m/p2_intro" time="0.2" />
-        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ball_R_segment" time="0.25" />
-        <trigger effect="char/hawk/p3_arrowbow" name="effect" time="0.35" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.4" />
-        <trigger name="sound" sound="char/hwkeye_m/p3_power" time="0.55" />
-        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ball_R_segment" time="0.55" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.55" />
-        <trigger effect="char/hawk/p3_arrow" name="effect" time="0.55" />
-        <trigger attacktype="direct" damage="%hawk_p3_dmg" damagetype="dmg_fire" fxlevel="1" hiteffect="char/hawk/p3_impact" inherit="blast" maxrange="500" name="hellfire" radius="120" targetable="true" time="0.95" victimeventtag="100" />
-        <trigger name="sound" sound="char/hwkeye_m/p3_whoosh" time="0.95" />
-        <trigger failtag="120" filteractor="true" name="filter" passtag="101" tag="100" time="-1" />
+        <require cat="skill" item="hawk_p3" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p3_pwr" time="0.0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2"/>
+        <trigger name="sound" sound="char/hwkeye_m/p2_intro" time="0.2"/>
+        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ball_R_segment" time="0.25"/>
+        <trigger effect="char/hawk/p3_arrowbow" name="effect" time="0.35"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.4"/>
+        <trigger name="sound" sound="char/hwkeye_m/p3_power" time="0.55"/>
+        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ball_R_segment" time="0.55"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.55"/>
+        <trigger effect="char/hawk/p3_arrow" name="effect" time="0.55"/>
+        <trigger attacktype="direct" damage="%hawk_p3_dmg" damagetype="dmg_fire" fxlevel="1" hiteffect="char/hawk/p3_impact" inherit="blast" maxrange="500" name="hellfire" radius="120" targetable="true" time="0.95" victimeventtag="100"/>
+        <trigger name="sound" sound="char/hwkeye_m/p3_whoosh" time="0.95"/>
+        <trigger failtag="120" filteractor="true" name="filter" passtag="101" tag="100" time="-1"/>
         <trigger class="harming" damage="%hawk_p3_dmg" damagetype="dmg_fire" life="2.0" name="powerup" next_eventtag="102" tag="101" time="-1">
-            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_impact" fxlevel="1" how_used="primary" />
-            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_power" fxlevel="1" how_used="primary" />
-            <damageMod remove="dmgmod_no_pain" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_impact" fxlevel="1" how_used="primary"/>
+            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_power" fxlevel="1" how_used="primary"/>
+            <damageMod remove="dmgmod_no_pain"/>
         </trigger>
         <trigger allow_non_actors="true" class="harming" damage="%hawk_p3_dmg2" damagetype="dmg_fire" life="2.0" name="powerup" tag="120" time="-1">
-            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_aura" fxlevel="2" how_used="primary" />
-            <damageMod remove="dmgmod_no_pain" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/hawk/p3_aura" fxlevel="2" how_used="primary"/>
+            <damageMod remove="dmgmod_no_pain"/>
         </trigger>
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.9" />
-        <chain action="Idle" result="idle" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.9"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="aoe" animenum="ea_power4" combotextfinisher="Pick" combotextstarter="Ice" icon="3" is_power="true" lockangles="true" name="power4" noautoaim="true" priority="5">
-        <require cat="skill" item="hawk_p4" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p4_pwr" time="0.0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.08" />
-        <trigger name="sound" sound="char/hwkeye_m/p4_charge" time="0.13" />
-        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ice_R_hand_segment" time="0.24" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.38" />
-        <trigger name="sound" sound="char/hwkeye_m/p4_pull" time="0.38" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.42" />
-        <trigger name="sound" sound="char/hwkeye_m/p4_pull" time="0.42" />
-        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ice_R_hand_segment" time="0.42" />
-        <trigger bolt="Bip01 L Hand" effect="char/hawk/p4_power" fxlevel="4" name="effect" time="0.42" />
-        <trigger name="sound" sound="char/hwkeye_m/p4_shoot" time="0.42" />
-        <trigger effect="char/hawk/p4_power" fxlevel="3" name="effect" time="0.47" />
-        <trigger name="sound" sound="char/hwkeye_m/p4_power" time="0.47" />
+        <require cat="skill" item="hawk_p4" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p4_pwr" time="0.0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.08"/>
+        <trigger name="sound" sound="char/hwkeye_m/p4_charge" time="0.13"/>
+        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ice_R_hand_segment" time="0.24"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.38"/>
+        <trigger name="sound" sound="char/hwkeye_m/p4_pull" time="0.38"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.42"/>
+        <trigger name="sound" sound="char/hwkeye_m/p4_pull" time="0.42"/>
+        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_ice_R_hand_segment" time="0.42"/>
+        <trigger bolt="Bip01 L Hand" effect="char/hawk/p4_power" fxlevel="4" name="effect" time="0.42"/>
+        <trigger name="sound" sound="char/hwkeye_m/p4_shoot" time="0.42"/>
+        <trigger effect="char/hawk/p4_power" fxlevel="3" name="effect" time="0.47"/>
+        <trigger name="sound" sound="char/hwkeye_m/p4_power" time="0.47"/>
         <trigger damage="%hawk_p4_dmg" damagetype="dmg_energy" hiteffect="char/captmarvel/p2_impact" knockback="%hawk_p4_kb" maxrange="160" name="radial" time="0.47" victimeventtag="20">
-            <damageMod name="dmgmod_environment" />
-            <damageMod name="dmgmod_extinguish" />
+            <damageMod name="dmgmod_environment"/>
+            <damageMod name="dmgmod_extinguish"/>
         </trigger>
         <trigger die_on_critical="true" life="%hawk_p4_lif" name="freeze_powerup" tag="20" time="-1">
             <powerup life="2" name="chill_powerup">
-                <affecter affect_type="scale" attribute="move" level="0.3" />
+                <affecter affect_type="scale" attribute="move" level="0.3"/>
             </powerup>
         </trigger>
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.86" />
-        <chain action="Idle" result="idle" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.86"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="5.0" aitype="projectile" animenum="ea_power5" blendtime="0" combotextfinisher="Shock" combotextstarter="Piercing" icon="7" is_power="true" lockangles="true" locktransitionangles="true" name="power5" noautoaim="false" priority="5">
-        <require cat="skill" item="hawk_p5" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p5_pwr" time="0.0" />
-        <trigger name="sound" sound="char/hwkeye_m/p5_intro" time="0.34" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.1" />
-        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_glue_R_hand_segment" time="0.28" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.35" />
-        <trigger name="sound" sound="char/hwkeye_m/p5_power" time="0.4" />
-        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_glue_R_hand_segment" time="0.45" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.45" />
-        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="12 -10 35" attacktype="projectile" damage="%hawk_p5_dmg" damagetype="dmg_physical" entity="glue_arrow" filename="ents_hawkeye" fulltargeting="true" maxrange="800" name="projectile" pierce="true" scale="1" speed="600" targetable="true" time="0.46" victimeventtag="30" />
-        <trigger failtag="50" maxdangerrating="10" name="filter" noboss="true" passtag="40" tag="30" time="-1" />
-        <trigger bolt="Bip01 Pelvis" effect="char/hawk/p5_freeze" life="%hawk_p5_life" name="powerup" next_eventtag="50" shared_tag="shared_stunned" tag="40" time="-1" />
-        <trigger class="harming" damage="%hawk_p5_dmg2" damagetype="energy" life="%hawk_p5_life" name="powerup" next_eventtag="60" tag="50" time="-1" />
-        <trigger effect="char/hawk/p5_trap" name="effect" next_eventtag="70" tag="60" time="-1" />
-        <trigger name="electrified" tag="70" time="-1" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.76" />
-        <chain action="Idle" result="idle" />
+        <require cat="skill" item="hawk_p5" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p5_pwr" time="0.0"/>
+        <trigger name="sound" sound="char/hwkeye_m/p5_intro" time="0.34"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.1"/>
+        <trigger name="skinsegment" show="true" show2="true" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_glue_R_hand_segment" time="0.28"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.35"/>
+        <trigger name="sound" sound="char/hwkeye_m/p5_power" time="0.4"/>
+        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_arrow_R_hand_segment" skinsegment2="20301_glue_R_hand_segment" time="0.45"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.45"/>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="12 -10 35" attacktype="projectile" damage="%hawk_p5_dmg" damagetype="dmg_physical" entity="glue_arrow" filename="ents_hawkeye" fulltargeting="true" maxrange="800" name="projectile" pierce="true" scale="1" speed="600" targetable="true" time="0.46" victimeventtag="30"/>
+        <trigger failtag="50" maxdangerrating="10" name="filter" noboss="true" passtag="40" tag="30" time="-1"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/hawk/p5_freeze" life="%hawk_p5_life" name="powerup" next_eventtag="50" shared_tag="shared_stunned" tag="40" time="-1"/>
+        <trigger class="harming" damage="%hawk_p5_dmg2" damagetype="energy" life="%hawk_p5_life" name="powerup" next_eventtag="60" tag="50" time="-1"/>
+        <trigger effect="char/hawk/p5_trap" name="effect" next_eventtag="70" tag="60" time="-1"/>
+        <trigger name="electrified" tag="70" time="-1"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.76"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" playspeed="1" priority="5">
-        <require cat="skill" item="hawk_p6" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p6_pwr" time="0.0" />
-        <trigger effect="char/hawk/p6_power" name="effect" time="0.0" />
-        <trigger name="sound" sound="char/hwkeye_m/p6_power" time="0.1" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2" />
+        <require cat="skill" item="hawk_p6" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p6_pwr" time="0.0"/>
+        <trigger effect="char/hawk/p6_power" name="effect" time="0.0"/>
+        <trigger name="sound" sound="char/hwkeye_m/p6_power" time="0.1"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2"/>
         <trigger apply_ally="all" life="%hawk_p6_lif" name="powerup" no_shadow="true" time="0.4">
-            <special_fx effect="char/hawk/p6_aura" fxlevel="1" how_used="primary" />
-            <special_fx effect="char/hawk/p6_aura" fxlevel="2" how_used="deactivate" />
-            <affecter affect_type="scale" attribute="move_attack" level="%hawk_p6_spd" />
+            <special_fx effect="char/hawk/p6_aura" fxlevel="1" how_used="primary"/>
+            <special_fx effect="char/hawk/p6_aura" fxlevel="2" how_used="deactivate"/>
+            <affecter affect_type="scale" attribute="move_attack" level="%hawk_p6_spd"/>
         </trigger>
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.83" />
-        <chain action="Idle" result="idle" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.83"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" playspeed="1" priority="5">
-        <require cat="skill" item="hawk_p7" level="1" />
-        <trigger name="powerusage" powerusage="%hawk_p7_pwr" time="0.0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2" />
-        <trigger name="sound" sound="char/hwkeye_m/p7_intro" time="0.54" />
-        <trigger effect="char/hawk/p7_power" name="effect" time="0.3" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.1" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.4" />
-        <trigger name="sound" sound="char/hwkeye_m/p7_power" time="0.69" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.55" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.69" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.69" />
+        <require cat="skill" item="hawk_p7" level="1"/>
+        <trigger name="powerusage" powerusage="%hawk_p7_pwr" time="0.0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.2"/>
+        <trigger name="sound" sound="char/hwkeye_m/p7_intro" time="0.54"/>
+        <trigger effect="char/hawk/p7_power" name="effect" time="0.3"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.1"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.4"/>
+        <trigger name="sound" sound="char/hwkeye_m/p7_power" time="0.69"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.55"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.69"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.69"/>
         <trigger life="%hawk_p7_lif" name="powerup" time="0.7">
-            <special_fx bolt="Bip01 R Toe0" effect="char/hawk/p7_aura" fxlevel="1" how_used="primary" />
-            <special_fx effect="char/hawk/p7_aura" fxlevel="2" how_used="deactivate" />
-            <affecter affect_type="scale" attribute="damage" level="%hawk_p7_dmg" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/hawk/p7_aura" fxlevel="1" how_used="primary"/>
+            <special_fx effect="char/hawk/p7_aura" fxlevel="2" how_used="deactivate"/>
+            <affecter affect_type="scale" attribute="damage" level="%hawk_p7_dmg"/>
         </trigger>
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.83" />
-        <chain action="Idle" result="idle" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.83"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
-        <require cat="skill" item="hawk_p8" level="1" />
-        <require cat="xtreme" level="1" />
-        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0.0" />
-        <chain action="idle" result="team_xtreme" />
-        <chain action="special" result="power8" />
+        <require cat="skill" item="hawk_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0.0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
     </FightMove>
     <FightMove animenum="ea_power8" combotextfinisher="Devastation" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="5" priority="uninterruptable">
-        <trigger always="true" name="camera_override" time="0.0" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.04" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.06" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_missile_R_hand_segment" time="0.125" />
-        <trigger name="skinsegment" show="true" skinsegment="20301_bird_R_hand_segment" time="0.126" />
-        <trigger bolt="Bip01 L Hand" effect="char/hawk/p8_charge" fxlevel="1" name="effect" time="0.0" />
-        <trigger bolt="Bip01 R Hand" effect="char/hawk/p8_charge" fxlevel="1" name="effect" time="0.0" />
-        <trigger effect="char/hawk/p8_charge" fxlevel="2" name="effect" time="0.0" />
-        <trigger description="WOOT!" name="team_xtreme_msg" time="0.0" title="Ricochet Rocket" />
-        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.25" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_intro" time="0.24" />
-        <event attacktype="projectile" damage="%hawk_p8_dmg" damagescale="none" damagetype="dmg_energy" entity="hawk_p8_proj" filename="ents_hawkeye" inherit="projectile" maxinstances="8" name="p8_proj" pierce="true" speed="1500" useboltangles="true" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 0" index="1" name="p8_proj" time="0.315" />
-        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -45" index="2" name="p8_proj" time="0.33" />
-        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -90" index="3" name="p8_proj" time="0.36" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 -135" index="4" name="p8_proj" time="0.37" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 180" index="5" name="p8_proj" time="0.44" />
-        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 135" index="6" name="p8_proj" time="0.45" />
-        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 180" index="7" name="p8_proj" time="0.48" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 45" index="8" name="p8_proj" time="0.5" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.54" />
-        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.54" />
-        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_missile_R_hand_segment" skinsegment2="20301_bird_R_hand_segment" time="0.54" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.315" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.36" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.41" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.47" />
-        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.52" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.9" />
-        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
-        <chain action="Idle" result="idle" />
+        <trigger always="true" name="camera_override" time="0.0"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.04"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_arrow_R_hand_segment" time="0.06"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_missile_R_hand_segment" time="0.125"/>
+        <trigger name="skinsegment" show="true" skinsegment="20301_bird_R_hand_segment" time="0.126"/>
+        <trigger bolt="Bip01 L Hand" effect="char/hawk/p8_charge" fxlevel="1" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/hawk/p8_charge" fxlevel="1" name="effect" time="0.0"/>
+        <trigger effect="char/hawk/p8_charge" fxlevel="2" name="effect" time="0.0"/>
+        <trigger description="WOOT!" name="team_xtreme_msg" time="0.0" title="Ricochet Rocket"/>
+        <trigger name="skinsegment" show="false" show2="true" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.25"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_intro" time="0.24"/>
+        <event attacktype="projectile" damage="%hawk_p8_dmg" damagescale="none" damagetype="dmg_energy" entity="hawk_p8_proj" filename="ents_hawkeye" inherit="projectile" maxinstances="8" name="p8_proj" pierce="true" speed="1500" useboltangles="true"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 0" index="1" name="p8_proj" time="0.315"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -45" index="2" name="p8_proj" time="0.33"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -90" index="3" name="p8_proj" time="0.36"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 -135" index="4" name="p8_proj" time="0.37"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 180" index="5" name="p8_proj" time="0.44"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 135" index="6" name="p8_proj" time="0.45"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 180" index="7" name="p8_proj" time="0.48"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 45" index="8" name="p8_proj" time="0.5"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_L_hand_segment" skinsegment2="20301_bow_L_hand_mid_segment" time="0.54"/>
+        <trigger name="skinsegment" show="false" skinsegment="20301_arrow_R_hand_segment" time="0.54"/>
+        <trigger name="skinsegment" show="false" show2="false" skinsegment="20301_missile_R_hand_segment" skinsegment2="20301_bird_R_hand_segment" time="0.54"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.315"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.36"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.41"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.47"/>
+        <trigger name="sound" sound="char/hwkeye_m/p8_power" time="0.52"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="20301_bow_back_segment" skinsegment2="20301_bow_L_hand_segment" time="0.9"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
 </PowerStyle>
