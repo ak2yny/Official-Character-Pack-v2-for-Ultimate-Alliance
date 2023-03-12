@@ -1,0 +1,208 @@
+<world>
+    <entity act="2" bigconvmap="true" combatlocked="true" level="12" name="world" next_gen_partylight="0.97 0.85 0.6" nosave="true" partylight="0.97 0.85 0.6" soundfile="town2B" zonescript="act2/strange/strange2" />
+    <precache filename="act2/strange/2_strange2_010" type="conversation" />
+    <precache filename="act2/strange/2_strange2_020" type="conversation" />
+    <precache filename="act2/strange/2_strange2_030" type="conversation" />
+    <precache filename="act2/strange/2_strange2_040" type="conversation" />
+    <precache filename="act2/strange/2_strange2_060" type="conversation" />
+    <precache filename="act2/strange/2_strange2_070" type="conversation" />
+    <precache filename="act2/strange/2_strange2_080" type="conversation" />
+    <precache filename="act2/strange/2_strange2_090" type="conversation" />
+    <precache filename="act2/strange/2_strange2_210" type="conversation" />
+    <precache filename="act2/strange/2_strange2_220" type="conversation" />
+    <precache filename="act2/strange/2_strange2_240" type="conversation" />
+    <precache filename="act2/strange/2_strange2_250" type="conversation" />
+    <precache filename="act2/strange/2_strange2_260" type="conversation" />
+    <precache filename="act2/strange/2_strange2_270" type="conversation" />
+    <precache filename="act2/strange/temp_conv" type="conversation" />
+    <precache filename="act2/strange/strange2/forbidden_gong" type="dialog" />
+    <precache filename="base/hit/hit_blocked" type="fx" />
+    <precache filename="char/drstr/p3_spawn" type="fx" />
+    <precache filename="map/strange/clea_teleport " type="fx" />
+    <precache filename="act2/strange/clea_gen_conv01" type="script" />
+    <precache filename="act2/strange/dare_talk" type="script" />
+    <precache filename="act2/strange/ghost_talk" type="script" />
+    <precache filename="act2/strange/hulk_smash" type="script" />
+    <precache filename="act2/strange/hulk_warmup" type="script" />
+    <precache filename="act2/strange/iceman_talk" type="script" />
+    <precache filename="act2/strange/met_weasel" type="script" />
+    <precache filename="act2/strange/strange2" type="script" />
+    <precache filename="act2/strange/weasela" type="script" />
+    <precache filename="voice/town4/all" type="sound" />
+    <entity actcountremove="1" character="DaredevilSimple" checkteam="true" classname="monsterspawnerent" name="sp_daredevilsimple" nocollide="true" />
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" name="sp_drstrangesimple" nocollide="true" />
+    <entity actcountremove="1" character="GhostRiderSimple" checkteam="true" classname="monsterspawnerent" name="sp_ghostridersimple" nocollide="true" />
+    <entity actcountremove="1" character="IcemanSimple" checkteam="true" classname="monsterspawnerent" name="sp_icemansimple" nocollide="true" />
+    <entity actcountremove="1" character="SpiderWomanSimple" checkteam="true" classname="monsterspawnerent" name="sp_spiderwomansimple" nocollide="true" />
+    <entity actcountremove="1" character="Clea" classname="monsterspawnerent" name="sp_clea" nocollide="true" />
+    <entity actcountremove="1" character="Weasel" classname="monsterspawnerent" name="sp_weasel" nocollide="true" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMDRSTRANGE')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="5" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_drstrange" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMKURSE')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="32" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_psptwo" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept06.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="6" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art6" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_dd',188,189)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" material="plastic" model="pickups/action_figure_daredevil" name="daredevil_actionfigure" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/daredevil" structure="2" team="hero" variablename="r_af_dd" />
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="strange/column_25ft_drs_e" name="column_25ft_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="Wood" model="strange/column_support_beam_drs_e" name="column_support_beam_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="strange/gong_drs_a" name="gong_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="carpet" model="strange/green_book_drs_e" name="green_book_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="strange/hanging_lamp_drs_e" name="hanging_lamp_drs_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actsound="zone_shared/object/console_fighter" classname="physent" material="rock" model="strange/mission_review_drs_a" name="mission_review_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actsound="zone_shared/object/console_fighter" classname="physent" material="solid_metal" model="strange/mission_training_drs_a" name="mission_training_drs_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entinst type="sp_daredevilsimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_daredevilsimple01" orient="0 0 2.61799" pos="527.508 367.213 -132" />
+    </entinst>
+    <entinst type="sp_drstrangesimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_drstrangesimple01" pos="301.861 422 -131" />
+    </entinst>
+    <entinst type="sp_ghostridersimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_ghostridersimple01" orient="0 0 2.44346" pos="110 362.903 -117" />
+    </entinst>
+    <entinst type="sp_icemansimple01">
+        <inst extents="-12.0 -18.0 -3.01437e-005 36.0 18.0 84.0" name="sp_icemansimple01" pos="418.839 498.784 -142" />
+    </entinst>
+    <entinst type="sp_spiderwomansimple02">
+        <inst extents="-12 -18 0 36 18 84" name="sp_spiderwomansimple02" orient="0 0 1.5708" pos="401.059 343.424 -142" />
+    </entinst>
+    <entinst type="sp_clea01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_clea01" orient="0 0 2.0944" pos="540 660 -120" />
+    </entinst>
+    <entinst type="sp_weasel01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_weasel01" orient="0 0 0.436332" pos="360 580 -120" />
+    </entinst>
+    <entinst type="comic_drstrange">
+        <inst name="comic_drstrange" pos="50 631.181 48" />
+    </entinst>
+    <entinst type="comic_psptwo">
+        <inst name="comic_psptwo" pos="360.198 1200.77 -120" />
+    </entinst>
+    <entinst type="concept_art6">
+        <inst name="concept_art6" pos="420 46.9965 -120" />
+    </entinst>
+    <entinst type="daredevil_actionfigure01">
+        <inst name="daredevil_actionfigure01" pos="800.69 313.837 13.359" />
+    </entinst>
+    <entinst type="torch_light14">
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="torch_light14" orient="0 0 0.785398" pos="-40 420 -89.3315" />
+    </entinst>
+    <entinst type="loop_effect01">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect01" pos="-43.5264 420 -108" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7833 83.9544" name="player_start_all01" orient="0 0 -1.5708" pos="511.794 917.066 -120" />
+    </entinst>
+    <entinst type="forbidden_gong">
+        <inst extents="-82 -50 0 82 50 120" name="forbidden_gong" pos="354 874 -120" />
+    </entinst>
+    <entinst type="vision_book">
+        <inst extents="-18 -18 0 18 18 60" name="vision_book" orient="0 0 -1.5708" pos="752.824 629.204 0" />
+    </entinst>
+    <entinst type="common_herowait02">
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="common_herowait02" orient="0 0 1.5708" pos="426.8 256.877 -120" />
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="common_herowait01" orient="0 0 1.5708" pos="391.193 257.197 -120" />
+        <inst extents="-5.99999 -6.00002 -6 6.00001 5.99998 6" name="weasle_herowait02" orient="0 0 -1.13446" pos="296.52 589.836 -120" />
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="weasle_herowait01" orient="0 0 -1.13446" pos="327.474 607.707 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="gr_cam" pos="119.375 308.608 -75" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="common_heroact02" orient="0 0 -2.17992" pos="373.136 447.741 -140" />
+        <inst extents="-5.99998 -6.00001 -6 6.00002 5.99999 6" name="weasel_intro_cam" orient="0 0 0.436332" pos="419.005 613.063 -75" />
+        <inst extents="-6 -6 -6 6 6 6" name="gr_look" orient="0 0 1.5708" pos="53.8052 404.359 -120" />
+        <inst extents="-6 -6.00001 -6 6 5.99999 6" name="weasel_heroact" orient="0 0 -0.523599" pos="469.868 596.696 -120" />
+        <inst extents="-6 -6.00001 -6 6 5.99999 6" name="weasle_herowait03" orient="0 0 -1.13446" pos="268.498 573.657 -120" />
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="common_herowait03" orient="0 0 1.5708" pos="459.032 258.387 -120" />
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="weasel_stand" orient="0 0 2.61799" pos="547.93 558.854 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="iceman_cam" pos="406.249 455.384 -110" />
+        <inst extents="-6 -6 -6 6 6 6" name="spiderwoman_cam" pos="457.169 378.394 -125" />
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="common_heroact" orient="0 0 -3.13985" pos="486.776 422.04 -140" />
+        <inst extents="-6 -6 -6 6 6 6" name="drstrange_cam" pos="360.762 421.346 -110" />
+        <inst extents="-6 -6 -6 6 6 6" name="cleah_cam01" pos="346.204 388.306 -110" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="dd_cam" orient="0 0 -3.13985" pos="499.129 395.119 -110" />
+        <inst extents="-6 -6 -6 6 6 6" name="weasel_cam" pos="510.033 572.821 -75" />
+    </entinst>
+    <entinst type="gr_heroact">
+        <inst extents="-6 -6 -6 6 6 6" name="gr_heroact" orient="0 0 1.48353" pos="122.493 265.151 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="gr_cam" pos="119.136 305.401 -75" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="wp_weaselA01" orient="0 0 1.39626" pos="490 650 -120" />
+    </entinst>
+    <entinst type="wp_weasel_talk06">
+        <inst extents="-6 -6.00002 -6 6 5.99998 6" name="wp_weasel_talk06" orient="0 0 2.00713" pos="464.229 277.252 0" />
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="wp_weasel_talk01" orient="0 0 -2.0944" pos="495.056 525.418 0" />
+        <inst extents="-6.00002 -6 -6 5.99998 6 6" name="wp_weasel_talk02" orient="0 0 -2.0944" pos="585.015 516.883 0" />
+        <inst extents="-6.00001 -5.99998 -6 5.99999 6.00002 6" name="wp_weasel_talk03" orient="0 0 2.61799" pos="578.932 338.678 0" />
+        <inst extents="-6.00001 -5.99998 -6 5.99999 6.00002 6" name="wp_weasel_talk04" orient="0 0 2.61799" pos="538.871 310.39 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_weasel_talk05" orient="0 0 2.00713" pos="496.365 321.483 0" />
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="wp_weasel_talk07" orient="0 0 1.5708" pos="404.774 277.252 0" />
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="wp_weasel_talk08" orient="0 0 1.5708" pos="367.778 279.871 0" />
+        <inst extents="-6.00002 -6.00001 -6 5.99998 5.99999 6" name="wp_weasel_talk09" orient="0 0 1.5708" pos="345.403 323.207 0" />
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="wp_weasel_talk10" orient="0 0 1.5708" pos="284.323 314.36 0" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_weasel_talk11" orient="0 0 1.5708" pos="244.515 369.943 0" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_weasel_talk12" orient="0 0 1.5708" pos="241.626 463.047 0" />
+        <inst extents="-5.99999 -5.99999 -6 6.00001 6.00001 6" name="wp_weasel_talk13" orient="0 0 -0.959931" pos="249.309 524.422 0" />
+        <inst extents="-6.00001 -6.00001 -6 5.99999 5.99999 6" name="wp_weasel_talk14" orient="0 0 -1.5708" pos="342.195 562.69 0" />
+        <inst extents="-5.99998 -6.00001 -6 6.00002 5.99999 6" name="wp_weasel_talk15" orient="0 0 -1.5708" pos="454.681 562.69 0" />
+    </entinst>
+    <entinst type="waypoint">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="clea_sitting" orient="0 0 0.610865" pos="306.479 364.467 -143" />
+    </entinst>
+    <entinst type="link_strange1">
+        <inst extents="-18 -30 0 18 30 120" name="link_strange1" pos="457.794 1027.93 -120" />
+    </entinst>
+    <entinst type="column_25ft_drs_e">
+        <inst name="column_25ft_drs_e" pos="247.37 890 -120" />
+        <inst name="column_25ft_drs_e" pos="660 180 -120" />
+        <inst name="column_25ft_drs_e" pos="180 180 -120" />
+        <inst name="column_25ft_drs_e" pos="180 660 -120" />
+        <inst name="column_25ft_drs_e" pos="660 660 -120" />
+        <inst name="column_25ft_drs_e" orient="0 0 -3.14159" pos="592.63 890 -120" />
+        <inst name="column_25ft_drs_e" orient="0 0 -3.14159" pos="592.63 1210.64 -120" />
+        <inst name="column_25ft_drs_e" pos="247.37 1210.64 -120" />
+    </entinst>
+    <entinst type="column_support_beam_drs_e">
+        <inst name="column_support_beam_drs_e" orient="0 0 1.5708" pos="660 420 -132" />
+        <inst name="column_support_beam_drs_e" orient="0 0 -1.5708" pos="180 420 -132" />
+        <inst name="column_support_beam_drs_e" orient="0 0 3.14159" pos="420 180 -132" />
+        <inst name="column_support_beam_drs_e" pos="420 660 -132" />
+    </entinst>
+    <entinst type="gong_drs_a">
+        <inst name="gong_drs_a" pos="351.83 884.362 -120" />
+    </entinst>
+    <entinst type="green_book">
+        <inst name="green_book" orient="0 0 -1.5708" pos="750 630 0" />
+    </entinst>
+    <entinst type="the_center">
+        <inst name="the_center" pos="420 420 0" />
+    </entinst>
+    <entinst type="hanging_lamp_drs_e">
+        <inst name="hanging_lamp_drs_e" pos="420 777.096 0" />
+    </entinst>
+    <entinst type="mission_review_drs_a">
+        <inst name="mission_review_drs_a" pos="581.289 1038.74 -360" />
+    </entinst>
+    <entinst type="mission_training_drs_a">
+        <inst name="mission_training_drs_a" pos="240 1050.63 -360" />
+    </entinst>
+    <entity actcountremove="1" character="DaredevilSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_daredevil" monster_name="daredevil" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_daredevil" name="sp_daredevilsimple01" nocollide="true" />
+    <entity actcountremove="1" character="DrStrangeSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_drstrange" monster_name="drstrange" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_drstrange2" name="sp_drstrangesimple01" nocollide="true" />
+    <entity actcountremove="1" character="GhostRiderSimple" checkteam="true" classname="monsterspawnerent" monster_actonuse="true" monster_actscript="act2/strange/talk_ghostrider" monster_name="ghostrider" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_ghostrider" name="sp_ghostridersimple01" nocollide="true" />
+    <entity actcountremove="1" character="IcemanSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_iceman" monster_name="iceman" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_iceman" name="sp_icemansimple01" nocollide="true" />
+    <entity actcountremove="1" character="SpiderWomanSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/talk_spiderwoman" monster_name="spiderwoman" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_spiderwoman" name="sp_spiderwomansimple02" nocollide="true" />
+    <entity actcountremove="1" character="Clea" classname="monsterspawnerent" hinttype="talk" instantspawn="true" monster_actmustface="true" monster_actonuse="true" monster_actscript="act2/strange/clea_gen_conv01" monster_name="clea" monster_noaidisable="true" monster_spawnexactlocation="true" name="sp_clea01" nocollide="true" />
+    <entity actcountremove="1" character="Weasel" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act2/strange/weasel_talk" monster_name="weasel" monster_noaidisable="true" monster_spawnexactlocation="true" monster_spawnscript="act2/strange/sc_weasel" name="sp_weasel01" nocollide="true" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_dd',188,189)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" idnum="4" material="plastic" model="pickups/action_figure_daredevil" name="daredevil_actionfigure01" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/daredevil" structure="2" team="hero" variablename="r_af_dd" />
+    <entity actcountdisable="1" actcountremove="1" actdistance="60" acteffect="base/item/item_pickup" actleader="true" actonuse="true" actscript="common/actionfigures/xpbonus" actsound="common/game/pickup_power" animstarton="true" classname="physent" description="Experience Points" fxlevel="7" model="pickups/experience_point" name="af_dd_xp" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" quickuse="true" smartent="false" structure="2" />
+    <entity classname="lightent" flickerfire="true" flickeroff="0.1" flickeron="0.3" flickerrandom="0.2" lightcolor="0.93 0.65 0.2" lightradius="200" name="torch_light14" nocollide="true" startoff="false" />
+    <entity acttogglesloopfx="true" classname="actionent" fxlevel="4" loopfx="map/common/fire_small" loopfxstarton="true" name="loop_effect01" nocollide="true" smartent="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all01" nocollide="true" prevlink="link_strange2" prevzone="strange1" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="forbidden_gong" nocollide="true" smartent="false" team="hero" tipdialog="act2/strange/strange2/forbidden_gong" />
+    <entity actcountremove="1" actonuse="true" actscript="act2/strange/grab_book" boxcollision="true" classname="gameent" description="A History of the Arcane" hinttype="objective" name="vision_book" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none" toggleonact="false" />
+    <entity actscript="act2/strange/weasel_walk" classname="waypointent" name="wp_weasel_talk06" nocollide="true" speed="0.3" />
+    <entity beeline="true" classname="waypointent" name="gr_heroact" nocollide="true" speed="1" />
+    <entity beeline="true" classname="waypointent" name="common_herowait02" nocollide="true" smartent="false" speed="1" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Go downstairs" name="link_strange1" nextzone="strange1" nocollide="true" team="hero" />
+    <entity classname="physent" material="carpet" model="strange/green_book_drs_e" name="green_book" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="strange/hanging_lamp_drs_e" name="the_center" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+</world>

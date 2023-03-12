@@ -3,6 +3,6 @@ setEnable("glass_breaker_crate", "FALSE" )
 setEnable("pres_chal_trig", "TRUE" )
 waittimed ( 0.250 )
 copyOriginAndAngles("glass_breaker_chal", "chal_null" )
-waittimed ( 0.250 )
+waittimed ( 0.500 )
 remove ( "glass_breaker_crate", "glass_breaker_crate" )
 
