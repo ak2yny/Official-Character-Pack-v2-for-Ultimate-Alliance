@@ -1,0 +1,45 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/drdoom/5_doom1_014_010_doo" text="%DRDOOM%: Welcome, Black Panther. I'm impressed that I would be worthy of the attention of the king of Wakanda. You look well considering you should be dead.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/blackpanther/5_doom1_014_011_bp" text="%BLACKPANTHER%: Try though you might, Dr. Doom, you can never defeat us. For where your heart is filled with jealousy, ours are filled with courage.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/drdoom/5_doom1_014_012_doo" text="%DRDOOM%: So you think your courage can save you?">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/drdoom/5_doom1_014_013_doo" text="%DRDOOM%: Allow me to demonstrate my powers. See how easily I can control the very elements themselves?">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/blackpanther/5_doom1_014_014_bp" text="%BLACKPANTHER%: You do possess great power, Dr. Doom. But you lack the ability to control it.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/drdoom/5_doom1_014_015_doo" text="%DRDOOM%: You would dare to lecture the great Dr. Doom? How foolish. I could destroy you with a mere thought.">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/blackpanther/5_doom1_014_016_bp" text="%BLACKPANTHER%: That would have already happened, if that is what you truly wanted. But it isn't, at least not yet.">
+                                                                <response text="%BLANK%">
+                                                                    <line soundtoplay="voice/drdoom/5_doom1_014_017_doo" text="%DRDOOM%: Very perceptive, Black Panther. I need someone who can appreciate the work I've done. Feel free to roam around my castle and see what I've changed... and what I've created.">
+                                                                        <response text="%BLANK%">
+                                                                            <line soundtoplay="voice/blackpanther/5_doom1_014_018_bp" text="%BLACKPANTHER%: And once we have witnessed your glory, what then, Doom?">
+                                                                                <response text="%BLANK%">
+                                                                                    <line soundtoplay="voice/drdoom/5_doom1_014_019_doo" text="%DRDOOM%: Then, Black Panther, you will be eliminated.">
+                                                                                        <response chosenscriptfile="act5/doom/doom1/intro_conversation_end" conversationend="true" text="%BLANK%" />
+                                                                                    </line>
+                                                                                </response>
+                                                                            </line>
+                                                                        </response>
+                                                                    </line>
+                                                                </response>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

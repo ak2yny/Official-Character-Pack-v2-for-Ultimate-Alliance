@@ -1,0 +1,311 @@
+<world>
+    <entity act="2" bigconvmap="true" killz="-480" level="18" name="world" nosave="true" partylight="1 0.67 0.07" partylightradius="360" skybox="skybox/mephisto" soundfile="boss2" startblack="true" zonescript="act2/mephisto/mephisto4/mephisto4"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_010" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_022" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_023" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_025" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_026" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_028" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_030" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_040" type="conversation"/>
+    <precache filename="act2/mephisto/mephisto4/2_mephisto4_050" type="conversation"/>
+    <precache filename="char/mefsto/heal_beam" type="fx"/>
+    <precache filename="map/mephisto/mephisto_explode" type="fx"/>
+    <precache filename="act2/mephisto/mephisto4/hurting_start" type="script"/>
+    <precache filename="act2/mephisto/mephisto4/hurting_stop" type="script"/>
+    <precache filename="Zone_shared/mephisto/summon_hero" type="sound"/>
+    <entity actcountremove="1" character="DemonLeaper_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_demonleaper_b" nocollide="true"/>
+    <entity actcountremove="1" character="FireGiant_a" classname="monsterspawnerent" instantspawn="true" monster_aggression="5" monster_smartent="true" name="ss_firegiant_a" nocollide="true"/>
+    <entity actcountremove="1" character="MephistoPet_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_mephistopet_a" nocollide="true"/>
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" description="Wield" interaction="data/fightstyles/fightstyle_weapon_onehanded" interaction_node="pickup_victim" loopfx="base/misc/weapon_sparkle" loopfxstarton="true" material="solid_metal" model="boss_mephisto/u_soul_sword_bmep_w" name="u_soul_sword_bmep_w" nogravity="false" nopush="true" puzzle_critical="true" quickuse="true" randompickups="0" structure="2" weapon="wp_onehanded"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" deathspawn="u_statue_nightcrawler_bmep_b_d" fxlevel="2" health="100" material="rock" model="boss_mephisto/u_statue_nightcrawler_bmep_b" name="u_statue_nightcrawler_bmep_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" deathspawn="u_statue_phoenix_bmep_b_d" fxlevel="2" health="100" material="rock" model="boss_mephisto/u_statue_phoenix_bmep_b" name="u_statue_phoenix_bmep_b" nogravity="true" nopickup="true" nopush="true"/>
+    <entity actcountremove="1" character="Mephisto" classname="monsterspawnerent" monster_deathspawn="Mephisto_treasure" monster_team="enemy" name="sp_mephisto" nocollide="true" nofadeondeath="true" shadow="true"/>
+    <entity actcountremove="1" character="Mephisto_Nightcrawler" classname="monsterspawnerent" monster_team="enemy" name="sp_mephisto_nightcrawler" nocollide="true" nofadeondeath="true" shadow="true"/>
+    <entity actcountremove="1" character="Mephisto_Phoenix" classname="monsterspawnerent" monster_team="enemy" name="sp_mephisto_phoenix" nocollide="true" nofadeondeath="true" shadow="true"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMGHOSTRIDER')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="7" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_ghostrider" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="solid_metal" model="mephisto/hellgate_gate_mep_b" name="hellgate_gate_mep_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/pillar_02_mep_e" name="pillar_02_mep_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/pillar_03_mep_e" name="pillar_03_mep_e" nogravity="true" nopickup="true" nopush="true" pathignore="false" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_01_mep_th" name="rock_01_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_02_mep_th" name="rock_02_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="50" heaviness="0" material="rock" model="mephisto/rock_03_mep_th" name="rock_03_mep_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_l" deathspawn="ruined_buttress_01_mep_b_d" fxlevel="3" health="150" material="rock" model="mephisto/ruined_buttress_01_mep_b" name="ruined_buttress_01_mep_b" nogravity="true" nopickup="true" nopush="true" structure="1"/>
+    <entity camerafadeout="true" classname="physent" material="rock" model="mephisto/stone_archway_mep_e" name="stone_archway_mep_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="enabletargetent" enable="true" name="enable_target" nocollide="true"/>
+    <entity actsoundloop="zone_shared/special/blink_portal" actspawn="fake_portal_act2_trig" acttogglesloopfx="true" boxcollision="true" classname="gameent" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="fake_portal_act2" nocollide="true" smartent="false" toggleonact="true"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_constant" nocollide="true" radiusdamage="false" smartent="false" smartfire="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity actscript="common/teleport" classname="actionent" name="teleport_player" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_large" loopfxstarton="true" name="fire_large" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false"/>
+    <entinst type="ss_demonleaper_b12">
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_demonleaper_b12" orient="0 0 0.698132" pos="428.804 2912.26 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 -1.48353" pos="675.685 3522.69 -120"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 -3.05433" pos="776.596 2697.65 -120"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="1299.33 -355.56 -120"/>
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="ss_demonleaper_b12" orient="0 0 1.65806" pos="669.076 2464.9 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="782.443 674.88 -120"/>
+        <inst extents="-12.0 -18.0 -1.44922e-005 36.0 18.0 84.0" name="ss_demonleaper_b12" pos="569.458 1971.61 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 3.05433" pos="879.519 1886.63 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.349066" pos="437.828 1399.56 -120"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 -2.53073" pos="981.065 1110.85 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="407.707 988.113 -120"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="1006.04 431.676 -120"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="1125.36 -183.078 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="620.106 -338.787 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="513.83 -207.944 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="794.484 262.926 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="1388.58 76.7697 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 2.26893" pos="779.524 -58.6837 -120"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="1045.62 770.413 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="528.441 718.708 -120"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="761.17 1227.87 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="1011.03 1390.09 -120"/>
+        <inst extents="-12.0001 -18.0002 0 35.9999 17.9998 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="482.273 3678.7 60"/>
+        <inst extents="-12.0001 -18.0002 0 35.9999 17.9998 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="116.581 3116.17 60"/>
+        <inst extents="-12.0001 -18.0002 0 35.9999 17.9998 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="351.652 2311.67 60"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="274.326 1988.36 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="174.327 1456.48 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.2618" pos="118.147 900.638 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1299.96 840.289 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1252.37 1294.92 60"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1152.65 1745.67 60"/>
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1063.61 2452.87 60"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1200.66 2823.81 60"/>
+        <inst extents="-12.0001 -18.0003 0 35.9999 17.9997 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1355.2 3335.78 60"/>
+        <inst extents="-12.0001 -18.0002 0 35.9999 17.9998 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="875.571 3644.45 60"/>
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="201.438 3426.61 60"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="310.152 3148.67 -120"/>
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="990.696 2946.34 -120"/>
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="1106.5 3192.15 -120"/>
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="ss_demonleaper_b12" orient="0 0 1.65806" pos="1078.54 2183.11 -2.28882e-005"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_demonleaper_b12" orient="0 0 1.65806" pos="510.94 2292.02 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_demonleaper_b12" orient="0 0 0.872665" pos="654.689 1655.8 -120"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_demonleaper_b12" orient="0 0 -2.87979" pos="924.492 3327.79 -120"/>
+    </entinst>
+    <entinst type="giant_spawner02">
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="giant_spawner02" orient="0 0 -1.39626" pos="593.751 2455.16 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="giant_spawner01" orient="0 0 -2.53073" pos="961.465 961.299 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="giant_spawner" orient="0 0 -2.53073" pos="934.892 218.098 -120"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="giant_spawner" orient="0 0 -2.53073" pos="544.457 2906.05 -120"/>
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="giant_spawner" orient="0 0 -1.39626" pos="704.954 1490.1 -120"/>
+    </entinst>
+    <entinst type="ss_mephistopet_a21">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="449.551 1978.45 60"/>
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="1033.25 1869.68 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -2.35619" pos="974.219 -88.3543 60"/>
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="361.575 3609.47 60"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_mephistopet_a21" orient="0 0 -2.18166" pos="1181.2 3539.01 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 0.261799" pos="102.137 3200.53 60"/>
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="425.333 2334.8 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="959.249 3578 60"/>
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="1298.42 3068.8 60"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="1143.42 1461.64 60"/>
+        <inst extents="-11.9999 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="650.14 1562.9 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="181.075 1383.42 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="521.803 826.85 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="778.457 796.549 60"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="1112.01 640.029 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="819.519 448.574 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="968.457 61.9666 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="400.927 168.309 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="511.578 -109.54 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="846.579 2560.7 60"/>
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_mephistopet_a21" orient="0 0 2.53073" pos="1152.77 2720.38 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="684.461 2920.64 60"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_mephistopet_a21" orient="0 0 -0.872665" pos="808.161 3362.12 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 2.0944" pos="1008.72 -389.281 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 0.698132" pos="635.699 37.1319 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 2.87979" pos="1307.2 158.929 60"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_mephistopet_a21" orient="0 0 3.05433" pos="1270.5 986.581 60"/>
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_mephistopet_a21" orient="0 0 2.0944" pos="771.325 1089.77 60"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_mephistopet_a21" orient="0 0 0.436332" pos="217.755 963.728 60"/>
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_mephistopet_a21" orient="0 0 0.0872667" pos="268.674 1769.07 60"/>
+        <inst extents="-11.9999 -18.0002 0 36.0001 17.9998 84" name="ss_mephistopet_a21" orient="0 0 2.53073" pos="800.141 2166.48 60"/>
+        <inst extents="-11.9999 -17.9997 0 36.0001 18.0003 84" name="ss_mephistopet_a21" orient="0 0 0.436332" pos="304.748 2624.82 60"/>
+    </entinst>
+    <entinst type="the_weapon">
+        <inst name="the_weapon" pos="267.817 -2727.7 -63.1943"/>
+    </entinst>
+    <entinst type="statue_nightcrawler">
+        <inst name="statue_nightcrawler" orient="0 0 2.70526" pos="852 -3660 -107.006"/>
+        <inst name="statue_nightcrawler" orient="0 0 1.39626" pos="588 -3660 -107.006"/>
+        <inst name="statue_nightcrawler" orient="0 0 -1.5708" pos="720 -3252 -107.006"/>
+        <inst name="statue_nightcrawler" orient="0 0 -2.26893" pos="936 -3408 -107.006"/>
+        <inst name="statue_nightcrawler" orient="0 0 0.0872662" pos="504 -3408 -107.006"/>
+    </entinst>
+    <entinst type="statue_phoenix">
+        <inst name="statue_phoenix" orient="-1.79469e-007 0.0698131 0.349066" pos="502.485 -3408 -107.922"/>
+        <inst name="statue_phoenix" orient="-0.0494055 -0.0493453 1.83382" pos="586.28 -3660 -107.922"/>
+        <inst name="statue_phoenix" orient="0.0698132 0 -0.698132" pos="717.959 -3252 -107.922"/>
+        <inst name="statue_phoenix" orient="0 -0.0698132 -2.26893" pos="933.433 -3408 -107.922"/>
+        <inst name="statue_phoenix" orient="-0.0604845 0.0348853 2.79147" pos="849.637 -3660 -107.922"/>
+    </entinst>
+    <entinst type="sp_mephisto1">
+        <inst extents="-12 -18 0 36 18 84" name="sp_mephisto1" orient="0 0 -1.5708" pos="840 0 -120"/>
+    </entinst>
+    <entinst type="sp_mephisto02">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="sp_mephisto02" orient="0 0 -1.5708" pos="720 -3540 -118.074"/>
+    </entinst>
+    <entinst type="nightcrawler_spawner">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="nightcrawler_spawner" orient="0 0 -1.5708" pos="716.115 -3434.79 -118.074"/>
+    </entinst>
+    <entinst type="phoenix_spawner">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="phoenix_spawner" orient="0 0 -1.5708" pos="721.606 -3430.39 -118.074"/>
+    </entinst>
+    <entinst type="comic_ghostrider">
+        <inst name="comic_ghostrider" pos="240 240 -120"/>
+    </entinst>
+    <entinst type="the_gate">
+        <inst name="the_gate" pos="600 2160 -120"/>
+    </entinst>
+    <entinst type="pillar_02_mep_e">
+        <inst name="pillar_02_mep_e" pos="420 780 -120"/>
+        <inst name="pillar_02_mep_e" orient="0 0 -1.5708" pos="900 780 -120"/>
+    </entinst>
+    <entinst type="pillar_03_mep_e">
+        <inst name="pillar_03_mep_e" pos="660 780 -120"/>
+    </entinst>
+    <entinst type="rock_01_mep_th">
+        <inst name="rock_01_mep_th" pos="1162.17 118.435 -120"/>
+        <inst name="rock_01_mep_th" pos="1239.34 512.272 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.14159" pos="9.12836 -3574.51 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.14159" pos="627.353 -2818.8 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -2.00713" pos="1290.53 -3739.54 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.14159" pos="1496.72 -3627.75 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.14159" pos="1529.05 -2789.21 -120"/>
+        <inst name="rock_01_mep_th" orient="0 0 -3.14159" pos="1318.97 -3138.88 -120"/>
+        <inst name="rock_01_mep_th" pos="1002.04 3391.79 -120"/>
+        <inst name="rock_01_mep_th" pos="386.272 2782.84 -120"/>
+        <inst name="rock_01_mep_th" pos="1168.59 2120.62 0"/>
+        <inst name="rock_01_mep_th" pos="967.635 1783.35 -120"/>
+        <inst name="rock_01_mep_th" pos="206.479 1592.08 0"/>
+    </entinst>
+    <entinst type="rock_02_mep_th">
+        <inst name="rock_02_mep_th" orient="0 0 0.0872664" pos="1169.76 -78.9296 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="134.221 -3315.58 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="1184.55 -3471.66 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 0.610865" pos="218.48 -3202.77 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="1058.01 -3890.15 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 2.18166" pos="859.209 -4033.17 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 2.61799" pos="323.31 -2702.05 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="67.1809 -2553.83 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="941.79 -3018.47 -120"/>
+        <inst name="rock_02_mep_th" orient="0 0 -3.14159" pos="312.84 -3872.72 -120"/>
+    </entinst>
+    <entinst type="rock_03_mep_th">
+        <inst name="rock_03_mep_th" orient="0 0 2.61799" pos="369.456 -2998.32 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 2.18166" pos="1290.57 -2674.32 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 -2.53073" pos="622.886 -4123.17 -120"/>
+        <inst name="rock_03_mep_th" pos="578.439 -121.275 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 -2.87979" pos="272.222 -3667.5 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 -2.35619" pos="803.114 -2754.08 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 2.53073" pos="1464.65 -2947.62 -120"/>
+        <inst name="rock_03_mep_th" orient="0 0 -2.35619" pos="1468.88 -3431.05 -120"/>
+    </entinst>
+    <entinst type="ruined_buttress_01_mep_b">
+        <inst name="ruined_buttress_01_mep_b" pos="978.917 3286.5 -120"/>
+    </entinst>
+    <entinst type="stone_archway_mep_e">
+        <inst name="stone_archway_mep_e" pos="799.166 -420 -120"/>
+        <inst name="stone_archway_mep_e" orient="0 0 0.785398" pos="728.675 3145.15 -120"/>
+    </entinst>
+    <entinst type="enable_hint">
+        <inst extents="-6 -6 0 6 6 12" name="enable_hint" pos="1200 -1920 0"/>
+    </entinst>
+    <entinst type="portal">
+        <inst extents="-10 -20 0 10 20 60" name="portal" pos="1195 -3570.99 -120"/>
+    </entinst>
+    <entinst type="portal_back">
+        <inst extents="-10 -20 0 10 20 60" name="portal_back" orient="0 0 1.5708" pos="799.69 -419.916 -120"/>
+    </entinst>
+    <entinst type="harm_target_constant02">
+        <inst extents="-180 -360 0 180 360 60" name="harm_target_constant02" orient="0 0 -0.349066" pos="780 2760 -193.825"/>
+        <inst extents="-300 -180 0 300 180 60" name="harm_target_constant02" pos="540 1140 -193.825"/>
+        <inst extents="-408 -180 0 408 180 60" name="harm_target_constant02" pos="1008 -2940 -193.825"/>
+    </entinst>
+    <entinst type="mr_mephisto_spot02">
+        <inst extents="-6.00007 -6.00005 -6 5.99993 5.99995 6" name="mr_mephisto_spot02" orient="0 0 -0.785398" pos="720 -3444 -112.868"/>
+        <inst extents="-6.00009 -5.99996 -6 5.99991 6.00004 6" name="mr_mephisto_spot" orient="0 0 2.79253" pos="1044 -3612 -120"/>
+        <inst extents="-6.00008 -6.00005 -6 5.99992 5.99995 6" name="outro_spot" orient="0 0 -1.65806" pos="1086.02 -3465.21 -120"/>
+        <inst extents="-6.00004 -6.00001 -6 5.99996 5.99999 6" name="dead_hero_spot" orient="0 0 1.65806" pos="1105.75 -3606.11 -120"/>
+    </entinst>
+    <entinst type="player_start_all">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all" orient="0 0 1.5708" pos="802.041 -285.658 -120"/>
+    </entinst>
+    <entinst type="disable_push">
+        <inst extents="-6 -6 0 6 6 12" name="disable_push" pos="636.085 3245.22 -128.867"/>
+    </entinst>
+    <entinst type="spawn_baddie">
+        <inst extents="-6 -6 0 6 6 12" name="spawn_baddie" pos="431.147 418.624 0"/>
+    </entinst>
+    <entinst type="destroy_door">
+        <inst extents="-6 -6 0 6 6 12" name="destroy_door" pos="606.125 2105.36 -128.867"/>
+    </entinst>
+    <entinst type="altar_spot">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="altar_spot" orient="0 0 1.5708" pos="720 -3840 -120"/>
+    </entinst>
+    <entinst type="hint_trigger">
+        <inst extents="-300 -300 -1440 300 300 1440" name="hint_trigger" pos="795.185 -1961.38 1440"/>
+    </entinst>
+    <entinst type="pushout">
+        <inst extents="-162 -162 0 162 162 240" name="pushout" pos="600 3240 -368.867"/>
+    </entinst>
+    <entinst type="debug_trigger">
+        <inst extents="-48 -6 0 48 6 60" name="debug_trigger" pos="792 -468 -120"/>
+    </entinst>
+    <entinst type="hole_trigger">
+        <inst extents="-192 -192 0 192 192 120" name="hole_trigger" pos="600 3240 -472.114"/>
+    </entinst>
+    <entinst type="wp_getim01">
+        <inst extents="-6.00006 -5.99991 -6 5.99994 6.00009 6" name="wp_getim01" orient="0 0 2.44346" pos="769.268 -3488.94 -119.006"/>
+    </entinst>
+    <entinst type="meph3_link">
+        <inst extents="-48 -18 0 48 18 96" name="meph3_link" pos="799.69 -419.916 -120"/>
+    </entinst>
+    <entinst type="fire_large01">
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="726 172 -120"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="450 1264 -120"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="1038 1996 -120"/>
+        <inst extents="-60 -60 0 60 60 72" name="fire_large01" pos="462 3364 -120"/>
+    </entinst>
+    <entity acteffect="map/mephisto/mephisto_spawn_baddie" actinactivedelay="5" actsound="Zone_shared/mephisto/enemy_bamf" character="DemonLeaper_b" classname="monsterspawnerent" instantspawn="false" monster_deathscript="act2/mephisto/mephisto4/newspawn" monster_deathtargets="disable_push" monster_smartent="true" monster_smartoutreplacementscript="act2/mephisto/mephisto4/newspawn" monster_spawnexactlocation="true" name="ss_demonleaper_b12" nocollide="true"/>
+    <entity acteffect="map/mephisto/mephisto_spawn_baddie_lrg" actinactivedelay="5" actscript="setEnable('giant_spawner','FALSE')" actsound="Zone_shared/mephisto/enemy_bamf" character="FireGiant_a" classname="monsterspawnerent" instantspawn="false" monster_aggression="5" monster_deathscript="act2/mephisto/mephisto4/newspawn_giants" monster_deathtargets="disable_push" monster_smartent="true" monster_smartoutreplacementscript="act2/mephisto/mephisto4/newspawn_giants" monster_spawnexactlocation="true" name="giant_spawner02" nocollide="true" smartent="false"/>
+    <entity acteffect="map/mephisto/mephisto_spawn_baddie" actinactivedelay="5" actsound="Zone_shared/mephisto/enemy_bamf" character="MephistoPet_a" classname="monsterspawnerent" instantspawn="false" monster_deathscript="act2/mephisto/mephisto4/newspawn" monster_deathtargets="disable_push" monster_smartent="true" monster_smartoutreplacementscript="act2/mephisto/mephisto4/newspawn" monster_spawnexactlocation="true" name="ss_mephistopet_a21" nocollide="true"/>
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" deathscript="act2/mephisto/mephisto4/sword_drop" description="Wield" dropscript="act2/mephisto/mephisto4/sword_drop" hinttype="objective" interaction="data/fightstyles/fightstyle_weapon_onehanded" interaction_node="pickup_victim" loopfx="base/misc/weapon_sparkle" loopfxstarton="true" material="solid_metal" model="boss_mephisto/u_soul_sword_bmep_w" name="the_weapon" nogravity="false" nopush="true" puzzle_critical="true" quickuse="true" randompickups="0" smartent="false" structure="2" vel="0 0 600" weapon="wp_mephisto_sword"/>
+    <entity actondamage="true" actscript="act2/mephisto/mephisto4/statue_pain" classname="physent" deatheffect="Map/mephisto/statue_soul_release" deathspawn="u_statue_nightcrawler_bmep_b_d" health="100" loopfx="map/mephisto/dead_hero_statue" loopfxstarton="true" material="rock" model="boss_mephisto/u_statue_nightcrawler_bmep_b" name="statue_nightcrawler" nogravity="true" nopickup="true" nopush="true" randompickups="0" scale="1.5" smartent="false" structure="2" team="enemy"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" mass="0" material="rock" model="boss_mephisto/u_statue_nightcrawler_stump_b" name="u_statue_nightcrawler_bmep_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity actondamage="true" actscript="act2/mephisto/mephisto4/statue_pain" classname="physent" deatheffect="Map/mephisto/statue_soul_release" deathspawn="u_statue_phoenix_bmep_b_d" health="100" loopfx="map/mephisto/dead_hero_statue" loopfxstarton="true" material="rock" model="boss_mephisto/u_statue_phoenix_bmep_b" name="statue_phoenix" nogravity="true" nopickup="true" nopush="true" scale="1.5" smartent="false" structure="2" team="enemy"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" mass="0" material="rock" model="boss_mephisto/u_statue_phoenix_stump_bmep_b" name="u_statue_phoenix_bmep_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity actcountremove="1" actscript="act2/mephisto/mephisto4/mephisto_intro2" character="Mephisto" classname="monsterspawnerent" monster_aipattern="mephisto" monster_bossundying="true" monster_deathspawn="Mephisto_treasure" monster_name="mephisto" monster_nodistancecull="true" monster_painscript="act2/mephisto/mephisto4/mephisto_pain" monster_smartent="false" monster_spawnexactlocation="true" monster_team="enemy" name="sp_mephisto02" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" startenabled="false"/>
+    <entity actcountremove="1" character="Mephisto" classname="monsterspawnerent" monster_deathspawn="Mephisto_treasure" monster_name="simon" monster_spawnexactlocation="true" monster_team="enemy" name="sp_mephisto1" nocollide="true" nofadeondeath="true" shadow="true" smartent="false"/>
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="Mephisto" monster_deathspawn="Mephisto_treasure" name="Mephisto_treasure" nocollide="true"/>
+    <entity actcountremove="1" character="Mephisto_Nightcrawler" classname="monsterspawnerent" monster_bossundying="true" monster_name="dead_hero" monster_painscript="act2/mephisto/mephisto4/hero_pain" monster_spawnexactlocation="true" monster_spawnscript="act2/mephisto/mephisto4/spawn_hero" monster_team="enemy" name="nightcrawler_spawner" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" startenabled="false"/>
+    <entity actcountremove="1" character="Mephisto_Phoenix" classname="monsterspawnerent" monster_bossundying="true" monster_name="dead_hero" monster_painscript="act2/mephisto/mephisto4/hero_pain" monster_spawnexactlocation="true" monster_spawnscript="act2/mephisto/mephisto4/spawn_hero" monster_team="enemy" name="phoenix_spawner" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" startenabled="false"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_m" fxlevel="2" health="100" material="solid_metal" model="mephisto/hellgate_gate_mep_b" name="the_gate" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_sulpher" deathsound="death_style/ds_sulpher_l" fxlevel="3" health="150" mass="0" material="rock" model="mephisto/ruined_buttress_01_stump_mep_b" name="ruined_buttress_01_mep_b_d" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actdelay="20" acttargets="hint_trigger" classname="enabletargetent" enable="true" name="enable_hint" nocollide="true" smartent="false"/>
+    <entity actscript="setEnable('meph3_link','TRUE')" actsoundloop="zone_shared/special/blink_portal" acttogglesloopfx="true" boxcollision="true" classname="gameent" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="portal_back" nocollide="true" smartent="false" toggleonact="true"/>
+    <entity actsoundloop="zone_shared/special/blink_portal" actspawn="fake_portal_act2_trig" acttogglesloopfx="true" boxcollision="true" classname="gameent" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="portal" nocollide="true" smartent="false" toggleonact="true"/>
+    <entity actcountremove="1" actdistance="60" actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" actscript="common/puzzleents/fakeportalact2" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" description="Portal" extent="-10 -20 0 10 20 60" name="fake_portal_act2_trig" nocollide="true" smartent="false" startenabled="true" team="hero"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable" damagetype="dmg_fire" informai="false" name="harm_target_constant02" nocollide="true" radiusdamage="false" smartent="false" smartfire="true"/>
+    <entity classname="ent" name="mr_mephisto_spot02" nocollide="true" smartent="false"/>
+    <entity actcountact="2" actcountremove="1" actscript="killEntity('the_gate')" classname="actionent" name="destroy_door" nocollide="true" smartent="false"/>
+    <entity actscript="act2/mephisto/mephisto4/newspawn" classname="actionent" name="spawn_baddie" nocollide="true" smartent="false"/>
+    <entity actcountact="10" actscript="act2/mephisto/mephisto4/stopwell" acttargets="destroy_door" classname="actionent" name="disable_push" nocollide="true" smartent="false"/>
+    <entity actscript="common/teleport" acttargets="sp_mephisto02" classname="actionent" name="altar_spot" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="false" classname="scripttriggerent" extent="-300 -300 -120 300 300 120" name="hint_trigger" nocollide="true" smartent="false" startenabled="false" team="hero" tipid="46"/>
+    <entity actleader="false" actmatchteam="true" blackhole="true" boxcollision="true" classname="pushent" loopfx="map/mephisto/pit_souls" loopfxstarton="true" name="pushout" nocollide="true" pushheight="360" pushreapply="true" smartent="false" spawnsoundloop="zone_shared/mephisto/ff_loop" team="hero"/>
+    <entity actcountdisable="1" actmatchteam="true" actontouch="true" actscript="act2/mephisto/mephisto4/jump_portal" actteamplayer="true" boxcollision="true" classname="gameent" loopfx="map/mephisto/pit_portal" loopfxstarton="true" name="hole_trigger" nocollide="true" smartent="false" spawnsoundloop="zone_shared/mephisto/mef_laugh" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/mephisto/mephisto4/stage3script" acttargets="hole_trigger" actteamplayer="true" boxcollision="true" classname="gameent" name="debug_trigger" nocollide="true" startenabled="false" team="hero"/>
+    <entity beeline="true" classname="waypointent" name="wp_getim01" nocollide="true" speed="1"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Sepulcher" name="meph3_link" nextzone="mephisto3" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_demon_large" loopfxstarton="true" name="fire_large01" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false"/>
+</world>

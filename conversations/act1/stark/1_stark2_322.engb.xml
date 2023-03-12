@@ -1,0 +1,100 @@
+<conversation>
+    <startCondition conditionscriptfile="common/conv/deadpool" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/deadpool/1_stark2_322_010_dp" text="%Deadpool%: Weasel, old buddy! I haven't seen you in weeks. Where've you been hiding?">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/weasel/1_stark2_322_011_wea" text="%WEASEL%: In the hospital. You stabbed me in the leg. Remember?">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/deadpool/1_stark2_322_012_dp" text="%Deadpool%: Oh, yeah. That's right. But I had to - you were trying to eat the last cheesy puff.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/WEASEL/1_STARK2_322_014_WEA" text="%WEASEL%: It was my bag of cheesy puffs!">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/deadpool/1_stark2_322_014_dp" text="%Deadpool%: Well, that's not how I remember it.">
+                                                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/WEASEL/1_STARK2_232_020_WEA_C" text="%WEASEL%: Uh, hey. How's it going?">
+                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/1_stark2_322_030_wea" text="%WEASEL%: Yeah, what's up?">
+                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="Who does the laptop belong to?">
+                    <line soundtoplay="voice/WEASEL/1_STARK2_322_101_WEA_a" text="%WEASEL%: It definitely belongs to the Black Widow. It's got her fingerprints all over it.">
+                        <response text="%PLAYER%: Did you get any data from it?">
+                            <line soundtoplay="voice/weasel/1_stark2_322_103_wea" text="%WEASEL%: For most techs it would have been a lost cause, but for me, I managed to drag up a few tidbits of information.">
+                                <response chosenscriptfile="setGameFlag('conv_vars',11,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_vars', 11 )" text="What was on Black Widow's laptop?">
+                    <line soundtoplay="voice/weasel/1_stark2_322_201_wea" text="%WEASEL%: It mostly dealt with a building called The Imperium.">
+                        <response text="%PLAYER%: The Imperium... what's that?">
+                            <line soundtoplay="voice/weasel/1_stark2_322_203_wea" text="%WEASEL%: I don't know. But that laptop had the layout of the building and all kinds of information about the security.">
+                                <response chosenscriptfile="setGameFlag('conv_vars',12,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_vars', 12 )" text="Can you find out what 'The Imperium' is?">
+                    <line soundtoplay="voice/weasel/1_stark2_322_301_wea" text="%WEASEL%: I can, but you need to get me Fury's password into S.H.I.E.L.D.'s priority files, I bet I'll find everything you want to know.">
+                        <response text="%PLAYER%: But we can't ask him for the password. Do you have any idea what it would be?">
+                            <line soundtoplay="voice/weasel/1_stark2_322_303_wea" text="%WEASEL%: My sources tell me it's one of three possibilities: Jacob Fury, Baron Strucker or Gabriel Jones.">
+                                <response text="%PLAYER%: So which one is it?">
+                                    <line soundtoplay="voice/weasel/1_stark2_322_300_wea" text="%WEASEL%: That's what I need you to find out. Talk to Vision, he'll be able to help.">
+                                        <response chosenscriptfile="setGameFlag('conv_vars',10,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="I know what the password is.">
+                    <line text="%Menu%: The password is:">
+                        <response text="Jacob Fury">
+                            <line soundtoplay="voice/weasel/1_stark2_322_405_wea" text="%WEASEL%: Thanks. When you get back from Atlantis, I'll have all the information you need.">
+                                <response chosenscriptfile="setGameFlag('opt_obj', 1,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                        <response text="Baron Strucker">
+                            <line soundtoplay="voice/weasel/1_stark2_322_405_wea" text="%WEASEL%: Thanks. When you get back from Atlantis, I'll have all the information you need.">
+                                <response chosenscriptfile="setGameFlag('opt_obj', 1,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                        <response text="Gabriel Jones">
+                            <line soundtoplay="voice/weasel/1_stark2_322_405_wea" text="%WEASEL%: Thanks. When you get back from Atlantis, I'll have all the information you need.">
+                                <response chosenscriptfile="setGameFlag('conv_vars', 25,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Weasel.">
+                    <line soundtoplay="voice/weasel/1_stark2_322_501_wea" text="%WEASEL%: Sure. Anytime.">
+                        <response chosenscriptfile="act1/stark/talk_weasel01b" conversationend="true" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

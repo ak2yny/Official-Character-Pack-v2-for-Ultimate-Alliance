@@ -1,0 +1,35 @@
+<conversation>
+    <startCondition conditionscriptfile="common/conv_run_once/run_once17" noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/1_stark2_520_020_wea" text="%WEASEL%: That password you gave me worked like a charm. I had no problems getting into S.H.I.E.L.D.'s database.">
+                <response tagjump="weasel" text="%PLAYER%: Glad to hear it. Did you dig up any useful information?"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv_run_once/run_once16" noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/1_stark2_520_010_wea" text="%WEASEL%: Nice going, moron. You gave me the wrong password.">
+                <response text="%PLAYER%: You mind rephrasing that statement?">
+                    <line soundtoplay="voice/weasel/1_stark2_520_012_wea" text="%WEASEL%: Sorry... uh, look... that password you gave me for the S.H.I.E.L.D. files was wrong. I tripped security as soon as I logged on. But I managed to get your data.">
+                        <response tagjump="weasel" text="%PLAYER%: What did you find out?"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/1_stark2_520_030_wea" tagindex="weasel" text="%WEASEL%: You are gonna love this. The Imperium... it's a S.H.I.E.L.D. think tank. You know, one of those places where they get geniuses together.">
+                <response text="%PLAYER%: Any idea what The Imperium think tank is for?">
+                    <line soundtoplay="voice/weasel/1_stark2_520_032_wea" text="%WEASEL%: Ah, no. But I can find out by hacking into the S.H.I.E.L.D. priority database. But I need help from one of the few guys who can crack that code: C.B. Cebulski or a guy named Beroge.">
+                        <response text="%PLAYER%: So why don't you ask them?">
+                            <line soundtoplay="voice/weasel/1_stark2_520_034_wea" text="%WEASEL%: I need you to talk to Hank Pym and find out which of those two guys I can trust.">
+                                <response chosenscriptfile="act1/stark/talk_weasel01b" conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

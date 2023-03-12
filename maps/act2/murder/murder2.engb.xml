@@ -1,0 +1,641 @@
+<world>
+    <entity act="2" bigconvmap="true" level="12" name="world" partylight="0.87 0.89 0.41" soundfile="Toy2" zonescript="act2/murder/murder2/murder2"/>
+    <precache filename="act2/murder/murder2/2_murder2_020" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_022" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_025" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_070" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_072" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_075" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_077" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_080" type="conversation"/>
+    <precache filename="act2/murder/murder2/2_murder2_090" type="conversation"/>
+    <precache filename="base/item/item_pickup" type="fx"/>
+    <precache filename="murder/clown_car/mp_clown_car" type="motionpath"/>
+    <precache filename="murder/clown_car_cam/mp_clown_car_cam" type="motionpath"/>
+    <precache filename="act2/murder/murder2/enter_tent" type="script"/>
+    <precache filename="act2/murder/murder2/kelly_fade_remove" type="script"/>
+    <precache filename="act2/murder/murder2/phoenix_arcaded" type="script"/>
+    <precache filename="act2/murder/murder2/pitfall_win_end" type="script"/>
+    <precache filename="common/end_cs" type="script"/>
+    <precache filename="zone_shared/murderworld/clown_car_stream" type="sound"/>
+    <precache filename="zone_shared/murderworld/pitfall_death" type="sound"/>
+    <precache filename="zone_shared/murderworld/plug" type="sound"/>
+    <entity actcountremove="1" character="SenatorKelly" classname="monsterspawnerent" name="sp_senatorkelly" nocollide="true"/>
+    <entity actcountremove="1" character="ArcadeClown_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_arcadeclown_a" nocollide="true"/>
+    <entity actcountremove="1" character="ArcadeClown_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_arcadeclown_a_leader" nocollide="true"/>
+    <entity actcountremove="1" character="MurderBot_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_murderbot_a" nocollide="true"/>
+    <entity actcountremove="1" character="Murder_Phoenix" classname="monsterspawnerent" monster_team="enemy" name="sp_murder_phoenix" nocollide="true" nofadeondeath="true" shadow="true"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMLUKECAGE')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="30" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_lukecage" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept07.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="7" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art7" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b"/>
+    <entity boxcollision="true" classname="gameent" name="dynamic_clip" nocollide="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="projectileent" name="projectile"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actonuse="true" boxcollision="true" classname="interactent" description="Climb" interaction="data/fightstyles/interact_climbing" interaction_multiuser="true" interaction_node="climbing_start" interaction_offset_type="Wall" name="trigger_climb" nocollide="true" quickuse="true" smartent="false" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity animstarton="true" classname="physent" deathspawn="arcade_machine_mur_a_d" material="solid_metal" model="murderworld/arcade_machine_mur_a" name="arcade_machine_mur_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_confetti" deathsound="death_style/ds_confetti_m" fxlevel="2" health="10" heaviness="0" material="Wood" model="murderworld/barrel_pickles_mur_th" name="barrel_pickles_mur_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="carni_cart_mur_b_d" fxlevel="2" health="100" material="solid_metal" model="murderworld/carni_cart_mur_b" name="carni_cart_mur_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" material="solid_metal" model="murderworld/clown_car_intro_mur_a" name="clown_car_intro_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actonuse="false" classname="physent" material="solid_metal" model="murderworld/clown_car_spawner_mur_a" name="clown_car_spawner_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2" toggleonact="true"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="murderworld/column_01_mur_b" name="column_01_mur_b" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_confetti" deathsound="death_style/ds_confetti_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="murderworld/corn_bucket_mur_th" name="corn_bucket_mur_th" randompickups="3" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_confetti" deathsound="death_style/ds_confetti_m" fxlevel="2" health="10" heaviness="0" material="Wood" model="murderworld/cotton_candy_machine_mur_th" name="cotton_candy_machine_mur_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/explode/exp_metal" deathsound="death_style/ds_explosive_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="murderworld/crate_fireworks_mur_th" name="crate_fireworks_mur_th" structure="0"/>
+    <entity actinactivedelay="2" actonuse="true" actsound="zone_shared/murderworld/clown_treasure_chest" actspawn="mur_box_pain" classname="physent" discription="Open Box" material="solid_metal" model="murderworld/doom_in_the_box_mur_a" name="doom_in_the_box_mur_a" nogravity="true" nopickup="true" nopush="true" quickuse="true" structure="2"/>
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/murderworld/door" autoclosedelay="0" classname="doorent" health="100" material="solid_metal" model="murderworld/door_midway_mur_d" name="door_midway_mur_d" nogravity="true" nopickup="true" nopush="true" structure="0" toggleonact="true"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="dunk_tank_mur_b_d" fxlevel="2" health="150" material="solid_metal" model="murderworld/dunk_tank_mur_b" name="dunk_tank_mur_b" nogravity="true" nopickup="true" nopush="true" structure="1"/>
+    <entity classname="physent" deatheffect="base/material/explode/exp_metal" deathsound="death_style/ds_explosive_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="murderworld/exploding_toy_animal_01_mur_th" name="exploding_toy_animal_01_mur_th" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/explode/exp_metal" deathsound="death_style/ds_explosive_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="murderworld/exploding_toy_animal_02_mur_th" name="exploding_toy_animal_02_mur_th" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="murderworld/light_pole_mur_e" name="light_pole_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="murderworld/light_string_pole_mur_e" name="light_string_pole_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" health="100" material="solid_metal" model="murderworld/mind_control_device_mur_a" name="mind_control_device_mur_a" nogravity="true" nopickup="true" nopush="true" structure="0"/>
+    <entity animstarton="true" classname="physent" material="biometal" model="murderworld/pitfall_fire_mur_a" name="pitfall_fire_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actsound="zone_shared/murderworld/pitfall_lootz" animstarton="true" classname="physent" count="1000" inventoryitem="money1" material="biometal" model="murderworld/pitfall_gold_mur_a" name="pitfall_gold_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2" team="hero" type="money"/>
+    <entity animstarton="true" classname="ropeent" interaction="data/fightstyles/interact_rope" interaction_node="rope_hold" material="biometal" model="murderworld/pitfall_rope_mur_a" name="pitfall_rope_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="biometal" model="murderworld/pitfall_snake_mur_a" name="pitfall_snake_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" material="biometal" model="murderworld/pitfall_tarpit_door_mur_a" name="pitfall_tarpit_door_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2" toggleonact="true"/>
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" material="biometal" model="murderworld/pitfall_tri_gators_mur_a" name="pitfall_tri_gators_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2" toggleonact="true"/>
+    <entity classname="physent" material="Wood" model="murderworld/roller_coaster_mur_a" name="roller_coaster_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actonuse="true" classname="moverent" material="plastic" model="murderworld/stopper_mur_m" move="0 0 0" moveduration="1" name="stopper_mur_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" structure="2" toggleonact="true"/>
+    <entity camerafadeout="true" classname="physent" material="carpet" model="murderworld/tent_entrance_mur_e" name="tent_entrance_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="murderworld/tent_entrance_sign_mur_e" name="tent_entrance_sign_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" material="carpet" model="murderworld/tent_entrance_wall_mur_e" name="tent_entrance_wall_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="murderworld/tent_exit_01_mur_e" name="tent_exit_01_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="murderworld/tent_exit_02_mur_e" name="tent_exit_02_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="murderworld/tent_exit_clown_mur_a" name="tent_exit_clown_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="plastic" model="murderworld/tent_light_string_mur_e" name="tent_light_string_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="Wood" model="murderworld/tent_pole_center_mur_e" name="tent_pole_center_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="Wood" model="murderworld/tent_pole_mur_e" name="tent_pole_mur_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_confetti" deathsound="death_style/ds_confetti_m" fxlevel="2" health="10" material="hollow_metal" model="murderworld/trashcan_mur_th" name="trashcan_mur_th" nogravity="true" nopickup="true" nopush="true" randompickups="3" structure="0"/>
+    <entity actinactivedelay="1.5" actonuse="true" actsound="zone_shared/murderworld/treasure_chest_doom" actspawn="mur_treas_pain" classname="physent" description="Open Treasure Chest" material="Wood" model="murderworld/treasure_chest_fake_mur_a" name="treasure_chest_fake_mur_a" nogravity="true" nopickup="true" nopush="true" quickuse="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="murderworld/u_coin_small_mur_a" name="u_coin_small_mur_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entinst type="sp_senatorkelly01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_senatorkelly01" pos="654 1080 82.9722"/>
+    </entinst>
+    <entinst type="ss_arcadeclown_a04">
+        <inst extents="-12 -18 0 36 18 84" name="ss_arcadeclown_a04" orient="0 0 -1.5708" pos="1437.68 1703.29 0"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_arcadeclown_a04" orient="0 0 -1.5708" pos="1486.48 1617.41 0"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_arcadeclown_a04" orient="0 0 0.261799" pos="720 1080 0"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_arcadeclown_a04" orient="0 0 -0.872665" pos="730.125 1029.11 0"/>
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_arcadeclown_a04" orient="0 0 -0.349066" pos="778.265 1062.12 0"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_arcadeclown_a04" orient="0 0 -1.5708" pos="1387.13 1617.44 0"/>
+    </entinst>
+    <entinst type="s_boothclown">
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="s_boothclown" orient="0 0 -1.5708" pos="3828 3506.25 0"/>
+    </entinst>
+    <entinst type="s_w2clown">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="s_w2clown" orient="0 0 3.14159" pos="4348.8 2857.59 0"/>
+    </entinst>
+    <entinst type="s_introclown">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="s_introclown" orient="0 0 3.14159" pos="4348.8 2857.59 0"/>
+    </entinst>
+    <entinst type="s_introleader">
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="s_introleader" orient="0 0 3.14159" pos="4360.8 2845.59 12"/>
+    </entinst>
+    <entinst type="ss_murderbot_a02">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_murderbot_a02" orient="0 0 -1.39626" pos="1474.02 1185.61 0"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_murderbot_a02" orient="0 0 -1.8326" pos="1407.68 1199.23 0"/>
+    </entinst>
+    <entinst type="phoenix_npc">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="phoenix_npc" orient="0 0 -1.5708" pos="3960 2928 5"/>
+    </entinst>
+    <entinst type="comic_lukecage">
+        <inst name="comic_lukecage" pos="780 360 240"/>
+    </entinst>
+    <entinst type="concept_art7">
+        <inst name="concept_art7" pos="1380 360 240"/>
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="780 1164 0"/>
+    </entinst>
+    <entinst type="dclip_log04">
+        <inst extents="-120 -12 0 120 12 120" name="dclip_log04" pos="5640 4908 -1440"/>
+        <inst extents="-120 -12 0 120 12 120" name="dclip_log04" pos="5640 3948 -1440"/>
+        <inst extents="-120 -12 0 120 12 120" name="dclip_log04" pos="5640 6828 0"/>
+        <inst extents="-120 -12 0 120 12 120" name="dclip_log04" pos="5640 3948 -720"/>
+    </entinst>
+    <entinst type="dclip_kelly">
+        <inst extents="-30.9838 -53.059 -60 30.9838 53.059 -30" name="dclip_kelly" pos="654 1079.82 82.9722"/>
+    </entinst>
+    <entinst type="stopper_effect">
+        <inst extents="-6 -6 -6 6 6 6" name="stopper_effect" pos="1620 1440 0"/>
+    </entinst>
+    <entinst type="null">
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="null" orient="0 0 1.5708" pos="5670 3066 198"/>
+    </entinst>
+    <entinst type="cam_pitfall15">
+        <inst extents="-5.99984 -6.00012 -6 6.00016 5.99988 6" name="cam_pitfall15" orient="0 0 -3.14159" pos="5640 5400 -1500"/>
+        <inst extents="-5.99998 -6.00012 -6 6.00002 5.99988 6" name="cam_pitfall16" orient="0 0 -3.14159" pos="5640 6360 -1500"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="spot_pitfall01" orient="0 0 -1.5708" pos="5670 8736 6"/>
+        <inst extents="-6.00004 -5.99988 -6 5.99996 6.00012 6" name="cam_pitfall13" orient="0 0 -3.14159" pos="5640 3480 -1500"/>
+        <inst extents="-5.99979 -6.00012 -6 6.00021 5.99988 6" name="cam_pitfall12" orient="0 0 -3.14159" pos="5640 8280 -780"/>
+        <inst extents="-6.00013 -6.00012 -6 5.99987 5.99988 6" name="cam_pitfall11" orient="0 0 -3.14159" pos="5640 7320 -780"/>
+        <inst extents="-5.99998 -6.00012 -6 6.00002 5.99988 6" name="cam_pitfall10" orient="0 0 -3.14159" pos="5640 6360 -780"/>
+        <inst extents="-5.99984 -6.00012 -6 6.00016 5.99988 6" name="cam_pitfall09" orient="0 0 -3.14159" pos="5640 5400 -780"/>
+        <inst extents="-6.00018 -6.00012 -6 5.99982 5.99988 6" name="cam_pitfall08" orient="0 0 -3.14159" pos="5640 4440 -780"/>
+        <inst extents="-6.00004 -5.99988 -6 5.99996 6.00012 6" name="cam_pitfall07" orient="0 0 -3.14159" pos="5640 3480 -780"/>
+        <inst extents="-5.99979 -6.00012 -6 6.00021 5.99988 6" name="cam_pitfall06" orient="0 0 -3.14159" pos="5640 8280 -60"/>
+        <inst extents="-6.00013 -6.00012 -6 5.99987 5.99988 6" name="cam_pitfall05" orient="0 0 -3.14159" pos="5640 7320 -60"/>
+        <inst extents="-5.99998 -6.00012 -6 6.00002 5.99988 6" name="cam_pitfall04" orient="0 0 -3.14159" pos="5640 6360 -60"/>
+        <inst extents="-5.99984 -6.00012 -6 6.00016 5.99988 6" name="cam_pitfall03" orient="0 0 -3.14159" pos="5640 5400 -60"/>
+        <inst extents="-6.00018 -6.00012 -6 5.99982 5.99988 6" name="cam_pitfall02" orient="0 0 -3.14159" pos="5640 4440 -60"/>
+        <inst extents="-6.00004 -5.99988 -6 5.99996 6.00012 6" name="cam_pitfall01" orient="0 0 -3.14159" pos="5640 3480 -60"/>
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="spot_pitfall07" orient="0 0 1.5708" pos="5670 3024 -1698"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="spot_pitfall08" orient="0 0 -1.5708" pos="5670 8736 -978"/>
+        <inst extents="-5.99995 -5.99981 -6 6.00005 6.00019 6" name="relay_log_spot03" orient="0 0 -1.5708" pos="5670 4806 -1427.08"/>
+        <inst extents="-6.00018 -6.00012 -6 5.99982 5.99988 6" name="cam_pitfall14" orient="0 0 -3.14159" pos="5640 4440 -1500"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="spot_pitfall03" orient="0 0 -1.5708" pos="5670 8736 -714"/>
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="spot_pitfall04" orient="0 0 1.5708" pos="5670 3024 -1434"/>
+        <inst extents="-5.99991 -5.99998 -6 6.00009 6.00002 6" name="jean_place01" orient="0 0 -1.5708" pos="3936 2856 8"/>
+        <inst extents="-5.99995 -6.00008 -6 6.00005 5.99992 6" name="car_spot01" orient="0 0 -3.14159" pos="4348.8 2869.59 0"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="relay_log_spot05" orient="0 0 -1.5708" pos="5670 5718 -1427.08"/>
+        <inst extents="-5.99995 -5.99979 -6 6.00005 6.00021 6" name="relay_log_spot01" orient="0 0 -1.5708" pos="5670 7686 12.9151"/>
+        <inst extents="-5.99995 -5.99981 -6 6.00005 6.00019 6" name="relay_log_spot02" orient="0 0 -1.5708" pos="5670 4806 -707.085"/>
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="spot_pitfall05" orient="0 0 1.5708" pos="5670 3024 -978"/>
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="hero_spot_pitfall_01" orient="0 0 1.5708" pos="5670 3066 6"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="spot_pitfall06" orient="0 0 -1.5708" pos="5670 8736 -258"/>
+        <inst extents="-5.99999 -6.00005 -6 6.00001 5.99995 6" name="hero_spot_boardwalk" orient="0 0 -1.5708" pos="1440 1800 0"/>
+        <inst extents="-6 -6.00013 -6 6 5.99987 6" name="spot_pitfall02" orient="0 0 1.5708" pos="5670 3024 -714"/>
+        <inst extents="-5.99995 -5.99996 -6 6.00005 6.00004 6" name="relay_log_spot04" orient="0 0 -1.5708" pos="5670 5766 -1427.08"/>
+        <inst extents="-5.99993 -6.00012 -6 6.00007 5.99988 6" name="hero_spot_tent" orient="0 0 1.5708" pos="3940 2740 47"/>
+    </entinst>
+    <entinst type="player_start_all03">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all03" orient="0 0 -1.5708" pos="3960 3360 0"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="1080 360 240"/>
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0241 -95.2952 0 71.9759 48.7833 83.9544" name="player_start_all02" orient="0 0 3.14159" pos="4320 3000 0"/>
+    </entinst>
+    <entinst type="log">
+        <inst name="log" pos="5400 6000 -60"/>
+    </entinst>
+    <entinst type="debug_pitfall">
+        <inst extents="-6 -6 0 6 6 12" name="debug_pitfall" pos="5280 6000 0"/>
+    </entinst>
+    <entinst type="relay_wave2">
+        <inst extents="-6 -6 0 6 6 12" name="relay_wave2" pos="3720 2580 0"/>
+    </entinst>
+    <entinst type="relay_wave1">
+        <inst extents="-6 -6 0 6 6 12" name="relay_wave1" pos="3720 2640 0"/>
+    </entinst>
+    <entinst type="log_ent">
+        <inst extents="-6 -6 0 6 6 12" name="log_ent" pos="5280 6120 0"/>
+    </entinst>
+    <entinst type="relay_log">
+        <inst extents="-6.00024 -5.99978 0 5.99976 6.00022 12" name="relay_log" orient="0 0 -1.5708" pos="5400 6120 -66"/>
+    </entinst>
+    <entinst type="trigger_area02">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area02" pos="5640 4440 -300"/>
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area01" pos="5640 3480 -300"/>
+    </entinst>
+    <entinst type="trigger_area12">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area12" pos="5640 8280 -1020"/>
+    </entinst>
+    <entinst type="trigger_area03">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area03" pos="5640 5400 -300"/>
+    </entinst>
+    <entinst type="trigger_area14">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area14" pos="5640 4440 -1740"/>
+    </entinst>
+    <entinst type="trigger_area15">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area15" pos="5640 5400 -1740"/>
+    </entinst>
+    <entinst type="trigger_area04">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area04" pos="5640 6360 -300"/>
+    </entinst>
+    <entinst type="trigger_area05">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area05" pos="5640 7320 -300"/>
+    </entinst>
+    <entinst type="trigger_area06">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area06" pos="5640 8280 -300"/>
+    </entinst>
+    <entinst type="trigger_area16">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area16" pos="5640 6360 -1740"/>
+    </entinst>
+    <entinst type="trigger_area07">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area07" pos="5640 3480 -1020"/>
+    </entinst>
+    <entinst type="trigger_area08">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area08" pos="5640 4440 -1020"/>
+    </entinst>
+    <entinst type="trigger_area09">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area09" pos="5640 5400 -1020"/>
+    </entinst>
+    <entinst type="trigger_area10">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area10" pos="5640 6360 -1020"/>
+    </entinst>
+    <entinst type="trigger_area11">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area11" pos="5640 7320 -1020"/>
+    </entinst>
+    <entinst type="trigger_area13">
+        <inst extents="-240 -480 0 240 480 480" name="trigger_area13" pos="5640 3480 -1740"/>
+    </entinst>
+    <entinst type="trigger_climb">
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 4440 -1704"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 4440 -264"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 7320 -264"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 8280 -264"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 4440 -984"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 8280 -984"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 3480 -1704"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 5400 -1704"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 6360 -1704"/>
+        <inst extents="-6 -30 0 6 30 264" name="trigger_climb" pos="5634 3480 -264"/>
+    </entinst>
+    <entinst type="trigger_touch08">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch08" pos="5640 8772 -264"/>
+    </entinst>
+    <entinst type="trig_fire03">
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 3720 -984"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 5406 -14"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 3725.42 0.00012207"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 6605.42 -264"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 6120 -264"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 8520 -264"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 6366 -14"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 3486 -734"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 5645.42 -1704"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 4205.42 -1704"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 3245.42 -1440"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 8045.42 -984"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 8520 -984"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 7320 -984"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 3245.42 -984"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 6365.42 -984"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 6125.42 -984"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 6366 -734"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 5760 -720"/>
+        <inst extents="-30 -12 0 30 12 21.6" name="trig_fire03" pos="5670 5400 -984"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 5406 -734"/>
+        <inst extents="-30 -13.8 0 30 13.8 25.2" name="trig_fire03" pos="5670 5645.42 -264"/>
+        <inst extents="-66 -198 0 66 198 12" name="trig_fire03" pos="5670 7326 -734"/>
+    </entinst>
+    <entinst type="trigger_touch09">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch09" pos="5640 2988 -984"/>
+    </entinst>
+    <entinst type="trigger_touch10">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch10" pos="5640 8772 -984"/>
+    </entinst>
+    <entinst type="trigger_touch11">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch11" pos="5640 2988 -1704"/>
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-48 -42 0 48 42 120" name="trigger_touch01" pos="780 1158 0"/>
+    </entinst>
+    <entinst type="trigger_touch07">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch07" pos="5640 2988 -1440"/>
+    </entinst>
+    <entinst type="trigger_touch06">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch06" pos="5640 8772 -720"/>
+    </entinst>
+    <entinst type="trigger_touch05">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch05" pos="5640 2988 -720"/>
+    </entinst>
+    <entinst type="trigger_touch04">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch04" pos="5640.0 8772.0 -1.90735e-005"/>
+    </entinst>
+    <entinst type="trig_stopper">
+        <inst extents="-180 -120 0 180 120 240" name="trig_stopper" pos="1500 1404 0"/>
+    </entinst>
+    <entinst type="trig_coin">
+        <inst extents="-10.8 -10.2 0 10.8 10.2 48" name="trig_coin" pos="4350 2797.8 0"/>
+    </entinst>
+    <entinst type="arcade_trigger">
+        <inst extents="-24 -18 0 24 18 72" name="arcade_trigger" pos="3960 2958 0"/>
+    </entinst>
+    <entinst type="trigger_use02">
+        <inst extents="-48 -6 0 48 6 120" name="trigger_use02" pos="3960 2466 0"/>
+    </entinst>
+    <entinst type="trigger_use01">
+        <inst extents="-120 -36 0 120 36 120" name="trigger_use01" pos="1440 1992 0"/>
+    </entinst>
+    <entinst type="trigger_ticket_booth">
+        <inst extents="-36 -24 0 36 24 96" name="trigger_ticket_booth" pos="3828 3480 0"/>
+    </entinst>
+    <entinst type="wp_clown_go01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_clown_go01" pos="4020 3060 8"/>
+    </entinst>
+    <entinst type="xtraction_point01">
+        <inst name="xtraction_point01" orient="0 0 -1.5708" pos="1620 1440 0"/>
+    </entinst>
+    <entinst type="link_murder3">
+        <inst extents="-6 -60.6 0 6 60.6 120" name="link_murder3" pos="3414 3000 0"/>
+    </entinst>
+    <entinst type="link_murder4">
+        <inst extents="-6.00004 -60.5999 0 5.99996 60.6 120" name="link_murder4" orient="0 0 3.14159" pos="4518 3000 0"/>
+    </entinst>
+    <entinst type="link_murder5">
+        <inst extents="-5.99995 -60.6 0 6.00005 60.6 120" name="link_murder5" orient="0 0 -1.5708" pos="3960 3528 0"/>
+    </entinst>
+    <entinst type="arcade_machine">
+        <inst name="arcade_machine" pos="3960 2976 0"/>
+    </entinst>
+    <entinst type="barrel_pickles_mur_th">
+        <inst name="barrel_pickles_mur_th" pos="3684 3480 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4032 3240 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4137.17 2820.61 0"/>
+        <inst name="barrel_pickles_mur_th" pos="3672 2544 0"/>
+        <inst name="barrel_pickles_mur_th" pos="3636 2520 0"/>
+        <inst name="barrel_pickles_mur_th" pos="3672 2496 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4464 3288 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4476 2904 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4098.66 2831.85 0"/>
+        <inst name="barrel_pickles_mur_th" pos="4107 2790.45 0"/>
+    </entinst>
+    <entinst type="carni_cart_mur_b">
+        <inst name="carni_cart_mur_b" orient="0 0 2.0944" pos="4260 3276 0"/>
+        <inst name="carni_cart_mur_b" pos="375.312 1328.95 0"/>
+        <inst name="carni_cart_mur_b" orient="0 0 -0.436332" pos="576.265 389.016 0"/>
+        <inst name="carni_cart_mur_b" orient="0 0 0.523599" pos="630.987 -81.2748 0"/>
+    </entinst>
+    <entinst type="cart_kelly">
+        <inst name="cart_kelly" orient="0 0 -1.5708" pos="654 1080 0"/>
+    </entinst>
+    <entinst type="clown_car_go">
+        <inst name="clown_car_go" pos="0 0 0"/>
+    </entinst>
+    <entinst type="clown_car_stop">
+        <inst name="clown_car_stop" orient="0 0 -3.14159" pos="4348.8 1669.59 0"/>
+    </entinst>
+    <entinst type="column_01_mur_b">
+        <inst name="column_01_mur_b" pos="1314.55 663.494 0"/>
+        <inst name="column_01_mur_b" pos="1668 1896 0"/>
+        <inst name="column_01_mur_b" pos="1530.02 910.481 0"/>
+        <inst name="column_01_mur_b" pos="696 900 0"/>
+        <inst name="column_01_mur_b" pos="886.617 663.494 0"/>
+        <inst name="column_01_mur_b" pos="1752 1272 0"/>
+        <inst name="column_01_mur_b" pos="1230.57 1644.7 0"/>
+    </entinst>
+    <entinst type="corn_bucket_mur_th">
+        <inst name="corn_bucket_mur_th" pos="4164 3312 0"/>
+        <inst name="corn_bucket_mur_th" pos="3744 2748 0"/>
+        <inst name="corn_bucket_mur_th" pos="3804 3204 0"/>
+    </entinst>
+    <entinst type="cotton_candy_machine_mur_th">
+        <inst name="cotton_candy_machine_mur_th" orient="0 0 0.523599" pos="3480 3300 0"/>
+        <inst name="cotton_candy_machine_mur_th" orient="0 0 0.610865" pos="1512 1008 0"/>
+    </entinst>
+    <entinst type="crate_fireworks_mur_th">
+        <inst name="crate_fireworks_mur_th" pos="3480 2820 0"/>
+    </entinst>
+    <entinst type="doom_in_the_box_mur_a01">
+        <inst name="doom_in_the_box_mur_a01" pos="780 1248 0"/>
+    </entinst>
+    <entinst type="door_midway_mur_d01">
+        <inst name="door_midway_mur_d01" orient="0 0 1.5708" pos="3960 2460 0"/>
+    </entinst>
+    <entinst type="door_murder3">
+        <inst name="door_murder3" pos="3408 3000 0"/>
+        <inst name="door_murder4" pos="4524 3000 0"/>
+    </entinst>
+    <entinst type="dunk_tank_mur_b">
+        <inst name="dunk_tank_mur_b" orient="0 0 -1.5708" pos="1620 1152 0"/>
+    </entinst>
+    <entinst type="exploding_toy_animal_01_mur_th">
+        <inst name="exploding_toy_animal_01_mur_th" orient="3.14159 0 2.18166" pos="3432 2712 0"/>
+        <inst name="exploding_toy_animal_01_mur_th" orient="3.14159 0 -2.18166" pos="4488 2712 0"/>
+    </entinst>
+    <entinst type="exploding_toy_animal_02_mur_th">
+        <inst name="exploding_toy_animal_02_mur_th" orient="0 0 3.14159" pos="3852 2472 0"/>
+        <inst name="exploding_toy_animal_02_mur_th" orient="0 0 1.39626" pos="3432 3156 0"/>
+    </entinst>
+    <entinst type="light_pole_mur_e">
+        <inst name="light_pole_mur_e" orient="0 0 1.5708" pos="1194 780 156"/>
+        <inst name="light_pole_mur_e" pos="1500 966 36"/>
+        <inst name="light_pole_mur_e" pos="660 966 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 -1.5708" pos="966 780 156"/>
+        <inst name="light_pole_mur_e" orient="0 0 -1.5708" pos="966 540 276"/>
+        <inst name="light_pole_mur_e" pos="900 966 36"/>
+        <inst name="light_pole_mur_e" pos="1260 966 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 -1.5708" pos="1326 1620 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 3.14159" pos="660 1194 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 3.14159" pos="900 1194 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 3.14159" pos="1260 1194 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 1.5708" pos="1194 540 276"/>
+        <inst name="light_pole_mur_e" orient="0 0 -1.5708" pos="1326 1260 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 1.5708" pos="1554 1620 36"/>
+        <inst name="light_pole_mur_e" orient="0 0 1.5708" pos="1554 1260 36"/>
+    </entinst>
+    <entinst type="light_string_pole_mur_e">
+        <inst name="light_string_pole_mur_e" pos="1320 474 240"/>
+        <inst name="light_string_pole_mur_e" pos="1434 472.8 240"/>
+        <inst name="light_string_pole_mur_e" pos="1434 360 240"/>
+        <inst name="light_string_pole_mur_e" pos="1434 246 240"/>
+        <inst name="light_string_pole_mur_e" pos="1320 246 240"/>
+        <inst name="light_string_pole_mur_e" pos="1200 246 240"/>
+        <inst name="light_string_pole_mur_e" pos="966 474 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 0.610865" pos="840 474 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 1.5708" pos="726 474 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 1.5708" pos="726 360 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 1.5708" pos="726 246 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 1.5708" pos="840 246 240"/>
+        <inst name="light_string_pole_mur_e" orient="0 0 1.5708" pos="960 246 240"/>
+        <inst name="light_string_pole_mur_e" pos="1194 474 240"/>
+    </entinst>
+    <entinst type="mind_device">
+        <inst name="mind_device" orient="0 0 1.5708" pos="5670 6744 -1440"/>
+    </entinst>
+    <entinst type="pitfall_fire_mur_a02">
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 6120 -264"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 8520 -264"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 3720 -984"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 5400 -984"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 8520 -984"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 7320 -984"/>
+        <inst name="pitfall_fire_mur_a02" orient="0 0 -1.5708" pos="5670 5760 -720"/>
+    </entinst>
+    <entinst type="pitfall_gold_mur_a10">
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 6047.71 -1704.55"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 5951.71 -1704.55"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 3180 -1704.55"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 5159.71 -984.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 4020 -984.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 5159.71 -264.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 6767.71 -984.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 6359.71 -264.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 3900 -264.552"/>
+        <inst name="pitfall_gold_mur_a10" orient="0 0 -1.5708" pos="5670 6671.71 -984.552"/>
+    </entinst>
+    <entinst type="pitfall_rope_mur_a01">
+        <inst name="pitfall_rope_mur_a01" orient="0 0 -1.5708" pos="5676 6360 -714"/>
+        <inst name="pitfall_rope_mur_a01" orient="0 0 -1.5708" pos="5676 3480 -714"/>
+        <inst name="pitfall_rope_mur_a01" orient="0 0 -1.5708" pos="5676 5400 6"/>
+    </entinst>
+    <entinst type="pitfall_snake_mur_a13">
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 5640 -1704"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 3720 0.00012207"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 5640 -264"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 4200 -1704"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 3240 -984"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 6360 -984"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 6120 -984"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 8040 -984"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 3240 -1440"/>
+        <inst name="pitfall_snake_mur_a13" orient="0 0 -1.5708" pos="5670 6600 -264"/>
+    </entinst>
+    <entinst type="pit_trap02">
+        <inst name="pit_trap02" orient="0 0 -1.5708" pos="5628 6360 -719"/>
+        <inst name="pit_trap01" orient="0 0 -1.5708" pos="5628 3480 -719"/>
+    </entinst>
+    <entinst type="gators01">
+        <inst name="gators01" orient="0 0 -1.5708" pos="5664 6367.2 0"/>
+    </entinst>
+    <entinst type="gators02">
+        <inst name="gators02" orient="0 0 -1.5708" pos="5664 5407.2 -720"/>
+        <inst name="gators03" orient="0 0 -1.5708" pos="5664 7327.2 -720"/>
+    </entinst>
+    <entinst type="roller_coaster_mur_a">
+        <inst name="roller_coaster_mur_a" orient="0 0 1.5708" pos="1080.0 180.0 -3.05176e-005"/>
+    </entinst>
+    <entinst type="stopper">
+        <inst name="stopper" pos="1620 1440 720"/>
+    </entinst>
+    <entinst type="tent_entrance_mur_e01">
+        <inst name="tent_entrance_mur_e01" pos="1440 2040 0"/>
+    </entinst>
+    <entinst type="tent_entrance_sign_mur_e">
+        <inst name="tent_entrance_sign_mur_e" orient="0 0 -0.785398" pos="1272 1776 0"/>
+        <inst name="tent_entrance_sign_mur_e" orient="0 0 -2.35619" pos="1608 1776 0"/>
+    </entinst>
+    <entinst type="tent_entrance_wall_mur_e">
+        <inst name="tent_entrance_wall_mur_e" pos="1920 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1800 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1680 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1560 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1320 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1200 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="1080 2040 0"/>
+        <inst name="tent_entrance_wall_mur_e" pos="960 2040 0"/>
+    </entinst>
+    <entinst type="tent_exit_01_mur_e">
+        <inst name="tent_exit_01_mur_e" orient="0 0 -1.5708" pos="4512 3000 0"/>
+    </entinst>
+    <entinst type="tent_exit_02_mur_e">
+        <inst name="tent_exit_02_mur_e" orient="0 0 1.5708" pos="3420 3000 0"/>
+    </entinst>
+    <entinst type="clown_face">
+        <inst name="clown_face" pos="3960 3540 0"/>
+    </entinst>
+    <entinst type="tent_light_string_mur_e">
+        <inst name="tent_light_string_mur_e" orient="1.74846e-007 1.74846e-007 -2.35619" pos="3960 3000 0"/>
+        <inst name="tent_light_string_mur_e" orient="1.74846e-007 1.74846e-007 2.35619" pos="3960 3000 0"/>
+        <inst name="tent_light_string_mur_e" orient="1.74846e-007 1.74846e-007 -0.785398" pos="3960 3000 0"/>
+        <inst name="tent_light_string_mur_e" orient="1.74846e-007 1.74846e-007 0.785398" pos="3960 3000 0"/>
+    </entinst>
+    <entinst type="tent_pole_center_mur_e">
+        <inst name="tent_pole_center_mur_e" pos="3960 3000 0"/>
+    </entinst>
+    <entinst type="tent_pole_mur_e">
+        <inst name="tent_pole_mur_e" pos="3705.6 3254.4 0"/>
+        <inst name="tent_pole_mur_e" pos="3705.6 2745.6 0"/>
+        <inst name="tent_pole_mur_e" pos="4214.4 3254.4 0"/>
+        <inst name="tent_pole_mur_e" pos="4214.4 2745.6 0"/>
+    </entinst>
+    <entinst type="trashcan_mur_th">
+        <inst name="trashcan_mur_th" orient="0 0 0.523599" pos="4332 3432 0"/>
+        <inst name="trashcan_mur_th" orient="0 0 -1.0472" pos="4284 2532 0"/>
+    </entinst>
+    <entinst type="treasure_chest_fake_mur_a">
+        <inst name="treasure_chest_fake_mur_a" orient="0 0 -3.14159" pos="1428 996 0"/>
+    </entinst>
+    <entinst type="arcade_coin">
+        <inst name="arcade_coin" pos="4349.58 2802.18 5.68774"/>
+    </entinst>
+    <entity actcountremove="1" character="SenatorKelly" classname="monsterspawnerent" firstact="0.1" monster_actcountdisable="1" monster_actonuse="true" monster_actscript="act2/murder/murder2/kelly_rescue" monster_hinttype="objective" monster_name="kelly" monster_spawnexactlocation="true" name="sp_senatorkelly01" nocollide="true"/>
+    <entity actinactivedelay="0.5" character="ArcadeClown_a" classname="monsterspawnerent" firstspawnscript="act2/murder/murder2/introclown_1ss" instantspawn="false" monster_deathtargets="relay_wave1" monster_name="introclown" monster_smartent="false" monster_spawnexactlocation="true" name="s_introclown" nocollide="true" smartent="false"/>
+    <entity actinactivedelay="0.5" character="ArcadeClown_a" classname="monsterspawnerent" firstspawnscript="act2/murder/murder2/carclown_1ss" instantspawn="false" monster_deathtargets="relay_wave2" monster_name="w2clown" monster_smartent="false" monster_spawnexactlocation="true" name="s_w2clown" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ArcadeClown_a" classname="monsterspawnerent" firstact="0.1" firstspawnscript="act2/murder/murder2/boothclown_1ss" instantspawn="false" monster_noaidisable="true" monster_smartent="false" monster_spawnexactlocation="true" monster_team="none" name="s_boothclown" nocollide="true"/>
+    <entity actcountremove="1" character="ArcadeClown_a" classname="monsterspawnerent" instantspawn="true" monster_randompickups="0" monster_smartent="true" name="ss_arcadeclown_a04" nocollide="true"/>
+    <entity actcountremove="1" character="ArcadeClown_a" classname="monsterspawnerent" firstspawnscript="act2/murder/murder2/introclown_1ss" instantspawn="false" monster_deathtargets="relay_wave1" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="introleader" monster_smartent="false" name="s_introleader" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="MurderBot_a" classname="monsterspawnerent" instantspawn="true" monster_randompickups="0" monster_smartent="true" name="ss_murderbot_a02" nocollide="true"/>
+    <entity actcountdisable="1" character="Murder_Phoenix" classname="monsterspawnerent" monster_deathscript="act2/murder/murder2/phoenix_def_conv" monster_name="jean" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" monster_team="enemy" name="phoenix_npc" nocollide="true" nofadeondeath="true" shadow="true" smartent="false"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="2" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b"/>
+    <entity boxcollision="true" classname="gameent" name="dclip_kelly" nocollide="false" smartent="false"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_log_remove" boxcollision="true" classname="gameent" name="dclip_log04" nocollide="false" stophero="false" stopnpcaltenemy="false" stopnpcenemy="false" stopnpcneutral="false" stopwalk="false" team="none"/>
+    <entity actdelay="0.25" acteffect="map/common/cherry_blossoms" acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="stopper_effect" nocollide="true" smartent="false"/>
+    <entity classname="ent" name="cam_pitfall15" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_murder2" prevzone="act2/murder/murder4"/>
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all03" nocollide="true" prevlink="link_murder2" prevzone="act2/murder/murder5"/>
+    <entity alwaysvisible="true" classname="projectileent" damagemods="dmgmod_unblockable" damagetype="dmg_physical" dieoncontact="false" lifetime="6" loopfxstarton="true" model="murderworld/pitfall_log_mur_a" name="log" nodistancecull="true" nogravity="true" numbounces="0" pierce="true" smartent="false" speed="200" structure="2"/>
+    <entity actinactivedelay="1" actrescheduledelay="6" actscript="act2/murder/murder2/pf_proj_log" classname="actionent" name="relay_log" nocollide="true" smartent="false" startenabled="true" team="none"/>
+    <entity actscript="act2/murder/murder2/pitfall_death" classname="actionent" name="log_ent" nocollide="true" smartent="false"/>
+    <entity actcountact="4" actcountremove="1" actscript="act2/murder/murder2/car_wave2" classname="actionent" name="relay_wave1" nocollide="true" smartent="false"/>
+    <entity actcountact="4" actcountremove="1" actscript="act2/murder/murder2/car_coin" classname="actionent" name="relay_wave2" nocollide="true" smartent="false"/>
+    <entity actscript="act2/murder/murder2/enter_pitfall" classname="actionent" name="debug_pitfall" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_13" boxcollision="true" classname="scripttriggerent" name="trigger_area13" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_11" boxcollision="true" classname="scripttriggerent" name="trigger_area11" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_10" boxcollision="true" classname="scripttriggerent" name="trigger_area10" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_09" boxcollision="true" classname="scripttriggerent" name="trigger_area09" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_08" boxcollision="true" classname="scripttriggerent" deactscript="act2/murder/murder2/pitfall_08_deact" name="trigger_area08" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_07" boxcollision="true" classname="scripttriggerent" name="trigger_area07" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_16" boxcollision="true" classname="scripttriggerent" name="trigger_area16" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_06" boxcollision="true" classname="scripttriggerent" name="trigger_area06" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_05" boxcollision="true" classname="scripttriggerent" deactscript="act2/murder/murder2/pitfall_05_deact" name="trigger_area05" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_04" boxcollision="true" classname="scripttriggerent" name="trigger_area04" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_15" boxcollision="true" classname="scripttriggerent" deactscript="act2/murder/murder2/pitfall_15_deact" name="trigger_area15" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_14" boxcollision="true" classname="scripttriggerent" deactscript="act2/murder/murder2/pitfall_14_deact" name="trigger_area14" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_03" boxcollision="true" classname="scripttriggerent" name="trigger_area03" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_12" boxcollision="true" classname="scripttriggerent" name="trigger_area12" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_01" boxcollision="true" classname="scripttriggerent" name="trigger_area01" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act2/murder/murder2/pitfall_02" boxcollision="true" classname="scripttriggerent" name="trigger_area02" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/stopper" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_stopper" nocollide="true" smartent="false" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot02" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch04" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot01" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch05" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot04" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch06" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot03" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch07" nocollide="true" team="hero"/>
+    <entity actdelay="0.25" actinactivedelay="5" actmatchteam="true" actontouch="true" acttargets="doom_in_the_box_mur_a01" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot08" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch11" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot07" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch10" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot06" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch09" nocollide="true" team="hero"/>
+    <entity actinactivedelay="0.1" actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pitfall_death" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_fire03" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act2/murder/murder2/pf_goto_spot05" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch08" nocollide="true" team="hero"/>
+    <entity actinactivedelay="2" actonuse="true" actscript="act2/murder/murder2/ticket_booth" boxcollision="true" classname="gameent" description="Ticket Booth" name="trigger_ticket_booth" nocollide="true" smartent="false" team="none"/>
+    <entity actinactivedelay="5" actonuse="true" actscript="act2/murder/murder2/enter_tent_start_conv" boxcollision="true" classname="gameent" description="Enter Tent" name="trigger_use01" nocollide="true" quickuse="true" team="none"/>
+    <entity actinactivedelay="5" actonuse="true" actscript="act2/murder/murder2/exit_tent" boxcollision="true" classname="gameent" description="To Circus Boardwalk" name="trigger_use02" nocollide="true" quickuse="true" team="none"/>
+    <entity actinactivedelay="1" actonuse="true" actscript="act2/murder/murder2/enter_pitfall" boxcollision="true" classname="gameent" description="Play Pitfall" name="arcade_trigger" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none"/>
+    <entity actcountremove="1" actonuse="true" actscript="act2/murder/murder2/coin_pickup" boxcollision="true" classname="gameent" description="Take Coin" name="trig_coin" nocollide="true" quickuse="true" startenabled="false" team="none"/>
+    <entity classname="waypointent" name="wp_clown_go01" nocollide="true" smartent="false" speed="1"/>
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point01" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" smartent="false" spawnscript="common/extraction/exp_spawn" startenabled="false" team="hero"/>
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Fun House" name="link_murder5" nextzone="act2/murder/murder5" nocollide="false" smartent="false" startenabled="false" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Fair Grounds" name="link_murder4" nextzone="act2/murder/murder4" nocollide="false" smartent="false" startenabled="false" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Pinball" name="link_murder3" nextzone="act2/murder/murder3" nocollide="false" smartent="false" startenabled="false" team="hero"/>
+    <entity animstarton="true" classname="physent" deathspawn="arcade_machine_mur_a_d" material="solid_metal" model="murderworld/arcade_machine_mur_a" name="arcade_machine" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" mass="0" material="solid_metal" model="murderworld/arcade_machine_stump_mur_a" name="arcade_machine_mur_a_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="act2/murder/murder2/cart_death" deathsound="death_style/ds_metal_m" deathspawn="carni_cart_mur_b_d" fxlevel="2" health="100" material="solid_metal" model="murderworld/carni_cart_mur_b" name="cart_kelly" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" mass="0" material="solid_metal" model="murderworld/carni_cart_stump_mur_b" name="carni_cart_mur_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="murderworld/clown_car_intro_mur_a" name="clown_car_go" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actonuse="false" acttogglesanim="true" classname="physent" material="solid_metal" model="murderworld/clown_car_spawner_mur_a" name="clown_car_stop" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity actonuse="false" actsound="zone_shared/murderworld/clown_treasure_chest" actspawn="mur_box_pain" classname="physent" discription="Open Box" material="solid_metal" model="murderworld/doom_in_the_box_mur_a" name="doom_in_the_box_mur_a01" nogravity="true" nopickup="true" nopush="true" quickuse="true" smartent="false" structure="2"/>
+    <entity actcountremove="1" acteffect="base/hit/hit_default" actsound="zone_shared/murderworld/clown_treasure_chest" classname="affectableharment" conversationoff="true" damage="20" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" extent="-15 -15 0 15 15 60" firstact="0.6" fxlevel="4" informai="true" material="solid_metal" name="mur_box_pain" nocollide="true" nogravity="true" nopickup="true" nopush="true" pos="-12 -120 0" radiusdamage="true" smartent="false" structure="2"/>
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/murderworld/door" autoclosedelay="0" classname="doorent" health="100" material="solid_metal" model="murderworld/door_midway_mur_d" name="door_murder3" nogravity="true" nopickup="true" nopush="true" smartent="false" startenabled="true" structure="2" toggleonact="true"/>
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/murderworld/door" autoclosedelay="0" classname="doorent" health="100" material="solid_metal" model="murderworld/door_midway_mur_d" name="door_midway_mur_d01" nogravity="true" nopickup="true" nopush="true" startenabled="false" structure="2" toggleonact="true"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="150" mass="0" material="solid_metal" model="murderworld/dunk_tank_stump_mur_b" name="dunk_tank_mur_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity actinactivedelay="1" actonuse="true" actscript="act2/murder/murder2/pitfall_win_new" acttogglesanim="false" animstarton="true" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" fxlevel="3" health="50" hinttype="usetoggle" material="electronics" model="murderworld/mind_control_device_mur_a" name="mind_device" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" painsound="zone_shared/murderworld/pitfall_damage" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="biometal" model="murderworld/pitfall_fire_mur_a" name="pitfall_fire_mur_a02" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actsound="zone_shared/murderworld/pitfall_lootz" animstarton="true" classname="physent" count="1000" inventoryitem="money1" material="biometal" model="murderworld/pitfall_gold_mur_a" name="pitfall_gold_mur_a10" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" team="hero" type="money"/>
+    <entity animstarton="true" classname="ropeent" interaction="data/fightstyles/interact_rope" interaction_node="rope_hold" material="biometal" model="murderworld/pitfall_rope_mur_a" name="pitfall_rope_mur_a01" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="biometal" model="murderworld/pitfall_snake_mur_a" name="pitfall_snake_mur_a13" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actonuse="true" actrescheduledelay="5" autoclosedelay="2" classname="doorent" material="biometal" model="murderworld/pitfall_tarpit_door_mur_a" name="pit_trap02" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity actrescheduledelay="5" autoclosedelay="2" classname="doorent" material="biometal" model="murderworld/pitfall_tri_gators_mur_a" name="gators02" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity actrescheduledelay="5" autoclosedelay="2" classname="doorent" material="biometal" model="murderworld/pitfall_tri_gators_mur_a" name="gators01" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity actonuse="false" classname="moverent" material="plastic" model="murderworld/stopper_mur_m" move="0 0 -735" moveduration="0.5" name="stopper" nogravity="true" nopickup="true" nopush="true" nostep="true" pathignore="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity camerafadeout="true" classname="physent" material="carpet" model="murderworld/tent_entrance_mur_e" name="tent_entrance_mur_e01" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" material="solid_metal" model="murderworld/tent_exit_clown_mur_a" name="clown_face" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" structure="2" toggleonact="true"/>
+    <entity actcountremove="1" acteffect="base/hit/hit_default" actsound="zone_shared/murderworld/treasure_chest_doom" boxdamage="true" classname="affectableharment" conversationoff="true" damage="20" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" extent="-4 -4 0 4 4 60" firstact="0.5" fxlevel="3" informai="true" material="Wood" name="mur_treas_pain" nocollide="true" nogravity="true" nopickup="true" nopush="true" pos="0 -50 0" radiusdamage="false" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="murderworld/u_coin_small_mur_a" name="arcade_coin" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+</world>

@@ -1,0 +1,381 @@
+<world>
+    <entity act="1" combatlocked="true" killz="-228" level="3" name="world" nosave="true" partylight="1 0.9 0.63" soundfile="town1B" startblack="true" zonescript="act1/stark/stark2"/>
+    <precache filename="act1/stark/1_stark2_300" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_310" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_320" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_322" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_340" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_350" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_360" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_370" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_380" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_510" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_520" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_522" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_530" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_540" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_550" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_560" type="conversation"/>
+    <precache filename="act1/stark/1_stark2_570" type="conversation"/>
+    <precache filename="act1/stark/intro_stark2" type="conversation"/>
+    <precache filename="act1/stark/jarvis_intro" type="conversation"/>
+    <precache filename="map/stark/ironman_display_suit" type="fx"/>
+    <precache filename="map/stark/spiderman_rope" type="fx"/>
+    <precache filename="map/stark/stk2_bowl_floor" type="fx"/>
+    <precache filename="models/bolton/captain_america_shield_back" type="model"/>
+    <precache filename="act1/stark/check_cufflinks" type="script"/>
+    <precache filename="act1/stark/weasel_walk" type="script"/>
+    <precache filename="act1/stark/weasel_walk2" type="script"/>
+    <precache filename="common/conv_run_once/run_once09" type="script"/>
+    <precache filename="common/conv_run_once/run_once10" type="script"/>
+    <precache filename="common/conv_run_once/run_once12" type="script"/>
+    <precache filename="common/conv_run_once/run_once13" type="script"/>
+    <precache filename="common/conv_run_once/run_once14" type="script"/>
+    <precache filename="common/conv_run_once/run_once15" type="script"/>
+    <precache filename="common/conv_run_once/run_once16" type="script"/>
+    <precache filename="common/conv_run_once/run_once17" type="script"/>
+    <precache filename="common/conv_run_once/run_once18" type="script"/>
+    <precache filename="zone_shared/stark/stark_kb_loop" type="sound"/>
+    <entity actcountremove="1" character="BlackPantherSimple" checkteam="true" classname="monsterspawnerent" name="sp_blackpanthersimple" nocollide="true"/>
+    <entity actcountremove="1" character="CaptainAmericaSimple" checkteam="true" classname="monsterspawnerent" name="sp_captainamericasimple" nocollide="true"/>
+    <entity actcountremove="1" character="ElektraSimple" checkteam="true" classname="monsterspawnerent" name="sp_elektrasimple" nocollide="true"/>
+    <entity actcountremove="1" character="SpidermanSimple" checkteam="true" classname="monsterspawnerent" name="sp_spidermansimple" nocollide="true"/>
+    <entity actcountremove="1" character="WolverineSimple" checkteam="true" classname="monsterspawnerent" name="sp_wolverinesimple" nocollide="true"/>
+    <entity actcountremove="1" character="Jarvis" classname="monsterspawnerent" name="sp_jarvis" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnician" classname="monsterspawnerent" name="sp_labtechnician" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnicianFemale" classname="monsterspawnerent" name="sp_labtechnicianfemale" nocollide="true"/>
+    <entity actcountremove="1" character="TonyStark" classname="monsterspawnerent" name="sp_tonystark" nocollide="true"/>
+    <entity actcountremove="1" character="Weasel" classname="monsterspawnerent" name="sp_weasel" nocollide="true"/>
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMIRONMAN')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="9" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_ironman" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMLIZARD')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="31" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_lizard" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept02.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="2" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art2" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','skill')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up skill point" material="solid_metal" model="pickups/skill_point" name="skill_point" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_k"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="actionent" name="loop_sound" nocollide="true" smartent="true" toggleonact="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="physent" health="1" name="shoot_me" nocollide="true" nogravity="true" nopickup="true" structure="2"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_cover" nocollide="true" smartent="true"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="stark/column_cables_stk_e" name="column_cables_stk_e" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/column" structure="2"/>
+    <entity actcountdisable="1" actonuse="true" autoclosedelay="0" classname="doorent" material="solid_metal" model="stark/doors_stk_d" name="doors_stk_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/stark/ironman_lg_hologram" loopfxstarton="true" material="solid_metal" model="stark/holo_projector_stk_a" name="holo_projector_stk_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="stark/ironman_display_suit_stk_e" name="ironman_display_suit_stk_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" model="stark/ironman_lg_hologram_stk_a" name="ironman_lg_hologram_stk_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="stark/machine_stk_a" name="machine_stk_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/computer" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="stark/pillar_square_40ft_silver_stk_e" name="pillar_square_40ft_silver_stk_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entinst type="sp_blackpanthersimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_blackpanthersimple01" orient="0 0 1.5708" pos="14.7367 1253.7 -120"/>
+    </entinst>
+    <entinst type="sp_captainamericasimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_captainamericasimple01" orient="0 0 1.5708" pos="123.12 1319.34 -120"/>
+    </entinst>
+    <entinst type="sp_elektrasimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_elektrasimple01" orient="0 0 -1.5708" pos="165.795 1447.57 -120"/>
+    </entinst>
+    <entinst type="sp_spidermansimple01">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_spidermansimple01" orient="0 0 -0.174533" pos="-125.584 1418.81 -119"/>
+    </entinst>
+    <entinst type="sp_wolverinesimple01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_wolverinesimple01" orient="0 0 -3.14159" pos="755.688 1177.53 0"/>
+    </entinst>
+    <entinst type="sp_jarvis01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_jarvis01" orient="0 0 -1.5708" pos="57.9598 973.492 -120"/>
+    </entinst>
+    <entinst type="sp_labtechnician01">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="sp_labtechnician01" orient="0 0 -1.58709" pos="-531.335 765.693 0"/>
+    </entinst>
+    <entinst type="sp_labtechnician03">
+        <inst extents="-12 -18 0 36 18 84" name="sp_labtechnician03" orient="0 0 -0.36536" pos="-316.824 1323.32 0"/>
+    </entinst>
+    <entinst type="sp_labtechnicianfemale02">
+        <inst extents="-12 -18 0 36 18 84" name="sp_labtechnicianfemale02" orient="0 0 -1.24986" pos="597.444 728.791 0"/>
+    </entinst>
+    <entinst type="sp_labtechnicianfemale01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_labtechnicianfemale01" pos="-116.162 1255.81 -120"/>
+    </entinst>
+    <entinst type="sp_tonystark01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_tonystark01" orient="0 0 1.5708" pos="108.466 1465.57 -120"/>
+    </entinst>
+    <entinst type="comic_lizard">
+        <inst name="comic_lizard" pos="-221.319 1710.02 0"/>
+    </entinst>
+    <entinst type="sp_weasel01">
+        <inst extents="-12.0 -18.0 -1.71661e-005 36.0 18.0 84.0" name="sp_weasel01" pos="-214.057 761.531 0"/>
+    </entinst>
+    <entinst type="blackpanther_actionfigure01">
+        <inst name="blackpanther_actionfigure01" pos="57.6826 796.125 -114.137"/>
+    </entinst>
+    <entinst type="comic_ironman">
+        <inst name="comic_ironman" pos="28.6639 1489.57 -77.5277"/>
+    </entinst>
+    <entinst type="concept_art2">
+        <inst name="concept_art2" pos="739.241 1120.88 2"/>
+    </entinst>
+    <entinst type="skill_pt">
+        <inst name="skill_pt" pos="60 1450 -178"/>
+    </entinst>
+    <entinst type="effect_web">
+        <inst extents="-5.99999 -5.99997 -6 6.00001 6.00003 6" name="effect_web" orient="0 0 -0.174533" pos="-125.584 1418.81 -119"/>
+    </entinst>
+    <entinst type="ironman_suit_floats">
+        <inst extents="-6 -6 -6 6 6 6" name="ironman_suit_floats" pos="-48.7096 1470 -120"/>
+    </entinst>
+    <entinst type="sound_tonystark">
+        <inst extents="-6 -6 0 6 6 12" name="sound_tonystark" pos="73.6294 1489.33 -120"/>
+    </entinst>
+    <entinst type="intro_w_cam">
+        <inst extents="-6 -6 -6 6 6 6" name="intro_w_cam" orient="0 0 1.5708" pos="82.5805 768.178 42"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="60 725.267 0"/>
+    </entinst>
+    <entinst type="elektra_camera">
+        <inst extents="-6 -6 0 6 6 12" name="elektra_camera" pos="170.13 1422.18 -86"/>
+    </entinst>
+    <entinst type="spawn_labtechs">
+        <inst extents="-6 -6 0 6 6 12" name="spawn_labtechs" pos="60 1034 120"/>
+    </entinst>
+    <entinst type="chose_jarvis_anim">
+        <inst extents="-6 -6 0 6 6 12" name="chose_jarvis_anim" pos="89.822 1034 120"/>
+    </entinst>
+    <entinst type="trigger_tech_vo">
+        <inst extents="-6 -6 0 6 6 12" name="trigger_tech_vo" pos="28.1884 1249.96 -120"/>
+    </entinst>
+    <entinst type="trigger_area05">
+        <inst extents="-60 -60 0 60 60 60" name="trigger_area05" pos="135.465 1360.61 -120"/>
+        <inst extents="-60 -60 0 60 60 60" name="trigger_area05" pos="-9.12434 1140.3 -120"/>
+        <inst extents="-60 -60 0 60 60 60" name="trigger_area05" pos="135.374 1137.47 -120"/>
+        <inst extents="-60 -60 0 60 60 60" name="trigger_area05" pos="-21.8216 1357.82 -120"/>
+    </entinst>
+    <entinst type="trigger_area03">
+        <inst extents="-90 -90 0 90 90 252" name="trigger_area03" pos="61.764 886.764 -120"/>
+        <inst extents="-90 -90 0 90 90 252" name="trigger_area03" pos="316.456 1258.46 -120"/>
+        <inst extents="-90 -90 0 90 90 252" name="trigger_area03" pos="-199.838 1258.46 -120"/>
+    </entinst>
+    <entinst type="check_ironman">
+        <inst extents="-92.5468 -53.7971 0 92.5468 53.7971 120" name="check_ironman" pos="82.5468 1466.2 -120"/>
+    </entinst>
+    <entinst type="ironman_station_trig">
+        <inst extents="-54.2275 -33.6796 0 54.2275 33.6796 92.0151" name="ironman_station_trig" pos="75.7725 1483.68 -120"/>
+    </entinst>
+    <entinst type="trigger_zonelink01">
+        <inst extents="-105 -30 0 105 30 120" name="trigger_zonelink01" pos="60.0001 570 0"/>
+    </entinst>
+    <entinst type="wp_weaselpath07">
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_weaselpath07" pos="139.693 1084.47 -120"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya01" pos="-401.511 679.789 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya02" pos="-152.449 787.934 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya03" pos="100.11 779.669 3.94089e-006"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya04" pos="300.511 710.797 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya05" pos="555.215 710.797 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya06" pos="637.916 979.223 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya07" pos="564.055 1276.42 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya10" pos="430.862 1288.44 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb01" pos="408.312 769.662 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb02" pos="194.735 753.841 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb03" pos="93.1618 799.322 0"/>
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_labguyb05" pos="106.991 1143.06 -120"/>
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_labguyb06" pos="246.558 1244.21 -120"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb08" pos="563.637 1079.99 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb09" pos="560 775.956 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd01" pos="-289.059 1278.75 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc03" pos="423.619 1433.94 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc05" pos="617.549 1558.33 2.86758e-005"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc06" pos="640.95 1389.53 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc07" pos="400.602 1250.58 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd03" pos="-4.97882 1151.08 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd04" pos="21.2553 950.002 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd06" pos="193.22 772.398 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd07" pos="166.326 739.354 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd08" pos="-465.919 732.27 0"/>
+        <inst extents="-6 -5.99994 -6.00001 6 6.00006 5.99999" name="wp_weaselpath06" pos="239.918 1179.33 -120"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd09" pos="-465.754 1108.42 0"/>
+        <inst extents="-5.99999 -5.99997 -6 6.00001 6.00003 6" name="wolvie_cam" orient="0 0 -0.436332" pos="707.779 1128.38 40"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wolvie_heroact" pos="672.777 1178.79 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wolvie_herowait01" pos="622.076 952.851 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wolvie_herowait02" pos="652.665 952.851 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wolvie_herowait03" pos="683.88 952.851 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_weaselpath05" pos="227.052 1312.17 0"/>
+        <inst extents="-6 -5.99994 -6.00001 6 6.00006 5.99999" name="wp_weaselpath04" pos="28.6404 1400.71 -120"/>
+        <inst extents="-6 -5.99994 -6.00001 6 6.00006 5.99999" name="wp_weaselpath03" pos="-85.4938 1369.24 -120"/>
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_weaselpath02" pos="-114.16 1203.78 -120"/>
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_weaselpath01" pos="-28.9359 1090.31 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_jarvis_spot01" orient="0 0 -1.5708" pos="12.5619 1209.98 -120"/>
+    </entinst>
+    <entinst type="wp_gojarvis01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_gojarvis01" orient="0 0 -1.5708" pos="57.9598 772.229 0"/>
+        <inst extents="-5.99998 -5.99999 -6 6.00002 6.00001 6" name="wp_standjarvis01" orient="0 0 -2.43674" pos="117.023 757.415 0"/>
+    </entinst>
+    <entinst type="wp_labguya08">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya08" pos="634.674 1523.06 2.86758e-005"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc04" pos="285.151 1566.8 0"/>
+    </entinst>
+    <entinst type="wp_labguya09">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguya09" pos="287.691 1639.73 0"/>
+    </entinst>
+    <entinst type="wp_labguyb04">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_labguyb04" pos="78.2307 956.32 -120"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyc02" pos="414.522 1277.59 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd05" pos="21.2553 800.823 0"/>
+    </entinst>
+    <entinst type="wp_labguyb07">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyb07" pos="398.614 1224.72 0"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_labguyd02" pos="-125.17 1241.22 0"/>
+    </entinst>
+    <entinst type="wp_labguyc01">
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="wp_labguyc01" pos="246.558 1287.46 -120"/>
+    </entinst>
+    <entinst type="wp_special01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_special01" orient="0 0 -1.5708" pos="49.2088 1163.98 -120"/>
+    </entinst>
+    <entinst type="waypoint">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="Tony_cam" orient="0 0 -1.5708" pos="69.395 1451.73 -80"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot01" orient="0 0 1.5708" pos="59.8655 637.705 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot02" orient="0 0 1.5708" pos="58.735 584.572 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot03" orient="0 0 1.5708" pos="30.4733 611.704 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot04" orient="0 0 1.5708" pos="90.3882 613.965 0"/>
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="Tony_heroact" orient="0 0 -1.5708" pos="35.2722 1444.19 -120"/>
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="Tony_herowait01" orient="0 0 1.5708" pos="97.2136 1004.84 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="Tony_herowait02" orient="0 0 1.5708" pos="29.3248 1004.84 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="Tony_herowait03" orient="0 0 1.5708" pos="65.1762 1042.98 -120"/>
+        <inst extents="-6.00002 -5.99998 -6 5.99998 6.00002 6" name="Spidey_cam" orient="0 0 0.959931" pos="-68.4652 1371.8 -80"/>
+        <inst extents="-6.00003 -5.99998 -6 5.99997 6.00002 6" name="Spidey_heroact" orient="0 0 0.959931" pos="-28.9943 1341.42 -120"/>
+        <inst extents="-5.99995 -6 -6 6.00005 6 6" name="cap_cam" orient="0 0 -1.91986" pos="99.3933 1333.15 -80"/>
+        <inst extents="-5.99996 -6 -6 6.00004 6 6" name="cap_heroact" orient="0 0 -1.91986" pos="69.4992 1337.75 -120"/>
+        <inst extents="-6.00003 -5.99997 -6 5.99997 6.00003 6" name="bp_heroact" orient="0 0 0.872665" pos="109.688 1233.63 -120"/>
+        <inst extents="-6.00002 -5.99997 -6 5.99998 6.00003 6" name="bp_cam" orient="0 0 0.872665" pos="81.8011 1249.37 -80"/>
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="bp_herowait03" orient="0 0 -2.18166" pos="-39.1279 1242.27 -120"/>
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="bp_herowait02" orient="0 0 -2.18166" pos="-90.3717 1231.59 -120"/>
+        <inst extents="-5.99997 -6.00002 -6 6.00003 5.99998 6" name="bp_herowait01" orient="0 0 -2.18166" pos="-94.7392 1281.2 -120"/>
+        <inst extents="-6 -5.99995 -6 6 6.00005 6" name="spidery_angle" orient="0 0 -0.174533" pos="-81.8225 1411.43 -80"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot05" orient="0 0 1.5708" pos="57.52 784.135 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot06" orient="0 0 1.5708" pos="84.1304 757.538 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot07" orient="0 0 1.5708" pos="29.5961 757.471 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot08" orient="0 0 1.5708" pos="57.8578 730.34 0"/>
+        <inst extents="-6.00003 -5.99997 -6 5.99997 6.00003 6" name="weasel_cam" orient="0 0 0.698132" pos="-93.2471 1177.45 -80"/>
+        <inst extents="-6.00002 -6.00002 -6 5.99998 5.99998 6" name="weasel_heroact" orient="0 0 2.44346" pos="-43.3412 1158.11 -120"/>
+        <inst extents="-5.99998 -5.99999 -6 6.00002 6.00001 6" name="jarvis_cam" orient="0 0 0.698132" pos="69.7674 1202.52 -80"/>
+        <inst extents="-6 -5.99998 -6 6 6.00002 6" name="jarvis_heroact" orient="0 0 2.44346" pos="98.6125 1177.75 -120"/>
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_goweasel01" pos="-208.057 761.531 0"/>
+    </entinst>
+    <entinst type="wp_parker01">
+        <inst extents="-5.99999 -6.00001 -6 6.00001 5.99999 6" name="wp_parker01" orient="0 0 2.35619" pos="-91.8344 1325.21 -120"/>
+        <inst extents="-6.00002 -5.99999 -6 5.99998 6.00001 6" name="wp_e01" orient="0 0 -0.959931" pos="161.407 1218.76 -120"/>
+    </entinst>
+    <entinst type="wp_ca01">
+        <inst extents="-6.00002 -6 -6 5.99998 6 6" name="wp_ca01" orient="0 0 -1.5708" pos="100.305 1351.62 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_bp01" orient="0 0 -1.5708" pos="14.0602 1297.07 -120"/>
+    </entinst>
+    <entinst type="skill_spawn">
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="skill_spawn" orient="0 0 -1.5708" pos="-48.7097 1476.39 -88.7852"/>
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="helmet_spot01" orient="0 0 -1.5708" pos="37.2481 1508.31 -84"/>
+        <inst extents="-6.00002 -5.99999 -6 5.99998 6.00001 6" name="helmet_spot03" orient="0 0 -1.5708" pos="151.141 1459.02 -84"/>
+        <inst extents="-6.00002 -6 -6 5.99998 6 6" name="helmet_spot02" orient="0 0 -1.5708" pos="108.961 1497.28 -84"/>
+    </entinst>
+    <entinst type="elektra_cam">
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="elektra_cam" orient="0 0 0.0610862" pos="170.313 1408.16 -106"/>
+    </entinst>
+    <entinst type="wp_weaselwalk02">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_weaselwalk02" pos="61.1902 952.092 -120"/>
+    </entinst>
+    <entinst type="wp_weaselwalk01">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_weaselwalk01" pos="61.1902 802.195 0"/>
+    </entinst>
+    <entinst type="wp_walkby02">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_walkby02" pos="22.5805 768.178 0"/>
+    </entinst>
+    <entinst type="wp_walkby01">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_walkby01" pos="-81.304 761.531 0"/>
+    </entinst>
+    <entinst type="wp_cover">
+        <inst extents="-6 -5.99995 -6 6 6.00005 6" name="elektra_heroact" orient="0 0 0.0610862" pos="174.183 1381.23 -120"/>
+    </entinst>
+    <entinst type="column_cables_stk_e02">
+        <inst name="column_cables_stk_e02" pos="309.351 1422.2 -480"/>
+        <inst name="column_cables_stk_e02" pos="-202.19 1422.2 -480"/>
+        <inst name="column_cables_stk_e02" pos="-242.621 986.578 -480"/>
+        <inst name="column_cables_stk_e02" pos="357.469 986.578 -480"/>
+    </entinst>
+    <entinst type="doors_stk_d01">
+        <inst name="doors_stk_d01" pos="60 540 0"/>
+    </entinst>
+    <entinst type="holo_projector_stk_a01">
+        <inst name="holo_projector_stk_a01" orient="0 0 -1.5708" pos="59.9855 1677.27 -461.881"/>
+    </entinst>
+    <entinst type="ironman_suit">
+        <inst name="ironman_suit" pos="-48.7097 1477.56 -84"/>
+    </entinst>
+    <entinst type="hologram">
+        <inst name="hologram" orient="0 0 -0.698132" pos="60 1677.27 -240"/>
+    </entinst>
+    <entinst type="machine_stk_a">
+        <inst name="machine_stk_a" orient="0 0 1.5708" pos="-625.275 1265.29 0"/>
+        <inst name="machine_stk_a" orient="0 0 1.5708" pos="-625.275 1009.53 0"/>
+        <inst name="machine_stk_a" orient="0 0 -1.5708" pos="738.348 1263.28 0"/>
+        <inst name="machine_stk_a" orient="0 0 -1.5708" pos="738.348 1007.53 0"/>
+    </entinst>
+    <entinst type="pillar_square_40ft_silver_stk_e">
+        <inst name="pillar_square_40ft_silver_stk_e" pos="540 1660 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 3.14159" pos="420 620 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 -3.13985" pos="179.989 620 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 -3.14159" pos="-60 620 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 -3.14159" pos="-300 620 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" pos="-420 1660 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 -3.13985" pos="-540.011 620 0"/>
+        <inst name="pillar_square_40ft_silver_stk_e" orient="0 0 3.14159" pos="660 620 0"/>
+    </entinst>
+    <entity actcountremove="1" character="BlackPantherSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_panther01" monster_name="panther" monster_spawnscript="act1/stark/sc_blackpanther" name="sp_blackpanthersimple01" nocollide="true"/>
+    <entity actcountremove="1" character="CaptainAmericaSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_captainamerica01" monster_name="cap" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_captainamerica" name="sp_captainamericasimple01" nocollide="true"/>
+    <entity actcountremove="1" character="ElektraSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_elektra01" monster_name="sai" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_elektra" name="sp_elektrasimple01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="SpidermanSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_spiderman01" monster_name="peter" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_spiderman" name="sp_spidermansimple01" nocollide="true"/>
+    <entity actcountremove="1" character="WolverineSimple" checkteam="true" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_wolverine01" monster_name="logan" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_wolverine" name="sp_wolverinesimple01" nocollide="true"/>
+    <entity actcountremove="1" character="Jarvis" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_jarvis01" monster_name="jarvis" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_jarvis" name="sp_jarvis01" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnician" classname="monsterspawnerent" instantspawn="true" monster_name="labguyd" monster_noaidisable="true" monster_nodistancecull="true" monster_smartent="false" name="sp_labtechnician03" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnician" classname="monsterspawnerent" instantspawn="true" monster_name="labguya" monster_noaidisable="true" monster_nodistancecull="true" monster_smartent="false" name="sp_labtechnician01" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnicianFemale" classname="monsterspawnerent" instantspawn="true" monster_name="labguyc" monster_noaidisable="true" monster_nodistancecull="true" monster_smartent="false" name="sp_labtechnicianfemale01" nocollide="true"/>
+    <entity actcountremove="1" character="LabTechnicianFemale" classname="monsterspawnerent" instantspawn="true" monster_name="labguyb" monster_noaidisable="true" monster_nodistancecull="true" monster_smartent="false" name="sp_labtechnicianfemale02" nocollide="true"/>
+    <entity actcountremove="1" acttargets="sound_tonystark" character="TonyStark" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_ironman01" monster_acttargets="sound_tonystark" monster_name="tony" monster_spawnexactlocation="true" monster_spawnscript="act1/stark/sc_tonystark" name="sp_tonystark01" nocollide="true"/>
+    <entity actcountremove="1" character="Weasel" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act1/stark/talk_weasel01" monster_name="weasel" monster_noaidisable="true" monster_smartent="false" name="sp_weasel01" nocollide="true"/>
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" idnum="1" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure01" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp"/>
+    <entity actcountdisable="1" actcountremove="1" actdistance="60" acteffect="base/item/item_pickup" actleader="true" actonuse="true" actscript="common/actionfigures/xpbonus" actsound="common/game/pickup_power" animstarton="true" classname="physent" description="Experience Points" fxlevel="7" model="pickups/experience_point" name="af_bp_xp" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" quickuse="true" smartent="false" structure="2"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','skill')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up skill point" idnum="1" material="solid_metal" model="pickups/skill_point" name="skill_pt" nocollide="true" nodistancecull="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" structure="2" team="hero" variablename="r_upgrade_k"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/stark/ironman_display_suit" loopfxstarton="true" name="ironman_suit_floats" nocollide="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/stark/spiderman_rope" loopfxstarton="true" name="effect_web" nocollide="true" smartent="false" togglestarton="false"/>
+    <entity classname="actionent" name="sound_tonystark" nocollide="true" smartent="false" spawnsoundloop="zone_shared/stark/stark_kb_loop" toggleonact="true"/>
+    <entity classname="ent" name="intro_w_cam" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true"/>
+    <entity actscript="act1/stark/rand_stark2_vo" classname="physent" health="1" name="trigger_tech_vo" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actscript="act1/stark/pick_jarvis_anim" classname="physent" health="1" name="chose_jarvis_anim" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actrescheduledelay="0.1" actrescheduledelaymin="0.1" actscript="act1/stark/spawn_labtechs" classname="physent" health="1" name="spawn_labtechs" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity classname="physent" health="1" name="elektra_camera" nocollide="true" nogravity="true" nopickup="true" smartent="false" structure="2"/>
+    <entity actleader="true" actmatchteam="true" actscript="act1/stark/ironman_station_enable" boxcollision="true" classname="scripttriggerent" deactscript="act1/stark/ironman_station_disable" name="check_ironman" nocollide="true" smartent="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act1/stark/goto_player_jarvis" boxcollision="true" classname="scripttriggerent" deactscript="act1/stark/goto_npc_jarvis" name="trigger_area03" nocollide="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actscript="act1/stark/goto_player_jarvis" boxcollision="true" classname="scripttriggerent" name="trigger_area05" nocollide="true" team="hero"/>
+    <entity actonuse="true" actscript="act1/stark/load_stark1" boxcollision="true" classname="gameent" description="Tony Stark's Office" hinttype="exit" name="trigger_zonelink01" nocollide="true" quickuse="true" team="none"/>
+    <entity actcountremove="1" actonuse="true" actscript="act1/stark/skill_pt" boxcollision="true" classname="gameent" description="Iron Man Health Console" hinttype="use" name="ironman_station_trig" nocollide="true" smartent="false" startenabled="false" team="none"/>
+    <entity actcountremove="1" classname="waypointent" name="wp_walkby01" nocollide="true" speed="0.8"/>
+    <entity actcountremove="1" actscript="act1/stark/weasel_safe" classname="waypointent" name="wp_walkby02" nocollide="true" speed="0.6"/>
+    <entity actcountremove="1" beeline="true" classname="waypointent" name="wp_weaselwalk01" nocollide="true" speed="0.3"/>
+    <entity actcountremove="1" actscript="setWaypointPath('_ACTIVATOR_','weaselpath',1)" beeline="true" classname="waypointent" name="wp_weaselwalk02" nocollide="true" speed="0.3"/>
+    <entity classname="waypointent" flyhere="false" name="elektra_cam" nocollide="true" smartent="false"/>
+    <entity classname="waypointent" name="skill_spawn" nocollide="true" smartent="false"/>
+    <entity acttargets="chose_jarvis_anim" classname="waypointent" name="wp_ca01" nocollide="true" speed="0.4"/>
+    <entity acttargets="chose_jarvis_anim" classname="waypointent" name="wp_parker01" nocollide="true" speed="0.3"/>
+    <entity beeline="true" classname="waypointent" flyhere="false" name="wp_special01" nocollide="true" speed="0.45"/>
+    <entity beeline="true" classname="waypointent" name="wp_labguyc01" nocollide="true" speed="0.3"/>
+    <entity beeline="true" classname="waypointent" name="wp_labguyb07" nocollide="true" speed="0.4"/>
+    <entity beeline="true" classname="waypointent" name="wp_labguyb04" nocollide="true" speed="0.5"/>
+    <entity classname="waypointent" name="wp_labguya09" nocollide="true" speed="0.2"/>
+    <entity classname="waypointent" name="wp_labguya08" nocollide="true" speed="0.4"/>
+    <entity actcountremove="1" actscript="faceEntity('jarvis','_ACTIVE_HERO_')" beeline="true" classname="waypointent" name="wp_gojarvis01" nocollide="true" smartent="false"/>
+    <entity classname="waypointent" name="wp_weaselpath07" nocollide="true" speed="0.3"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="stark/column_cables_stk_e" name="column_cables_stk_e02" nogravity="true" nokillz="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/town/column" structure="2"/>
+    <entity actcountdisable="1" actonuse="false" autoclosedelay="0" classname="doorent" material="solid_metal" model="stark/doors_stk_d" name="doors_stk_d01" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" loopfx="effects/map/stark/ironman_lg_hologram" loopfxstarton="true" material="solid_metal" model="stark/holo_projector_stk_a" name="holo_projector_stk_a01" nogravity="true" nokillz="true" nopickup="true" nopush="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="stark/ironman_display_suit_stk_e" name="ironman_suit" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" model="stark/ironman_lg_hologram_stk_a" name="hologram" nodistancecull="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+</world>

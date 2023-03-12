@@ -1,0 +1,94 @@
+<conversation>
+    <startCondition conditionscriptfile="act2/strange/check_gem_oshtur">
+        <participant name="default">
+            <line text="%Menu%: To contact the Ancient One, place the Gem of Oshtur here.">
+                <response chosenscriptfile="act2/strange/talk_end" conversationend="true" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/drstrange">
+        <participant name="default">
+            <line text="%Menu%: A blurry image appears in the mirror, and then sharpens to show a very old man floating in a void.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/ancient_one/2_strange1_100_021_ano" text="%ANCIENTONE%: Is that you, my student?">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/drstrange/2_strange1_100_022_str" text="%DRSTRANGE%: Yes, Master. It is I, Dr. Strange.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/ancient_one/2_strange1_100_023_ano" text="%ANCIENTONE%: Why have you disturbed my meditation, young one?">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/drstrange/2_strange1_100_024_str" text="%DRSTRANGE%: The world is in grave peril, Master. Dr. Doom has formed a band of villains known as the Masters of Evil. I would ask that you watch over us, aid us in whatever way you can.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/ancient_one/2_strange1_100_025_ano" text="%ANCIENTONE%: Rest assured, my friend, that the eyes of the Ancient One will forever be on you and your team.">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/drstrange/2_strange1_100_026_str" text="%DRSTRANGE%: Thank you, my master.">
+                                                                <response chosenscriptfile="act2/strange/talk_end" conversationend="true" text="%BLANK%"/>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/deadpool">
+        <participant name="default">
+            <line text="%Menu%: A blurry image appears in the mirror, and then sharpens to show a very old man floating in a void.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/ancient_one/2_strange1_102_011_ano" text="%ANCIENTONE%: Who would dare disturb my meditation?">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/deadpool/2_strange1_102_012_dp_b" text="%Deadpool%: Grampy, is that you? Wow, you got a lot older... and uglier too.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/ancient_one/2_strange1_102_013_ano" text="%ANCIENTONE%: You buffoon, I am not your grandfather. I am the Ancient One, teacher of Dr. Strange.">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/deadpool/2_strange1_102_014_dp" text="%Deadpool%: Are you sure? You're really grouchy just like Grampy was.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/ancient_one/2_strange1_102_015_ano" text="%ANCIENTONE%: Yes, I am quite certain I am not related to you, you idiot!">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/deadpool/2_strange1_102_016_dp" text="%Deadpool%: Gee, Grampy used to call me that - usually after I woke him up from a nap by shoving an ice cube down the back of his shirt.">
+                                                                <response text="%BLANK%">
+                                                                    <line soundtoplay="voice/ancient_one/2_strange1_102_017_ano" text="%ANCIENTONE%: Please be silent. I know you heroes have banded together to battle the Masters of Evil. Let Dr. Strange know that I will be watching over you!">
+                                                                        <response text="%BLANK%">
+                                                                            <line soundtoplay="voice/deadpool/2_strange1_102_018_dp" text="%Deadpool%: I'll tell him. Thanks, Grampy!">
+                                                                                <response chosenscriptfile="act2/strange/talk_end" conversationend="true" text="%BLANK%"/>
+                                                                            </line>
+                                                                        </response>
+                                                                    </line>
+                                                                </response>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line text="%Menu%: A blurry image appears in the mirror, and then sharpens to show a very old man floating in a void.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/ancient_one/2_strange1_100_031_ano" text="%ANCIENTONE%: Who is it that disturbs my meditation? Ah, I see my student, Dr. Strange, has allied himself with an impressive group of individuals.">
+                        <response text="%PLAYER%: You're the Ancient One - Dr. Strange's teacher.">
+                            <line soundtoplay="voice/ancient_one/2_strange1_100_033_ano" text="%ANCIENTONE%: Correct. And no doubt there must be grave danger in the world for ones such as you to have banded together. Tell Dr. Strange that his master shall keep a watchful eye on the situation.">
+                                <response chosenscriptfile="act2/strange/talk_end" conversationend="true" text="%PLAYER%: We will. Thank you, Ancient One."/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

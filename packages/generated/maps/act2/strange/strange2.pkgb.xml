@@ -1,0 +1,122 @@
+<packagedef>
+    <combat_is filename="off" />
+    <bigconvmap filename="on" />
+    <model filename="maps/act2/strange/strange2" />
+    <shadow filename="maps/act2/strange/strange2" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act2/strange/strange2" />
+    <script filename="scripts/act2/strange/check_strange2_intro" />
+    <model filename="HUD/hud_head_14301" />
+    <script filename="scripts/act2/strange/show_strange_obj20" />
+    <xml filename="conversations/act2/strange/2_strange2_220" />
+    <model filename="HUD/hud_head_15101" />
+    <script filename="scripts/act2/strange/weasela" />
+    <script filename="scripts/act2/strange/talk_weasel_intro01" />
+    <script filename="scripts/act2/strange/strange_obj10" />
+    <script filename="scripts/act2/strange/talk_weasel_intro02" />
+    <script filename="scripts/act2/strange/talk_weasel_intro03" />
+    <xml filename="conversations/act2/strange/2_strange2_030" />
+    <xml filename="conversations/act2/strange/2_strange2_010" />
+    <script filename="scripts/common/conv/drstrange" />
+    <model filename="HUD/hud_head_1601" />
+    <script filename="scripts/act2/strange/talk_clea_post" />
+    <xml filename="conversations/act2/strange/2_strange2_020" />
+    <script filename="scripts/act2/strange/check_security_mod" />
+    <script filename="scripts/act2/strange/strange_obj10_comp" />
+    <script filename="scripts/act2/strange/talk_weasel_post" />
+    <xml filename="conversations/act2/strange/2_strange2_040" />
+    <model filename="HUD/hud_head_0201" />
+    <script filename="scripts/act2/strange/talk_daredevil_post" />
+    <xml filename="conversations/act2/strange/2_strange2_060" />
+    <script filename="scripts/act2/strange/talk_drstrange_post" />
+    <xml filename="conversations/act2/strange/2_strange2_070" />
+    <model filename="HUD/hud_head_0601" />
+    <script filename="scripts/act2/strange/talk_ghostrider_post" />
+    <xml filename="conversations/act2/strange/2_strange2_080" />
+    <model filename="HUD/hud_head_0810" />
+    <script filename="scripts/act2/strange/talk_iceman_post" />
+    <xml filename="conversations/act2/strange/2_strange2_090" />
+    <xml filename="conversations/act2/strange/2_strange2_210" />
+    <xml filename="conversations/act2/strange/2_strange2_240" />
+    <xml filename="conversations/act2/strange/2_strange2_250" />
+    <xml filename="conversations/act2/strange/2_strange2_260" />
+    <xml filename="conversations/act2/strange/2_strange2_270" />
+    <script filename="scripts/act2/strange/talk_hulk_post" />
+    <xml filename="conversations/act2/strange/temp_conv" />
+    <xml_resident filename="dialogs/act2/strange/strange2/forbidden_gong" />
+    <effect filename="base/hit/hit_blocked" />
+    <texture filename="textures/misc_rune" />
+    <effect filename="char/drstr/p3_spawn" />
+    <script filename="scripts/act2/strange/clea_gen_conv01" />
+    <script filename="scripts/act2/strange/hulk_smash" />
+    <script filename="scripts/act2/strange/hulk_warmup" />
+    <script filename="scripts/act2/strange/met_weasel" />
+    <actoranimdb filename="02_daredevil" />
+    <actorskin filename="0201" />
+    <actoranimdb filename="16_dr_strange" />
+    <actorskin filename="1601" />
+    <texture filename="textures/nextgen/distort_fire_tiny" plat="40" />
+    <texture filename="textures/misc_smokepuff" />
+    <effect filename="char/ghostr/special_burninghead" />
+    <actoranimdb filename="06_ghostrider" />
+    <actorskin filename="0601" />
+    <actoranimdb filename="08_iceman" />
+    <actorskin filename="0801" />
+    <actorskin filename="3801" />
+    <model filename="HUD/hud_head_3801" />
+    <actorskin filename="15101" />
+    <actoranimdb filename="143_weasel" />
+    <actorskin filename="14301" />
+    <model filename="models/pickups/pickup_dangeroom_disk" />
+    <model filename="models/pickups/sketchpad" />
+    <model filename="models/pickups/action_figure_daredevil" />
+    <script filename="scripts/common/actionfigures/daredevil" />
+    <model filename="models/strange/column_25ft_drs_e" />
+    <model filename="models/strange/column_support_beam_drs_e" />
+    <model filename="models/strange/gong_drs_a" />
+    <model filename="models/strange/green_book_drs_e" />
+    <model filename="models/strange/hanging_lamp_drs_e" />
+    <model filename="models/strange/mission_review_drs_a" />
+    <model filename="models/strange/mission_training_drs_a" />
+    <script filename="scripts/act2/strange/talk_daredevil" />
+    <script filename="scripts/act2/strange/sc_daredevil" />
+    <script filename="scripts/act2/strange/talk_drstrange" />
+    <script filename="scripts/act2/strange/sc_drstrange2" />
+    <script filename="scripts/act2/strange/talk_ghostrider" />
+    <script filename="scripts/act2/strange/sc_ghostrider" />
+    <script filename="scripts/act2/strange/talk_iceman" />
+    <script filename="scripts/act2/strange/sc_iceman" />
+    <script filename="scripts/act2/strange/talk_spiderwoman" />
+    <script filename="scripts/act2/strange/talk_spiderwoman_post" />
+    <xml filename="conversations/act2/strange/2_strange2_280" />
+    <xml filename="conversations/act2/strange/2_strange2_100" />
+    <script filename="scripts/act2/strange/sc_spiderwoman" />
+    <script filename="scripts/act2/strange/weasel_talk" />
+    <model filename="HUD/hud_head_0000" />
+    <xml filename="conversations/act2/strange/2_strange2_222" />
+    <script filename="scripts/act2/strange/sc_weasel" />
+    <model filename="models/pickups/experience_point" />
+    <script filename="scripts/common/actionfigures/xpbonus" />
+    <texture filename="textures/nextgen/decals/burn_mark_alpha" plat="40" />
+    <texture filename="textures/nextgen/smoke_under1" plat="40" />
+    <texture filename="textures/nextgen/fire4" plat="40" />
+    <texture filename="textures/nextgen/fire7" plat="40" />
+    <texture filename="textures/nextgen/fire_blue2" plat="40" />
+    <texture filename="textures/nextgen/fire4_blue" plat="40" />
+    <texture filename="textures/decals/burn_mark_alpha" plat="23" />
+    <texture filename="textures/explosion_puff_a_gray" plat="23" />
+    <texture filename="textures/nextgen/distort_fire_sml" plat="40" />
+    <effect filename="map/common/fire_small" />
+    <script filename="scripts/act2/strange/grab_book" />
+    <script filename="scripts/act2/strange/weasel_walk" />
+    <actoranimdb filename="zone_strange2" />
+    <characters filename="maps/act2/strange/strange2" />
+    <zonexml filename="maps/act2/strange/strange2" />
+    <nav filename="maps/act2/strange/strange2" />
+    <boy filename="maps/act2/strange/strange2" />
+    <zam filename="automaps/act2/strange/strange2" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

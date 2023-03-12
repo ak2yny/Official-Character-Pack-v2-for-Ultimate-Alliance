@@ -1,0 +1,327 @@
+<world>
+    <entity act="4" extent_max="6720 9480 411" extent_min="514 -239 -1439" level="28" name="world" next_gen_partylight="0.95 0.87 0.69" next_gen_partylightradius="200" partylight="0.95 0.87 0.69" partylightradius="200" soundfile="skrul1" zonescript="act4/skrull/skrull1/skrull1" />
+    <precache filename="act4/skrull/skrull1/4_skrull1_010" type="conversation" />
+    <precache filename="act4/skrull/skrull1/4_skrull3_010" type="conversation" />
+    <precache filename="act4/skrull/skrull1/4_skrull3_020" type="conversation" />
+    <precache filename="base/material/explode/exp_generic_lrg" type="fx" />
+    <precache filename="skrull/ship_flies_straight/blah" type="motionpath" />
+    <precache filename="act4/skrull/skrull1/drill1_encounter" type="script" />
+    <precache filename="zone_shared/skrull/explosion" type="sound" />
+    <entity actcountremove="1" character="GalactusPunisher_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_galactuspunisher_a" nocollide="true" />
+    <entity actcountremove="1" character="SkrullCommando_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_skrullcommando_a" nocollide="true" />
+    <entity actcountremove="1" character="SkrullDeviant_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_skrulldeviant_a" nocollide="true" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMPILEDRIVER')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="22" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_piledriver" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity boxdamage="true" classname="affectableharment" damage="13 15" damagemods="dmgmod_no_pain dmgmod_unblockable" damagetype="dmg_fire" extent="-60 -60 0 60 60 72" health="1" knockback="200" loopfx="map/common/fire_large" loopfxstarton="true" name="fire_large" radiusdamage="false" reactpower="none" showhealthbar="false" smartfire="true" spawnsoundloop="zone_shared/fx/fire_large" stopprojectile="false" structure="2" targetlockable="false" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="skrull/barrel_02_skrl_th" name="barrel_02_skrl_th_sk" randompickups="3" structure="0" />
+    <entity actcountdisable="1" actdistance="40" camerafadeout="false" classname="pickupweaponent" description="Wield" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="skrull/catwalk_lamp_skrl_w" name="catwalk_lamp_skrl_w" nogravity="false" nopush="true" pathignore="true" quickuse="true" randompickups="0" structure="2" weapon="wp_twohanded" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="skrull/console_01_skrl_b" name="console_01_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="skrull/crate_02_skrl_th" name="crate_02_skrl_th_sk" randompickups="3" structure="0" />
+    <entity animstarton="true" classname="physent" material="energy" model="skrull/force_field_10x10_skrl_a" name="force_field_10x10_skrl_a_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" deathspawn="magnetic_tower_skrl_b_sk_d" fxlevel="3" health="150" material="solid_metal" model="skrull/magnetic_tower_skrl_b" name="magnetic_tower_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="skrull/ornament_01_skrl_b" name="ornament_01_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="skrull/ornament_02_skrl_th" name="ornament_02_skrl_th_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="150" material="solid_metal" model="skrull/ornament_03_skrl_b" name="ornament_03_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="200" material="solid_metal" model="skrull/pillar_10ft_skrl_b" name="pillar_10ft_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="skrull/pillar_10x30_skrl_e" name="pillar_10x30_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="skrull/pillar_20ft_slanted_skrl_e" name="pillar_20ft_slanted_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="skrull/pillar_8x20_skrl_e" name="pillar_8x20_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" material="solid_metal" model="skrull/pillar_8x20_toppled_skrl_e" name="pillar_8x20_toppled_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="100" heaviness="2" material="rock" model="skrull/statue_01_skrl_th" name="statue_01_skrl_th_sk" randompickups="0" structure="1" />
+    <entity camerafadeout="true" classname="physent" material="energy" model="skrull/statue_holo_skrl_e" name="statue_holo_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="skrull/structural_brace_skrl_e" name="structural_brace_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="skrull/urn_01_skrl_th" name="urn_01_skrl_th_sk" randompickups="2" structure="0" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="skrull/walkway_light_02_skrl_e" name="walkway_light_02_skrl_e_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" deathspawn="window_wall_skrl_b_sk_d" fxlevel="2" health="100" material="glass" model="skrull/window_wall_skrl_b" name="window_wall_skrl_b_sk" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entinst type="spwnr_2bot">
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="spwnr_2bot" orient="0 0 1.5708" pos="2940 2819 0" />
+    </entinst>
+    <entinst type="spwnr_1bot">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="spwnr_1bot" orient="0 0 -1.5708" pos="2940.0 3540.0 -4.57764e-005" />
+    </entinst>
+    <entinst type="ss_skrullcommando_a">
+        <inst extents="-11.9997 -18.0001 0 36.0003 17.9999 84" name="ss_skrullcommando_a" orient="0 0 -1.91986" pos="4686.3 7231.85 -114.853" />
+        <inst extents="-12.0004 -18.0001 0 35.9996 17.9999 84" name="ss_skrullcommando_a" orient="0 0 -1.91986" pos="4772.53 7188.79 -114.853" />
+        <inst extents="-12.0001 -17.9997 0 35.9999 18.0003 84" name="ss_skrullcommando_a" orient="0 0 -1.22173" pos="5681.1 7211.22 -114.853" />
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="ss_skrullcommando_a" orient="0 0 -1.22173" pos="5773.98 7260.06 -114.853" />
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_skrullcommando_a" orient="0 0 -1.22173" pos="5255.26 8124.93 -114.853" />
+        <inst extents="-11.9995 -18.0001 0 36.0005 17.9999 84" name="ss_skrullcommando_a" orient="0 0 -1.91986" pos="5166.02 8124.93 -114.853" />
+        <inst extents="-11.9995 -17.9998 0 36.0005 18.0002 84" name="ss_skrullcommando_a" orient="0 0 -2.96706" pos="5883.24 6385.28 -114.853" />
+        <inst extents="-11.9998 -17.9999 0 36.0002 18.0001 84" name="ss_skrullcommando_a" orient="0 0 -2.96706" pos="5883.24 6467.71 -114.853" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_skrullcommando_a" pos="4548.9 6434.57 -114.853" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_skrullcommando_a" pos="4563.21 6515.75 -114.853" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_skrullcommando_a" pos="5031.48 3886.45 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrullcommando_a" orient="0 0 -2.96706" pos="5463.61 3189.47 0" />
+        <inst extents="-11.9998 -17.9999 0 36.0002 18.0001 84" name="ss_skrullcommando_a" orient="0 0 -2.96706" pos="5494.63 5120.17 -114.853" />
+        <inst extents="-11.9996 -17.9999 0 36.0004 18.0001 84" name="ss_skrullcommando_a" orient="0 0 -2.96706" pos="5494.63 5768.06 -114.853" />
+    </entinst>
+    <entinst type="sklead">
+        <inst extents="-12 -18 0 36 18 84" name="sklead" orient="0 0 3.14159" pos="3179.36 3178.22 0" />
+    </entinst>
+    <entinst type="ss_skrulldeviant_a">
+        <inst extents="-12.0003 -18 0 35.9997 18 84" name="ss_skrulldeviant_a" orient="0 0 2.00713" pos="5149.97 7192.88 -112.362" />
+        <inst extents="-11.9997 -17.9999 0 36.0003 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 1.0472" pos="5257.19 7192.88 -112.362" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5800.51 5517.77 -112.362" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5765.91 5368.26 -112.362" />
+        <inst extents="-11.9998 -17.9998 0 36.0002 18.0002 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="4834.1 7890.62 -112.362" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5294.62 8251.67 -112.362" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5240.9 8251.67 -112.362" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5187.19 8251.67 -112.362" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5130.78 8251.67 -112.362" />
+        <inst extents="-11.9998 -17.9998 0 36.0002 18.0002 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="4839.79 7588.12 -112.362" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5164.59 6342.94 -112.362" />
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5283.25 6342.94 -112.362" />
+        <inst extents="-12.0003 -17.9999 0 35.9997 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -2.97578" pos="5467.54 3866.43 0" />
+        <inst extents="-11.9996 -18.0001 0 36.0004 17.9999 84" name="ss_skrulldeviant_a" orient="0 0 -2.97578" pos="5461.21 3946.88 0" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_skrulldeviant_a" orient="0 0 -0.0872669" pos="4922.58 3945.92 0" />
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_skrulldeviant_a" orient="0 0 -0.0872669" pos="4908.56 3866.45 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -3.05433" pos="5385.04 3218.09 0" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_skrulldeviant_a" orient="0 0 -3.05433" pos="5385.04 3137.4 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5274.46 5263.33 -112.362" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5823.06 5368.26 -112.362" />
+        <inst extents="-11.9998 -17.9998 0 36.0002 18.0002 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="4750.71 7665.62 -112.362" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_skrulldeviant_a" orient="0 0 -1.5708" pos="5196.49 5895.02 -112.362" />
+    </entinst>
+    <entinst type="skrullc">
+        <inst extents="-11.9997 -17.9999 0 36.0003 18.0001 84" name="skrullc" orient="0 0 -2.0944" pos="2905.57 3398.16 0" />
+    </entinst>
+    <entinst type="skrulla">
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="skrulla" orient="0 0 -2.53073" pos="2998.67 3311.26 0" />
+    </entinst>
+    <entinst type="skrulld">
+        <inst extents="-11.9999 -18.0002 0 36.0001 17.9998 84" name="skrulld" orient="0 0 2.26893" pos="2912.72 2996.06 0" />
+    </entinst>
+    <entinst type="skrullb">
+        <inst extents="-11.9999 -17.9996 0 36.0001 18.0004 84" name="skrullb" orient="0 0 2.53073" pos="3006.64 3040.37 0" />
+    </entinst>
+    <entinst type="blackpanther_actionfigure01">
+        <inst name="blackpanther_actionfigure01" pos="4828.27 3898.58 0" />
+    </entinst>
+    <entinst type="comic_piledriver">
+        <inst name="comic_piledriver" pos="5587.04 3181.96 0" />
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="4611.28 7027.04 -120.09" />
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="5806.75 7018.47 -120.09" />
+    </entinst>
+    <entinst type="loop_effect02">
+        <inst extents="-5.99989 -5.99979 -6 6.00011 6.00021 6" name="loop_effect02" orient="0 0 -1.5708" pos="5291.38 7703.15 -207.855" />
+        <inst extents="-6.00001 -5.9997 -6 5.99999 6.0003 6" name="loop_effect02" orient="0 0 2.18166" pos="5300.39 7587.46 -210.17" />
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect02" orient="0 0 -0.523599" pos="5133.63 7545.06 -203.348" />
+        <inst extents="-6.00003 -5.99981 -6 5.99997 6.00019 6" name="loop_effect02" orient="0 0 -0.523599" pos="5143.3 7662 -207.855" />
+    </entinst>
+    <entinst type="encounter_spot">
+        <inst extents="-6.00002 -5.99995 -6 5.99998 6.00005 6" name="encounter_spot" orient="0 0 -1.0472" pos="3982.24 3174.03 0" />
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0241 -95.2953 0 71.9759 48.7832 83.9544" name="player_start_all02" orient="0 0 -1.5708" pos="5221.66 8392.64 -117.824" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" pos="1543.85 3183.41 10.7518" />
+    </entinst>
+    <entinst type="tower3wait">
+        <inst extents="-120 -16.5 0 120 16.5 180" name="tower3wait" pos="5220.12 8505.31 -120" />
+    </entinst>
+    <entinst type="tower2wait">
+        <inst extents="-65 -16.5 0 65 16.5 180" name="tower2wait" pos="5220.12 6524.31 -24.4962" />
+        <inst extents="-16.7874 -56.8585 0 16.7874 56.8585 141.933" name="tower1wait" pos="4724.29 3179.58 0" />
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-30 -120 0 30 120 160" name="trigger_touch02" pos="2636.69 3180 0" />
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-28.6075 -211.776 0 28.6075 211.776 373.243" name="trigger_touch01" pos="3988.32 3114.12 0" />
+    </entinst>
+    <entinst type="wp_devic01">
+        <inst extents="-6.00001 -6.00006 -6 5.99999 5.99994 6" name="wp_devic01" orient="0 0 -3.14159" pos="2848.49 3278.83 0" />
+        <inst extents="-5.99998 -6.00006 -6 6.00002 5.99994 6" name="wp_devid01" orient="0 0 -3.14159" pos="2848.49 3096.03 0" />
+    </entinst>
+    <entinst type="wp_galactotb01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_galactotb01" pos="2915 3057.14 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="wp_galactota01" pos="2915 3305.81 0" />
+    </entinst>
+    <entinst type="wp_devilead01">
+        <inst extents="-5.99999 -6.00004 -6 6.00001 5.99996 6" name="wp_devilead01" orient="0 0 -3.14159" pos="2937.93 3182.87 0" />
+    </entinst>
+    <entinst type="wp_devib01">
+        <inst extents="-5.99999 -6.00006 -6 6.00001 5.99994 6" name="wp_devib01" orient="0 0 -3.14159" pos="2831.79 3163.81 0" />
+        <inst extents="-6 -6.00006 -6 6 5.99994 6" name="wp_devia01" orient="0 0 -3.14159" pos="2831.79 3221.8 0" />
+    </entinst>
+    <entinst type="link_skrull2">
+        <inst extents="-300 -100 0 300 100 300" name="link_skrull2" pos="5220.04 8619.75 -227.33" />
+    </entinst>
+    <entinst type="fire_large">
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="4594.48 6771.58 -120.09" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="4719.04 8012.81 -120.09" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="5657.08 7531 -120.09" />
+        <inst extents="-60 -60 0 60 60 72" name="fire_large" pos="5895.77 6730.22 -120.09" />
+    </entinst>
+    <entinst type="barrel_02_skrl_th_sk">
+        <inst name="barrel_02_skrl_th_sk" pos="5282.33 5579.39 -133.016" />
+        <inst name="barrel_02_skrl_th_sk" orient="0 0 1.5708" pos="5314.08 5579.39 -133.016" />
+    </entinst>
+    <entinst type="catwalk_lamp_skrl_w">
+        <inst name="catwalk_lamp_skrl_w" pos="2148.02 3070.79 -10.53" />
+        <inst name="catwalk_lamp_skrl_w" pos="1787.7 3287.93 -10.53" />
+        <inst name="catwalk_lamp_skrl_w" pos="1787.7 3070.79 -10.53" />
+        <inst name="catwalk_lamp_skrl_w" pos="2148.02 3287.93 -10.53" />
+    </entinst>
+    <entinst type="console_01_skrl_b_sk">
+        <inst name="console_01_skrl_b_sk" orient="0 0 3.14159" pos="5291.32 6587.53 0" />
+        <inst name="console_01_skrl_b_sk" orient="0 0 1.5708" pos="4783.53 3103.81 0" />
+    </entinst>
+    <entinst type="crate_02_skrl_th_sk">
+        <inst name="crate_02_skrl_th_sk" pos="2762.78 2964.29 0" />
+        <inst name="crate_02_skrl_th_sk" pos="2762.78 3395.14 0" />
+    </entinst>
+    <entinst type="tower2force">
+        <inst name="tower2force" pos="5221.29 6545.23 0" />
+        <inst name="tower1force" orient="0 0 -1.5708" pos="4750.57 3182.16 0" />
+    </entinst>
+    <entinst type="tower2">
+        <inst name="tower2" orient="0 0 -0.436332" pos="5144.38 5466.02 -1200" />
+    </entinst>
+    <entinst type="tower3">
+        <inst name="tower3" orient="0 0 -0.436332" pos="5220.04 7619.93 -1200" />
+    </entinst>
+    <entinst type="tower1">
+        <inst name="tower1" orient="0 0 -0.436332" pos="4134.86 2863.26 -1200" />
+    </entinst>
+    <entinst type="ornament_01_skrl_b_sk">
+        <inst name="ornament_01_skrl_b_sk" orient="0 0 -1.5708" pos="5405.13 6660 0" />
+        <inst name="ornament_01_skrl_b_sk" orient="0 0 1.5708" pos="5035.02 6660 0" />
+        <inst name="ornament_01_skrl_b_sk" orient="0 0 1.5708" pos="5035.02 6900 0" />
+        <inst name="ornament_01_skrl_b_sk" orient="0 0 -1.5708" pos="5405.13 6900 0" />
+    </entinst>
+    <entinst type="ornament_02_skrl_th_sk">
+        <inst name="ornament_02_skrl_th_sk" pos="4860 2910 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5580 2910 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5580 3739.91 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5340 3739.91 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5100 3739.91 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="4860 3739.91 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5580 4057.88 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="2777 2896.88 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="2777 3462.8 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="4860 4057.88 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5340 4057.88 0" />
+        <inst name="ornament_02_skrl_th_sk" pos="5100 4057.88 0" />
+    </entinst>
+    <entinst type="ornament_03_skrl_b_sk">
+        <inst name="ornament_03_skrl_b_sk" orient="0 0 3.14159" pos="5580.02 3470.18 0" />
+        <inst name="ornament_03_skrl_b_sk" orient="0 0 3.14159" pos="4860.53 3470.18 0" />
+    </entinst>
+    <entinst type="pillar_10ft_skrl_b_sk">
+        <inst name="pillar_10ft_skrl_b_sk" pos="2748.0 3108.0 -1.52588e-005" />
+        <inst name="pillar_10ft_skrl_b_sk" pos="2748.0 3252.0 -1.52588e-005" />
+    </entinst>
+    <entinst type="pillar_10x30_skrl_e_sk">
+        <inst name="pillar_10x30_skrl_e_sk" orient="0 0 2.35619" pos="3299.93 2935.42 -119.927" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5340 4500 -120" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5580 4260 -120" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5220 3900 1.48915" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5100 4500 -120" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5100 6780 0" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="4860 4260 -120" />
+        <inst name="pillar_10x30_skrl_e_sk" orient="0 0 -0.785398" pos="3299.85 3424.04 -119.927" />
+        <inst name="pillar_10x30_skrl_e_sk" pos="5340 6780 0" />
+    </entinst>
+    <entinst type="pillar_20ft_slanted_skrl_e_sk">
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 -3.14159" pos="3179.96 3417.85 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="5698.45 8156.35 -353.275" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="4747.35 8133.21 -353.275" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="4969.36 8133.21 -353.275" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 1.5708" pos="6083.53 6779.93 -120.09" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 -1.5708" pos="4353.1 6783.57 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 -1.5708" pos="4356.35 7260.08 -120.09" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 1.5708" pos="6083.53 7260.07 -120.09" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="3179.61 2931.61 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="3419.82 2931.61 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 -3.14159" pos="3420.17 3417.85 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" pos="5476.44 8156.35 -353.275" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 1.5708" pos="5460 4260 -120" />
+        <inst name="pillar_20ft_slanted_skrl_e_sk" orient="0 0 -1.5708" pos="4980.17 4257.85 -120" />
+    </entinst>
+    <entinst type="pillar_8x20_skrl_e_sk">
+        <inst name="pillar_8x20_skrl_e_sk" pos="5515.34 7083.6 -120.09" />
+    </entinst>
+    <entinst type="pillar_8x20_toppled_skrl_e_sk">
+        <inst name="pillar_8x20_toppled_skrl_e_sk" orient="0 0 3.14159" pos="4910.58 7276.79 -120.09" />
+    </entinst>
+    <entinst type="statue_01_skrl_th_sk">
+        <inst name="statue_01_skrl_th_sk" orient="0 0 -1.5708" pos="5579.34 6508.25 0" />
+        <inst name="statue_01_skrl_th_sk" orient="0 0 -1.5708" pos="4859.84 6508.25 0" />
+    </entinst>
+    <entinst type="statue_holo_skrl_e_sk">
+        <inst name="statue_holo_skrl_e_sk" orient="0 0 -1.5708" pos="5100.25 6472.71 -120.09" />
+        <inst name="statue_holo_skrl_e_sk" orient="0 0 -1.5708" pos="5340.04 6472.71 -120.09" />
+    </entinst>
+    <entinst type="structural_brace_skrl_e_sk">
+        <inst name="structural_brace_skrl_e_sk" orient="0 0 3.14159" pos="4980.77 6481.84 -120.09" />
+        <inst name="structural_brace_skrl_e_sk" orient="0 0 3.14159" pos="5459.49 6481.84 -120.09" />
+    </entinst>
+    <entinst type="urn_01_skrl_th_sk">
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -0.785398" pos="4993.73 3498.95 0" />
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -0.872665" pos="4787.88 2938.3 0" />
+        <inst name="urn_01_skrl_th_sk" pos="5253.77 3934.49 0" />
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -2.96706" pos="5638.32 2885.37 0" />
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -2.96706" pos="4920.09 2885.37 0" />
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -0.872665" pos="5527.77 2885.37 0" />
+        <inst name="urn_01_skrl_th_sk" pos="5503.54 3504.52 0" />
+        <inst name="urn_01_skrl_th_sk" orient="0 0 -0.785398" pos="5098.79 3498.95 0" />
+    </entinst>
+    <entinst type="walkway_light_02_skrl_e_sk">
+        <inst name="walkway_light_02_skrl_e_sk" pos="5215.99 3435.41 -75.1253" />
+        <inst name="walkway_light_02_skrl_e_sk" pos="4980.26 3899.28 -75.1253" />
+        <inst name="walkway_light_02_skrl_e_sk" pos="5460.26 3899.28 -75.1253" />
+        <inst name="walkway_light_02_skrl_e_sk" pos="5215.99 2944.03 -75.1253" />
+    </entinst>
+    <entinst type="win2">
+        <inst name="win2" pos="2940 2819 0" />
+    </entinst>
+    <entinst type="win1">
+        <inst name="win1" orient="0 0 3.14159" pos="2940.0 3540.0 -4.57764e-005" />
+    </entinst>
+    <entity actcountremove="1" character="GalactusPunisher_a" classname="monsterspawnerent" instantspawn="false" monster_name="galactot1" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" monster_team="altenemy" name="spwnr_1bot" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="GalactusPunisher_a" classname="monsterspawnerent" instantspawn="false" monster_name="galactot2" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" monster_team="altenemy" name="spwnr_2bot" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="SkrullCommando_a" classname="monsterspawnerent" instantspawn="false" monster_name="lead" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act4/skrull/skrull1/1stskrulls" name="sklead" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="SkrullDeviant_a" classname="monsterspawnerent" instantspawn="false" monster_name="b" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act4/skrull/skrull1/1stskrulls" name="skrullb" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="SkrullDeviant_a" classname="monsterspawnerent" instantspawn="false" monster_name="d" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act4/skrull/skrull1/1stskrulls" name="skrulld" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="SkrullDeviant_a" classname="monsterspawnerent" instantspawn="false" monster_name="a" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act4/skrull/skrull1/1stskrulls" name="skrulla" nocollide="true" smartent="false" />
+    <entity actcountremove="1" character="SkrullDeviant_a" classname="monsterspawnerent" instantspawn="false" monster_name="c" monster_smartent="true" monster_spawnexactlocation="true" monster_spawnscript="act4/skrull/skrull1/1stskrulls" name="skrullc" nocollide="true" smartent="false" />
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actonuse="true" actscript="actionFigureReward('r_af_bp',190,191)" actsound="zone_shared/special/beacon" animstarton="true" classname="rememberent" description="Pick up action figure" idnum="11" material="plastic" model="pickups/action_figure_blackpanther" name="blackpanther_actionfigure01" nocollide="true" nogravity="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" smartent="false" spawnscript="common/actionfigures/blackpanther" structure="2" team="hero" variablename="r_af_bp" />
+    <entity actcountdisable="1" actcountremove="1" actdistance="60" acteffect="base/item/item_pickup" actleader="true" actonuse="true" actscript="common/actionfigures/xpbonus" actsound="common/game/pickup_power" animstarton="true" classname="physent" description="Experience Points" fxlevel="7" model="pickups/experience_point" name="af_bp_xp" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" quickuse="true" smartent="false" structure="2" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="14" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="18" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/sparks" loopfxstarton="true" name="loop_effect02" nocollide="true" smartent="true" />
+    <entity classname="ent" name="encounter_spot" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_skrull1" prevzone="act4/attilan/attilan1" smartent="false" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_skrull1" prevzone="skrull2" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/skrull/skrull1/drill1_encounter_a" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/skrull/skrull1/ambush_hall" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch02" nocollide="true" team="hero" />
+    <entity actinactivedelay="6" actmatchteam="true" actontouch="true" actscript="act4/skrull/skrull1/towerstop" actteamplayer="true" boxcollision="true" classname="gameent" name="tower2wait" nocollide="true" smartent="false" team="hero" />
+    <entity actinactivedelay="6" actmatchteam="true" actontouch="true" actscript="act4/skrull/skrull1/towerstop" actteamplayer="true" boxcollision="true" classname="gameent" name="tower3wait" nocollide="false" smartent="false" team="hero" />
+    <entity actcountremove="1" classname="waypointent" name="wp_devib01" nocollide="true" smartent="false" speed="0.9" />
+    <entity classname="waypointent" name="wp_devilead01" nocollide="true" smartent="false" speed="0.5" />
+    <entity actcountremove="1" beeline="true" classname="waypointent" name="wp_galactotb01" nocollide="true" smartent="false" speed="1" />
+    <entity actcountremove="1" classname="waypointent" name="wp_devic01" nocollide="true" smartent="false" speed="0.6" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Aeronautics" name="link_skrull2" nextzone="act4/skrull/skrull2" nocollide="false" smartent="false" startenabled="false" team="hero" />
+    <entity animstarton="true" classname="physent" material="energy" model="skrull/force_field_10x10_skrl_a" name="tower2force" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="act4/skrull/skrull1/tower1_dead" deathsound="death_style/ds_metal_l" deathspawn="magnetic_tower_skrl_b_sk_d" fxlevel="3" health="150" hinttype="objective" material="solid_metal" model="skrull/magnetic_tower_skrl_b" name="tower1" nogravity="true" nopickup="true" nopush="true" randompickups="0" showhealthbar="true" smartent="false" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="act4/skrull/skrull1/tower3_dead" deathsound="death_style/ds_metal_l" deathspawn="magnetic_tower_skrl_b_sk_d" fxlevel="3" health="150" hinttype="objective" material="solid_metal" model="skrull/magnetic_tower_skrl_b" name="tower3" nogravity="true" nopickup="true" nopush="true" randompickups="0" showhealthbar="true" smartent="false" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="act4/skrull/skrull1/tower2_dead" deathsound="death_style/ds_metal_l" deathspawn="magnetic_tower_skrl_b_sk_d" fxlevel="3" health="150" hinttype="objective" material="solid_metal" model="skrull/magnetic_tower_skrl_b" name="tower2" nogravity="true" nopickup="true" nopush="true" randompickups="0" showhealthbar="true" smartent="false" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" fxlevel="3" health="150" mass="0" material="solid_metal" model="skrull/magnetic_tower_stump_skrl_b" name="magnetic_tower_skrl_b_sk_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" deathspawn="window_wall_skrl_b_sk_d" fxlevel="2" health="100" material="glass" model="skrull/window_wall_skrl_b" name="win1" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" deathspawn="window_wall_skrl_b_sk_d" fxlevel="2" health="100" material="glass" model="skrull/window_wall_skrl_b" name="win2" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="0" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_m" fxlevel="2" health="100" mass="0" material="glass" model="skrull/window_wall_stump_skrl_b" name="window_wall_skrl_b_sk_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+</world>

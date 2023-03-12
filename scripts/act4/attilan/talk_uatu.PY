@@ -22,7 +22,10 @@ faceEntity("_ALL_HEROES_", "watcher_lookat" )
 waittimed ( 0.100 )
 playanim (  "EA_ZONE9", "watcher", "LOOP", "" )
 playanim (  "EA_ZONE10", "_ACTIVATOR_", "LOOP", "" )
-act("effect_watcher", "" )
+effect = getZoneVar("effect" )
+if effect == 1
+     act("effect_watcher", "" )
+endif
 waittimed ( 0.100 )
 cameraFade(0.000, 0.250 )
 waittimed ( 0.250 )

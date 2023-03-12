@@ -1,0 +1,213 @@
+<packagedef>
+    <combat_is filename="on" />
+    <bigconvmap filename="off" />
+    <model filename="maps/act5/doom/doom5" />
+    <shadow filename="maps/act5/doom/doom5" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act5/doom/doom5/doom5" />
+    <model filename="HUD/hud_head_1901" />
+    <script filename="scripts/act5/doom/doom5/meet4" />
+    <model filename="HUD/hud_head_2005" />
+    <model filename="HUD/hud_head_2205" />
+    <model filename="HUD/hud_head_1305" />
+    <model filename="HUD/hud_head_0505" />
+    <script filename="scripts/act5/doom/doom5/intro_done" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_100" />
+    <script filename="scripts/act5/doom/doom5/stage2_fight" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_110" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_114_dlc" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_120" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_130" />
+    <xml filename="conversations/act5/doom/doom5/5_doom5_140" />
+    <effect filename="char/drdoom/special_forcefield_beam" />
+    <texture filename="textures/lightning_green" />
+    <effect filename="char/drdoom/special_lightning" />
+    <motionpath filename="doom/doom_tap_end/mp_tap_camera" />
+    <motionpath filename="doom/doom_tap_start/mp_tap_camera" />
+    <texture filename="textures/grass" />
+    <texture filename="textures/debris/paper_4" />
+    <texture filename="textures/nextgen/smoke1" plat="40" />
+    <texture filename="textures/nextgen/smoke1_normal" plat="40" />
+    <shaders filename="shaders/lit" plat="40" />
+    <texture filename="textures/nextgen/paper_4_normal" plat="40" />
+    <texture filename="textures/debris/paper_5" plat="40" />
+    <texture filename="textures/nextgen/paper_5_normal" plat="40" />
+    <effect filename="base/material/break/brk_carpet" />
+    <model filename="models/boss_doom/banner_03_bdoom_b" />
+    <sound filename="death_style/ds_carpet_l" />
+    <model filename="models/chunks/c_rocktunnels_c" />
+    <texture filename="textures/chunks/stone_1" />
+    <texture filename="textures/nextgen/debrisline1" plat="40" />
+    <model filename="models/chunks/roc_3" plat="40" />
+    <texture filename="textures/nextgen/decals/debrisdecal1" plat="40" />
+    <effect filename="base/material/break/brk_stone" />
+    <model filename="models/boss_doom/pillar_30ft_bdoom_b_e" />
+    <sound filename="death_style/ds_stone_l" />
+    <model filename="models/boss_doom/pillar_small_bdoom_b_e" />
+    <sound filename="death_style/ds_stone_m" />
+    <model filename="models/boss_doom/statue_doom_20ft_bdoom_e" />
+    <model filename="models/boss_doom/u_catwalk_corner_bdoom_b_e" />
+    <model filename="models/boss_doom/u_catwalk_straight_bdoom_b_e" />
+    <texture filename="textures/chunks/metal_2" plat="23" />
+    <model filename="models/chunks/met_4" plat="23" />
+    <model filename="models/chunks/metal_generic_lrg" plat="40" />
+    <model filename="models/chunks/metal_generic_med_1" plat="40" />
+    <model filename="models/chunks/metal_generic_sml_1" plat="40" />
+    <model filename="models/chunks/metal_generic_med_3" plat="40" />
+    <effect filename="base/material/break/brk_metal" />
+    <model filename="models/boss_doom/u_doom_throne_bdoom_b" />
+    <sound filename="death_style/ds_metal_m" />
+    <model filename="models/boss_doom/u_snake_pedestal_bdoom_b" />
+    <model filename="models/boss_doom/u_spawner_energy_bdoom_e" />
+    <actoranimdb filename="13_humantorch_dark" />
+    <actorskin filename="1305" />
+    <texture filename="textures/nextgen/firecloud" plat="40" />
+    <effect filename="char/humant/p2_power" />
+    <texture filename="textures/nextgen/fire7" plat="40" />
+    <texture filename="textures/nextgen/distort_fire_med" plat="40" />
+    <effect filename="char/humant/p2_impact" />
+    <texture filename="textures/decals/burn_mark_alpha" plat="23" />
+    <texture filename="textures/explosion_puff_a_gray" />
+    <effect filename="char/humant/p2_fire" />
+    <texture filename="textures/nextgen/distort_mask2" plat="40" />
+    <texture filename="textures/nextgen/distort_trail" plat="40" />
+    <effect filename="char/humant/p4_power" />
+    <texture filename="textures/nextgen/distort_fire_large" plat="40" />
+    <effect filename="char/humant/p4_impact" />
+    <xml filename="data/entities/ents_humantorch" />
+    <actorskin filename="1300" />
+    <texture filename="textures/nextgen/firecloud2" plat="40" />
+    <texture filename="textures/nextgen/distort_fire_tiny" plat="40" />
+    <effect filename="char/humant/special_flameon" />
+    <effect filename="char/humant/p3_power" />
+    <texture filename="textures/nextgen/fireline1" plat="40" />
+    <effect filename="char/humant/p3_impact" />
+    <actoranimdb filename="fightstyle_villain" />
+    <actoranimdb filename="22_invisiblewoman_dark" />
+    <actorskin filename="2205" />
+    <model filename="models/effects/fx_invisw_projectile" />
+    <effect filename="char/invisw/p2_power" />
+    <texture filename="textures/invisw_forcefield" />
+    <texture filename="textures/spots4" />
+    <effect filename="char/invisw/p2_impact" />
+    <sound filename="char/invisw_m/p2_impact" />
+    <xml filename="data/entities/ents_inviswn" />
+    <texture filename="textures/ring3" />
+    <effect filename="char/invisw/p1_power" />
+    <texture filename="textures/bigglow" />
+    <effect filename="char/invisw/p1_release" />
+    <actoranimdb filename="20_mrfantastic_dark" />
+    <actorskin filename="2005" />
+    <effect filename="char/mrfan/p2_power" />
+    <actoranimdb filename="20_mrfantastic_arm_left" />
+    <actorskin filename="2090" />
+    <actoranimdb filename="20_mrfantastic_arm_right" />
+    <actorskin filename="2091" />
+    <actoranimdb filename="05_thing_dark" />
+    <actorskin filename="0505" />
+    <effect filename="char/thing/p1_power" />
+    <texture filename="textures/misc_elec2" />
+    <texture filename="textures/nextgen/bolt_softedge" plat="40" />
+    <texture filename="textures/nextgen/distort_fire1_mask" plat="40" />
+    <texture filename="textures/nextgen/distort_ring2" plat="40" />
+    <effect filename="char/thing/p2_power" />
+    <actoranimdb filename="19_drdoom" />
+    <actorskin filename="1901" />
+    <xml filename="data/entities/ents_drdoom" />
+    <effect filename="char/drdoom/p1_power" />
+    <effect filename="char/drdoom/p3_power" />
+    <effect filename="char/drdoom/p3_impact" />
+    <effect filename="char/drdoom/p4_power" />
+    <effect filename="char/drdoom/p4_teleport" />
+    <effect filename="char/drdoom/hand_lightning" />
+    <model filename="models/effects/galactus_empball" />
+    <effect filename="char/drdoom/special_forcefield" />
+    <actoranimdb filename="interact_drdoom_victim" />
+    <model filename="models/doom/armor_suit_doom_b" />
+    <sound filename="death_style/ds_metal_hollow_m" />
+    <model filename="models/chunks/c_board_medium" />
+    <texture filename="textures/chunks/wood_2" />
+    <texture filename="textures/nextgen/debris1" plat="40" />
+    <model filename="models/chunks/c_board_b" plat="40" />
+    <effect filename="base/material/break/brk_wood" />
+    <model filename="models/doom/barrel_doom_th" />
+    <sound filename="death_style/ds_woodhollow_m" />
+    <texture filename="textures/candle_flame" />
+    <effect filename="map/doom/candelabra_01" />
+    <model filename="models/doom/candelabra_01_doom_b" />
+    <effect filename="map/doom/candelabra_table" />
+    <model filename="models/doom/candelabra_table_doom_b" />
+    <sound filename="death_style/ds_metal_s" />
+    <model filename="models/doom/chest_doom_th" />
+    <model filename="models/doom/column_10x30_doom_e" />
+    <model filename="models/doom/crate_doom_th" />
+    <model filename="models/doom/desk_doom_b" />
+    <model filename="models/doom/doom_bust_doom_b" />
+    <model filename="models/doom/gargoyle_02_doom_b" />
+    <effect filename="map/doom/hanging_light" />
+    <model filename="models/doom/hanging_light_03_doom_e" />
+    <model filename="models/doom/head_bust_doom_b" />
+    <model filename="models/doom/shield_swords_doom_b" />
+    <model filename="models/doom/statue_doom_doom_b" />
+    <model filename="models/doom/window_tile_w_light_03_doom_a" />
+    <effect filename="base/misc/extraction_loop" />
+    <model filename="models/common/extraction_point" />
+    <script filename="scripts/common/extraction/exp_spawn" />
+    <script filename="scripts/common/extraction/exp_activate" />
+    <texture filename="textures/fog_a" />
+    <model filename="models/chunks/brick_4" />
+    <effect filename="map/doom/boss_ceiling_collapse" />
+    <model filename="models/boss_doom/pillar_30ft_stump_bdoom_b_e" />
+    <model filename="models/boss_doom/pillar_small_stump_bdoom_b_e" />
+    <model filename="models/boss_doom/statue_doom_20ft_stump_bdoom_e" />
+    <model filename="models/boss_doom/u_catwalk_corner_stump_bdoom_b_e" />
+    <model filename="models/boss_doom/u_catwalk_straight_stump_bdoom_b_e" />
+    <model filename="models/boss_doom/u_doom_throne_stump_bdoom_b" />
+    <model filename="models/boss_doom/u_snake_pedestal_stump_bdoom_b" />
+    <effect filename="map/doom/doom_machine_loop" />
+    <script filename="scripts/act5/doom/doom5/machine_pain" />
+    <texture filename="textures/yring" />
+    <texture filename="textures/whiteglow" />
+    <texture filename="textures/trail_elem_fade" />
+    <effect filename="map/doom/boss_clone_spawn" />
+    <script filename="scripts/act5/doom/doom5/spawnclone" />
+    <script filename="scripts/act5/doom/doom5/clonespawnscript" />
+    <script filename="scripts/act5/doom/doom5/doom_spawn" />
+    <script filename="scripts/act5/doom/doom5/end_of_game" />
+    <xml_resident filename="data/aipatterns/drdoom" />
+    <effect filename="base/misc/misc_treasure" />
+    <model filename="models/doom/armor_suit_stump_doom_b" />
+    <model filename="models/doom/gargoyle_02_stump_doom_b" />
+    <script filename="scripts/act5/doom/doom5/challenge_lose" />
+    <script filename="scripts/act5/doom/doom5/challenge_win" />
+    <script filename="scripts/act5/doom/doom5/challenge_start" />
+    <effect filename="map/doom/boss_beam_spawn" />
+    <script filename="scripts/act5/doom/doom5/resetpuzzle" />
+    <script filename="scripts/act5/doom/doom5/machine_enable" />
+    <script filename="scripts/act5/doom/doom5/stage3" />
+    <script filename="scripts/act5/doom/doom5/stage2" />
+    <script filename="scripts/act5/doom/doom5/touchhole" />
+    <effect filename="base/misc/extraction_burst" />
+    <script filename="scripts/common/extraction/exp_trig" />
+    <characters filename="maps/act5/doom/doom5" />
+    <fightstyle filename="data/powerstyles/ps_darkhumantorch" />
+    <fightstyle filename="data/fightstyles/moveset_flying" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain" />
+    <fightstyle filename="data/powerstyles/ps_darkinvisiblewoman" />
+    <fightstyle filename="data/powerstyles/ps_darkmrfantastic" />
+    <fightstyle filename="data/powerstyles/ps_darkthing" />
+    <fightstyle filename="data/powerstyles/ps_darkhumantorchsm" />
+    <fightstyle filename="data/powerstyles/ps_darkinvisiblewomansm" />
+    <fightstyle filename="data/powerstyles/ps_darkmrfantasticsm" />
+    <fightstyle filename="data/powerstyles/ps_darkthingsm" />
+    <fightstyle filename="data/fightstyles/interact_drdoom_victim" />
+    <fightstyle filename="data/powerstyles/ps_drdoom" />
+    <zonexml filename="maps/act5/doom/doom5" />
+    <nav filename="maps/act5/doom/doom5" />
+    <boy filename="maps/act5/doom/doom5" />
+    <zam filename="automaps/act5/doom/doom5" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

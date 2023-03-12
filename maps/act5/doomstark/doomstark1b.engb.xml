@@ -1,0 +1,334 @@
+<world>
+    <entity act="5" combatlocked="true" extent_max="1260 2160 1080" extent_min="-1139 -131 -43" killz="-360" level="32" name="world" next_gen_partylight="1 1 1" nosave="true" partylight="1 1 1" soundfile="town5b" startblack="true" zonescript="act5/doomstark/doomstark1b" />
+    <precache filename="act5/doomstark/5_doomstark1b_010" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_030" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_040" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_050" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_060" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_080" type="conversation" />
+    <precache filename="act5/doomstark/5_doomstark1b_090" type="conversation" />
+    <precache filename="act5/doomstark/goto_starkdesk" type="script" />
+    <precache filename="act5/doomstark/load_doom1" type="script" />
+    <precache filename="common/set_importanttalk" type="script" />
+    <entity actcountremove="1" character="BlackWidow" classname="monsterspawnerent" name="sp_blackwidow" nocollide="true" />
+    <entity actcountremove="1" character="HankPym" classname="monsterspawnerent" name="sp_hankpym" nocollide="true" />
+    <entity actcountremove="1" character="NickFuryNPC" classname="monsterspawnerent" name="sp_nickfurynpc" nocollide="true" />
+    <entity actcountremove="1" character="Vision" classname="monsterspawnerent" name="sp_vision" nocollide="true" />
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_m" fxlevel="2" health="100" material="wood" model="doom_stark/doors_logo_dstk_d" name="doors_logo_dstk_d" nogravity="true" nopickup="true" nopush="true" toggleonact="true" />
+    <entity classname="moverent" material="solid_metal" model="doom_stark/elevator_lift_dstk_m" move="0 0 0" moveduration="1" name="elevator_lift_dstk_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" deathspawn="elevator_shaft_silver_dstk_a_b" material="solid_metal" model="doom_stark/elevator_shaft_silver_dstk_a" name="elevator_shaft_silver_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="glass_doombreaks_dstk_e_d" fxlevel="3" material="glass" model="doom_stark/glass_doombreaks_dstk_e" name="glass_doombreaks_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/hanging_light_01_dstk_e" name="hanging_light_01_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/mission_review_dstk_a" name="mission_review_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/mission_training_dstk_a" name="mission_training_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/mission_trivia_dstk_a" name="mission_trivia_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_01_20ft_dstk_e" name="pillar_01_20ft_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_02_20ft_dstk_e" name="pillar_02_20ft_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_square_40ft_dstk_e" name="pillar_square_40ft_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_big_dstk_e" name="planter_big_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_corner_dstk_e" name="planter_corner_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_long_dstk_e" name="planter_long_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/statue_15ft_dstk_e" name="statue_15ft_dstk_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actsound="zone_shared/stark/to_lair" classname="physent" material="solid_metal" model="doom_stark/waterfall_bridge_railing_dstk_a" name="waterfall_bridge_railing_dstk_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept16.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="16" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art16" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" material="solid_metal" model="pickups/body_pickup" name="upgrade_body" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s" />
+    <entity actinactivedelay="1" actleader="true" actonuse="true" actscript="common/puzzleents/blinkportal" actsoundloop="zone_shared/special/blink_portal" acttogglesloopfx="true" boxcollision="true" classname="gameent" deatheffect="map/common/scr_blinkportal_c" description="Portal" loopfx="map/common/scr_blinkportal" loopfxstarton="false" name="blink_portal_loc" nocollide="true" resetstate="true" smartent="false" spawnscript="common/puzzleents/blinkportalspawnscript" startenabled="false" team="hero" toggleonact="true" />
+    <entity boxcollision="true" classname="gameent" name="dynamic_clip" nocollide="false" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity classname="moverent" material="solid_metal" model="stark/waterfall_bridge_stk_m" move="0 0 0" moveduration="1" name="waterfall_bridge_stk_m" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" randompickups="0" structure="2" toggleonact="true" />
+    <entinst type="sp_blackwidow01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_blackwidow01" orient="0 0 1.5708" pos="46.798 960 480" />
+    </entinst>
+    <entinst type="sp_hankpym01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_hankpym01" pos="-33.5589 113.872 361.877" />
+    </entinst>
+    <entinst type="sp_nickfurynpc01">
+        <inst extents="-12 -18 0 36 18 84" name="sp_nickfurynpc01" orient="0 0 1.5708" pos="60 1734 366" />
+    </entinst>
+    <entinst type="sp_vision01">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="sp_vision01" orient="0 0 1.39626" pos="302.972 1208.14 480" />
+    </entinst>
+    <entinst type="doors_logo_dstk_d01">
+        <inst name="doors_logo_dstk_d01" pos="60 2328 360" />
+    </entinst>
+    <entinst type="door">
+        <inst name="door" pos="60 2100 360" />
+    </entinst>
+    <entinst type="lift">
+        <inst name="lift" pos="60 483.962 360" />
+    </entinst>
+    <entinst type="elevator_shaft">
+        <inst name="elevator_shaft" orient="0 0 -3.14159" pos="60 483.962 120" />
+    </entinst>
+    <entinst type="window_break02">
+        <inst name="window_break02" pos="-60 -180 0" />
+        <inst name="window_break03" pos="180 -180 0" />
+        <inst name="window_break" pos="60 -180 0" />
+    </entinst>
+    <entinst type="hanging_light_01_dstk_e">
+        <inst name="hanging_light_01_dstk_e" pos="-240 60 492" />
+        <inst name="hanging_light_01_dstk_e" pos="360 60 492" />
+        <inst name="hanging_light_01_dstk_e" pos="479.999 660 492" />
+        <inst name="hanging_light_01_dstk_e" pos="-780 600 612" />
+        <inst name="hanging_light_01_dstk_e" pos="900 600 612" />
+        <inst name="hanging_light_01_dstk_e" pos="660 1260 492" />
+        <inst name="hanging_light_01_dstk_e" orient="0 0 -3.13985" pos="-540 1260 492" />
+        <inst name="hanging_light_01_dstk_e" orient="0 0 1.5708" pos="60 1140 612" />
+        <inst name="hanging_light_01_dstk_e" pos="-180 1740 552" />
+        <inst name="hanging_light_01_dstk_e" pos="300 1740 552" />
+        <inst name="hanging_light_01_dstk_e" pos="-420 660 492" />
+    </entinst>
+    <entinst type="mission_review">
+        <inst name="mission_review" pos="304.33 1245.93 480" />
+    </entinst>
+    <entinst type="mission_training_dstk_a01">
+        <inst name="mission_training_dstk_a01" orient="0 0 -1.5708" pos="866.145 1680 480" />
+    </entinst>
+    <entinst type="mission_trivia_dstk_a01">
+        <inst name="mission_trivia_dstk_a01" orient="0 0 0.785399" pos="-646.429 1793.21 480" />
+    </entinst>
+    <entinst type="pillar_01_20ft_dstk_e05">
+        <inst name="pillar_01_20ft_dstk_e05" pos="-886.715 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="1015.49 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="-199.172 295.011 360" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="319.398 295.011 360" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="549.308 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="-420.534 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 1.5708" pos="1084.99 71.6884 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 1.5708" pos="1084.99 531.428 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 -1.5708" pos="-967.073 762.924 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 -1.5708" pos="-967.073 992.36 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 -1.5708" pos="-967.073 300.966 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 -1.5708" pos="-967.073 531.428 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 -1.5708" pos="-967.073 71.6884 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 1.5708" pos="1084.99 300.966 240" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="-653.934 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 1.5708" pos="1084.99 762.924 240" />
+        <inst name="pillar_01_20ft_dstk_e05" pos="782.088 -4.12732 240" />
+        <inst name="pillar_01_20ft_dstk_e05" orient="0.0 1.50996e-007 1.5708" pos="1084.99 992.36 240" />
+    </entinst>
+    <entinst type="pillar_02_20ft_dstk_e">
+        <inst name="pillar_02_20ft_dstk_e" orient="0.0 1.50996e-007 1.5708" pos="-543.806 1443.79 360" />
+        <inst name="pillar_02_20ft_dstk_e" orient="0.0 1.50996e-007 1.5708" pos="720.702 1916.21 360" />
+        <inst name="pillar_02_20ft_dstk_e" orient="0.0 1.50996e-007 1.5708" pos="720.702 1443.79 360" />
+        <inst name="pillar_02_20ft_dstk_e" orient="0.0 1.50996e-007 -3.14159" pos="-302.271 539.673 360" />
+        <inst name="pillar_02_20ft_dstk_e" orient="0.0 1.50996e-007 -3.14159" pos="417.729 539.673 360" />
+    </entinst>
+    <entinst type="pillar_02_20ft_dstk_e02">
+        <inst name="pillar_02_20ft_dstk_e02" orient="0.0 1.50996e-007 1.5708" pos="-543.806 1916.21 360" />
+    </entinst>
+    <entinst type="pillar_square_40ft_dstk_e">
+        <inst name="pillar_square_40ft_dstk_e" pos="-300 1620 240" />
+        <inst name="pillar_square_40ft_dstk_e" pos="780 1380 360" />
+        <inst name="pillar_square_40ft_dstk_e" pos="-660 1380 360" />
+        <inst name="pillar_square_40ft_dstk_e" pos="540 900 360" />
+        <inst name="pillar_square_40ft_dstk_e" pos="-420 900 360" />
+        <inst name="pillar_square_40ft_dstk_e" pos="-960 1120 240" />
+        <inst name="pillar_square_40ft_dstk_e" pos="1080 1116.59 240" />
+        <inst name="pillar_square_40ft_dstk_e" pos="420 1620 240" />
+    </entinst>
+    <entinst type="planter_big_dstk_e05">
+        <inst name="planter_big_dstk_e05" orient="0 0 -1.5708" pos="-885.877 1691.26 360" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -2.18166" pos="558.052 287.387 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -0.785398" pos="554.51 77.5501 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 0.785398" pos="-438.048 61.9759 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 1.5708" pos="1014.95 1705.38 360" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -1.5708" pos="-887.762 994.012 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 1.5708" pos="1007.91 998.945 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -1.5708" pos="789.805 998.945 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 1.5708" pos="-673.317 994.012 480" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -1.5708" pos="-885.877 2031.48 360" />
+        <inst name="planter_big_dstk_e05" orient="0 0 -1.8326" pos="1014.95 2049.92 360" />
+        <inst name="planter_big_dstk_e05" orient="0 0 2.00713" pos="-430.77 285.617 480" />
+    </entinst>
+    <entinst type="planter_corner_dstk_e02">
+        <inst name="planter_corner_dstk_e02" orient="0 0 -1.5708" pos="-142.09 2023.51 360" />
+        <inst name="planter_corner_dstk_e02" pos="-634.711 452.099 360" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 1.5708" pos="-634.711 1071.86 360" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 -1.5708" pos="756.374 421.477 360" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 -3.14159" pos="756.374 1084.5 360" />
+        <inst name="planter_corner_dstk_e02" pos="-577.579 268.2 480" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 -1.5708" pos="718.902 282.918 480" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 -3.14159" pos="-679.091 361.284 480" />
+        <inst name="planter_corner_dstk_e02" orient="0 0 1.5708" pos="811.986 380.202 480" />
+        <inst name="planter_corner_dstk_e02" pos="249.447 2023.51 360" />
+    </entinst>
+    <entinst type="planter_long_dstk_e22">
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1029.08 1311.36 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1029.08 1530.19 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1029.08 1871.69 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-900 1854.18 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-900 1518.78 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-900 1299.95 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1017.72 828.757 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="784.765 835.242 480" />
+        <inst name="planter_long_dstk_e22" pos="901.617 59.6817 480" />
+        <inst name="planter_long_dstk_e22" pos="699.84 59.6817 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1017.72 616.92 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1017.72 400.916 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="1017.72 181.099 480" />
+        <inst name="planter_long_dstk_e22" pos="-578.787 59.6817 480" />
+        <inst name="planter_long_dstk_e22" pos="-780.564 59.6817 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-897.014 182.582 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-897.014 402.399 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="735.536 754.906 360" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="-660.287 833.759 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-897.014 830.24 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 -1.5708" pos="-897.014 618.403 480" />
+        <inst name="planter_long_dstk_e22" orient="0 0 1.5708" pos="-613.873 756.607 360" />
+    </entinst>
+    <entinst type="statue_15ft_dstk_e04">
+        <inst name="statue_15ft_dstk_e04" pos="421.019 2054.29 360" />
+        <inst name="statue_15ft_dstk_e04" pos="-298.981 2054.29 360" />
+        <inst name="statue_15ft_dstk_e04" orient="0 0 0.785398" pos="808.781 306.656 480" />
+        <inst name="statue_15ft_dstk_e04" orient="0 0 -0.785398" pos="-655.354 271.405 480" />
+        <inst name="statue_15ft_dstk_e04" orient="0 0 0.785398" pos="1088.56 -3.08759 240" />
+        <inst name="statue_15ft_dstk_e04" orient="0 0 -0.785398" pos="-981.175 -26.5009 240" />
+    </entinst>
+    <entinst type="bridge_railing">
+        <inst name="bridge_railing" pos="60 2100 360" />
+    </entinst>
+    <entinst type="concept_art16">
+        <inst name="concept_art16" pos="60 868.265 518" />
+    </entinst>
+    <entinst type="upgrade_body01">
+        <inst name="upgrade_body01" pos="60 124.978 360" />
+    </entinst>
+    <entinst type="upgrade_focus01">
+        <inst name="upgrade_focus01" pos="-540 1680 480" />
+    </entinst>
+    <entinst type="upgrade_striking01">
+        <inst name="upgrade_striking01" pos="720 1680 484" />
+    </entinst>
+    <entinst type="blink_portal_loc">
+        <inst extents="-10 -20 0 10 20 60" name="blink_portal_loc" orient="0 0 1.5708" pos="60 1620 360.83" />
+    </entinst>
+    <entinst type="bridge_clip">
+        <inst extents="-120 -52.6505 0 120 52.6505 360" name="bridge_clip" pos="60 2032.65 255.948" />
+    </entinst>
+    <entinst type="sky_light">
+        <inst extents="-6 -6 -6 6 6 6" name="sky_light" pos="60 300 390" />
+        <inst extents="-6 -6 -6 6 6 6" name="sky_light01" pos="60 -149.509 450" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 -1.5708" pos="60 1860 366" />
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-120 -60 0 120 60 120" name="trigger_area01" pos="304.33 1241.36 480" />
+    </entinst>
+    <entinst type="gizmoa">
+        <inst extents="-120 -120 0 120 120 120" name="gizmoa" pos="55.8215 1064.69 480" />
+        <inst extents="-92 -120 0 92 120 120" name="gizmob" pos="-595.255 1671.31 480" />
+    </entinst>
+    <entinst type="use_elevator">
+        <inst extents="-37.7521 -41.7607 0 37.7521 41.7607 120" name="use_elevator" pos="2.24793 481.761 364.882" />
+    </entinst>
+    <entinst type="gizmoa01">
+        <inst extents="-60 -24 0 60 24 120" name="gizmoa01" pos="53.627 1095.54 480" />
+    </entinst>
+    <entinst type="gizmob01">
+        <inst extents="-32 -92 0 32 92 120" name="gizmob01" pos="-639.337 1665.37 480" />
+    </entinst>
+    <entinst type="bw_cam">
+        <inst extents="-6 -6 -6 6 6 6" name="bw_cam" orient="0 0 1.5708" pos="83.1148 970.145 520" />
+        <inst extents="-6.00001 -5.99999 -6 5.99999 6.00001 6" name="wp_vision_stand01" orient="0 0 1.5708" pos="305.386 1072.28 480" />
+        <inst extents="-6 -6 -6 6 6 6" name="bw_heroact" orient="0 0 -2.79253" pos="109.436 976.46 480" />
+        <inst extents="-6 -5.99998 -6 6 6.00002 6" name="vision_heroact" orient="0 0 -0.0872669" pos="209.64 1097.29 480" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="vision_cam" orient="0 0 -2.00713" pos="256.511 1087.3 520" />
+        <inst extents="-6 -5.99997 -6 6 6.00003 6" name="fury_cam" orient="0 0 -2.96706" pos="-59.2087 990.149 520" />
+        <inst extents="-5.99997 -6.00001 -6 6.00003 5.99999 6" name="fury_heroact" orient="0 0 -1.0472" pos="-77.9051 1034.28 480" />
+        <inst extents="-6 -6 -6 6 6 6" name="bw_look" orient="0 0 1.5708" pos="47.172 1016.02 520" />
+    </entinst>
+    <entinst type="wp_vision_console01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_vision_console01" orient="0 0 1.39626" pos="303.493 1217.99 480" />
+    </entinst>
+    <entinst type="spot_hankpym">
+        <inst extents="-6 -6 -6 6 6 6" name="spot_hankpym" pos="-38.8305 113.872 360" />
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="nick_goodbye" orient="0 0 -1.5708" pos="63.0477 780 480" />
+        <inst extents="-6 -6 -6 6 6 6" name="pym_look" orient="0 0 0.698132" pos="18.9163 114.87 400" />
+        <inst extents="-6 -6 -6 6 6 6" name="pym_cam" orient="0 0 0.698132" pos="18.9163 149.929 400" />
+        <inst extents="-6 -6 -6 6 6 6" name="pym_heroact" orient="0 0 -2.00713" pos="58.9962 179.905 360" />
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="pym_herowait02" orient="0 0 -1.5708" pos="59.8117 313.86 360" />
+        <inst extents="-6 -6 -6 6 6 6" name="pym_herowait03" orient="0 0 -1.5708" pos="4.40247 313.86 360" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="pym_herowait01" orient="0 0 -1.5708" pos="119.593 313.86 360" />
+        <inst extents="-6 -6 -6 6 6 6" name="exit01" orient="0 0 1.5708" pos="60 484.981 360" />
+    </entinst>
+    <entinst type="common_herowait01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="common_herowait01" orient="0 0 -1.5708" pos="57.2003 1258.02 480" />
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="common_herowait02" orient="0 0 -1.5708" pos="-55.7988 1258.02 480" />
+        <inst extents="-6 -6 -6 6 6 6" name="common_herowait03" orient="0 0 -1.5708" pos="-2.07443 1200.94 480" />
+    </entinst>
+    <entinst type="wp_nick03">
+        <inst extents="-5.99999 -6 -6 6.00001 6 6" name="wp_nick03" orient="0 0 -1.5708" pos="-70.602 1091.37 480" />
+    </entinst>
+    <entinst type="wp_nick02">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_nick02" orient="0 0 -1.5708" pos="60.6906 1400.68 480" />
+    </entinst>
+    <entinst type="wp_nick01">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="wp_nick01" orient="0 0 -1.5708" pos="60.6906 1549.77 377.116" />
+    </entinst>
+    <entinst type="wp_nick04">
+        <inst extents="-6 -5.99999 -6 6 6.00001 6" name="wp_nick04" orient="0 0 0.523599" pos="-45.2786 948.8 480" />
+    </entinst>
+    <entinst type="xtraction_point01">
+        <inst name="xtraction_point01" pos="60 1740 360" />
+    </entinst>
+    <entinst type="link_doomstark2">
+        <inst extents="-160 -80 0 160 80 360" name="link_doomstark2" pos="61.3318 1999.72 360" />
+    </entinst>
+    <entinst type="bridge">
+        <inst name="bridge" pos="60 2035.33 360" />
+    </entinst>
+    <entity actcountremove="1" character="BlackWidow" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act5/doomstark/talk_blackwidow" monster_name="bw" monster_spawnscript="act5/doomstark/sc_blackwidow" name="sp_blackwidow01" nocollide="true" />
+    <entity actcountremove="1" character="HankPym" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act5/doomstark/talk_pym" monster_name="pym" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/sc_pym" name="sp_hankpym01" nocollide="true" />
+    <entity actcountremove="1" character="NickFuryNPC" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act5/doomstark/talk_fury" monster_hinttype="importanttalk" monster_name="fury" monster_nodistancecull="true" monster_smartent="false" monster_spawnexactlocation="true" name="sp_nickfurynpc01" nocollide="true" />
+    <entity actcountremove="1" character="Vision" classname="monsterspawnerent" instantspawn="true" monster_actonuse="true" monster_actscript="act5/doomstark/talk_vision" monster_name="robot" monster_spawnexactlocation="true" monster_spawnscript="act5/doomstark/sc_vision" name="sp_vision01" nocollide="true" />
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_m" fxlevel="2" health="100" material="wood" model="doom_stark/doors_logo_dstk_d" name="door" nogravity="true" nopickup="true" nopush="true" smartent="false" toggleonact="true" />
+    <entity actcountdisable="1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_wood_m" fxlevel="2" health="100" material="wood" model="doom_stark/doors_logo_dstk_d" name="doors_logo_dstk_d01" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" toggleonact="true" />
+    <entity actonuse="false" classname="moverent" material="solid_metal" model="doom_stark/elevator_lift_dstk_m" move="0 0 240" moveduration="3" name="lift" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" nostep="true" pathignore="true" smartent="false" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" deathspawn="elevator_shaft_silver_dstk_a_b" firstact="0.1" material="solid_metal" model="doom_stark/elevator_shaft_silver_dstk_a" name="elevator_shaft" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity animstarton="true" classname="physent" deathspawn="elevator_shaft_silver_dstk_a_b" material="solid_metal" model="doom_stark/elevator_shaft_silver_dstk_a" name="elevator_shaft_silver_dstk_a_b" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="glass_doombreaks_dstk_e_d" fxlevel="3" material="glass" model="doom_stark/glass_doombreaks_dstk_e" name="window_break02" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" fxlevel="3" mass="0" material="glass" model="doom_stark/glass_doombreaks_stump_dstk_e" name="glass_doombreaks_dstk_e_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actonuse="true" actscript="common/review_menu" classname="physent" description="Review Computer" hinttype="usetoggle" material="solid_metal" model="doom_stark/mission_review_dstk_a" name="mission_review" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity actonuse="true" actscript="common/review_dangerroom" classname="physent" description="Training Simulator" hinttype="usetoggle" material="solid_metal" model="doom_stark/mission_training_dstk_a" name="mission_training_dstk_a01" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actonuse="true" actscript="common/review_trivia" classname="physent" description="Trivia Game" hinttype="usetoggle" material="solid_metal" model="doom_stark/mission_trivia_dstk_a" name="mission_trivia_dstk_a01" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_01_20ft_dstk_e" name="pillar_01_20ft_dstk_e05" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/pillar_02_20ft_dstk_e" name="pillar_02_20ft_dstk_e02" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_big_dstk_e" name="planter_big_dstk_e05" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_corner_dstk_e" name="planter_corner_dstk_e02" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom_stark/planter_long_dstk_e" name="planter_long_dstk_e22" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="doom_stark/statue_15ft_dstk_e" name="statue_15ft_dstk_e04" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity actonuse="false" actsound="zone_shared/stark/to_lair" classname="physent" material="solid_metal" model="doom_stark/waterfall_bridge_railing_dstk_a" name="bridge_railing" nogravity="true" nopickup="true" nopush="true" resetstate="true" smartent="false" startenabled="true" structure="2" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','body')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up body upgrade" idnum="12" material="solid_metal" model="pickups/body_pickup" name="upgrade_body01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_b" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','focus')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up focus upgrade" idnum="15" material="solid_metal" model="pickups/focus_pickup" name="upgrade_focus01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_f" />
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" idnum="14" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s" />
+    <entity boxcollision="true" classname="gameent" name="bridge_clip" nocollide="false" smartent="false" />
+    <entity classname="ent" name="sky_light" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_doomstark1b" />
+    <entity actleader="true" actmatchteam="true" actscript="act5/doomstark/enable_gizmo" boxcollision="true" classname="scripttriggerent" deactscript="act5/doomstark/disable_gizmo" name="gizmoa" nocollide="true" smartent="false" startenabled="false" team="hero" />
+    <entity actleader="true" actmatchteam="true" actscript="act5/doomstark/move_outway" boxcollision="true" classname="scripttriggerent" deactscript="act5/doomstark/move_in" name="trigger_area01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actonuse="true" actscript="act5/doomstark/increment_ds_obj40b" boxcollision="true" classname="gameent" description="Pick up magnetic dampner" hinttype="objective" name="gizmob01" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none" />
+    <entity actcountremove="1" actonuse="true" actscript="act5/doomstark/increment_ds_obj40" boxcollision="true" classname="gameent" description="Pick up technical manual" hinttype="objective" name="gizmoa01" nocollide="true" quickuse="true" smartent="false" startenabled="false" team="none" />
+    <entity actcountremove="1" actmustface="false" actonuse="true" actscript="act5/doomstark/goto_doomstark2" boxcollision="true" classname="gameent" name="use_elevator" nocollide="true" smartent="false" startenabled="false" team="none" />
+    <entity actscript="faceEntity('_ACTIVATOR_', 'bw')" classname="waypointent" name="wp_nick04" nocollide="true" smartent="false" />
+    <entity actcountremove="1" beeline="false" classname="waypointent" name="wp_nick01" nocollide="true" speed="0.3" />
+    <entity actcountremove="1" beeline="true" classname="waypointent" name="wp_nick02" nocollide="true" speed="0.4" />
+    <entity actcountremove="1" classname="waypointent" name="wp_nick03" nocollide="true" speed="0.3" />
+    <entity actscript="faceEntity('_ACTIVATOR_', '_ACTIVE_HERO_')" beeline="true" classname="waypointent" name="common_herowait01" nocollide="true" speed="0.3" />
+    <entity classname="waypointent" name="spot_hankpym" nocollide="true" smartent="false" />
+    <entity actscript="act5/doomstark/use_mission_machine" beeline="true" classname="waypointent" name="wp_vision_console01" nocollide="true" speed="0.3" />
+    <entity actscript="faceEntity('_ACTIVATOR_', '_ACTIVE_HERO_')" beeline="true" classname="waypointent" name="bw_cam" nocollide="true" smartent="false" speed="0.3" />
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point01" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" smartent="false" spawnscript="common/extraction/exp_spawn" team="hero" />
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Iron Man Lab" name="link_doomstark2" nextzone="doomstark2" nocollide="false" smartent="false" startenabled="false" team="hero" />
+    <entity classname="moverent" material="solid_metal" model="stark/waterfall_bridge_stk_m" move="0 0 0" moveduration="1" name="bridge" nogravity="true" nopickup="true" nopush="true" nostep="true" pathignore="true" randompickups="0" resetstate="true" structure="2" toggleonact="true" />
+</world>

@@ -1,0 +1,251 @@
+<packagedef>
+    <combat_is filename="on" />
+    <bigconvmap filename="on" />
+    <model filename="maps/act1/heli/heli3" />
+    <shadow filename="maps/act1/heli/heli3" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act1/heli/heli3/heli3" />
+    <model filename="HUD/hud_head_14801" />
+    <model filename="HUD/hud_head_2101" />
+    <script filename="scripts/act1/heli/heli3/1_heli3_010_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_010" />
+    <model filename="HUD/hud_head_11101" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_022" />
+    <model filename="HUD/hud_head_1701" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_024" />
+    <script filename="scripts/act1/heli/heli3/1_heli3_028_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_028" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_029_1" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_029_2" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_029_3" />
+    <model filename="HUD/hud_head_11801" />
+    <model filename="HUD/hud_head_11901" />
+    <script filename="scripts/act1/heli/heli3/villain_intro_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_030" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_030_dlc" />
+    <model filename="HUD/hud_head_1901" />
+    <script filename="scripts/act1/heli/heli3/villain_encounter01_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_032" />
+    <model filename="HUD/hud_head_0000" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_033_1" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_033_2" />
+    <script filename="scripts/act1/heli/heli3/huh_cam_move01" />
+    <script filename="scripts/act1/heli/heli3/huh_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_036" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_038" />
+    <script filename="scripts/act1/heli/heli3/villain_final_encounter_end" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_039" />
+    <model filename="HUD/hud_head_0701" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_040" />
+    <model filename="HUD/hud_head_1001" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_050" />
+    <script filename="scripts/act1/heli/heli3/enable_elevator" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_060" />
+    <texture filename="textures/select_ring_gradient" />
+    <effect filename="map/heli/forcefield_10ft_expire" />
+    <effect filename="map/heli/forcefield_20ft_expire" />
+    <effect filename="map/heli/heli_floor_shot" />
+    <effect filename="map/sewers/dust_drip" />
+    <script filename="scripts/act1/heli/heli3/agent_intro_cam_switch" />
+    <script filename="scripts/act1/heli/heli3/agent_intro_end" />
+    <script filename="scripts/act1/heli/heli3/agent_intro_end_new" />
+    <script filename="scripts/act1/heli/heli3/agent_intro_start_new" />
+    <script filename="scripts/act1/heli/heli3/end_cut_scene" />
+    <script filename="scripts/act1/heli/heli3/laptop_conv_end" />
+    <script filename="scripts/act1/heli/heli3/laser_end" />
+    <script filename="scripts/act1/heli/heli3/laser_end_new" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_026" />
+    <script filename="scripts/act1/heli/heli3/shield_agent_cam" />
+    <script filename="scripts/act1/heli/heli3/there_they_go_end" />
+    <actoranimdb filename="111_shield_agent" />
+    <actorskin filename="11101" />
+    <effect filename="char/shield/p1_power" />
+    <effect filename="char/shield/p1_impact" />
+    <sound filename="char/shield_m/p1_impact" />
+    <xml filename="data/entities/ents_shield" />
+    <model filename="models/effects/fx_bulletcasing" />
+    <texture filename="textures/fx_avalanche2" />
+    <effect filename="char/shield/p1_shot" />
+    <actoranimdb filename="135_doom_bot" />
+    <actorskin filename="13501" />
+    <model filename="HUD/hud_head_13501" />
+    <effect filename="char/doombt/p1_power" />
+    <effect filename="char/doombt/p1_impact" />
+    <effect filename="char/doombt/p2_power" />
+    <texture filename="textures/lightning_green" />
+    <effect filename="char/doombt/special_pain" />
+    <effect filename="char/doombt/special_death" />
+    <actoranimdb filename="fightstyle_villain" />
+    <effect filename="char/ultrr/special_jets" />
+    <actoranimdb filename="91_ultron_striker" />
+    <actorskin filename="9102" />
+    <model filename="HUD/hud_head_9101" />
+    <texture filename="textures/nextgen/bolt_softedge" plat="40" />
+    <effect filename="char/ultrr/p1_power" />
+    <texture filename="textures/nextgen/burstline" plat="40" />
+    <texture filename="textures/nextgen/fireglow1" plat="40" />
+    <effect filename="char/ultrr/p2_tracer" />
+    <texture filename="textures/misc_elec2" />
+    <texture filename="textures/nextgen/firecloud2" plat="40" />
+    <texture filename="textures/spark_orange" plat="40" />
+    <effect filename="char/ultrr/p2_impact" />
+    <sound filename="char/ultrr_m/p2_impact" />
+    <xml filename="data/entities/ents_ultronstriker" />
+    <texture filename="textures/nextgen/burstline_flipped" plat="40" />
+    <effect filename="char/ultrr/p2_shot" />
+    <model filename="models/chunks/ultronwarrior_leg" plat="23" />
+    <model filename="models/chunks/ultronwarrior_hand" plat="23" />
+    <model filename="models/chunks/ultronwarrior_chest" plat="23" />
+    <model filename="models/chunks/ultronstriker_leg" plat="40" />
+    <model filename="models/chunks/ultronstriker_hand" plat="40" />
+    <model filename="models/chunks/ultronstriker_bit" plat="40" />
+    <model filename="models/chunks/ultronstriker_chest" plat="40" />
+    <texture filename="textures/nextgen/lightning_single" plat="40" />
+    <texture filename="textures/nextgen/energyline1" plat="40" />
+    <effect filename="char/ultrr/special_death" />
+    <effect filename="base/misc/techstation_focus" />
+    <model filename="models/pickups/body_pickup" />
+    <model filename="models/pickups/striking_pickup" />
+    <model filename="models/pickups/pickup_dangeroom_disk" />
+    <texture filename="textures/chunks/metal_2" plat="23" />
+    <model filename="models/chunks/met_4" plat="23" />
+    <model filename="models/chunks/metal_generic_lrg" plat="40" />
+    <model filename="models/chunks/metal_generic_med_1" plat="40" />
+    <model filename="models/chunks/metal_generic_sml_1" plat="40" />
+    <model filename="models/chunks/metal_generic_med_3" plat="40" />
+    <effect filename="base/material/break/brk_metal" />
+    <model filename="models/heli_carrier/barrel_01_heli_th" />
+    <sound filename="death_style/ds_metal_hollow_m" />
+    <model filename="models/heli_carrier/black_widows_laptop_heli_e" />
+    <texture filename="textures/grass" />
+    <texture filename="textures/debris/paper_4" />
+    <model filename="models/chunks/c_mansion_c" />
+    <effect filename="base/material/break/brk_upholstery" />
+    <model filename="models/heli_carrier/bunk_heli_b" />
+    <sound filename="death_style/ds_upholstery_m" />
+    <model filename="models/heli_carrier/console_02_heli_b" />
+    <sound filename="death_style/ds_metal_m" />
+    <model filename="models/heli_carrier/console_button_glow_heli_a" />
+    <model filename="models/heli_carrier/console_button_heli_a" />
+    <model filename="models/heli_carrier/container_03_heli_th" />
+    <model filename="models/heli_carrier/desk_heli_b" />
+    <model filename="models/heli_carrier/door_02_heli_d" />
+    <model filename="models/heli_carrier/elevator_lift_heli_m" />
+    <model filename="models/heli_carrier/energy_core_heli_a" />
+    <model filename="models/heli_carrier/fan_wall_heli_a" />
+    <model filename="models/heli_carrier/fan_wall_int_05_heli_a" />
+    <model filename="models/heli_carrier/fan_wall_int_06_heli_a" />
+    <model filename="models/heli_carrier/force_field_10ft_heli_a" />
+    <model filename="models/heli_carrier/force_field_20ft_heli_a" />
+    <model filename="models/heli_carrier/lockers_heli_b" />
+    <model filename="models/heli_carrier/machine_01_heli_b" />
+    <sound filename="death_style/ds_metal_l" />
+    <model filename="models/heli_carrier/pillar_20ft_heli_e" />
+    <model filename="models/heli_carrier/pipe_5x15_curved_heli_e" />
+    <model filename="models/heli_carrier/pipe_5x20_heli_e" />
+    <model filename="models/heli_carrier/pipe_curved_01_heli_b" />
+    <sound filename="death_style/ds_metal_hollow_l" />
+    <model filename="models/heli_carrier/pipe_heli_w" />
+    <actoranimdb filename="fightstyle_weapon_onehanded" />
+    <xml filename="data/weapons/wp_onehanded" />
+    <model filename="models/heli_carrier/turbine_support_engine_heli_a" />
+    <model filename="models/heli_carrier/u_wallpiece_heli_e" />
+    <model filename="models/chunks/glassshard" />
+    <effect filename="base/material/break/brk_glass" />
+    <model filename="models/heli_carrier/window_03_heli_b" />
+    <sound filename="death_style/ds_glass_m" />
+    <texture filename="textures/level_symbol" />
+    <effect filename="base/misc/interact_multihero" />
+    <effect filename="base/misc/extraction_lite_loop" />
+    <model filename="models/puzzles/beacon_xtraction_saveonly" />
+    <texture filename="textures/nextgen/decals/burn_mark_alpha" plat="40" />
+    <texture filename="textures/nextgen/smoke_under1" plat="40" />
+    <texture filename="textures/nextgen/fire7" plat="40" />
+    <texture filename="textures/nextgen/fire_blue2" plat="40" />
+    <texture filename="textures/decals/burn_mark_alpha" plat="23" />
+    <texture filename="textures/explosion_puff_a_gray" plat="23" />
+    <texture filename="textures/nextgen/distort_fire_med" plat="40" />
+    <effect filename="map/common/fire_large" />
+    <texture filename="textures/nextgen/distort_fire_sml" plat="40" />
+    <effect filename="map/common/fire_medium" />
+    <texture filename="textures/nextgen/distort_fire_tiny" plat="40" />
+    <effect filename="map/common/fire_small" />
+    <actoranimdb filename="118_radioactive_man" />
+    <actorskin filename="11801" />
+    <texture filename="textures/blackhole_a" />
+    <texture filename="textures/glow_cloudy" />
+    <effect filename="char/radiom/p1_power" />
+    <effect filename="char/radiom/p1_shot" />
+    <texture filename="textures/spots5" />
+    <effect filename="char/radiom/p1_impact" />
+    <sound filename="char/radiom_m/p2_impact" />
+    <xml filename="data/entities/ents_radiom" />
+    <effect filename="char/radiom/p2_power" />
+    <texture filename="textures/biohazard_big" />
+    <effect filename="char/radiom/p2_aura" />
+    <actoranimdb filename="fightstyle_villain_big" />
+    <actoranimdb filename="119_winter_soldier" />
+    <actorskin filename="11901" />
+    <texture filename="textures/nextgen/fireline1" plat="40" />
+    <effect filename="char/winter/p1_power" />
+    <effect filename="char/winter/p1_impact" />
+    <script filename="scripts/act1/heli/heli3/buddy_spawnscript" />
+    <script filename="scripts/act1/heli/heli3/doombot_spawnscript02" />
+    <script filename="scripts/act1/heli/heli3/doombot_spawnscript01" />
+    <script filename="scripts/act1/heli/heli3/villain_spawn" />
+    <script filename="scripts/act1/heli/heli3/got_laptop" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_020" />
+    <model filename="models/heli_carrier/console_02_stump_heli_b" />
+    <script filename="scripts/act1/heli/heli3/force_field_actscript" />
+    <model filename="models/heli_carrier/machine_01_stump_heli_b" />
+    <model filename="models/heli_carrier/pipe_curved_01_stump_heli_b" />
+    <model filename="models/heli_carrier/window_03_stump_heli_b" />
+    <effect filename="test/beam_pf" />
+    <script filename="scripts/act1/heli/heli3/laser_explode" />
+    <script filename="scripts/act1/heli/heli3/laser_explode02" />
+    <effect filename="map/common/sparks" />
+    <effect filename="map/common/steam_large" />
+    <effect filename="map/heli/cloud_puff" />
+    <script filename="scripts/act1/heli/heli3/villain_final_encounter_death" />
+    <script filename="scripts/act1/heli/heli3/playtime_over" />
+    <script filename="scripts/act1/heli/heli1/ultron_strafe" />
+    <script filename="scripts/act1/heli/heli3/wind_on" />
+    <script filename="scripts/act1/heli/heli3/wind_off" />
+    <script filename="scripts/act1/heli/heli3/doombot_intro02" />
+    <script filename="scripts/act1/heli/heli3/villain_intro" />
+    <script filename="scripts/act1/heli/heli3/villain_encounter02" />
+    <xml filename="conversations/act1/heli/heli3/1_heli3_034" />
+    <script filename="scripts/act1/heli/heli3/villain_final_encounter" />
+    <script filename="scripts/act1/heli/heli3/villain_encounter05" />
+    <script filename="scripts/act1/heli/heli3/villain_encounter03" />
+    <script filename="scripts/act1/heli/heli3/skipped_laptop" />
+    <script filename="scripts/act1/heli/heli3/shield_agent_intro" />
+    <script filename="scripts/act1/heli/heli3/doombot_intro01" />
+    <script filename="scripts/act1/heli/heli3/shake" />
+    <script filename="scripts/act1/heli/heli3/security_terminals" />
+    <script filename="scripts/act1/heli/heli3/elevator" />
+    <script filename="scripts/act1/heli/heli3/activator_no_wp" />
+    <script filename="scripts/act1/heli/heli3/remove_activator_wp" />
+    <script filename="scripts/act1/heli/heli3/villain_painscript" />
+    <script filename="scripts/common/defeatnamedvillain" />
+    <effect filename="base/misc/misc_treasure" />
+    <script filename="scripts/act1/heli/heli3/ws_hacking_gun_spawn" />
+    <actoranimdb filename="zone_heli3" />
+    <characters filename="maps/act1/heli/heli3" />
+    <fightstyle filename="data/powerstyles/ps_shield" />
+    <fightstyle filename="data/powerstyles/ps_doombot" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain" />
+    <fightstyle filename="data/powerstyles/ps_ultronstriker" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_onehanded" />
+    <fightstyle filename="data/powerstyles/ps_radiom" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain_big" />
+    <fightstyle filename="data/powerstyles/ps_wintersoldier" />
+    <zonexml filename="maps/act1/heli/heli3" />
+    <nav filename="maps/act1/heli/heli3" />
+    <boy filename="maps/act1/heli/heli3" />
+    <zam filename="automaps/act1/heli/heli3" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

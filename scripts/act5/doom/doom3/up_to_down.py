@@ -35,11 +35,12 @@ if cap_spawn == 0
      cameraPan(" 0.000 50.000 215.500 ", 1.000, "FALSE" )
      waittimed ( 1.250 )
      endCutScene("FALSE", "FALSE" )
-	cyclops = isActorOnTeam("Cyclops" )
-	if cyclops == 1
-		startConversation( "act5/doom/doom3/5_DOOM3_050_DLC" )
-	else
-		startConversation("act5/doom/doom3/5_DOOM3_020" )
-	endif
+     cyclops = isActorOnTeam("Cyclops" )
+     if cyclops == 1
+          startConversation( "act5/doom/doom3/5_DOOM3_050_DLC" )
+     else
+          startConversation("act5/doom/doom3/5_DOOM3_020" )
+     endif
 endif
+cameraReset( )
 

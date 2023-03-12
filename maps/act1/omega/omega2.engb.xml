@@ -1,0 +1,734 @@
+<world>
+    <entity act="1" killz="-390" level="4" name="world" next_gen_partylight="0 0 0" next_gen_partylightradius="150" partylight="0 0.3 0.4" soundfile="omega2" zonescript="act1/omega/omega2/farclip_out"/>
+    <precache filename="act1/omega/omega2/1_omega2_010" type="conversation"/>
+    <precache filename="act1/omega/omega2/1_omega2_020" type="conversation"/>
+    <precache filename="base/material/explode/exp_generic_lrg" type="fx"/>
+    <precache filename="base/material/explode/exp_generic_med" type="fx"/>
+    <precache filename="map/common/missile_trail" type="fx"/>
+    <precache filename="map/niffleheim/catapult_indicator" type="fx"/>
+    <precache filename="map/niffleheim/catapult_indicator_low" type="fx"/>
+    <precache filename="omega/camera1/mp_camera1" type="motionpath"/>
+    <precache filename="omega/helicopter/mp_helicopter" type="motionpath"/>
+    <precache filename="act1/omega/omega2/copter_initiate" type="script"/>
+    <precache filename="act1/omega/omega2/copter_initiate_new" type="script"/>
+    <entity actcountremove="1" character="AIMReaver_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimreaver_a" nocollide="true"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimtrooper_a" nocollide="true"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_aimtrooper_a_leader" nocollide="true"/>
+    <entity actcountremove="1" character="SuperSoldier_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_supersoldier_a" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="0" classname="cameramagnetent" name="camera_magnet" nocollide="true" team="hero"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_constant" nocollide="true" radiusdamage="false" smartent="false" smartfire="true"/>
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="actionent" name="loop_sound" nocollide="true" smartent="true" toggleonact="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="projectileent" name="projectile"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="10" heaviness="0" material="solid_metal" model="omega/barrel_omega_th" name="barrel_omega_th" randompickups="3" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_fade_omega_e" name="catwalk_support_fade_omega_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_mesh_omega_e" name="catwalk_support_mesh_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_omega_e" name="catwalk_support_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="crate_omega_th" randompickups="3" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="cube_omega_th" randompickups="3" stackphysics="true" structure="0"/>
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/omega/door" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_ext_omega_a" name="door_ext_omega_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/fan_ramp_10x10_omega_a" name="fan_ramp_10x10_omega_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/girder_20ft_omega_e" name="girder_20ft_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" deathspawn="pipe_curved_01_omega_b_d" fxlevel="2" health="100" material="hollow_metal" model="omega/pipe_curved_01_omega_b" name="pipe_curved_01_omega_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1"/>
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="omega/pipe_huge_straight_omega_e" name="pipe_huge_straight_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/slanted_girder_lg_omega_e" name="slanted_girder_lg_omega_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_catwalk_support_mesh_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_catwalk_support_mesh_omega_b" name="u_catwalk_support_mesh_omega_b" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/u_copter_enemy_omega_a" name="u_copter_enemy_omega_a" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_floor_01_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_floor_01_omega_b" name="u_floor_01_omega_b" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_floor_02_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_floor_02_omega_b" name="u_floor_02_omega_b" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" deathspawn="u_slanted_girder_omega_b_d" fxlevel="3" material="solid_metal" model="omega/u_slanted_girder_omega_b" name="u_slanted_girder_omega_b" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="omega/wall_pipe_omega_e" name="wall_pipe_omega_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entinst type="ss_aimreaver_a">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="ss_aimreaver_a" orient="0 0 2.79253" pos="6060.99 1373.78 -240"/>
+        <inst extents="-12.0005 -17.9999 0 35.9995 18.0001 84" name="ss_aimreaver_a" orient="0 0 -2.70526" pos="6090.96 1314.98 -240"/>
+        <inst extents="-12.0003 -18.0003 0 35.9997 17.9997 84" name="ss_aimreaver_a" orient="0 0 -1.13446" pos="8391.59 3056.66 -120"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_aimreaver_a" orient="0 0 -2.79253" pos="6087.67 1509.1 -240"/>
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_aimreaver_a" orient="0 0 -1.13446" pos="8573.33 2207.88 -120"/>
+        <inst extents="-12.0003 -18.0001 0 35.9997 17.9999 84" name="ss_aimreaver_a" orient="0 0 -1.13446" pos="8243.28 2208.06 -120"/>
+        <inst extents="-12.0001 -18.0003 0 35.9999 17.9997 84" name="ss_aimreaver_a" orient="0 0 -1.91986" pos="8185.25 3132.53 -120"/>
+        <inst extents="-12.0002 -18.0006 0 35.9998 17.9994 84" name="ss_aimreaver_a" orient="0 0 -0.872665" pos="8283.67 5373.1 -120"/>
+        <inst extents="-11.9996 -18.0002 0 36.0004 17.9998 84" name="ss_aimreaver_a" orient="0 0 -0.174533" pos="8031.67 5337.1 -120"/>
+        <inst extents="-12.0001 -17.9994 0 35.9999 18.0006 84" name="ss_aimreaver_a" orient="0 0 -2.44346" pos="8379.67 3873.1 -120"/>
+        <inst extents="-12.0004 -17.9996 0 35.9996 18.0004 84" name="ss_aimreaver_a" orient="0 0 -2.44346" pos="8259.67 3933.1 -120"/>
+        <inst extents="-12 -17.9997 0 36 18.0003 84" name="ss_aimreaver_a" orient="0 0 -0.523599" pos="7971.67 3165.1 -120"/>
+        <inst extents="-11.9997 -17.9998 0 36.0003 18.0002 84" name="ss_aimreaver_a" orient="0 0 -0.523599" pos="7959.67 3105.1 -120"/>
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="ss_aimreaver_a" orient="0 0 -3.05433" pos="8403.67 1561.89 -240"/>
+        <inst extents="-11.9992 -17.9998 0 36.0008 18.0002 84" name="ss_aimreaver_a" orient="0 0 3.05433" pos="8355.67 1341.1 -240"/>
+        <inst extents="-12.0001 -17.9998 0 35.9999 18.0002 84" name="ss_aimreaver_a" orient="0 0 2.44346" pos="7227.67 1233.1 -240"/>
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="ss_aimreaver_a" orient="0 0 2.79253" pos="4915.64 1272.07 -360"/>
+    </entinst>
+    <entinst type="trooper13">
+        <inst extents="-12.0001 -17.9997 0 35.9999 18.0003 84" name="trooper13" orient="0 0 -1.5708" pos="8394 4986 -120"/>
+        <inst extents="-12.0 -17.9999 -3.43323e-005 36.0 18.0001 84.0" name="trooper09" pos="8262 4446 -120"/>
+    </entinst>
+    <entinst type="trooper02">
+        <inst extents="-12 -18 0 36 18 84" name="trooper02" orient="0 0 3.14159" pos="3738 1386 -365.736"/>
+        <inst extents="-11.9998 -18.0001 0 36.0002 17.9999 84" name="trooper04" orient="0 0 3.14159" pos="6820.95 1343.14 -245.736"/>
+        <inst extents="-12.0001 -17.9998 0 35.9999 18.0002 84" name="trooper11" orient="0 0 -1.5708" pos="8441.6 5042.98 -120"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="trooper08" orient="0 0 3.14159" pos="8538 4446 -120"/>
+        <inst extents="-11.9999 -17.9998 0 36.0001 18.0002 84" name="trooper06" orient="0 0 -1.5708" pos="7873.75 3520.16 -120"/>
+    </entinst>
+    <entinst type="s_ambusher1_01">
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="s_ambusher1_01" orient="0 0 -1.5708" pos="4020 2154 -360"/>
+    </entinst>
+    <entinst type="s_ambusher1_02">
+        <inst extents="-11.9999 -18.0001 0 36.0001 17.9999 84" name="s_ambusher1_02" orient="0 0 -1.5708" pos="4020 2202 -360"/>
+    </entinst>
+    <entinst type="trooper12">
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="trooper12" orient="0 0 -1.5708" pos="8341.4 5042.94 -120"/>
+    </entinst>
+    <entinst type="s_ambusher3_02">
+        <inst extents="-12 -18 0 36 18 84" name="s_ambusher3_02" pos="7518 3540 -120"/>
+    </entinst>
+    <entinst type="trooper03">
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="trooper03" orient="0 0 3.14159" pos="6760.95 1283.14 -245.736"/>
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="trooper05" orient="0 0 -1.5708" pos="7957.75 3484.16 -120"/>
+        <inst extents="-12.0 -18.0 -1.33514e-005 36.0 18.0 84.0" name="trooper07" pos="8274 4374 -120"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="trooper01" orient="0 0 3.14159" pos="3678 1326 -365.736"/>
+    </entinst>
+    <entinst type="trooper10">
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="trooper10" orient="0 0 3.14159" pos="8550 4374 -120"/>
+    </entinst>
+    <entinst type="ss_aimtrooper_a01">
+        <inst extents="-12.0003 -18.0001 0 35.9997 17.9999 84" name="ss_aimtrooper_a01" orient="0 0 2.87979" pos="5009.7 1326.16 -360"/>
+        <inst extents="-12.0003 -18 0 35.9997 18 84" name="ss_aimtrooper_a01" orient="0 0 -2.96706" pos="4988.59 1439.23 -360"/>
+    </entinst>
+    <entinst type="s_ambusher2_01">
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="s_ambusher2_01" orient="0 0 -1.5708" pos="6180 1674 -240"/>
+    </entinst>
+    <entinst type="s_ambusher2_02">
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="s_ambusher2_02" orient="0 0 -1.5708" pos="6180 1722 -240"/>
+    </entinst>
+    <entinst type="s_ambusher3_01">
+        <inst extents="-12 -18 0 36 18 84" name="s_ambusher3_01" pos="7566 3540 -120"/>
+    </entinst>
+    <entinst type="s_leader01">
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="s_leader01" orient="0 0 3.14159" pos="4259.5 1800 -360"/>
+    </entinst>
+    <entinst type="s_leader02">
+        <inst extents="-11.9998 -17.9999 0 36.0002 18.0001 84" name="s_leader02" orient="0 0 3.14159" pos="6923.57 1334.29 -240"/>
+    </entinst>
+    <entinst type="soldier07">
+        <inst extents="-12.0 -18.0 -1.52029e-005 36.0 18.0 84.0" name="soldier07" pos="7866 5746.12 -120"/>
+        <inst extents="-12.0 -18.0 -1.28655e-005 36.0 18.0 84.0" name="soldier08" pos="7866 5655.02 -120"/>
+    </entinst>
+    <entinst type="soldier05">
+        <inst extents="-11.9996 -18.0001 0 36.0004 17.9999 84" name="soldier05" orient="0 0 -0.610866" pos="8351.93 2275.98 -120"/>
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="soldier01" orient="0 0 3.14159" pos="5454 1350 -360"/>
+    </entinst>
+    <entinst type="soldier04">
+        <inst extents="-12.0001 -17.9997 0 35.9999 18.0003 84" name="soldier04" orient="0 0 -2.35619" pos="7555.49 1436.24 -240"/>
+    </entinst>
+    <entinst type="camera_magnet04">
+        <inst extents="-420 -180 0 420 180 720" name="camera_magnet04" pos="8340 1980 -600"/>
+    </entinst>
+    <entinst type="camera_magnet02">
+        <inst extents="-600 -2220 0 600 2220 720" name="camera_magnet02" pos="8160 4380 -600"/>
+    </entinst>
+    <entinst type="camera_magnet03">
+        <inst extents="-420 -420 0 420 420 720" name="camera_magnet03" pos="8340 1380 -600"/>
+    </entinst>
+    <entinst type="camera_magnet01">
+        <inst extents="-3360 -600 0 3360 600 720" name="camera_magnet01" pos="4560 1560 -600"/>
+    </entinst>
+    <entinst type="missile_harm">
+        <inst extents="-60 -60 0 60 60 120" name="missile_harm" pos="1572 1920 0"/>
+    </entinst>
+    <entinst type="light_copter02">
+        <inst extents="-6 -6 -6 6 6 6" name="light_copter02" pos="3171.95 718.282 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="light_copter" pos="1999.09 718.282 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="light_copter01" pos="2585.49 718.497 0"/>
+    </entinst>
+    <entinst type="fx_steam01">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="1860 1260 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="1980 1260 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="2700 1380 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="3060 1380 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="4020 1620 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="4980 1380 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="5340 1380 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="6060 1260 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="7260 1380 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="7740 1380 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="8460 2220 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="7980 3420 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="7980 3540 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="8340 4860 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="7980 5700 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="8340 4380 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="6180 1260 -240"/>
+    </entinst>
+    <entinst type="loop_effect08">
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="5613.21 1168.47 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="6070.55 1207.28 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="5134.66 1176.94 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="4424.49 1209.71 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="3810.82 1276.18 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="3117.59 1196.06 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="6586.16 1164.36 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="2656.53 1210.37 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="1755.61 1117.54 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="7044.57 1164.36 -120"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="4148.46 1478.49 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="2525.79 1173.43 -468.225"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="3406.52 1170.86 -391.757"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="3627.9 1208.96 -240"/>
+        <inst extents="-6 -6 -6 6 6 6" name="loop_effect08" pos="2192.54 1183.75 -240"/>
+    </entinst>
+    <entinst type="boom_effect">
+        <inst extents="-6 -6 -6 6 6 6" name="boom_effect" pos="3100.09 1267.15 -360"/>
+    </entinst>
+    <entinst type="missile_sound">
+        <inst extents="-6 -6 0 6 6 12" name="missile_sound" pos="2988.68 967.097 -44.8655"/>
+    </entinst>
+    <entinst type="helicopter_sound">
+        <inst extents="-6 -6 0 6 6 12" name="helicopter_sound" pos="2988.68 947.384 -44.8655"/>
+    </entinst>
+    <entinst type="hero_boom_spot01">
+        <inst extents="-6.00004 -5.99995 -6 5.99996 6.00005 6" name="hero_boom_spot01" orient="0 0 -0.523599" pos="3008.2 1329.23 -354"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_boom_spot02" pos="2998.24 1369.85 -354"/>
+        <inst extents="-6.00005 -6.00011 -6 5.99995 5.99989 6" name="hero_boom_spot03" orient="0 0 -0.523599" pos="3013.1 1410.92 -354"/>
+        <inst extents="-6.00001 -5.99992 -6 5.99999 6.00008 6" name="hero_boom_spot04" orient="0 0 -0.872665" pos="3059.87 1421.66 -354"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="hero_dive_spot02" orient="0 0 -0.872665" pos="2937.91 1367.92 -354"/>
+        <inst extents="-6.00001 -6.00007 -6 5.99999 5.99993 6" name="hero_dive_spot03" orient="0 0 -0.872665" pos="2976.32 1453.71 -354"/>
+        <inst extents="-5.99999 -6.00006 -6 6.00001 5.99994 6" name="hero_dive_spot04" orient="0 0 -0.872665" pos="3119.42 1384.89 -354"/>
+        <inst extents="-5.99998 -6.00004 -6 6.00002 5.99996 6" name="cam_copter02" orient="0 0 1.5708" pos="2220 900 -156"/>
+        <inst extents="-6 -6 -6 6 6 6" name="magtarg04" pos="8820 1973.5 -372"/>
+        <inst extents="-6 -6 -6 6 6 6" name="strafe_initial" pos="3120 1320 -354"/>
+        <inst extents="-6 -6 -6 6 6 6" name="hero_spot01" pos="2821.52 1320 -354"/>
+        <inst extents="-6.00001 -6.00004 -6 5.99999 5.99996 6" name="cam_strafe" orient="0 0 1.5708" pos="3000 900 -156"/>
+        <inst extents="-6.00002 -6.00004 -6 5.99998 5.99996 6" name="cam_copter" orient="0 0 1.5708" pos="1920 900 -156"/>
+        <inst extents="-6 -6 -6 6 6 6" name="magtarg03" pos="8700 1020 -372"/>
+        <inst extents="-6 -6 -6 6 6 6" name="magtarg02" pos="8640 4353.41 -372"/>
+        <inst extents="-6 -6 -6 6 6 6" name="magtarg01" pos="4560 1080 -372"/>
+        <inst extents="-5.99999 -6.00003 -6 6.00001 5.99997 6" name="hero_dive_spot01" orient="0 0 -0.872665" pos="3052.29 1268.96 -354"/>
+    </entinst>
+    <entinst type="null">
+        <inst extents="-6.00001 -6 -4.44861 5.99999 6 7.55139" name="null" orient="0.610865 0 0.523599" pos="1267.95 699.58 -229.774"/>
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0242 -95.2953 0 71.9758 48.7832 83.9544" name="player_start_all01" orient="0 0 -1.5708" pos="1860 1499.92 -356.943"/>
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0241 -95.2953 0 71.9759 48.7832 83.9544" name="player_start_all02" pos="7740 5700 -120"/>
+    </entinst>
+    <entinst type="missile">
+        <inst name="missile" pos="1512 1704 360"/>
+    </entinst>
+    <entinst type="missile_spot14">
+        <inst extents="-6.00031 -5.99997 5.9999 5.99969 6.00003 17.9999" name="missile_spot14" orient="0 0.785398 -3.14159" pos="8742.56 2518.53 240"/>
+        <inst extents="-6.00001 -6.00004 -5.99998 5.99999 5.99996 6.00002" name="missile_spot11" orient="0 0.785398 1.5708" pos="8040 996 120"/>
+        <inst extents="-5.99968 -6.00022 5.99984 6.00032 5.99978 17.9998" name="missile_spot10" orient="0 0.785398 -3.14159" pos="8642.35 4920 240"/>
+        <inst extents="-6.00026 -6.00021 5.99995 5.99974 5.99979 17.9999" name="missile_spot09" orient="0 0.785398 -3.14159" pos="8820 4620 240"/>
+        <inst extents="-6.00052 -6.00022 5.99969 5.99948 5.99978 17.9997" name="missile_spot08" orient="0 0.785398 -3.14159" pos="8676.86 4260 240"/>
+        <inst extents="-6.00031 -5.99998 5.9999 5.99969 6.00002 17.9999" name="missile_spot13" orient="0 0.785398 -3.14159" pos="8660.4 2040 240"/>
+        <inst extents="-5.99997 -6.00003 -5.99998 6.00003 5.99997 6.00002" name="missile_spot06" orient="0 0.785398 1.5708" pos="7500 780 120"/>
+        <inst extents="-6.00003 -6.00005 -6.00002 5.99997 5.99995 5.99998" name="missile_spot05" orient="0 0.785398 1.5708" pos="7320 1061.95 120"/>
+        <inst extents="-5.99999 -6.00004 -5.99997 6.00001 5.99996 6.00003" name="missile_spot04" orient="0 0.785398 1.5708" pos="4428.0 1008.0 2.28646e-005"/>
+        <inst extents="-6.00007 -5.99999 -1.0419 5.99993 6.00001 10.9581" name="missile_spot02" orient="0 0.785398 2.26893" pos="3856.95 1139.44 2.28646e-005"/>
+        <inst extents="-5.99997 -6.00005 -0.479553 6.00003 5.99995 11.5204" name="missile_spot_initial" orient="-0.0305262 0.609425 2.35681" pos="3331 1058.05 -104.113"/>
+        <inst extents="-6.00022 -5.99997 5.9995 5.99978 6.00003 17.9995" name="missile_spot12" orient="0 0.785398 -3.14159" pos="8724 2760 240"/>
+        <inst extents="-5.99996 -6.00006 -6.00004 6.00004 5.99994 5.99996" name="missile_spot01" orient="0 0.785398 1.5708" pos="4020.0 1380.0 2.28646e-005"/>
+        <inst extents="-5.99995 -6.00004 -5.99998 6.00005 5.99996 6.00002" name="missile_spot07" orient="0 0.785398 1.5708" pos="7774.67 981.506 120"/>
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-1000 -1000 0 1000 1000 800" name="trigger_area01" pos="7852.94 1950.53 -291.534"/>
+    </entinst>
+    <entinst type="trigger_touch08">
+        <inst extents="-180 -12 0 180 12 240" name="trigger_touch08" pos="7932 3228 -120"/>
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-12 -120 0 12 120 240" name="trigger_touch02" pos="3468 1368 -360"/>
+    </entinst>
+    <entinst type="trigger_touch03">
+        <inst extents="-120 -12 0 120 12 240" name="trigger_touch03" pos="3672 1572 -360"/>
+    </entinst>
+    <entinst type="trigger_touch04">
+        <inst extents="-12 -240 0 12 240 240" name="trigger_touch04" pos="5244 1368 -360"/>
+    </entinst>
+    <entinst type="trigger_touch05">
+        <inst extents="-12 -180 0 12 180 240" name="trigger_touch05" pos="5712 1308 -240"/>
+    </entinst>
+    <entinst type="trigger_missile14">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile14" pos="8382.56 2518.53 -120"/>
+    </entinst>
+    <entinst type="trigger_missile13">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile13" pos="8321.52 2040 -120"/>
+    </entinst>
+    <entinst type="trigger_missile12">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile12" pos="8364 2760 -120"/>
+    </entinst>
+    <entinst type="trigger_missile11">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile11" pos="8040 1356 -240"/>
+    </entinst>
+    <entinst type="trigger_missile10">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile10" pos="8309.34 4920 -120"/>
+    </entinst>
+    <entinst type="trigger_missile09">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile09" pos="8460 4620 -120"/>
+    </entinst>
+    <entinst type="trigger_missile08">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile08" pos="8316.86 4260 -120"/>
+    </entinst>
+    <entinst type="trigger_missile07">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile07" pos="7774.67 1341.51 -240"/>
+    </entinst>
+    <entinst type="trigger_missile06">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile06" pos="7500 1140 -240"/>
+    </entinst>
+    <entinst type="trigger_missile05">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile05" pos="7320 1394.53 -240"/>
+    </entinst>
+    <entinst type="trigger_missile04">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile04" pos="4428 1368 -360"/>
+    </entinst>
+    <entinst type="trigger_missile02">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile02" pos="3638.07 1403.27 -360"/>
+    </entinst>
+    <entinst type="trigger_missile01">
+        <inst extents="-90 -90 0 90 90 120" name="trigger_missile01" pos="4020 1740 -360"/>
+    </entinst>
+    <entinst type="trigger_touch13">
+        <inst extents="-180 -12 0 180 12 240" name="trigger_touch13" pos="7932 5436 -120"/>
+    </entinst>
+    <entinst type="trigger_touch12">
+        <inst extents="-180 -12 0 180 12 240" name="trigger_touch12" pos="8412 4740 -120"/>
+    </entinst>
+    <entinst type="trigger_touch11">
+        <inst extents="-180 -12 0 180 12 240" name="trigger_touch11" pos="8412 4164 -120"/>
+    </entinst>
+    <entinst type="trigger_touch09">
+        <inst extents="-240 -12 0 240 12 240" name="trigger_touch09" pos="8352 2088 -120"/>
+    </entinst>
+    <entinst type="trigger_touch06">
+        <inst extents="-12 -120 0 12 120 240" name="trigger_touch06" pos="6540.15 1368 -240"/>
+    </entinst>
+    <entinst type="trigger_touch07">
+        <inst extents="-12 -240 0 12 240 240" name="trigger_touch07" pos="7332 1368 -240"/>
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-12.4075 -168 0 12.4075 168 240" name="trigger_touch01" pos="3058.73 1320 -360"/>
+    </entinst>
+    <entinst type="wp_1leader01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_1leader01" pos="3922 1804 -354"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_2leader01" pos="6584.94 1330.55 -234"/>
+    </entinst>
+    <entinst type="wp_2ambush01">
+        <inst extents="-6 -6 -6 6 6 6" name="wp_2ambush01" pos="6180 1520 -234"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_ambush01" pos="4020 1940 -354"/>
+        <inst extents="-6.00009 -6.00015 -6 5.99991 5.99985 6" name="wp_3ambush01" orient="0 0 1.5708" pos="7720 3540 -114"/>
+    </entinst>
+    <entinst type="link_omega1">
+        <inst extents="-84 -12 0 84 12 120" name="link_omega1" pos="1860 1668 -360"/>
+    </entinst>
+    <entinst type="link_omega3">
+        <inst extents="-12 -84 0 12 84 120" name="link_omega3" pos="7572 5700 -120"/>
+    </entinst>
+    <entinst type="killcrate01">
+        <inst name="killcrate01" orient="0 0 -0.0872665" pos="3132.25 1326.65 -360"/>
+    </entinst>
+    <entinst type="barrel_omega_th">
+        <inst name="barrel_omega_th" orient="0 0 1.48353" pos="2031.46 1560.77 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 -0.436332" pos="1688.99 1153.83 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 0.959931" pos="1691.88 1206.03 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 1.48353" pos="3612.75 1871.23 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 2.70526" pos="3603.74 1836.02 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 -2.26893" pos="4075.24 1619.04 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 1.74533" pos="4943.35 1201.59 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 0.698132" pos="4917.71 1221.95 -360"/>
+        <inst name="barrel_omega_th" orient="0 0 -3.05433" pos="5960.72 1199.9 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 2.09439" pos="5925.69 1200.73 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 2.96706" pos="5970.35 1564.26 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 2.00713" pos="6005.39 1563.43 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 -2.0944" pos="5986.9 1536.72 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 1.74533" pos="7503.79 1041.62 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 2.70526" pos="7428.15 1059.36 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 -1.48353" pos="7333.46 1523.94 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 -0.523599" pos="7782.63 1462.59 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 -1.48353" pos="7740.67 1426.16 -240"/>
+        <inst name="barrel_omega_th" orient="0 0 0.174533" pos="8659.23 2216.79 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 1.39626" pos="8659.12 2290.01 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 2.00713" pos="8253.81 2500.62 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -3.14159" pos="8288.76 2501.41 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -2.00713" pos="8266.22 2468.05 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -1.5708" pos="8043.19 3383.05 -120"/>
+        <inst name="barrel_omega_th" pos="7712.57 3330.6 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -1.22173" pos="7719.08 3366.36 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -2.44346" pos="8596.77 4721.28 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -1.13446" pos="8632.31 4673.26 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -2.79253" pos="8212.29 4289.79 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 2.00713" pos="7780.19 5882.11 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 -3.14159" pos="7816.58 5920.24 -120"/>
+        <inst name="barrel_omega_th" orient="0 0 1.0472" pos="8038.89 5618.33 -120"/>
+    </entinst>
+    <entinst type="catwalk_support_fade_omega_e01">
+        <inst name="catwalk_support_fade_omega_e01" orient="0 0 -1.5708" pos="3672 1588.19 -356.65"/>
+        <inst name="catwalk_support_fade_omega_e01" pos="8131.81 3072 -116.65"/>
+        <inst name="catwalk_support_fade_omega_e01" orient="0 0 3.14159" pos="8131.81 3888 -116.65"/>
+        <inst name="catwalk_support_fade_omega_e01" pos="8131.81 5352 -116.65"/>
+        <inst name="catwalk_support_fade_omega_e01" orient="0 0 1.5708" pos="4368 1588.19 -356.65"/>
+    </entinst>
+    <entinst type="catwalk_support_mesh_omega_e01">
+        <inst name="catwalk_support_mesh_omega_e01" orient="0 0 3.14159" pos="2400 1368 -356.65"/>
+        <inst name="catwalk_support_mesh_omega_e01" orient="0 0 3.14159" pos="4680 1368 -356.65"/>
+        <inst name="catwalk_support_mesh_omega_e01" orient="0 0 3.14159" pos="6600 1368 -236.65"/>
+        <inst name="catwalk_support_mesh_omega_e01" orient="0 0 3.14159" pos="6960 1368 -236.65"/>
+        <inst name="catwalk_support_mesh_omega_e01" orient="0 0 3.14159" pos="3360.65 1368 -356.65"/>
+    </entinst>
+    <entinst type="catwalk_support_omega_e07">
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="6688.39 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="6511.61 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="7048.39 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="4591.61 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="8128.39 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="7951.47 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 1591.81 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="4768.39 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="3272.26 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 1680 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="3449.03 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="2311.31 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="2488.18 1368 -356.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 2671.61 -116.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 2848.39 -116.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 4108.19 -116.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 3.14159" pos="6871.61 1368 -236.65"/>
+        <inst name="catwalk_support_omega_e07" orient="0 0 -1.5708" pos="8352 5131.81 -116.65"/>
+    </entinst>
+    <entinst type="crate_omega_th">
+        <inst name="crate_omega_th" orient="0 0 -0.610865" pos="1714.98 1178.18 -360"/>
+        <inst name="crate_omega_th" orient="0 0 1.309" pos="3650.45 1891.55 -360"/>
+        <inst name="crate_omega_th" orient="0 0 -2.35619" pos="4919.65 1174.92 -360"/>
+        <inst name="crate_omega_th" orient="0 0 -1.65806" pos="5306.34 1542.79 -360"/>
+        <inst name="crate_omega_th" orient="0 0 -0.0872664" pos="5956.18 1163.04 -240"/>
+        <inst name="crate_omega_th" orient="0 0 -1.65806" pos="6286.3 1166.09 -240"/>
+        <inst name="crate_omega_th" orient="0 0 1.48353" pos="7337.99 1558.96 -240"/>
+        <inst name="crate_omega_th" orient="0 0 1.74533" pos="8216.19 4326.78 -120"/>
+        <inst name="crate_omega_th" orient="0 0 0.261799" pos="7817.37 5881.45 -120"/>
+        <inst name="crate_omega_th" pos="8075.96 5660.61 -120"/>
+        <inst name="crate_omega_th" orient="0 0 -0.0872664" pos="2065.39 1548.2 -360"/>
+    </entinst>
+    <entinst type="killcrate03">
+        <inst name="killcrate03" orient="0 0 -1.65806" pos="3119.68 1292.72 -360"/>
+    </entinst>
+    <entinst type="crate_omega_th04">
+        <inst name="crate_omega_th04" orient="0 0 -0.0872664" pos="4111.9 1620.28 -360"/>
+        <inst name="crate_omega_th04" orient="0 0 1.48353" pos="4191.39 1943.76 -360"/>
+        <inst name="crate_omega_th04" orient="0 0 -1.5708" pos="7466.67 1042.93 -240"/>
+        <inst name="crate_omega_th04" orient="0 0 1.5708" pos="8080.12 3420.85 -120"/>
+        <inst name="crate_omega_th04" orient="0 0 3.14159" pos="8253.69 5059.21 -120"/>
+    </entinst>
+    <entinst type="crate_omega_th12">
+        <inst name="crate_omega_th12" orient="0 0 1.48353" pos="7743.36 1462.59 -240"/>
+        <inst name="crate_omega_th12" orient="0 0 -3.14159" pos="8633.3 2252.24 -120"/>
+        <inst name="crate_omega_th12" orient="0 0 3.05433" pos="8631.81 4710.69 -120"/>
+    </entinst>
+    <entinst type="cube_omega_th21">
+        <inst name="cube_omega_th21" orient="0 0 0.0872663" pos="7682.68 3363.14 -120"/>
+        <inst name="cube_omega_th21" orient="0 0 3.14159" pos="2026.7 1523.14 -360"/>
+        <inst name="cube_omega_th21" orient="0 0 3.14159" pos="3650.51 1849.93 -360"/>
+        <inst name="cube_omega_th21" orient="0 0 0.872665" pos="4887.73 1201.62 -360"/>
+        <inst name="cube_omega_th21" orient="0 0 1.65806" pos="6286.24 1207.71 -240"/>
+        <inst name="cube_omega_th21" orient="0 0 1.5708" pos="7780.86 5917.99 -120"/>
+    </entinst>
+    <entinst type="cube_omega_th">
+        <inst name="cube_omega_th" orient="0 0 1.65806" pos="2065.94 1507.78 -360"/>
+        <inst name="cube_omega_th" orient="0 0 3.14159" pos="4111.96 1578.66 -360"/>
+        <inst name="cube_omega_th" orient="0 0 -1.5708" pos="4233.02 1943.82 -360"/>
+        <inst name="cube_omega_th" orient="0 0 0.0872664" pos="4220.38 1902.04 -360"/>
+        <inst name="cube_omega_th" orient="0 0 -1.65806" pos="5287.17 1503.82 -360"/>
+        <inst name="cube_omega_th" orient="0 0 3.14159" pos="6326.79 1168.39 -240"/>
+        <inst name="cube_omega_th" orient="0 0 1.48353" pos="7504.47 1078.21 -240"/>
+        <inst name="cube_omega_th" orient="0 0 -1.48353" pos="8674.76 2255.93 -120"/>
+        <inst name="cube_omega_th" orient="0 0 3.05433" pos="8078.57 3379.83 -120"/>
+        <inst name="cube_omega_th" orient="0 0 -1.48353" pos="8040.44 3419.25 -120"/>
+        <inst name="cube_omega_th" orient="0 0 -1.5708" pos="8668.32 4674.16 -120"/>
+        <inst name="cube_omega_th" orient="0 0 2.96706" pos="8255.81 5020.02 -120"/>
+        <inst name="cube_omega_th" orient="0 0 1.65806" pos="8078.06 5620.98 -120"/>
+    </entinst>
+    <entinst type="killcrate02">
+        <inst name="killcrate02" orient="0 0 1.5708" pos="3094.62 1331.41 -360"/>
+    </entinst>
+    <entinst type="cube_omega_th09">
+        <inst name="cube_omega_th09" orient="0 0 -3.05433" pos="5264.72 1542.73 -360"/>
+        <inst name="cube_omega_th09" orient="0 0 1.5708" pos="5914.56 1162.98 -240"/>
+        <inst name="cube_omega_th09" orient="0 0 0.0872663" pos="7462.98 1084.39 -240"/>
+        <inst name="cube_omega_th09" orient="0 0 -1.74533" pos="7297.25 1527.11 -240"/>
+        <inst name="cube_omega_th09" orient="0 0 3.14159" pos="7777.95 1425.44 -240"/>
+        <inst name="cube_omega_th09" orient="0 0 3.05433" pos="8176.61 4293.6 -120"/>
+        <inst name="cube_omega_th09" orient="0 0 -0.0872664" pos="8077 5700.55 -120"/>
+        <inst name="cube_omega_th09" orient="0 0 0.349066" pos="1660.08 1191.98 -360"/>
+    </entinst>
+    <entinst type="door03">
+        <inst name="door03" orient="0 0 1.5708" pos="7620 3540 -118.471"/>
+        <inst name="door01" pos="4020 2100 -358.471"/>
+    </entinst>
+    <entinst type="door_ext_omega_a">
+        <inst name="door_ext_omega_a" orient="0 0 1.5708" pos="7619.9 5700 -120"/>
+        <inst name="door_ext_omega_a" pos="1860 1620 -358.471"/>
+    </entinst>
+    <entinst type="door02">
+        <inst name="door02" pos="6180 1620 -238.471"/>
+    </entinst>
+    <entinst type="fan_ramp_10x10_omega_a">
+        <inst name="fan_ramp_10x10_omega_a" orient="0 0 -1.5708" pos="7380 1578 -240.124"/>
+        <inst name="fan_ramp_10x10_omega_a" orient="0 0 -1.5708" pos="7620 1578 -240.124"/>
+    </entinst>
+    <entinst type="girder_20ft_omega_e">
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="2676 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="6324 1524 -240"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="1716 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="3084 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="3516 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="4524 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="7764 1524 -240"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="7236 1524 -240"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="8196 1524 -240"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="8196 1956 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="8196 2484 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="8196 2916 -120"/>
+        <inst name="girder_20ft_omega_e" pos="7728 1572 0"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="4164 2004 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="7716 3684 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="8196 4044 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="8196 4524 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="8196 4236 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="8196 5004 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="8196 5196 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="7716 5556 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="7716 5844 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4488 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4488 120"/>
+        <inst name="girder_20ft_omega_e" pos="1752 1572 -120"/>
+        <inst name="girder_20ft_omega_e" pos="1752 1572 -360"/>
+        <inst name="girder_20ft_omega_e" pos="3912 2052 -120"/>
+        <inst name="girder_20ft_omega_e" pos="4128 2052 -120"/>
+        <inst name="girder_20ft_omega_e" pos="3912 2052 -360"/>
+        <inst name="girder_20ft_omega_e" pos="4128 2052 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="3876 2004 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="4956 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="5364 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="7716 3276 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 -0.785398" pos="5916 1524 -240"/>
+        <inst name="girder_20ft_omega_e" pos="6288 1572 0"/>
+        <inst name="girder_20ft_omega_e" pos="6288 1572 -240"/>
+        <inst name="girder_20ft_omega_e" pos="7272 1572 0"/>
+        <inst name="girder_20ft_omega_e" pos="7272 1572 -240"/>
+        <inst name="girder_20ft_omega_e" pos="7728 1572 -240"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 1992 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 2448 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 1992 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 2448 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="8196 4716 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 3312 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 3648 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 3312 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 3648 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 5808 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 5592 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 5592 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="7668 5808 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4968 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4968 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4752 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4752 120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4272 -120"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 0.785398" pos="2124 1524 -360"/>
+        <inst name="girder_20ft_omega_e" orient="0 0 1.5708" pos="8148 4272 120"/>
+    </entinst>
+    <entinst type="pipe_curved_01_omega_b">
+        <inst name="pipe_curved_01_omega_b" orient="0 0 3.14159" pos="5634.75 1461.98 -360"/>
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="5190.89 1554.75 -360"/>
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="5129.11 1554.75 -360"/>
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="7530.89 1554.75 -240"/>
+        <inst name="pipe_curved_01_omega_b" orient="0 0 -1.5708" pos="7469.11 1554.75 -240"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.25 2189.11 -120"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.25 2250.89 -120"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.2 4431.56 -120"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.2 4328.44 -120"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.2 4911.56 -120"/>
+        <inst name="pipe_curved_01_omega_b" pos="8165.2 4808.44 -120"/>
+        <inst name="pipe_curved_01_omega_b" orient="0 0 3.14159" pos="5634.75 1166.57 -360"/>
+    </entinst>
+    <entinst type="pipe_huge_straight_omega_e">
+        <inst name="pipe_huge_straight_omega_e" pos="4440 1920 -360"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800.05 3000 120.002"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800 3000 -120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800 3960 120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800 3960 -120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800 5280 120.002"/>
+        <inst name="pipe_huge_straight_omega_e" pos="7800 5280 -120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="3600 1920 -120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="4440 1920 -120"/>
+        <inst name="pipe_huge_straight_omega_e" pos="3600 1920 -360"/>
+        <inst name="pipe_huge_straight_omega_e" orient="0 1.5708 1.5708" pos="7680 5880 59.9745"/>
+    </entinst>
+    <entinst type="slanted_girder_lg_omega_e">
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8040 5820 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8520 4740 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8520 4500 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8520 4320 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8040 3660 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8040 3300 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8520 2400 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="7680 1200 -240"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="6240 1200 -240"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="6000 1200 -240"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="1800 1200 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="2040 1200 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="2760 1200 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="3000 1200 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="3840 1680 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="4200 1680 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="5040 1200 -360"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 -1.5708" pos="8040 5580 -120"/>
+        <inst name="slanted_girder_lg_omega_e" orient="0 0 3.14159" pos="5280 1200 -360"/>
+    </entinst>
+    <entinst type="u_catwalk_support_mesh_omega_b02">
+        <inst name="u_catwalk_support_mesh_omega_b02" orient="0 0 3.14159" pos="8040 1368 -236.65"/>
+        <inst name="u_catwalk_support_mesh_omega_b02" orient="0 0 -1.5708" pos="8352 2760 -116.65"/>
+    </entinst>
+    <entinst type="copter">
+        <inst name="copter" orient="0.610865 0 0.523601" pos="1267.95 699.58 -229.774"/>
+    </entinst>
+    <entinst type="u_floor_01_omega_b02">
+        <inst name="u_floor_01_omega_b02" pos="4020 1740 -360"/>
+    </entinst>
+    <entinst type="u_floor_02_omega_b04">
+        <inst name="u_floor_02_omega_b04" pos="8460 2460 -120"/>
+        <inst name="u_floor_02_omega_b04" pos="7740 1260 -240"/>
+        <inst name="u_floor_02_omega_b04" pos="4380 1740 -360"/>
+        <inst name="u_floor_02_omega_b04" pos="8460 4620 -120"/>
+        <inst name="u_floor_02_omega_b04" orient="0 0 -1.5708" pos="7500 1140 -240"/>
+        <inst name="u_floor_02_omega_b04" pos="8340 4260 -120"/>
+    </entinst>
+    <entinst type="u_slanted_girder_omega_b04">
+        <inst name="u_slanted_girder_omega_b04" orient="0 0 -1.5708" pos="8520 4920 -120"/>
+        <inst name="u_slanted_girder_omega_b04" orient="0 0 -3.14159" pos="7320 1200 -240"/>
+        <inst name="u_slanted_girder_omega_b04" orient="0 0 -1.5708" pos="8520 2040 -120"/>
+    </entinst>
+    <entinst type="wall_pipe_omega_e">
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.50996e-007 3.14159" pos="7696.82 3539.98 240"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 -3.14159" pos="7696.82 3539.98 240"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.21835e-007 1.5708" pos="6179.98 1543.18 120"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 1.5708" pos="6179.98 1543.18 120"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 1.5708" pos="4019.98 2023.18 0"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.21835e-007 1.5708" pos="4019.98 2023.18 0"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 -3.14159" pos="7696.82 3419.98 120"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 -3.14159" pos="7696.82 5699.98 240"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 3.14159" pos="8176.82 4379.98 -120"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 3.14159" pos="8176.82 4859.98 -120"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.21835e-007 1.5708" pos="6780.02 1423.18 0"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 1.5708" pos="1920 1543.18 0"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.21835e-007 1.5708" pos="1920 1543.18 0"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.50996e-007 3.14159" pos="7696.82 3419.98 120"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 1.5708" pos="7863.06 6104.02 -355.67"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.66897e-007 1.5708" pos="7863.06 6104.02 -355.67"/>
+        <inst name="wall_pipe_omega_e" orient="-1.5708 1.57448e-007 -3.14159" pos="8172.99 5640.77 -395.606"/>
+        <inst name="wall_pipe_omega_e" orient="1.5708 0 -3.14159" pos="8172.99 5640.77 -395.606"/>
+        <inst name="wall_pipe_omega_e" orient="-1.5708 1.57448e-007 -3.14159" pos="8172.99 3600.28 -395.606"/>
+        <inst name="wall_pipe_omega_e" orient="1.5708 0 -3.14159" pos="8172.99 3600.28 -395.606"/>
+        <inst name="wall_pipe_omega_e" orient="-1.5708 1.63913e-007 1.5708" pos="7976.3 1422.69 -391.95"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 -3.14159" pos="8297.38 1800.16 -488.547"/>
+        <inst name="wall_pipe_omega_e" orient="1.5708 0 1.5708" pos="7976.3 1422.69 -391.95"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.50996e-007 3.14159" pos="8297.38 1800.16 -488.547"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.50996e-007 3.14159" pos="7696.82 5699.98 240"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 -3.14159" pos="8297.38 1557.97 -488.547"/>
+        <inst name="wall_pipe_omega_e" orient="0 1.5708 -1.5708" pos="2880.02 1608 -295.179"/>
+        <inst name="wall_pipe_omega_e" orient="3.14159 1.50996e-007 3.14159" pos="8297.38 1557.97 -488.547"/>
+        <inst name="wall_pipe_omega_e" orient="0 0 1.5708" pos="6780.02 1423.18 0"/>
+    </entinst>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher3_01" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher3_01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher2_02" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher2_02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher2_01" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher2_01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_c" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_aimtrooper_a01" nocollide="true"/>
+    <entity actcountremove="1" actdelay="0.75" character="AIMTrooper_c" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/rappel_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="trooper10" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_c" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/rappel_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="trooper03" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher3_02" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher3_02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.5" character="AIMTrooper_c" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/rappel_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="trooper12" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher1_02" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher1_02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/ambush_spawnscript" instantspawn="false" monster_name="ambusher1_01" monster_smartent="true" monster_spawnexactlocation="true" name="s_ambusher1_01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.25" character="AIMTrooper_c" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/rappel_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="trooper02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="0.5" character="AIMTrooper_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/rappel_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="trooper13" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="2leader" monster_smartent="true" name="s_leader02" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="AIMTrooper_a" classname="monsterspawnerent" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="1leader" monster_smartent="true" name="s_leader01" nocollide="true"/>
+    <entity actcountremove="1" actdelay="0.5" character="SuperSoldier_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/leap_1ss" instantspawn="false" monster_smartent="false" name="soldier04" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="SuperSoldier_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/leap_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="soldier05" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" actdelay="1" character="SuperSoldier_a" classname="monsterspawnerent" firstspawnscript="act1/omega/omega2/leap_1ss" instantspawn="false" monster_smartent="false" monster_spawnexactlocation="true" name="soldier07" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="magtarg01" classname="cameramagnetent" max_zoom_in="60" name="camera_magnet01" nocollide="true" nokillz="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="magtarg03" classname="cameramagnetent" max_zoom_in="30" max_zoom_out="30" name="camera_magnet03" nocollide="true" nokillz="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="magtarg02" classname="cameramagnetent" max_zoom_in="60" name="camera_magnet02" nocollide="true" nokillz="true" team="hero"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="magtarg04" classname="cameramagnetent" max_zoom_in="60" name="camera_magnet04" nocollide="true" nokillz="true" team="hero"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="0" damagemods="dmgmod_no_damage" damagetype="dmg_physical" extent="-60 -60 0 60 60 120" lifetime="2.5" name="missile_harm" nocollide="true" radiusdamage="false" smartent="false" smartfire="false"/>
+    <entity classname="lightent" lightcolor="0.99 0.99 0.74" lightradius="200" name="light_copter02" nocollide="true" smartent="false" startoff="true"/>
+    <entity actcountremove="1" acttogglesloopfx="true" classname="actionent" loopfx="base/material/explode/exp_generic_lrg" loopfxstarton="false" name="boom_effect" nocollide="true" nodistancecull="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/heli/cloud_puff" loopfxstarton="true" name="loop_effect08" nocollide="true" smartent="true"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/steam_large" loopfxstarton="true" name="fx_steam01" nocollide="true" smartent="true"/>
+    <entity actsoundloop="zone_shared/omega/helicopter" classname="actionent" name="helicopter_sound" nocollide="true" smartent="false" startenabled="true" toggleonact="false" togglestarton="false"/>
+    <entity actsoundloop="zone_shared/heli/missile_loop" classname="actionent" name="missile_sound" nocollide="true" smartent="false" startenabled="true" toggleonact="false" togglestarton="false"/>
+    <entity classname="ent" name="hero_boom_spot01" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_omega2" prevzone="act1/omega/omega3"/>
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_omega2" prevzone="act1/omega/omega1"/>
+    <entity alwaysvisible="true" classname="projectileent" damage="0" damagemods="dmgmod_auto_knockback" damagetype="dmg_physical" deatheffect="base/material/explode/exp_generic_med" deathsound="zone_shared/omega/bomb_explosion" dieoncontact="true" explodedamage="18" explodeoncontact="true" exploderadius="100" lifetime="3" loopfx="map/common/missile_trail" loopfxstarton="true" model="weapons/missile" name="missile" nodistancecull="true" nogravity="true" numbounces="0" smartent="false" spawnsoundloop="zone_shared/heli/missile_loop" speed="1018" structure="2"/>
+    <entity actdelay="1" actscript="act1/omega/omega2/missile_shooter" classname="actionent" name="missile_spot14" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" actscript="act1/omega/omega2/farclip_in" boxcollision="true" classname="scripttriggerent" deactscript="act1/omega/omega2/farclip_out" name="trigger_area01" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="startConversation('act1/omega/omega2/1_omega2_010')" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="soldier04" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch07" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="s_leader02 trooper03 trooper04" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch06" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="soldier05" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch09" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="trooper10 trooper08 trooper09 trooper07" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch11" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="trooper13 trooper11 trooper12" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch12" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="soldier07 soldier08" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch13" nocollide="true" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot01" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile01" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot02" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile02" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot04" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile04" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot05" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile05" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot06" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile06" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot07" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile07" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot08" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile08" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot09" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile09" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot10" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile10" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot11" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile11" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot12" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile12" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot13" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile13" nocollide="true" smartent="false" team="hero"/>
+    <entity acteffect="map/niffleheim/catapult_indicator_low" actinactivedelay="5" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/missile_attack" acttargets="missile_spot14" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_missile14" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/ambush2" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch05" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="soldier01" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch04" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/ambush1" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch03" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" acttargets="trooper01 trooper02" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch02" nocollide="true" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act1/omega/omega2/ambush3" acttargets="trooper05 trooper06" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch08" nocollide="true" team="hero"/>
+    <entity beeline="true" classname="waypointent" name="wp_2ambush01" nocollide="true" smartent="false" speed="1"/>
+    <entity classname="waypointent" name="wp_1leader01" nocollide="true" smartent="false" speed="1"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Project Labs" name="link_omega3" nextzone="act1/omega/omega3" nocollide="false" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Wrenchworks" name="link_omega1" nextzone="act1/omega/omega1" nocollide="false" team="hero"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="1" heaviness="0" material="solid_metal" model="omega/barrel_omega_th" name="killcrate01" nogravity="true" nopickup="true" randompickups="3" smartent="false" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_fade_omega_e" name="catwalk_support_fade_omega_e01" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_mesh_omega_e" name="catwalk_support_mesh_omega_e01" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="omega/catwalk_support_omega_e" name="catwalk_support_omega_e07" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="crate_omega_th12" randompickups="5" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="crate_omega_th04" randompickups="4" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="act1/omega/omega2/killcrate03_deathscript" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="1" heaviness="0" material="hollow_metal" model="omega/crate_omega_th" name="killcrate03" nogravity="true" nopickup="true" randompickups="3" smartent="false" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="cube_omega_th09" randompickups="4" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="1" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="killcrate02" nogravity="true" nopickup="true" randompickups="3" smartent="false" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="omega/cube_omega_th" name="cube_omega_th21" randompickups="5" stackphysics="true" structure="0"/>
+    <entity actonuse="true" actsound="zone_shared/omega/door" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_ext_omega_a" name="door02" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true"/>
+    <entity actonuse="true" actsound="zone_shared/omega/door" autoclosedelay="0" classname="doorent" material="solid_metal" model="omega/door_ext_omega_a" name="door03" nodistancecull="true" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="100" mass="0" material="hollow_metal" model="omega/pipe_curved_01_stump_omega_b" name="pipe_curved_01_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity actondamage="true" actscript="act1/omega/omega2/missile_destroy_ent" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_catwalk_support_mesh_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_catwalk_support_mesh_omega_b" name="u_catwalk_support_mesh_omega_b02" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" mass="0" material="solid_metal" model="omega/u_catwalk_mesh_dmg_omega_b" name="u_catwalk_support_mesh_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="omega/u_copter_enemy_omega_a" name="copter" noclip="true" nocollide="true" nodistancecull="true" nogravity="true" nokillz="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity actondamage="true" actscript="act1/omega/omega2/missile_destroy_ent" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_floor_01_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_floor_01_omega_b" name="u_floor_01_omega_b02" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" mass="0" material="solid_metal" model="omega/u_floor_01_stump_omega_b" name="u_floor_01_omega_b_d" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actondamage="true" actscript="act1/omega/omega2/missile_destroy_ent" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="u_floor_02_omega_b_d" fxlevel="2" material="solid_metal" model="omega/u_floor_02_omega_b" name="u_floor_02_omega_b04" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" mass="0" material="solid_metal" model="omega/u_floor_02_stump_omega_b" name="u_floor_02_omega_b_d" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity actondamage="true" actscript="act1/omega/omega2/missile_destroy_ent" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" deathspawn="u_slanted_girder_omega_b_d" fxlevel="3" material="solid_metal" model="omega/u_slanted_girder_omega_b" name="u_slanted_girder_omega_b04" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" fxlevel="3" mass="0" material="solid_metal" model="omega/u_slanted_girder_stump_omega_b" name="u_slanted_girder_omega_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+</world>

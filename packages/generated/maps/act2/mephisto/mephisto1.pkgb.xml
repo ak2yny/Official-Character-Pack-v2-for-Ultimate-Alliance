@@ -1,0 +1,224 @@
+<packagedef>
+    <combat_is filename="on" />
+    <bigconvmap filename="off" />
+    <model filename="maps/act2/mephisto/mephisto1" />
+    <shadow filename="maps/act2/mephisto/mephisto1" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act2/mephisto/mephisto1/mephisto1" />
+    <model filename="HUD/hud_head_3901" />
+    <script filename="scripts/act2/mephisto/mephisto1/objective" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto1_010" />
+    <model filename="HUD/hud_head_0801" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto1_012" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto1_012_dlc" />
+    <model filename="skybox/mephisto" />
+    <script filename="scripts/act2/mephisto/mephisto1/phoenix_teleport" />
+    <model filename="HUD/hud_head_12301" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_010" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_020" />
+    <model filename="HUD/hud_head_0000" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_100" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_110" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_120" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_130" />
+    <xml filename="conversations/act2/mephisto/mephisto1/2_mephisto2_140" />
+    <texture filename="textures/nextgen/debris1" plat="40" />
+    <texture filename="textures/dirt" />
+    <texture filename="textures/grass" />
+    <model filename="models/chunks/c_rocktunnels_c" />
+    <texture filename="textures/nextgen/debrisline1" plat="40" />
+    <texture filename="textures/nextgen/decals/debrisdecal1" plat="40" />
+    <effect filename="map/mephisto/demon_soul_spawn" />
+    <texture filename="textures/blackhole_a" />
+    <texture filename="textures/ring2" />
+    <effect filename="map/mephisto/mephisto_portal_spawn" />
+    <texture filename="textures/misc_rune2" />
+    <effect filename="map/mephisto/soul_force_field" />
+    <effect filename="map/mephisto/statue_soul_release" />
+    <actoranimdb filename="123_jean_grey" />
+    <actorskin filename="12301" />
+    <actoranimdb filename="141_demonic_soul" />
+    <actorskin filename="14101" />
+    <model filename="HUD/hud_head_14101" />
+    <texture filename="textures/sun" />
+    <effect filename="char/dmnr/p1_charge" />
+    <effect filename="char/dmnr/p1_power" />
+    <effect filename="char/dmnr/p2_power" />
+    <texture filename="textures/spark_orange" />
+    <effect filename="char/dmnr/p2_impact" />
+    <sound filename="char/dmnr_m/p2_impact" />
+    <xml filename="data/entities/ents_demonicsoul" />
+    <texture filename="textures/misc_rune" />
+    <effect filename="char/dmnr/p4_power" />
+    <actoranimdb filename="interact_demonic_soul" />
+    <actoranimdb filename="fightstyle_villain_big" />
+    <actoranimdb filename="140_demon_leaper" />
+    <actorskin filename="14001" />
+    <model filename="HUD/hud_head_14001" />
+    <effect filename="char/dmnm/p2_power" />
+    <actoranimdb filename="interact_demonleaper_victim" />
+    <actoranimdb filename="fightstyle_villain" />
+    <actoranimdb filename="150_mephisto_pet" />
+    <actorskin filename="15001" />
+    <model filename="HUD/hud_head_15001" />
+    <effect filename="char/meppet/p1_power" />
+    <effect filename="char/meppet/p2_power" />
+    <effect filename="char/meppet/p2_impact" />
+    <texture filename="textures/misc_text" />
+    <effect filename="char/meppet/aura_soulbound" />
+    <model filename="models/pickups/action_figure_blackpanther" />
+    <script filename="scripts/common/actionfigures/blackpanther" />
+    <model filename="models/pickups/pickup_dangeroom_disk" />
+    <effect filename="base/misc/techstation_focus" />
+    <model filename="models/pickups/body_pickup" />
+    <model filename="models/pickups/striking_pickup" />
+    <model filename="models/mephisto/axe_mep_w" />
+    <actoranimdb filename="fightstyle_weapon_twohanded" />
+    <actoranimdb filename="fightstyle_weapon_twohanded_4_humanoid_large" />
+    <xml filename="data/weapons/wp_twohanded" />
+    <model filename="models/mephisto/brazier_mep_e" />
+    <texture filename="textures/chunks/metal_2" plat="23" />
+    <model filename="models/chunks/met_4" plat="23" />
+    <model filename="models/chunks/metal_generic_lrg" plat="40" />
+    <model filename="models/chunks/metal_generic_med_1" plat="40" />
+    <model filename="models/chunks/metal_generic_sml_1" plat="40" />
+    <model filename="models/chunks/metal_generic_med_3" plat="40" />
+    <effect filename="base/material/break/brk_metal" />
+    <model filename="models/mephisto/creepy_candelabra_mep_b" />
+    <sound filename="death_style/ds_metal_m" />
+    <model filename="models/mephisto/lava_pool_02_mep_a" />
+    <model filename="models/mephisto/lava_pool_pedestal_mep_m" />
+    <texture filename="textures/chunks/stone_1" />
+    <model filename="models/chunks/roc_3" plat="40" />
+    <effect filename="base/material/break/brk_sulpher" />
+    <model filename="models/mephisto/lava_skull_mep_b" />
+    <sound filename="death_style/ds_sulpher_m" />
+    <model filename="models/mephisto/pillar_01_mep_e" />
+    <model filename="models/mephisto/pillar_02_mep_e" />
+    <model filename="models/mephisto/pillar_03_mep_e" />
+    <model filename="models/mephisto/rock_01_mep_th" />
+    <model filename="models/mephisto/rock_02_mep_th" />
+    <model filename="models/mephisto/rock_03_mep_th" />
+    <model filename="models/mephisto/skull_mep_th" />
+    <sound filename="death_style/ds_sulpher_s" />
+    <model filename="models/mephisto/soul_force_field_10x10_mep_a" />
+    <model filename="models/mephisto/soul_force_field_archway_mep_a" />
+    <model filename="models/mephisto/soul_prison_mep_e" />
+    <model filename="models/mephisto/statue_02_mep_b" />
+    <model filename="models/mephisto/stone_archway_mep_e" />
+    <model filename="models/mephisto/torch_mep_w" />
+    <model filename="models/mephisto/tree_dead_mep_b" />
+    <model filename="models/mephisto/u_gravestone_03_mep_b" />
+    <model filename="models/mephisto/urn_01_mep_th" />
+    <model filename="models/mephisto/urn_02_mep_th" />
+    <effect filename="base/misc/extraction_loop" />
+    <model filename="models/common/extraction_point" />
+    <script filename="scripts/common/extraction/exp_spawn" />
+    <script filename="scripts/common/extraction/exp_activate" />
+    <texture filename="textures/nextgen/decals/burn_mark_alpha" plat="40" />
+    <texture filename="textures/nextgen/smoke_under1" plat="40" />
+    <texture filename="textures/nextgen/fire7" plat="40" />
+    <texture filename="textures/nextgen/fire_blue2" plat="40" />
+    <texture filename="textures/decals/burn_mark_alpha" plat="23" />
+    <texture filename="textures/explosion_puff_a_gray" plat="23" />
+    <texture filename="textures/nextgen/distort_fire_med" plat="40" />
+    <effect filename="map/common/fire_large" />
+    <texture filename="textures/nextgen/distort_fire_sml" plat="40" />
+    <effect filename="map/common/fire_medium" />
+    <effect filename="map/common/teleportation_orb" />
+    <script filename="scripts/act2/mephisto/mephisto1/phoenix_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy04_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave_baddy_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy05_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy01_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy02_spawnscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_baddy03_spawnscript" />
+    <texture filename="textures/yring" />
+    <texture filename="textures/trail_elem_fade" />
+    <effect filename="map/mephisto/mephisto_spawn_baddie" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_portal_opened" />
+    <script filename="scripts/act2/mephisto/mephisto1/brazier_baddy_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_baddy_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_baddy_spawnscript" />
+    <model filename="models/pickups/experience_point" />
+    <script filename="scripts/common/actionfigures/xpbonus" />
+    <script filename="scripts/act2/mephisto/mephisto1/torch_brazier01" />
+    <script filename="scripts/act2/mephisto/mephisto1/torch_brazier03" />
+    <script filename="scripts/act2/mephisto/mephisto1/torch_brazier04" />
+    <script filename="scripts/act2/mephisto/mephisto1/torch_brazier06" />
+    <texture filename="textures/nextgen/distort_fire_tiny" plat="40" />
+    <effect filename="base/weapon/torch_weapon" />
+    <effect filename="map/mephisto/tree_dead" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_source02" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_source01" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_source03" />
+    <model filename="models/mephisto/tree_dead_stump_mep_b" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave04_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave01_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave03_deathscript" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave02_deathscript" />
+    <model filename="models/mephisto/u_gravestone_03_stump_mep_b" />
+    <effect filename="map/common/fire_torch" />
+    <texture filename="textures/candle_flame" />
+    <effect filename="map/mephisto/pedestal_book" />
+    <texture filename="textures/whiteglow" />
+    <effect filename="map/mephisto/soul_prison" />
+    <effect filename="map/mephisto/mephisto_portal" />
+    <script filename="scripts/act2/mephisto/mephisto1/brazier_puzzle_end_enable" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_zonevar05" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_zonevar04" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_zonevar03" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_zonevar02" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_zonevar01" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_puzzle_end_enable" />
+    <script filename="scripts/act2/mephisto/mephisto1/blinkportal_on" />
+    <script filename="scripts/act2/mephisto/mephisto1/blinkportal_off" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_script_relay02" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_script_relay01" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_script_relay03" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_script_relay04" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_puzzle_end_enable" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_puzzle_end_enable" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave_puzzle_end_enable" />
+    <script filename="scripts/act2/mephisto/mephisto1/enable_mephisto2" />
+    <script filename="scripts/act2/mephisto/mephisto1/brazier_baddies_defeated" />
+    <script filename="scripts/act2/mephisto/mephisto1/obj_increment" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_death" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_puzzle_start" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_puzzle_start" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave_puzzle_start" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_puzzle_start" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_death_always" />
+    <script filename="scripts/act2/mephisto/mephisto1/brazier_puzzle_start" />
+    <script filename="scripts/act2/mephisto/mephisto1/power_puzzle_end" />
+    <script filename="scripts/act2/mephisto/mephisto1/brazier_puzzle_end" />
+    <script filename="scripts/act2/mephisto/mephisto1/grave_puzzle_end" />
+    <script filename="scripts/act2/mephisto/mephisto1/lava_puzzle_end" />
+    <script filename="scripts/act2/mephisto/mephisto1/sacrifice_puzzle_end" />
+    <effect filename="base/misc/extraction_burst" />
+    <script filename="scripts/common/extraction/exp_trig" />
+    <texture filename="textures/fire4_demon" />
+    <texture filename="textures/nextgen/fire7_demon" plat="40" />
+    <effect filename="map/common/fire_demon_large" />
+    <effect filename="map/common/fire_demon_medium" />
+    <actoranimdb filename="zone_mephisto1" />
+    <characters filename="maps/act2/mephisto/mephisto1" />
+    <fightstyle filename="data/fightstyles/interact_demonic_soul" />
+    <fightstyle filename="data/powerstyles/ps_demonicsoul" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain_big" />
+    <fightstyle filename="data/fightstyles/interact_demonleaper_victim" />
+    <fightstyle filename="data/powerstyles/ps_demonleaper" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain" />
+    <fightstyle filename="data/powerstyles/ps_mephistopet" />
+    <fightstyle filename="data/fightstyles/moveset_flying" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_twohanded" />
+    <zonexml filename="maps/act2/mephisto/mephisto1" />
+    <nav filename="maps/act2/mephisto/mephisto1" />
+    <boy filename="maps/act2/mephisto/mephisto1" />
+    <zam filename="automaps/act2/mephisto/mephisto1" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

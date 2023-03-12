@@ -1,0 +1,47 @@
+<conversation>
+    <startCondition conditionscriptfile="act4/attilan/crytstal_intro01">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_010_cry" text="%CRYSTAL%: You did well, humans. Muir Island was the correct location of the Ultimate Nullifier.">
+                <response soundtoplay="voice/player/4_attilan2_310_011_tl" text="%PLAYER%: So did you find the Nullifier and Medusa?">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_012_cry" text="%CRYSTAL%: We did find Medusa. But Doom must have set a trap in anticipating that someone would attempt to use Nullifier against him.">
+                        <response soundtoplay="voice/player/4_attilan2_310_013_tl" text="%PLAYER%: Is she okay?">
+                            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_014_cry" text="%CRYSTAL%: No, Doom used his powers to turn her into an evil servant of his. We brought her back, but it breaks my heart to see her like this.">
+                                <response chosenscriptfile="act4/attilan/intro_reset3" conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act4/attilan/crytstal_intro02">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_020_cry" text="%CRYSTAL%: Despite your inaccurate information we discovered the Ultimate Nullifier was being kept on Muir Island.">
+                <response soundtoplay="voice/player/4_attilan2_310_021_tl" text="%PLAYER%: Did you find Medusa?">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_022_cry" text="%CRYSTAL%: Yes, but Doom must have been laying in wait there, anticipating someone would attempt to use the Nullifier. When we arrived, Doom and the Nullifier were gone. But he left Medusa there.">
+                        <response soundtoplay="voice/player/4_attilan2_310_023_tl" text="%PLAYER%: Is she okay?">
+                            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_024_cry" text="%CRYSTAL%: No, Doom used his god powers to turn her into an evil servant. We brought her back, but I can stand to go near her.">
+                                <response chosenscriptfile="act4/attilan/intro_reset3" conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition>
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_030_cry" text="%CRYSTAL%: Welcome to the Council Chamber of the Inhumans. If you'd like to see just how powerful Dr. Doom has become, talk to my sister, Medusa.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_031_cry" text="%CRYSTAL%: She had gone to Earth in hopes of locating a weapon to defeat Doom. Instead, she was caught and turned into his servant.">
+                        <response text="%BLANK%">
+                            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_310_032_cry" text="%CRYSTAL%: Soon, we Inhumans will travel to Earth and force Dr. Doom to set her free from his control.">
+                                <response chosenscriptfile="act4/attilan/intro_reset3" conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

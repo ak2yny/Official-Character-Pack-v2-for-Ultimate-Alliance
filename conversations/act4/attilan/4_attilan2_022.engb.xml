@@ -1,0 +1,25 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/humantorch/4_attilan2_022_010_ht" text="%HUMANTORCH%: Hey, Crystal. You're looking really good.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_022_011_cry" text="%CRYSTAL%: It's good to see you too, Johnny. It's been a while.">
+                        <response text="%BLANK%">
+                            <line notalkanim="true" soundtoplay="voice/humantorch/4_attilan2_020_012_ht" text="%HUMANTORCH%: Yeah, about that... I've been meaning to call, but the Fantastic Four was off in the Negative Zone for a while. And now there's this thing with the Masters of Evil trying to take of the world.">
+                                <response text="%BLANK%">
+                                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_022_013_cry" text="%CRYSTAL%: Don't worry, Johnny. I'm not angry. I realize you have other interests, just as I do.">
+                                        <response text="%BLANK%">
+                                            <line notalkanim="true" soundtoplay="voice/humantorch/4_attilan2_022_014_ht" text="%HUMANTORCH%: Wait a second. Other interests? What other interests? Look, I promise as soon as we save the world, you and I are going out. And you won't have to pay for anything this time.">
+                                                <response chosenscriptfile="act4/attilan/talk_crystal_post" conversationend="true" text="%BLANK%" />
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

@@ -1,0 +1,1254 @@
+<SIMULATOR>
+    <ARENA info="Asgard is the home of the gods in Valhalla" title="Asgard" zone="sim/sim_asgard1"/>
+    <ARENA destroyent="bomb_blinking_lights_sim_a" disarment="true" enttitle="Bombs" info="Helicarrier" title="Helicarrier" zone="sim/sim_heli1"/>
+    <ARENA info="Helicarrier" title="Helicarrier_2" zone="sim/sim_heli2"/>
+    <ARENA enttitle="Frozen Mr. Fantastic" info="Omega Base" protectent="mr_fantasticicle_sim_e" title="Omega Base" zone="sim/sim_omega1"/>
+    <ARENA info="Omega Base" title="Omega Base_2" zone="sim/sim_omega2"/>
+    <ARENA info="Omega Base Rampage" title="Omega Base_3" zone="sim/sim_omega3"/>
+    <ARENA enttitle="Power Cores" info="Omega Base" protectent="beam" title="Omega Base_4" zone="sim/sim_omega4"/>
+    <ARENA info="Skrull Planet" title="Skrull Planet" zone="sim/sim_skrull1"/>
+    <ARENA info="Mephisto's Realm" title="Mephisto's Realm" zone="sim/sim_mephisto1"/>
+    <ARENA info="Murderworld" title="Murderworld" zone="sim/sim_murder1"/>
+    <COURSE arena="Helicarrier" boss_damage_scale="0.3" boss_health_scale="8" bossname="Wintersoldier" comicmission="true" destroylimit="-1" hero="captainamerica" name="CMCAPTAINAMERICA" timelimit="1200" title="Captain America" useexternalobjective="true">
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_100" name="intro"/>
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_130" name="villain"/>
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_140" name="epilogue"/>
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_110"/>
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_120"/>
+        <CONVERSATION file="sim/captainamerica/6_CAPMISSION_135"/>
+        <SOUNDFILE file="CASIM"/>
+        <SPAWNER character="Wintersoldier" count="1" level="3" levelset="true" nograb="true" script="true" slot="31" smart="false" undying="true" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="1" damagereduction50="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="25" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="30" delaymin="20" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="35" delaymin="20" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="30" delaymin="25" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Wintersoldier" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="22000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base_4" boss_damage_scale="0.5" boss_health_scale="3" bossname="Warstar" comicmission="true" hero="wolverine" name="CMWOLVERINE" protectactent="targetrelay" protectlimit="8" timelimit="1200" title="Wolverine" useexternalobjective="true">
+        <CONVERSATION file="sim/wolverine/intro" name="intro"/>
+        <CONVERSATION file="sim/wolverine/villain" name="villain"/>
+        <CONVERSATION file="sim/wolverine/epilogue" name="epilogue"/>
+        <SOUNDFILE file="WOSIM"/>
+        <SPAWNER character="Warstar" count="1" level="3" levelset="true" nograb="true" script="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" level="-2" levelset="true" slot="21" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="22" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="23" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="24" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="25" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="26" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="13" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="13" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" level="15" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="34"/>
+        <MUSTDIE character="Warstar" count="1"/>
+        <REWARD requiredscore="20000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="25000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="30000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="1" boss_health_scale="6" bossname="Ultimo" comicmission="true" hero="ironman" name="CMIRONMAN" timelimit="1200" title="Iron Man">
+        <CONVERSATION file="sim/ironman/intro" name="intro"/>
+        <CONVERSATION file="sim/ironman/villain" name="villain"/>
+        <CONVERSATION file="sim/ironman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="IMSIM"/>
+        <SPAWNER character="Ultimo" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="1" damagereduction50="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Ultimo" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="1" boss_health_scale="6" bossname="Ultron" comicmission="true" name="CMULTRON" timelimit="1200" title="Ultron_Vs">
+        <CONVERSATION file="sim/ultron/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/ultron/villain" name="villain"/>
+        <CONVERSATION file="sim/ultron/epilogue" name="epilogue"/>
+        <SOUNDFILE file="ULTSIM"/>
+        <SPAWNER character="Ultron" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Ultron" count="1"/>
+        <REWARD requiredscore="18000" type="Bronze"/>
+        <REWARD requiredscore="20000" type="Silver"/>
+        <REWARD requiredscore="22000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Murderworld" boss_damage_scale="0.5" boss_health_scale="5" bossname="Bulldozer" comicmission="true" hero="MrFantastic" name="CMMRFANTASTIC" timelimit="1200" title="Mr. Fantastic" weapons="true">
+        <CONVERSATION file="sim/mrfantastic/intro" name="intro"/>
+        <CONVERSATION file="sim/mrfantastic/villain" name="villain"/>
+        <CONVERSATION file="sim/mrfantastic/epilogue" name="epilogue"/>
+        <SOUNDFILE file="MRSIM"/>
+        <SPAWNER character="Bulldozer" count="1" level="3" levelset="true" nograb="true" slot="32" smart="false" villain="true"/>
+        <SPAWNER character="murderbot_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="arcadeclown_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="16"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="18"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="19"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="21"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="murderbot_b" count="10" delaymax="45" delaymin="20" slot="26"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Bulldozer" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier_2" boss_damage_scale="1" boss_health_scale="4" bossname="Bullseye" comicmission="true" hero="daredevil" name="CMDAREDEVIL" timelimit="1200" title="Daredevil">
+        <CONVERSATION file="sim/daredevil/intro" name="intro"/>
+        <CONVERSATION file="sim/daredevil/villain" name="villain"/>
+        <CONVERSATION file="sim/daredevil/epilogue" name="epilogue"/>
+        <SOUNDFILE file="DDSIM"/>
+        <SPAWNER character="Bullseye" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="ElektraSimple" count="1" neutral="true" noaidisable="true" slot="29" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction25="true" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction50="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="1" damagereduction25="true" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="1" damagereduction25="true" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="0" levelset="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <MUSTDIE character="Bullseye" count="1"/>
+        <MUSTSURVIVE character="ElektraSimple" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="0.5" boss_health_scale="1.75" bossname="CrimsonDynamo" comicmission="true" name="CMCRIMSON" timelimit="1200" title="Crimson Dynamo_Vs">
+        <CONVERSATION file="sim/crimsondynamo/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/crimsondynamo/villain" name="villain"/>
+        <CONVERSATION file="sim/crimsondynamo/epilogue" name="epilogue"/>
+        <SOUNDFILE file="CDSIM"/>
+        <SPAWNER character="CrimsonDynamo" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" removewhensmart="true"/>
+        <SPAWNER character="lokitroll_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true"/>
+        <SPAWNER character="clayguardian_a" count="1" delaymax="1" delaymin="1" level="-1" levelset="true"/>
+        <MUSTDIE character="CrimsonDynamo" count="1"/>
+        <REWARD requiredscore="20000" type="Bronze"/>
+        <REWARD requiredscore="25000" type="Silver"/>
+        <REWARD requiredscore="30000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base" boss_damage_scale="0.75" boss_health_scale="4" bossname="Rhino" comicmission="true" hero="Thing" name="CMTHING" protectlimit="1" timelimit="1200" title="Thing">
+        <CONVERSATION file="sim/thing/intro" name="intro"/>
+        <CONVERSATION file="sim/thing/villain" name="villain"/>
+        <CONVERSATION file="sim/thing/epilogue" name="epilogue"/>
+        <SOUNDFILE file="THISIM"/>
+        <SPAWNER character="Rhino" count="1" level="3" levelset="true" nograb="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" damagereduction50="true" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" damagereduction75="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" damagereduction50="true" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" damagereduction50="true" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="-3" levelset="true" slot="21"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="22"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="23"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="24"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="-3" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="-3" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" damagereduction75="true" level="3" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="34"/>
+        <MUSTDIE character="Rhino" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Murderworld" boss_damage_scale="1" boss_health_scale="2" bossname="DarkCaptainAmericaComic" comicmission="true" hero="blackpanther" name="CMBLACKPANTHER" timelimit="1200" title="Black Panther" weapons="true">
+        <CONVERSATION file="sim/blackpanther/intro" name="intro"/>
+        <CONVERSATION file="sim/blackpanther/villain" name="villain"/>
+        <CONVERSATION file="sim/blackpanther/epilogue" name="epilogue"/>
+        <SOUNDFILE file="BPSIM"/>
+        <SPAWNER character="DarkCaptainAmericaComic" count="1" damagereduction50="true" damageresistance50="true" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="murderbot_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="arcadeclown_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="16"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="18"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="19"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="21"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="murderbot_b" count="10" delaymax="45" delaymin="20" slot="26"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="DarkCaptainAmericaComic" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Mephisto's Realm" boss_damage_scale="1" boss_health_scale="2.5" bossname="BaronMordo" comicmission="true" hero="DrStrange" name="CMDRSTRANGE" timelimit="1200" title="Doctor Strange">
+        <CONVERSATION file="sim/drstrange/intro" name="intro"/>
+        <CONVERSATION file="sim/drstrange/villain" name="villain"/>
+        <CONVERSATION file="sim/drstrange/epilogue" name="epilogue"/>
+        <SOUNDFILE file="DRSIM"/>
+        <SPAWNER character="BaronMordo" count="1" level="3" levelset="true" nograb="true" slot="34" smart="false" villain="true"/>
+        <SPAWNER character="Clea" count="1" neutral="true" noaidisable="true" slot="28" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="firegiant_a" damagereduction25="true" delaymax="50" delaymin="35" level="0" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="29"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="30"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="31"/>
+        <SPAWNER character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="32"/>
+        <SPAWNER character="firegiant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="33"/>
+        <MUSTDIE character="BaronMordo" count="1"/>
+        <MUSTSURVIVE character="Clea" count="1"/>
+        <REWARD requiredscore="10000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="15000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Murderworld" boss_damage_scale="1" boss_health_scale="1" bossname="Mysterio" comicmission="true" name="CMMYSTERIO" timelimit="1200" title="Mysterio_Vs" weapons="true">
+        <CONVERSATION file="sim/mysterio/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/mysterio/villain" name="villain"/>
+        <CONVERSATION file="sim/mysterio/epilogue" name="epilogue"/>
+        <SOUNDFILE file="MYSIM"/>
+        <SPAWNER character="Mysterio" count="1" damageresistance75="true" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="murderbot_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="arcadeclown_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="arcadeclown_a" count="2" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="murderbot_a" count="2" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER character="arcadeclown_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER character="arcadeclown_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER character="murderbot_a" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER character="arcadeclown_a" count="2" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER character="murderbot_a" count="2" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="14"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="16"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="19"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="21"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="45" delaymin="30" level="1" levelset="true" slot="26"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Mysterio" count="1"/>
+        <REWARD requiredscore="10000" type="Bronze"/>
+        <REWARD requiredscore="15000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base" boss_damage_scale="1" boss_health_scale="4" bossname="Bullseye" comicmission="true" hero="elektra" name="CMELEKTRA" timelimit="1200" title="Elektra">
+        <CONVERSATION file="sim/elektra/intro" name="intro"/>
+        <CONVERSATION file="sim/elektra/villain" name="villain"/>
+        <CONVERSATION file="sim/elektra/epilogue" name="epilogue"/>
+        <SOUNDFILE file="ELSIM"/>
+        <SPAWNER character="Bullseye" count="1" level="3" levelset="true" nograb="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" damagereduction50="true" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" damagereduction75="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" damagereduction50="true" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" damagereduction50="true" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="-3" levelset="true" slot="21"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="22"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="23"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="24"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="-3" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="-3" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" damagereduction75="true" level="-2" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="34"/>
+        <MUSTDIE character="Bullseye" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base" boss_damage_scale="1" boss_health_scale="8" bossname="Scorpion" comicmission="true" name="CMSCORPION" timelimit="1200" title="Scorpion_Vs">
+        <CONVERSATION file="sim/scorpion/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/scorpion/villain" name="villain"/>
+        <CONVERSATION file="sim/scorpion/epilogue" name="epilogue"/>
+        <SOUNDFILE file="SCSIM"/>
+        <SPAWNER character="Scorpion" count="1" level="3" levelset="true" nograb="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" level="-3" levelset="true" slot="21"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="22"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="23"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="24"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="0" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="0" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" damagereduction75="true" level="1" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimreaver_b" count="2" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="34"/>
+        <MUSTDIE character="Scorpion" count="1"/>
+        <REWARD requiredscore="10000" type="Bronze"/>
+        <REWARD requiredscore="15000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Mephisto's Realm" boss_damage_scale="1" boss_health_scale="6" bossname="DarkSpiderman" comicmission="true" hero="Blade" name="CMBLADE" timelimit="1200" title="Blade">
+        <CONVERSATION file="sim/blade/intro" name="intro"/>
+        <CONVERSATION file="sim/blade/villain" name="villain"/>
+        <CONVERSATION file="sim/blade/epilogue" name="epilogue"/>
+        <SOUNDFILE file="BLSIM"/>
+        <SPAWNER character="DarkSpiderman" count="1" level="3" levelset="true" nograb="true" slot="34" smart="false" villain="true"/>
+        <SPAWNER character="StormSimple" count="1" neutral="true" noaidisable="true" slot="28" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="firegiant_a" damagereduction50="true" delaymax="50" delaymin="35" level="0" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction50="true" delaymax="1" delaymin="1" slot="30"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction50="true" delaymax="1" delaymin="1" slot="31"/>
+        <SPAWNER character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="32"/>
+        <SPAWNER character="firegiant_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="33"/>
+        <MUSTDIE character="DarkSpiderman" count="1"/>
+        <MUSTSURVIVE character="StormSimple" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Mephisto's Realm" boss_damage_scale="0.5" boss_health_scale="4" bossname="BaronMordo" comicmission="true" hero="GhostRider" name="CMGHOSTRIDER" timelimit="1200" title="Ghost Rider">
+        <CONVERSATION file="sim/ghostrider/intro" name="intro"/>
+        <CONVERSATION file="sim/ghostrider/villain" name="villain"/>
+        <CONVERSATION file="sim/ghostrider/epilogue" name="epilogue"/>
+        <SOUNDFILE file="GRSIM"/>
+        <SPAWNER character="BaronMordo" count="1" level="3" levelset="true" nograb="true" slot="34" smart="false" villain="true"/>
+        <SPAWNER character="WolverineSimple" count="1" neutral="true" noaidisable="true" slot="28" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="firegiant_a" damagereduction50="true" delaymax="50" delaymin="35" level="0" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER character="demonicsoul_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction50="true" delaymax="1" delaymin="1" slot="30"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction50="true" delaymax="1" delaymin="1" slot="31"/>
+        <SPAWNER character="mephistopet_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="32"/>
+        <SPAWNER character="firegiant_a" count="1" damagereduction50="true" delaymax="1" delaymin="1" slot="33"/>
+        <MUSTDIE character="BaronMordo" count="1"/>
+        <MUSTSURVIVE character="WolverineSimple" count="1"/>
+        <REWARD requiredscore="10000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="15000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base" boss_damage_scale="0.9" boss_health_scale="5" bossname="Ultron" comicmission="true" hero="lukecage" name="CMLUKECAGE" timelimit="1200" title="Luke Cage">
+        <CONVERSATION file="sim/lukecage/intro" name="intro"/>
+        <CONVERSATION file="sim/lukecage/villain" name="villain"/>
+        <CONVERSATION file="sim/lukecage/epilogue" name="epilogue"/>
+        <SOUNDFILE file="LCSIM"/>
+        <SPAWNER character="Ultron" count="1" level="3" levelset="true" nograb="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" damagereduction50="true" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" damagereduction75="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" damagereduction50="true" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" damagereduction50="true" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="-3" levelset="true" slot="21"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="22"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="23"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="24"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="0" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="0" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" damagereduction75="true" level="1" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="34"/>
+        <MUSTDIE character="Ultron" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base_2" boss_damage_scale="0.75" boss_health_scale="5" bossname="Scorpion" comicmission="true" hero="spiderman" name="CMSPIDERMAN" timelimit="1200" title="Spider-Man">
+        <precache file="conversations/sim/spiderman/trap" type="conversation"/>
+        <precache file="effects/char/spider/webbing_link" type="effect"/>
+        <CONVERSATION file="sim/spiderman/intro" name="intro"/>
+        <CONVERSATION file="sim/spiderman/villain" name="villain"/>
+        <CONVERSATION file="sim/spiderman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="SPSIM"/>
+        <SPAWNER character="Scorpion" count="1" level="3" levelset="true" nograb="true" script="true" slot="35" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="DumDumDugan" count="1" level="2" levelset="true" neutral="true" slot="33" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" damagereduction50="true" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" damagereduction75="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" damagereduction75="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" damagereduction50="true" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" damagereduction50="true" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="-3" levelset="true" slot="21" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="22" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="23" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="24" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="25" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="26" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="0" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" damagereduction75="true" disabled="true" level="0" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" damagereduction75="true" level="1" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction50="true" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" damagereduction75="true" delaymax="10" delaymin="10" slot="32"/>
+        <MUSTDIE character="Scorpion" count="1"/>
+        <MUSTSURVIVE character="DumDumDugan" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Murderworld" boss_damage_scale="0.25" boss_health_scale="3.5" bossname="Hussar" comicmission="true" hero="Storm" name="CMSTORM" timelimit="1200" title="Storm" weapons="true">
+        <CONVERSATION file="sim/storm/intro" name="intro"/>
+        <CONVERSATION file="sim/storm/villain" name="villain"/>
+        <CONVERSATION file="sim/storm/epilogue" name="epilogue"/>
+        <SOUNDFILE file="STSIM"/>
+        <SPAWNER character="Hussar" count="1" level="3" levelset="true" nograb="true" slot="32" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="0" character="IcemanSimple" count="1" level="2" levelset="true" neutral="true" noaidisable="true" slot="30" smart="false"/>
+        <SPAWNER aggressionlevel="0" character="WolverineSimple" count="1" level="2" levelset="true" neutral="true" noaidisable="true" slot="31" smart="false"/>
+        <SPAWNER character="murderbot_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="arcadeclown_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="16"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="18"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="19"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="21"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="murderbot_b" count="10" delaymax="45" delaymin="20" slot="26"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Hussar" count="1"/>
+        <MUSTSURVIVE character="WolverineSimple" count="1"/>
+        <MUSTSURVIVE character="IcemanSimple" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="1" boss_health_scale="1.5" bossname="Kurse" comicmission="true" hero="thor" name="CMTHOR" timelimit="1200" title="Thor" weapons="true">
+        <CONVERSATION file="sim/thor/intro" name="intro"/>
+        <CONVERSATION file="sim/thor/villain" name="villain"/>
+        <SOUNDFILE file="THOSIM"/>
+        <SPAWNER character="Kurse" count="1" level="3" levelset="true" nograb="true" script="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="30" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="30" delaymin="15" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="20" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="15" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" count="1" damagereduction25="true" delaymax="1" delaymin="1"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" count="1" damagereduction25="true" delaymax="1" delaymin="1"/>
+        <MUSTDIE character="Kurse" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Murderworld" boss_damage_scale="1" boss_health_scale="5" bossname="DarkSpiderMan" comicmission="true" hero="deadpool" name="CMDEADPOOL" timelimit="1200" title="Deadpool" weapons="true">
+        <CONVERSATION file="sim/deadpool/intro" name="intro"/>
+        <CONVERSATION file="sim/deadpool/villain" name="villain"/>
+        <CONVERSATION file="sim/deadpool/epilogue" name="epilogue"/>
+        <SOUNDFILE file="DPSIM"/>
+        <SPAWNER character="DarkSpiderMan" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="murderbot_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="arcadeclown_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER character="arcadeclown_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="16"/>
+        <SPAWNER character="murderbot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER character="arcadeandriod_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="18"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="19"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="21"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER character="arcadeclown_b" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER character="murderbot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="99" character="murderbot_b" count="10" delaymax="45" delaymin="20" slot="26"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="99" character="arcadeclown_b" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="DarkSpiderMan" count="1"/>
+        <REWARD requiredscore="10000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="15000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="1" boss_health_scale="2.5" bossname="Radioactiveman" comicmission="true" hero="invisiblewoman" name="CMINVISIBLEWOMAN" timelimit="1200" title="Invisible Woman">
+        <CONVERSATION file="sim/invisiblewoman/intro" name="intro"/>
+        <CONVERSATION file="sim/invisiblewoman/villain" name="villain"/>
+        <CONVERSATION file="sim/invisiblewoman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="IWSIM"/>
+        <SPAWNER character="Radioactiveman" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="1" damagereduction50="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Radioactiveman" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="1" boss_health_scale="4" bossname="Shocker" comicmission="true" name="CMSHOCKER" timelimit="1200" title="Shocker_Vs">
+        <precache file="HUD/hud_head_2101" type="model"/>
+        <CONVERSATION file="sim/shocker/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/shocker/villain" name="villain"/>
+        <CONVERSATION file="sim/shocker/epilogue" name="epilogue"/>
+        <SOUNDFILE file="SHSIM"/>
+        <SPAWNER character="Shocker" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Shocker" count="1"/>
+        <REWARD requiredscore="15000" type="Bronze"/>
+        <REWARD requiredscore="18000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="0.75" boss_health_scale="4" bossname="Wrecker" comicmission="true" hero="spiderwoman" name="CMSPIDERWOMAN" timelimit="1200" title="Spider-Woman">
+        <CONVERSATION file="sim/spiderwoman/intro" name="intro"/>
+        <CONVERSATION file="sim/spiderwoman/villain" name="villain"/>
+        <CONVERSATION file="sim/spiderwoman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="SWSIM"/>
+        <SPAWNER character="Wrecker" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="1" damagereduction50="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="1" damagereduction25="true" delaymax="30" delaymin="20" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" damagereduction25="true" delaymax="30" delaymin="20" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" damagereduction50="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" damagereduction50="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" damagereduction50="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Wrecker" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Mephisto's Realm" boss_damage_scale="1" boss_health_scale="5" bossname="Mysterio" comicmission="true" hero="Iceman" name="CMICEMAN" timelimit="1200" title="Iceman">
+        <CONVERSATION file="sim/iceman/intro" name="intro"/>
+        <CONVERSATION file="sim/iceman/villain" name="villain"/>
+        <CONVERSATION file="sim/iceman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="ICSIM"/>
+        <SPAWNER character="Mysterio" count="1" level="3" levelset="true" nograb="true" slot="34" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="firegiant_a" damagereduction25="true" delaymax="50" delaymin="35" level="-1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="demonleaper_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER character="demonicsoul_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="29"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="30"/>
+        <SPAWNER character="demonleaper_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="31"/>
+        <SPAWNER character="mephistopet_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="32"/>
+        <SPAWNER character="firegiant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="33"/>
+        <MUSTDIE character="Mysterio" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="0.9" boss_health_scale="6" bossname="Piledriver" comicmission="true" name="CMPILEDRIVER" timelimit="1200" title="Piledriver_Vs">
+        <precache file="HUD/hud_head_2101" type="model"/>
+        <CONVERSATION file="sim/piledriver/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/piledriver/villain" name="villain"/>
+        <CONVERSATION file="sim/piledriver/epilogue" name="epilogue"/>
+        <SOUNDFILE file="PDSIM"/>
+        <SPAWNER character="Piledriver" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" removewhensmart="true"/>
+        <SPAWNER character="lokitroll_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true"/>
+        <SPAWNER character="clayguardian_a" count="1" delaymax="1" delaymin="1" level="-1" levelset="true"/>
+        <MUSTDIE character="Piledriver" count="1"/>
+        <REWARD requiredscore="20000" type="Bronze"/>
+        <REWARD requiredscore="25000" type="Silver"/>
+        <REWARD requiredscore="30000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="1" boss_health_scale="1" bossname="Ulik" comicmission="true" name="CMULIK" timelimit="1200" title="Ulik_Vs">
+        <precache file="HUD/hud_head_2101" type="model"/>
+        <CONVERSATION file="sim/ulik/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/ulik/villain" name="villain"/>
+        <CONVERSATION file="sim/ulik/epilogue" name="epilogue"/>
+        <SOUNDFILE file="ULISIM"/>
+        <SPAWNER character="Ulik" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" removewhensmart="true"/>
+        <SPAWNER character="lokitroll_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true"/>
+        <SPAWNER character="clayguardian_a" count="1" delaymax="1" delaymin="1" level="-1" levelset="true"/>
+        <MUSTDIE character="Ulik" count="1"/>
+        <REWARD requiredscore="20000" type="Bronze"/>
+        <REWARD requiredscore="25000" type="Silver"/>
+        <REWARD requiredscore="30000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Skrull Planet" boss_damage_scale="0.33" boss_health_scale="2" bossname="Paibok" comicmission="true" hero="humantorch" killlimit="30" name="CMHUMANTORCH" timelimit="1200" title="Human Torch">
+        <CONVERSATION file="sim/humantorch/intro" name="intro"/>
+        <CONVERSATION file="sim/humantorch/villain" name="villain"/>
+        <CONVERSATION file="sim/humantorch/epilogue" name="epilogue"/>
+        <SOUNDFILE file="HTSIM"/>
+        <SPAWNER character="Paibok" count="1" level="3" levelset="true" nograb="true" script="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="galactuspunisher_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="galactuspunisher_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Paibok" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Skrull Planet" boss_damage_scale="0.66" boss_health_scale="2" bossname="Dragonman" comicmission="true" name="CMDRAGONMAN" timelimit="1200" title="Dragon Man_Vs">
+        <CONVERSATION file="sim/dragonman/intro" name="intro"/>
+        <CONVERSATION file="sim/dragonman/villain" name="villain"/>
+        <CONVERSATION file="sim/dragonman/epilogue" name="epilogue"/>
+        <SOUNDFILE file="DMSIM"/>
+        <SPAWNER character="Dragonman" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="3" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="3" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Dragonman" count="1"/>
+        <REWARD requiredscore="15000" type="Bronze"/>
+        <REWARD requiredscore="18000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Skrull Planet" boss_damage_scale="0.25" boss_health_scale="1" bossname="Superskrull" comicmission="true" hero="warbird" name="CMWARBIRD" timelimit="1200" title="Ms. Marvel">
+        <CONVERSATION file="sim/msmarvel/intro" name="intro"/>
+        <CONVERSATION file="sim/msmarvel/villain" name="villain"/>
+        <CONVERSATION file="sim/msmarvel/epilogue" name="epilogue"/>
+        <SOUNDFILE file="MMSIM"/>
+        <SPAWNER character="Superskrull" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="galactuspunisher_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="galactuspunisher_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" level="0" levelset="true" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" level="1" levelset="true" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="1" damagereduction25="true" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" damagereduction25="true" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="3" damagereduction25="true" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" damagereduction25="true" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Superskrull" count="1"/>
+        <REWARD requiredscore="15000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="18000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="20000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="1" boss_health_scale="4" bossname="Kurse" comicmission="true" name="CMKURSE" timelimit="1200" title="Kurse_Vs" weapons="true">
+        <precache file="HUD/hud_head_2101" type="model"/>
+        <CONVERSATION file="sim/kurse/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/kurse/villain" name="villain"/>
+        <CONVERSATION file="sim/kurse/epilogue" name="epilogue"/>
+        <SOUNDFILE file="KURSIM"/>
+        <SPAWNER character="Kurse" count="1" level="3" levelset="true" nograb="true" script="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" removewhensmart="true"/>
+        <SPAWNER character="lokitroll_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true"/>
+        <SPAWNER character="clayguardian_a" count="1" delaymax="1" delaymin="1" level="-1" levelset="true"/>
+        <MUSTDIE character="Kurse" count="1"/>
+        <REWARD requiredscore="20000" type="Bronze"/>
+        <REWARD requiredscore="30000" type="Silver"/>
+        <REWARD requiredscore="40000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Helicarrier" boss_damage_scale="1" boss_health_scale="2" bossname="Lizard" comicmission="true" name="CMLIZARD" timelimit="1200" title="Lizard_Vs">
+        <CONVERSATION file="sim/lizard/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/lizard/villain" name="villain"/>
+        <CONVERSATION file="sim/lizard/epilogue" name="epilogue"/>
+        <SOUNDFILE file="LIZSIM"/>
+        <SPAWNER character="Lizard" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="1" character="doombot_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="5" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="6" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="7" smart="false"/>
+        <SPAWNER aggressionlevel="1" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="8" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="3" delaymax="1" delaymin="1" disabled="true" slot="12" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" disabled="true" slot="13" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" disabled="true" level="1" levelset="true" slot="14" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="doombot_a" count="2" delaymax="1" delaymin="1" slot="15" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="16" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_a" count="2" delaymax="1" delaymin="1" slot="17" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_a" count="2" delaymax="1" delaymin="1" slot="18" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_b" count="3" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="3" delaymax="1" delaymin="1" level="1" levelset="true" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_b" count="3" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="5" delaymax="1" delaymin="1" level="1" levelset="true" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="doombot_b" count="2" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="ultronwarrior_c" count="2" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="ultronstriker_c" count="2" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Lizard" count="1"/>
+        <REWARD requiredscore="18000" type="Bronze"/>
+        <REWARD requiredscore="20000" type="Silver"/>
+        <REWARD requiredscore="22000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Skrull Planet" boss_damage_scale="0.5" boss_health_scale="1.75" bossname="Paibok" comicmission="true" name="CMPAIBOK" timelimit="1200" title="Paibok_Vs">
+        <CONVERSATION file="sim/paibok/intro" name="intro"/>
+        <CONVERSATION file="sim/paibok/villain" name="villain"/>
+        <CONVERSATION file="sim/paibok/epilogue" name="epilogue"/>
+        <SOUNDFILE file="PAISIM"/>
+        <SPAWNER character="Paibok" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="3" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="3" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Paibok" count="1"/>
+        <REWARD requiredscore="15000" type="Bronze"/>
+        <REWARD requiredscore="18000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Skrull Planet" boss_damage_scale="0.2" boss_health_scale="6" bossname="Superskrull" comicmission="true" name="CMSUPERSKRULL" timelimit="1200" title="Super-Skrull_Vs">
+        <CONVERSATION file="sim/superskrull/intro" name="intro"/>
+        <CONVERSATION file="sim/superskrull/villain" name="villain"/>
+        <CONVERSATION file="sim/superskrull/epilogue" name="epilogue"/>
+        <SOUNDFILE file="SSKSIM"/>
+        <SPAWNER character="Superskrull" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER character="galactuspunisher_a" count="1" delaymax="1" delaymin="1" slot="7"/>
+        <SPAWNER character="skrullcommando_a" count="1" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" level="0" levelset="true" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_a" count="2" delaymax="1" delaymin="1" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_a" count="2" delaymax="1" delaymin="1" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="20"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="21"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="2" delaymax="1" delaymin="1" slot="22"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="2" delaymax="1" delaymin="1" slot="23"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="24"/>
+        <SPAWNER aggressionlevel="2" character="skrulldeviant_b" count="3" delaymax="1" delaymin="1" slot="25"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="3" delaymax="1" delaymin="1" slot="26"/>
+        <SPAWNER aggressionlevel="2" character="skrullcommando_b" count="3" delaymax="1" delaymin="1" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="28"/>
+        <SPAWNER aggressionlevel="2" character="galactuspunisher_b" count="4" delaymax="1" delaymin="1" slot="29"/>
+        <MUSTDIE character="Superskrull" count="1"/>
+        <REWARD requiredscore="15000" type="Bronze"/>
+        <REWARD requiredscore="18000" type="Silver"/>
+        <REWARD requiredscore="20000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Asgard" boss_damage_scale="0.2" boss_health_scale="6" bossname="Thunderball" comicmission="true" name="CMTHUNDERBALL" timelimit="1200" title="Thunderball_Vs">
+        <precache file="HUD/hud_head_2101" type="model"/>
+        <CONVERSATION file="sim/thunderball/intro" model="Blackwidow" name="intro"/>
+        <CONVERSATION file="sim/thunderball/villain" name="villain"/>
+        <CONVERSATION file="sim/thunderball/epilogue" name="epilogue"/>
+        <SOUNDFILE file="TBSIM"/>
+        <SPAWNER character="Thunderball" count="1" level="3" levelset="true" nograb="true" slot="30" smart="false" villain="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_a" damagereduction25="true" delaymax="10" delaymin="5" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="lokitroll_b" damagereduction25="true" delaymax="15" delaymin="10" level="1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_a" damagereduction25="true" delaymax="10" delaymin="5" level="-1" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_b" damagereduction25="true" delaymax="15" delaymin="10" level="0" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" levelset="true" removewhensmart="true"/>
+        <SPAWNER aggressionlevel="99" character="clayguardian_c" damagereduction25="true" delaymax="20" delaymin="15" level="1" removewhensmart="true"/>
+        <SPAWNER character="lokitroll_a" count="1" delaymax="1" delaymin="1" level="0" levelset="true"/>
+        <SPAWNER character="clayguardian_a" count="1" delaymax="1" delaymin="1" level="-1" levelset="true"/>
+        <MUSTDIE character="Thunderball" count="1"/>
+        <REWARD requiredscore="20000" type="Bronze"/>
+        <REWARD requiredscore="30000" type="Silver"/>
+        <REWARD requiredscore="40000" type="Gold"/>
+    </COURSE>
+    <COURSE arena="Omega Base_3" comicmission="true" hero="Hulk" killlimit="100" name="CMHULK" timelimit="1200" title="Hulk">
+        <CONVERSATION file="sim/hulk/intro" model="BruceBanner" name="intro"/>
+        <CONVERSATION file="sim/hulk/epilogue" name="epilogue"/>
+        <SOUNDFILE file="HUSIM"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="1" level="0" levelset="true" slot="5"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" level="0" levelset="true" slot="6"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="1" slot="7"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="8"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="1" delaymin="1" slot="9"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="1" delaymin="1" slot="10"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" level="1" levelset="true" slot="11"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="12"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="13"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_a" count="2" delaymax="10" delaymin="10" slot="14"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="15"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_a" count="2" delaymax="10" delaymin="10" slot="16"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="2" delaymax="1" delaymin="1" level="1" levelset="true" slot="17"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="2" delaymax="1" delaymin="1" slot="18"/>
+        <SPAWNER aggressionlevel="2" character="aimtrooper_b" count="1" slot="19"/>
+        <SPAWNER aggressionlevel="2" character="aimreaver_b" count="1" slot="20"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" level="-2" levelset="true" slot="21" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="22" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="23" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="24" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="25" smart="false"/>
+        <SPAWNER aggressionlevel="99" character="aimtrooper_c" delaymax="1" delaymin="1" disabled="true" slot="26" smart="false"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="13" levelset="true" slot="27"/>
+        <SPAWNER aggressionlevel="2" character="supersoldier_a" count="1" disabled="true" level="13" levelset="true" slot="28"/>
+        <SPAWNER character="supersoldier_b" count="1" level="15" levelset="true" slot="29"/>
+        <SPAWNER character="aimreaver_b" count="2" delaymax="10" delaymin="10" slot="30"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="31"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="32"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="33"/>
+        <SPAWNER character="aimtrooper_b" count="2" delaymax="10" delaymin="10" slot="34"/>
+        <REWARD requiredscore="20000" rewardskin="true" type="Bronze"/>
+        <REWARD requiredscore="25000" rewardtraits="1" type="Silver"/>
+        <REWARD requiredscore="30000" rewardtalent="true" type="Gold"/>
+    </COURSE>
+</SIMULATOR>

@@ -1,0 +1,655 @@
+<world>
+    <entity act="1" name="world" next_gen_partylight="0 0 0" next_gen_partylightradius="120" partylight="0.69 0.82 0.82" partylightradius="120" soundfile="helsim" zonescript="sim/heli1/sim_heli1_zone_script" />
+    <precache filename="sim_heli1/missle/mp_missle" type="motionpath" />
+    <precache filename="zone_shared/object/console_fighter" type="sound" />
+    <precache filename="subtitles/sim_heli1_cap_subtitle" type="xml_resident" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="100" material="hollow_metal" model="heli_carrier/air_tanks_heli_b" name="air_tanks_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity actsound="zone_shared/heli/alarm_light" animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/alarmlight_red_heli_a" name="alarmlight_red_heli_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="heli_carrier/barrel_01_heli_th" name="barrel_01_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="heli_carrier/barrel_02_heli_th" name="barrel_02_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_upholstery" deathsound="death_style/ds_upholstery_m" fxlevel="2" health="100" material="carpet" model="heli_carrier/bunk_heli_b" name="bunk_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_01_heli_b_d" fxlevel="2" health="100" material="electronics" model="heli_carrier/console_01_heli_b" name="console_01_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="console_02_heli_b_b_d" fxlevel="2" health="150" material="solid_metal" model="heli_carrier/console_02_heli_b" name="console_02_heli_b_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_03_heli_b_d" fxlevel="2" material="electronics" model="heli_carrier/console_03_heli_b" name="console_03_heli_b" nogravity="true" nopickup="true" nopush="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="1" material="hollow_metal" model="heli_carrier/container_01_heli_th" name="container_01_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="1" material="hollow_metal" model="heli_carrier/container_03_heli_th" name="container_03_heli_th" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" material="hollow_metal" model="heli_carrier/crate_01_heli_b" name="crate_01_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" material="hollow_metal" model="heli_carrier/crate_02_heli_b" name="crate_02_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="3" stackphysics="true" structure="0" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_01_heli_d" name="door_01_heli_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/floor_light_01_heli_a" name="floor_light_01_heli_a" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="energy" model="heli_carrier/force_field_10ft_heli_a" name="force_field_10ft_heli_a" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/object/forcefield" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="100" material="hollow_metal" model="heli_carrier/lockers_heli_b" name="lockers_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="2" structure="0" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="heli_carrier/pillar_20ft_heli_e" name="pillar_20ft_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_10x20_heli_e" name="pipe_10x20_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_5x15_curved_heli_e" name="pipe_5x15_curved_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="heli_carrier/pipe_5x20_heli_e" name="pipe_5x20_heli_e" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" fxlevel="3" health="100" material="hollow_metal" model="heli_carrier/pipe_curved_02_heli_b" name="pipe_curved_02_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/piston_wall_vertical_heli_a" name="piston_wall_vertical_heli_a" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/heli/gizmo" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="radar_screen_02_heli_b_d" fxlevel="2" health="100" material="electronics" model="heli_carrier/radar_screen_02_heli_b" name="radar_screen_02_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_l" fxlevel="3" health="100" material="solid_metal" model="heli_carrier/shelf_heli_b" name="shelf_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" heaviness="1" material="solid_metal" model="heli_carrier/tool_cabinet_01_heli_th" name="tool_cabinet_01_heli_th" randompickups="0" structure="1" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="wall_10ft_heli_b_d" fxlevel="2" health="100" material="solid_metal" model="heli_carrier/wall_10ft_heli_b" name="wall_10ft_heli_b" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity actcountremove="1" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_once" nocollide="true" radiusdamage="true" smartent="false" />
+    <entity classname="lightent" lightcolor="1 1 1" lightradius="200" name="lightent" nocollide="true" startoff="false" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity classname="playerstartent" name="player_start" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity classname="actionent" name="relay" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity classname="waypointent" name="waypoint" nocollide="true" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="simulator/bomb_blinking_lights_sim_a" name="bomb_blinking_lights_sim_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="challengeent" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" material="solid_metal" model="simulator/bomb_sequence_sim_c" name="bomb_sequence_sim_c" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="challengeent" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" material="solid_metal" model="simulator/bomb_tap_sim_c" name="bomb_tap_sim_c" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="simulator/console_button_sim_a" name="console_button_sim_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="simulator/icbm_sim_e" name="icbm_sim_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="simulator/key_card_sim_a" name="key_card_sim_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entinst type="air_tanks_heli_b01">
+        <inst name="air_tanks_heli_b01" orient="0 0 0.872665" pos="1680 1800.06 0" />
+    </entinst>
+    <entinst type="air_tanks_heli_b">
+        <inst name="air_tanks_heli_b" orient="0 0 -1.45276" pos="2284.43 6530.66 0" />
+        <inst name="air_tanks_heli_b" orient="0 0 0.0580967" pos="2154.77 6603.13 0" />
+    </entinst>
+    <entinst type="alarmlight_red_heli_a02">
+        <inst name="alarmlight_red_heli_a02" orient="-1.74846e-007 0.0 -1.5708" pos="1020 2880 118.546" />
+        <inst name="alarmlight_red_heli_a01" pos="1380 2880 118.512" />
+    </entinst>
+    <entinst type="alarmlight_red_heli_a06">
+        <inst name="alarmlight_red_heli_a06" orient="-1.74846e-007 0.0 0.785398" pos="1740 6420 118.464" />
+        <inst name="alarmlight_red_heli_a05" orient="-1.74846e-007 0.0 2.35619" pos="1740 6060 118.464" />
+        <inst name="alarmlight_red_heli_a04" orient="-1.74846e-007 0.0 -2.35619" pos="2100 6060 118.464" />
+        <inst name="alarmlight_red_heli_a03" orient="-1.74846e-007 0.0 -0.785398" pos="2100 6420 118.464" />
+    </entinst>
+    <entinst type="barrel_01_heli_th">
+        <inst name="barrel_01_heli_th" pos="1692 1416 0" />
+        <inst name="barrel_01_heli_th" pos="1668 1368 0" />
+        <inst name="barrel_01_heli_th" pos="1704.07 1375.11 0" />
+        <inst name="barrel_01_heli_th" pos="1586.4 1693.2 0" />
+        <inst name="barrel_01_heli_th" pos="1579.2 1654.8 0" />
+        <inst name="barrel_01_heli_th" pos="1308 1908 0" />
+        <inst name="barrel_01_heli_th" pos="864 1992 0" />
+        <inst name="barrel_01_heli_th" pos="948 2172 0" />
+        <inst name="barrel_01_heli_th" pos="984 4656 0" />
+        <inst name="barrel_01_heli_th" pos="987.6 4837.2 0" />
+        <inst name="barrel_01_heli_th" pos="951.6 4820.4 0" />
+        <inst name="barrel_01_heli_th" pos="1344 600 0" />
+        <inst name="barrel_01_heli_th" pos="828 1968 0" />
+        <inst name="barrel_01_heli_th" pos="1246.8 2728.8 0" />
+        <inst name="barrel_01_heli_th" pos="1462.8 3312 0" />
+        <inst name="barrel_01_heli_th" pos="1467.6 3274.8 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.65806" pos="1688.46 6613.73 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.65806" pos="1673.37 6578.91 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.85264" pos="2217.3 6610.78 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.307543" pos="2294.52 6470.1 0" />
+        <inst name="barrel_01_heli_th" pos="1668 5928 0" />
+        <inst name="barrel_01_heli_th" pos="1560 6420 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.18319" pos="2174.69 5862.75 0" />
+        <inst name="barrel_01_heli_th" orient="0 0 -0.760702" pos="2188.86 5897.39 0" />
+        <inst name="barrel_01_heli_th" pos="1878.97 5666.24 2.80471" />
+        <inst name="barrel_01_heli_th" orient="0 0 1.41068" pos="2000.63 5376.21 2.80471" />
+        <inst name="barrel_01_heli_th" pos="1973.62 5349.65 2.80471" />
+        <inst name="barrel_01_heli_th" orient="0 0 -1.6091" pos="2012.15 5340.34 2.80471" />
+        <inst name="barrel_01_heli_th" pos="1308 612 0" />
+    </entinst>
+    <entinst type="barrel_02_heli_th">
+        <inst name="barrel_02_heli_th" orient="0 0 -1.13446" pos="1934.63 1453.97 0" />
+        <inst name="barrel_02_heli_th" orient="0 0 -0.261799" pos="1892.22 1432.16 0" />
+    </entinst>
+    <entinst type="bunk_heli_b">
+        <inst name="bunk_heli_b" orient="0 0 3.14159" pos="2028 2040 0" />
+        <inst name="bunk_heli_b" orient="0 0 3.14159" pos="2028 1944 0" />
+        <inst name="bunk_heli_b" orient="0 0 3.14159" pos="2028 1848 0" />
+    </entinst>
+    <entinst type="console_01_heli_b">
+        <inst name="console_01_heli_b" orient="0 0 -2.35619" pos="1200 1800 0" />
+    </entinst>
+    <entinst type="console_02_heli_b_b01">
+        <inst name="console_02_heli_b_b01" orient="0 0 -1.5708" pos="1524 2880 0" />
+    </entinst>
+    <entinst type="console_03_heli_b01">
+        <inst name="console_03_heli_b01" orient="0 0 1.5708" pos="1308 1440 0" />
+    </entinst>
+    <entinst type="container_01_heli_th">
+        <inst name="container_01_heli_th" orient="0 0 -1.50824" pos="1692 5880 0" />
+        <inst name="container_01_heli_th" orient="0 0 0.102291" pos="1637.06 5880 0" />
+        <inst name="container_01_heli_th" pos="1560 6468 0" />
+        <inst name="container_01_heli_th" orient="0 0 -1.50824" pos="1842.87 5699.89 2.80471" />
+        <inst name="container_01_heli_th" orient="0 0 0.102291" pos="1836.45 5645.81 2.80471" />
+    </entinst>
+    <entinst type="container_01_heli_th02">
+        <inst name="container_01_heli_th02" pos="888 2043.6 0" />
+        <inst name="container_01_heli_th02" pos="1288.8 2737.2 0" />
+        <inst name="container_01_heli_th02" pos="836.4 2036.4 0" />
+    </entinst>
+    <entinst type="container_03_heli_th02">
+        <inst name="container_03_heli_th02" pos="1632 1308 0" />
+        <inst name="container_03_heli_th02" pos="1692 1320 0" />
+    </entinst>
+    <entinst type="crate_01_heli_b07">
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="936 2964 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="1681.91 2148 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="1020 2964 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="1597.91 2148 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="852 2964 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="1518 2148 0" />
+        <inst name="crate_01_heli_b07" orient="0 0 -1.5708" pos="1434 2148 0" />
+    </entinst>
+    <entinst type="crate_02_heli_b07">
+        <inst name="crate_02_heli_b07" pos="1817.3 5137.42 0" />
+        <inst name="crate_02_heli_b07" pos="1656 492 0" />
+        <inst name="crate_02_heli_b07" pos="1817.64 5039.5 0" />
+        <inst name="crate_02_heli_b07" pos="1656 588 0" />
+        <inst name="crate_02_heli_b07" pos="1817.3 4941.45 0" />
+        <inst name="crate_02_heli_b07" pos="2256 6000 0" />
+        <inst name="crate_02_heli_b07" pos="2256 5904 0" />
+    </entinst>
+    <entinst type="door_01_heli_d02">
+        <inst name="door_01_heli_d02" pos="1740 1500 0" />
+        <inst name="door_01_heli_d02" pos="1260 1980 0" />
+        <inst name="door_01_heli_d02" orient="0 0 -1.5708" pos="1020 2700 0" />
+        <inst name="door_01_heli_d02" pos="1740 1980 0" />
+        <inst name="door_01_heli_d02" orient="0 0 -1.5708" pos="1020 2220 0" />
+    </entinst>
+    <entinst type="door_01_heli_d">
+        <inst name="door_01_heli_d" orient="0 0 -1.5708" pos="1500 1140 0" />
+    </entinst>
+    <entinst type="door_02_heli_d03">
+        <inst name="door_02_heli_d03" orient="0 0 -1.5708" pos="780 4140 0" />
+        <inst name="door_02_heli_d03" orient="0 0 1.5708" pos="1980 4380 0" />
+        <inst name="door_02_heli_d03" orient="0 0 -1.5708" pos="1500 301.2 0" />
+    </entinst>
+    <entinst type="door_02_heli_d04">
+        <inst name="door_02_heli_d04" orient="0 0 -1.5708" pos="1380 3420 0" />
+    </entinst>
+    <entinst type="door_02_heli_d05">
+        <inst name="door_02_heli_d05" orient="0 0 1.5708" pos="1980 4860 0" />
+    </entinst>
+    <entinst type="door_02_heli_d">
+        <inst name="door_02_heli_d" orient="0 0 -1.5708" pos="780 4620 0" />
+    </entinst>
+    <entinst type="ff_room_floor_light">
+        <inst name="ff_room_floor_light" pos="1019.95 1980 0" />
+        <inst name="ff_room_floor_light01" pos="1500 540 0" />
+    </entinst>
+    <entinst type="force_field_10ft_heli_a">
+        <inst name="force_field_10ft_heli_a" pos="1500 1620 0" />
+    </entinst>
+    <entinst type="lockers_heli_b">
+        <inst name="lockers_heli_b" orient="0 0 1.5708" pos="1776 1860 0" />
+        <inst name="lockers_heli_b" pos="1860 2064 0" />
+    </entinst>
+    <entinst type="pillar_20ft_heli_e">
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="1320 1344 0" />
+        <inst name="pillar_20ft_heli_e" orient="0 0 -3.14159" pos="1320 1536 0" />
+    </entinst>
+    <entinst type="pipe_10x20_heli_e">
+        <inst name="pipe_10x20_heli_e" pos="2100.36 1381.17 -240" />
+        <inst name="pipe_10x20_heli_e" pos="1056 5380.8 -240" />
+        <inst name="pipe_10x20_heli_e" pos="588 5380.8 240" />
+        <inst name="pipe_10x20_heli_e" pos="2100.36 1381.17 0" />
+        <inst name="pipe_10x20_heli_e" pos="972 4972.8 0" />
+        <inst name="pipe_10x20_heli_e" pos="972 4972.8 -240" />
+        <inst name="pipe_10x20_heli_e" pos="972 4972.8 240" />
+        <inst name="pipe_10x20_heli_e" pos="2100.36 1381.17 240" />
+        <inst name="pipe_10x20_heli_e" pos="1056 5380.8 0" />
+        <inst name="pipe_10x20_heli_e" pos="588 5380.8 -240" />
+        <inst name="pipe_10x20_heli_e" pos="588 5380.8 0" />
+        <inst name="pipe_10x20_heli_e" pos="1056 5380.8 240" />
+    </entinst>
+    <entinst type="pipe_5x15_curved_heli_e">
+        <inst name="pipe_5x15_curved_heli_e" pos="840 2400 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="840 2520 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="574.49 2520 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="574.49 2400 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="600 4800 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="600 4680 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="334.49 4800 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 1.5708" pos="1020 1788 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1199.12 2400.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1464.63 2400.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1199.12 2520.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1464.63 2520.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="2399.12 6180.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="2399.12 6300.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="2664.63 6300.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="2664.63 6180.53 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1440.88 6299.47 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1440.88 6179.47 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1175.37 6179.47 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1175.37 6299.47 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -1.5708" pos="1979.47 6719.12 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -1.5708" pos="1859.47 6719.12 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 1.5708" pos="1859.47 6984.63 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 1.5708" pos="900 1788 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1260 1020 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1260 780 0" />
+        <inst name="pipe_5x15_curved_heli_e" pos="1260 900 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1740 1020 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1740 780 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="1740 900 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 -3.14159" pos="334.49 4680 0" />
+        <inst name="pipe_5x15_curved_heli_e" orient="0 0 1.5708" pos="1979.47 6984.63 0" />
+    </entinst>
+    <entinst type="pipe_5x20_heli_e">
+        <inst name="pipe_5x20_heli_e" pos="948 5508 -120" />
+        <inst name="pipe_5x20_heli_e" pos="1065.92 4924.99 -120" />
+        <inst name="pipe_5x20_heli_e" pos="1065.92 4924.99 120" />
+        <inst name="pipe_5x20_heli_e" pos="480 4968 -120" />
+        <inst name="pipe_5x20_heli_e" pos="480 4968 120" />
+        <inst name="pipe_5x20_heli_e" pos="540 4920 -120" />
+        <inst name="pipe_5x20_heli_e" pos="540 4920 120" />
+        <inst name="pipe_5x20_heli_e" pos="612 4944 -120" />
+        <inst name="pipe_5x20_heli_e" pos="612 4944 120" />
+        <inst name="pipe_5x20_heli_e" pos="540 5004 -120" />
+        <inst name="pipe_5x20_heli_e" pos="540 5004 120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="1199.12 2400.53 -240" />
+        <inst name="pipe_5x20_heli_e" pos="612 5016 -120" />
+        <inst name="pipe_5x20_heli_e" pos="612 5016 120" />
+        <inst name="pipe_5x20_heli_e" pos="492 5352 -120" />
+        <inst name="pipe_5x20_heli_e" pos="492 5352 120" />
+        <inst name="pipe_5x20_heli_e" pos="612 5484 -120" />
+        <inst name="pipe_5x20_heli_e" pos="612 5484 120" />
+        <inst name="pipe_5x20_heli_e" pos="974.4 5436 120" />
+        <inst name="pipe_5x20_heli_e" pos="974.4 5436 -120" />
+        <inst name="pipe_5x20_heli_e" pos="948 5364 120" />
+        <inst name="pipe_5x20_heli_e" pos="948 5364 -120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="840 2520 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="840 2400 -240" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 1.5708" pos="1127.24 900 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 -1.5708" pos="1872.76 780 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 1.5708" pos="1127.24 780 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 1.5708" pos="1127.24 1020 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="1260 780 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="1260 1020 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="1260 900 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="1740 1020 -240" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 -1.5708" pos="1872.76 1020 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="-1.5708 0.392699 -1.5708" pos="1872.76 900 156.72" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="1740 780 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="1740 900 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="1199.12 2520.53 -240" />
+        <inst name="pipe_5x20_heli_e" pos="1065.92 5012.24 -120" />
+        <inst name="pipe_5x20_heli_e" pos="1065.92 5012.24 120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="2399.12 6180.53 -240" />
+        <inst name="pipe_5x20_heli_e" pos="1560 5940 0" />
+        <inst name="pipe_5x20_heli_e" pos="1560 6012 0" />
+        <inst name="pipe_5x20_heli_e" pos="2280 6600 0" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 0.392699" pos="1859.47 6719.12 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 0.392699" pos="1979.47 6719.12 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="1440.88 6179.47 -240" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 1.9635" pos="1440.88 6299.47 -240" />
+        <inst name="pipe_5x20_heli_e" pos="948 5508 120" />
+        <inst name="pipe_5x20_heli_e" orient="0 0 -1.1781" pos="2399.12 6300.53 -240" />
+    </entinst>
+    <entinst type="pipe_curved_02_heli_b">
+        <inst name="pipe_curved_02_heli_b" orient="0 0 -3.14159" pos="2144.4 1696.8 0" />
+    </entinst>
+    <entinst type="piston_wall_vertical_heli_a">
+        <inst name="piston_wall_vertical_heli_a" orient="0 0 -1.5708" pos="2208.0 1620.0 -7.62939e-006" />
+    </entinst>
+    <entinst type="radar_screen_02_heli_b">
+        <inst name="radar_screen_02_heli_b" orient="0 0 -2.44346" pos="1515.6 2796 0" />
+        <inst name="radar_screen_02_heli_b" orient="0 0 -0.785398" pos="1520.4 2965.2 0" />
+    </entinst>
+    <entinst type="shelf_heli_b">
+        <inst name="shelf_heli_b" orient="0 0 -1.5708" pos="960 4740 0" />
+        <inst name="shelf_heli_b" orient="0 0 -3.14159" pos="1590.73 6598.18 0" />
+        <inst name="shelf_heli_b" orient="0 0 -1.5708" pos="1318.85 1825.77 0" />
+        <inst name="shelf_heli_b" orient="0 0 -1.48353" pos="1332 516 0" />
+    </entinst>
+    <entinst type="tool_cabinet_01_heli_th">
+        <inst name="tool_cabinet_01_heli_th" orient="0 0 2.18166" pos="840 1836 0" />
+    </entinst>
+    <entinst type="wall_10ft_heli_b01">
+        <inst name="wall_10ft_heli_b01" pos="1860 1740 0" />
+    </entinst>
+    <entinst type="harm_target_once02">
+        <inst extents="-172.969 -230.145 0 172.969 230.145 127.805" name="harm_target_once02" pos="1561.27 1855.98 0" />
+        <inst extents="-183.059 -164.32 0 183.059 164.32 120.117" name="harm_target_once01" pos="1457.97 1438.45 0" />
+        <inst extents="-177.293 -174.41 0 177.293 174.41 125.883" name="harm_target_once03" pos="1579.79 2879.38 0" />
+    </entinst>
+    <entinst type="ng_missile_lightent08">
+        <inst extents="-6 -6 -6 6 6 6" name="ng_missile_lightent08" pos="2100.16 6420.6 117.497" />
+        <inst extents="-6 -6 -6 6 6 6" name="ng_missile_lightent07" pos="2100.16 6060.15 117.497" />
+        <inst extents="-6 -6 -6 6 6 6" name="ng_missile_lightent06" pos="1740.01 6060.15 117.497" />
+        <inst extents="-5.99994 -6 -6 6.00006 6 6" name="ng_missile_lightent04" pos="1020.14 2880.17 117.497" />
+        <inst extents="-6 -6 -6 6 6 6" name="ng_missile_lightent05" pos="1380.05 2880.17 117.497" />
+        <inst extents="-6 -6 -6 6 6 6" name="ng_missile_lightent09" pos="1740.01 6420.6 117.497" />
+    </entinst>
+    <entinst type="ff_room_floor_lightent02">
+        <inst extents="-6 -6 -6 6 6 6" name="ff_room_floor_lightent02" pos="1500 540 0" />
+        <inst extents="-6 -6 -6 6 6 6" name="ff_room_floor_lightent" pos="1019.95 1980 0" />
+    </entinst>
+    <entinst type="missile_lightent03">
+        <inst extents="-6 -6 -6 6 6 6" name="missile_lightent03" pos="1159.89 2879.42 119.272" />
+    </entinst>
+    <entinst type="missile_lightent02">
+        <inst extents="-6 -6 -6 6 6 6" name="missile_lightent02" pos="1919.92 6435.12 107.481" />
+        <inst extents="-6 -6 -6 6 6 6" name="missile_lightent01" pos="1919.92 6044.98 107.481" />
+    </entinst>
+    <entinst type="noneroom">
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="noneroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="ironmanroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="invisiblewomanroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00009 -5.99996 -6 5.99991 6.00004 6" name="captainamericaroom" orient="0 0 1.5708" pos="1980 4740 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="daredevilroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00013 -5.99999 -6 5.99987 6.00001 6" name="Elektranpc" orient="0 0 -1.5708" pos="780 5184 -120" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="spiderwomanroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="nickfuryroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="cyclopsroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="venomroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="blackwidowvroom" orient="0 0 1.5708" pos="780 4378.63 0" />
+    </entinst>
+    <entinst type="player_start08">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.6381 83.9544" name="player_start08" orient="0 0 -1.5708" pos="1536 1500 0" />
+    </entinst>
+    <entinst type="player_start07">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.6381 83.9544" name="player_start07" orient="0 0 -1.5708" pos="1572 1404 0" />
+    </entinst>
+    <entinst type="player_start06">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.6381 83.9544" name="player_start06" orient="0 0 -1.5708" pos="1464 1440 0" />
+    </entinst>
+    <entinst type="player_start05">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.638 83.9544" name="player_start05" orient="0 0 -1.5708" pos="1500 1344 0" />
+    </entinst>
+    <entinst type="player_start17">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.6381 83.9544" name="player_start17" orient="0 0 1.5708" pos="1496.88 1711.81 0" />
+    </entinst>
+    <entinst type="player_start18">
+        <inst extents="-21.6499 -32.8804 0 14.2719 17.6382 83.9544" name="player_start18" orient="0 0 0.174533" pos="1548.7 1816.38 0" />
+    </entinst>
+    <entinst type="player_start19">
+        <inst extents="-21.65 -32.8805 -8.2925e-006 14.2718 17.6381 83.9544" name="player_start19" pos="984 2004 0" />
+    </entinst>
+    <entinst type="player_start16">
+        <inst extents="-21.6501 -32.8804 0 14.2718 17.6382 83.9544" name="player_start16" orient="0 0 -2.87979" pos="1428.61 1839.06 0" />
+    </entinst>
+    <entinst type="player_start21">
+        <inst extents="-21.65 -32.8805 -8.2925e-006 14.2718 17.6381 83.9544" name="player_start21" pos="1008 1896 0" />
+    </entinst>
+    <entinst type="player_start22">
+        <inst extents="-21.6502 -32.8805 0 14.2716 17.6381 83.9544" name="player_start22" orient="0 0 -1.5708" pos="996 2628 0" />
+    </entinst>
+    <entinst type="player_start09">
+        <inst extents="-21.6499 -32.8804 0 14.2719 17.6382 83.9544" name="player_start09" orient="0 0 3.05433" pos="1956 1656 0" />
+    </entinst>
+    <entinst type="player_start23">
+        <inst extents="-21.6502 -32.8806 0 14.2716 17.638 83.9544" name="player_start23" orient="0 0 -1.5708" pos="1056 2568 0" />
+    </entinst>
+    <entinst type="player_start24">
+        <inst extents="-21.6499 -32.8807 0 14.272 17.6379 83.9544" name="player_start24" orient="0 0 -0.959931" pos="846.517 2851.12 0" />
+    </entinst>
+    <entinst type="player_start25">
+        <inst extents="-21.6497 -32.8806 0 14.2721 17.638 83.9544" name="player_start25" orient="0 0 -1.309" pos="971.705 2842.86 0" />
+    </entinst>
+    <entinst type="player_start31">
+        <inst extents="-21.6498 -32.8804 0 14.272 17.6382 83.9544" name="player_start31" orient="0 0 -2.35619" pos="2064.24 6384.63 0" />
+    </entinst>
+    <entinst type="player_start30">
+        <inst extents="-21.6502 -32.8805 0 14.2716 17.6381 83.9544" name="player_start30" orient="0 0 -1.5708" pos="780 5388 0" />
+    </entinst>
+    <entinst type="player_start15">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.638 83.9544" name="player_start15" orient="0 0 -0.523599" pos="1392 1992 0" />
+    </entinst>
+    <entinst type="player_start11">
+        <inst extents="-21.65 -32.8805 0 14.2718 17.6381 83.9544" name="player_start11" orient="0 0 3.05433" pos="2040 1644 0" />
+    </entinst>
+    <entinst type="player_start12">
+        <inst extents="-21.65 -32.8806 0 14.2718 17.638 83.9544" name="player_start12" orient="0 0 -2.70526" pos="1932 1992 0" />
+    </entinst>
+    <entinst type="player_start13">
+        <inst extents="-21.6502 -32.8806 0 14.2716 17.638 83.9544" name="player_start13" orient="0 0 -2.70526" pos="1932 1920 0" />
+    </entinst>
+    <entinst type="player_start20">
+        <inst extents="-21.65 -32.8805 -8.29249e-006 14.2718 17.6381 83.9544" name="player_start20" pos="936 1932 0" />
+    </entinst>
+    <entinst type="player_start14">
+        <inst extents="-21.6501 -32.8806 0 14.2718 17.638 83.9544" name="player_start14" orient="0 0 -2.70526" pos="1848 1992 0" />
+    </entinst>
+    <entinst type="player_start29">
+        <inst extents="-21.6501 -32.8805 0 14.2717 17.6381 83.9544" name="player_start29" orient="0 0 -1.5708" pos="1409 3223.45 0" />
+    </entinst>
+    <entinst type="player_start28">
+        <inst extents="-21.6501 -32.8806 0 14.2717 17.638 83.9544" name="player_start28" orient="0 0 -1.5708" pos="1345.9 3276.84 0" />
+    </entinst>
+    <entinst type="player_start27">
+        <inst extents="-21.6501 -32.8805 0 14.2717 17.6381 83.9544" name="player_start27" orient="0 0 0.872665" pos="1472.08 2916.16 0" />
+    </entinst>
+    <entinst type="player_start10">
+        <inst extents="-21.6499 -32.8805 0 14.2719 17.6381 83.9544" name="player_start10" orient="0 0 3.05433" pos="1992 1572 0" />
+    </entinst>
+    <entinst type="player_start26">
+        <inst extents="-21.6499 -32.8806 0 14.2719 17.638 83.9544" name="player_start26" orient="0 0 -0.785398" pos="1465.67 2846.23 0" />
+    </entinst>
+    <entinst type="player_start_all">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all" orient="0 0 1.5708" pos="1500 480 0" />
+    </entinst>
+    <entinst type="launchrelay03">
+        <inst extents="-6 -6 0 6 6 12" name="launchrelay03" pos="1920 6120 -240" />
+    </entinst>
+    <entinst type="Captainamericascript">
+        <inst extents="-6 -6 0 6 6 12" name="Captainamericascript" pos="1980 4740 0" />
+    </entinst>
+    <entinst type="launchrelay01">
+        <inst extents="-6 -6 0 6 6 12" name="launchrelay01" pos="1920 6360 -240" />
+    </entinst>
+    <entinst type="WSdeathrelay">
+        <inst extents="-6 -6 0 6 6 12" name="WSdeathrelay" pos="1980 4620 0" />
+    </entinst>
+    <entinst type="lowlight">
+        <inst extents="-6 -6 0 6 6 12" name="lowlight" pos="1500 360 0" />
+    </entinst>
+    <entinst type="launchrelay04">
+        <inst extents="-6 -6 0 6 6 12" name="launchrelay04" pos="1920.41 6239.81 -240" />
+    </entinst>
+    <entinst type="delayrelay">
+        <inst extents="-6 -6 0 6 6 12" name="delayrelay" pos="2040 6240 -240" />
+    </entinst>
+    <entinst type="launchrelay02">
+        <inst extents="-6 -6 0 6 6 12" name="launchrelay02" pos="1800 6240 -240" />
+    </entinst>
+    <entinst type="trigger_area02">
+        <inst extents="-229.912 -166.569 0 229.912 166.569 120.821" name="trigger_area02" pos="1977.23 1560.07 0" />
+    </entinst>
+    <entinst type="trigger_area03">
+        <inst extents="-175.953 -172.434 0 175.953 172.434 121.994" name="trigger_area03" pos="1918.58 1914.32 0" />
+    </entinst>
+    <entinst type="trigger_area04">
+        <inst extents="-235.191 -300.293 0 235.191 300.293 121.994" name="trigger_area04" pos="1503.91 1922.53 0" />
+    </entinst>
+    <entinst type="trigger_area01">
+        <inst extents="-234.735 -234.735 0 234.735 234.735 121.1" name="trigger_area01" pos="1508.76 1368.67 0" />
+    </entinst>
+    <entinst type="trigger_use01">
+        <inst extents="-13.9296 -16.5689 0 13.9296 16.5689 13.783" name="trigger_use01" parent="bomb_sim_c01" pos="1392.13 1440 0" />
+    </entinst>
+    <entinst type="trigger_use04">
+        <inst extents="-52.0566 -18.7405 0 52.0566 18.7405 110.36" name="trigger_use04" pos="1381.9 3393.06 0" />
+    </entinst>
+    <entinst type="trigger_use06">
+        <inst extents="-29.9999 -30.0001 0 30.0001 29.9999 84" name="trigger_use06" orient="0 0 -0.785398" pos="2046 6366 0" />
+    </entinst>
+    <entinst type="trigger_use02">
+        <inst extents="-13.9296 -16.5688 0 13.9296 16.569 13.783" name="trigger_use02" orient="0 0 -0.698132" parent="bomb_sim_c02" pos="1613.48 1857.65 0" />
+    </entinst>
+    <entinst type="trigger_use03">
+        <inst extents="-19.9295 -16.569 0 19.9295 16.5688 13.783" name="trigger_use03" orient="0 0 -0.0012886" parent="bomb_sim_c03" pos="1573.99 2851.17 0" />
+        <inst extents="-19.9295 -16.5688 0 19.9295 16.569 13.783" name="trigger_use05" orient="0 0 -0.0012886" parent="bomb_sim_c03" pos="1573.99 2923.17 0" />
+    </entinst>
+    <entinst type="wp_launchsequence02">
+        <inst extents="-5.99979 -6.00005 -6 6.00021 5.99995 6" name="wp_launchsequence02" orient="0 0 0.785398" pos="1788 6108 0" />
+    </entinst>
+    <entinst type="wp_captainamerica01">
+        <inst extents="-6.00009 -5.99997 -6 5.99991 6.00003 6" name="wp_captainamerica01" orient="0 0 1.5708" pos="1980 4980 0" />
+    </entinst>
+    <entinst type="wp_launchsequenceclose01">
+        <inst extents="-5.99995 -6.00002 -6 6.00005 5.99998 6" name="wp_launchsequenceclose01" orient="0 0 2.35619" pos="2064 6096 0" />
+    </entinst>
+    <entinst type="wp_launchsequenceclose02">
+        <inst extents="-6.00013 -6.00005 -6 5.99987 5.99995 6" name="wp_launchsequenceclose02" orient="0 0 0.785398" pos="1776 6096 0" />
+    </entinst>
+    <entinst type="wp_wsoldier02">
+        <inst extents="-5.99983 -6 -6 6.00017 6 6" name="wp_wsoldier02" orient="0 0 -1.5708" pos="1979.9 4501.06 0" />
+    </entinst>
+    <entinst type="wp_wsoldier01">
+        <inst extents="-5.99982 -6.00003 -6 6.00018 5.99997 6" name="wp_wsoldier01" orient="0 0 -1.5708" pos="1920.69 5459.67 10.4907" />
+    </entinst>
+    <entinst type="wp_launchsequence03">
+        <inst extents="-5.99999 -5.99992 -6 6.00001 6.00008 6" name="wp_launchsequence03" orient="0 0 -0.785398" pos="1788 6372 0" />
+    </entinst>
+    <entinst type="wp_launch01">
+        <inst extents="-5.99996 -6.00008 -6 6.00004 5.99992 6" name="wp_launch01" orient="0 0 -2.35619" pos="2052 6372 0" />
+    </entinst>
+    <entinst type="wp_launchsequence01">
+        <inst extents="-6.00009 -6.00002 -6 5.99991 5.99998 6" name="wp_launchsequence01" orient="0 0 2.35619" pos="2052 6108 0" />
+    </entinst>
+    <entinst type="wp_launchsequence04">
+        <inst extents="-6.00019 -6.00001 -6 5.99981 5.99999 6" name="wp_launchsequence04" orient="0 0 -1.74533" pos="2052 6396 0" />
+    </entinst>
+    <entinst type="bomb_blinking_lights_sim_a01">
+        <inst name="bomb_blinking_lights_sim_a01" orient="0 0 3.14159" pos="1354.62 1439.67 0" />
+    </entinst>
+    <entinst type="bomb_blinking_lights_sim_a03">
+        <inst name="bomb_blinking_lights_sim_a03" orient="0 0 1.5708" pos="1574.16 2892.01 0" />
+    </entinst>
+    <entinst type="bomb_blinking_lights_sim_a02">
+        <inst name="bomb_blinking_lights_sim_a02" orient="0 0 -0.698132" pos="1640.96 1834.59 0" />
+    </entinst>
+    <entinst type="bomb_sim_c03">
+        <inst name="bomb_sim_c03" orient="0 0 1.5708" pos="1574.16 2892.01 0" />
+    </entinst>
+    <entinst type="bomb_sim_c01">
+        <inst name="bomb_sim_c01" orient="0 0 3.14159" pos="1354.62 1439.67 0" />
+    </entinst>
+    <entinst type="bomb_sim_c02">
+        <inst name="bomb_sim_c02" orient="0 0 -0.698132" pos="1640.96 1834.59 0" />
+    </entinst>
+    <entinst type="bomb_sim_c01_tappy">
+        <inst name="bomb_sim_c01_tappy" orient="0 0 3.14159" pos="1354.62 1439.67 0" />
+    </entinst>
+    <entinst type="bomb_sim_c03_tappy">
+        <inst name="bomb_sim_c03_tappy" orient="0 0 1.5708" pos="1574.16 2892.01 0" />
+    </entinst>
+    <entinst type="bomb_sim_c02_tappy">
+        <inst name="bomb_sim_c02_tappy" orient="0 0 -0.698132" pos="1640.96 1834.59 0" />
+    </entinst>
+    <entinst type="console_button_heli_a04">
+        <inst name="console_button_heli_a04" orient="0 0 -2.26893" pos="1800 6360 0" />
+        <inst name="console_button_heli_a02" orient="0 0 0.785398" pos="2040 6120 0" />
+        <inst name="console_button_heli_a03" orient="0 0 -0.785398" pos="1800 6120 0" />
+    </entinst>
+    <entinst type="console_button_heli_a01">
+        <inst name="console_button_heli_a01" orient="0 0 2.35619" pos="2040 6360 0" />
+    </entinst>
+    <entinst type="icbm_sim_e">
+        <inst name="icbm_sim_e" pos="1704 5400 -240" />
+        <inst name="icbm_sim_e" pos="2136 5400 -240" />
+        <inst name="icbm_sim_e" pos="2136 5640 -240" />
+        <inst name="icbm_sim_e" pos="1704 5640 -240" />
+    </entinst>
+    <entinst type="icbm_heli_e02">
+        <inst name="icbm_heli_e02" pos="1920 6240 -240" />
+    </entinst>
+    <entinst type="icbm_heli_e01">
+        <inst name="icbm_heli_e01" pos="3455.16 7408.56 -240" />
+    </entinst>
+    <entinst type="key_card_sim_a01">
+        <inst name="key_card_sim_a01" pos="2172 5400 -240" />
+    </entinst>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="150" material="hollow_metal" model="heli_carrier/air_tanks_heli_b" name="air_tanks_heli_b01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" />
+    <entity actsound="zone_shared/heli/alarm_light" animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/alarmlight_red_heli_a" name="alarmlight_red_heli_a06" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity actsound="zone_shared/heli/alarm_light" animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/alarmlight_red_heli_a" name="alarmlight_red_heli_a02" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="heli_carrier/console_01_stump_heli_b" name="console_01_heli_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="console_02_heli_b_b_d" fxlevel="2" health="150" material="solid_metal" model="heli_carrier/console_02_heli_b" name="console_02_heli_b_b01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="150" mass="0" material="solid_metal" model="heli_carrier/console_02_stump_heli_b" name="console_02_heli_b_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_03_heli_b_d" fxlevel="2" health="150" material="electronics" model="heli_carrier/console_03_heli_b" name="console_03_heli_b01" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" mass="0" material="electronics" model="heli_carrier/console_03_stump_heli_b" name="console_03_heli_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="2" material="hollow_metal" model="heli_carrier/container_01_heli_th" name="container_01_heli_th02" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="2" material="hollow_metal" model="heli_carrier/container_03_heli_th" name="container_03_heli_th02" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="2" material="hollow_metal" model="heli_carrier/crate_01_heli_b" name="crate_01_heli_b07" nogravity="true" nopickup="true" nopush="true" randompickups="3" stackphysics="true" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="2" material="hollow_metal" model="heli_carrier/crate_02_heli_b" name="crate_02_heli_b07" nogravity="true" nopickup="true" nopush="true" randompickups="3" stackphysics="true" structure="0" />
+    <entity actcountdisable="0" actonuse="true" actsound="zone_shared/heli/heli_door" autoclosedelay="3" classname="doorent" material="solid_metal" model="heli_carrier/door_01_heli_d" name="door_01_heli_d02" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="0" actmatchteam="false" actonuse="true" actsound="zone_shared/heli/heli_door" autoclosedelay="2" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d05" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" team="none" toggleonact="false" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d04" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/heli/heli_door" autoclosedelay="0" classname="doorent" material="solid_metal" model="heli_carrier/door_02_heli_d" name="door_02_heli_d03" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="heli_carrier/floor_light_01_heli_a" name="ff_room_floor_light" nogravity="true" nopickup="true" nopush="true" pathignore="true" smartent="false" structure="2" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="heli_carrier/radar_screen_02_stump_heli_b" name="radar_screen_02_heli_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathscript="sim/heli1/enable_room3_spawners" deathsound="death_style/ds_metal_m" deathspawn="wall_10ft_heli_b_d" fxlevel="2" health="100" material="solid_metal" model="heli_carrier/wall_10ft_heli_b" name="wall_10ft_heli_b01" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1" />
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" mass="0" material="solid_metal" model="heli_carrier/wall_10ft_stump_heli_b" name="wall_10ft_heli_b_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2" />
+    <entity actcountremove="0" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_fire" name="harm_target_once02" nocollide="true" radiusdamage="true" smartent="false" startenabled="false" togglestarton="false" />
+    <entity classname="lightent" flickeroff="1.5" flickeron="1.5" flickerrandom="0.01" lightcolor="0.95 0.14 0.03" lightradius="350" lightstyle="pulse" name="missile_lightent02" nocollide="true" prevgenonly="true" smartent="false" startoff="false" />
+    <entity classname="lightent" flickeroff="1.5" flickeron="1.5" flickerrandom="0.01" lightcolor="0.95 0.14 0.03" lightradius="350" lightstyle="pulse" name="missile_lightent03" nextgenonly="false" nocollide="true" prevgenonly="true" smartent="false" startoff="false" />
+    <entity classname="lightent" lightcolor="1 0.76 0" lightradius="300" name="ff_room_floor_lightent02" nextgenonly="true" nocollide="true" smartent="false" startoff="false" />
+    <entity classname="lightent" lightcolor="0.97 0.59 0.54" lightradius="350" name="ng_missile_lightent08" nextgenonly="true" nocollide="true" smartent="false" startoff="false" />
+    <entity classname="ent" name="noneroom" nocollide="true" smartent="false" />
+    <entity classname="playerstartent" name="player_start26" nocollide="true" slot="26" />
+    <entity classname="playerstartent" name="player_start10" nocollide="true" slot="10" />
+    <entity classname="playerstartent" name="player_start27" nocollide="true" slot="27" />
+    <entity classname="playerstartent" name="player_start28" nocollide="true" slot="28" />
+    <entity classname="playerstartent" name="player_start29" nocollide="true" slot="29" />
+    <entity classname="playerstartent" name="player_start14" nocollide="true" slot="14" />
+    <entity classname="playerstartent" name="player_start20" nocollide="true" slot="20" />
+    <entity classname="playerstartent" name="player_start13" nocollide="true" slot="13" />
+    <entity classname="playerstartent" name="player_start12" nocollide="true" slot="12" />
+    <entity classname="playerstartent" name="player_start11" nocollide="true" slot="11" />
+    <entity classname="playerstartent" name="player_start15" nocollide="true" slot="15" />
+    <entity actondeath="false" classname="playerstartent" name="player_start30" nocollide="true" slot="30" />
+    <entity actondeath="true" actscript="sim/heli1/wintersoldier_death_script" classname="playerstartent" name="player_start31" nocollide="true" slot="31" />
+    <entity classname="playerstartent" name="player_start25" nocollide="true" slot="25" />
+    <entity classname="playerstartent" name="player_start24" nocollide="true" slot="24" />
+    <entity classname="playerstartent" name="player_start23" nocollide="true" slot="23" />
+    <entity classname="playerstartent" name="player_start09" nocollide="true" slot="9" />
+    <entity classname="playerstartent" name="player_start22" nocollide="true" slot="22" />
+    <entity classname="playerstartent" name="player_start21" nocollide="true" slot="21" />
+    <entity classname="playerstartent" name="player_start16" nocollide="true" slot="16" />
+    <entity classname="playerstartent" name="player_start19" nocollide="true" slot="19" />
+    <entity classname="playerstartent" name="player_start18" nocollide="true" slot="18" />
+    <entity classname="playerstartent" name="player_start17" nocollide="true" slot="17" />
+    <entity classname="playerstartent" name="player_start05" nocollide="true" slot="5" />
+    <entity classname="playerstartent" name="player_start06" nocollide="true" slot="6" />
+    <entity classname="playerstartent" name="player_start07" nocollide="true" slot="7" />
+    <entity classname="playerstartent" name="player_start08" nocollide="true" slot="8" />
+    <entity actscript="sim/heli1/launch_sequence2" classname="actionent" name="launchrelay02" nocollide="true" smartent="false" startenabled="false" togglestarton="false" />
+    <entity actcountact="3" actscript="sim/heli1/delay_launch" classname="actionent" name="delayrelay" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/launch_sequence4" classname="actionent" name="launchrelay04" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/lowlight" classname="actionent" name="lowlight" nocollide="true" smartent="false" />
+    <entity actcountdisable="1" classname="actionent" name="WSdeathrelay" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/launch_sequence1" classname="actionent" name="launchrelay01" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/captainamerica_script" classname="actionent" name="Captainamericascript" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/launch_sequence3" classname="actionent" name="launchrelay03" nocollide="true" smartent="false" startenabled="false" togglestarton="false" />
+    <entity actleader="true" actmatchteam="true" actscript="sim/heli1/disable_room4_spawners" boxcollision="true" classname="scripttriggerent" name="trigger_area01" nocollide="true" team="hero" />
+    <entity actleader="true" actmatchteam="true" actscript="sim/heli1/disable_room1_spawners" boxcollision="true" classname="scripttriggerent" name="trigger_area04" nocollide="true" team="hero" />
+    <entity actleader="true" actmatchteam="true" actscript="sim/heli1/enable_room4_spawners" boxcollision="true" classname="scripttriggerent" name="trigger_area03" nocollide="true" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="scripttriggerent" name="trigger_area02" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actonuse="true" actscript="sim/heli1/bomb_defuse_start3" acttogglesanim="false" boxcollision="true" classname="gameent" description="Disarm bomb" name="trigger_use03" nocollide="true" team="hero" />
+    <entity actcountremove="1" actinactivedelay="0" actmatchteam="true" actonuse="true" actscript="sim/heli1/bomb_defuse_start2" acttogglesanim="false" boxcollision="true" classname="gameent" description="Disarm bomb" name="trigger_use02" nocollide="true" team="hero" />
+    <entity actcountremove="1" actonuse="true" actscript="sim/heli1/shutdown_launch_sequence" boxcollision="true" classname="gameent" description="Shutdown launch sequence" name="trigger_use06" nocollide="true" smartent="false" startenabled="false" team="hero" togglestarton="false" />
+    <entity actmatchteam="true" actonuse="true" actscript="sim/heli1/villainroom" boxcollision="true" classname="gameent" description="Open door" name="trigger_use04" nocollide="true" quickuse="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actonuse="true" actscript="sim/heli1/bomb_defuse_start1" acttogglesanim="false" boxcollision="true" classname="gameent" description="Disarm bomb" name="trigger_use01" nocollide="true" team="hero" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequence4" classname="waypointent" name="wp_launchsequence04" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequence1" classname="waypointent" name="wp_launchsequence01" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="sim/heli1/start_launch_sequence" beeline="true" classname="waypointent" name="wp_launch01" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequence3" classname="waypointent" name="wp_launchsequence03" nocollide="true" smartent="false" speed="1" />
+    <entity beeline="false" classname="waypointent" name="wp_wsoldier01" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="sim/heli1/wintersoldier_disappear" beeline="false" classname="waypointent" name="wp_wsoldier02" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequenceclose2" beeline="true" classname="waypointent" name="wp_launchsequenceclose02" nocollide="true" smartent="false" speed="1" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequenceclose1" beeline="true" classname="waypointent" name="wp_launchsequenceclose01" nocollide="true" smartent="false" speed="1" />
+    <entity classname="waypointent" name="wp_captainamerica01" nocollide="true" smartent="false" />
+    <entity actscript="sim/heli1/wintersoldier_launch_sequence2" classname="waypointent" name="wp_launchsequence02" nocollide="true" smartent="false" speed="1" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="simulator/bomb_blinking_lights_sim_a" name="bomb_blinking_lights_sim_a02" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="simulator/bomb_blinking_lights_sim_a" name="bomb_blinking_lights_sim_a03" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="simulator/bomb_blinking_lights_sim_a" name="bomb_blinking_lights_sim_a01" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity buttonseq="R_0.5-1.5 R_2.0-2.9 R_3.7-4.5 R_5.3-6.0 R_7.0-7.5" classname="challengeent" failscript="sim/heli1/bomb_defuse_mistake2" failsound="mission/cap/plunger_pop" heroanim="ea_zone1" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/bomb_beep" material="solid_metal" model="simulator/bomb_sequence_sim_c" name="bomb_sim_c02" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonlose="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_success2" winsound="mission/cap/shutdown_success2" />
+    <entity buttonseq="R_0.5-1.5 R_2.0-3.0 R_3.5-4.5 R_5.0-6.0 R_6.5-7.5" classname="challengeent" failscript="sim/heli1/bomb_defuse_mistake1" failsound="mission/cap/plunger_pop" heroanim="ea_zone1" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/bomb_beep" material="solid_metal" model="simulator/bomb_sequence_sim_c" name="bomb_sim_c01" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonlose="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_success1" winsound="mission/cap/shutdown_success2" />
+    <entity buttonseq="R_0.8-1.5 R_2.5-3.0 R_4.0-4.5 R_5.5-6.0 R_7.0-7.5" classname="challengeent" failscript="sim/heli1/bomb_defuse_mistake3" failsound="mission/cap/plunger_pop" heroanim="ea_zone1" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/bomb_beep" material="solid_metal" model="simulator/bomb_sequence_sim_c" name="bomb_sim_c03" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonlose="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_success3" winsound="mission/cap/shutdown_success2" />
+    <entity buttonseq="R_5" challengetype="tap" classname="challengeent" deathspawn="explosion_lrg" failscript="sim/heli1/bomb_defuse_fail2" failsound="mission/cap/flatline" heroanim="ea_zone2" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/fast_beep" material="solid_metal" model="simulator/bomb_tap_sim_c" name="bomb_sim_c02_tappy" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonwin="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_correction2" wintime="4" />
+    <entity buttonseq="R_6" challengetype="tap" classname="challengeent" deathspawn="explosion_lrg" failscript="sim/heli1/bomb_defuse_fail3" failsound="mission/cap/flatline" heroanim="ea_zone2" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/fast_beep" material="solid_metal" model="simulator/bomb_tap_sim_c" name="bomb_sim_c03_tappy" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonwin="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_correction3" wintime="4" />
+    <entity buttonseq="R_3" challengetype="tap" classname="challengeent" deathspawn="explosion_lrg" failscript="sim/heli1/bomb_defuse_fail1" failsound="mission/cap/flatline" heroanim="ea_zone2" interaction="data/fightstyles/interact_tapsequence" interaction_node="generic_sequence" interaction_offset_type="local" interactsoundloop="mission/cap/fast_beep" material="solid_metal" model="simulator/bomb_tap_sim_c" name="bomb_sim_c01_tappy" nogravity="true" nomightscale="true" nopickup="true" nopush="true" noresetisolateonwin="true" smartent="false" structure="2" winscript="sim/heli1/bomb_defuse_correction1" wintime="4" />
+    <entity actmatchteam="true" actonuse="true" actscript="sim/heli1/delay_sequence" actsound="zone_shared/object/console_fighter" acttogglesanim="false" animreverse="true" animstarton="true" classname="physent" description="console" material="solid_metal" model="simulator/console_button_sim_a" name="console_button_heli_a01" nogravity="true" nopickup="true" nopush="true" smartent="false" startenabled="false" structure="2" team="hero" toggleonact="false" />
+    <entity actmatchteam="true" actonuse="true" actscript="sim/heli1/delay_sequence" actsound="zone_shared/object/console_fighter" acttogglesanim="false" animreverse="true" animstarton="true" classname="physent" description="console" material="solid_metal" model="simulator/console_button_sim_a" name="console_button_heli_a04" nogravity="true" nopickup="true" nopush="true" smartent="false" startenabled="false" structure="2" team="hero" toggleonact="false" togglestarton="false" />
+    <entity acteffect="map/simulator/icbm_takeoff" camerafadeout="false" classname="physent" material="solid_metal" model="simulator/icbm_sim_e" name="icbm_heli_e01" nogravity="true" nopickup="true" nopush="true" scale="2" smartent="false" structure="2" />
+    <entity cameracollide="false" camerafadeout="true" classname="physent" material="solid_metal" model="simulator/icbm_sim_e" name="icbm_heli_e02" nogravity="true" nopickup="true" nopush="true" scale="2" smartent="false" structure="2" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="sim/heli1/launch_key" actsound="common/game/pickup_item" animstarton="true" classname="physent" material="solid_metal" model="simulator/key_card_sim_a" name="key_card_sim_a01" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" team="hero" />
+</world>

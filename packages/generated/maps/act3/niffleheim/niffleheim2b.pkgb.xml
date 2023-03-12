@@ -1,0 +1,150 @@
+<packagedef>
+    <combat_is filename="on" />
+    <bigconvmap filename="off" />
+    <model filename="maps/act3/niffleheim/niffleheim2b" />
+    <shadow filename="maps/act3/niffleheim/niffleheim2b" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/niffleheim2b" />
+    <model filename="skybox/star_skybox" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/temp001" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/temp002" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/ymir_dead" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_fight" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/ymir_intro" />
+    <effect filename="base/misc/cold_breath" />
+    <texture filename="textures/decals/crack_decal_a" />
+    <texture filename="textures/spray2" plat="23" />
+    <model filename="models/chunks/rip_ice" />
+    <texture filename="textures/misc_elec2" />
+    <texture filename="textures/explosion_puff_a_gray" plat="23" />
+    <texture filename="textures/nextgen/debris1" plat="40" />
+    <texture filename="textures/nextgen/fur" plat="40" />
+    <effect filename="map/niffleheim/catapult_impact" />
+    <texture filename="textures/blackhole_a" />
+    <effect filename="map/niffleheim/catapult_indicator" />
+    <model filename="models/chunks/ice_chunk_small" />
+    <texture filename="textures/spray4" />
+    <texture filename="textures/fog_a" />
+    <texture filename="textures/l_graystreak2" />
+    <effect filename="map/niffleheim/ymir_stab" />
+    <motionpath filename="niffleheim/ymir_camera_relative/mp_ymir_camera" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/clubsmash" />
+    <actoranimdb filename="106_frostgiant" />
+    <actorskin filename="10601" />
+    <model filename="HUD/hud_head_10601" />
+    <effect filename="char/frstgnt/p2_power" />
+    <effect filename="char/frstgnt/p1_power" />
+    <effect filename="char/frstgnt/p2_aura" />
+    <actoranimdb filename="fightstyle_weapon_onehanded" />
+    <actoranimdb filename="fightstyle_weapon_onehanded_4_106_frostgiant" />
+    <actoranimdb filename="interact_frostgiant_victim" />
+    <model filename="models/bolton/frostgiant_hammer" />
+    <xml filename="data/weapons/wp_frostgiant_hammer" />
+    <actoranimdb filename="fightstyle_villain_big" />
+    <actoranimdb filename="108_ymir" />
+    <actorskin filename="10801" />
+    <model filename="HUD/hud_head_10801" />
+    <texture filename="textures/spots4" />
+    <texture filename="textures/misc_glow" />
+    <effect filename="char/ymir/p1_power" />
+    <effect filename="char/iceman/p1_aura" />
+    <effect filename="char/iceman/special_chilled" />
+    <model filename="models/chunks/iceman_frozen_block" />
+    <texture filename="textures/frost_additive" />
+    <model filename="models/chunks/ice_chunk_med" />
+    <effect filename="char/iceman/special_frozen" />
+    <texture filename="textures/spray1" />
+    <effect filename="char/ymir/p2_power" />
+    <model filename="models/chunks/roc_3" />
+    <effect filename="char/ymir/p3_power" />
+    <texture filename="textures/decals/sent_footprint" />
+    <effect filename="char/ymir/p4_power" />
+    <actoranimdb filename="interact_ymir_victim" />
+    <model filename="models/pickups/sketchpad" />
+    <effect filename="base/misc/misc_watersplash" />
+    <texture filename="textures/s_waterwake" />
+    <effect filename="base/misc/misc_waterwake" />
+    <effect filename="base/misc/misc_waterambient" />
+    <texture filename="textures/water" />
+    <texture filename="textures/nextgen/subtleripples_n" plat="104" />
+    <model filename="models/chunks/c_rocktunnels_c" />
+    <texture filename="textures/chunks/stone_1" />
+    <texture filename="textures/nextgen/debrisline1" plat="40" />
+    <texture filename="textures/nextgen/decals/debrisdecal1" plat="40" />
+    <effect filename="base/material/break/brk_stone" />
+    <model filename="models/niffleheim/great_barricade_nif_b" />
+    <sound filename="death_style/ds_stone_l" />
+    <model filename="models/niffleheim/icy_rock_01_nif_th" />
+    <sound filename="death_style/ds_stone_m" />
+    <model filename="models/niffleheim/icy_rock_02_nif_th" />
+    <model filename="models/niffleheim/icy_rock_large_nif_th" />
+    <model filename="models/niffleheim/u_ymir_ice_spear_nif_w" />
+    <actoranimdb filename="fightstyle_weapon_spear" />
+    <sound filename="weapons/throwable_impact" />
+    <xml filename="data/entities/ents_fightstyle_throw" />
+    <xml filename="data/weapons/wp_throwable" />
+    <model filename="models/niffleheim/ymir_club_clip_nif_e" />
+    <texture filename="textures/dirt" plat="23" />
+    <model filename="models/chunks/c_mansion_c" />
+    <model filename="models/chunks/c_rocktunnels_f" plat="40" />
+    <effect filename="base/material/break/brk_plantsnow" />
+    <model filename="models/niffleheim/ymir_tree_22ft_snow_nif_e" />
+    <sound filename="death_style/ds_plantsnow_l" />
+    <model filename="models/chunks/c_icetunnel_b" />
+    <effect filename="map/niffleheim/snowgiant_spawn" />
+    <model filename="models/weapons/frost_giant_spear_2_handed" />
+    <actoranimdb filename="fightstyle_weapon_twohanded" />
+    <actoranimdb filename="fightstyle_weapon_twohanded_4_106_frostgiant" />
+    <actoranimdb filename="fightstyle_weapon_twohanded_4_humanoid_large" />
+    <xml filename="data/weapons/wp_ymir_pike" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_minion_spawn" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/spawn_ymir_minion" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_spawn" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_death" />
+    <xml_resident filename="data/aipatterns/ymir" />
+    <effect filename="base/misc/misc_treasure" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/challengefail" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/tappychallengefail" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/challengewin" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/challenge3" />
+    <texture filename="textures/nextgen/decals/burn_mark_alpha" plat="40" />
+    <texture filename="textures/nextgen/smoke_under1" plat="40" />
+    <texture filename="textures/nextgen/fire7" plat="40" />
+    <texture filename="textures/nextgen/fire_blue2" plat="40" />
+    <texture filename="textures/decals/burn_mark_alpha" plat="23" />
+    <texture filename="textures/nextgen/distort_fire_med" plat="40" />
+    <effect filename="map/common/fire_large" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_cam_reset" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/arena_in" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/arena_out" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/ymir_intro" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/3_niffleheim2_040" />
+    <model filename="HUD/hud_head_0801" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/3_niffleheim2_042" />
+    <xml filename="conversations/act3/niffleheim/niffleheim2/3_niffleheim2_042_DLC" />
+    <model filename="models/niffleheim/great_barricade_stump_nif_b" />
+    <texture filename="textures/spark_orange" />
+    <effect filename="map/niffleheim/spear_dissolve" />
+    <script filename="scripts/act3/niffleheim/niffleheim2/start_challenge" />
+    <effect filename="map/niffleheim/ymir_treebreak" />
+    <sound filename="hero_challenge/ymir/treefall" />
+    <model filename="models/niffleheim/tree_22ft_stump_nif_a" />
+    <actoranimdb filename="zone_niffleheim2b" />
+    <characters filename="maps/act3/niffleheim/niffleheim2b" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_onehanded" />
+    <fightstyle filename="data/fightstyles/interact_frostgiant_victim" />
+    <fightstyle filename="data/powerstyles/ps_frostgiant" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain_big" />
+    <fightstyle filename="data/fightstyles/interact_ymir_victim" />
+    <fightstyle filename="data/powerstyles/ps_ymir" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_spear" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_twohanded" />
+    <zonexml filename="maps/act3/niffleheim/niffleheim2b" />
+    <nav filename="maps/act3/niffleheim/niffleheim2b" />
+    <boy filename="maps/act3/niffleheim/niffleheim2b" />
+    <zam filename="automaps/act3/niffleheim/niffleheim2b" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

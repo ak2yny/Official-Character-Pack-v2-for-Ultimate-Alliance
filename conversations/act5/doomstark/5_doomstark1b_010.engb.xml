@@ -1,0 +1,21 @@
+<conversation>
+    <startCondition enableai="true" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/fury/5_doomstark1b_010_010_nf" text="%NickFuryNPC%: Well, if Doom didn't know we were here before, he sure does now. And that's fine, because we're as ready as we're going to be.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/fury/5_doomstark1b_010_011_nf" text="%NickFuryNPC%: Dr. Pym has managed to power the Muonic Inducer with the M'Kraan Crystal. But be warned... you'll have to actually touch Doom to steal some of his power. And it may take several tries to work.">
+                        <response text="%PLAYER%: We have to get close to Doom? Several times? But he has the power of a god!">
+                            <line soundtoplay="voice/fury/5_doomstark1b_010_013_nf" text="%NickFuryNPC%: You will too, once you steal his powers. I'd suggest you get to Latveria as soon as possible. You'll find Doom in his castle there.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/fury/5_doomstark1b_010_014_nf" text="%NickFuryNPC%: For more information on the mission parameters, talk to Black Widow. And when you're ready to go, let me know - I'll fly you there.">
+                                        <response chosenscriptfile="act5/doomstark/goto_starkdesk" conversationend="true" text="%BLANK%"/>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

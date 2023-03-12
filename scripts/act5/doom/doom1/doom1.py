@@ -10,7 +10,7 @@ if end == 0
           if checkplate == 1
                checkmask = getObjective("doom_obj40", "COMPLETE" )
                if checkmask == 1
-                    # ( "this let's you open the door to doom4" )
+                    # ( "this lets you open the door to doom4" )
                     setEnable("lab_door", "TRUE" )
                     remove ( "lab_trig", "lab_trig" )
                     # ( "new jiggery with the xtraction point and doorway back to the beginning" )

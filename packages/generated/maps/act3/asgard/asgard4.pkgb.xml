@@ -1,0 +1,228 @@
+<packagedef>
+    <combat_is filename="on" />
+    <bigconvmap filename="off" />
+    <model filename="maps/act3/asgard/asgard4" />
+    <shadow filename="maps/act3/asgard/asgard4" plat="40" />
+    <shared_powerups filename="data/shared_powerups" />
+    <xml filename="data/npcstat" />
+    <script filename="scripts/act3/asgard/asgard4/asgard4" />
+    <model filename="HUD/hud_head_4202" />
+    <model filename="HUD/hud_head_3702" />
+    <script filename="scripts/act3/asgard/asgard4/rhino_shocker_attack" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_070" />
+    <texture filename="textures/bubble" />
+    <texture filename="textures/explosion_puff_a_gray" plat="23" />
+    <texture filename="textures/nextgen/smoke1" plat="40" />
+    <shaders filename="shaders/lit" plat="40" />
+    <texture filename="textures/nextgen/fireline1" plat="40" />
+    <texture filename="textures/nextgen/fire3" plat="40" />
+    <effect filename="map/asgard/anvil_sparks" />
+    <texture filename="textures/s_wfall_1" />
+    <effect filename="map/asgard/single_drip" />
+    <effect filename="map/asgard/water_drip" />
+    <script filename="scripts/act3/asgard/asgard4/3_asgard4_090_end" />
+    <script filename="scripts/act3/asgard/asgard4/accept_horn_find" />
+    <script filename="scripts/act3/asgard/asgard4/both_same_time_end" />
+    <script filename="scripts/act3/asgard/asgard4/completed_puzzle01" />
+    <script filename="scripts/act3/asgard/asgard4/fake_trigger_conv_end" />
+    <script filename="scripts/act3/asgard/asgard4/gave_horn_portal" />
+    <script filename="scripts/act3/asgard/asgard4/givehorn_levelup" />
+    <script filename="scripts/act3/asgard/asgard4/nogethorn" />
+    <actoranimdb filename="100_heimdall" />
+    <actorskin filename="10001" />
+    <model filename="HUD/hud_head_10001" />
+    <actoranimdb filename="160_iceblock" />
+    <actorskin filename="16001" />
+    <actoranimdb filename="97_loki_troll" />
+    <actorskin filename="9701" />
+    <model filename="HUD/hud_head_9701" />
+    <effect filename="char/ltroll/p1_power" />
+    <model filename="models/chunks/roc_3" />
+    <texture filename="textures/decals/crack_decal_a" />
+    <effect filename="char/ltroll/p2_power" />
+    <model filename="models/bolton/loki_troll_mace" />
+    <effect filename="char/ltroll/weapon_death" />
+    <actoranimdb filename="fightstyle_weapon_onehanded" />
+    <actoranimdb filename="fightstyle_weapon_onehanded_4_97_loki_troll" />
+    <xml filename="data/weapons/wp_lokitroll_mace" />
+    <actoranimdb filename="fightstyle_villain_big" />
+    <actorskin filename="9704" />
+    <model filename="models/chunks/c_board_medium" />
+    <texture filename="textures/chunks/wood_2" />
+    <texture filename="textures/nextgen/debris1" plat="40" />
+    <model filename="models/chunks/c_board_b" plat="40" />
+    <effect filename="base/material/break/brk_wood" />
+    <model filename="models/asgard/barrel_asg_th" />
+    <sound filename="death_style/ds_wood_m" />
+    <model filename="models/asgard/beam_wood_asg_e" />
+    <model filename="models/asgard/bench_asg_b" />
+    <model filename="models/asgard/bridge_magical_30ft_asg_a" />
+    <model filename="models/asgard/cage_asg_m" />
+    <model filename="models/asgard/chair_01_asg_th" />
+    <model filename="models/asgard/column_20ft_asg_b" />
+    <sound filename="death_style/ds_wood_l" />
+    <model filename="models/asgard/column_stone_20ft_asg_e" />
+    <model filename="models/asgard/column_wood_15ft_asg_e" />
+    <model filename="models/asgard/column_wood_30ft_asg_e" />
+    <model filename="models/asgard/door_hinged_01_asg_a" />
+    <model filename="models/asgard/door_invulnerable_asg_a" />
+    <texture filename="textures/chunks/metal_2" plat="23" />
+    <model filename="models/chunks/met_4" plat="23" />
+    <model filename="models/chunks/metal_generic_lrg" plat="40" />
+    <model filename="models/chunks/metal_generic_med_1" plat="40" />
+    <model filename="models/chunks/metal_generic_sml_1" plat="40" />
+    <model filename="models/chunks/metal_generic_med_3" plat="40" />
+    <effect filename="base/material/break/brk_metal" />
+    <model filename="models/asgard/floor_torch_01_asg_b" />
+    <sound filename="death_style/ds_metal_m" />
+    <model filename="models/asgard/force_field_dome_asg_a" />
+    <model filename="models/asgard/gjillar_asg_e" />
+    <model filename="models/asgard/hanging_brazier_asg_e" />
+    <model filename="models/asgard/hd_marker_01_asg_e" />
+    <model filename="models/asgard/hd_marker_02_asg_e" />
+    <model filename="models/asgard/hd_marker_03_asg_e" />
+    <model filename="models/chunks/c_icetunnel_b" />
+    <effect filename="base/material/break/brk_ice" />
+    <model filename="models/asgard/heimdall_ice_bottom_asg_e" />
+    <sound filename="death_style/ds_ice_l" />
+    <model filename="models/asgard/heimdall_ice_top_asg_e" />
+    <model filename="models/asgard/mirror_heimdall_asg_a" />
+    <model filename="models/asgard/pressure_plate_01_asg_a" />
+    <model filename="models/asgard/pressure_plate_02_asg_a" />
+    <model filename="models/asgard/pressure_plate_03_asg_a" />
+    <model filename="models/asgard/pressure_symbol_01_asg_e" />
+    <model filename="models/asgard/pressure_symbol_02_asg_e" />
+    <model filename="models/asgard/pressure_symbol_03_asg_e" />
+    <model filename="models/asgard/push_pull_block_01_asg_p" />
+    <actoranimdb filename="interact_pushpull" />
+    <model filename="models/asgard/push_pull_block_02_asg_p" />
+    <model filename="models/asgard/push_pull_block_03_asg_p" />
+    <model filename="models/asgard/rail_corner_long_asg_b" />
+    <model filename="models/asgard/rail_corner_short_asg_b" />
+    <model filename="models/asgard/rail_diag_long_asg_b" />
+    <model filename="models/asgard/rail_straight_asg_b" />
+    <model filename="models/asgard/rotating_lever_asg_a" />
+    <model filename="models/chunks/c_rocktunnels_c" />
+    <texture filename="textures/chunks/stone_1" />
+    <texture filename="textures/nextgen/debrisline1" plat="40" />
+    <texture filename="textures/nextgen/decals/debrisdecal1" plat="40" />
+    <effect filename="base/material/break/brk_stone" />
+    <model filename="models/asgard/statue_platform_cap_asg_b" />
+    <sound filename="death_style/ds_stone_l" />
+    <model filename="models/asgard/switch_force_field_glow_asg_a" />
+    <model filename="models/asgard/totem_02_asg_b" />
+    <model filename="models/asgard/totem_03_asg_b" />
+    <model filename="models/asgard/totem_04_asg_b" />
+    <model filename="models/asgard/totem_05_asg_b" />
+    <model filename="models/asgard/well_indoor_top_asg_e" />
+    <model filename="models/pickups/pickup_dangeroom_disk" />
+    <model filename="models/pickups/sketchpad" />
+    <effect filename="base/misc/techstation_focus" />
+    <model filename="models/pickups/focus_pickup" />
+    <script filename="scripts/common/teleport" />
+    <texture filename="textures/level_symbol" />
+    <effect filename="base/misc/interact_multihero" />
+    <actoranimdb filename="37_rhino" />
+    <actorskin filename="3702" />
+    <effect filename="char/rhino/p1_power" />
+    <effect filename="char/rhino/p2_power" />
+    <actoranimdb filename="42_shocker" />
+    <actorskin filename="4202" />
+    <texture filename="textures/ring3" plat="40" />
+    <effect filename="char/shockr/p1_power" />
+    <effect filename="char/shockr/p1_impact" />
+    <texture filename="textures/nextgen/bolt_softedge" plat="40" />
+    <texture filename="textures/lightning_thor" plat="40" />
+    <effect filename="char/shockr/p2_power" />
+    <actoranimdb filename="fightstyle_villain" />
+    <script filename="scripts/act3/asgard/asgard4/heimdall_spawn" />
+    <script filename="scripts/act3/asgard/asgard4/ice_spawn" />
+    <effect filename="base/powerup/aura/aura_energy_loop" />
+    <script filename="scripts/act3/asgard/asgard4/pushpull_spawner" />
+    <script filename="scripts/act3/asgard/asgard4/pushpull_guy_death" />
+    <script filename="scripts/act3/asgard/asgard4/visible_spawn" />
+    <script filename="scripts/act3/asgard/asgard4/markerpuzzle" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_030" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_031" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_040" />
+    <script filename="scripts/act3/asgard/asgard4/3partguyspawn" />
+    <model filename="models/asgard/bench_stump_asg_b" />
+    <model filename="models/asgard/floor_torch_01_stump_asg_b" />
+    <script filename="scripts/act3/asgard/asgard4/got_horn" />
+    <script filename="scripts/act3/asgard/asgard4/check_horn_bridge" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_121" />
+    <script filename="scripts/act3/asgard/asgard4/mirrorpuzzle" />
+    <script filename="scripts/act3/asgard/asgard4/end_100" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_100" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_110" />
+    <script filename="scripts/act3/asgard/asgard4/pushpull_all" />
+    <model filename="models/asgard/rail_corner_long_stump_asg_b" />
+    <model filename="models/asgard/rail_corner_short_stump_asg_b" />
+    <model filename="models/asgard/rail_diag_long_stump_asg_b" />
+    <model filename="models/asgard/rail_straight_stump_asg_b" />
+    <script filename="scripts/act3/asgard/asgard4/cagelever" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_080" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_090" />
+    <model filename="models/asgard/totem_04_stump_asg_b" />
+    <model filename="models/asgard/totem_05_stump_asg_b" />
+    <texture filename="textures/misc_glow" />
+    <effect filename="map/egypt/light_beam_large" />
+    <effect filename="map/asgard/light_beam_1" />
+    <texture filename="textures/water_astral" />
+    <texture filename="textures/bigglow" />
+    <texture filename="textures/nextgen/trail_elem_ng" plat="40" />
+    <effect filename="map/asgard/well_interior_loop" />
+    <model filename="models/effects/magic_wall_small_fx_asg" />
+    <texture filename="textures/level_lightning" />
+    <texture filename="textures/yellowburst3" />
+    <effect filename="map/asgard/magic_wall_small" />
+    <model filename="models/effects/magic_wall_large_fx_asg" />
+    <effect filename="map/asgard/magic_wall_big" />
+    <texture filename="textures/rune_border" />
+    <texture filename="textures/misc_text" />
+    <effect filename="map/asgard/pp_block_success" />
+    <effect filename="map/monument/light_beam_large" />
+    <texture filename="textures/gambit_cardglow" />
+    <effect filename="map/egypt/scr_light_beam" />
+    <texture filename="textures/nextgen/smoke_under1" plat="40" />
+    <texture filename="textures/nextgen/distort_fire_sml" plat="40" />
+    <effect filename="map/common/fire_torch" />
+    <script filename="scripts/act3/asgard/asgard4/first_time_trap" />
+    <script filename="scripts/common/defeatnamedvillain" />
+    <script filename="scripts/act3/asgard/asgard4/puzzle_relay_check" />
+    <script filename="scripts/act3/asgard/asgard4/relay_bothdef" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_071" />
+    <script filename="scripts/act3/asgard/asgard4/completed_puzzle02" />
+    <script filename="scripts/act3/asgard/asgard2/party_light_ng_on" />
+    <script filename="scripts/act3/asgard/asgard2/turn_off_partylight_ng" />
+    <script filename="scripts/act3/asgard/asgard4/horn_room_door_guys" />
+    <script filename="scripts/act3/asgard/asgard4/horn_cam_intro" />
+    <script filename="scripts/act3/asgard/asgard4/heimdall_room_start" />
+    <script filename="scripts/act3/asgard/asgard4/pushpull_puz_start" />
+    <script filename="scripts/act3/asgard/asgard4/emblem_puz_start" />
+    <script filename="scripts/act3/asgard/asgard4/placeparts" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_050" />
+    <script filename="scripts/act3/asgard/asgard4/havehornornot" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_120" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_130" />
+    <script filename="scripts/act3/asgard/asgard4/fake_trigger_trap" />
+    <xml filename="conversations/act3/asgard/asgard4/3_asgard4_060" />
+    <script filename="scripts/act3/asgard/asgard4/heimdall_door_locks" />
+    <effect filename="base/misc/misc_treasure" />
+    <actoranimdb filename="zone_asgard4" />
+    <characters filename="maps/act3/asgard/asgard4" />
+    <fightstyle filename="data/powerstyles/ps_lokitroll" />
+    <fightstyle filename="data/fightstyles/fightstyle_weapon_onehanded" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain_big" />
+    <fightstyle filename="data/fightstyles/interact_pushpull" />
+    <fightstyle filename="data/powerstyles/ps_rhino" />
+    <fightstyle filename="data/powerstyles/ps_shocker" />
+    <fightstyle filename="data/fightstyles/fightstyle_villain" />
+    <zonexml filename="maps/act3/asgard/asgard4" />
+    <nav filename="maps/act3/asgard/asgard4" />
+    <boy filename="maps/act3/asgard/asgard4" />
+    <zam filename="automaps/act3/asgard/asgard4" />
+    <pkg filename="packages/generated/common_ents_zone" />
+    <pkg filename="packages/generated/item_ents_zone" />
+    <pkg filename="packages/generated/maps/package/permanent_fightstyles" />
+</packagedef>

@@ -13,6 +13,7 @@ addObjectiveCategory("act3_asgard" )
 addObjectiveCategory("act3_bifrost" )
 addObjectiveCategory("act3_niffleheim" )
 # ( "****************END Unlock the objective categories****************" )
+objective ( "valhalla_obj0",  "EOBJCMD_SHOW" )
 valhalla = getGameFlag("valhalla1", 1 )
 if valhalla == 0
      waittimed ( 0.250 )

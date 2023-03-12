@@ -1,0 +1,54 @@
+<conversation>
+    <startCondition enableai="true" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/mrfantastic/4_attilan2_370_010_mf" text="%MrFantasticSimple%: Hello, it's good to see you. What can I do for you?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/mrfantastic/4_attilan2_370_020_mf" text="%MrFantasticSimple%: Hello again. Do you need something?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition enableai="true" noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="You and Dr. Doom have known each other for a while, haven't you?">
+                    <line soundtoplay="voice/mrfantastic/4_attilan2_370_101_mf_a" text="%MrFantasticSimple%: Oh, yes, he and I first met in college. We were supposed to be roommates but he took an instant disliking to me and moved somewhere else. And that actually worked out for the best.">
+                        <response text="%PLAYER%: Why do you say that?">
+                            <line soundtoplay="voice/mrfantastic/4_attilan2_370_101_mf_b" text="%MrFantasticSimple%: Because I wound with Ben Grimm as my roommate and we've been best friends ever since.">
+                                <response chosenscriptfile="setGameFlag('conv_var4', 13,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var4', 13 )" text="What was Dr. Doom like when you first met him?">
+                    <line soundtoplay="voice/mrfantastic/4_attilan2_360_201_mf_a" text="%MrFantasticSimple%: Pretty much exactly how he is today; arrogant, egotistical... and a genius. It's a shame really. There was a time when I thought he and I could be friends.">
+                        <response text="%PLAYER%: You two friends? How could that be possible?">
+                            <line soundtoplay="voice/mrfantastic/4_attilan2_360_201_mf_b" text="%MrFantasticSimple%: In some ways, he and I are very much alike in our pursuit of science. The main difference is, I enjoy knowledge for the sake of knowledge. Doom, on the other hand, acquires knowledge in the hopes of using it as a weapon.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var4', 13 )" text="Why does Dr. Doom hate you?">
+                    <line soundtoplay="voice/mrfantastic/4_attilan2_360_301_mf" text="%MrFantasticSimple%: Back in college I pointed out an error in a project he was working on. He, of course, refused to accept that he was capable of making a mistake so he proceeded with the experiment.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/mrfantastic/4_attilan2_360_302_mf" text="%MrFantasticSimple%: Unfortunately, I was correct and the equipment exploded. Doom wound up being expelled from college because of it. To this day, he still thinks I tampered with the experiment and caused all his troubles.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Reed.">
+                    <line soundtoplay="voice/mrfantastic/4_attilan2_360_401_mf" text="%MrFantasticSimple%: It was no problem at all.">
+                        <response chosenscriptfile="act4/attilan/talk_mrfantastic_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

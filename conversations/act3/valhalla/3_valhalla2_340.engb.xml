@@ -1,0 +1,59 @@
+<conversation>
+    <startCondition noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_010_wea" text="%WEASEL%: Isn't that Valkyrie something? Maybe I should, you know, go over there and introduce myself.">
+                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_020_wea" text="%WEASEL%: So what do you think? Do I stand a chance with Valkyrie?">
+                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" tagindex="autogen_tag_1" text="%PLAYER%">
+                <response soundtoplay="voice/player/3_valhalla2_340_100_tl" text="How did you get to Valhalla?">
+                    <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_101_wea" text="%WEASEL%: Beast and a friend of his, Forge I think, had some kind of teleportation device they used on me. But they told me I have to get back to Earth pretty quick.">
+                        <response soundtoplay="voice/player/3_valhalla2_340_102_tl" text="%PLAYER%: Why is that?">
+                            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_103_wea" text="%WEASEL%: Something about keeping a lock on me could tear the space time continuum and I don't know, destroy reality as we know it.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response soundtoplay="voice/player/3_valhalla2_340_200_tl" text="What do you think of the X-Mansion?">
+                    <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_201_wea_a" text="%WEASEL%: Makes me wish I was a mutant. Huh! They've got everything there - tennis courts, a pool, oh and a sub-basement full of hi-tech gear.">
+                        <response soundtoplay="voice/player/3_valhalla2_340_202_tl" text="%PLAYER%: Sounds like you could stay there forever.">
+                            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_203_wea_a" text="%WEASEL%: That would be great, but Beast keeps following me around and asking me when I'm gonna leave.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="I know Black Widow's password">
+                    <line notalkanim="true" text="%MENU%: The password for Black Widow is:">
+                        <response text="Ivan Petrovitch">
+                            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_304_wea" text="%WEASEL%: Thanks. When you get back from your mission, I'll have some solid evidence against Black Widow.">
+                                <response chosenscriptfile="setGameFlag('conv_var3', 8,1)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                        <response text="Dr. Ines">
+                            <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_304_wea" text="%WEASEL%: Thanks. When you get back from your mission, I'll have some solid evidence against Black Widow.">
+                                <response chosenscriptfile="setGameFlag('conv_var3', 8,0)" tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Weasel.">
+                    <line notalkanim="true" soundtoplay="voice/weasel/3_valhalla2_340_401_wea" text="%WEASEL%: You can thank me later with cash.">
+                        <response chosenscriptfile="act3/valhalla/talk_weasel_post" conversationend="true" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

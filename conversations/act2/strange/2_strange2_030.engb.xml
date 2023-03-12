@@ -1,0 +1,39 @@
+<conversation>
+    <startCondition conditionscriptfile="act2/strange/talk_weasel_intro01">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/2_strange2_030_010_wea" text="%WEASEL%: Hey, look, you don't know me but the name's Weasel. I was given that laptop you found on the helicarrier, and boy, have I got news for you.">
+                <response text="%PLAYER%: What did you find out?">
+                    <line soundtoplay="voice/weasel/2_strange2_030_013_wea" text="%WEASEL%: The laptop is definitely Black Widow's and it holds information on a S.H.I.E.L.D. think tank called The Imperium.">
+                        <response text="%PLAYER%: So Black Widow might have been trying to give secret information to Doom?">
+                            <line soundtoplay="voice/weasel/2_strange2_030_015_wea" text="%WEASEL%: Maybe. But we need to find out what The Imperium does. And for that you have to get a S.H.I.E.L.D. security module for me. I think The Vision might have one.">
+                                <response chosenscriptfile="act2/strange/Strange_obj10" conversationend="true" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act2/strange/talk_weasel_intro02">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/2_strange2_030_020_wea" text="%WEASEL%: You gave me the wrong name. I went to meet Beroge and a bunch of S.H.I.E.L.D. agents were waiting for me. I had to jump out a window to get away.">
+                <response text="%PLAYER%: So you can't get back into the S.H.I.E.L.D. database?">
+                    <line soundtoplay="voice/weasel/2_strange2_030_022_wea" text="%WEASEL%: Of course I can. I looked up the other hacker, C.B. Cebulski, and he told me all I need is a S.H.I.E.L.D. security module. Go talk to The Vision - I bet he has one.">
+                        <response chosenscriptfile="act2/strange/Strange_obj10" conversationend="true" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act2/strange/talk_weasel_intro03">
+        <participant name="default">
+            <line soundtoplay="voice/weasel/2_strange2_030_030_wea" text="%WEASEL%: Hey, that name you gave me, C.B. Cebulski, was perfect.">
+                <response text="%PLAYER%: He was able to help you?">
+                    <line soundtoplay="voice/weasel/2_strange2_030_032_wea" text="%WEASEL%: Yeah, he said all I'd need was a S.H.I.E.L.D. security module. Would you mind talking to The Vision? I bet he has one.">
+                        <response chosenscriptfile="act2/strange/Strange_obj10" conversationend="true" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

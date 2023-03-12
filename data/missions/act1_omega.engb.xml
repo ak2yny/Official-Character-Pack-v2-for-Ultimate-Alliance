@@ -1,0 +1,12 @@
+<MISSION act="1">
+    <OBJECTIVE descname="Detecting Dugan" description="Locate Dum Dum Dugan to find out what's happening on the Omega Base." enabled="false" major="false" name="omega_obj10" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega1"/>
+    <OBJECTIVE descname="Resuming Control" description="Protect Dum Dum Dugan as you escort him to Central Control." enabled="false" major="false" name="omega_obj20" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega1"/>
+    <OBJECTIVE descname="A Long Way to the Top" description="Stop the Omega Base by reaching the control room on the upper deck." enabled="false" major="false" name="omega_obj30" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega4"/>
+    <OBJECTIVE descname="Train Wreck" description="Disable the primary drive train for the Omega." enabled="false" major="false" name="omega_obj40" optional="true" parentname="omega_obj0" rep="10" type="normal" zone="omega1"/>
+    <OBJECTIVE descname="Ultimate Ultron" description="Stop the Masters of Evil from stealing the Ultron upgrades." enabled="false" major="false" name="omega_obj50" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega3"/>
+    <OBJECTIVE count="13" descname="Neural Nightmare" description="Don't let the Masters of Evil unleash the neurally enhanced Super Soldiers." enabled="false" major="false" name="omega_obj60" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega3"/>
+    <OBJECTIVE descname="Gamma Detonation" description="Take Dr. Banner and deactivate the Gamma Bomb before it explodes." enabled="false" major="false" name="omega_obj70" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega3"/>
+    <OBJECTIVE descname="The Menace of MODOK" description="Defeat MODOK in battle before the Omega Base slams into the dam." enabled="false" major="false" name="omega_obj80" optional="false" parentname="omega_obj0" rep="10" type="normal" zone="omega4"/>
+    <OBJECTIVE descname="Database Destruction" description="Stop the Super Soldiers from destroying the Omega computer." enabled="false" major="false" name="omega_obj45" optional="true" parentname="omega_obj0" rep="15" type="normal" zone="omega3b"/>
+    <OBJECTIVE descname="Omega Base Mission" enabled="false" major="true" name="omega_obj0" type="normal"/>
+</MISSION>
