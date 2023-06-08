@@ -1,0 +1,465 @@
+<PowerStyle iconfile="textures/ui/spiderman_icons.png">
+    <event angle="11.25" arc="22.5" damage="1" damagescale="none" inherit="radial" knockback="305" maxrange="110" name="web_throw_attack" />
+    <event arc="0" attacktype="beam" beameffect="char/spider/webbing_beam_shot" damagetype="dmg_physical" fxlevel="1" hiteffect="char/spider/webbing_impact" inherit="beam" knockback="0" maxrange="600" name="webbing_shot">
+        <damageMod name="dmgmod_no_pain" />
+        <damageMod name="dmgmod_no_damage" />
+    </event>
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx effect="char/spider/special_blocking" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/spider/special_blocking" fxlevel="2" how_used="activation" />
+            <special_fx effect="char/spider/special_blocking" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.66">
+        <trigger name="whoosh_light" time="0.3" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Toe0" life="0.17" name="trail" time="0.33" />
+        <trigger name="kick" time="0.41" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.62">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="15" name="slide" time="0.38" />
+        <trigger bolt="Bip01 L Forearm" life="0.2" name="trail" time="0.27" />
+        <trigger name="punch" time="0.38" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.33" />
+        <trigger movement="20" name="slide" time="0.31" />
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.25" />
+        <trigger name="punch" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.67">
+        <trigger name="whoosh_heavy" time="0.23" />
+        <trigger movement="20" name="slide" time="0.2" />
+        <trigger bolt="Bip01 L Toe0" life="0.3" name="trail" time="0.24" />
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.26" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.25">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="punch" time="0.28" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.25" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.25" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power8" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold" lockangles="true" locktransitionangles="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_spiderman_victim" name="victim" nodename="Grab_Smash_Victim_Start" targetdistance="22" time="0" victimface="true" />
+        <trigger name="sound" sound="char/spider_m/tied_up" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="1 1 500" time="0.571" />
+        <trigger life="-1" name="powerup" tag_name="tied_up" time="0.571">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" interactionend="false" name="victim_release" ownertime="0.5" time="0.95" />
+        <trigger critical="true" name="powerup" remove_tag="tied_up" time="0.81" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_double_jump_start" blendtime="0.1" handler="ch_spider_move_jump" lockchaining="false" locktransitionangles="true" name="airjump" turnrate="0.2">
+        <trigger failtag="1" has_weapon="true" name="filter" time="0" />
+        <trigger button="move" name="button_hint" tag="1" time="-1" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="special" result="doublejumpland" />
+        <chain action="special5" result="webzip" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" handler="ch_jump" lockangles="true" name="webzip_jumploop_start" noncombat="true" startchaintime="0.7">
+        <trigger name="velocity" time="0" up="200" />
+        <chain action="move" result="webzip" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="special" result="jumpland" />
+        <chain action="idle" result="webzip_jumploop" />
+    </FightMove>
+    <FightMove animenum="ea_jump_loop" handler="ch_jump" lockangles="true" name="webzip_jumploop" noncombat="true">
+        <chain action="move" result="webzip" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="special" result="jumpland" />
+        <chain action="idle" result="webzip_jumploop" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_power15" handler="ch_spider_web_zip" name="webzip" priority="3" startchaintime="0.3" turnrate="0.5">
+        <trigger button="move" name="button_hint" time="0" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_gravity" time="0">
+            <affecter affect_type="scale" attribute="gravity" level="0" />
+        </trigger>
+        <trigger absolute="all" name="velocity" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="80 1 500" time="0.01" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_zip" time="0.09">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/spider_m/web_zip" time="0.32" />
+        <trigger attacktype="direct" damage="%spider_zip_dmg" knockback="%spider_zip_kb" maxrange="60" name="teleport_punch" time="0.44">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="webzip_jumploop_start" />
+        <chain action="special5" result="webzip2" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_power16" handler="ch_spider_web_zip" name="webzip2" priority="3" startchaintime="0.3" turnrate="0.5">
+        <trigger button="move" name="button_hint" time="0" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_gravity" time="0">
+            <affecter affect_type="scale" attribute="gravity" level="0" />
+        </trigger>
+        <trigger absolute="all" name="velocity" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="80 1 500" time="0.01" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_zip" time="0.09">
+            <special_fx bolt="Bip01 R Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/spider_m/web_zip" time="0.32" />
+        <trigger attacktype="direct" damage="%spider_zip_dmg" knockback="%spider_zip_kb" maxrange="60" name="teleport_punch" time="0.44">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="webzip_jumploop_start" />
+        <chain action="special5" result="webzip" />
+    </FightMove>
+    <event count="1" entity="web_bullet" filename="ents_spiderman" fulltargeting="true" inherit="projectile" life="0.75" name="webbing_bullet" speed="800" targetable="true" />
+    <FightMove aitype="projectile" animenum="ea_power1_start" icon="0" is_power="true" lockangles="true" name="power1" noautoaim="true" powerup_tag="spider_webbing" priority="5">
+        <require cat="skill" item="spider_p1" level="1" />
+        <trigger name="powerusage" powerusage="%spider_p1_pwr" time="-1" />
+        <chain action="Idle" result="power1_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" blendtime="0" combotextfinisher="Darts" combotextstarter="Parker's" is_power="true" lockangles="false" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="spider_webbing" turnrate="0.2">
+        <trigger name="powerusage" powerusage="%spider_p1_pwr" time="0" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger effect="char/spider/p1_power" fxlevel="2" name="effect_sound" sound="char/spider_m/p1_power" time="0" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="40 -5 27" damage="%spider_p1_dmg" damagescale="none" index="1" name="webbing_bullet" time="0" />
+        <trigger effect="char/spider/p1_power" fxlevel="2" name="effect_sound" sound="char/spider_m/p1_power" time="0.5" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="39 3 26" damage="%spider_p1_dmg" damagescale="none" index="2" name="webbing_bullet" time="0.5" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerclick" result="power1_loop" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="beam" animenum="ea_power2" combotextfinisher="Web" combotextstarter="Spider's" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2" priority="5" startchaintime="0.99">
+        <require cat="skill" item="spider_p2" level="1" />
+        <trigger name="powerusage" powerusage="%spider_p2_pwr" />
+        <trigger maxrange="400" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="30" selfeventtag="10" time="0" />
+        <trigger attackerface="true" name="victim" tag="10" time="-1" victimface="false" />
+        <trigger name="sound" sound="char/spider_m/p3_power" time="0.35" />
+        <trigger attack_bone_angles="-6 82 -126" attack_bone_pos="20 -4 81" beambolt="Bip01 L Hand" name="webbing_shot" time="0.35" />
+        <trigger attack_bone_angles="-164 67 136" attack_bone_pos="24 3 85" beambolt="Bip01 R Hand" name="webbing_shot" time="0.35" />
+        <trigger filter_target="victim" is_alive="true" name="filter" passtag="20" time="0.35" />
+        <trigger loop_type="start" name="charsound" next_eventtag="24" only_non_looped="true" play_sound_on_victim="true" sound="snd_struggle" tag="20" time="-1" />
+        <trigger execute_against="victim" name="otherevent" othertag="21" tag="24" time="-1" />
+        <trigger class="tethered" life="%spider_p2_life" name="powerup" next_eventtag="22" no_shadow="true" remove_on_death="true" tag="21" tether_length="0" time="-1">
+            <special_fx effect="char/spider/webbing_freeze" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 L Toe0" effect="char/spider/webbing_freeze" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Toe0" effect="char/spider/webbing_freeze" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger class="interaction" cleartoidleondeactivate="true" life="%spider_p2_life" name="powerup" next_eventtag="23" remove_on_death="true" tag="22" time="-1">
+            <InteractionEvent event="OnActivate" interaction="data/fightstyles/interact_spiderman_victim" nodename="hold_in_place_no_break" />
+            <affecter affect_type="scale" attribute="def_grab" level="0" />
+        </trigger>
+        <trigger class="harming" damage="%spider_p2_dmg" damagetype="dmg_physical" life="1" name="powerup" tag="23" time="-1" />
+        <trigger critical="true" interactionend="false" name="victim_release" time="0.37" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" ainopush="true" aitype="beam" animenum="ea_power19" combotextfinisher="Toss" combotextstarter="Slinging" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3" priority="5" startchaintime="0.99">
+        <require cat="skill" item="spider_p3" level="1" />
+        <trigger maxrange="400" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="30" selfeventtag="10" time="0" />
+        <trigger critical="true" flag1="nopush" name="flags" resetflags="false" time="0" type="ce_set_flags" />
+        <trigger attackerface="true" doslidemove="true" name="victim" tag="10" time="-1" victimface="false" />
+        <trigger fail_node="power3_fail" name="verify_victim_alive" passtag="1" time="0.5" />
+        <trigger interaction="data/fightstyles/interact_spiderman_victim" name="victim" next_eventtag="2" nodename="hold_in_place_no_break_no_snd" tag="1" time="-1" />
+        <trigger life="-1" name="powerup" next_eventtag="3" tag="2" tag_name="spider_p3_link" time="-1">
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Spine2" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 R Hand" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger loop_timeout="2" loop_type="start" name="sound" next_eventtag="4" sound="char/spider_m/p3_power" tag="3" time="-1" />
+        <trigger execute_against="victim" name="otherevent" othertag="5" tag="4" time="-1" />
+        <trigger flag1="noclip" name="flags" tag="5" time="-1" type="ce_set_flags" />
+        <trigger critical="on_interrupt" execute_against="victim" name="otherevent" othertag="99" time="-1" />
+        <trigger flag1="noclip" name="flags" resetflags="true" tag="99" time="-1" type="ce_set_flags" />
+        <trigger critical="on_interrupt" interactionend="true" name="victim_release" ownertime="0" time="-1" />
+        <chain action="idle" result="power3_spin" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power3" blendtime="0" combotextfinisher="Toss" combotextstarter="Slinging" energypersecond="%spider_p3_pwr" handler="ch_grab_hold_base" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3_spin" priority="5" startchaintime="0.99">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_type="update" name="sound" sound="char/spider_m/p3_power" time="0" />
+        <trigger fail_node="null" name="verify_victim_alive" passtag="1" time="0" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_spiderman_victim" name="victim" next_eventtag="2" nodename="power3_victim_spinning" offset="0 0 0" tag="1" time="-1" victimface="true" />
+        <trigger name="charsound" only_non_looped="true" play_sound_on_victim="true" sound="snd_pain" tag="2" time="-1" />
+        <trigger angle="22.5" name="web_throw_attack" time="0.11" victimeventtag="3" />
+        <trigger angle="45" name="web_throw_attack" time="0.22" victimeventtag="3" />
+        <trigger angle="67.5" name="web_throw_attack" time="0.33" victimeventtag="3" />
+        <trigger angle="112.5" name="web_throw_attack" time="0.44" victimeventtag="3" />
+        <trigger angle="157.5" name="web_throw_attack" time="0.55" victimeventtag="3" />
+        <trigger angle="202.5" name="web_throw_attack" time="0.66" victimeventtag="3" />
+        <trigger angle="247.5" name="web_throw_attack" time="0.77" victimeventtag="3" />
+        <trigger angle="292.5" name="web_throw_attack" time="0.88" victimeventtag="3" />
+        <trigger angle="337.5" name="web_throw_attack" time="0.99" victimeventtag="3" />
+        <trigger class="harming" damage="%spider_p3_dmg" damagetype="dmg_physical" life="1" name="powerup" tag="3" time="-1" />
+        <chain action="Idle" result="power3_release" />
+        <chain action="samepowerhold" result="power3_spin" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power18" blendtime="0" combotextfinisher="Toss" combotextstarter="Slinging" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3_release" priority="5" startchaintime="0.99">
+        <trigger name="sound" sound="char/spider_m/p3_release" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/spider_m/p3_power" time="0" />
+        <trigger doslidemove="false" interaction="data/fightstyles/interact_spiderman_victim" name="victim" nodename="power3_victim_thrown" offset="0 0 0" time="0" victimface="true" />
+        <trigger critical="true" execute_against="victim" name="otherevent" othertag="4" time="0.4" />
+        <trigger flag1="noclip" name="flags" resetflags="true" tag="4" time="-1" type="ce_set_flags" />
+        <trigger critical="true" damagescale="none" facethrowdir="false" impactdamage="%spider_p3_dmg" name="throw" throwdirection="Back" thrownode="thrownbackloop" throwspeed="450" time="0.4" />
+        <trigger critical="on_exit" name="powerup" remove_tag="spider_p3_link" time="0.43" />
+        <trigger critical="true" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power18" blendtime="0" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power3_fail" priority="5" startchaintime="0.99">
+        <trigger effect="char/spider/p3_fail" fxlevel="1" name="effect_sound" sound="char/spider_m/p3_fail" time="0" />
+        <trigger critical="on_exit" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power4" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" playspeed="0.9" powerup_tag="slingshot" priority="5" startchaintime="0.99">
+        <require cat="skill" item="spider_p4" level="1" />
+        <trigger name="powerusage" powerusage="%spider_p4_pwr" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger name="sound" sound="char/spider_m/p4_charge" time="0.22" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="50 30 0" time="0.38" />
+        <trigger entity="web_stickpoint2" filename="ents_spiderman" maxinstances="1" name="projectile" offset="50 -30 0" time="0.48" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="spider_sling1" time="0.38">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="spider_sling2" time="0.48">
+            <special_fx bolt="Bip01 R Hand" bolt2ent="web_stickpoint2" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger critical="true" entity_name="web_stickpoint1" name="remove" time="-1" />
+        <trigger critical="true" entity_name="web_stickpoint2" name="remove" time="-1" />
+        <chain action="Idle" result="power4_charging" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" energypersecond="%spider_p4_pwr2" is_power="true" lockangles="true" locktransitionangles="true" name="power4_charging" noautoaim="true" powerup_tag="slingshot" priority="5" startchaintime="0.01">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="0.2" loop_type="start" name="sound" sound="char/spider_m/p4_power" time="0" />
+        <trigger critical="true" entity_name="web_stickpoint1" name="remove" time="-1" />
+        <trigger critical="true" entity_name="web_stickpoint2" name="remove" time="-1" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_charging" />
+    </FightMove>
+    <FightMove animenum="ea_power8_start" blendtime="0.05" handler="ch_spider_sling_forward" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" noautoaim="true" powerup_tag="slingshot" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/spider_m/p4_power" time="0" />
+        <trigger name="sound" sound="char/spider_m/p4_release" tag="1" time="0.16" />
+        <trigger life="0.3" movement="0" name="slide" targetdistance="90" targetradius="40" time="0.16" />
+        <trigger critical="true" name="powerup" remove_tag="spider_sling1" time="0.25" />
+        <trigger critical="true" name="powerup" remove_tag="spider_sling2" time="0.25" />
+        <trigger critical="true" entity_name="web_stickpoint1" name="remove" time="0.25" />
+        <trigger critical="true" entity_name="web_stickpoint2" name="remove" time="0.25" />
+        <chain action="idle" result="power4_hit_nothing" />
+        <chain action="special" result="power4_hit_enemy" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" combotextfinisher="Toss" combotextstarter="Extreme" is_power="true" lockangles="true" locktransitionangles="true" name="power4_hit_enemy" noautoaim="true" priority="5">
+        <trigger arc="20" attacktype="punch" damage="%spider_p4_dmg" damagescale="none" damagetype="dmg_physical" knockback="%spider_p4_kb" maxrange="75" name="punch" time="0">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" is_power="true" lockangles="true" locktransitionangles="true" name="power4_hit_nothing" noautoaim="true" priority="5">
+        <trigger forward="150" name="velocity" time="0" />
+        <trigger arc="20" attacktype="punch" damage="%spider_p4_dmg" damagescale="none" damagetype="dmg_physical" knockback="%spider_p4_kb" maxrange="75" name="punch" time="0">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger arc="20" attacktype="punch" damage="%spider_p4_dmg" damagescale="none" damagetype="dmg_physical" knockback="%spider_p4_kb" maxrange="75" name="punch" time="0.15">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="beam" animenum="ea_power5" combotextfinisher="Webbing" combotextstarter="Web" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5" powerup_tag="webwarrior" priority="5" startchaintime="0.99">
+        <require cat="skill" item="spider_p5" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="sound" sound="char/spider_m/p1_power" time="0" />
+        <trigger maxrange="400" mustbeactor="false" mustbegrabbable="true" mustbeonscreen="false" name="victim_set" searchangle="30" selfeventtag="10" time="0" />
+        <trigger attackerface="true" doslidemove="true" name="victim" tag="10" time="-1" victimface="away" />
+        <trigger fail_node="null" failtag="20" name="verify_victim_alive" passtag="1" time="0.53" />
+        <trigger life="-1" name="powerup" next_eventtag="2" powerusage="%spider_p5_pwr" remove_on_node_end="true" tag="1" tag_name="spider_p5_link" time="-1">
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="3" how_used="activation" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Head" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 R Hand" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Spine2" bolt2ent="victim" effect="char/spider/webbing_link" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger interaction="data/fightstyles/interact_spiderman_victim" name="victim" next_eventtag="4" nodename="hold_in_place_no_break" tag="2" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" next_eventtag="5" sound="char/spider_m/p5_charge" tag="4" time="-1" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" tag="5" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger attack_bone_angles="42 -9 38" attack_bone_pos="14 -8 31" beambolt="Bip01 R Hand" maxrange="400" name="webbing_shot" next_eventtag="21" tag="20" time="-1" />
+        <trigger attack_bone_angles="151 13 -5" attack_bone_pos="18 -1 33" beambolt="Bip01 L Hand" maxrange="400" name="webbing_shot" next_eventtag="22" tag="21" time="-1" />
+        <trigger attack_bone_angles="151 13 -5" attack_bone_pos="18 -1 33" beambolt="Bip01 R Hand" damage="%spider_p5_dmg" index="2" inherit="beam" knockback="120" maxrange="400" name="fail_attack" radius="0" tag="22" time="-1" />
+        <trigger fail_node="power5_fail" name="verify_victim_alive" time="0.99" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="-1" />
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" name="power5_fail">
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" blendtime="0" combotextfinisher="Webbing" combotextstarter="Web" is_power="true" lockangles="true" locktransitionangles="true" name="power5_loop" noautoaim="true" powerup_tag="webwarrior" startchaintime="0.25">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger fail_node="idle" failtag="21" name="verify_victim_alive" time="0" />
+        <trigger interactionend="true" name="victim_release" tag="21" time="-1" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="-1" />
+        <chain action="Idle" result="power5_pullenemyin" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power11" blendtime="0" combotextfinisher="Webbing" combotextstarter="Web" is_power="true" lockangles="true" locktransitionangles="true" name="power5_pullenemyin" powerup_tag="webwarrior" priority="5" startchaintime="0.99" takeimpactdamage="false">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/spider_m/p5_power" time="0" />
+        <trigger loop_type="stop" name="sound" sound="char/spider_m/p5_charge" time="0" />
+        <trigger critical="on_exit" fail_node="null" name="verify_victim_alive" passtag="1" time="0.45" />
+        <trigger name="charsound" next_eventtag="2" only_non_looped="true" play_sound_on_victim="true" sound="snd_pain" tag="1" time="-1" />
+        <trigger damagescale="none" facethrowdir="false" impactdamage="%spider_p5_dmg" name="throw" tag="2" throwdirection="TowardAttacker" thrownode="thrownbackloop" throwspeed="%spider_p5_throw_spd" time="-1" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="spider_p6" level="1" />
+        <trigger bolt="Bip01 Head" effect="char/spider/p6_power" fxlevel="1" name="effect_sound" sound="char/spider_m/p6_power" time="0.3" />
+        <trigger life="%spider_p6_life" name="powerup" tag_name="_arcade_remove" time="0.3">
+            <special_fx effect="base/powerup/pu_timescale" fxlevel="1" how_used="primary" never_cycle="true" />
+            <affecter affect_type="scale" attribute="game_speed" level="%spider_p6_world" />
+        </trigger>
+        <trigger apply_ally="all" life="%spider_p6_life" name="powerup" no_shadow="true" powerusage="%spider_p6_pwr" tag_name="_arcade_remove" time="0.3">
+            <special_fx effect="char/spider/p6_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/spider/p6_aura" fxlevel="2" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="physics" level="%spider_p6_speed" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power7" icon="6" is_power="true" name="power7" priority="5">
+        <require cat="skill" item="spider_p7" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/spider/p7_power" fxlevel="1" name="effect_sound" sound="char/spider_m/p7_power" time="0.292" />
+        <trigger class="sound" life="%spider_p7_life" name="powerup" powerusage="%spider_p7_pwr" sound_hurt="char/spider_m/web_hit" time="0.458">
+            <special_fx bolt="Bip01 L Forearm" bolt2="Bip01 Pelvis" effect="char/spider/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 R Forearm" bolt2="Bip01 Pelvis" effect="char/spider/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/spider/p7_aura" fxlevel="2" how_used="primary" />
+            <affecter affect_type="sum" attribute="def_dodge" level="%spider_p7_chance" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="10" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="spider_p10" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power10" />
+    </FightMove>
+    <FightMove animenum="ea_power9" handler="ch_teleport_dash_start" icon="9" is_power="true" lockangles="true" locktransitionangles="true" name="power10" playspeed="10" priority="uninterruptable" takeimpactdamage="false">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Debuff" name="team_xtreme_msg" time="0" title="Bungee Bash" />
+        <trigger attacktype="direct" name="teleport_mark_start" time="0" />
+        <trigger maxrange="300" maxtargets="10" name="teleport_dash_prep" notargetbosses="true" targetactorsonly="true" targetmustbegrabable="true" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="1 1 500" time="0.35" />
+        <trigger life="-1" name="powerup" tag_name="spider_sling1" time="0.35">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/spider_m/p10_power" time="0.38" />
+        <trigger effect="char/spider/p10_charge" fxlevel="4" name="effect" time="0.736" />
+        <trigger critical="true" name="powerup" remove_tag="spider_sling1" time="0.789" />
+        <trigger critical="true" end="true" name="xtreme_start" time="-1" />
+        <chain action="idle" result="power10_relocate" />
+        <chain action="special" result="power10_end" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power10" combotextfinisher="Sling" fallback="power10_end" icon="10" is_power="true" lockangles="true" locktransitionangles="true" name="power10_relocate" playspeed="10" priority="uninterruptable" takeimpactdamage="false">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0" value="-1" />
+        <trigger attackerface="back" doattack="false" forcedistance="0" name="teleport_dash" rotatetargetinsteadofattacker="true" setvictimtotarget="true" time="0" />
+        <trigger check_canbegrabbed="true" doslidemove="true" interaction="data/fightstyles/interact_spiderman_victim" name="victim" nodename="victim_wait" offset="0 0 0" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="1 1 500" time="0.06" />
+        <trigger life="-1" name="powerup" tag_name="spider_sling1" time="0.06">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger check_canbegrabbed="true" interaction="data/fightstyles/interact_spiderman_victim" name="victim" next_eventtag="4" nodename="Team_Xtreme_Victim_Start" time="0.55" victimface="away" />
+        <trigger name="sound" next_eventtag="5" sound="char/spider_m/p10_impact" tag="4" time="-1" />
+        <trigger life="-1" name="powerup" tag="5" tag_name="spider_p7_link" time="-1">
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/spider/p5_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Head" bolt2ent="victim" effect="char/spider/p5_charge" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Hand" bolt2ent="victim" effect="char/spider/p5_charge" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Spine2" bolt2ent="victim" effect="char/spider/p5_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger fail_node="null" name="verify_victim_alive" passtag="20" time="0.98" />
+        <trigger execute_against="victim" name="otherevent" othertag="21" tag="20" time="-1" />
+        <trigger damage="%spider_p10_dmg" damagescale="none" name="selfattack" tag="21" time="-1" type="ce_atk_self" />
+        <trigger critical="true" name="powerup" remove_tag="spider_sling1" time="0.99" />
+        <trigger critical="true" interactionend="false" name="victim_release" ownertime="0.5" time="0.99" />
+        <trigger critical="true" name="powerup" remove_tag="spider_p7_link" time="0.99" />
+        <trigger critical="true" end="true" name="xtreme_start" time="-1" />
+        <chain action="idle" result="power10_relocate" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power17" icon="10" is_power="true" lockangles="true" locktransitionangles="true" name="power10_end" playspeed="10" priority="uninterruptable" startchaintime="1" takeimpactdamage="false">
+        <trigger attacktype="direct" maxrange="0" name="teleport_return" powerusage="0" time="0" />
+        <trigger entity="web_stickpoint1" filename="ents_spiderman" maxinstances="1" name="projectile" offset="1 1 500" time="0" />
+        <trigger name="powerup" tag_name="spider_sling1" time="0">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/spider/p10_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 L Toe0" effect="char/spider/p10_charge" fxlevel="3" name="effect" time="0.466" />
+        <trigger bolt="Bip01 R Toe0" effect="char/spider/p10_charge" fxlevel="3" name="effect" time="0.466" />
+        <trigger critical="true" name="powerup" remove_tag="spider_sling1" time="0.592" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.5" />
+        <trigger effect="char/spider/p10_charge" fxlevel="2" name="effect" time="0.9" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

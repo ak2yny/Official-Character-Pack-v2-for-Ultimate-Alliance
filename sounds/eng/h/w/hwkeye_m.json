@@ -1,0 +1,388 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/HWKEYE_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/DRAW_SWORD",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/JUMP/***RANDOM***/0",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/JUMP/***RANDOM***/1",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/LAND",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/PICKUP",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P1_CHARGE",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P1_MAX",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P1_MAX_LOOP",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P1_RELEASE",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P2_INTRO",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P2_POWER",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P3_IMPACT",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P3_POWER",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P3_WHOOSH",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_CHARGE",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_EXPLODE",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_IMPACT",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_PULL",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P4_SHOOT",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P5_IMPACT",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P5_INTRO",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P5_POWER",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P6_POWER",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P7_INTRO",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P7_POWER",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_FINAL_IMPACT",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_INTRO",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_POWER",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_RICOCHET/***RANDOM***/0",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_RICOCHET/***RANDOM***/1",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/P8_RICOCHET/***RANDOM***/2",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/PAIN/***RANDOM***/0",
+            "sample_index": 33,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/PAIN/***RANDOM***/1",
+            "sample_index": 34,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/PAIN/***RANDOM***/2",
+            "sample_index": 35,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/SHEATH_SWORD",
+            "sample_index": 36,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HWKEYE_M/THROW",
+            "sample_index": 37,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "hwkeye_m\\DEATH7_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\draw_sword.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\JUMP_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\JUMP4_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\LAND5_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P1_max.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P1_max_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "hwkeye_m\\P1_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P2_intro.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P3_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\p3_whoosh.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P4_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\p4_explode.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\p4_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P4_pull.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P4_shoot.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P5_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P5_intro.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P5_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P7_intro.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P7_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_final_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_intro.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_ricochet_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_ricochet_2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\P8_ricochet_3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\PAIN_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\PAIN4_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\PAIN8_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\sheath_sword.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hwkeye_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

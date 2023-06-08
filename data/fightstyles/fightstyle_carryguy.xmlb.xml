@@ -98,7 +98,7 @@
         <trigger flag1="no_actor_vfx" name="flags" resetflags="on_exit" tag="4" time="-1" type="ce_set_flags"/>
         <trigger clear_actor_as_weapon="true" name="unbolt_victim" next_eventtag="6" tag="5" time="-1" type="ce_return_victim_model" unbolt_self="false"/>
         <trigger facethrowdir="false" impactdamage="13 15" name="throw" ownertime="0.5" tag="6" throwdirection="Forward" thrownode="thrownbackloop" throwspeed="800" time="-1"/>
-        <trigger name="sound" sound="char/carry_m/throw" time="0.47"/>
+        <trigger loop_type="start" name="charsound" only_non_looped="true" sound="snd_throw" time="0.47"/>
         <trigger critical="on_exit" interaction_name="parent" name="end_interaction" time="0.99"/>
         <chain action="Idle" result="idle"/>
     </FightMove>
