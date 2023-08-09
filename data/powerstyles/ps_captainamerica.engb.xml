@@ -1,0 +1,262 @@
+<PowerStyle iconfile="textures/ui/america_icons.png">
+    <event inherit="skinsegment" name="shield_hide" show="false" skinsegment="shield_segment" />
+    <event inherit="skinsegment" name="shield_show" show="true" skinsegment="shield_segment" />
+    <FightMove animenum="ea_power11" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6" switch_dir_on_end="true">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_captamerica_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger name="stop" time="0.5" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" index="1" knockback="120" maxrange="64" name="radial" time="0.7">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.7" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.64">
+        <trigger name="whoosh_light" time="0.27" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.36" name="trail" time="0.18" />
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.69">
+        <trigger name="whoosh_light" time="0.3" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.38" name="trail" time="0.23" />
+        <trigger name="punch" time="0.46" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.36" name="trail" time="0.21" />
+        <trigger name="kick" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger movement="35" name="slide" targetdistance="55" time="0.1" />
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.15" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.15" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.15" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="projectile" animenum="ea_power1" blendtime="0" combotextfinisher="Onslaught" combotextstarter="Rallying" handler="ch_returning_projectile" icon="0" is_power="true" lockangles="true" name="power1" powerup_tag="captam_shield" priority="5" startchaintime="0.4">
+        <require cat="skill" item="captam_p1" level="1" />
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="shield_show" time="0" />
+        <trigger name="sound" sound="char/captam_m/p1_power" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/captam/p1_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger effect="char/captam/p1_power" fxlevel="3" name="effect" time="0.2" />
+        <trigger name="shield_hide" time="0.27" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="16 0 48" attacktype="projectile" count="1" damage="%captam_p1_dmg" damagescale="none" damagetype="dmg_physical" entity="shield_shot" filename="ents_captainamerica" fulltargeting="true" knockback="120" maxrange="800" name="projectile" pierce="true" powerusage="%captam_p1_pwr" speed="450" targetable="true" time="0.27">
+            <Damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" combotextfinisher="Onslaught" combotextstarter="Rallying" handler="ch_returning_projectile" icon="0" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="captam_shield" priority="5" startchaintime="0.01">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="idle" result="idle" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="special" result="power1_end" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" blendtime="0" combotextfinisher="Onslaught" combotextstarter="Rallying" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_end" noautoaim="true" powerup_tag="captam_shield" priority="5">
+        <trigger critical="true" name="shield_show" time="0.2" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2" playspeed="0.5" priority="5" startchaintime="0.25">
+        <require cat="skill" item="captam_p2" level="1" />
+        <trigger name="powerusage" powerusage="%captam_p2_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/captam_m/p2_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/captam/p2_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="captam_p2_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/captam/p2_charge" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="shield_show" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="captam_p2_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/captam_m/p2_charge" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2_loop" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2_loop" priority="5" startchaintime="0.01">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="captam_p2_link" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2_end" combotextfinisher="Slam" combotextstarter="Valorous" icon="1" is_power="true" lockangles="true" name="power2_release" powerup_tag="captam_shield" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/captam_m/p2_power" time="0.16" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/captam_m/p2_charge" time="0.16" />
+        <trigger bolt="Bip01 L Hand" effect="char/captam/p2_release" fxlevel="1" name="effect" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="captam_p2_link" time="0.16" />
+        <trigger effect="char/captam/p2_release" fxlevel="2" name="effect" time="0.16" />
+        <trigger life="0.3" movement="0" name="slide" targetdistance="90" targetradius="40" time="0.16" />
+        <trigger effect="char/captam/p2_release" fxlevel="3" name="effect" time="0.2" />
+        <trigger attacktype="punch" damage="%captam_p2_dmg" damagescale="none" damagetype="dmg_physical" knockback="%captam_p2_kb" name="punch" tag="3" time="0.2">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <trigger effect="char/captam/p2_release" fxlevel="4" name="effect" time="0.67" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power3" combotextfinisher="Armor" combotextstarter="Blazing" handler="ch_nightcrawlerboltons" icon="2" is_power="true" lockangles="false" name="power3" powerup_tag="captam_shield" priority="5" startchaintime="0.95">
+        <require cat="skill" item="captam_p3" level="1" />
+        <event arc="65" attack_type="punch" damage="%captam_p3_dmg" damagetype="dmg_physical" inherit="radial" knockback="%captam_p3_kb" maxrange="40" name="shield_slice" tiles="true">
+            <damageMod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="shield_show" time="0" />
+        <trigger name="powerusage" powerusage="%captam_p3_pwr" time="0" />
+        <trigger name="sound" sound="char/captam_m/p3_charge" time="0" />
+        <trigger effect="char/captam/p3_power" fxlevel="1" name="effect" time="0.2" />
+        <trigger angle="-45" name="shield_slice" time="0.27" />
+        <trigger angle="-135" name="shield_slice" time="0.37" />
+        <trigger angle="135" name="shield_slice" time="0.45" />
+        <trigger angle="-45" name="shield_slice" time="0.51" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="melee" animenum="ea_power4" combotextfinisher="Charge" combotextstarter="Avenging" energypersecond="%captam_p4_pwr" handler="ch_charge_move" icon="3" is_power="true" lockchaining="true" locktransitionangles="true" name="power4" noautoaim="true" powerup_tag="captam_shield" priority="5" startchaintime="0.2" turnrate="0.4">
+        <require cat="skill" item="captam_p4" level="1" />
+        <trigger name="unlock_loop_chaining" />
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="shield_show" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" only_non_looped="true" powerusage="%captam_p4_pwr" time="0" />
+        <trigger arc="180" damage="%captam_p4_dmg" damagescale="none" knockback="120" name="punch" tag="1" tiles="true" time="-1">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 Spine2" effect="char/captam/p4_power" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/captam/p4_power" fxlevel="3" how_used="primary" />
+        </trigger>
+        <trigger name="sound" sound="char/captam_m/p4_power" time="0" />
+        <chain action="samepowerhold" result="power4" />
+        <chain action="touch" result="power4_break" />
+        <chain action="idle" result="fastballland" />
+    </FightMove>
+    <FightMove animenum="ea_grab_break" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_break" noautoaim="true" playspeed="1" priority="5">
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buffself" animenum="ea_power5" icon="4" is_power="true" lockangles="true" name="power5" priority="5">
+        <require cat="skill" item="captam_p5" level="1" />
+        <trigger name="sound" sound="char/captam_m/p5_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/captam/p5_power" fxlevel="1" name="effect" time="0.3" />
+        <trigger effect="char/captam/p5_power" fxlevel="2" name="effect" time="0.3" />
+        <trigger life="%captam_p5_life" name="powerup" no_shadow="true" powerusage="%captam_p5_pwr" time="0.46">
+            <special_fx effect="char/captam/p5_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/captam/p5_aura" fxlevel="2" how_used="deactivate" />
+            <affecter affect_type="scale" attribute="move_attack" level="%captam_p5_spd" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%captam_p5_dmg" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buff" animenum="ea_power8" icon="7" is_power="true" lockangles="true" name="power8" priority="5">
+        <require cat="skill" item="captam_p8" level="1" />
+        <trigger name="sound" sound="char/captam_m/p8_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/captam/p8_power" fxlevel="1" name="effect" time="0.3" />
+        <trigger effect="char/captam/p8_power" fxlevel="2" name="effect" time="0.3" />
+        <trigger apply_ally="all" life="%captam_p8_lif" name="powerup" no_shadow="true" powerusage="%captam_p8_pwr" time="0.46">
+            <special_fx effect="char/captam/p8_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/captam/p8_aura" fxlevel="2" how_used="deactivate" />
+            <affecter affect_type="scale" attribute="def_damage" level="%captam_p8_dmg" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="10" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="captam_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="10" only_non_looped="true" team_xtreme="4" time="0" />
+        <trigger apply_ally="all" apply_self="false" class="remove_on_events" life="-1" name="powerup" no_shadow="true" on_xtreme_end="true" tag="10" time="-1">
+            <affecter affect_type="scale" attribute="atk_damage" level="%captam_p9_dmgs" />
+        </trigger>
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Defense" icon="10" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" priority="uninterruptable">
+        <event arc="45" damage="%captam_p9_dmg" inherit="radial" maxrange="101" name="cap_radial">
+            <damagemod name="dmgmod_auto_knockback" />
+        </event>
+        <event bolt="Bip01" bolt_point="preserve_fx01" fxlevel="2" inherit="effect" name="shield_effect" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Boost" name="team_xtreme_msg" time="0" title="Avenger's Shield" />
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="shield_show" time="0" />
+        <trigger life="-1" name="xtreme_start" time="0" />
+        <trigger name="sound" sound="char/captam_m/p9_power" time="0" />
+        <trigger effect="char/captam/p9_power" fxlevel="1" name="effect" time="0.176" />
+        <trigger name="shield_hide" time="0.25" />
+        <trigger bolt="Bip01" boltslot="ebolton_cape" model="models/effects/fx_captam_p9" name="bolton" time="0.25" />
+        <trigger effect="char/captam/p9_power_0701" name="shield_effect" skin_filter="0701" time="0.25" />
+        <trigger effect="char/captam/p9_power_0702" name="shield_effect" skin_filter="0702" time="0.25" />
+        <trigger effect="char/captam/p9_power_0703" name="shield_effect" skin_filter="0703" time="0.25" />
+        <trigger effect="char/captam/p9_power_0704" name="shield_effect" skin_filter="0704" time="0.25" />
+        <trigger effect="char/captam/p9_power_0701" name="shield_effect" skin_filter="0705" time="0.25" />
+        <trigger effect="char/captam/p9_power_0706" name="shield_effect" skin_filter="0706" time="0.25" />
+        <trigger effect="char/captam/p9_power_0707" name="shield_effect" skin_filter="0707" time="0.25" />
+        <trigger angle="45" name="cap_radial" time="0.3" />
+        <trigger angle="-45" name="cap_radial" time="0.41" />
+        <trigger angle="-135" name="cap_radial" time="0.48" />
+        <trigger angle="135" name="cap_radial" time="0.55" />
+        <trigger angle="45" maxrange="250" name="cap_radial" time="0.62" />
+        <trigger angle="-45" maxrange="250" name="cap_radial" time="0.69" />
+        <trigger angle="-135" maxrange="250" name="cap_radial" time="0.76" />
+        <trigger angle="135" maxrange="250" name="cap_radial" time="0.82" />
+        <trigger name="shield_show" time="0.86" />
+        <trigger bolt="Bip01 L Hand" effect="char/captam/p9_power" fxlevel="3" name="effect" tiem="0.86" />
+        <trigger boltslot="ebolton_cape" name="bolton" removebolton="true" time="0.86" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>
