@@ -3,11 +3,11 @@ This readme is for anyone who wants to know whats in the optional files download
 All of the following can be found in the optional files:
 
 Original skins/mannequins:
-- The OCP replaces Black Widow's Ultimate skin with her in game MUA skin. *
-- It replaces Black panthers classic skin/hud with a black variant as the original had a blueish hue, this applies to his mannequin too. *
+- Black panthers classic skin/hud was replaced with a black variant as the original had a blueish hue, this applies to his mannequin too. *
 - The mannequins for Black Widow, Captain Marvel, Cyclops, Hawkeye, Nightcrawler, Sabretooth, and Magneto were all replaced with custom variations using different skins for the OCP. *
-- "Alternate Magneto Skins by Dark_Mark" gives some optional skins which came from Dark Marks original Magneto conversion.
-- "Backup OCP 2.3 Toad skins" contains 2 huds and 2 skins for toad that were removed in the OCP 2.4.
+- "Alternate Skins\Alternate Magneto Skins by Dark_Mark" gives some optional skins which came from Dark Marks original Magneto conversion.
+- "Alternate Skins\Backup OCP 2.1 Black Widow Ultimate skin (PSP)" contains Black Widow's Ultimate skin that was replaced with her in game MUA skin in OCP 2.2 or 2.3.
+- "Alternate Skins\Backup OCP 2.3 Toad skins" contains 2 huds and 2 skins for toad that were removed in the OCP 2.4.
 - "Optional 5th and 6th skins (unnamed)" gives all playable characters a 5th and 6th skin, but you will need to name these skins and add them to the herostat manually.
 * These can't be found in Optional Files. Get the original skins and mannequins from the original installation or backup. DLC skins and mannequins can be found here: https://www.mediafire.com/file/ob7yual5mhpiul6/MUA_Remastered_DLC_Skin_Backport_MrK.zip/file
 
