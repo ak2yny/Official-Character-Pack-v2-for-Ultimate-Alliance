@@ -3,13 +3,169 @@ Changelog by ak2yny
 
 v3:
 - Erik Lensherr\Ermac (Mortal Kombat)
-   complete new mix, using correct priority this time: low - normal set (except menu); mid - fightstyle; high - 4_combat set
+   Completely new mix, using correct priority this time: low - fightstyle; mid - normal set (except in non-combat); high - 4_combat set
 - Erik Lensherr\Shocker (Marvel Comics)
-   mixed in a number of animations from Cap's fightstyle_default.
+   Mixed in a number of animations from Cap's fightstyle_default.
    Note: this is an NPC made playable mod using only the NPC animations, without menu animations. It heavily relied on that fs default.
 - Erik Lensherr\Surtur (Marvel Comics)
-   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (It's now heavy on triggers again - 307, fighmoves - 49)
+   Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (It's now heavy on triggers again - 307, fighmoves - 49)
    Note: The mod is missing animations power_8_end, and power_8_loop
+- Blaw\Bane (DC Comics)
+   Added packages where fightstyle animation set reference is removed.
+- Blaw\Batman
+   Added packages where fightstyle animation set reference is removed.
+- Blaw\Harley Quinn (DC Comics)
+   Added packages where fightstyle animation set reference is removed.
+   Used and still uses fightstyle_default.
+- Blaw\The Joker (DC Comics)
+   Added blocking fightmove to the powerstyle, it's different from fightstyle_default, and the only move that wasn't in the ps before
+   added remaining animations to 28_joker_4_combat, they were forgotten for some reason
+   Added packages where fightstyle animation set reference is removed.
+- Blaw\Nightwing (DC Comics)
+   Added Cap's lunge_land to 62_nwing_4_combat, which was used with OCP 1.3 and has better transition to Nightwing's idle
+   Added packages where fightstyle animation set reference is removed.
+- Blaw\Superman
+   Added packages where fightstyle animation set reference is removed.
+- Blaw\Ultimate Green Goblin
+   Mixed with original animation sets, re-constructing the changes (hex-editing), and respecting the priorities, while checking the actual animations of the unmodified mod in the game. The animation set of the fightstyle is using fightstyle_thing, as can be seen when decompiling the xmlb file. The fightstyle animation set included (using Colossus' 4_combat animation set) is never used.
+- Blaw\War Machine - The Patriot
+   New fix: mixed animations to remove his fightstyle
+   added three fightmoves from the removed fightstyle to his powerstyle
+   updated herostat
+- Dorpond\Brainiac (DC Comics)
+   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
+- Aventureiromax\Android 18 (Dragon Ball)
+   Removed fightstyle_and18 from packages.
+- Aventureiromax\Pink Ranger (Power Rangers)
+   Removed fightstyle_pinkr from packages.
+- Aventureiromax\Samus Aran
+   Mixed with Captain America's animations, as with OCP, his animations are used, which also took care of the missing power animations. For these powers, I only added the missing ones from Cap.
+   Removed fightstyle_aran from packages.
+- Aventureiromax\The Terminator
+   Removed fightstyle_t800 from packages.
+- Boreman\CannonballV2
+   Uses fightstyle_default (even before). Mixed animations from 157_luke_cage, 07_rogue (XML2) and fightstyle_default (07_captamerica_4_combat).
+- Deedoo\Speed
+   Added power_8 from Cap's fightstyle_default.
+   Note: 147_spd.igb had two power_2. I used the first one, assuming that that's what the game does.
+- Deedoo\Wiccan
+   Added power_8 from Cap's fightstyle_default.
+   Note: originally used 145_wic only, but mixed it to use it plus the 4_combat animation file. Two animations don't exist in MUA's shared_anims, but I added them again, just in case.
+- Dihan\Elixir
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash & jumpsmash_release_impact)
+- Julio Cabral\Sentry (Marvel)
+   Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash_release_impact)
+   Note: Version 1.1
+- Julio Cabral\Casey Jones (TMNT)
+   Added packages where fightstyle animation set references are removed. (Had a fs default reference before, but that fs is in permanent package.)
+- Julio Cabral\Judge Dredd
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\Kung Lao (Mortal Kombat)
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\MUA- Dragon Ball mods Pack1\Piccolo
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\MUA- Dragon Ball mods Pack2\Freeza
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\MUA- Dragon Ball mods Pack2\Vegeta
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\Sentry 1.0 (Marvel)
+   Added V 1.0, since it's available as a download.
+   Same changes as the V 1.1.
+   Note: Didn't add mixed animations, because they are identical.
+- Lean\Destroyer Armor
+   Added attackstun_finish and attacktrip2 from his old fightstyle to the powerstyle, assuming they have the correct effect biped binding.
+- LucasFernandesBR\Morrigan (Darkstalkers)
+   Added packages where fightstyle animation set reference is removed.
+- Norrin Radd\Cable
+   Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (heavy attack chain & fury's ground attacks)
+- sbarth13\Dagger
+   Changed to fightstyle_default & added 3 moves from fs dagger to ps.
+   Mixed animations from 12_elektra_4_combat, 24_scarlet_witch (XML2) and 238_dagger (MUA2 - Wii version instead of PSP/PS2).
+   Using the version from the mod_update (including shared_talents).
+- thetommyboy2002\The Flash
+   Added first package where fightstyle animation set reference is removed.
+- Tien\Green Lantern
+   Added packages where fightstyle animation set reference is removed.
+- ZuluViking\Ben 10
+   This mod is already animation mixed, but it used the custom fightstyle for fallback purposes (which I don't know if it even works). Now, the fightstyle is removed from references, and fightmoves are in powerstyle only. Converted fallbacks to proper ones (except the second walk and run fallbacks but that doesn't seem to make any difference).
+   Also changed a few requirements for moves (esp. stinkfly moves), so that it uses custom names instead. Minimized double remove triggers for powers that chain to default idle (which I renamed to ben_idle, because of fallback optimization) where the remaining remove triggers are.
+   Note: Not tested.
+   This mod could use a lot of improvements, such as inherit (idles, powers) and events, effect combining, move optimization for a few forms (I believe it's possible to have more than 2 or 3 affecters active, using levels), etc.
+- Unknown\Crystal (Crystal_2 beta mod)
+   Uses fightstyle_default (even before). Mixed animations from 04_storm_4_combat and fightstyle_default (07_captamerica_4_combat).
+
+ boosters (remove this line)
+- BLaw\Iceman (Heart of Ice Double Jump to Ice Slide patch)
+   Removed block requirement from powerstyle.
+- Canino\Thor
+   Removed block requirement from powerstyle.
+- Cates\Mr Fantastic
+   Removed block requirement from powerstyle.
+- DamesMaximoff\Scarlet Witch
+   Removed block requirement from powerstyle.
+- Gevth\Doom
+   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat.
+- Jeanfan321\Invisible Woman
+   Removed block requirement from powerstyle.
+- Julio Cabral\Black Widow
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\Goku (Dragon Ball)
+   Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\Hercules
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight1-3, attackstun_finish, attackknockback2)
+   Note: ea_ground_attack1 is not in shared_anims. Using the default fighmove here (only the animation is different).
+- Lean\Vertigo
+   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
+- Marvelfan12345\Gambit
+   Removed block requirement from powerstyle.
+- MUALover\Magneto
+   Removed block requirement from powerstyle.
+- MUALover\Professor Xavier
+   Removed block requirement from powerstyle.
+- MUALover\Storm
+   Removed block requirement from powerstyle.
+- MUALover\Thor
+   Removed block requirement from powerstyle.
+- NDP\CannonballBoosterV1
+   Uses fightstyle_default (even before). Mixed animations from 15_ironman_4_combat, 07_rogue (XML2) and fightstyle_default (07_captamerica_4_combat).
+- Nowhere Man\Deadpool
+   Removed block requirement from powerstyle.
+- Nowhere Man\Elektra
+   Removed block requirement from powerstyle.
+   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
+   Can shared_nodes_combat be removed from the booster? All three added fightmoves are already in the powerstyle, but apparently, spawn moves don't work from PS.
+- Nowhere Man\Iceman
+   Removed block requirement from powerstyle.
+- Nowhere Man\Mr. Fantastic
+   Removed block requirement from powerstyle.
+- Nowhere Man\Thor
+   Removed block requirement from powerstyle.
+- Owl City\Scarlet Witch
+   Removed block requirement from powerstyle.
+- Panaka_69\Black Widow
+   Added packages where fightstyle animation set reference is removed.
+- Polygone\Moon Knight
+   Removed block requirement from powerstyle.
+- Rain\Storm
+   Removed block requirement from powerstyle.
+- Sazandra125\Spider-man
+   Removed block requirement from powerstyle.
+- Sazandra125\Venom
+   Removed block requirement from powerstyle.
+- scott summers aka Ariel\Jean Grey
+   Removed block requirement from powerstyle.
+- scottsum\Supergirl
+   Unknown (herostat change, must be a fightstyle removal)
+- StormyTempest\Scarlet Witch
+   Removed block requirement from powerstyle.
+- SuperNatural Witch\Invisible Woman
+   Removed block requirement from powerstyle.
+- Tien\Black Panther
+   Added packages where fightstyle animation set reference is removed.
+- Tien\Ghost Rider
+   Added packages where fightstyle animation set reference is removed.
+- ZuluViking\Juggernaut
+   Removed block requirement from powerstyle.
 
 v2:
 - Jeanfan321\Aqua
@@ -47,6 +203,14 @@ v2:
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attack_knockback_charge)
 - Aventureiromax\Wonder Woman (DC Comics)
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attackheavy1)
+- Blaw\Superman
+   Unknown animation mix
+- Blizz\Blob
+   Unknown animation mix
+- Lean\Firestar
+   Unknown animation mix
+- Teancum\War Machine
+   Unknown animation mix
 
 - 12emre12\Angel
    fixed blocking animation
@@ -76,5 +240,12 @@ v2:
 - Maegawa\Toad
    added animations from 209_toad.igb from XML2 pack (anims were removed in OCP 2)
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (all melee attacks)
+
+- Teancum\War Machine
+   Unknown animation mix
+- Teancum\War Machine
+   Unknown animation mix
+- Teancum\War Machine
+   Unknown animation mix
    
    

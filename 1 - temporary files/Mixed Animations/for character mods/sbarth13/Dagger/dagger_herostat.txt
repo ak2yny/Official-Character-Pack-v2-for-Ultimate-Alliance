@@ -1,0 +1,66 @@
+dagger
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   canseestealthed = true ;
+   characteranims = 135_dagger ;
+   charactername = Dagger ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   name = dagger ;
+   playable = true ;
+   powerstyle = ps_dagger ;
+   scriptlevel = 3 ;
+   skin = 13505 ;
+   skin_01_name = Modern ;
+   skin_02 = 06 ;
+   skin_02_name = Classic ;
+   skin_03 = 07 ;
+   skin_03_name = Dark X-men ;
+   skin_04 = 08 ;
+   skin_04_name = Age of Apocalypse ;
+   sounddir = dagger_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 89 ;
+      Race {
+      name = Mutant ;
+      }
+
+      Race {
+      name = XMen ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = dagg_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = blaster_class ;
+      }
+
+      talent {
+      level = 1 ;
+      name = absorb ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }

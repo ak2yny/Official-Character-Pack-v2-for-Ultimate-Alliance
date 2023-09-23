@@ -1,0 +1,67 @@
+supergirl
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 30 ;
+   characteranims = 112_supergirl ;
+   charactername = Supergirl ;
+   level = 1 ;
+   menulocation = XX ;
+   mind = 30 ;
+   moveset1 = moveset_flying ;
+   name = Supergirl ;
+   playable = true ;
+   powerstyle = ps_supergirl ;
+   scriptlevel = 3 ;
+   skin = 11205 ;
+   skin_01_name = Power Girl ;
+   skin_02 = 06 ;
+   skin_02_name = Arrowverse ;
+   skin_03 = 07 ;
+   skin_03_name = Legendary ;
+   skin_04 = 08 ;
+   skin_04_name = Classic ;
+   skin_05 = 09 ;
+   skin_05_name = Kara Starikov ;
+   skin_06 = 10 ;
+   skin_06_name = New 52 ;
+   sounddir = spgirl_m ;
+   strength = 30 ;
+   team = hero ;
+   textureicon = 7 ;
+      talent {
+      level = 1 ;
+      name = spgirl_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = krypt_resist ;
+      }
+
+   }

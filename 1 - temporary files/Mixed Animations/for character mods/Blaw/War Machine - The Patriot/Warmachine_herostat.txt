@@ -1,0 +1,80 @@
+   stats {
+   autospend = bruiser_light ;
+   body = 7 ;
+   characteranims = 18_warmachine ;
+   charactername = War Machine ;
+   level = 1 ;
+   menulocation = XX  ;
+   mind = 8 ;
+   moveset1 = moveset_flying ;
+   name = Warmachine ;
+   playable = true ;
+   powerstyle = ps_warmachine ;
+   scriptlevel = 3 ;
+   skin = 1802 ;
+   skin_01_name = Mark 2 ;
+   skin_02 = 03 ;
+   skin_02_name = Mark 1 ;
+   skin_03 = 04 ;
+   skin_03_name = Modern ;
+   skin_04 = 05 ;
+   skin_04_name = Iron Patriot ;
+   sounddir = warmch_m ;
+   strength = 6 ;
+   team = hero ;
+   textureicon = 13 ;
+      talent {
+      level = 1 ;
+      name = warmachine_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = grab ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = ironman_grabsma ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 L Toe0 ;
+      effect = char/warmach/ability_fly_hand ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 R Toe0 ;
+      effect = char/warmach/ability_fly_hand ;
+      fxlevel = 1 ;
+      }
+
+      Multipart {
+      hideskin = ip_gun1_active ;
+      hideskin2 = ip_gun2_active ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+   }
