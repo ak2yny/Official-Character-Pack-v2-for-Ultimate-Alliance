@@ -1,18 +1,17 @@
 <PowerStyle iconfile="textures/ui/darkphoenix_icons1.png">
-    <event damagescale="none" name="teleport_data_store" type="ce_atk_teleport_mark_start" />
-    <event entity="drk_ph_nullo" filename="ents_darkphoenix" inherit="relative_spawn" name="who_to_hit" relative="target" type="ce_atk_spawn_relative" />
-    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility" />
+    <event damagescale="none" name="teleport_data_store" type="ce_atk_teleport_mark_start"/>
+    <event entity="drk_ph_nullo" filename="ents_darkphoenix" inherit="relative_spawn" name="who_to_hit" relative="target" type="ce_atk_spawn_relative"/>
+    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility"/>
     <event inherit="powerup" life="-1" name="phoenixaura" no_stack="true" tag_name="aura_on">
-        <special_fx bolt="Bip01 Spine1" effect="char/drkphoenx/special_aura" fxlevel="1" how_used="primary" />
+        <special_fx bolt="Bip01 Spine1" effect="char/drkphoenx/special_aura" fxlevel="1" how_used="primary"/>
     </event>
     <FightMove animenum="ea_idle1" handler="ch_idle" lockchaining="false" name="idle" noncombat="true">
-        <trigger name="phoenixaura" time="0" />
+        <trigger name="phoenixaura" time="0"/>
         <trigger apply_chance="%darkp_ashes_pct" class="callevents" life="-1" name="powerup" time="0.5">
-            <FunctionEvent function="death" triggertag="10" />
+            <FunctionEvent function="death" triggertag="10"/>
         </trigger>
-        <trigger delay="3" maxhealthpercent="%darkp_ashes_hlth" name="resurrect" self="true" tag="10" time="-1" type="ce_resurrect" />
+        <trigger delay="3" maxhealthpercent="%darkp_ashes_hlth" name="resurrect" self="true" tag="10" time="-1" type="ce_resurrect"/>
         <chain action="walk" result="walk" />
-        <chain action="jog" result="jog" />
         <chain action="run" result="run" />
         <chain action="sprint" result="sprint" />
         <chain action="strafeleft" result="strafeleft" />
@@ -25,320 +24,323 @@
         <chain action="groundattack" result="groundattack" />
         <chain action="move" result="jump" />
         <chain action="special" result="boredloop" />
+        <chain action="blocking" result="blocking" />
         <chain action="powers" result="powers" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft"/>
     </FightMove>
     <FightMove animenum="ea_menu_goodbye" lockangles="true" locktransitionangles="true" name="resurrect_v" playspeed="0.67">
-        <trigger bolt="Bip01 R Hand" effect="char/phoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/phoenx_m/p11_charge" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/phoenx/p7_charge" fxlevel="1" time="0" />
-        <trigger effect="char/drkphoenx/special_resurrect" fxlevel="2" name="effect" time="0.31" />
-        <trigger effect="char/drkphoenx/p11_aura" fxlevel="2" name="effect" time="0.41" />
-        <trigger name="sound" sound="char/darkp_m/p9_charge" time="0.9" />
-        <trigger life="3" name="invulnerable" time="0" />
-        <trigger name="onground" onground="false" time="0.99" />
-        <chain action="idle" result="idle" />
+        <trigger bolt="Bip01 R Hand" effect="char/phoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/phoenx_m/p11_charge" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/phoenx/p7_charge" fxlevel="1" time="0"/>
+        <trigger effect="char/drkphoenx/special_resurrect" fxlevel="2" name="effect" time="0.31"/>
+        <trigger effect="char/drkphoenx/p11_aura" fxlevel="2" name="effect" time="0.41"/>
+        <trigger name="sound" sound="char/darkp_m/p9_charge" time="0.9"/>
+        <trigger life="3" name="invulnerable" time="0"/>
+        <trigger name="onground" onground="false" time="0.99"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_attack_light1" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.54">
-        <trigger name="whoosh_light" time="0.2" />
-        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.15" />
-        <trigger name="punch" time="0.42" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight2" />
-        <chain action="groundattack" result="groundattack2" />
-        <chain action="smash" result="attackstun1" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_light" time="0.2"/>
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.15"/>
+        <trigger name="punch" time="0.42"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light2" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.5">
-        <trigger name="whoosh_light" time="0.2" />
-        <trigger bolt="Bip01 L Hand" life="0.43" name="trail" time="0.16" />
-        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.23" />
-        <trigger name="punch" time="0.4" />
-        <trigger index="2" name="punch" time="0.5" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight3" />
-        <chain action="groundattack" result="groundattack" />
-        <chain action="smash" result="popupattack2" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_light" time="0.2"/>
+        <trigger bolt="Bip01 L Hand" life="0.43" name="trail" time="0.16"/>
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.23"/>
+        <trigger name="punch" time="0.4"/>
+        <trigger index="2" name="punch" time="0.5"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light3" lockangles="true" name="attacklight3" playspeed="1.3">
-        <trigger bolt="Bip01 R Toe0" life="0.75" name="trail" time="0.25" />
-        <trigger name="whoosh_heavy" time="0.3" />
-        <trigger name="punch" time="0.5" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="attack" result="null" />
-        <chain action="smash" result="null" />
-        <chain action="blocking" result="blocking" />
+        <trigger bolt="Bip01 R Toe0" life="0.75" name="trail" time="0.25"/>
+        <trigger name="whoosh_heavy" time="0.3"/>
+        <trigger name="punch" time="0.5"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_blocking" handler="ch_hold_smash" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
-        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
-        <trigger charge="0" charge_time="1" charged_eventtag="100" charged_eventtag2="102" name="charge" tag="1" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p6_trails" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
-        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p6_charge" loop_type="start" name="effect&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#10;      tag = 102" time="-1" />
-        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" charged_eventtag2="102" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p6_trails" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p6_charge" loop_type="start" name="effect&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#10;      tag = 102" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
-            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <chain action="idle" result="attackknockback2" />
-        <chain action="groundsmash" result="groundattackknockback2" />
-        <chain action="special" result="attack_knockback_charge" />
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
     </FightMove>
     <FightMove animenum="ea_blocking" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
-        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
-        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
-        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
-        <chain action="idle" result="attackknockback2" />
-        <chain action="groundsmash" result="groundattackknockback2" />
-        <chain action="special" result="attack_knockback_charge" />
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1"/>
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14"/>
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1"/>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
     </FightMove>
     <FightMove aitype="beam" animenum="ea_attack_knockback" endchaintime="1" fallback="attackheavy1" lockangles="true" name="attackknockback2" startchaintime="0.6">
-        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p6_charge" name="effect" time="0.33" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p2_charge" name="effect_sound" sound="char/darkp_m/p3_power" time="0.3" />
-        <trigger life="0.14" name="slide" targetdistance="70" targetradius="57" time="0.25" />
+        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p6_charge" name="effect" time="0.33"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p2_charge" name="effect_sound" sound="char/darkp_m/p3_power" time="0.3"/>
+        <trigger life="0.14" name="slide" targetdistance="70" targetradius="57" time="0.25"/>
         <trigger attack_type="psionic" damage="3 5" damage_type="dmg_physical" fxlevel="1" hiteffect="char/drkphoenx/p4_impact" knockback="245" maxrange="80" name="punch" time="0.5" victimeventtag="15">
-            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_auto_knockback"/>
         </trigger>
-        <chain action="powers" result="powers" />
-        <chain action="idle" result="idle" />
+        <chain action="powers" result="powers"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_power10" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" is_power="true" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
-        <trigger name="stop" time="0" />
-        <trigger name="verify_victim_alive" time="0" />
-        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_storm_victim" name="victim" nodename="grab_smash_victim" targetdistance="22" time="0" victimface="true" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.1" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.1" />
-        <trigger name="sound" sound="char/darkp_m/p1_power" time="0.33" />
-        <trigger execute_against="victim" name="otherevent" othertag="1" othertag2="2" time="0.33" />
+        <trigger name="stop" time="0"/>
+        <trigger name="verify_victim_alive" time="0"/>
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_storm_victim" name="victim" nodename="grab_smash_victim" targetdistance="22" time="0" victimface="true"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.1"/>
+        <trigger name="sound" sound="char/darkp_m/p1_power" time="0.33"/>
+        <trigger execute_against="victim" name="otherevent" othertag="1" othertag2="2" time="0.33"/>
         <trigger damage="4 5" damagescale="normal" damagetype="dmg_telekinesis" name="self_attack" tag="1" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_stun" />
-            <damageMod name="dmgmod_no_hiteffect" />
+            <damagemod name="dmgmod_stun"/>
+            <damageMod name="dmgmod_no_hiteffect"/>
         </trigger>
         <trigger name="powerup" tag="2" time="-1">
-            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p2_charge" fxlevel="1" how_used="activation" never_cycle="true" />
-            <affecter attribute="fear" level="1" />
+            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p2_charge" fxlevel="1" how_used="activation" never_cycle="true"/>
+            <affecter attribute="fear" level="1"/>
         </trigger>
-        <trigger critical="true" name="victim_release" ownertime="0" time="0.99" />
-        <chain action="idle" result="idle" />
+        <trigger critical="true" name="victim_release" ownertime="0" time="0.99"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="5" aitype="rangednolos" animenum="ea_power2" icon="0" lockangles="true" name="power1" playspeed="1.3" priority="5">
-        <require cat="skill" item="darkp_p1" level="1" />
-        <trigger name="powerusage" powerusage="%darkp_p1_pwr" time="0" />
-        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p2_charge" name="effect" time="0.35" />
-        <trigger name="sound" sound="char/darkp_m/p2_power" time="0.1" />
+        <require cat="skill" item="darkp_p1" level="1"/>
+        <trigger name="powerusage" powerusage="%darkp_p1_pwr" time="0"/>
+        <trigger bolt="Bip01 Head" effect="char/drkphoenx/p2_charge" name="effect" time="0.35"/>
+        <trigger name="sound" sound="char/darkp_m/p2_power" time="0.1"/>
         <trigger attackerheight="false" attacktype="direct" count="1" damage="1" damagelevel="1" damagescale="none" damagetype="dmg_telekinesis" fxlevel="1" hiteffect="char/drkphoenx/p2_charge" maxrange="190" name="who_to_hit" powerusage="%darkp_p1_pwr" tag="1" time="0.5" victimeventtag="100">
-            <damageMod name="dmgmod_energize" />
-            <damageMod name="dmgmod_weld" />
-            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_force_fx"/>
         </trigger>
         <trigger class="harming" damage="%darkp_p1_radmg" damagetype="dmg_telekinesis" force_stack="false" life="5" name="powerup" othertag2="3" tag="100" time="-1">
-            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p2_aura" />
+            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p2_aura"/>
         </trigger>
-        <trigger life="5" apply_chance="%darkp_p1_stun" name="powerup" shared_tag="shared_stunned" tag="3" time="-1" />
-        <chain action="Idle" result="idle" />
+        <trigger life="5" apply_chance="%darkp_p1_stun" name="powerup" shared_tag="shared_stunned" tag="3" time="-1"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="5" aitype="rangednolos" animenum="ea_power1" icon="1" lockangles="true" name="power2" priority="5">
-        <require cat="skill" item="darkp_p2" level="1" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p1_charge" index="1" name="effect" tag="2" time="0.1" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p1_charge" index="2" name="effect" tag="2" time="0.1" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_aura" index="3" name="effect" tag="2" time="0.1" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_power" index="4" name="effect" tag="2" time="0.375" />
-        <trigger name="sound" sound="char/darkp_m/p1_power" time="0.1" />
+        <require cat="skill" item="darkp_p2" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p1_charge" index="1" name="effect" tag="2" time="0.1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p1_charge" index="2" name="effect" tag="2" time="0.1"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_aura" index="3" name="effect" tag="2" time="0.1"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_power" index="4" name="effect" tag="2" time="0.375"/>
+        <trigger name="sound" sound="char/darkp_m/p1_power" time="0.1"/>
         <trigger attackerheight="false" attacktype="direct" count="1" damage="%darkp_p2_dmg" damagelevel="1" damagescale="none" damagetype="dmg_telekinesis" fxlevel="1" hiteffect="char/drkphoenx/p1_power" maxrange="190" name="who_to_hit" powerusage="%pho_ment_burst_pwr" tag="1" time="0.375" victimeventtag="100">
-            <damageMod name="dmgmod_energize" />
-            <damageMod name="dmgmod_weld" />
-            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_force_fx"/>
         </trigger>
-        <trigger maxdangerrating="10" name="no_bosses" noboss="true" passtag="102" tag="100" time="-1" type="ce_filter_event" />
-        <trigger chance="%darkp_p2_pct" name="do_chance" othertag="200" tag="102" time="-1" type="ce_otherevent" />
+        <trigger maxdangerrating="10" name="no_bosses" noboss="true" passtag="102" tag="100" time="-1" type="ce_filter_event"/>
+        <trigger chance="%darkp_p2_pct" name="do_chance" othertag="200" tag="102" time="-1" type="ce_otherevent"/>
         <trigger class="callevents" life="%darkp_p2_life" name="powerup" tag="200" time="-1">
-            <FunctionEvent function="deactivate" triggertag="202" />
-            <affecter attribute="team_switch" level="1" />
-            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p1_impact" />
-            <special_fx effect="base/material/explode/exp_generic_med" how_used="deactivation" />
+            <FunctionEvent function="deactivate" triggertag="202"/>
+            <affecter attribute="team_switch" level="1"/>
+            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p1_impact"/>
+            <special_fx effect="base/material/explode/exp_generic_med" how_used="deactivation"/>
         </trigger>
-        <trigger chance="1" instantkillonly="true" name="remove_me" nosponsor="false" tag="202" time="-1" type="ce_remove" />
-        <chain action="Idle" result="idle" />
+        <trigger chance="1" instantkillonly="true" name="remove_me" nosponsor="false" tag="202" time="-1" type="ce_remove"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aitype="rangednolos" animenum="ea_power2_end" icon="2" lockangles="true" name="power3" playspeed="1.3" priority="5">
-        <require cat="skill" item="darkp_p3" level="1" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.05" />
-        <trigger name="sound" sound="char/darkp_m/p3_power" time="0.25" />
+        <require cat="skill" item="darkp_p3" level="1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.05"/>
+        <trigger name="sound" sound="char/darkp_m/p3_power" time="0.25"/>
         <trigger attackerheight="false" attacktype="direct" count="1" damage="%darkp_p3_dmg" damagelevel="1" damagescale="none" damagetype="dmg_fire" fxlevel="1" maxrange="190" name="who_to_hit" powerusage="%darkp_p3_pwr" tag="1" time="0.5" victimeventtag="100">
-            <damageMod name="dmgmod_energize" />
-            <damageMod name="dmgmod_weld" />
-            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_force_fx"/>
         </trigger>
         <trigger class="harming" damage="%darkp_p3_radmg" damagetype="dmg_fire" force_stack="false" life="5" name="powerup" tag="100" time="-1">
-            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p3_aura" />
-            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p3_aura"/>
+            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_idle" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" playspeed="12" powerup_tag="dark_power10" priority="5">
-        <require cat="skill" item="darkp_p4" level="1" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger name="powerusage" powerusage="%darkp_p4_pwr" time="0" />
-        <chain action="Idle" result="power4_end" />
-        <chain action="samepowerhold" result="power4_loop" />
+        <require cat="skill" item="darkp_p4" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="powerusage" powerusage="%darkp_p4_pwr" time="0"/>
+        <chain action="Idle" result="power4_end"/>
+        <chain action="samepowerhold" result="power4_loop"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_menu_idle" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_loop" playspeed="1.3" powerup_tag="dark_power10" priority="5">
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/warbir/p5_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/warbir/p5_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="darkp_p4_link" time="0">
-            <special_fx bolt="Bip01 Spine1" effect="char/humant/special_flameon" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Spine1" effect="char/humant/special_flameon" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <chain action="Idle" result="power4_charging" />
+        <chain action="Idle" result="power4_charging"/>
     </FightMove>
     <FightMove animenum="ea_menu_idle" icon="3" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_charging" powerup_tag="dark_power10" priority="5" playspeed="1.3" startchaintime="0.01">
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <chain action="Idle" result="power4_end" />
-        <chain action="samepowerhold" result="power4_charging" />
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <chain action="Idle" result="power4_end"/>
+        <chain action="samepowerhold" result="power4_charging"/>
     </FightMove>
     <FightMove aireusetime="5" aitype="projectile" animenum="ea_menu_action" combotextfinisher="Rage" combotextstarter="Phoenix" icon="3" lockangles="true" name="power4_end" powerup_tag="dark_power10" priority="5">
-        <trigger charge_type="stop" critical="true" name="charge" time="0" />
-        <trigger critical="true" name="powerup" remove_tag="darkp_p4_link" time="0.38" />
-        <trigger effect="char/drkphoenx/p10_power" fxlevel="1" name="effect" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p10_power" fxlevel="2" name="effect" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p10_power" fxlevel="2" name="effect" time="0" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p10_power" fxlevel="3" name="effect" time="0" />
-        <trigger name="sound" sound="char/darkp_m/p10_charge" time="0.13" />
-        <trigger effect="char/drkphoenx/p10_power" fxlevel="4" name="effect_sound" sound="char/darkp_m/p10_power" time="0.7" />
-        <trigger damage="1" damagetype="dmg_fire" fxlevel="1" maxrange="%darkp_p4_rad" name="radial" time="0.6" victimeventtag="100" />
-        <trigger failtag="102" filteractor="true" name="event_filter" passtag="101" tag="100" time="-1" type="ce_filter_event" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0"/>
+        <trigger critical="true" name="powerup" remove_tag="darkp_p4_link" time="0.38"/>
+        <trigger effect="char/drkphoenx/p10_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p10_power" fxlevel="2" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p10_power" fxlevel="2" name="effect" time="0"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p10_power" fxlevel="3" name="effect" time="0"/>
+        <trigger name="sound" sound="char/darkp_m/p10_charge" time="0.13"/>
+        <trigger effect="char/drkphoenx/p10_power" fxlevel="4" name="effect_sound" sound="char/darkp_m/p10_power" time="0.7"/>
+        <trigger damage="1" damagetype="dmg_fire" fxlevel="1" maxrange="%darkp_p4_rad" name="radial" time="0.6" victimeventtag="100"/>
+        <trigger failtag="102" filteractor="true" name="event_filter" passtag="101" tag="100" time="-1" type="ce_filter_event"/>
         <trigger class="harming" damage="%darkp_p4_dmg" damagetype="dmg_fire" life="1" name="powerup" tag="101" time="-1">
-            <special_fx effect="char/drkphoenx/p3_aura" fxlevel="1" how_used="primary" />
-            <damageMod name="dmgmod_weld" remove="dmgmod_no_pain" />
+            <special_fx effect="char/drkphoenx/p3_aura" fxlevel="1" how_used="primary"/>
+            <damageMod name="dmgmod_weld" remove="dmgmod_no_pain"/>
         </trigger>
         <trigger allow_non_actors="true" class="harming" damage="150 167" damagetype="dmg_fire" life="2" name="powerup" tag="102" time="-1">
-            <special_fx effect="char/drkphoenx/p3_aura" fxlevel="2" how_used="primary" />
-            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary" />
-            <damageMod name="dmgmod_weld" />
+            <special_fx effect="char/drkphoenx/p3_aura" fxlevel="2" how_used="primary"/>
+            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary"/>
+            <damageMod name="dmgmod_weld"/>
         </trigger>
-        <chain action="idle" result="idle" />
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_power4" endchaintime="0.95" handler="ch_teleport_dash_start" icon="4" is_power="true" name="power5" noautoaim="true" playspeed="3" priority="5" startchaintime="0.9" turnrate="0.5">
-        <require cat="skill" item="darkp_p5" level="1" />
-        <trigger count="set" name="count" time="0" value="%darkp_p5_num_att" />
-        <trigger name="powerusage" powerusage="%darkp_p5_pwr" time="0" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p7_power" teleport_visible="false" time="0.75" />
-        <trigger attacktype="direct" name="teleport_mark_start" time="0.0" />
-        <trigger maxrange="%darkp_p5_range" maxtargets="%darkp_p5_num_att" name="teleport_dash_prep" time="0.0" />
-        <chain action="Idle" result="power5_loop" />
+        <require cat="skill" item="darkp_p5" level="1"/>
+        <trigger count="set" name="count" time="0" value="%darkp_p5_num_att"/>
+        <trigger name="powerusage" powerusage="%darkp_p5_pwr" time="0"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p7_power" teleport_visible="false" time="0.75"/>
+        <trigger attacktype="direct" name="teleport_mark_start" time="0.0"/>
+        <trigger maxrange="%darkp_p5_range" maxtargets="%darkp_p5_num_att" name="teleport_dash_prep" time="0.0"/>
+        <chain action="Idle" result="power5_loop"/>
     </FightMove>
     <FightMove animenum="ea_power2_end" blendtime="0" combotextfinisher="Inferno" combotextstarter="Warp" endchaintime="0.75" fallback="power5_end" is_power="true" lockangles="true" name="power5_loop" noautoaim="true" playspeed="0.68" powerup_tag="darkp_power5" priority="5" startchaintime="0.7">
-        <require cat="counter" level="1" />
-        <trigger count="add" name="count" time="0.0" value="-1" />
+        <require cat="counter" level="1"/>
+        <trigger count="add" name="count" time="0.0" value="-1"/>
         <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.0">
-            <affecter attribute="invisible" />
+            <affecter attribute="invisible"/>
         </trigger>
-        <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0.0" />
-        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p7_aura" fxlevel="2" name="effect" time="0.0" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" fxlevel="2" name="effect_sound" sound="char/darkp_m/p3_power" time="0.32" />
-        <trigger arc="30" damage="%darkp_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" victimeventtag="111" time="0.32" />
+        <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0.0"/>
+        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p7_aura" fxlevel="2" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" fxlevel="2" name="effect_sound" sound="char/darkp_m/p3_power" time="0.32"/>
+        <trigger arc="30" damage="%darkp_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" victimeventtag="111" time="0.32"/>
         <trigger class="harming" damage="%darkp_p3_radmg" damagetype="dmg_fire" force_stack="false" life="5" name="powerup" tag="111" time="-1">
-            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p3_aura" />
-            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 Spine2" effect="char/drkphoenx/p3_aura"/>
+            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary"/>
         </trigger>
-        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p7_power" teleport_visible="false" time="0.7" />
-        <chain action="idle" result="power5_loop" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p7_power" teleport_visible="false" time="0.7"/>
+        <chain action="idle" result="power5_loop"/>
     </FightMove>
     <FightMove animenum="ea_power4" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="power5_end" noautoaim="true" playspeed="1.7" priority="5" startchaintime="0.9">
-        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p7_aura" fxlevel="2" name="effect" time="0.1" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.0" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.0" />
-        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0.0" />
-        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5" />
-        <chain action="idle" result="idle" />
+        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p7_aura" fxlevel="2" name="effect" time="0.1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p3_charge" name="effect" time="0.0"/>
+        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0.0"/>
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="3" aitype="rangednolos" animenum="ea_power5" icon="5" lockangles="true" name="power6" playspeed="1.4" priority="5">
-        <require cat="skill" item="darkp_p6" level="1" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_power" name="effect" time="0.4" />
-        <trigger name="sound" sound="char/darkp_m/p5_power" time="0.1" />
+        <require cat="skill" item="darkp_p6" level="1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_power" name="effect" time="0.4"/>
+        <trigger name="sound" sound="char/darkp_m/p5_power" time="0.1"/>
         <trigger attackerheight="false" attacktype="direct" count="1" damage="%darkp_p6_dmg" damagelevel="1" damagescale="none" damagetype="dmg_telekinesis" fxlevel="1" hiteffect="char/drkphoenx/p4_impact" maxrange="190" name="who_to_hit" powerusage="%darkp_p6_pwr" tag="1" time="0.485">
-            <damageMod name="dmgmod_energize" />
-            <damageMod name="dmgmod_weld" />
-            <damageMod name="dmgmod_force_fx" />
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_force_fx"/>
         </trigger>
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" name="effect" time="0.6" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p5_charge" name="effect" time="0.775" />
-        <chain action="Idle" result="power6_end" />
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" name="effect" time="0.6"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p5_charge" name="effect" time="0.775"/>
+        <chain action="Idle" result="power6_end"/>
     </FightMove>
     <FightMove animenum="ea_idle" lockangles="true" locktransitionangles="true" name="power6_end" playspeed="10" priority="uninterruptable">
         <trigger apply_enemy="none" apply_self="true" life="3" name="powerup" time="0.01">
-            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" how_used="primary" />
-            <affecter attribute="health_regen_pct" level="%darkp_p6_pct" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" how_used="primary"/>
+            <affecter attribute="health_regen_pct" level="%darkp_p6_pct"/>
         </trigger>
         <trigger apply_chance="%darkp_p6_aon" apply_ally="all" apply_enemy="none" apply_self="false" life="3" name="powerup" tag="100" time="0.5">
-            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" how_used="primary" />
-            <affecter attribute="health_regen_pct" level="%darkp_p6_pct" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_charge" how_used="primary"/>
+            <affecter attribute="health_regen_pct" level="%darkp_p6_pct"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_power6" icon=" 6" lockangles="true" name="power7" playspeed="1.25" priority="5">
-        <require cat="skill" item="darkp_p7" level="1" />
-        <trigger name="sound" sound="char/darkp_m/p9_power" time="0.1" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p9_charge2" fxlevel="1" name="effect" time="0" />
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p9_charge2" fxlevel="1" name="effect" time="0" />
-        <trigger effect="char/drkphoenx/p9_charge2" fxlevel="2" name="effect" time="0" />
+        <require cat="skill" item="darkp_p7" level="1"/>
+        <trigger name="sound" sound="char/darkp_m/p9_power" time="0.1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p9_charge2" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p9_charge2" fxlevel="1" name="effect" time="0"/>
+        <trigger effect="char/drkphoenx/p9_charge2" fxlevel="2" name="effect" time="0"/>
         <trigger apply_ally="none" apply_self="true" life="-1" name="powerup" no_shadow="true" powerusage="%darkp_p7_pwr" time="0.75">
-            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p9_aura" fxlevel="1" how_used="primary" />
-            <affecter attribute="spend_damage" level="%darkp_p7_res" />
+            <special_fx bolt="Bip01 Head" effect="char/drkphoenx/p9_aura" fxlevel="1" how_used="primary"/>
+            <affecter attribute="spend_damage" level="%darkp_p7_res"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
-        <require cat="skill" item="darkp_p8" level="1" />
-        <require cat="xtreme" level="1" />
-        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="3" time="0" />
-        <chain action="idle" result="team_xtreme" />
-        <chain action="special" result="power8" />
+        <require cat="skill" item="darkp_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="3" time="0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
     </FightMove>
     <FightMove animenum="ea_menu_goodbye" combotextfinisher="Burn" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="7" priority="uninterruptable">
-        <require cat="xtreme" level="1" />
-        <trigger always="true" name="camera_override" time="0" />
-        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Consume Room" />
+        <require cat="xtreme" level="1"/>
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Consume Room"/>
         <trigger arc="180" attacktype="psionic" damage="%darkp_p8_dmg" damagelevel="1" damagetype="dmg_telekinesis" index="1" maxrange="1000" name="phoenixforce" time="0.45" type="ce_atk" victimeventtag="100" victimeventtag2="101">
-            <damageMod name="dmgmod_environment" />
+            <damageMod name="dmgmod_environment"/>
         </trigger>
-        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p8_charge" name="effect" time="0" />
-        <trigger name="sound" sound="char/darkp_m/p8_charge" time="0.25" />
-        <trigger name="sound" sound="char/darkp_m/p8_power" time="0.8" />
+        <trigger bolt="Bip01 L Hand" effect="char/drkphoenx/p8_charge" name="effect" time="0"/>
+        <trigger name="sound" sound="char/darkp_m/p8_charge" time="0.25"/>
+        <trigger name="sound" sound="char/darkp_m/p8_power" time="0.8"/>
         <trigger life="0.65" name="powerup" no_shadow="true" time="0.575">
-            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p8_power" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/drkphoenx/p8_power" fxlevel="1" how_used="primary"/>
         </trigger>
-        <trigger effect="char/drkphoenx/p8_power" name="effect" time="0.2" />
-        <trigger effect="char/drkphoenx/p8_wings" name="effect" time="0" />
-        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p8_aura" name="effect" tag="100" time="-1" />
-        <trigger failtag="98" maxdangerrating="10" name="no_bosses" noboss="true" passtag="99" tag="101" time="-1" type="ce_filter_event" />
+        <trigger effect="char/drkphoenx/p8_power" name="effect" time="0.2"/>
+        <trigger effect="char/drkphoenx/p8_wings" name="effect" time="0"/>
+        <trigger bolt="Bip01 Spine2" effect="char/drkphoenx/p8_aura" name="effect" tag="100" time="-1"/>
+        <trigger failtag="98" maxdangerrating="10" name="no_bosses" noboss="true" passtag="99" tag="101" time="-1" type="ce_filter_event"/>
         <trigger arc="180" attacktype="psionic" damage="%darkp_p8_dmg" damagelevel="1" damagetype="dmg_telekinesis" index="98" knockback="555" maxrange="1000" name="phoenixforce" time="0.45" type="ce_atk">
-            <damageMod name="dmgmod_popup" />
-            <damageMod name="dmgmod_environment" />
+            <damageMod name="dmgmod_popup"/>
+            <damageMod name="dmgmod_environment"/>
         </trigger>
-        <trigger chance="%darkp_p8_pct" name="do_chance" othertag="102" tag="99" time="-1" type="ce_otherevent" />
+        <trigger chance="%darkp_p8_pct" name="do_chance" othertag="102" tag="99" time="-1" type="ce_otherevent"/>
         <trigger instantkillonly="true" name="remove_me" nosponsor="false" tag="102" time="0.99" type="ce_remove">
-            <special_fx effect="base/material/explode/exp_generic_med" />
+            <special_fx effect="base/material/explode/exp_generic_med"/>
         </trigger>
-        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
-        <chain action="Idle" result="power8_end" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99"/>
+        <chain action="Idle" result="power8_end"/>
     </FightMove>
     <FightMove animenum="ea_power9" lockangles="true" locktransitionangles="true" name="power8_end" priority="uninterruptable">
-        <trigger bolt="Bip01 R Hand" effect="char/phoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p9_charge" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0.4" />
-        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_power" name="effect" time="0.6" />
+        <trigger bolt="Bip01 R Hand" effect="char/phoenx/p7_charge" fxlevel="1" name="effect_sound" sound="char/darkp_m/p9_charge" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/drkphoenx/p4_charge" name="effect" time="0.4"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p4_power" name="effect" time="0.6"/>
         <trigger apply_enemy="none" apply_self="true" life="1" name="powerup" time="0.63">
-            <affecter attribute="health_regen_pct" level="%darkp_p8_abs" />
+            <affecter attribute="health_regen_pct" level="%darkp_p8_abs"/>
         </trigger>
-        <chain action="Idle" result="idle" />
+        <chain action="Idle" result="idle"/>
     </FightMove>
 </PowerStyle>
