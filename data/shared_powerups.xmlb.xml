@@ -1,0 +1,241 @@
+<powerups>
+    <powerup life="30.0" tag_name="shared_momentum">
+        <affecter affect_type="scale" attribute="traits" level="1.25" />
+        <special_fx effect="base/powerup/aura/aura_momentum" fxlevel="1" how_used="activation" />
+        <special_fx effect="base/powerup/aura/aura_momentum" fxlevel="2" how_used="primary" never_cycle="true" />
+        <special_fx effect="base/powerup/aura/aura_momentum" fxlevel="3" how_used="deactivation" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_momentum_full">
+        <special_fx effect="base/powerup/aura/aura_momentum" fxlevel="4" never_cycle="true" />
+    </powerup>
+    <powerup class="stunned" life="4.0" tag_name="shared_stunned">
+        <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned" />
+    </powerup>
+    <powerup life="3" tag_name="shared_slow">
+        <special_fx bolt="Bip01 Head" effect="base/powerup/pu_stunned" />
+        <affecter affect_type="scale" attribute="move" level="0.3" />
+    </powerup>
+    <powerup life="1" no_stack="true" tag_name="shared_electric">
+        <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="base/powerup/pu_electric" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="base/powerup/pu_electric" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="base/powerup/pu_electric" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="base/powerup/pu_electric" fxlevel="1" how_used="primary" never_cycle="true" />
+    </powerup>
+    <powerup class="harming" damage="1" damagetype="dmg_radiation" life="3" tag_name="shared_radiated" />
+    <powerup class="harming" damage="1" life="3" tag_name="shared_bleed" />
+    <powerup class="harming" damage="1" life="3" tag_name="shared_burn">
+        <special_fx bolt="Bip01 Spine2" effect="effects/base/hit/hit_fire" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_25DamageResist">
+        <affecter affect_type="scale" attribute="def_damage" level="0.75" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_50DamageResist">
+        <affecter affect_type="scale" attribute="def_damage" level="0.5" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_75DamageResist">
+        <affecter affect_type="scale" attribute="def_damage" level="0.25" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_100DamageResist">
+        <affecter affect_type="scale" attribute="def_damage" level="0.0" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_25DamageReduction">
+        <affecter affect_type="scale" attribute="atk_damage" level="0.75" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_50DamageReduction">
+        <affecter affect_type="scale" attribute="atk_damage" level="0.5" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_75DamageReduction">
+        <affecter affect_type="scale" attribute="atk_damage" level="0.25" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_nograb">
+        <affecter attribute="def_grab" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_hulksmash">
+        <affecter affect_type="scale" attribute="atk_damage" level="5" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_nofinisher">
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_energy_per_kill">
+        <affecter affect_type="sum" attribute="energy_per_kill" level="20" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_health_per_kill">
+        <affecter affect_type="sum" attribute="health_per_kill" level="20" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_max_health">
+        <affecter affect_type="scale" attribute="maxhealth" level="1.15" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_max_energy">
+        <affecter affect_type="scale" attribute="maxenergy" level="1.15" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_damage_to_health">
+        <affecter affect_type="scale" attribute="atk_vampire" level="0.05" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_health_regen">
+        <affecter attribute="health_regen" level="5" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_xp">
+        <affecter affect_type="scale" attribute="xp" level="1.05" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_resistances">
+        <affecter attribute="resist_all" level="0.05" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_damage">
+        <affecter affect_type="scale" attribute="atk_damage" level="1.05" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_traits">
+        <affecter affect_type="sum" attribute="traits" level="6" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_extra_money">
+        <affecter affect_type="scale" attribute="extra_money" level="1.12468" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_criticals">
+        <affecter affect_type="sum" attribute="critical" level="0.05" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_reduce_energy_cost">
+        <affecter affect_type="scale" attribute="power_cost" level="0.9" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_reduce_energy_cost_dlc">
+        <affecter affect_type="scale" attribute="power_cost" level="0.85" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_team_increase_striking">
+        <affecter affect_type="sum" attribute="strength" level="15" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" share_enemies="true" share_life="5" share_radius="180" shared_not_apply_to_owner="true" tag_name="shared_tracker">
+        <special_fx bolt="Bip01 Head" effect="base/powerup/aura/aura_tracker_loop" fxlevel="1" never_cycle="true" share_filter="shared" />
+        <special_fx effect="base/powerup/aura/aura_tracker_loop" fxlevel="2" never_cycle="true" share_filter="owner" />
+        <affecter affect_type="scale" attribute="def_damage" level="2.0" />
+    </powerup>
+    <powerup class="requirements" life="-1" remove_on_death="true" special_description="227" tag_name="shared_front_invuln">
+        <special_fx effect="base/powerup/aura/aura_front_invuln_loop" fxlevel="1" how_used="primary" />
+        <affecter affect_type="scale" attribute="def_damage_scope" level="0.0" scope_attackangle="100.0" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" share_life="1" share_radius="120" special_description="804" tag_name="ldr_shared_damage">
+        <special_fx effect="base/powerup/aura/aura_damage_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_damage_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+        <affecter affect_type="scale" attribute="atk_damage" level="3.0" share_filter="owner" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.5" share_filter="shared" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" share_life="1" share_radius="120" special_description="805" tag_name="ldr_shared_speed">
+        <special_fx effect="base/powerup/aura/aura_speed_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_speed_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+        <affecter affect_type="scale" attribute="move" level="1.3" share_filter="owner" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.3" share_filter="owner" />
+        <affecter affect_type="scale" attribute="move" level="1.5" share_filter="shared" />
+    </powerup>
+    <powerup class="add_attack" damagepercent="0.35" damagetype="dmg_elemental" life="-1" remove_on_death="true" share_life="1" share_radius="120" special_description="806" tag_name="ldr_shared_elemental">
+        <special_fx effect="base/powerup/aura/aura_cold_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_cold_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+        <affecter attribute="resist_elemental" level="0.75" share_filter="owner" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" renderfx="invulnerable" share_enemies="true" share_life="1" share_radius="120" special_description="807" tag_name="ldr_shared_drain">
+        <special_fx effect="base/powerup/aura/aura_energydrain_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_energydrain_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_damage="dmg_mental" share_filter="owner" />
+        <affecter affect_type="scale" attribute="energy_regen" level="-0.25" share_filter="shared" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" share_life="1" share_radius="120" special_description="808" tag_name="ldr_shared_altered">
+        <special_fx effect="base/powerup/aura/aura_altergene_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_altergene_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_damage="dmg_mental" share_filter="owner" />
+        <affecter attribute="resist_all" level="0.75" share_filter="owner" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.33" share_filter="shared" />
+    </powerup>
+    <powerup class="remove_on_events" life="-1" oncombatnode="popupattack2" renderfx="invulnerable" special_description="803" tag_name="ldr_need_popup">
+        <special_fx effect="base/powerup/aura/aura_finisher_vulnerable" fxlevel="2" how_used="primary" />
+        <affecter affect_type="scale" attribute="def_damage" level="0" />
+        <affecter affect_type="scale" attribute="def_mind_control" level="0.1" />
+        <affecter affect_type="scale" attribute="def_pain" level="0" />
+        <affecter attribute="def_grab" />
+        <affecter attribute="def_pickup" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        <affecter affect_type="scale" attribute="no_iceshell" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        <affecter attribute="slow_immune" level="1" />
+    </powerup>
+    <powerup class="remove_on_events" life="-1" oncombatnode="attackknockback2" renderfx="invulnerable" special_description="800" tag_name="ldr_need_knockback">
+        <special_fx effect="base/powerup/aura/aura_finisher_vulnerable" fxlevel="2" how_used="primary" />
+        <affecter affect_type="scale" attribute="def_damage" level="0" />
+        <affecter affect_type="scale" attribute="def_mind_control" level="0.1" />
+        <affecter affect_type="scale" attribute="def_pain" level="0" />
+        <affecter attribute="def_grab" />
+        <affecter attribute="def_pickup" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        <affecter affect_type="scale" attribute="no_iceshell" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        <affecter attribute="slow_immune" level="1" />
+    </powerup>
+    <powerup class="remove_on_events" life="-1" no_stack="true" oncombatnode="randomfinisher" renderfx="invulnerable" tag_name="ldr_need_finisher">
+        <special_fx effect="base/powerup/aura/aura_finisher_vulnerable" fxlevel="2" how_used="primary" />
+        <affecter affect_type="scale" attribute="def_damage" level="0" />
+        <affecter affect_type="scale" attribute="def_mind_control" level="0.1" />
+        <affecter affect_type="scale" attribute="def_pain" level="0" />
+        <affecter attribute="def_grab" />
+        <affecter attribute="def_pickup" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        <affecter affect_type="scale" attribute="no_iceshell" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        <affecter attribute="slow_immune" level="1" />
+    </powerup>
+    <powerup life="1" renderfx="invulnerable" special_description="810" tag_name="ldr_invulnerable">
+        <affecter affect_type="scale" attribute="def_damage" level="0" />
+    </powerup>
+    <powerup class="boost_when_shared" extra_powerup_shared_tag="ldr_invulnerable" life="-1" remove_on_death="true" share_life="0.5" share_radius="120" tag_name="ldr_leech_invuln">
+        <affecter attribute="powerup_scope" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_invulnerable_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_invulnerable_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" renderfx="invulnerable" share_life="0.5" share_radius="120" special_description="811" tag_name="ldr_shared_invuln">
+        <affecter attribute="powerup_scope" share_filter="shared" />
+        <affecter affect_type="scale" attribute="def_damage" level="0" share_filter="shared" />
+        <special_fx effect="base/powerup/aura/aura_invulnerable_loop" fxlevel="1" how_used="primary" share_filter="owner" />
+        <special_fx effect="base/powerup/aura/aura_invulnerable_loop" fxlevel="2" how_used="primary" share_filter="shared" />
+    </powerup>
+    <powerup life="-1" remove_on_death="true" renderfx="regen" special_description="812" tag_name="ldr_health_regen">
+        <affecter attribute="health_regen_pct" level="0.07" />
+    </powerup>
+    <powerup class="remove_on_events" life="-1" no_remove="true" oncombatnode="randomfinisher" renderfx="regen" shared_powerup="freeze_health_regen" special_description="812" tag_name="ldr_regen_finisher">
+        <affecter affect_type="scale" attribute="def_mind_control" level="0.1" />
+        <affecter affect_type="scale" attribute="def_pain" level="0" />
+        <affecter attribute="def_grab" />
+        <affecter attribute="def_pickup" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        <affecter affect_type="scale" attribute="no_iceshell" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        <affecter attribute="slow_immune" level="1" />
+        <affecter attribute="health_regen_pct" level="0.50" />
+        <affecter affect_type="scale" attribute="maxhealth" level="1.50" />
+    </powerup>
+    <powerup class="remove_on_events" life="-1" onattacktype="beam" oncombatnode="randomfinisher" renderfx="invulnerable" special_description="813" tag_name="ldr_2vuln">
+        <special_fx effect="base/powerup/aura/aura_invulnerable_loop" fxlevel="2" how_used="primary" />
+        <affecter affect_type="scale" attribute="def_mind_control" level="0.1" />
+        <affecter affect_type="scale" attribute="def_pain" level="0" />
+        <affecter attribute="def_grab" />
+        <affecter attribute="def_pickup" />
+        <affecter affect_type="scale" attribute="def_finisher" level="0" />
+        <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+        <affecter affect_type="scale" attribute="no_iceshell" level="0" />
+        <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        <affecter attribute="slow_immune" level="1" />
+    </powerup>
+    <powerup life="8" tag_name="freeze_health_regen">
+        <affecter affect_type="max" attribute="health_regen" level="0" />
+    </powerup>
+    <powerup life="-1" tag_name="shared_mutant">
+        <affecter affect_type="scale" attribute="atk_damage" level="2" />
+        <affecter attribute="resist_mental" level="0.75" />
+        <affecter affect_type="scale" attribute="maxhealth" level="3.0" />
+        <affecter affect_type="scale" attribute="atk_damage" level="1.33">
+            <scope scope_damage="dmg_fire" />
+            <scope scope_damage="dmg_radiation" />
+            <scope scope_damage="dmg_electricity" />
+            <scope scope_damage="dmg_cold" />
+        </affecter>
+    </powerup>
+</powerups>
