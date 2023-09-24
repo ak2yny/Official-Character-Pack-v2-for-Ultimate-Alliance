@@ -33,7 +33,8 @@ v3:
    added three fightmoves from the removed fightstyle to his powerstyle
    updated herostat
 - Dorpond\Brainiac (DC Comics)
-   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
+   Fixed ce_spawn_actor using the correct character (Brainiac). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
+   Removed skin and skin filter, since using himself as a character for spawning automatically uses the current skin.
 - Aventureiromax\Android 18 (Dragon Ball)
    Removed fightstyle_and18 from packages.
 - Aventureiromax\Pink Ranger (Power Rangers)
@@ -104,7 +105,9 @@ v3:
 - DamesMaximoff\Scarlet Witch
    Removed block requirement from powerstyle.
 - Gevth\Doom
-   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat.
+   Fixed ce_spawn_actor using the correct character (DoomDLC). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
+   Notes: The snc had ea_blocking for the end move, but ea_power2 looks much better and was most likely the intended animation. Also note that there would be a Doombot NPC, but NPCs must be loaded through the map in order to make this work. At least I don't know of another way.
+   Fixed one of the powerusage triggers. It now uses twice as much power.
 - Jeanfan321\Invisible Woman
    Removed block requirement from powerstyle.
 - Julio Cabral\Black Widow
@@ -115,7 +118,8 @@ v3:
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight1-3, attackstun_finish, attackknockback2)
    Note: ea_ground_attack1 is not in shared_anims. Using the default fighmove here (only the animation is different).
 - Lean\Vertigo
-   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
+   Fixed ce_spawn_actor using the correct character (Vertigo). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
+   Removed skin and skin filter, since using herself as a character for spawning automatically uses the current skin.
 - Marvelfan12345\Gambit
    Removed block requirement from powerstyle.
 - MUALover\Magneto
@@ -132,8 +136,8 @@ v3:
    Removed block requirement from powerstyle.
 - Nowhere Man\Elektra
    Removed block requirement from powerstyle.
-   Added all available moves in any shared_nodes_combat from mods to this shared_nodes_combat, but removed ps power fightmove.
-   Can shared_nodes_combat be removed from the booster? All three added fightmoves are already in the powerstyle, but apparently, spawn moves don't work from PS.
+   Fixed ce_spawn_actor using the correct character (Elektra). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
+   Note: Added a second powerstyle, because a second move was left in the original booster's ps code, which differs as follows: ninja_start has 120 in ps maxrange instead of 70; ninja_end has ea_power1_end in ps animenum instead of ea_attack_trip1, 1.0 in ps playspeed instead of 0.6, 0 in ps damage instead of `18 64`, no damageMod in ps instead of trip.
 - Nowhere Man\Iceman
    Removed block requirement from powerstyle.
 - Nowhere Man\Mr. Fantastic
