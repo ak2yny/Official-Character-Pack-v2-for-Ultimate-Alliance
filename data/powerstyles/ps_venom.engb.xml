@@ -1,0 +1,658 @@
+<PowerStyle iconfile="textures/ui/venom_icons.png">
+    <event angle="11.25" arc="22.5" damage="1.0" damagescale="none" inherit="radial" knockback="305" maxrange="110" name="web_throw_attack"/>
+    <event arc="0" attacktype="beam" beameffect="char/venom/webbing_beam_shot" damagetype="dmg_physical" fxlevel="1" hiteffect="char/venom/webbing_impact" inherit="beam" knockback="0" maxrange="600" name="webbing_shot">
+        <damageMod name="dmgmod_no_pain"/>
+        <damageMod name="dmgmod_no_damage"/>
+    </event>
+    <event actorskin="venom_tongue" anim_set="venom_tongueanim" bolt="Bip01 head" ignoreanimmap="true" name="tongue_bolton" replacecurrent="true" type="ce_bolton"/>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1.0" lockangles="true" name="attacklight1_FallBack" priority="3" startchaintime="0.66">
+        <trigger name="whoosh_light" time="0.3"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Hand" life="0.5" name="trail" time="0.15"/>
+        <trigger name="kick" time="0.41"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1.0" fallback="attacklight1_Fallback" lockangles="true" maxrange="80" name="attacklight1" priority="3" startchaintime="0.66">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="whoosh_light" time="0.3"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger name="kick" time="0.41"/>
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.1">
+            <special_fx bolt="Bip01 R Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.2" endchaintime="1.0" lockangles="true" name="attacklight2_Fallback" playspeed="0.75" priority="3" startchaintime="0.53">
+        <trigger name="whoosh_light" time="0.25"/>
+        <trigger movement="0" name="slide" time="0.38"/>
+        <trigger bolt="Bip01 L Hand" life="0.7" name="trail" time="0.2"/>
+        <trigger bolt="Bip01 R Hand" life="0.7" name="trail" time="0.2"/>
+        <trigger name="punch" time="0.38"/>
+        <chain action="idle" result="Idle_Post_Spin"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.2" endchaintime="1.0" fallback="attacklight2_Fallback" lockangles="true" maxrange="80" name="attacklight2" playspeed="0.75" priority="3" startchaintime="0.53">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="whoosh_light" time="0.25"/>
+        <trigger movement="0" name="slide" time="0.38"/>
+        <trigger name="punch" time="0.38"/>
+        <chain action="idle" result="Idle_Post_Spin"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0.0" handler="ch_idle" lockchaining="false" name="Idle_Post_Spin" noncombat="true">
+        <chain action="idle" result="idle"/>
+        <chain action="walk" result="walk"/>
+        <chain action="run" result="run"/>
+        <chain action="sprint" result="sprint"/>
+        <chain action="strafeleft" result="strafeleft"/>
+        <chain action="straferight" result="straferight"/>
+        <chain action="advance" result="advance"/>
+        <chain action="retreat" result="retreat"/>
+        <chain action="guard" result="guarddecide"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="smash" result="attackheavy1"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="move" result="jump"/>
+        <chain action="special" result="boredloop"/>
+        <chain action="blocking" result="blocking"/>
+        <chain action="powers" result="powers"/>
+        <chain action="rollright" result="dodgeright"/>
+        <chain action="rollleft" result="dodgeleft"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.1" lockangles="true" name="attacklight3_Fallback" priority="3" startchaintime="0.52">
+        <trigger name="whoosh_light" time="0.33"/>
+        <trigger movement="30" name="slide" time="0.31"/>
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.25"/>
+        <trigger name="punch" time="0.4"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.1" fallback="attacklight3_Fallback" lockangles="true" maxrange="80" name="attacklight3" priority="3" startchaintime="0.52">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 R Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="whoosh_light" time="0.33"/>
+        <trigger movement="30" name="slide" time="0.31"/>
+        <trigger name="punch" time="0.4"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.67">
+        <trigger name="whoosh_heavy" time="0.23"/>
+        <trigger movement="20" name="slide" time="0.2"/>
+        <trigger bolt="Bip01 L Toe0" life="0.3" name="trail" time="0.24"/>
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.26"/>
+        <trigger charge="1.0" name="charge" time="0"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.25">
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger name="punch" time="0.28"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0"/>
+        <trigger bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1.0" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0.0"/>
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.25"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1"/>
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1"/>
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.25"/>
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power8_start" endchaintime="1.0" handler="ch_grab_hold_Base" lockangles="true" lockspeed="true" locktransitionangles="true" name="grabstart" noautoaim="true" playspeed="1.0" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="stop" time="0.0"/>
+        <trigger name="verify_victim_alive" time="0.0"/>
+        <trigger attackerface="true" doslidemove="false" interaction="data/fightstyles/interact_Venom_Victim" name="victim" next_eventtag="21" nodename="grab_smash_start" offset="-1 0 0" targetdistance="33" time="0.0" victimface="true"/>
+        <trigger anim="power_8_start" boltslot="ebolton_tail" name="tongue_bolton" time="0"/>
+        <trigger boltslot="ebolton_tail" critical="on_exit" name="removebolton" removebolton="true" time="-1" type="ce_bolton"/>
+        <trigger anim="idle" boltslot="ebolton_tail" critical="on_exit" name="tongue_bolton" time="-1"/>
+        <trigger count="set" name="count" time="0" value="6"/>
+        <chain action="idle" result="grab_loop"/>
+        <chain action="attack" result="grab_loop"/>
+        <chain action="smash" result="grab_smash"/>
+    </FightMove>
+    <FightMove animenum="ea_power8_loop" blendtime="0.1" endchaintime="1.0" fallback="grab_end" handler="ch_grab_hold_base" inherit="grabstart" lockangles="true" lockspeed="true" name="grab_loop" noautoaim="true" playspeed="2.25" priority="uninterruptable" startchaintime="0.8">
+        <trigger fail_node="grab_end" name="verify_victim_alive" time="0.0"/>
+        <trigger attackerface="true" doslidemove="false" name="victim" nodename="grab_smash_loop" targetdistance="20.0" time="0.0" victimface="true"/>
+        <require cat="counter" level="1"/>
+        <trigger count="add" name="count" time="0.0" value="-1"/>
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="0" name="punch" time="0.05">
+            <damagemod name="dmgmod_no_pain"/>
+        </trigger>
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="0" name="punch" time="0.15">
+            <damagemod name="dmgmod_no_pain"/>
+        </trigger>
+        <chain action="attack" result="grab_loop"/>
+        <chain action="smash" result="grab_smash"/>
+        <chain action="idle" result="grab_end"/>
+    </FightMove>
+    <FightMove animenum="ea_power8" blendtime="0.1" endchaintime="1.0" fallback="grab_smash_end" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_end" noautoaim="true" playspeed="1.0" priority="uninterruptable" startchaintime="0.8">
+        <trigger critical="true" interactionend="false" name="victim_release" time="0.5"/>
+        <trigger name="verify_victim_alive" time="0.0"/>
+        <trigger attackerface="true" doslidemove="true" name="victim" nodename="grab_smash_end" targetdistance="20" time="0.0" victimface="true"/>
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="0" name="punch" time="0.2">
+            <damagemod name="dmgmod_no_pain"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0.3" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" locktransitionangles="true" name="grab_smash" playspeed="1.0" priority="uninterruptable">
+        <trigger name="stop" time="0.0"/>
+        <trigger name="sound" sound="char/venom_m/YELL" time="0"/>
+        <trigger name="sound" sound="char/venom_m/grab_smash" time="0.3"/>
+        <trigger critical="on_exit" interactionend="false" name="victim_release" time="-1"/>
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Venom_Victim" name="victim" next_eventtag="22" nodename="grab_smash_toss" offset="-1 0 0" time="0.0" victimface="true"/>
+        <trigger doslidemove="true" name="victim" offset="0 0 1" tag="22" time="-1" useeventvictim="true"/>
+        <trigger damage="4 5" damagescale="normal" damagetype="dmg_physical" height="-75" hiteffect="char/pildrv/p1_power" index="1" knockback="120" maxrange="64" name="radial" time="0.75" verticalrange="72">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger effect="char/pildrv/p1_power" fxlevel="2" name="effect" tag="200" time="-1"/>
+        <trigger critical="true" name="victim_release" ownertime="1.0" time="0.73"/>
+        <trigger name="sound" sound="common/melee/land_smash" time="0.75"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_double_jump_start" blendtime="0.1" handler="ch_spider_move_jump" lockchaining="false" locktransitionangles="true" name="airjump" turnrate="0.2">
+        <trigger failtag="1" has_weapon="true" name="filter" time="0"/>
+        <trigger button="move" name="button_hint" tag="1" time="-1"/>
+        <chain action="attack" result="jumpsmash"/>
+        <chain action="smash" result="jumpsmash"/>
+        <chain action="special" result="doublejumpland"/>
+        <chain action="special5" result="webzip"/>
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" handler="ch_jump" lockangles="true" name="webzip_jumploop_start" noncombat="true" startchaintime="0.7">
+        <trigger name="velocity" time="0" up="200"/>
+        <chain action="move" result="webzip"/>
+        <chain action="attack" result="jumpsmash"/>
+        <chain action="smash" result="jumpsmash"/>
+        <chain action="powers" result="powers"/>
+        <chain action="special" result="jumpland"/>
+        <chain action="idle" result="webzip_jumploop"/>
+    </FightMove>
+    <FightMove animenum="ea_jump_loop" handler="ch_jump" lockangles="true" name="webzip_jumploop" noncombat="true">
+        <chain action="move" result="webzip"/>
+        <chain action="attack" result="jumpsmash"/>
+        <chain action="smash" result="jumpsmash"/>
+        <chain action="powers" result="powers"/>
+        <chain action="special" result="jumpland"/>
+        <chain action="idle" result="webzip_jumploop"/>
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_power15" handler="ch_spider_web_zip" name="webzip" priority="3" startchaintime="0.3" turnrate="0.5">
+        <trigger button="move" name="button_hint" time="0"/>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_gravity" time="0">
+            <affecter affect_type="scale" attribute="gravity" level="0"/>
+        </trigger>
+        <trigger absolute="all" name="velocity" time="0"/>
+        <trigger entity="web_stickpoint1" filename="ents_venom" maxinstances="1" name="projectile" offset="80  1 500" time="0.01"/>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_zip" time="0.09">
+            <special_fx bolt="Bip01 L Hand" bolt2ent="web_stickpoint1" effect="char/venom/p10_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="sound" pitch_range="200" sound="char/venom_m/symbiote_swing" time="0.32"/>
+        <trigger attacktype="direct" damage="%venom_zip_dmg" knockback="%venom_zip_kb" maxrange="60" name="teleport_punch" time="0.44">
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <chain action="idle" result="webzip_jumploop_start"/>
+        <chain action="special5" result="webzip2"/>
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_power16" handler="ch_spider_web_zip" name="webzip2" priority="3" startchaintime="0.3" turnrate="0.5">
+        <trigger button="move" name="button_hint" time="0"/>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_gravity" time="0">
+            <affecter affect_type="scale" attribute="gravity" level="0"/>
+        </trigger>
+        <trigger absolute="all" name="velocity" time="0"/>
+        <trigger entity="web_stickpoint1" filename="ents_venom" maxinstances="1" name="projectile" offset="80  1 500" time="0.01"/>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="web_zip" time="0.09">
+            <special_fx bolt="Bip01 R Hand" bolt2ent="web_stickpoint1" effect="char/venom/p10_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="sound" pitch_range="200" sound="char/venom_m/symbiote_swing" time="0.32"/>
+        <trigger attacktype="direct" damage="%venom_zip_dmg" knockback="%venom_zip_kb" maxrange="60" name="teleport_punch" time="0.44">
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <chain action="idle" result="webzip_jumploop_start"/>
+        <chain action="special5" result="webzip"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1.0" lockangles="true" name="attackstun1_Fallback" priority="3" startchaintime="0.55">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1"/>
+        <trigger name="whoosh_heavy" time="0.21"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 L Hand" life="0.15" name="trail" time="0.25"/>
+        <trigger name="backhand1" time="0.31"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="smash" result="attackstun_finish"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="attacktrip2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1.0" fallback="attackstun1_Fallback" lockangles="true" maxrange="80" name="attackstun1" priority="3" startchaintime="0.55">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1"/>
+        <trigger name="whoosh_heavy" time="0.21"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger name="backhand1" time="0.31"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="smash" result="attackstun_finish"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="attacktrip2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1.0" lockangles="true" name="attackstun_finish_Fallback" priority="3">
+        <trigger name="whoosh_heavy" time="0.28"/>
+        <trigger bolt="Bip01 L Hand" life="0.61" name="trail" time="0.11"/>
+        <trigger bolt="Bip01 R Hand" life="0.61" name="trail" time="0.11"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.44">
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1.0" fallback="attackstun_finish_Fallback" lockangles="true" maxrange="80" name="attackstun_finish" priority="3">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger life="1.0" name="powerup" remove_on_node_end="true" time="0.0">
+            <special_fx bolt="Bip01 R Hand" effect="char/venom/special_claws" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="whoosh_heavy" time="0.28"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.44">
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.15" lockangles="true" name="attacktrip2">
+        <event arc="67" inherit="kick" knockback="0" maxrange="86" name="sweep">
+            <damageMod name="dmgmod_trip"/>
+            <damageMod name="dmgmod_ground"/>
+        </event>
+        <trigger name="whoosh_light" time="0.3"/>
+        <trigger bolt="Bip01 R Toe0" name="trail" time="0.25"/>
+        <trigger bolt="Bip01 L Toe0" name="trail" time="0.25"/>
+        <trigger angle="-60" height="-10" index="1" name="sweep" time="0.35"/>
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.37"/>
+        <trigger angle="60" height="-10" index="1" name="sweep" time="0.4"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove aitype="beam" animenum="ea_power1" combotextfinisher="Thrust" combotextstarter="Venom" icon="0" is_power="true" lockangles="true" name="power1" noautoaim="false" priority="5">
+        <require cat="skill" item="venom_p1" level="1"/>
+        <event arc="0" attack_bone_angles="-83 -76 -13" attack_bone_pos="-11 -5 56" attacktype="beam" beambolt="Bip01 R Hand" beameffect="char/venom/p1_power" damage="%venom_p1_dmg" damagelevel="2" damagescale="difficulty" damagetype="dmg_physical" fxlevel="1" hiteffect="char/venom/p1_impact" inherit="beam" maxrange="300" name="p1_punch" victimeventtag="100"/>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0.0">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_victimstunned="true"/>
+        </trigger>
+        <trigger maxrange="120" name="p1_punch" powerusage="%venom_p1_pwr" time="0.23">
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <trigger maxrange="300" name="p1_punch" time="0.33">
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <trigger name="sound" sound="char/venom_m/p1_power" time="0.23"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="30" aitype="rangednolos" animenum="ea_power2" combotextfinisher="Flail" combotextstarter="Symbiote" endchaintime="0.88" handler="ch_thor_lightning" icon="1" is_power="true" lockangles="true" lockspeed="true" name="power2" priority="4" startchaintime="0.15">
+        <require cat="skill" item="venom_p2" level="1"/>
+        <trigger bolt="Bip01 Neck" effect="char/venom/p2_chargefail" name="effect" time="0.0"/>
+        <trigger damage="%venom_p2_dmg2" damagescale="none" damagetype="dmg_physical" fxlevel="1" hiteffect="char/venom/p2_impact" knockback="40" maxrange="60" name="secondary_hit" tag="60" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_auto_knockback"/>
+            <damageMod name="dmgmod_ground"/>
+        </trigger>
+        <trigger name="powerusage" powerusage="%venom_p2_pwr" time="0"/>
+        <trigger bolt="Bip01 pelvis" bolt2="Bip01 Spine2" effect="char/venom/p2_charge" fxlevel="3" name="effect_sound" sound="char/venom_m/p4_impact" tag="100" time="-1"/>
+        <trigger name="sound" sound="char/venom_m/p2_charge" time="0"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger name="target1" numtargets="%venom_p2_num" targetactorsonly="true" time="0.15" type="ce_thor_lightning_init"/>
+        <trigger loop_timeout="1.5" loop_type="start" manual_loop_timer="1.2" name="sound" sound="char/venom_m/p2_power" time="0.15"/>
+        <trigger attackerheight="false" attacktype="direct" damage="0" damagelevel="1" damagescale="none" damagetype="dmg_physical" fxlevel="1" maxrange="60" name="spawn_lightning" time="0.15">
+            <damageMod name="dmgmod_energize"/>
+            <damageMod name="dmgmod_weld"/>
+            <damageMod name="dmgmod_ground"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove ainopush="true" aireusetime="10" aitype="projectile" animenum="ea_power3" combotextfinisher="Bite" combotextstarter="Symbiote" handler="ch_wolv_lunge" icon="2" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="power3" priority="5">
+        <require cat="skill" item="venom_p3" level="1"/>
+        <trigger name="powerusage" powerusage="%venom_p3_pwr" time="0.0"/>
+        <trigger effect="char/venom/p3_charge" fxlevel="1" name="effect_sound" sound="char/venom_m/p3_power" time="0.0"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/venom/p3_charge" fxlevel="2" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 Head" effect="char/venom/p3_charge" fxlevel="4" name="effect" time="0.0"/>
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/Interact_Venom_Victim" knockback="120" name="victim" next_eventtag="101" nodename="bite_victim" offset="-1 0 0" tag="100" time="-1" useeventvictim="true" victimface="true"/>
+        <damageMod name="dmgmod_ground"/>
+        <damageMod name="dmgmod_auto_knockback"/>
+        <trigger doslidemove="true" name="victim" offset="-18 0 1" tag="101" time="-1" useeventvictim="true"/>
+        <chain action="idle" result="power3_end"/>
+        <chain action="special" result="power3_attack"/>
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power3_end" blendtime="0.05" combotextfinisher="Bite" combotextstarter="Sharp" handler="ch_grab_hold_base" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3_attack" powerup_tag="venom_p3" priority="uninterruptable">
+        <trigger flags1="nopush" name="flags" time="0.0" type="ce_set_flags"/>
+        <trigger critical="on_exit" flags1="nopush" name="flags" resetflags="true" time="0.99" type="ce_set_flags"/>
+        <trigger bolt="Bip01 Head" effect="char/venom/p3_power" fxlevel="2" name="effect" time="0.0"/>
+        <trigger name="sound" sound="common/melee/hit_concrete" time="0.1"/>
+        <trigger effect="char/venom/p3_power" fxlevel="1" name="effect_sound" sound="char/venom_m/p3_attack" time="0.13"/>
+        <trigger name="punch" time="0.13"/>
+        <trigger name="sound" sound="char/venom_m/p3_prebite" time="0.3"/>
+        <trigger name="sound" sound="char/venom_m/p3_attack" time="0.68"/>
+        <trigger effect="char/venom/p3_power" fxlevel="3" name="effect" time="0.68"/>
+        <trigger damage="%venom_p3_dmg" damagescale="none" damagetype="dmg_physical" index="2" name="punch" time="0.75">
+            <damageMod name="dmgmod_ground"/>
+        </trigger>
+        <trigger critical="true" name="victim_release" ownertime="1.0" time="0.95"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power12" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3_end" priority="5" startchaintime="1.0">
+        <require cat="skill" item="venom_p3" level="1"/>
+        <trigger effect="char/venom/p3_end" fxlevel="1" name="effect" time="0.3"/>
+        <trigger effect="char/venom/p3_end" fxlevel="2" name="effect" time="0.3"/>
+        <trigger name="sound" sound="char/venom_m/grab_smash" time="0.15"/>
+        <trigger effect="char/venom/p3_end" fxlevel="2" name="effect" time="0.3"/>
+        <trigger arc="180" damage="3 4" damagescale="none" maxrange="72" name="kick" time="0.3">
+            <damageMod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aicanuse="false" ainopush="true" aitype="beam" animenum="ea_power4" combotextfinisher="Swing" combotextstarter="Venom" icon="3" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4" priority="5" startchaintime="0.99">
+        <require cat="skill" item="venom_p4" level="1"/>
+        <trigger maxrange="400" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="30.0" selfeventtag="10" time="0.0"/>
+        <trigger critical="true" flag1="nopush" name="flags" resetflags="false" time="0" type="ce_set_flags"/>
+        <trigger attackerface="true" doslidemove="true" name="victim" tag="10" time="-1" victimface="false"/>
+        <trigger fail_node="power4_fail" name="verify_victim_alive" passtag="1" time="0.5"/>
+        <trigger interaction="data/fightstyles/interact_venom_victim" name="victim" next_eventtag="2" nodename="hold_in_place_no_break_no_snd" tag="1" time="-1"/>
+        <trigger life="-1" name="powerup" next_eventtag="3" tag="2" tag_name="venom_p4_link" time="-1">
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 L Toe0" bolt2ent="victim" effect="char/venom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Toe0" bolt2ent="victim" effect="char/venom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Hand" bolt2ent="victim" effect="char/venom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 l Hand" bolt2ent="victim" effect="char/venom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="sound" next_eventtag="4" sound="char/venom_m/p4_charge" tag="3" time="-1"/>
+        <trigger execute_against="victim" name="otherevent" othertag="5" tag="4" time="-1"/>
+        <trigger flag1="noclip" name="flags" tag="5" time="-1" type="ce_set_flags"/>
+        <trigger critical="on_interrupt" execute_against="victim" name="otherevent" othertag="99" time="-1"/>
+        <trigger flag1="noclip" name="flags" resetflags="true" tag="99" time="-1" type="ce_set_flags"/>
+        <trigger critical="on_interrupt" interactionend="true" name="victim_release" ownertime="0.0" time="-1"/>
+        <trigger button="twirl_stick2" name="button_hint" time="0"/>
+        <chain action="idle" result="power4_spin"/>
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power4_loop" blendtime="0.0" combotextfinisher="Swing" combotextstarter="Venom" energypersecond="%venom_p4_pwr" handler="ch_grab_hold_base" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_spin" priority="5">
+        <trigger loop_timeout="2" loop_type="start" manual_loop_timer="0.38" name="sound" sound="char/venom_m/p4_power" time="0"/>
+        <trigger button="twirl_stick2" name="button_hint" time="0"/>
+        <trigger fail_node="null" name="verify_victim_alive" passtag="1" time="0.0"/>
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_venom_victim" name="victim" next_eventtag="2" nodename="power4_victim_spinning" offset="0 0 0" tag="1" time="-1" victimface="true"/>
+        <trigger name="charsound" only_non_looped="true" play_sound_on_victim="true" sound="snd_pain" tag="2" time="-1"/>
+        <trigger angle="22.5" name="web_throw_attack" time="0.11" victimeventtag="3"/>
+        <trigger angle="45.0" name="web_throw_attack" time="0.22" victimeventtag="3"/>
+        <trigger angle="67.5" name="web_throw_attack" time="0.33" victimeventtag="3"/>
+        <trigger angle="112.5" name="web_throw_attack" time="0.44" victimeventtag="3"/>
+        <trigger angle="157.5" name="web_throw_attack" time="0.55" victimeventtag="3"/>
+        <trigger angle="202.5" name="web_throw_attack" time="0.66" victimeventtag="3"/>
+        <trigger angle="247.5" name="web_throw_attack" time="0.77" victimeventtag="3"/>
+        <trigger angle="292.5" name="web_throw_attack" time="0.88" victimeventtag="3"/>
+        <trigger angle="337.5" name="web_throw_attack" time="0.99" victimeventtag="3"/>
+        <trigger loop_type="update" name="sound" sound="char/venom_m/p4_power" time="0.99"/>
+        <trigger class="harming" damage="%venom_p4_dmg" damagetype="dmg_physical" life="1.0" name="powerup" tag="3" time="-1"/>
+        <chain action="Idle" result="power4_loop"/>
+        <trigger anim="power_4_loop" boltslot="ebolton_tail" name="tongue_bolton" time="0"/>
+        <trigger boltslot="ebolton_tail" critical="on_exit" name="removebolton" removebolton="true" time="-1" type="ce_bolton"/>
+        <trigger anim="idle" boltslot="ebolton_tail" critical="on_exit" name="tongue_bolton" time="-1"/>
+    </FightMove>
+    <FightMove handler="ch_twirl_stick_loop2" inherit="power4_spin" lockchaining="false" name="power4_loop">
+        <chain action="idle" result="power4_release"/>
+        <chain action="samepowerhold" result="power4_loop"/>
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power4_end" blendtime="0.0" combotextfinisher="Swing" combotextstarter="Venom" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_release" priority="5" startchaintime="0.99">
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/venom_m/p4_power" time="0"/>
+        <trigger name="sound" sound="char/venom_m/p4_release" time="0.1"/>
+        <trigger doslidemove="false" interaction="data/fightstyles/interact_venom_victim" name="victim" nodename="power4_victim_thrown" offset="0 0 0" time="0" victimface="true"/>
+        <trigger critical="true" execute_against="victim" name="otherevent" othertag="4" time="0.4"/>
+        <trigger flag1="noclip" name="flags" resetflags="true" tag="4" time="-1" type="ce_set_flags"/>
+        <trigger critical="true" damagescale="none" facethrowdir="false" impactdamage="%venom_p4_dmg" name="throw" throwdirection="Back" thrownode="thrownbackloop" throwspeed="450" time="0.4"/>
+        <trigger critical="on_exit" name="powerup" remove_tag="venom_p4_link" time="0.43"/>
+        <trigger critical="true" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags"/>
+        <chain action="Idle" result="idle"/>
+        <trigger anim="power_4_end" boltslot="ebolton_tail" name="tongue_bolton" time="0"/>
+        <trigger boltslot="ebolton_tail" critical="on_exit" name="removebolton" removebolton="true" time="-1" type="ce_bolton"/>
+        <trigger anim="idle" boltslot="ebolton_tail" critical="on_exit" name="tongue_bolton" time="-1"/>
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power4_end" blendtime="0.0" icon="2" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_fail" priority="5" startchaintime="0.99">
+        <trigger effect="char/venom/p4_release" fxlevel="1" name="effect_sound" sound="char/venom_m/p4_fail" time="0.0"/>
+        <trigger critical="on_exit" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="30.0" aitype="beam" animenum="ea_power5" combotextfinisher="Heave" combotextstarter="Heave" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5" powerup_tag="venom_p5" priority="5" startchaintime="0.99">
+        <require cat="skill" item="venom_p5" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="sound" sound="char/venom_m/p5_shoot" time="0"/>
+        <trigger maxrange="400" mustbeactor="false" mustbegrabbable="true" mustbeonscreen="false" name="victim_set" searchangle="30.0" selfeventtag="10" time="0.0"/>
+        <trigger attackerface="true" doslidemove="true" name="victim" tag="10" time="-1" victimface="away"/>
+        <trigger fail_node="null" failtag="20" name="verify_victim_alive" passtag="1" time="0.53"/>
+        <trigger life="-1" name="powerup" next_eventtag="2" powerusage="%venom_p5_pwr" remove_on_node_end="true" tag="1" tag_name="venom_p5_link" time="-1">
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/venom/p5_power" fxlevel="3" how_used="activation" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/venom/p5_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Head" bolt2ent="victim" effect="char/venom/p5_power" fxlevel="2" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Hand" bolt2ent="victim" effect="char/venom/p5_power" fxlevel="2" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Spine2" bolt2ent="victim" effect="char/venom/p5_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger interaction="data/fightstyles/interact_spiderman_victim" name="victim" next_eventtag="4" nodename="hold_in_place_no_break" tag="2" time="-1"/>
+        <trigger loop_timeout="3" loop_type="start" manual_loop_timer="0.4" name="sound" next_eventtag="5" sound="char/venom_m/p5_charge" tag="4" time="-1" volume="0.6"/>
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" tag="5" time="-1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/venom/p5_charge" name="effect" tag="100" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
+        <trigger attack_bone_angles="42 -9 38" attack_bone_pos="33 2 31" beambolt="Bip01 R Hand" maxrange="400" name="webbing_shot" next_eventtag="21" tag="20" time="-1"/>
+        <trigger attack_bone_angles="151 13 -5" attack_bone_pos="18 -1 33" beambolt="Bip01 R Hand" damage="%spider_p5_dmg" index="2" inherit="beam" knockback="120" maxrange="400" name="fail_attack" radius="0" tag="22" time="-1"/>
+        <trigger fail_node="power5_fail" name="verify_victim_alive" time="0.99"/>
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0.0" time="-1"/>
+        <chain action="Idle" result="power5_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_fly_idle" lockangles="true" locktransitionangles="true" name="power5_fail">
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power5_end" blendtime="0.0" combotextfinisher="Heave" combotextstarter="Heave" is_power="true" lockangles="true" locktransitionangles="true" name="power5_loop" noautoaim="true" powerup_tag="venom_p5" startchaintime="0.25">
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger loop_type="update" name="sound" sound="char/venom_m/p5_charge" time="0"/>
+        <trigger fail_node="idle" failtag="21" name="verify_victim_alive" time="0"/>
+        <trigger interactionend="true" name="victim_release" tag="21" time="-1"/>
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0.0" time="-1"/>
+        <chain action="Idle" result="power5_pullenemyin"/>
+        <chain action="samepowerhold" result="power5_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power20" blendtime="0.0" combotextfinisher="Heave" combotextstarter="Heave" is_power="true" lockangles="true" locktransitionangles="true" name="power5_pullenemyin" powerup_tag="webwarrior" priority="5" startchaintime="0.99" takeimpactdamage="false">
+        <trigger charge_type="stop" critical="true" name="charge" time="0"/>
+        <trigger name="sound" sound="char/venom_m/p5_power" time="0.0"/>
+        <trigger loop_type="stop" name="sound" sound="char/venom_m/p5_charge" time="0.0"/>
+        <trigger critical="on_exit" fail_node="null" name="verify_victim_alive" passtag="1" time="0.45"/>
+        <trigger name="charsound" next_eventtag="2" only_non_looped="true" play_sound_on_victim="true" sound="snd_pain" tag="1" time="-1"/>
+        <trigger damagescale="none" facethrowdir="false" impactdamage="%venom_p5_dmg" name="throw" tag="2" throwdirection="TowardAttacker" thrownode="thrownbackloop" throwspeed="%venom_p5_throw_spd" time="-1"/>
+        <trigger name="powerup" remove_tag="venom_p5_link" time="0.7"/>
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left" name="bolt_left_claw" replacecurrent="true" skin_filter="17601" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right" name="bolt_Right_claw" replacecurrent="true" skin_filter="17601" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left_17602" name="bolt_left_claw" replacecurrent="true" skin_filter="17602" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right_17602" name="bolt_Right_claw" replacecurrent="true" skin_filter="17602" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left_17603" name="bolt_left_claw" replacecurrent="true" skin_filter="17603" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right_17603" name="bolt_Right_claw" replacecurrent="true" skin_filter="17603" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left_17604" name="bolt_left_claw" replacecurrent="true" skin_filter="17604" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right_17604" name="bolt_Right_claw" replacecurrent="true" skin_filter="17604" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left_17605" name="bolt_left_claw" replacecurrent="true" skin_filter="17605" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right_17605" name="bolt_Right_claw" replacecurrent="true" skin_filter="17605" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawleft" model="models/bolton/Venom_claw_left_17606" name="bolt_left_claw" replacecurrent="true" skin_filter="17606" type="ce_bolton"/>
+    <event bolt="Bip01 R Hand" boltslot="ebolton_clawRight" model="models/bolton/Venom_claw_right_17606" name="bolt_Right_claw" replacecurrent="true" skin_filter="17606" type="ce_bolton"/>
+    <FightMove aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="venom_p6" level="1"/>
+        <trigger name="sound" sound="char/venom_m/p6_charge" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/venom/p6_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/venom/p6_power" fxlevel="1" name="effect" time="0"/>
+        <trigger effect="char/venom/p6_power" fxlevel="2" name="effect" time="0"/>
+        <trigger name="bolt_left_claw" time="0.45"/>
+        <trigger name="bolt_right_claw" time="0.45"/>
+        <trigger boltslot="ebolton_clawleft" name="removebolton" next_eventtag="11" removebolton="true" tag="10" time="-1" type="ce_bolton"/>
+        <trigger boltslot="ebolton_clawright" name="removebolton" removebolton="true" tag="11" time="-1" type="ce_bolton"/>
+        <trigger class="callevents" inherit="powerup" life="%venom_p6_lif" name="powerup" powerusage="%venom_p6_pwr">
+            <functionevent function="deactivate" triggertag="10"/>
+            <affecter attribute="atk_critical" level="%venom_p6_pct"/>
+            <affecter affect_type="scale" attribute="atk_damage" level="%venom_p6_dmg"/>
+            <affecter attribute="special" level="5"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="debuff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" playspeed="1.25" priority="5">
+        <require cat="skill" item="venom_p7" level="1"/>
+        <trigger name="sound" sound="char/venom_m/p7_charge" time="0"/>
+        <trigger bolt="Bip01 Spine1" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 L UpperArm" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 R UpperArm" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 Spine2" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 L Forearm" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Forearm" effect="char/venom/p7_power" fxlevel="1" name="effect" time="0"/>
+        <trigger apply_enemy="near" apply_self="false" life="%venom_p7_lif" name="powerup" powerusage="%venom_p7_pwr" time="0.5">
+            <affecter attribute="fear">
+                <scope scope_affecter="def_mind_control" scope_affecter_reverse="true"/>
+            </affecter>
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_fear"/>
+        </trigger>
+        <trigger life="%venom_p7_lif" name="powerup" no_shadow="true" time="0.5">
+            <affecter affect_type="scale" attribute="def_damage_scope" level="%venom_p7_pdmg">
+                <scope scope_attack="punch"/>
+                <scope scope_attack="kick"/>
+            </affecter>
+            <affecter attribute="scale_factor" level="0.07"/>
+        </trigger>
+        <trigger class="feral_rage" life="30" name="powerup" time="0.4">
+            <special_fx bolt="Bip01 neck" effect="char/venom/p7_aura" fxlevel="1" how_used="primary"/>
+            <special_fx bolt="Bip01 Spine2" effect="char/venom/p7_aura" fxlevel="2" how_used="primary"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="venom_p8" level="1"/>
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="11" time="0.0"/>
+        <trigger apply_ally="all" apply_self="false" class="remove_on_events" life="-1" name="powerup" on_xtreme_end="true" tag="1" time="-1">
+            <affecter affect_type="scale" attribute="atk_damage" level="%venom_p8_dmgs"/>
+        </trigger>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
+    </FightMove>
+    <event damage="%venom_p8_dmg" damagelevel="2" damagetype="dmg_physical" enemynumber="0" fxlevel="1" hiteffect="char/venom/p8_impact" inherit="blast" maxrange="300" name="sludge" radius="60" random="true" victimeventtag="100"/>
+    <FightMove animenum="ea_power14" combotextfinisher="Sludge" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger description="!BADREF:@HERO_VENOM@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Symbiote Sludge"/>
+        <trigger name="sound" sound="char/venom_m/p8_charge" time="0" volume="0.8"/>
+        <trigger effect="char/venom/p8_power" fxlevel="1" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Hand" effect="char/venom/p8_power" fxlevel="2" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Hand" effect="char/venom/p8_power" fxlevel="2" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Toe0" effect="char/venom/p8_power" fxlevel="2" name="effect" time="0.0"/>
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Toe0" effect="char/venom/p8_power" fxlevel="2" name="effect" time="0.0"/>
+        <trigger can_be_grabbed="true" maxdangerrating="10" name="filter" noboss="true" passtag="101" tag="100" time="-1"/>
+        <trigger attacks_per_second="1" class="harming" damage="%venom_p8_dmg" damagescale="none" damagetype="dmg_energy" life="%venom_p8_lif" name="powerup" next_eventtag="102" tag="101" time="-1"/>
+        <trigger class="interaction" cleartoidleondeactivate="true" ignore_ondeactivate_if_dead="true" life="%venom_p8_lif" name="powerup" remove_on_death="true" tag="102" time="-1">
+            <InteractionEvent event="OnActivate" interaction="data/fightstyles/interact_venom_victim" nodename="power8_victim"/>
+            <InteractionEvent event="OnDeath" interaction="data/fightstyles/interact_venom_victim" nodename="Grab_Smash_Victim_Die"/>
+            <affecter affect_type="scale" attribute="def_grab" level="0"/>
+            <affecter affect_type="scale" attribute="def_knockback" level="0"/>
+            <affecter affect_type="scale" attribute="def_pain" level="0"/>
+            <affecter affect_type="scale" attribute="def_mind_control" level="0"/>
+            <affecter affect_type="scale" attribute="def_pickup" level="0"/>
+            <affecter affect_type="scale" attribute="def_trip" level="0"/>
+            <special_fx effect="char/venom/p8_freeze" fxlevel="1" how_used="activation" never_cycle="true"/>
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 L Toe0" effect="char/venom/p8_freeze" fxlevel="2" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 R Toe0" effect="char/venom/p8_freeze" fxlevel="2" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <trigger name="sound" sound="char/venom_m/p3_end" time="0.201"/>
+        <trigger loop_timeout="6" loop_type="start" name="sound" sound="char/venom_m/p8_power" time="0.201"/>
+        <trigger enemynumber="0" name="sludge" time="0.38"/>
+        <trigger enemynumber="1" name="sludge" time="0.4"/>
+        <trigger enemynumber="2" name="sludge" time="0.42"/>
+        <trigger enemynumber="3" name="sludge" time="0.44"/>
+        <trigger enemynumber="4" name="sludge" time="0.46"/>
+        <trigger enemynumber="5" name="sludge" time="0.48"/>
+        <trigger enemynumber="6" name="sludge" time="0.49"/>
+        <trigger enemynumber="7" name="sludge" time="0.5"/>
+        <trigger enemynumber="8" name="sludge" time="0.51"/>
+        <trigger enemynumber="9" name="sludge" time="0.52"/>
+        <trigger loop_type="update" name="sound" sound="char/venom_m/p8_power" time="0.53"/>
+        <trigger name="sound" sound="char/venom_m/p8_end" time="0.64"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/venom_m/p8_power" time="0.638"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.93"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+</PowerStyle>
