@@ -1,0 +1,810 @@
+<world>
+    <entity act="5" killz="-260" level="34" name="world" next_gen_partylight="0.71 0.66 0.49" next_gen_partylightradius="120" partylight="0.71 0.66 0.49" soundfile="doom4" zonescript="act5/doom/doom4/doom4" />
+    <precache filename="act5/doom/doom4/5_doom4_010" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_020" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_100" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_150" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_170" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_200" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_300" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_302" type="conversation" />
+    <precache filename="act5/doom/doom4/5_doom4_310" type="conversation" />
+    <precache filename="act5/doom/doom4/temp001" type="conversation" />
+    <precache filename="act5/doom/doom4/temp002" type="conversation" />
+    <precache filename="act5/doom/doom4/temp003" type="conversation" />
+    <precache filename="act5/doom/doom4/temp004" type="conversation" />
+    <precache filename="act5/doom/doom4/temp005" type="conversation" />
+    <precache filename="act5/doom/doom4/temp006" type="conversation" />
+    <precache filename="act5/doom/doom4/temp007" type="conversation" />
+    <precache filename="base/item/item_pickup" type="fx" />
+    <precache filename="base/material/explode/exp_generic_med" type="fx" />
+    <precache filename="act5/doom/doom4/machine_ambush" type="script" />
+    <precache filename="act5/doom/doom4/ultimate_nullifier_objective" type="script" />
+    <precache filename="act5/doom/doom4/ultimate_nullifier_taken" type="script" />
+    <precache filename="common/end_cs" type="script" />
+    <precache filename="zone_shared/doom/5_DOOM1_005_011_DOO" type="sound" />
+    <precache filename="zone_shared/doom/5_DOOM1_005_014_DOO" type="sound" />
+    <precache filename="zone_shared/doom/5_DOOM1_005_015_DOO" type="sound" />
+    <precache filename="zone_shared/doom/gears" type="sound" />
+    <entity actcountremove="1" character="Odin" classname="monsterspawnerent" name="sp_odin" nocollide="true" />
+    <entity actcountremove="1" character="DoomBot_b" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_doombot_b" nocollide="true" nofadeondeath="true" />
+    <entity actcountremove="1" character="DoomBot_b" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_doombot_b_leader" nocollide="true" nofadeondeath="true" />
+    <entity actcountremove="1" character="Doomsman_c" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_doomsman_c" nocollide="true" />
+    <entity actcountremove="1" character="Doomsman_c" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_doomsman_c_leader" nocollide="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_s" fxlevel="1" health="25" material="solid_metal" model="doom/alchemy_equip_doom_b" name="alchemy_equip_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_wood" deathsound="death_style/ds_woodhollow_m" fxlevel="2" health="10" heaviness="0" material="wood" model="doom/barrel_doom_th" name="barrel_doom_th" randompickups="3" structure="0" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" deathspawn="bench_doom_b_d" fxlevel="2" health="100" material="rock" model="doom/bench_doom_b" name="bench_doom_b" nogravity="true" nopickup="true" nopush="true" structure="1" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/column_10x30_doom_e" name="column_10x30_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/column_5x30_02_doom_e" name="column_5x30_02_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_01_doom_b_d" fxlevel="2" health="100" material="electronics" model="doom/console_01_doom_b" name="console_01_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_02_doom_b_d" fxlevel="2" health="100" material="electronics" model="doom/console_02_doom_b" name="console_02_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" deathspawn="console_03_doom_b_d" fxlevel="2" health="100" material="electronics" model="doom/console_03_doom_b" name="console_03_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="10" material="rock" model="doom/crate_doom_th" name="crate_doom_th" randompickups="3" />
+    <entity actcountdisable="1" actdistance="40" classname="pickupweaponent" description="Wield" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="doom/dark_hammer_doom_w" name="dark_hammer_doom_w" nogravity="false" nopush="true" puzzle_critical="true" quickuse="true" randompickups="0" structure="2" weapon="wp_twohanded" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" deathspawn="dark_hero_machine_doom_b_d" fxlevel="3" health="150" material="electronics" model="doom/dark_hero_machine_doom_b" name="dark_hero_machine_doom_b" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="hollow_metal" model="doom/doom_armor_mask_doom_e" name="doom_armor_mask_doom_e" nogravity="false" nopickup="false" nopush="false" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="100" material="rock" model="doom/doom_bust_doom_b" name="doom_bust_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="150" material="hollow_metal" model="doom/doomsuit_capsule_doom_b" name="doomsuit_capsule_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/doom/doom_door1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="doom/door_doom_d" name="door_doom_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/doom/doom_door2" autoclosedelay="0" classname="doorent" material="rock" model="doom/door_invulnerable_doom_d" name="door_invulnerable_doom_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="75" material="rock" model="doom/gargoyle_01_doom_th" name="gargoyle_01_doom_th" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="doom/lab_machine_01_doom_a" name="lab_machine_01_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" loopfxstarton="true" material="solid_metal" model="doom/lab_machine_03_doom_a" name="lab_machine_03_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="100" material="rock" model="doom/pillar_10ft_doom_b" name="pillar_10ft_doom_b" nogravity="true" nopickup="true" nopush="true" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15_arch_18ft_doom_e" name="pillar_5x15_arch_18ft_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15_doom_e" name="pillar_5x15_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15arch_10ft_02_doom_e" name="pillar_5x15arch_10ft_02_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15arch_20ft_02_doom_e" name="pillar_5x15arch_20ft_02_doom_e" nogravity="true" nopickup="true" nopush="true" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x20_doom_e" name="pillar_5x20_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="rock" model="doom/steam_wheel_doom_a" name="steam_wheel_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="doom/turbine_section_02_doom_a" name="turbine_section_02_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" camerafadeout="true" classname="physent" loopfxstarton="true" material="solid_metal" model="doom/u_tesla_coil_pillar_doom_a" name="u_tesla_coil_pillar_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="doom/u_tesla_coil_trap_doom_a" name="u_tesla_coil_trap_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity animstarton="true" camerafadeout="true" classname="physent" loopfxstarton="true" material="solid_metal" model="doom/u_tesla_conduit_doom_a" name="u_tesla_conduit_doom_a" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom/ultimate_nullifier_doom_e" name="ultimate_nullifier_doom_e" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_s" fxlevel="1" health="10" material="rock" model="doom/urn_02_doom_th" name="urn_02_doom_th" randompickups="3" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_s" fxlevel="1" health="10" material="rock" model="doom/vase_doom_th" name="vase_doom_th" randompickups="3" />
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept30.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="30" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art30" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art" />
+    <entity boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_fire" loopfx="map/common/fire_jet_horiz_entdef" name="harm_target_intermittent_cust" nocollide="true" offtime="2" ontime="2" radiusdamage="false" smartent="false" smartfire="true" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true" />
+    <entity classname="ent" name="null" nocollide="true" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push" nocollide="true" team="hero" />
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero" />
+    <entity actonuse="true" boxcollision="true" classname="gameent" name="trigger_use" nocollide="true" team="none" />
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero" />
+    <entity actcountremove="1" character="DarkSpiderman" classname="monsterspawnerent" monster_deathspawn="DarkSpiderman_treasure" monster_team="enemy" name="sp_darkspiderman" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entity actcountremove="1" character="DarkThor" classname="monsterspawnerent" monster_deathspawn="DarkThor_treasure" monster_team="enemy" name="sp_darkthor" nocollide="true" nofadeondeath="true" shadow="true" />
+    <entinst type="sp_odin01">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="sp_odin01" orient="0 0 1.5708" pos="5100 2940 -233.37" />
+    </entinst>
+    <entinst type="ss_doombot_b">
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="1280.02 2355.21 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 -0.261799" pos="1477.74 1924.19 -240" />
+        <inst extents="-12.0001 -17.9999 0 35.9999 18.0001 84" name="ss_doombot_b" orient="0 0 1.5708" pos="1286.1 1490.17 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 -2.79253" pos="1247.61 1916.56 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="1474.68 2352.78 -120" />
+        <inst extents="-12.0 -17.9999 -2.57793e-005 36.0 18.0001 84.0" name="ss_doombot_b" pos="1889.1 2043.94 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 3.14159" pos="878.505 2041.14 -240" />
+        <inst extents="-11.9999 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 1.5708" pos="5274 2154 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 1.5708" pos="4950 2178 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 3.14159" pos="876.716 1795.06 -240" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 3.14159" pos="5520.04 3781.27 -120" />
+        <inst extents="-12.0 -18.0 -1.31599e-005 36.0 18.0 84.0" name="ss_doombot_b" pos="4673.66 3782.4 -120" />
+        <inst extents="-12.0 -18.0 -1.89295e-005 36.0 18.0 84.0" name="ss_doombot_b" pos="1890.09 1802.3 -240" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="1501.44 3353.67 0" />
+        <inst extents="-11.9999 -18.0003 0 36.0001 17.9997 84" name="ss_doombot_b" orient="0 0 2.00713" pos="5485.54 2367.66 -120" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_doombot_b" orient="0 0 1.13446" pos="4749.24 2284.85 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" orient="0 0 3.14159" pos="5572.99 3830.09 -120" />
+        <inst extents="-12.0 -18.0 -1.92018e-005 36.0 18.0 84.0" name="ss_doombot_b" pos="4627.94 3833.73 -120" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="1265.79 3351.67 0" />
+        <inst extents="-12.0002 -18.0002 0 35.9998 17.9998 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="4373.58 4229.89 0" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b" pos="4405.39 4739.23 0" />
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_doombot_b" orient="0 0 1.5708" pos="2458.07 4730.38 -120" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_doombot_b" orient="0 0 -1.5708" pos="2458.24 4274.32 -120" />
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="ss_doombot_b" orient="0 0 3.05433" pos="2093.79 4253.6 0" />
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="ss_doombot_b" orient="0 0 1.65806" pos="2102.78 4765.52 0" />
+        <inst extents="-12.0002 -17.9999 0 35.9998 18.0001 84" name="ss_doombot_b" orient="0 0 -1.48353" pos="1438.98 3802.45 0" />
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="ss_doombot_b" orient="0 0 -1.8326" pos="1309.24 3778.17 0" />
+        <inst extents="-12.0001 -17.9998 0 35.9999 18.0002 84" name="ss_doombot_b" orient="0 0 -1.309" pos="1373.85 3739.95 0" />
+        <inst extents="-11.9999 -18.0003 0 36.0001 17.9997 84" name="ss_doombot_b" orient="0 0 -0.698132" pos="2049.54 2813.5 0" />
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_doombot_b" orient="0 0 1.8326" pos="2111.82 3057.3 0" />
+        <inst extents="-11.9998 -18 0 36.0002 18 84" name="ss_doombot_b" orient="0 0 -1.48353" pos="663.281 2817.28 0" />
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_doombot_b" orient="0 0 -0.610866" pos="553.255 2991.82 0" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b" orient="0 0 3.14159" pos="1257.71 2941.52 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_doombot_b" orient="0 0 1.48353" pos="1377.32 2997.33 0" />
+        <inst extents="-11.9999 -17.9999 0 36.0001 18.0001 84" name="ss_doombot_b" orient="0 0 1.5708" pos="1476.59 1485.71 -120" />
+    </entinst>
+    <entinst type="s_bot07">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="s_bot07" orient="0 0 0.959931" pos="5306.79 2210.79 -120" />
+    </entinst>
+    <entinst type="s_bot06">
+        <inst extents="-11.9999 -17.9997 0 36.0001 18.0003 84" name="s_bot06" orient="0 0 1.91986" pos="4866 2214 -120" />
+        <inst extents="-12.0 -17.9999 -3.04594e-005 36.0 18.0001 84.0" name="s_bot05" pos="4718.56 3058.12 -240" />
+        <inst extents="-12.0 -17.9999 -3.12554e-005 36.0 18.0001 84.0" name="s_bot04" pos="4725.08 2832.45 -240" />
+        <inst extents="-12.0 -17.9999 -1.97433e-005 36.0 18.0001 84.0" name="s_bot03" pos="4839.56 2920.6 -240" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_bot02" orient="0 0 3.14159" pos="5460 2904 -240" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_bot01" orient="0 0 3.14159" pos="5448 2976 -240" />
+    </entinst>
+    <entinst type="ss_doombot_b_leader">
+        <inst extents="-12 -18 0 36 18 84" name="ss_doombot_b_leader" orient="0 0 -1.5708" pos="1382.41 1952.44 -240" />
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_doombot_b_leader" orient="0 0 1.5708" pos="5015.63 2100.73 -120" />
+    </entinst>
+    <entinst type="s_botlead01">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_botlead01" orient="0 0 3.14159" pos="5400 2940 -240" />
+    </entinst>
+    <entinst type="ss_doomsman_c">
+        <inst extents="-12 -18.0002 0 36 17.9998 84" name="ss_doomsman_c" orient="0 0 1.5708" pos="5100.68 3455 -120" />
+        <inst extents="-12 -18 0 36 18 84" name="ss_doomsman_c" orient="0 0 -1.5708" pos="1379.59 2237.13 -120" />
+    </entinst>
+    <entinst type="s_manlead01">
+        <inst extents="-12.0001 -17.9998 0 35.9999 18.0002 84" name="s_manlead01" orient="0 0 1.5708" pos="5148 2095.02 -120" />
+    </entinst>
+    <entinst type="alchemy_equip_doom_b">
+        <inst name="alchemy_equip_doom_b" pos="660 2748 34.6963" />
+        <inst name="alchemy_equip_doom_b" orient="0 0 3.14159" pos="2089.2 3145.2 34.7001" />
+        <inst name="alchemy_equip_doom_b" orient="0 0 -1.5708" pos="1188 2940 34.7001" />
+        <inst name="alchemy_equip_doom_b" orient="0 0 1.5708" pos="1572 2940 34.6963" />
+        <inst name="alchemy_equip_doom_b" orient="0 0 -1.5708" pos="4674 3168 -205.288" />
+    </entinst>
+    <entinst type="barrel_doom_th">
+        <inst name="barrel_doom_th" orient="0 0 1.13446" pos="5004.08 2273.33 -120" />
+        <inst name="barrel_doom_th" orient="0 0 1.13446" pos="5052.08 2297.33 -120" />
+        <inst name="barrel_doom_th" orient="0 0 1.91986" pos="4648.2 2296.47 -120" />
+        <inst name="barrel_doom_th" orient="0 0 1.13446" pos="4668.08 2345.33 -120" />
+        <inst name="barrel_doom_th" pos="4606 2300.73 -120" />
+        <inst name="barrel_doom_th" orient="0 0 -1.309" pos="4583.18 3803.16 -120" />
+        <inst name="barrel_doom_th" pos="4540.06 3803.78 -120" />
+        <inst name="barrel_doom_th" orient="0 0 -1.309" pos="4661.59 2793.1 -240" />
+        <inst name="barrel_doom_th" pos="4949.21 2691.42 -240" />
+        <inst name="barrel_doom_th" orient="0 0 3.05433" pos="4423.22 4793.14 -2.15528e-005" />
+        <inst name="barrel_doom_th" orient="0 0 1.74533" pos="4457.03 4816.15 -2.15528e-005" />
+        <inst name="barrel_doom_th" orient="0 0 2.26893" pos="4309.35 4782.33 -2.15528e-005" />
+        <inst name="barrel_doom_th" orient="0 0 1.309" pos="4289.16 4817.18 -2.15528e-005" />
+        <inst name="barrel_doom_th" pos="4331.26 4816.53 -2.15528e-005" />
+        <inst name="barrel_doom_th" orient="0 0 2.44346" pos="2275.48 4276.36 0" />
+        <inst name="barrel_doom_th" orient="0 0 0.785398" pos="2314.65 4287.16 0" />
+        <inst name="barrel_doom_th" pos="2284.31 4316.58 0" />
+        <inst name="barrel_doom_th" orient="0 0 2.53073" pos="1505.73 3540.9 -2.28974e-005" />
+        <inst name="barrel_doom_th" orient="0 0 2.00713" pos="1485.24 3576.51 -2.28974e-005" />
+        <inst name="barrel_doom_th" orient="0 0 3.14159" pos="1527.26 3576.16 -2.28974e-005" />
+        <inst name="barrel_doom_th" orient="0 0 2.53073" pos="1241.74 3856.53 -2.28974e-005" />
+        <inst name="barrel_doom_th" orient="0 0 1.39626" pos="1210.34 3827.57 -2.28974e-005" />
+        <inst name="barrel_doom_th" pos="1183.32 3857.53 -2.28974e-005" />
+        <inst name="barrel_doom_th" orient="0 0 1.13446" pos="5100.08 2393.33 -120" />
+        <inst name="barrel_doom_th" orient="0 0 -2.61799" pos="2254.96 2866.54 0" />
+        <inst name="barrel_doom_th" orient="0 0 2.53073" pos="2237.79 3046.12 0" />
+        <inst name="barrel_doom_th" orient="0 0 1.309" pos="2221.38 3008.53 0" />
+        <inst name="barrel_doom_th" pos="2263.08 3012.74 0" />
+        <inst name="barrel_doom_th" orient="0 0 -2.61799" pos="541.907 3043.55 0" />
+        <inst name="barrel_doom_th" orient="0 0 -1.39626" pos="562.915 3078.39 0" />
+        <inst name="barrel_doom_th" pos="521.722 3078.95 0" />
+        <inst name="barrel_doom_th" orient="0 0 1.74533" pos="1534.38 3016.75 0" />
+        <inst name="barrel_doom_th" pos="1576.73 3015.52 0" />
+        <inst name="barrel_doom_th" orient="0 0 -1.39626" pos="2237.99 2827.04 0" />
+    </entinst>
+    <entinst type="bench_doom_b">
+        <inst name="bench_doom_b" orient="0 0 1.5708" pos="5100 3630.09 -120" />
+    </entinst>
+    <entinst type="column_10x30_doom_e">
+        <inst name="column_10x30_doom_e" pos="1698 2142 -240" />
+        <inst name="column_10x30_doom_e" pos="5100 2220 -120" />
+        <inst name="column_10x30_doom_e" pos="1062 1698 -240" />
+        <inst name="column_10x30_doom_e" pos="1698 1698 -240" />
+        <inst name="column_10x30_doom_e" pos="2460 4860 -120" />
+        <inst name="column_10x30_doom_e" pos="2460 4140 -120" />
+        <inst name="column_10x30_doom_e" pos="4020 4860 -120" />
+        <inst name="column_10x30_doom_e" pos="4020 4140 -120" />
+        <inst name="column_10x30_doom_e" pos="4848 3396 -120" />
+        <inst name="column_10x30_doom_e" pos="5352 3396 -120" />
+        <inst name="column_10x30_doom_e" pos="3240 4980 -120" />
+        <inst name="column_10x30_doom_e" pos="3240 4020 -120" />
+        <inst name="column_10x30_doom_e" pos="1062 2142 -240" />
+    </entinst>
+    <entinst type="column_5x30_02_doom_e19">
+        <inst name="column_5x30_02_doom_e19" pos="720 1680 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="720 1440 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="1932 1188 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="720 2160 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="2040 2400 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="2040 2160 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="2040 1680 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="828 1188 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1932 2652 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="828 2652 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1284 2412 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1476 2412 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1548 2652 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1212 2652 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1212 1188 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1548 1188 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="1284 1428 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="720 2400 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="1476 1428 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="4548 3588 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="5652 3588 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="4548 3852 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="5652 3852 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="5268 3684 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="4932 3684 -120" />
+        <inst name="column_5x30_02_doom_e19" orient="0 0 1.5708" pos="3900 4380 -120" />
+        <inst name="column_5x30_02_doom_e19" orient="0 0 1.5708" pos="3900 4620 -120" />
+        <inst name="column_5x30_02_doom_e19" orient="0 0 1.5708" pos="2580 4380 -120" />
+        <inst name="column_5x30_02_doom_e19" orient="0 0 1.5708" pos="2580 4620 -120" />
+        <inst name="column_5x30_02_doom_e19" pos="815.398 1440 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="815.398 2400 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="1944.6 2400 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="1944.6 1440 -240" />
+        <inst name="column_5x30_02_doom_e19" pos="2040 1440 -240" />
+    </entinst>
+    <entinst type="console_01_doom_b">
+        <inst name="console_01_doom_b" pos="4758 3258 -240" />
+        <inst name="console_01_doom_b" orient="0 0 -1.5708" pos="4455.02 4740.0 -2.27887e-005" />
+        <inst name="console_01_doom_b" orient="0 0 1.5708" pos="2024.98 4740.0 -1.70915e-005" />
+        <inst name="console_01_doom_b" orient="0 0 1.5708" pos="2024.98 4260.0 -1.70915e-005" />
+        <inst name="console_01_doom_b" orient="0 0 -1.5708" pos="1938 1800 -240" />
+        <inst name="console_01_doom_b" orient="0 0 1.5708" pos="822 1800 -240" />
+        <inst name="console_01_doom_b" orient="0 0 -1.5708" pos="4455.02 4253.27 -2.27887e-005" />
+    </entinst>
+    <entinst type="console_02_doom_b">
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="5340 3126 -240" />
+        <inst name="console_02_doom_b" pos="4860 3258 -240" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="4860 3126 -240" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="4020 4217.21 -120" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="2460 4217.21 -120" />
+        <inst name="console_02_doom_b" pos="2460 4782.79 -120" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="2100 2742 0" />
+        <inst name="console_02_doom_b" orient="0 0 -1.5708" pos="1938 1920 -240" />
+        <inst name="console_02_doom_b" pos="5340 3258 -240" />
+        <inst name="console_02_doom_b" orient="0 0 1.5708" pos="822 1920 -240" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="5280 2028 -120" />
+        <inst name="console_02_doom_b" pos="4020 4782.79 -120" />
+        <inst name="console_02_doom_b" orient="0 0 3.14159" pos="4920 2028 -120" />
+    </entinst>
+    <entinst type="console_03_doom_b">
+        <inst name="console_03_doom_b" orient="0 0 -1.5708" pos="5016 2220 -120" />
+        <inst name="console_03_doom_b" orient="0 0 -1.5708" pos="1938 2040 -240" />
+        <inst name="console_03_doom_b" orient="0 0 1.5708" pos="462.0 2940.0 -1.70915e-005" />
+        <inst name="console_03_doom_b" orient="0 0 1.5708" pos="5184 2220 -120" />
+        <inst name="console_03_doom_b" pos="2100.0 4815.26 -1.70916e-005" />
+        <inst name="console_03_doom_b" orient="0 0 3.14159" pos="2100.0 4184.98 -1.70916e-005" />
+        <inst name="console_03_doom_b" pos="4386.73 4815.26 -1.70916e-005" />
+        <inst name="console_03_doom_b" orient="0 0 3.14159" pos="4373.27 4184.98 -1.70916e-005" />
+        <inst name="console_03_doom_b" pos="4680 3258 -240" />
+        <inst name="console_03_doom_b" orient="0 0 1.5708" pos="822 2040 -240" />
+    </entinst>
+    <entinst type="crate_doom_th">
+        <inst name="crate_doom_th" pos="960 2668 -120" />
+        <inst name="crate_doom_th" pos="1080 2668 -120" />
+        <inst name="crate_doom_th" orient="0 0 1.5708" pos="4656 3456 -120" />
+        <inst name="crate_doom_th" orient="0 0 1.5708" pos="4656 3528 -120" />
+    </entinst>
+    <entinst type="dark_hammer">
+        <inst name="dark_hammer" pos="4773.67 1694.56 12.0217" />
+    </entinst>
+    <entinst type="dark_machine">
+        <inst name="dark_machine" orient="0 0 3.14159" pos="5100 2940 -240" />
+    </entinst>
+    <entinst type="mask">
+        <inst name="mask" orient="0.0 1.50996e-007 1.5708" pos="5097.09 2498.04 -180.741" />
+    </entinst>
+    <entinst type="doom_bust_doom_b">
+        <inst name="doom_bust_doom_b" pos="5040 3629.88 -120" />
+        <inst name="doom_bust_doom_b" pos="5160 3629.88 -120" />
+    </entinst>
+    <entinst type="doomsuit_capsule_doom_b">
+        <inst name="doomsuit_capsule_doom_b" orient="0 0 1.5708" pos="4680 2022.75 -120" />
+        <inst name="doomsuit_capsule_doom_b" orient="0 0 1.5708" pos="5520 2022.75 -120" />
+        <inst name="doomsuit_capsule_doom_b" pos="4542.75 2160 -120" />
+        <inst name="doomsuit_capsule_doom_b" orient="0 0 1.5708" pos="4920.0 1914.75 -2.28882e-005" />
+        <inst name="doomsuit_capsule_doom_b" orient="0 0 1.5708" pos="5280.0 1914.75 -2.28882e-005" />
+        <inst name="doomsuit_capsule_doom_b" orient="0 0 3.14159" pos="5657.25 2160 -120" />
+    </entinst>
+    <entinst type="door_doom_d05">
+        <inst name="door_doom_d05" orient="0 0 1.5708" pos="1856.25 2940.0 -1.12827e-006" />
+        <inst name="door_doom_d05" orient="0 0 3.14159" pos="1380.0 3419.0 -3.00957e-007" />
+        <inst name="door_doom_d05" orient="0 0 -1.5708" pos="900 2940 0" />
+        <inst name="door_doom_d05" orient="0 0 1.5708" pos="1980 4500 0" />
+        <inst name="door_doom_d05" orient="0 0 1.5708" pos="4500 4500 0" />
+        <inst name="door_doom_d05" pos="5100 3900 0" />
+        <inst name="door_doom_d05" orient="0 0 -1.5708" pos="1140 2820 0" />
+        <inst name="door_doom_d05" orient="0 0 3.14159" pos="1380 2700 0" />
+        <inst name="door_doom_d05" orient="0 0 3.14159" pos="1380 1140 0" />
+        <inst name="door_doom_d05" orient="0 0 3.14159" pos="1380 3900 0" />
+    </entinst>
+    <entinst type="door_mask">
+        <inst name="door_mask" pos="5100.0 1859.0 -3.00983e-007" />
+    </entinst>
+    <entinst type="door_invulnerable_doom_d">
+        <inst name="door_invulnerable_doom_d" pos="1380 540 -120" />
+    </entinst>
+    <entinst type="door_invulnerable_doom_d02">
+        <inst name="door_invulnerable_doom_d02" pos="1380.0 780.0 -1.44475e-005" />
+    </entinst>
+    <entinst type="gargoyle_01_doom_th">
+        <inst name="gargoyle_01_doom_th" orient="0 0 -0.785398" pos="1482 1362 0" />
+        <inst name="gargoyle_01_doom_th" orient="0 0 0.785398" pos="1278 1362 0" />
+        <inst name="gargoyle_01_doom_th" orient="0 0 2.35619" pos="4998 3678 0" />
+        <inst name="gargoyle_01_doom_th" orient="0 0 -2.35619" pos="5202 3678 0" />
+        <inst name="gargoyle_01_doom_th" orient="0 0 2.35619" pos="1278 2478 0" />
+        <inst name="gargoyle_01_doom_th" orient="0 0 -2.35619" pos="1482 2478 0" />
+    </entinst>
+    <entinst type="lab_machine_01_doom_a">
+        <inst name="lab_machine_01_doom_a" pos="5616 3720 -120" />
+        <inst name="lab_machine_01_doom_a" pos="744 1560 -240" />
+        <inst name="lab_machine_01_doom_a" pos="744 2280 -240" />
+        <inst name="lab_machine_01_doom_a" pos="2016 2280 -240" />
+        <inst name="lab_machine_01_doom_a" pos="2016 1560 -240" />
+        <inst name="lab_machine_01_doom_a" pos="4584 3720 -120" />
+        <inst name="lab_machine_01_doom_a" pos="1536 3660 0" />
+        <inst name="lab_machine_01_doom_a" pos="1380 3096 0" />
+        <inst name="lab_machine_01_doom_a" pos="1224 3660 0" />
+    </entinst>
+    <entinst type="lab_machine_03_doom_a">
+        <inst name="lab_machine_03_doom_a" orient="0 0 3.14159" pos="2165.46 2940 0" />
+        <inst name="lab_machine_03_doom_a" pos="4674.27 2940 -240" />
+        <inst name="lab_machine_03_doom_a" orient="0 0 3.14159" pos="1197.73 2028 -240" />
+        <inst name="lab_machine_03_doom_a" orient="0 0 -1.5708" pos="660 3005.46 0" />
+        <inst name="lab_machine_03_doom_a" orient="0 0 3.14159" pos="1197.73 1812 -240" />
+        <inst name="lab_machine_03_doom_a" pos="1562.27 2028 -240" />
+        <inst name="lab_machine_03_doom_a" pos="1562.27 1812 -240" />
+    </entinst>
+    <entinst type="pillar_10ft_doom_b">
+        <inst name="pillar_10ft_doom_b" pos="1824 2736 0" />
+        <inst name="pillar_10ft_doom_b" pos="1224 3096 0" />
+        <inst name="pillar_10ft_doom_b" pos="936 3264 0" />
+        <inst name="pillar_10ft_doom_b" pos="1056 3384 0" />
+        <inst name="pillar_10ft_doom_b" pos="1704 3384 0" />
+        <inst name="pillar_10ft_doom_b" pos="1536 3096 0" />
+        <inst name="pillar_10ft_doom_b" pos="1824 3264 0" />
+        <inst name="pillar_10ft_doom_b" pos="1656 2736 0" />
+        <inst name="pillar_10ft_doom_b" pos="1104 2736 0" />
+        <inst name="pillar_10ft_doom_b" pos="936 2736 0" />
+    </entinst>
+    <entinst type="pillar_5x15_arch_18ft_doom_e">
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="1488 1716 -120" />
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="5352 3324 -120" />
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="4848 3324 -120" />
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="1272 2124 -120" />
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="1272 1716 -120" />
+        <inst name="pillar_5x15_arch_18ft_doom_e" orient="0 0 1.5708" pos="1488 2124 -120" />
+    </entinst>
+    <entinst type="pillar_5x15_doom_e">
+        <inst name="pillar_5x15_doom_e" pos="1164 1716 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1596 1716 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1596 1596 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1716 1596 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1164 1596 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1044 1596 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1044 1356 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1716 1356 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1380 2124 -120" />
+        <inst name="pillar_5x15_doom_e" pos="4740 3324 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1596 2124 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1164 2124 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1164 2244 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1044 2244 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5460 3324 -120" />
+        <inst name="pillar_5x15_doom_e" pos="4956 3324 -120" />
+        <inst name="pillar_5x15_doom_e" pos="4956 3444 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1044 2484 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5136 2436 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5064 2436 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1596 2244 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1716 2244 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5256 2436 -120" />
+        <inst name="pillar_5x15_doom_e" pos="1716 2484 -120" />
+        <inst name="pillar_5x15_doom_e" pos="4944 2436 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5256 2556 -120" />
+        <inst name="pillar_5x15_doom_e" pos="4944 2556 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5244 3444 -120" />
+        <inst name="pillar_5x15_doom_e" pos="5244 3324 -120" />
+        <inst name="pillar_5x15_doom_e" pos="2316 4644 0" />
+        <inst name="pillar_5x15_doom_e" pos="2196 4644 0" />
+        <inst name="pillar_5x15_doom_e" pos="1380 1716 -120" />
+        <inst name="pillar_5x15_doom_e" pos="2316 4356 0" />
+        <inst name="pillar_5x15_doom_e" pos="2196 4356 0" />
+        <inst name="pillar_5x15_doom_e" pos="4164 4236 0" />
+        <inst name="pillar_5x15_doom_e" pos="4164 4764 0" />
+        <inst name="pillar_5x15_doom_e" pos="4284 4356 0" />
+        <inst name="pillar_5x15_doom_e" pos="4164 4356 0" />
+        <inst name="pillar_5x15_doom_e" pos="4284 4644 0" />
+        <inst name="pillar_5x15_doom_e" pos="4164 4644 0" />
+        <inst name="pillar_5x15_doom_e" pos="2316 4236 0" />
+        <inst name="pillar_5x15_doom_e" pos="2316 4764 0" />
+    </entinst>
+    <entinst type="pillar_5x15arch_10ft_02_doom_e18">
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="4956 3384 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="5244 3384 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="4224 4644 0" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="4164.0 4296.0 -1.13943e-005" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="4944 2496 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="5256 2496 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="5004 2436 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="5196 2436 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="4164.0 4704.0 -1.13943e-005" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="2316.0 4296.0 -1.13943e-005" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="2316.0 4704.0 -1.13943e-005" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="2256 4356 0" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="2256 4644 0" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="1104 2244 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="1656 2244 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="1596 2184 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="1164 2184 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="1104 1596 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="1164 1656 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="1656 1596 -120" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" orient="0 0 1.5708" pos="4224 4356 0" />
+        <inst name="pillar_5x15arch_10ft_02_doom_e18" pos="1596 1656 -120" />
+    </entinst>
+    <entinst type="pillar_5x15arch_20ft_02_doom_e01">
+        <inst name="pillar_5x15arch_20ft_02_doom_e01" pos="1716 1476 -120" />
+        <inst name="pillar_5x15arch_20ft_02_doom_e01" pos="1044 2364 -120" />
+        <inst name="pillar_5x15arch_20ft_02_doom_e01" pos="1716 2364 -120" />
+        <inst name="pillar_5x15arch_20ft_02_doom_e01" pos="1044 1476 -120" />
+    </entinst>
+    <entinst type="pillar_5x20_doom_e">
+        <inst name="pillar_5x20_doom_e" pos="4740 4320 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4620 4320 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4020 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4140 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4260 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4380 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4500 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5244 4644 0" />
+        <inst name="pillar_5x20_doom_e" pos="4860 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="4980 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="5100 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4500 0" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4380 0" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4260 0" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4140 0" />
+        <inst name="pillar_5x20_doom_e" pos="5100 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4980 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4860 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4620 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="4620 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5244 4644 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5604.47 3084.47 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1860 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5280 4020 0" />
+        <inst name="pillar_5x20_doom_e" pos="1620 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1500 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4740 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="4740 4320 0" />
+        <inst name="pillar_5x20_doom_e" pos="4884 4284 0" />
+        <inst name="pillar_5x20_doom_e" pos="4920.0 4140.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="4620 4320 0" />
+        <inst name="pillar_5x20_doom_e" pos="5400 1740 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4800 1740 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4800 1740 0" />
+        <inst name="pillar_5x20_doom_e" pos="5400 1740 0" />
+        <inst name="pillar_5x20_doom_e" pos="2004.47 1764.47 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2004.47 2075.53 -240" />
+        <inst name="pillar_5x20_doom_e" pos="755.534 2075.53 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4595.53 3084.47 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4596 2796 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4740 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="5604.47 2795.53 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4920.0 4020.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1860 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="1860 4320 0" />
+        <inst name="pillar_5x20_doom_e" pos="1200.0 4020.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1200.0 4380.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1200.0 4500.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1236 4644 0" />
+        <inst name="pillar_5x20_doom_e" pos="1380 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1236 4644 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1200 4500 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1200 4380 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1200 4260 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1200 4140 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1200 4020 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1560.0 4020.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1260 1020 0" />
+        <inst name="pillar_5x20_doom_e" pos="755.534 1764.47 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1560.0 4140.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1740 4320 0" />
+        <inst name="pillar_5x20_doom_e" pos="1200.0 4140.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1596 4284 0" />
+        <inst name="pillar_5x20_doom_e" pos="1200.0 4260.0 1.52588e-005" />
+        <inst name="pillar_5x20_doom_e" pos="1740 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="1620 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="1500 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="1380 4680 0" />
+        <inst name="pillar_5x20_doom_e" pos="1740 4680 -240" />
+        <inst name="pillar_5x20_doom_e" pos="360 2820 -240" />
+        <inst name="pillar_5x20_doom_e" pos="360 2940 -240" />
+        <inst name="pillar_5x20_doom_e" pos="360 3060 -240" />
+        <inst name="pillar_5x20_doom_e" pos="540 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="660 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="780 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="396 3204 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1500 1020 0" />
+        <inst name="pillar_5x20_doom_e" pos="4884 4284 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4920 4140 -240" />
+        <inst name="pillar_5x20_doom_e" pos="4920 4020 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1596 4284 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1860 4320 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1740 4320 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1560 4140 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1560 4020 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1980 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="2100 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="2220 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="2364.0 3204.0 3.05176e-005" />
+        <inst name="pillar_5x20_doom_e" pos="2400.0 2820.0 3.05176e-005" />
+        <inst name="pillar_5x20_doom_e" pos="2400.0 2940.0 3.05176e-005" />
+        <inst name="pillar_5x20_doom_e" pos="2400.0 3060.0 3.05176e-005" />
+        <inst name="pillar_5x20_doom_e" pos="2364 3204 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2400 2820 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2400 2940 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2400 3060 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2220 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="2100 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="1980 3240 -240" />
+        <inst name="pillar_5x20_doom_e" pos="780 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="660 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="540 3240 0" />
+        <inst name="pillar_5x20_doom_e" pos="360 2820 0" />
+        <inst name="pillar_5x20_doom_e" pos="360 2940 0" />
+        <inst name="pillar_5x20_doom_e" pos="360 3060 0" />
+        <inst name="pillar_5x20_doom_e" pos="396.0 3204.0 3.05176e-005" />
+    </entinst>
+    <entinst type="steam_wheel_doom_a">
+        <inst name="steam_wheel_doom_a" pos="5612 2892 -210" />
+        <inst name="steam_wheel_doom_a" pos="5612 2988 -210" />
+    </entinst>
+    <entinst type="turbine_section_02_doom_a03">
+        <inst name="turbine_section_02_doom_a03" orient="0 -0.314161 1.5708" pos="3240 4500 -193.863" />
+        <inst name="turbine_section_02_doom_a03" orient="0 -0.314161 -1.5708" pos="3000 4500 -193.863" />
+        <inst name="turbine_section_02_doom_a03" orient="0 -0.314161 1.5708" pos="2760 4500 -193.863" />
+        <inst name="turbine_section_02_doom_a03" orient="0 -0.314161 1.5708" pos="3720 4500 -193.863" />
+        <inst name="turbine_section_02_doom_a03" orient="0 -0.314161 -1.5708" pos="3480 4500 -193.863" />
+    </entinst>
+    <entinst type="u_tesla_coil_pillar_doom_a">
+        <inst name="u_tesla_coil_pillar_doom_a" pos="5220 2640 -240" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="4905.87 1740 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="5294.17 1740 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="4548 2028 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="5652 2292 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="5652 2028 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="4800 2028 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="5400 2028 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="3900 4200 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="3900 4800 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="2580 4200 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="4548 2292 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="4980 2640 -240" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="2580 4800 -120" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="1568.92 3780 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="1568.92 3540.01 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="1191.12 3540.01 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="1191.12 3780 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="540.0 3128.88 -1.994e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="780.0 3128.88 -1.994e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="471.124 3060.0 -1.99401e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="471.124 2820.01 -1.99401e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="1980.0 3128.88 -1.994e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" pos="2220.01 3128.88 -1.994e-005" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="2288.92 3060 0" />
+        <inst name="u_tesla_coil_pillar_doom_a" orient="0 0 1.5708" pos="2288.92 2820.01 0" />
+    </entinst>
+    <entinst type="u_tesla_coil_trap_doom_a">
+        <inst name="u_tesla_coil_trap_doom_a" pos="1860.0 4584.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="1860.0 4416.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="4860.0 4584.0 -1.70915e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="4860.0 4416.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="5016.0 4260.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="5184.0 4260.0 -1.70915e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="5016.0 4020.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="5184.0 4020.0 -1.70915e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="1464.0 4260.0 -1.70915e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="1620.0 4584.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="1620.0 4416.0 -1.70916e-005" />
+        <inst name="u_tesla_coil_trap_doom_a" pos="1296.0 4260.0 -1.70915e-005" />
+    </entinst>
+    <entinst type="u_tesla_conduit_doom_a">
+        <inst name="u_tesla_conduit_doom_a" pos="3540 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" pos="2940 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" pos="2820 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="2940 4855.92 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="2820 4855.92 -186" />
+        <inst name="u_tesla_conduit_doom_a" pos="3780 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="2700 4855.92 -186" />
+        <inst name="u_tesla_conduit_doom_a" pos="2700.05 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="3540 4855.92 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="3660 4855.92 -186" />
+        <inst name="u_tesla_conduit_doom_a" pos="3660 4144.08 -186" />
+        <inst name="u_tesla_conduit_doom_a" orient="0 0 3.14159" pos="3780 4855.92 -186" />
+    </entinst>
+    <entinst type="ultimate_nullifier">
+        <inst name="ultimate_nullifier" orient="0 0 1.0472" pos="2100 3120 34.8" />
+    </entinst>
+    <entinst type="urn_02_doom_th">
+        <inst name="urn_02_doom_th" orient="0 0 1.8326" pos="1943.6 2477.29 -120" />
+        <inst name="urn_02_doom_th" pos="1224.43 3130.07 0" />
+        <inst name="urn_02_doom_th" orient="0 0 -2.79253" pos="1945.81 1363.78 -120" />
+        <inst name="urn_02_doom_th" orient="0 0 1.8326" pos="1785.72 3263.25 0" />
+        <inst name="urn_02_doom_th" pos="5543.14 3318.37 -120" />
+        <inst name="urn_02_doom_th" orient="0 0 0.872665" pos="5518.78 3342.72 -120" />
+        <inst name="urn_02_doom_th" orient="0 0 -1.22173" pos="1189.71 3096.18 0" />
+        <inst name="urn_02_doom_th" orient="0 0 2.61799" pos="1602.29 2196.39 -120" />
+        <inst name="urn_02_doom_th" orient="0 0 0.523599" pos="876.507 1183.42 -120" />
+    </entinst>
+    <entinst type="vase_doom_th">
+        <inst name="vase_doom_th" orient="0 0 1.0472" pos="1950.19 1323.69 -120" />
+        <inst name="vase_doom_th" pos="887.893 1211.11 -120" />
+        <inst name="vase_doom_th" orient="0 0 1.0472" pos="1932.92 1338.66 -120" />
+        <inst name="vase_doom_th" orient="0 0 0.174533" pos="1577.01 2207.69 -120" />
+        <inst name="vase_doom_th" orient="0 0 0.174533" pos="1571.27 2186.98 -120" />
+        <inst name="vase_doom_th" orient="0 0 -0.610865" pos="1933.71 2503.16 -120" />
+        <inst name="vase_doom_th" orient="0 0 -0.610865" pos="1950.89 2517.37 -120" />
+        <inst name="vase_doom_th" pos="904.111 1188.9 -120" />
+        <inst name="vase_doom_th" pos="1198.19 3122.66 0" />
+        <inst name="vase_doom_th" pos="1200.16 3145.13 0" />
+        <inst name="vase_doom_th" orient="0 0 1.8326" pos="1799.67 3239.82 0" />
+        <inst name="vase_doom_th" orient="0 0 1.8326" pos="1777.44 3235.9 0" />
+        <inst name="vase_doom_th" pos="5515.11 3313.74 -120" />
+        <inst name="vase_doom_th" pos="5547.36 3346.47 -120" />
+        <inst name="vase_doom_th" orient="0 0 0.174533" pos="1586.99 2171.5 -120" />
+    </entinst>
+    <entinst type="concept_art30">
+        <inst name="concept_art30" pos="516 2760 0" />
+    </entinst>
+    <entinst type="harm_target_intermittent_cust03">
+        <inst extents="71.9999 -84 0 95.9999 84 120" name="harm_target_intermittent_cust03" orient="0 0 -1.5708" pos="1860 4584 0" />
+        <inst extents="71.9998 -84.0002 0 95.9998 83.9998 120" name="harm_target_intermittent_cust03" orient="0 0 1.5708" pos="4860 4416 0" />
+        <inst extents="0.000152588 -11.9998 0 168 12.0002 120" name="harm_target_intermittent_cust03" orient="0 0 3.14159" pos="5184 4260 0" />
+        <inst extents="72.0001 -83.9999 0 96.0001 84.0001 120" name="harm_target_intermittent_cust03" orient="0 0 1.5708" pos="1620 4416 0" />
+        <inst extents="0 -12 0 168 12 120" name="harm_target_intermittent_cust03" pos="1296 4260 0" />
+        <inst extents="0 -12 0 168 12 120" name="harm_target_intermittent_cust03" pos="5016 4020 0" />
+    </entinst>
+    <entinst type="fx_torch04">
+        <inst extents="-6.00002 -6.00002 -6 5.99998 5.99998 6" name="fx_torch04" orient="0 0 3.14159" pos="1753.61 1499.97 -120" />
+        <inst extents="-6.00001 -6.00002 -6 5.99999 5.99998 6" name="fx_torch04" orient="0 0 3.14159" pos="1753.61 2340 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch04" pos="1006.4 2340 -120" />
+        <inst extents="-6 -6.00006 -6 6 5.99994 6" name="fx_torch04" pos="5220 1845.61 120" />
+        <inst extents="-6 -6.00006 -6 6 5.99994 6" name="fx_torch04" pos="4980 1845.61 120" />
+        <inst extents="-6 -5.99994 -6.00001 6 6.00006 5.99999" name="fx_torch04" pos="5100 2474.21 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch04" pos="1006.4 1499.92 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch04" pos="1380 1753.59 -120" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_torch04" pos="1380 2086.4 -120" />
+        <inst extents="-5.99997 -6.00005 -6 6.00003 5.99995 6" name="fx_torch04" orient="0 0 3.14159" pos="1153.49 1020.4 120" />
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="fx_torch04" pos="1606.23 1020.08 120" />
+        <inst extents="-6 -5.99989 -6 6 6.00011 6" name="fx_torch04" orient="0 0 3.14159" pos="914.4 2820.05 120" />
+        <inst extents="-6.00003 -5.99989 -6 5.99997 6.00011 6" name="fx_torch04" orient="0 0 3.14159" pos="914.4 3060 120" />
+        <inst extents="-5.99995 -5.99995 -6 6.00005 6.00005 6" name="fx_torch04" orient="0 0 1.5708" pos="1499.88 3406.38 120" />
+        <inst extents="-6 -5.99995 -6 6 6.00005 6" name="fx_torch04" orient="0 0 1.5708" pos="1259.93 3406.38 120" />
+        <inst extents="-6 -6.00006 -6 6 5.99994 6" name="fx_torch04" pos="1846.38 2820.45 120" />
+        <inst extents="-6 -6.00006 -6 6 5.99994 6" name="fx_torch04" pos="1846.38 3060.4 120" />
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="fx_torch04" pos="4126.4 4740 0" />
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="fx_torch04" pos="5340 3285.63 -120" />
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="fx_torch04" pos="4126.4 4260 0" />
+        <inst extents="-6.00002 -5.99987 -6 5.99998 6.00013 6" name="fx_torch04" orient="0 0 3.14159" pos="2354.27 4740 0" />
+        <inst extents="-6.00009 -5.99987 -6 5.99991 6.00013 6" name="fx_torch04" orient="0 0 3.14159" pos="2354.27 4260 0" />
+        <inst extents="-6 -5.99994 -6 6 6.00006 6" name="fx_torch04" pos="4860 3285.63 -120" />
+    </entinst>
+    <entinst type="fx_mach_blast">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_mach_blast" pos="5100 2856.57 -234" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_mach_blast" pos="5172.26 2981.72 -234" />
+        <inst extents="-6 -6 -6 6 6 6" name="fx_mach_blast" pos="5027.74 2981.72 -234" />
+    </entinst>
+    <entinst type="fx_steam01">
+        <inst extents="-6 -6 -6 6 6 6" name="fx_steam01" pos="5460 2940 -240" />
+    </entinst>
+    <entinst type="cam_ambush">
+        <inst extents="-6 -6 -6 6 6 6" name="cam_ambush" pos="5376 2940 -180" />
+        <inst extents="-6 -6 -6 6 6 6" name="hammer_spot" pos="5097.48 2581.46 -230.747" />
+        <inst extents="-6 -6 -6 6 6 6" name="push01" pos="2760 4400.72 -157.863" />
+        <inst extents="-6.00009 -6.00001 -6 5.99991 5.99999 6" name="cam_villains" orient="0 0 -2.0944" pos="5160 2652 -180" />
+        <inst extents="-6 -6 -6 6 6 6" name="push05" pos="3720 4401.08 -157.863" />
+        <inst extents="-6 -6 -6 6 6 6" name="push02" pos="3000 4598.56 -157.863" />
+        <inst extents="-6 -6 -6 6 6 6" name="push03" pos="3240 4401.05 -157.863" />
+        <inst extents="-6 -6 -6 6 6 6" name="push04" pos="3480 4599.16 -157.863" />
+    </entinst>
+    <entinst type="player_start_all02">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all02" orient="0 0 1.5708" pos="5100 1740 0" />
+    </entinst>
+    <entinst type="player_start_all01">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all01" orient="0 0 1.5708" pos="1380 900 0" />
+    </entinst>
+    <entinst type="trigger_push03">
+        <inst extents="-120 -75 0 120 75 100" name="trigger_push03" pos="3240 4485.05 -210.044" />
+    </entinst>
+    <entinst type="trigger_push04">
+        <inst extents="-120 -75 0 120 75 100" name="trigger_push04" pos="3480 4515.16 -210.044" />
+    </entinst>
+    <entinst type="trigger_push05">
+        <inst extents="-120 -75 0 120 75 100" name="trigger_push05" pos="3720 4485.08 -210.044" />
+    </entinst>
+    <entinst type="trigger_push01">
+        <inst extents="-120 -75 0 120 75 100" name="trigger_push01" pos="2760 4484.72 -210.044" />
+    </entinst>
+    <entinst type="trigger_push02">
+        <inst extents="-120 -75 0 120 75 100" name="trigger_push02" pos="3000 4514.56 -210.044" />
+    </entinst>
+    <entinst type="trig_villains">
+        <inst extents="-480 -120 0 480 120 384" name="trig_villains" pos="5100 2712 -240" />
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-378 -210 0 378 210 168" name="trigger_touch01" pos="1534.84 4501.41 0" />
+    </entinst>
+    <entinst type="trig_machine">
+        <inst extents="-180 -180 0 180 180 120" name="trig_machine" pos="5100 2940 -240" />
+    </entinst>
+    <entinst type="trig_amb01">
+        <inst extents="-480 -12 0 480 12 240" name="trig_amb01" pos="5100 2568 -120" />
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-168 -360 0 168 360 168" name="trigger_touch02" pos="3867.47 4501.41 -120" />
+    </entinst>
+    <entinst type="trig_mask">
+        <inst extents="-36 -24 0 36 24 72" name="trig_mask" pos="5100 2508 -240" />
+    </entinst>
+    <entinst type="trig_door_mask">
+        <inst extents="-48 -12 0 48 12 120" name="trig_door_mask" pos="5099.89 1869.6 0" />
+    </entinst>
+    <entinst type="trigger_nullifier">
+        <inst extents="-60 -36 0 60 36 60" name="trigger_nullifier" pos="2100 3120 0" />
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" pos="2220 4740 0" />
+    </entinst>
+    <entinst type="link_doom1">
+        <inst extents="-49.3547 -65.6337 0 49.3547 65.6337 120" name="link_doom1" pos="5100.9 1585.22 0" />
+    </entinst>
+    <entinst type="s_dspider">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_dspider" orient="0 0 1.5708" pos="5064 2580 -240" />
+    </entinst>
+    <entinst type="s_dthor">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="s_dthor" orient="0 0 1.5708" pos="5136 2580 -240" />
+    </entinst>
+    <entity actcountremove="1" character="Odin" classname="monsterspawnerent" firstact="0.1" monster_name="odin" monster_spawnexactlocation="true" name="sp_odin01" nocollide="true" />
+    <entity actcountremove="1" character="DoomBot_b" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" instantspawn="false" monster_smartent="true" name="s_bot06" nocollide="true" nofadeondeath="true" smartent="false" />
+    <entity actcountremove="1" actdelay="0.25" character="DoomBot_b" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" instantspawn="false" monster_smartent="true" name="s_bot07" nocollide="true" nofadeondeath="true" smartent="false" />
+    <entity actcountremove="1" character="DoomBot_b" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="s_botlead01" nocollide="true" nofadeondeath="true" smartent="false" />
+    <entity actcountremove="1" character="Doomsman_c" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="s_manlead01" nocollide="true" smartent="false" />
+    <entity classname="physent" deatheffect="base/material/break/brk_stone" deathsound="death_style/ds_stone_m" fxlevel="2" health="100" mass="0" material="rock" model="doom/bench_stump_doom_b" name="bench_doom_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/column_5x30_02_doom_e" name="column_5x30_02_doom_e19" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="doom/console_01_stump_doom_b" name="console_01_doom_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="doom/console_02_stump_doom_b" name="console_02_doom_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" mass="0" material="electronics" model="doom/console_03_stump_doom_b" name="console_03_doom_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity actcountdisable="1" actdistance="40" actscript="act5/doom/doom4/dhammer_pickup" classname="pickupweaponent" description="Wield Dark Hammer" interaction_node="pickup_victim" loopfxstarton="true" material="solid_metal" model="doom/dark_hammer_doom_w" name="dark_hammer" nogravity="false" nopush="true" puzzle_critical="true" quickuse="true" randompickups="0" smartent="false" spawnscript="act5/doom/doom4/hammer_spawn" structure="2" weapon="wp_twohanded" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" deathspawn="dark_hero_machine_doom_b_d" fxlevel="3" health="150" material="electronics" model="doom/dark_hero_machine_doom_b" name="dark_machine" nogravity="true" nopickup="true" nopush="true" painscript="act5/doom/doom4/dark_machine_pain" smartent="false" structure="2" team="enemy" />
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_l" fxlevel="3" health="150" mass="0" material="electronics" model="doom/dark_hero_machine_stump_doom_b" name="dark_hero_machine_doom_b_d" nogravity="true" nopickup="true" nopush="true" structure="2" />
+    <entity classname="physent" hinttype="objective" material="hollow_metal" model="doom/doom_armor_mask_doom_e" name="mask" nogravity="false" nopickup="false" nopush="true" smartent="false" structure="2" />
+    <entity actcountdisable="1" actonuse="false" actscript="act5/doom/doom4/dr_doom_taunt_3" actsound="zone_shared/doom/doom_door1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="doom/door_doom_d" name="door_mask" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/doom/doom_door1" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="100" material="solid_metal" model="doom/door_doom_d" name="door_doom_d05" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0" toggleonact="true" />
+    <entity actcountdisable="1" actonuse="false" actsound="zone_shared/doom/doom_door2" autoclosedelay="0" classname="doorent" material="rock" model="doom/door_invulnerable_doom_d" name="door_invulnerable_doom_d02" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2" toggleonact="true" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15arch_10ft_02_doom_e" name="pillar_5x15arch_10ft_02_doom_e18" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2" />
+    <entity camerafadeout="true" classname="physent" material="rock" model="doom/pillar_5x15arch_20ft_02_doom_e" name="pillar_5x15arch_20ft_02_doom_e01" nogravity="true" nopickup="true" nopush="true" pathignore="true" />
+    <entity animstarton="true" classname="physent" material="solid_metal" model="doom/turbine_section_02_doom_a" name="turbine_section_02_doom_a03" nogravity="true" nopickup="true" nopush="true" spawnsoundloop="zone_shared/doom/gears" structure="2" />
+    <entity classname="physent" material="solid_metal" model="doom/ultimate_nullifier_doom_e" name="ultimate_nullifier" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2" />
+    <entity boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_fire" loopfx="map/doom/electric_traps" name="harm_target_intermittent_cust03" nocollide="true" offtime="2" ontime="2" radiusdamage="false" smartent="false" smartfire="true" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/steam_large" loopfxstarton="true" name="fx_steam01" nocollide="true" smartent="true" />
+    <entity acteffect="base/material/explode/exp_generic_med" acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="fx_mach_blast" nocollide="true" smartent="false" />
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/common/fire_torch" loopfxstarton="true" name="fx_torch04" nocollide="true" smartent="true" />
+    <entity classname="ent" name="cam_ambush" nocollide="true" smartent="false" />
+    <entity allinone="true" classname="playerstartent" default="true" name="player_start_all01" nocollide="true" prevlink="link_doom4" prevzone="act5/doom/doom3" />
+    <entity allinone="true" classname="playerstartent" name="player_start_all02" nocollide="true" prevlink="link_doom4" prevzone="act5/doom/doom1" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push02" nocollide="true" pushspeed="8" targetent="push02" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push01" nocollide="true" pushspeed="8" targetent="push01" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push05" nocollide="true" pushspeed="8" targetent="push05" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push04" nocollide="true" pushspeed="8" targetent="push04" team="hero" />
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push03" nocollide="true" pushspeed="8" targetent="push03" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act5/doom/doom4/dr_doom_taunt_2" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch02" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" acttargets="s_bot06 s_bot07 s_bot08" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_amb01" nocollide="true" smartent="false" startenabled="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="startConversation('act5/doom/doom4/5_DOOM4_150')" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_machine" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act5/doom/doom4/dr_doom_taunt_1" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch01" nocollide="true" team="hero" />
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act5/doom/doom4/villains_intro" actteamplayer="true" boxcollision="true" classname="gameent" name="trig_villains" nocollide="true" smartent="false" team="hero" />
+    <entity actcountremove="1" actonuse="true" actscript="act5/doom/doom4/ultimate_nullifier" boxcollision="true" classname="gameent" description="Pick up Ultimate Nullifier" hinttype="objective" name="trigger_nullifier" nocollide="true" smartent="false" team="none" />
+    <entity actinactivedelay="1" actonuse="true" actscript="act5/doom/doom4/door_mask" boxcollision="true" classname="gameent" description="Open door" name="trig_door_mask" nocollide="true" quickuse="true" smartent="false" team="none" />
+    <entity actcountremove="1" actonuse="true" actscript="act5/doom/doom4/mask_pickup" boxcollision="true" classname="gameent" description="Take Mask of Doom" name="trig_mask" nocollide="true" quickuse="true" smartent="false" team="none" />
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Castle Doom" name="link_doom1" nextzone="act5/doom/doom1" nocollide="false" team="hero" />
+    <entity actcountremove="1" character="DarkSpiderman" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" monster_deathscript="act5/doom/doom4/dspider_death" monster_deathspawn="DarkSpiderman_treasure" monster_name="dspider" monster_spawnexactlocation="true" monster_team="enemy" name="s_dspider" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="DarkSpiderman" monster_deathspawn="DarkSpiderman_treasure" name="DarkSpiderman_treasure" nocollide="true" treasurelevel="0" />
+    <entity actcountremove="1" character="DarkThor" classname="monsterspawnerent" firstspawnscript="act5/doom/doom4/villains_1ss" monster_deathscript="act5/doom/doom4/dthor_death" monster_deathspawn="DarkThor_treasure" monster_name="dthor" monster_spawnexactlocation="true" monster_team="enemy" name="s_dthor" nocollide="true" nofadeondeath="true" shadow="true" smartent="false" />
+    <entity actcountdisable="1" acteffect="base/misc/misc_treasure" actsound="common/game/treasure" classname="treasureent" count="1000" firstact="0.1" from_enemy="DarkThor" monster_deathspawn="DarkThor_treasure" name="DarkThor_treasure" nocollide="true" treasurelevel="0" />
+</world>

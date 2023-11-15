@@ -1,0 +1,846 @@
+<world>
+    <entity act="4" extent_max="3480 4607 924" extent_min="-3119 -2099 -947" killz="-1777" level="26" name="world" next_gen_partylight="0 0 0" next_gen_partylightradius="300" partylight="0.8 0.88 0.96" partylightradius="400" soundfile="shiar1" startblack="true" zonescript="act4/shiar/shiar1/shiar1"/>
+    <precache filename="act4/shiar/shiar1/shiar_start" type="conversation"/>
+    <precache filename="char/lockjaw/lockjaw_victim" type="fx"/>
+    <precache filename="shiar/fighter_launch/mp_fighter_launch" type="motionpath"/>
+    <precache filename="shiar/flypath01/mp_flypath01" type="motionpath"/>
+    <precache filename="shiar/flypath02/mp_flypath02" type="motionpath"/>
+    <precache filename="shiar/mp_barrel/mp_barrel" type="motionpath"/>
+    <precache filename="act4/shiar/shiar1/corsair_leaves2" type="script"/>
+    <precache filename="act4/shiar/shiar1/intro_pit" type="script"/>
+    <precache filename="act4/shiar/shiar1/new_boss_fighter_start" type="script"/>
+    <precache filename="act4/shiar/shiar1/shiar1_cont" type="script"/>
+    <precache filename="Zone_shared/object/console_fighter" type="sound"/>
+    <precache filename="Zone_shared/shiar/shiar1_ff_down" type="sound"/>
+    <precache filename="Zone_shared/shiar/shiar1_ff_up" type="sound"/>
+    <precache filename="common/game/portal_spawn" type="sound"/>
+    <precache filename="hero_challenges/push_pull/metal" type="sound"/>
+    <precache filename="hero_challenges/shiar1/hover_end" type="sound"/>
+    <precache filename="hero_challenges/shiar1/hover_loop" type="sound"/>
+    <precache filename="hero_challenges/shiar1/hover_start" type="sound"/>
+    <precache filename="hero_challenges/shiar1/jet_take_off" type="sound"/>
+    <precache filename="hero_challenges/shiar1/suck" type="sound"/>
+    <precache filename="zone_shared/object/klaxon" type="sound"/>
+    <precache filename="zone_shared/shiar/wind_loop" type="sound"/>
+    <entity actcountremove="1" character="Corsair" classname="monsterspawnerent" name="sp_corsair" nocollide="true"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_shiargunner_a" nocollide="true"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_shiargunner_a_leader" nocollide="true"/>
+    <entity actcountremove="1" character="ShiarSoldier_a" classname="monsterspawnerent" instantspawn="true" monster_smartent="true" name="ss_shiarsoldier_a" nocollide="true"/>
+    <entity actcountremove="1" character="ShiarSoldier_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_smartent="true" name="ss_shiarsoldier_a_leader" nocollide="true"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed(0.5)\n\rloadSimulatorComicMission('CMICEMAN')" actsound="common/game/dangerdisc_pickup" animstarton="true" classname="rememberent" description="Simulator Disc" fxlevel="7" idnum="12" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/pickup_dangeroom_disk" name="comic_iceman" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_dr_disc"/>
+    <entity actcountremove="1" acteffect="base/item/item_pickup" actmatchteam="true" actonuse="true" actscript="waittimed (0.5)\n\rimageViewer('textures/concept/concept15.png')" actsound="common/game/concept_art_pickup" animstarton="true" classname="rememberent" description="Sketch Book" fxlevel="7" idnum="15" ignoreactorsonmove="true" loopfx="base/item/item_sparkle" loopfxstarton="true" model="pickups/sketchpad" name="concept_art15" nocollide="true" nopickup="true" nopush="true" quickuse="true" spinpossible="false" structure="2" team="hero" variablename="r_c_art"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s"/>
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="loca" material="hollow_wood" model="heli_carrier/push_pull_block_heli_p" name="push_pull_block_heli_p" nopush="true" quickuse="true" structure="2"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="0" classname="cameramagnetent" name="camera_magnet" nocollide="true" team="hero"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="10" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_constant" nocollide="true" radiusdamage="false" smartent="false" smartfire="true"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfxstarton="true" name="loop_effect" nocollide="true" smartent="true"/>
+    <entity classname="ent" name="null" nocollide="true"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all" nocollide="true"/>
+    <entity classname="actionent" name="relay" nocollide="true"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" classname="pushent" name="trigger_push" nocollide="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch" nocollide="true" team="hero"/>
+    <entity classname="waypointent" name="waypoint" nocollide="true"/>
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="wp_cover" nocollide="true" smartent="true"/>
+    <entity actleader="true" actmatchteam="true" actonuse="true" actscript="common/extraction/exp_activate" actsound="common/game/xtraction" acttogglesanim="true" acttogglesloopfx="true" animstarton="false" classname="gameent" description="S.H.I.E.L.D. Access Point" extent="-30 -30 0 30 30 60" fxlevel="1" ignoretelekinesis="true" loopfx="base/misc/extraction_loop" loopfxstarton="false" model="common/extraction_point" name="xtraction_point" nogravity="true" nopickup="true" nopush="true" quickuse="true" resetstate="true" spawnscript="common/extraction/exp_spawn" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Enter next area" name="zone_link" nocollide="false" team="hero"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="shiar/barrel_01_shiar_th" name="barrel_01_shiar_th_sh" randompickups="3" stackphysics="true" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_fighterbay_01_shiar_e" name="catwalk_fighterbay_01_shi_e_sh" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_fighterbay_02_shiar_e" name="catwalk_fighterbay_02_shi_s_sh" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_fighterbay_cap_shiar_e" name="catwalk_fighterbay_cap_shiar_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_tjunction_shiar_e" name="catwalk_tjunction_shiar_e" nogravity="true" nopickup="true" nopush="true" pathignore="true" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/column_01_shiar_e" name="column_01_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="shiar/console_01_shiar_b" name="console_01_shiar_b_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="shiar/console_03_shiar_b" name="console_03_shiar_b_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0"/>
+    <entity actonuse="true" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="shiar/console_fighter_shiar_a" name="console_fighter_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="shiar/crate_01_shiar_th" name="crate_01_shiar_th_sh" randompickups="3" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="shiar/crate_02_shiar_th" name="crate_02_shiar_th_sh" randompickups="3" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="shiar/crate_03_shiar_th" name="crate_03_shiar_th_sh" randompickups="3" stackphysics="true" structure="0"/>
+    <entity classname="moverent" material="biometal" model="shiar/crate_push_shiar_m" move="0 0 0" moveduration="1" name="crate_push_shiar_m_sh" nogravity="true" nopickup="true" nopush="true" nostep="false" pathignore="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_m" fxlevel="2" health="10" heaviness="0" material="hollow_metal" model="shiar/crate_shiar_th" name="crate_shiar_th_sh" randompickups="3" stackphysics="true" structure="0"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" deathspawn="crew_chair_shiar_b_sh_d" fxlevel="2" health="50" material="solid_metal" model="shiar/crew_chair_shiar_b" name="crew_chair_shiar_b_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1"/>
+    <entity actcountdisable="1" actonuse="true" actsound="zone_shared/shiar/door_shiar" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_bio_m" fxlevel="2" material="biometal" model="shiar/door_shiar_a" name="door_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" structure="2" toggleonact="true"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="fighter_bay_force_field_shi_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_bio_l" fxlevel="3" health="150" heaviness="2" material="biometal" model="shiar/fighter_mover_shiar_b" name="fighter_mover_shiar_b_sh" randompickups="0" structure="1"/>
+    <entity animstarton="true" classname="physent" material="biometal" model="shiar/floor_pit_shiar_a" name="floor_pit_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/force_field_10x20_shiar_a" name="force_field_10x20_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/object/forcefield" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/force_field_30x20_shiar_a" name="force_field_30x20_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" spawnsoundloop="zone_shared/object/forcefield" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" deathspawn="glass_partition_shiar_b_sh_d" fxlevel="3" health="100" material="glass" model="shiar/glass_partition_shiar_b" name="glass_partition_shiar_b_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="0"/>
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="shiar/hang_pipe_corner_shiar_e" name="hang_pipe_corner_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="shiar/hang_pipe_straight_shiar_e" name="hang_pipe_straight_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="hollow_metal" model="shiar/hang_pipe_straight_alt_shiar_e" name="hang_pipe_strt_alt_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/hanging_light_shiar_e" name="hanging_light_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity aishootme="true" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" deathspawn=" explosion_lrg" fxlevel="3" health="100" heaviness="2" material="hollow_metal" model="shiar/missile_crate_shiar_th" name="missile_crate_shiar_th_sh" randompickups="0" structure="1" xdeathspawn=" explosion_lrg"/>
+    <entity aishootme="true" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" deathspawn=" explosion_med" fxlevel="3" health="100" heaviness="0" material="hollow_metal" model="shiar/missile_single_shiar_th" name="missile_single_shiar_th_sh" randompickups="0" structure="1" xdeathspawn=" explosion_med"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="shiar/overlight_fx_01_shiar_a" name="overlight_fx_01_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity animstarton="true" classname="physent" material="solid_metal" model="shiar/overlight_fx_02_shiar_a" name="overlight_fx_02_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" deathspawn="pipe_10ft_curved_shiar_b_sh_d" fxlevel="3" health="100" material="hollow_metal" model="shiar/pipe_10ft_curved_shiar_b" name="pipe_10ft_curved_shiar_b_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="1"/>
+    <entity camerafadeout="true" classname="physent" material="solid_metal" model="shiar/pipe_5x30_shiar_e" name="pipe_5x30_shiar_e_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_bio_m" deathspawn="shelf_shiar_b_sh_d" fxlevel="2" health="100" heaviness="2" material="biometal" model="shiar/shelf_shiar_b" name="shelf_shiar_b_sh" randompickups="0" structure="1"/>
+    <entity classname="physent" material="biometal" model="shiar/stealth_fighter_shiar_e" name="stealth_fighter_shiar_e" nogravity="true" nopickup="true" nopush="true" structure="2"/>
+    <entity classname="physent" loopfx="effects/map/common/hazardlight_red" material="Glass" model="shiar/warning_light_shiar_a" name="warninglight_shiar_a_sh" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entinst type="sp_corsair01">
+        <inst extents="-12 -17.9998 0 36 18.0002 84" name="sp_corsair01" orient="0 0 -2.92863" pos="491.841 4414.46 -357.366"/>
+    </entinst>
+    <entinst type="end_gunner2s">
+        <inst extents="-12 -18 0 36 18 84" name="end_gunner2s" orient="0 0 1.5708" pos="191.544 -1778.73 -360"/>
+    </entinst>
+    <entinst type="end_gunner1s">
+        <inst extents="-12 -18 0 36 18 84" name="end_gunner1s" orient="0 0 1.5708" pos="73.3373 -1777.34 -360"/>
+    </entinst>
+    <entinst type="mid_gunner2s">
+        <inst extents="-12 -18 0 36 18 84" name="mid_gunner2s" pos="2347.3 1925.32 2.88616e-005"/>
+    </entinst>
+    <entinst type="mid_gunner1s">
+        <inst extents="-12.0001 -18.0001 0 35.9999 17.9999 84" name="mid_gunner1s" orient="0 0 -0.0872664" pos="2348.07 1745.32 3.58793e-005"/>
+    </entinst>
+    <entinst type="left_gunner2s">
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="left_gunner2s" orient="0 0 2.79253" pos="-2061.9 1971.44 2.88616e-005"/>
+    </entinst>
+    <entinst type="left_gunner3s">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="left_gunner3s" orient="0 0 -3.14159" pos="-2149.74 2037.23 3.58793e-005"/>
+    </entinst>
+    <entinst type="end_gunner4s">
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="end_gunner4s" orient="0 0 -1.39626" pos="-60.4428 -1443.57 -360"/>
+    </entinst>
+    <entinst type="ss_shiargunner_a">
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 1.5708" pos="132.401 2446.29 -360"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shiargunner_a" orient="0 0 -1.74533" pos="191.685 1332.05 -191.883"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" pos="-484.26 511.239 -232.963"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" pos="-476.105 337.169 -232.963"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 1.5708" pos="177.953 228.277 -232.963"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 -1.57083" pos="177.953 604.346 -232.963"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 1.5708" pos="32.2584 -298.392 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 1.5708" pos="100.013 -348.376 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a" orient="0 0 1.5708" pos="32.2584 977.119 -360"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shiargunner_a" orient="0 0 -3.13252" pos="-128.81 1489.21 -360"/>
+    </entinst>
+    <entinst type="ss_shiargunner_a03">
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shiargunner_a03" orient="0 0 -3.05433" pos="670.329 3409.18 -360"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a03" orient="0 0 2.61799" pos="656.103 3180.03 -360"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a03" orient="0 0 1.55869" pos="269.128 3169.15 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a03" orient="0 0 1.55869" pos="240.393 2437.52 -360"/>
+    </entinst>
+    <entinst type="end_gunner3s">
+        <inst extents="-12 -18 0 36 18 84" name="end_gunner3s" orient="0 0 1.5708" pos="308.113 -1778.54 -360"/>
+    </entinst>
+    <entinst type="left_gunner1s">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="left_gunner1s" orient="0 0 0.349066" pos="-2356.07 1981.52 3.58793e-005"/>
+    </entinst>
+    <entinst type="i_bad_guy_sp">
+        <inst extents="-12.0002 -18.0002 0 35.9998 17.9998 84" name="i_bad_guy_sp" orient="0 0 -2.20296" pos="219.075 4332.44 -360"/>
+    </entinst>
+    <entinst type="lead_gunner_rights">
+        <inst extents="-12 -18 0 36 18 84" name="lead_gunner_rights" pos="2344.22 1856.96 0"/>
+    </entinst>
+    <entinst type="ss_shiargunner_a_leader">
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a_leader" orient="0 0 1.53787" pos="177.37 -609.969 -232.963"/>
+        <inst extents="-12.0002 -18 0 35.9998 18 84" name="ss_shiargunner_a_leader" orient="0 0 1.53787" pos="177.37 2346.24 -360"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiargunner_a_leader" pos="-650.798 423.22 -232.963"/>
+    </entinst>
+    <entinst type="lead_gunner_lefts">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="lead_gunner_lefts" orient="0 0 1.5708" pos="-2217.68 1960.93 0"/>
+    </entinst>
+    <entinst type="ss_shiarsoldier_a">
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 1.38931" pos="7.79724 513.83 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 1.71928" pos="397.87 386.996 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 1.71928" pos="397.87 -442.167 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 3.05433" pos="941.162 519.642 -234.428"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_shiarsoldier_a" orient="0 0 -1.65806" pos="464.912 1331.77 -232.549"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 -3.14159" pos="835.081 1449.62 -232.549"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 -2.96706" pos="845.228 332.074 -234.428"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_shiarsoldier_a" orient="0 0 -1.65806" pos="-122.273 1331.77 -232.549"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" orient="0 0 -3.14159" pos="888.631 1562.05 -232.549"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" pos="-541.008 1483.55 -232.549"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shiarsoldier_a" orient="0 0 -3.14159" pos="771.863 2263.73 -112.549"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a" pos="-541.008 2218.84 -112.549"/>
+    </entinst>
+    <entinst type="ss_shiarsoldier_a06">
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a06" orient="0 0 1.27773" pos="86.118 3390.67 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a06" pos="-277.408 3204.73 -360"/>
+        <inst extents="-12.0001 -18 0 35.9999 18 84" name="ss_shiarsoldier_a06" orient="0 0 1.61408" pos="160.895 2727.89 -420"/>
+        <inst extents="-11.9999 -18 0 36.0001 18 84" name="ss_shiarsoldier_a06" orient="0 0 -1.61418" pos="38.0171 2930.82 -420"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a06" pos="-274.353 3138.84 -360"/>
+    </entinst>
+    <entinst type="ss_shiarsoldier_a_leader">
+        <inst extents="-12 -18.0001 0 36 17.9999 84" name="ss_shiarsoldier_a_leader" orient="0 0 0.119223" pos="-669.208 1455.17 -234.428"/>
+        <inst extents="-12 -17.9999 0 36 18.0001 84" name="ss_shiarsoldier_a_leader" orient="0 0 -3.12881" pos="928.933 1482.47 -234.428"/>
+        <inst extents="-12 -18 0 36 18 84" name="ss_shiarsoldier_a_leader" orient="0 0 -3.05433" pos="967.696 413.344 -234.428"/>
+    </entinst>
+    <entinst type="comic_iceman">
+        <inst name="comic_iceman" pos="802.679 1979.37 -120"/>
+    </entinst>
+    <entinst type="concept_art15">
+        <inst name="concept_art15" pos="381.4 2179.73 -360"/>
+    </entinst>
+    <entinst type="upgrade_striking01">
+        <inst name="upgrade_striking01" pos="-2641.06 2278.02 0"/>
+    </entinst>
+    <entinst type="push_pull_block_heli_p05">
+        <inst name="push_pull_block_heli_p05" pos="298.527 2219.92 -360"/>
+        <inst name="push_pull_block_heli_p05" pos="181.336 2219.92 -360"/>
+        <inst name="push_pull_block_heli_p05" pos="63.4352 2341.7 -360"/>
+        <inst name="push_pull_block_heli_p05" pos="61.8043 2220.03 -360"/>
+    </entinst>
+    <entinst type="push_pull_block_heli_p01">
+        <inst name="push_pull_block_heli_p01" pos="300.644 2341.01 -360"/>
+    </entinst>
+    <entinst type="view_fighter">
+        <inst extents="-840 -572 0 840 572 240" name="view_fighter" pos="180 -988.001 -360"/>
+    </entinst>
+    <entinst type="harm_target_pit_10">
+        <inst extents="-475.853 -534.481 0 475.853 534.481 183.265" name="harm_target_pit_10" pos="661.215 -1022.24 -349.114"/>
+        <inst extents="-475.853 -534.481 0 475.853 534.481 183.265" name="harm_target_pit_09" pos="-299.424 -1022.24 -349.114"/>
+    </entinst>
+    <entinst type="space_vacuum10">
+        <inst extents="-6 -6 -6 6 6 6" name="space_vacuum10" pos="840.031 -719.927 -411.058"/>
+        <inst extents="-6 -6 -6 6 6 6" name="space_vacuum09" pos="-479.895 -719.927 -411.058"/>
+    </entinst>
+    <entinst type="space_vacuum01">
+        <inst extents="-6 -6 -6 6 6 6" name="space_vacuum01" pos="-480 3840 -411.058"/>
+    </entinst>
+    <entinst type="10_cam">
+        <inst extents="-6.00001 -6 -6 5.99999 6 6" name="10_cam" orient="0 0 -1.5708" pos="840 -720 -373.243"/>
+        <inst extents="-6 -6 -6 6 6 6" name="east_null" pos="249.31 -1249.06 -137.12"/>
+        <inst extents="-5.99998 -6 -6 6.00002 6 6" name="9_cam" orient="0 0 -1.5708" pos="-480 -720 -380.967"/>
+        <inst extents="-6 -6 -6 6 6 6" name="west_null" pos="113.777 -1243.1 -137.12"/>
+    </entinst>
+    <entinst type="player_start_all">
+        <inst extents="-48.0241 -95.2953 0 71.9759 48.7832 83.9544" name="player_start_all" orient="0 0 1.5708" pos="180 4137.75 -407.013"/>
+    </entinst>
+    <entinst type="player_start_all04">
+        <inst extents="-48.0243 -95.2953 0 71.9757 48.7832 83.9544" name="player_start_all04" orient="0 0 1.5708" pos="180.301 -1810.49 -360"/>
+    </entinst>
+    <entinst type="relay_ffr">
+        <inst extents="-6 -6 0 6 6 12" name="relay_ffr" pos="2906.95 2057.9 3.28343e-005"/>
+    </entinst>
+    <entinst type="relay_ffl">
+        <inst extents="-6 -6 0 6 6 12" name="relay_ffl" pos="-2393.21 2514.25 3.28343e-005"/>
+    </entinst>
+    <entinst type="wind_sound2">
+        <inst extents="-6 -6 0 6 6 12" name="wind_sound2" pos="177.024 -940.438 0"/>
+        <inst extents="-6 -6 0 6 6 12" name="wind_sound" pos="-388.35 3660.1 0"/>
+    </entinst>
+    <entinst type="intro_relay">
+        <inst extents="-6 -6 0 6 6 12" name="intro_relay" pos="63.4197 3691.2 -360"/>
+    </entinst>
+    <entinst type="sucked_into_space01">
+        <inst extents="-235 -225 0 235 225 88" name="sucked_into_space01" pos="-480 3840 -449"/>
+    </entinst>
+    <entinst type="trigger_push09">
+        <inst extents="-475 -544 0 475 544 240" name="trigger_push09" pos="-295 -1024.27 -419"/>
+    </entinst>
+    <entinst type="trigger_push10">
+        <inst extents="-475 -544 0 475 544 240" name="trigger_push10" pos="655 -1024.27 -419"/>
+    </entinst>
+    <entinst type="sucked_into_space10">
+        <inst extents="-235 -225 0 235 225 88" name="sucked_into_space10" pos="840 -720.073 -449"/>
+        <inst extents="-235 -225 0 235 225 88" name="sucked_into_space09" pos="-478.879 -720.073 -449"/>
+    </entinst>
+    <entinst type="trigger_touch09">
+        <inst extents="-25.5601 -167.584 0 25.5603 167.583 150" name="trigger_touch09" orient="0 0 -1.5708" pos="2811.88 2381.19 -6.09484"/>
+    </entinst>
+    <entinst type="farewell_corsair">
+        <inst extents="-180 -30 0 180 30 120" name="farewell_corsair" pos="178.77 -2070 -360"/>
+    </entinst>
+    <entinst type="kill_players09">
+        <inst extents="-235 -225 0 235 225 24" name="kill_players09" pos="-478.879 -720.073 -473"/>
+        <inst extents="-235 -225 0 235 225 24" name="kill_players10" pos="840 -720.073 -473"/>
+    </entinst>
+    <entinst type="trigger_touch10">
+        <inst extents="-141.077 -42.679 0 141.077 42.679 160" name="trigger_touch10" pos="-2461.71 2724.48 0"/>
+    </entinst>
+    <entinst type="trigger_touch01">
+        <inst extents="-26.1364 -60 0 26.1364 60 120" name="trigger_touch01" pos="-926.136 1500 -240"/>
+    </entinst>
+    <entinst type="kill_players01">
+        <inst extents="-235 -225 0 235 225 24" name="kill_players01" pos="-480 3840 -473"/>
+    </entinst>
+    <entinst type="trigger_touch07">
+        <inst extents="-50 -118.534 0 50 118.534 120" name="trigger_touch07" pos="2000.1 1861.47 0"/>
+    </entinst>
+    <entinst type="trigger_touch11">
+        <inst extents="-120 -30 0 120 30 150" name="trigger_touch11" orient="0 0 -1.5708" pos="805.376 -1377.6 -360"/>
+    </entinst>
+    <entinst type="trigger_touch12">
+        <inst extents="-30 -120 0 30 120 160" name="trigger_touch12" pos="-443.7 -1378.16 -360"/>
+    </entinst>
+    <entinst type="trigger_fighter_console">
+        <inst extents="-48 -48 0 48 48 120" name="trigger_fighter_console" pos="-60.2425 -1500.97 -360"/>
+    </entinst>
+    <entinst type="start_boss_fight">
+        <inst extents="-960 -180 0 960 180 360" name="start_boss_fight" pos="180 -1163.85 -360"/>
+    </entinst>
+    <entinst type="trigger_touch06">
+        <inst extents="-180 -69.9995 0 180 69.9995 120" name="trigger_touch06" pos="2816.42 3090.9 0"/>
+    </entinst>
+    <entinst type="trigger_touch05">
+        <inst extents="-25.4146 -75 0 25.4146 75 120" name="trigger_touch05" pos="1306.42 1515 -240"/>
+    </entinst>
+    <entinst type="trigger_touch02">
+        <inst extents="-180 -60 0 180 60 120" name="trigger_touch02" pos="-2426.72 3128.09 0"/>
+    </entinst>
+    <entinst type="trigger_touch04">
+        <inst extents="-40.014 -120 0 40.014 120 120" name="trigger_touch04" pos="-520.994 -1380 -360"/>
+    </entinst>
+    <entinst type="trigger_touch03">
+        <inst extents="-54.0016 -120 0 54.0016 120 120" name="trigger_touch03" pos="-1647.22 2100 0"/>
+    </entinst>
+    <entinst type="trigger_touch08">
+        <inst extents="-25.4146 -120 0 25.4146 120 120" name="trigger_touch08" pos="869.49 -1378.34 -360"/>
+    </entinst>
+    <entinst type="easthall01">
+        <inst extents="-5.99988 -5.99988 -6 6.00012 6.00012 6" name="easthall01" orient="0 0 -1.5708" pos="2800.62 2942.58 0"/>
+        <inst extents="-5.99988 -5.99989 -6 6.00012 6.00011 6" name="corsair_easthall01" orient="0 0 -1.5708" pos="2875.44 2954.13 0"/>
+        <inst extents="-6 -6.00007 -6 6 5.99993 6" name="hero_4_caught" orient="0 0 0.221232" pos="-29.5317 4030.53 -420"/>
+        <inst extents="-5.99997 -6.00001 -6 6.00003 5.99999 6" name="hero_2_caught" orient="0 0 0.371794" pos="53.618 4041.11 -420"/>
+        <inst extents="-6.00006 -5.99991 -6 5.99994 6.00009 6" name="hero_3_caught" orient="0 0 0.50189" pos="29.5075 4109.46 -420"/>
+        <inst extents="-6.00003 -5.99989 -6 5.99997 6.00011 6" name="hero_1_caught" orient="0 0 0.342465" pos="130.784 4068.63 -420"/>
+        <inst extents="-6 -6 -6 6 6 6" name="move_field_end2" pos="179.537 -1996.86 -351.636"/>
+        <inst extents="-6 -6 -6 6 6 6" name="move_field_end1" pos="179.537 -1900.88 -351.636"/>
+        <inst extents="-6 -6 -6 6 6 6" name="move_field3" pos="2820.21 2102.81 8.36443"/>
+        <inst extents="-6.00002 -5.99997 -6 5.99998 6.00003 6" name="hang_on01" orient="0 0 -1.13446" pos="4.10593 -1424.88 -360"/>
+        <inst extents="-5.99996 -5.99997 -6 6.00004 6.00003 6" name="hero_console" orient="0 0 -1.13446" pos="-71.4218 -1448.49 -360"/>
+        <inst extents="-5.99999 -5.99998 -6 6.00001 6.00002 6" name="hang_on02" orient="0 0 -1.0472" pos="-52.1049 -1333.64 -360"/>
+        <inst extents="-6.00005 -6.00002 -6 5.99995 5.99998 6" name="hang_on03" orient="0 0 -0.959931" pos="-163.673 -1379.62 -360"/>
+        <inst extents="-6 -5.99998 -6 6 6.00002 6" name="hang_on04" orient="0 0 -1.0472" pos="-196.509 -1451.81 -360"/>
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="corsair_leaving" orient="0 0 -1.5708" pos="182.243 -1740 -356"/>
+        <inst extents="-6 -6 -6 6 6 6" name="move_field2" pos="-2460.46 2540.56 8.36443"/>
+    </entinst>
+    <entinst type="waypoint">
+        <inst extents="-6.0001 -6 -6 5.9999 6 6" name="corsair_west_hall01" orient="0 0 -1.5708" pos="-2401.44 2977.03 0"/>
+        <inst extents="-5.99998 -5.99997 -6 6.00002 6.00003 6" name="corsair_easthall02" pos="2287.72 1919.25 0"/>
+        <inst extents="-5.99997 -5.99995 -6 6.00003 6.00005 6" name="corsair_enter_hall_east01" orient="0 0 -3.14159" pos="1125.78 1428.46 -234"/>
+        <inst extents="-5.99999 -6.00005 -6 6.00001 5.99995 6" name="corsair_enter_hall_east02" orient="0 0 -3.14159" pos="504.906 -1449.61 -356"/>
+        <inst extents="-6 -6 -6 6 6 6" name="corsair_enter_hall_west02" pos="-148.958 -1448.57 -356"/>
+        <inst extents="-6 -6 -6 6 6 6" name="enter_hall_west01" pos="-692.41 1500 -234"/>
+        <inst extents="-5.99998 -5.99996 -6 6.00002 6.00004 6" name="enter_hall_east01" orient="0 0 -3.14159" pos="1053.77 1500 -234"/>
+        <inst extents="-6 -6 -6 6 6 6" name="enter_hall_west02" pos="-208.244 -1378.56 -356"/>
+        <inst extents="-5.99998 -6.00004 -6 6.00002 5.99996 6" name="enter_hall_east02" orient="0 0 -3.14159" pos="568.705 -1377.37 -356"/>
+        <inst extents="-6.00009 -6 -6 5.99991 6 6" name="west_hall01" orient="0 0 -1.5708" pos="-2467.68 2977.03 0"/>
+        <inst extents="-5.99995 -6.00005 -6 6.00005 5.99995 6" name="west_hall02" orient="0 0 -3.14159" pos="-1951.55 2100 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="corsair_enter_hall_west01" pos="-767.165 1438.59 -234"/>
+        <inst extents="-5.99998 -5.99997 -6 6.00002 6.00003 6" name="easthall02" pos="2301.35 1859.92 0"/>
+        <inst extents="-5.99996 -6.00002 -6 6.00004 5.99998 6" name="corsair_leaving01" orient="0 0 2.18166" pos="308.92 -1882.03 -356"/>
+        <inst extents="-5.99996 -5.99999 -6 6.00004 6.00001 6" name="west_hall_tele" orient="0 0 -0.872665" pos="-2455.9 2398.08 0"/>
+        <inst extents="-5.99995 -5.99998 -6 6.00005 6.00002 6" name="corsair_west_hall02" orient="0 0 3.14159" pos="-1925.78 2037.73 0"/>
+        <inst extents="-5.99998 -6.00003 -6 6.00002 5.99997 6" name="cam_focus_right" pos="2825.13 1912 0"/>
+    </entinst>
+    <entinst type="wp_i_corsair_spot01">
+        <inst extents="-5.99995 -6.00021 -6 6.00005 5.99979 6" name="wp_i_corsair_spot01" orient="0 0 -2.87034" pos="268.038 4377.31 -360"/>
+    </entinst>
+    <entinst type="hero_spot_end_bb">
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="hero_spot_end_bb" orient="0 0 -1.48353" pos="167.917 -1159.19 -360"/>
+        <inst extents="-5.99997 -6.00002 -6 6.00003 5.99998 6" name="wp_leftgun401" orient="0 0 1.74533" pos="-2264.4 2497.21 0"/>
+        <inst extents="-5.99999 -6.00003 -6 6.00001 5.99997 6" name="wp_go401" orient="0 0 3.14159" pos="176.381 -1466.71 -360"/>
+        <inst extents="-5.99989 -5.99992 -6 6.00011 6.00008 6" name="wp_leftgun201" orient="0 0 3.05433" pos="-2261.69 2342.72 0"/>
+        <inst extents="-5.99995 -5.99999 -6 6.00005 6.00001 6" name="wp_gun201" orient="0 0 0.698132" pos="2715.03 1894.57 0"/>
+        <inst extents="-5.99994 -6.00001 -6 6.00006 5.99999 6" name="wp_gun101" orient="0 0 2.44346" pos="2878.81 1761.87 0"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_go101" pos="244.95 -1470.03 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_go01" pos="395.919 -1301.76 -360"/>
+        <inst extents="-6 -6 -6 6 6 6" name="wp_go201" pos="386.561 -1505.54 -360"/>
+    </entinst>
+    <entinst type="wp_gun301">
+        <inst extents="-6 -6 -6.00001 6 6 5.99999" name="wp_gun301" pos="2977.5 1865.41 0"/>
+    </entinst>
+    <entinst type="wp_csummers01">
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="wp_csummers01" orient="0 0 -1.5708" pos="180 4160 -417.018"/>
+    </entinst>
+    <entinst type="wp_csummers_rescue01">
+        <inst extents="-6.00009 -5.99999 -6 5.99991 6.00001 6" name="wp_csummers_rescue01" orient="0 0 -1.88348" pos="362.552 3777.71 -417.018"/>
+    </entinst>
+    <entinst type="space_sucks09">
+        <inst extents="-6 -6 -6 6 6 6" name="space_sucks09" pos="-479.895 -719.927 -655.951"/>
+        <inst extents="-6.00009 -6.00004 -6 5.99991 5.99996 6" name="corsair_spot_run" orient="0 0 -2.19124" pos="450.191 3921.44 -416.086"/>
+        <inst extents="-5.99993 -6.00001 -6 6.00007 5.99999 6" name="i_hero_spot01" orient="0 0 -1.4233" pos="252.708 4143.46 -416.086"/>
+        <inst extents="-5.99992 -6 -6 6.00008 6 6" name="i_hero_spot02" orient="0 0 -1.58254" pos="205.711 4132.33 -416.086"/>
+        <inst extents="-6.00006 -6.00003 -6 5.99994 5.99997 6" name="i_hero_spot04" orient="0 0 -1.9805" pos="127.683 4131.52 -416.086"/>
+        <inst extents="-5.99989 -6.00009 -6 6.00011 5.99991 6" name="i_hero_spot03" orient="0 0 -2.17031" pos="71.3513 4177.71 -416.086"/>
+        <inst extents="-6 -6 -6 6 6 6" name="space_sucks01" pos="-480 3840 -655.951"/>
+        <inst extents="-5.99994 -6.00012 -6 6.00006 5.99988 6" name="hero_spot03" orient="0 0 0.857389" pos="52.524 4160.33 -416.086"/>
+        <inst extents="-6.00003 -6.00001 -6 5.99997 5.99999 6" name="hero_spot04" orient="0 0 1.0472" pos="119.801 4110.46 -416.086"/>
+        <inst extents="-6.00002 -6 -6 5.99998 6 6" name="hero_spot02" orient="0 0 1.44515" pos="205.711 4111.26 -416.086"/>
+        <inst extents="-5.99999 -5.99994 -6 6.00001 6.00006 6" name="hero_spot_caught" orient="0 0 0.172272" pos="218.928 3946.62 -416.086"/>
+        <inst extents="-5.99992 -5.99994 -6 6.00008 6.00006 6" name="hero_spot01" orient="0 0 1.78786" pos="254.796 4118.79 -416.086"/>
+        <inst extents="-6 -6 -6 6 6 6" name="cam_fighter" orient="0 0 -1.5708" pos="180 -486 60"/>
+        <inst extents="-6 -6 -6 6 6 6" name="space_sucks10" pos="840.075 -720.03 -655.951"/>
+    </entinst>
+    <entinst type="wp_cover">
+        <inst extents="-6.00003 -6 -6 5.99997 6 6" name="hero_spots_final" orient="0 0 -1.5708" pos="180 -1124.02 -353.101"/>
+    </entinst>
+    <entinst type="xtraction_point">
+        <inst name="xtraction_point" pos="-59.909 4380.14 -360"/>
+    </entinst>
+    <entinst type="link_shiar2">
+        <inst extents="-180 -12 0 180 12 240" name="link_shiar2" pos="180.393 -2079.81 -360"/>
+    </entinst>
+    <entinst type="barrel_01_shiar_th_sh">
+        <inst name="barrel_01_shiar_th_sh" pos="-2656.35 1940.35 0"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 1.22173" pos="2977.63 1682.8 0"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.61799" pos="2992.79 1733.49 0"/>
+        <inst name="barrel_01_shiar_th_sh" pos="2501.25 2029.36 0"/>
+        <inst name="barrel_01_shiar_th_sh" pos="-2586.35 2267.09 0"/>
+        <inst name="barrel_01_shiar_th_sh" pos="-2596.35 2338.68 0"/>
+        <inst name="barrel_01_shiar_th_sh" pos="-2564.34 2310.35 0"/>
+        <inst name="barrel_01_shiar_th_sh" pos="-2581.79 1907.6 0"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="707.581 2027.34 -120"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="744.361 2058.33 -120"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="1104.27 2280.93 -120"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="469.707 2314.33 -120"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 -2.79253" pos="-499.73 3310.72 -360"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.00713" pos="-544.429 3292.68 -360"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="1074.05 3487.04 -360"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.0944" pos="1002.25 1764.91 -120"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 2.00713" pos="-705.671 3500.16 -360"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 -2.35619" pos="-635.784 3550.99 -360"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 1.5708 -1.22173" pos="666.967 3569.24 -341.034"/>
+        <inst name="barrel_01_shiar_th_sh" pos="719.453 3548.57 -360"/>
+        <inst name="barrel_01_shiar_th_sh" pos="2677.26 1689.44 0"/>
+        <inst name="barrel_01_shiar_th_sh" orient="0 0 -2.79253" pos="966.459 3551.78 -360"/>
+        <inst name="barrel_01_shiar_th_sh" pos="-2586.35 2060.35 0"/>
+    </entinst>
+    <entinst type="catwalk_fighterbay_01_shi_e_sh16">
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="180.002 948.004 -239.893"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="599.999 239.277 -239.618"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="599.998 600 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="359.999 600 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="-0.00149536 600 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="-240.001 600 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.843 -600.723 -240.572"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="-240.001 239.277 -239.618"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="-0.000762939 239.277 -239.618"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="600.159 1307.9 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="360.159 1307.9 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="0.158772 1308.11 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 -3.14158" pos="-239.841 1308.11 -238.94"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="180.002 1068 -239.893"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" pos="359.999 239.277 -239.618"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="180.002 828.004 -239.893"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.842 -0.722557 -240.572"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.843 -480.723 -240.572"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.843 -360.723 -240.572"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.842 -240.723 -240.572"/>
+        <inst name="catwalk_fighterbay_01_shi_e_sh16" orient="0 0 1.5708" pos="179.842 -120.723 -240.572"/>
+    </entinst>
+    <entinst type="catwalk_fighterbay_02_shi_s_sh07">
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" pos="479.999 239.277 -239.618"/>
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" pos="479.999 600 -238.94"/>
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" orient="0 0 -3.14158" pos="-120.001 600 -238.94"/>
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" orient="0 0 -3.14158" pos="-119.841 1308.11 -238.94"/>
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" pos="480.159 1307.9 -238.94"/>
+        <inst name="catwalk_fighterbay_02_shi_s_sh07" orient="0 0 -3.14158" pos="-120.001 239.277 -239.618"/>
+    </entinst>
+    <entinst type="catwalk_fighterbay_cap_shiar_e">
+        <inst name="catwalk_fighterbay_cap_shiar_e" orient="0 0 -1.5708" pos="179.844 -660.722 -240.572"/>
+    </entinst>
+    <entinst type="catwalk_tjunction_shiar_e">
+        <inst name="catwalk_tjunction_shiar_e" orient="0 0 3.14072" pos="180.159 1308 -238.94"/>
+        <inst name="catwalk_tjunction_shiar_e" pos="179.999 600 -238.94"/>
+        <inst name="catwalk_tjunction_shiar_e" orient="0 0 3.14072" pos="179.999 239.277 -239.618"/>
+    </entinst>
+    <entinst type="column_01_shiar_e_sh55">
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="970.561 3300.04 -359.79"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="1085.84 418.235 -242.085"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="223.497 119.802 -419.762"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="-22.0366 3540.01 -416.79"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="381.551 3060.75 -416.79"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="-726.661 418.235 -242.085"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="136.531 119.802 -419.762"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="-612.452 3299.98 -359.79"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="381.551 3540.01 -416.79"/>
+        <inst name="column_01_shiar_e_sh55" pos="-2400.3 1866.59 0.581064"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="136.531 -572.573 -419.762"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="-275.701 4070.19 -360"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="-22.0366 3060.75 -416.79"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 -1.5708" pos="636 4070.19 -360"/>
+        <inst name="column_01_shiar_e_sh55" pos="-2160.02 1866.59 0.581064"/>
+        <inst name="column_01_shiar_e_sh55" orient="0 0 1.5708" pos="223.497 -572.573 -419.762"/>
+    </entinst>
+    <entinst type="console_01_shiar_b_sh">
+        <inst name="console_01_shiar_b_sh" pos="-601.055 1295.7 -239.686"/>
+        <inst name="console_01_shiar_b_sh" pos="-479.876 3089.06 -360"/>
+        <inst name="console_01_shiar_b_sh" orient="0 0 -3.14159" pos="-600.512 626.108 -240.197"/>
+        <inst name="console_01_shiar_b_sh" pos="-601.055 214.941 -239.686"/>
+        <inst name="console_01_shiar_b_sh" orient="0 0 -3.14159" pos="840 3504.98 -360"/>
+        <inst name="console_01_shiar_b_sh" pos="840 3093.81 -360"/>
+        <inst name="console_01_shiar_b_sh" pos="959.692 214.941 -240.115"/>
+        <inst name="console_01_shiar_b_sh" pos="959.692 1295.7 -240.115"/>
+        <inst name="console_01_shiar_b_sh" orient="0 0 -3.14159" pos="960.981 626.108 -240.103"/>
+    </entinst>
+    <entinst type="console_01_shiar_b_sh05">
+        <inst name="console_01_shiar_b_sh05" orient="0 0 -3.14159" pos="-479.621 3515.04 -359.166"/>
+    </entinst>
+    <entinst type="ff_console_1">
+        <inst name="ff_console_1" orient="0 0 -1.5708" pos="-2260.27 2513.35 0"/>
+    </entinst>
+    <entinst type="ff_console_2">
+        <inst name="ff_console_2" orient="0 0 3.14159" pos="2988.16 1865.29 0"/>
+    </entinst>
+    <entinst type="hc_console03">
+        <inst name="hc_console03" pos="56.284 51.8714 -420"/>
+        <inst name="hc_console02" pos="33.0687 2851.26 -420"/>
+        <inst name="hc_console04" orient="0 0 -3.14159" pos="420.583 784.658 -360"/>
+    </entinst>
+    <entinst type="hc_console01">
+        <inst name="hc_console01" orient="0 0 -3.14159" pos="348.252 3722.72 -420"/>
+    </entinst>
+    <entinst type="hc_console">
+        <inst name="hc_console" orient="0 0 -3.14159" pos="-61.244 -1500.96 -360"/>
+    </entinst>
+    <entinst type="crate_01_shiar_th_sh">
+        <inst name="crate_01_shiar_th_sh" pos="874.865 2060.03 -120"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.523599" pos="-2620.5 2105 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.174533" pos="-2550.5 2105 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.261799" pos="1039.53 2031.35 -120"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -1.48353" pos="2429.45 1983.06 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.261799" pos="904.042 2258.65 -120"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.349066" pos="943.09 2176.85 -90.1258"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.349066" pos="802.3 2176.85 -120"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.523599" pos="620.521 3059.2 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.523599" pos="-737.6 3254.21 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.261799" pos="-731.884 3348.3 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.349066" pos="1056.3 3349.56 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.174533" pos="-1920.5 2465 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -2.79253" pos="1162.69 370.937 -240"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -1.65806" pos="1162.69 499.219 -240"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 2.96706" pos="1075.59 602.792 -240"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.261799" pos="-727.984 329.999 -240"/>
+        <inst name="crate_01_shiar_th_sh" pos="2598.29 2020.49 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.174533" pos="972.925 3059.2 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.523599" pos="2670.64 2049.87 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 0.174533" pos="2570.85 1696.18 0"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.523599" pos="-2320.5 2355 0"/>
+        <inst name="crate_01_shiar_th_sh" pos="458.179 -1567.05 -360"/>
+        <inst name="crate_01_shiar_th_sh" orient="0 0 -0.174533" pos="703.543 3059.2 -360"/>
+        <inst name="crate_01_shiar_th_sh" pos="-792.709 352.105 -240"/>
+    </entinst>
+    <entinst type="crate_02_shiar_th_sh">
+        <inst name="crate_02_shiar_th_sh" orient="-1.5708 0 0" pos="2631.15 1690.53 19.5268"/>
+        <inst name="crate_02_shiar_th_sh" pos="1175.99 3254.93 -360"/>
+        <inst name="crate_02_shiar_th_sh" orient="0 0 0.523599" pos="2905.46 1941.21 0"/>
+        <inst name="crate_02_shiar_th_sh" orient="0 0 -0.436332" pos="2961.26 2058.45 0"/>
+    </entinst>
+    <entinst type="crate_03_shiar_th_sh">
+        <inst name="crate_03_shiar_th_sh" orient="0 0 3.05433" pos="1102.66 265.392 -240"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 3.05433" pos="1167.99 442.026 -240"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 1.5708" pos="-698.495 3049.78 -360"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 -0.785398" pos="-612.507 3049.78 -360"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 3.05433" pos="930.822 3299.12 -360"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 -0.785398" pos="518.143 2323.37 -120"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 -0.785398" pos="720.755 1911.89 -120"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 -0.785398" pos="1099.9 1758.44 -120"/>
+        <inst name="crate_03_shiar_th_sh" pos="-734.922 515.906 -240"/>
+        <inst name="crate_03_shiar_th_sh" orient="0 0 -0.872665" pos="-734.922 274.964 -240"/>
+    </entinst>
+    <entinst type="crate_push_shiar_m_sh">
+        <inst name="crate_push_shiar_m_sh" pos="37.3371 -1598.41 -360"/>
+        <inst name="crate_push_shiar_m_sh" pos="360 -840 -360"/>
+        <inst name="crate_push_shiar_m_sh" pos="0.000213623 -840 -360"/>
+        <inst name="crate_push_shiar_m_sh" pos="399.096 -1398.93 -360"/>
+    </entinst>
+    <entinst type="crate_shiar_th_sh">
+        <inst name="crate_shiar_th_sh" orient="0 0 -2.18166" pos="-285.368 3063.66 -360"/>
+        <inst name="crate_shiar_th_sh" orient="0 0 -0.0872664" pos="-350.006 3063.66 -360"/>
+        <inst name="crate_shiar_th_sh" orient="0 0 2.87979" pos="1062.22 224.586 -240"/>
+        <inst name="crate_shiar_th_sh" orient="0 0 -0.174533" pos="-727.138 620.312 -240"/>
+        <inst name="crate_shiar_th_sh" orient="0 0 0.436332" pos="-716.079 3131.17 -360"/>
+        <inst name="crate_shiar_th_sh" pos="393.177 -1218.49 -360"/>
+    </entinst>
+    <entinst type="crew_chair_shiar_b_sh">
+        <inst name="crew_chair_shiar_b_sh" orient="-1.78814e-007 0.0 -2.70526" pos="-479.703 3450.16 -360"/>
+        <inst name="crew_chair_shiar_b_sh" pos="-479.703 3165.18 -360"/>
+        <inst name="crew_chair_shiar_b_sh" orient="0 0 -3.14159" pos="960.808 565.287 -240.103"/>
+        <inst name="crew_chair_shiar_b_sh" orient="0 0 -3.14159" pos="839.826 3442.06 -360"/>
+        <inst name="crew_chair_shiar_b_sh" pos="-600.881 1369.17 -239.686"/>
+        <inst name="crew_chair_shiar_b_sh" pos="959.518 1369.17 -240.115"/>
+        <inst name="crew_chair_shiar_b_sh" pos="-600.881 288.41 -239.686"/>
+        <inst name="crew_chair_shiar_b_sh" pos="959.518 288.41 -240.115"/>
+    </entinst>
+    <entinst type="door_shiar_a_sh">
+        <inst name="door_shiar_a_sh" orient="0 0 1.5708" pos="1497.21 1858.79 -239.837"/>
+        <inst name="door_shiar_a_sh" orient="0 0 1.5708" pos="1978.03 3179.88 -239.837"/>
+        <inst name="door_shiar_a_sh" pos="-540.214 2098.29 -119.967"/>
+        <inst name="door_shiar_a_sh" orient="0 0 1.5708" pos="-1141.96 2099.79 -360"/>
+        <inst name="door_shiar_a_sh" orient="0 0 1.5708" pos="-1621.96 3179.79 -240"/>
+    </entinst>
+    <entinst type="door_shiar_a_sh09">
+        <inst name="door_shiar_a_sh09" pos="899.775 2098.29 -119.967"/>
+    </entinst>
+    <entinst type="05">
+        <inst name="05" orient="0 0 1.5708" pos="-463.615 966.768 -360"/>
+    </entinst>
+    <entinst type="04">
+        <inst name="04" orient="0 0 1.5708" pos="856.385 2766.77 -360"/>
+    </entinst>
+    <entinst type="02">
+        <inst name="02" orient="0 0 1.5708" pos="856.385 3846.77 -360"/>
+    </entinst>
+    <entinst type="ff_pit10">
+        <inst name="ff_pit10" orient="0 0 -1.5708" pos="823.615 -726.768 -360"/>
+    </entinst>
+    <entinst type="06">
+        <inst name="06" orient="0 0 1.5708" pos="856.385 966.768 -360"/>
+    </entinst>
+    <entinst type="07">
+        <inst name="07" orient="0 0 1.5708" pos="-463.615 -113.232 -360"/>
+    </entinst>
+    <entinst type="08">
+        <inst name="08" orient="0 0 -1.5708" pos="823.615 -126.768 -360"/>
+    </entinst>
+    <entinst type="ff_pit01">
+        <inst name="ff_pit01" orient="0 0 -1.5708" pos="-496.385 3833.23 -360"/>
+    </entinst>
+    <entinst type="ff_pit09">
+        <inst name="ff_pit09" orient="0 0 -1.5708" pos="-496.385 -726.767 -360"/>
+    </entinst>
+    <entinst type="03">
+        <inst name="03" orient="0 0 -1.5708" pos="-496.385 2753.23 -360"/>
+    </entinst>
+    <entinst type="fighter_mover_shiar_b_sh">
+        <inst name="fighter_mover_shiar_b_sh" orient="0 0 -0.174533" pos="366.39 2689.08 -420"/>
+    </entinst>
+    <entinst type="floor_pit_shiar_a_sh">
+        <inst name="floor_pit_shiar_a_sh" pos="-1980.0 2100.0 1.57361e-005"/>
+        <inst name="floor_pit_shiar_a_sh" pos="-660 420 -240"/>
+        <inst name="floor_pit_shiar_a_sh" pos="1020 420 -240"/>
+    </entinst>
+    <entinst type="force_field_left2">
+        <inst name="force_field_left2" pos="-2460.46 2540.56 -221.46"/>
+        <inst name="force_field_right" pos="2820.21 2102.81 -221.46"/>
+    </entinst>
+    <entinst type="force_field_end_2">
+        <inst name="force_field_end_2" pos="180.846 -1996.82 -675.096"/>
+        <inst name="force_field_end_1" pos="178.695 -1900.92 -675.096"/>
+    </entinst>
+    <entinst type="glass_partition_shiar_b_sh">
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -1.5708" pos="749.427 3506.01 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="1065.65 1269.31 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-540.003 -420.15 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="851.142 1269.29 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" pos="779.905 -420.15 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="851.142 187.849 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" pos="1065.65 187.869 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="852.674 650.711 -239.351"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-419.95 -420.15 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-491.57 650.607 -239.351"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-492.317 187.869 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="-706.822 187.849 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-660.144 -1015.35 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="1020.44 -1015.19 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="660.44 -1014.99 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="-705.291 650.711 -239.351"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-540.003 -1015.35 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-419.95 -1015.35 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="899.959 -1015.35 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="779.905 -1015.35 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-300.14 -1014.76 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-492.317 1269.31 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="-706.822 1269.29 -239.731"/>
+        <inst name="glass_partition_shiar_b_sh" pos="1066.39 650.607 -239.351"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 1.5708" pos="-391.201 3093.79 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -1.5708" pos="-569.544 3091.79 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 1.5708" pos="-391.201 3508 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -1.5708" pos="-569.544 3506.01 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-300.14 -419.562 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="-660.144 -420.15 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 1.5708" pos="927.77 3093.79 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="1020.44 -419.993 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -1.5708" pos="749.427 3091.79 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 -3.14159" pos="660.44 -419.788 -360"/>
+        <inst name="glass_partition_shiar_b_sh" orient="0 0 1.5708" pos="927.77 3508 -360"/>
+        <inst name="glass_partition_shiar_b_sh" pos="899.959 -420.15 -360"/>
+    </entinst>
+    <entinst type="hang_pipe_corner_shiar_e_sh">
+        <inst name="hang_pipe_corner_shiar_e_sh" orient="0 0 -1.5708" pos="2460.41 1999.49 161.117"/>
+        <inst name="hang_pipe_corner_shiar_e_sh" orient="0 0 1.5708" pos="2820.11 1716.4 161.117"/>
+        <inst name="hang_pipe_corner_shiar_e_sh" orient="0 0 -3.14159" pos="2460.18 1716.17 161.117"/>
+        <inst name="hang_pipe_corner_shiar_e_sh" pos="2820.34 1999.72 161.117"/>
+    </entinst>
+    <entinst type="hang_pipe_straight_shiar_e_sh">
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2239.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2460.06 2239.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 1.5708" pos="2460.46 1476.31 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2460.06 2119.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 1.5708" pos="2820.46 1596.31 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 1.5708" pos="2460.46 1596.31 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -3.14159" pos="2580.27 1716.53 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2119.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2479.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 1.5708" pos="2820.46 1476.31 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2719.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 3079.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 3199.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 3319.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 3439.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2959.58 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" pos="2700.25 1999.37 161.098"/>
+        <inst name="hang_pipe_straight_shiar_e_sh" orient="0 0 -1.5708" pos="2820.06 2599.58 161.098"/>
+    </entinst>
+    <entinst type="hang_pipe_strt_alt_shiar_e_sh">
+        <inst name="hang_pipe_strt_alt_shiar_e_sh" pos="2580.2 1999.61 160.844"/>
+        <inst name="hang_pipe_strt_alt_shiar_e_sh" orient="0 0 -1.5708" pos="2820.3 2359.63 160.844"/>
+        <inst name="hang_pipe_strt_alt_shiar_e_sh" orient="0 0 -1.5708" pos="2820.3 2839.63 160.844"/>
+        <inst name="hang_pipe_strt_alt_shiar_e_sh" orient="0 0 -3.14159" pos="2700.32 1716.28 160.844"/>
+    </entinst>
+    <entinst type="hanging_light_shiar_e_sh">
+        <inst name="hanging_light_shiar_e_sh" pos="178.67 2043.81 -98.5628"/>
+        <inst name="hanging_light_shiar_e_sh" pos="179.81 1308.17 -97.6947"/>
+        <inst name="hanging_light_shiar_e_sh" pos="180.009 149.526 -132.708"/>
+        <inst name="hanging_light_shiar_e_sh" pos="-2219.59 2398.99 107.292"/>
+        <inst name="hanging_light_shiar_e_sh" pos="178.67 -1735.6 -132.708"/>
+        <inst name="hanging_light_shiar_e_sh" pos="178.67 -1135.66 -132.708"/>
+    </entinst>
+    <entinst type="missile_crate_shiar_th_sh">
+        <inst name="missile_crate_shiar_th_sh" orient="0 0 -1.39626" pos="-326.946 3516.59 -360"/>
+        <inst name="missile_crate_shiar_th_sh" orient="0 0 -0.0872665" pos="341.333 3199.58 -391.497"/>
+        <inst name="missile_crate_shiar_th_sh" orient="0 0 -0.959931" pos="400.511 4006.8 -391.497"/>
+        <inst name="missile_crate_shiar_th_sh" orient="0 0 1.5708" pos="243.55 -232.401 -420"/>
+        <inst name="missile_crate_shiar_th_sh" orient="0 0 2.00713" pos="307.047 -232.401 -420"/>
+    </entinst>
+    <entinst type="missile_single_shiar_th_sh">
+        <inst name="missile_single_shiar_th_sh" orient="-1.5708 0.436332 -1.91986" pos="-342.353 3472.19 -355.043"/>
+    </entinst>
+    <entinst type="overlight_fx_01_shiar_a_sh">
+        <inst name="overlight_fx_01_shiar_a_sh" orient="-0.174533 -0.174533 1.5708" pos="-677.038 1919.13 -117.307"/>
+        <inst name="overlight_fx_01_shiar_a_sh" orient="-0.174533 0 -0.785398" pos="1007.63 1919.59 -117.307"/>
+    </entinst>
+    <entinst type="overlight_fx_02_shiar_a_sh">
+        <inst name="overlight_fx_02_shiar_a_sh" pos="1140 420 -239.347"/>
+        <inst name="overlight_fx_02_shiar_a_sh" pos="-780 3300.39 -360"/>
+        <inst name="overlight_fx_02_shiar_a_sh" pos="180.945 4380 -360"/>
+        <inst name="overlight_fx_02_shiar_a_sh" pos="1140 3300.39 -360"/>
+        <inst name="overlight_fx_02_shiar_a_sh" pos="-779.523 420 -239.347"/>
+    </entinst>
+    <entinst type="pipe_10ft_curved_shiar_b_sh">
+        <inst name="pipe_10ft_curved_shiar_b_sh" orient="0 0 -1.5708" pos="2742.71 2699.53 0"/>
+        <inst name="pipe_10ft_curved_shiar_b_sh" orient="0 0 1.5708" pos="2899.31 2460.13 0"/>
+        <inst name="pipe_10ft_curved_shiar_b_sh" orient="0 0 -1.5708" pos="2740.05 2460.13 0"/>
+        <inst name="pipe_10ft_curved_shiar_b_sh" orient="0 0 1.5708" pos="2900.63 2699.53 0"/>
+    </entinst>
+    <entinst type="pipe_5x30_shiar_e_sh">
+        <inst name="pipe_5x30_shiar_e_sh" pos="-60.0889 1500.19 -359.962"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="180.798 1500.19 -359.962"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="419.898 1500.19 -359.962"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="180.246 -1380.23 -360"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="300.1 420.481 -420"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="59.5745 420.481 -420"/>
+        <inst name="pipe_5x30_shiar_e_sh" pos="180.246 -1020.66 -360"/>
+    </entinst>
+    <entinst type="shelf_shiar_b_sh">
+        <inst name="shelf_shiar_b_sh" pos="-1979.84 2527.46 0"/>
+        <inst name="shelf_shiar_b_sh" pos="-2101.18 2527.46 0"/>
+        <inst name="shelf_shiar_b_sh" orient="0 0 1.5708" pos="-2645.8 2377.15 0"/>
+        <inst name="shelf_shiar_b_sh" pos="-2339.84 2167.46 0"/>
+        <inst name="shelf_shiar_b_sh" orient="0 0 -3.14159" pos="-2100.41 2283.15 0"/>
+        <inst name="shelf_shiar_b_sh" orient="0 0 -3.14159" pos="-2338.65 2283.15 0"/>
+        <inst name="shelf_shiar_b_sh" pos="-2581.18 2167.46 0"/>
+        <inst name="shelf_shiar_b_sh" pos="-2459.84 2167.46 0"/>
+        <inst name="shelf_shiar_b_sh" orient="0 0 -3.14159" pos="-1979.07 2283.15 0"/>
+    </entinst>
+    <entinst type="fighter_shiar_e_sh01">
+        <inst name="fighter_shiar_e_sh01" orient="0 0 -1.5708" pos="-496.088 3840 -360"/>
+    </entinst>
+    <entinst type="warninglight_shiar_a_sh02">
+        <inst name="warninglight_shiar_a_sh02" pos="-253.013 3983.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh01" pos="-253.013 3697.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh03" pos="612.935 3983.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh04" pos="-253.013 2903.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh05" pos="612.935 2903.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh06" pos="-253.013 1103.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh07" pos="612.935 1103.44 -351.901"/>
+        <inst name="warninglight_shiar_a_sh08" pos="-253.013 23.4385 -351.901"/>
+        <inst name="warninglight_shiar_a_sh09" pos="612.935 23.4385 -351.901"/>
+        <inst name="warninglight_shiar_a_sh10" pos="612.935 3697.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh11" pos="-253.013 2617.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh12" pos="612.935 2617.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh13" pos="-253.013 817.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh14" pos="612.935 817.14 -351.901"/>
+        <inst name="warninglight_shiar_a_sh15" pos="-253.013 -262.86 -351.901"/>
+        <inst name="warninglight_shiar_a_sh16" pos="612.935 -262.86 -351.901"/>
+    </entinst>
+    <entity actcountremove="1" character="Corsair" classname="monsterspawnerent" instantspawn="true" monster_name="corsair" monster_team="hero" name="sp_corsair01" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="left_gunner1" monster_smartent="false" name="left_gunner1s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="end_gunner3" monster_smartent="false" monster_spawnscript="common/set_visible" name="end_gunner3s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="true" monster_guarddistance="1200" monster_smartent="true" name="ss_shiargunner_a03" nocollide="true"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="end_gunner4" monster_smartent="false" monster_spawnexactlocation="true" monster_spawnscript="common/set_visible" name="end_gunner4s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="left_gunner3" monster_smartent="false" name="left_gunner3s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="left_gunner2" monster_smartent="false" name="left_gunner2s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="mid_gunner1" monster_smartent="false" name="mid_gunner1s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_guarddistance="500" monster_name="mid_gunner2" monster_smartent="false" name="mid_gunner2s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="end_gunner1" monster_smartent="false" monster_spawnscript="common/set_visible" name="end_gunner1s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_name="end_gunner2" monster_smartent="false" monster_spawnscript="common/set_visible" name="end_gunner2s" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="lead_gunner_left" monster_smartent="false" name="lead_gunner_lefts" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="false" monster_guarddistance="500" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="lead_gunner_right" monster_smartent="false" name="lead_gunner_rights" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarGunner_a" classname="monsterspawnerent" instantspawn="true" monster_leader="true" monster_leaderpowerup="random_no_invuln" monster_name="i_bad_guy" monster_smartent="false" name="i_bad_guy_sp" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" character="ShiarSoldier_a" classname="monsterspawnerent" instantspawn="true" monster_guarddistance="1200" monster_smartent="true" name="ss_shiarsoldier_a06" nocollide="true"/>
+    <entity actcountremove="1" actdistance="60" acteffect="base/misc/techstation_focus" actleader="true" actmatchteam="true" actonuse="true" actscript="permanentStatBoost('_ACTIVATOR_','striking')" actsound="zone_shared/object/techstation" animstarton="true" classname="rememberent" description="Pick up striking upgrade" idnum="20" material="solid_metal" model="pickups/striking_pickup" name="upgrade_striking01" nocollide="true" nopickup="true" nopush="true" quickuse="true" randompickups="0" structure="2" team="hero" variablename="r_upgrade_s"/>
+    <entity classname="interactent" description="Push/Pull" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="loca" interactsoundloop="hero_challenges/push_pull/metal" material="hollow_wood" model="heli_carrier/push_pull_block_heli_p" name="push_pull_block_heli_p01" nopush="true" quickuse="true" structure="2"/>
+    <entity classname="interactent" description="Push/Pull" hinttype="usetoggle" interaction="data/fightstyles/interact_pushpull" interaction_node="pushpull_grab" interaction_offset_type="loca" interactsoundloop="hero_challenges/push_pull/metal" material="hollow_wood" model="heli_carrier/push_pull_block_heli_p" name="push_pull_block_heli_p05" nopush="true" quickuse="true" structure="2"/>
+    <entity actleader="true" actmatchteam="true" boxcollision="true" cameramagtype="2" cameratarget="cam_fighter" classname="cameramagnetent" name="view_fighter" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity boxcollision="false" boxdamage="true" classname="affectableharment" conversationoff="true" damage="0" damagemods="dmgmod_unblockable dmgmod_ignore_def dmgmod_forcepain" damagetype="dmg_physical" name="harm_target_pit_10" nocollide="true" radiusdamage="false" smartent="false" smartfire="true" startenabled="false" togglestarton="true"/>
+    <entity actsoundloop="zone_shared/shiar/wind_loop" acttogglesloopfx="true" classname="actionent" loopfx="map/shiar/forcefield_vacuum" loopfxstarton="false" name="space_vacuum01" nocollide="true" smartent="false"/>
+    <entity acttogglesloopfx="true" classname="actionent" loopfx="map/shiar/forcefield_vacuum" loopfxstarton="false" name="space_vacuum10" nocollide="true" resetstate="true" smartent="false"/>
+    <entity classname="ent" name="10_cam" nocollide="true" smartent="false"/>
+    <entity allinone="true" classname="playerstartent" name="player_start_all04" nocollide="true" prevlink="link_shiar1" prevzone="shiar2"/>
+    <entity actcountremove="1" acttargets="warninglight_shiar_a_sh01 warninglight_shiar_a_sh02 stealth_fighter_shiar_e01 ff_pit01" classname="actionent" name="intro_relay" nocollide="true" smartent="false"/>
+    <entity actrescheduledelay="1" actsound="zone_shared/shiar/wind_loop" classname="actionent" name="wind_sound2" nocollide="true" smartent="false" startenabled="false" toggleonact="false"/>
+    <entity actcountdisable="1" actscript="act4/shiar/shiar1/force_field_left_down" classname="actionent" name="relay_ffl" nocollide="true" smartent="false"/>
+    <entity actcountdisable="1" actscript="act4/shiar/shiar1/force_field_right_down" classname="actionent" name="relay_ffr" nocollide="true" smartent="false"/>
+    <entity actleader="true" actmatchteam="true" blackhole="true" boxcollision="true" classname="pushent" informai="false" name="sucked_into_space10" nocollide="true" pushreapply="true" pushspeed="60" smartent="false" startenabled="false" targetent="space_sucks08" team="hero"/>
+    <entity actleader="true" actmatchteam="true" blackhole="true" boxcollision="true" classname="pushent" informai="false" name="trigger_push10" nocollide="true" pushreapply="true" pushspeed="45" smartent="false" startenabled="false" targetent="space_vacuum10" team="hero"/>
+    <entity actleader="true" actmatchteam="true" blackhole="true" boxcollision="true" classname="pushent" informai="false" name="trigger_push09" nocollide="true" pushreapply="true" pushspeed="45" smartent="false" startenabled="false" targetent="space_vacuum09" team="hero"/>
+    <entity actleader="true" actmatchteam="true" blackhole="true" boxcollision="true" classname="pushent" informai="false" name="sucked_into_space01" nocollide="true" pushreapply="true" pushspeed="60" startenabled="false" targetent="space_sucks01" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/easthall02" actteamplayer="true" boxcollision="true" classname="gameent" description="Port Crew Quarters" name="trigger_touch08" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/enter_hall_west02" actteamplayer="true" boxcollision="true" classname="gameent" description="Main Bay" name="trigger_touch03" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/to_westhall02" actteamplayer="true" boxcollision="true" classname="gameent" description="Starboard Crew Quarters" name="trigger_touch04" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/enter_hall_west01" actteamplayer="true" boxcollision="true" classname="gameent" description="Main Bay" name="trigger_touch02" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/easthall01" actteamplayer="true" boxcollision="true" classname="gameent" description="Port Crew Quarters" name="trigger_touch05" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/enter_hall_east01" actteamplayer="true" boxcollision="true" classname="gameent" description="Main Bay" name="trigger_touch06" nocollide="false" quickuse="true" team="hero"/>
+    <entity actcountremove="1" actleader="true" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/end_shields_up" acttargets="end_gunner1s end_gunner2s end_gunner3s end_gunner4s" actteamplayer="true" boxcollision="true" classname="gameent" name="start_boss_fight" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/move_ff_fighter" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_fighter_console" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity actcountdisable="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/westhall_remove_trigger" acttargets="left_gunner1s left_gunner2s left_gunner3s lead_gunner_lefts" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch12" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/easthall_remove_trigger" acttargets="mid_gunner1s lead_gunner_rights mid_gunner2s" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch11" nocollide="true" smartent="false" team="hero"/>
+    <entity actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/enter_hall_east02" actteamplayer="true" boxcollision="true" classname="gameent" description="Main Bay" name="trigger_touch07" nocollide="false" quickuse="true" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/sucked_into_space" actteamplayer="true" boxcollision="true" classname="gameent" name="kill_players01" nocollide="true" startenabled="false" team="hero"/>
+    <entity actleader="true" actmatchteam="true" actontouch="false" actonuse="true" actscript="act4/shiar/shiar1/to_westhall01" actteamplayer="true" boxcollision="true" classname="gameent" description="Starboard Crew Quarters" name="trigger_touch01" nocollide="false" quickuse="true" team="hero"/>
+    <entity actcountdisable="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/new_encounter_left_room" acttargets="left_gunner1s left_gunner2s left_gunner3s lead_gunner_lefts" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch10" nocollide="true" smartent="false" team="hero"/>
+    <entity actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/sucked_into_space" actteamplayer="true" boxcollision="true" classname="gameent" name="kill_players09" nocollide="true" smartent="false" startenabled="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/corsair_leaves" actteamplayer="true" boxcollision="true" classname="gameent" name="farewell_corsair" nocollide="true" smartent="false" team="hero"/>
+    <entity actcountremove="1" actmatchteam="true" actontouch="true" actscript="act4/shiar/shiar1/new_encounter_right_room" acttargets="mid_gunner1s lead_gunner_rights mid_gunner2s" actteamplayer="true" boxcollision="true" classname="gameent" name="trigger_touch09" nocollide="true" smartent="false" team="hero"/>
+    <entity beeline="true" classname="waypointent" name="wp_csummers_rescue01" nocollide="true" speed="1"/>
+    <entity beeline="true" classname="waypointent" name="wp_csummers01" nocollide="true"/>
+    <entity beeline="true" classname="waypointent" name="wp_gun301" nocollide="true" smartent="false" speed="1"/>
+    <entity classname="waypointent" name="hero_spot_end_bb" nocollide="true" smartent="false" speed="1"/>
+    <entity actscript="act4/shiar/shiar1/killdude" beeline="true" classname="waypointent" name="wp_i_corsair_spot01" nocollide="true" speed="1"/>
+    <entity classname="waypointent" name="easthall01" nocollide="true" smartent="false"/>
+    <entity changedistance="120" classname="waypointent" covercrouch="true" fieldofview="360" name="space_sucks09" nocollide="true" smartent="false"/>
+    <entity actcountremove="1" acteffect="base/misc/extraction_burst" actleader="true" actmatchteam="true" actontouch="true" actscript="common/extraction/exp_trig" actsound="common/game/extraction" actteamplayer="true" acttogglesloopfx="true" boxcollision="true" classname="gameent" extent="-120 -120 0 120 120 72" fxlevel="2" loopfx="base/misc/extraction_loop" loopfxstarton="true" name="expt_trig" nocollide="true" nogravity="true" nopickup="true" nopush="true" persistent="false" resetstate="true" team="hero"/>
+    <entity actinactivedelay="2" actleader="true" actmatchteam="true" actonuse="true" boxcollision="true" classname="zonelinkent" description="Hyperdrive" name="link_shiar2" nextzone="act4/shiar/shiar2" nocollide="false" smartent="false" team="hero"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_fighterbay_01_shiar_e" name="catwalk_fighterbay_01_shi_e_sh16" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/catwalk_fighterbay_02_shiar_e" name="catwalk_fighterbay_02_shi_s_sh07" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity camerafadeout="true" classname="physent" material="biometal" model="shiar/column_01_shiar_e" name="column_01_shiar_e_sh55" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="shiar/console_01_shiar_b" name="console_01_shiar_b_sh05" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="0"/>
+    <entity actcountdisable="1" actonuse="true" actscript="act4/shiar/shiar1/end_shield_down" actsound="Zone_shared/object/console_fighter" acttargets="relay_ffr" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" description="Fighter Pit Controls" fxlevel="2" health="100" hinttype="objective" material="electronics" model="shiar/console_03_shiar_b" name="ff_console_2" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actcountdisable="1" actonuse="true" actscript="act4/shiar/shiar1/end_shield_down" actsound="Zone_shared/object/console_fighter" acttargets="relay_ffl" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" description="Fighter Pit Controls" fxlevel="2" health="100" hinttype="objective" material="electronics" model="shiar/console_03_shiar_b" name="ff_console_1" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actcountdisable="1" actonuse="false" actscript="act4/shiar/shiar1/hc_console_act" actsound="zone_shared/object/console_fighter" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" description="Fighter Pit Controls" fxlevel="2" health="100" material="electronics" model="shiar/console_fighter_shiar_a" name="hc_console" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actonuse="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" hinttype="use" material="electronics" model="shiar/console_fighter_shiar_a" name="hc_console01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2" togglestarton="true"/>
+    <entity actonuse="false" classname="physent" deatheffect="base/material/break/brk_electric" deathsound="death_style/ds_electrical_m" fxlevel="2" health="100" material="electronics" model="shiar/console_fighter_shiar_a" name="hc_console03" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_m" fxlevel="2" health="50" mass="0" material="solid_metal" model="shiar/crew_chair_stump_shiar_b" name="crew_chair_shiar_b_sh_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity actonuse="false" actsound="zone_shared/shiar/door_shiar" autoclosedelay="0" classname="doorent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_bio_m" fxlevel="2" material="biometal" model="shiar/door_shiar_a" name="door_shiar_a_sh09" nogravity="true" nopickup="true" nopush="true" openposition="0.9" openupdown="true" randompickups="0" startenabled="false" structure="2" toggleonact="false" togglestarton="false"/>
+    <entity actdelay="4.03" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="03" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="1" actscript="act4/shiar/shiar1/move_ff9" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="ff_pit09" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="ff_pit01" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.08" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="08" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.07" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="07" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.06" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="06" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="1" actscript="act4/shiar/shiar1/move_ff10" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="ff_pit10" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.02" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="02" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.04" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="04" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity actdelay="4.05" actscript="act4/shiar/shiar1/move_all_ff" animstarton="true" classname="physent" material="energy" model="shiar/fighter_bay_force_field_shiar_a" name="05" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/force_field_10x20_shiar_a" name="force_field_left2" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2"/>
+    <entity animstarton="true" classname="physent" material="energy" model="shiar/force_field_30x20_shiar_a" name="force_field_end_2" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" spawnsoundloop="zone_shared/object/forcefield" structure="2"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_glass" deathsound="death_style/ds_glass_l" fxlevel="3" health="100" mass="0" material="glass" model="shiar/glass_partition_stump_shiar_b" name="glass_partition_shiar_b_sh_d" nogravity="true" nopickup="true" nopush="true" pathignore="true" randompickups="0" structure="2"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_hollow_l" fxlevel="3" health="100" mass="0" material="hollow_metal" model="shiar/pipe_10ft_curved_stump_shiar_b" name="pipe_10ft_curved_shiar_b_sh_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity animstarton="false" classname="physent" deatheffect="base/material/break/brk_metal" deathsound="death_style/ds_metal_bio_m" fxlevel="2" health="100" heaviness="2" mass="0" material="biometal" model="shiar/shelf_stump_shiar_b" name="shelf_shiar_b_sh_d" nogravity="true" nopickup="true" nopush="true" randompickups="0" structure="2"/>
+    <entity actscript="act4/shiar/shiar1/launch_fighter" classname="physent" material="biometal" model="shiar/stealth_fighter_shiar_e" name="fighter_shiar_e_sh01" nogravity="true" nopickup="true" nopush="true" smartent="false" structure="2"/>
+    <entity classname="physent" loopfx="effects/map/common/hazardlight_red" material="Glass" model="shiar/warning_light_shiar_a" name="warninglight_shiar_a_sh02" nogravity="true" nopickup="true" nopush="true" randompickups="0" smartent="false" structure="2"/>
+</world>
