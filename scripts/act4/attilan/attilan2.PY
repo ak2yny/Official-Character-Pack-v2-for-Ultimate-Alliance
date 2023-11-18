@@ -8,8 +8,8 @@ waittimed ( 0.500 )
 attilan1 = getGameFlag("attilan1", 5 )
 shiar_done = getObjective("shiar_obj10", "COMPLETE" )
 cameraSetClipPlane(10000.000 )
+cameraFade(0.000, 0.250 )
 if shiar_done == 1
-     cameraFade(0.000, 0.250 )
      # ( "This spawns Medusa and her guards" )
      act("sp_meduagaurd01", "" )
      act("sp_meduagaurd02", "" )
@@ -23,11 +23,8 @@ if shiar_done == 1
           startConversation("act4/attilan/4_attilan2_310" )
      endif
 elif attilan1 == 0
-     cameraFade(0.000, 0.250 )
      setGameFlag("attilan1", 5, 1 )
      # ( "This setsup the intro camera" )
      act("intro_setup2", "" )
      startConversation("act4/attilan/4_attilan2_010" )
-else
-     cameraFade(0.000, 0.250 )
 endif

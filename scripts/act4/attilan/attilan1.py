@@ -2,8 +2,6 @@
 # ( "Attilan1 load script" )
 
 setSegmentVisible("Magneto", "helmet_segment", "0")
-# ( "This is to initialize the effect variable for Uatu" )
-setZoneVar("effect", 0 )
 
 waittimed ( 0.500 )
 setCurrentAct(4 )
@@ -23,7 +21,7 @@ if skrull_done == 1
      actend_revealed = getGameFlag("attilan1", 3 )
      if actend_revealed == 0
           setGameFlag("attilan1", 3, 1 )
-          # ( "This setsup the intro camera" )
+          # ( "This sets up the intro camera" )
           act("intro_setup1", "" )
           waittimed ( 0.250 )
           cameraFade(0.000, 0.000 )
@@ -37,7 +35,7 @@ elif shiar_done == 1
      skrull_revealed = getGameFlag("attilan1", 2 )
      if skrull_revealed == 0
           setGameFlag("attilan1", 2, 1 )
-          # ( "This setsup the intro camera" )
+          # ( "This sets up the intro camera" )
           act("intro_setup1", "" )
           waittimed ( 0.250 )
           cameraFade(0.000, 0.000 )
@@ -51,7 +49,7 @@ elif attilan1 == 0
      setGameFlag("attilan", 1, 1 )
      lockControls(3.500 )
      playanim (  "EA_ZONE9", "watcher", "LOOP", "" )
-     # ( "This setsup the intro camera" )
+     # ( "This sets up the intro camera" )
      act("intro_setup1", "" )
      waittimed ( 0.250 )
      cameraFade(0.000, 0.000 )
