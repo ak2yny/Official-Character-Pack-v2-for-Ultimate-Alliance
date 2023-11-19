@@ -16,16 +16,23 @@ if ironman == 1
      remove ( "ironman_suit_floats", "" )
      remove ( "sound_tonystark", "" )
 endif
-atlantis_done = getObjective("atlantis_obj60", "COMPLETE" )
-if atlantis_done == 1
-     # ( "****************This is for a weasel special conversation****************" )
-     right_psd = getGameFlag("conv_vars", 25 )
-     if right_psd == 1
-          once_only = getGameFlag("run_once", 17 )
-     else
-          once_only = getGameFlag("run_once", 16 )
+# ( "****************This is for a weasel special conversation****************" )
+intro = getObjective("atlantis_obj60", "COMPLETE" )
+if intro == 0
+     # ( "Intro 1 should only be played once, before Atlantis." )
+     intro = getGameFlag("stark", 4 )
+else
+     # ( "Intro 2 should only be played once, after Atlantis, but only if an answer was given." )
+     run_once = getGameFlag("run_once", 17 )
+     if run_once == 0
+          setGameFlag("run_once", 17, 1 )
+          pwd_correct = getGameFlag("conv_vars", 25 )
+          pwd_wrong = getGameFlag("opt_obj", 1 )
+          answer = iadd(pwd_correct, pwd_wrong)
      endif
-     if once_only == 0
+endif
+if intro == 1
+     if answer > 0
           cameraFocusToEntity("weasel", 180.000, 15.000, 315.000, 0.000 )
           waittimed ( 0.500 )
           cameraFade(0.000, 0.000 )
@@ -48,62 +55,49 @@ if atlantis_done == 1
           setWaypointPath("weasel", "weaselpath", 1 )
           cameraResetOldSchool( )
      endif
-     # ( "****************END This is for a weasel special conversation****************" )
 else
-     intro = getGameFlag("stark", 4 )
-     if intro == 0
-          setGameFlag("stark", 4, 1 )
-          startCutScene("FALSE", "FALSE" )
-          lockControls(0.000 )
-          setInvisible("_ALL_HEROES_", "TRUE" )
-          copyOriginAndAngles("_HERO1_", "hero_spot01" )
-          copyOriginAndAngles("_HERO2_", "hero_spot02" )
-          copyOriginAndAngles("_HERO3_", "hero_spot03" )
-          copyOriginAndAngles("_HERO4_", "hero_spot04" )
-          cameraMove(" 58.500 601.000 88.000 ", 0.000 )
-          cameraPan(" 0.000 12.000 90.000 ", 0.000, "FALSE" )
-          waittimed ( 0.200 )
-          setEnable("jarvis", "FALSE" )
-          setEnable("trigger_zonelink01", "FALSE" )
-          # ( "This needs to be rescripted" )
-          cameraMove(" 55.000 643.000 71.000 ", 2.000 )
-          # ( "Camera focus 55 738 41" )
-          cameraPan(" 0.000 16.000 90.000 ", 3.000, "FALSE" )
-          waittimed ( 0.200 )
-          cameraFade(0.000, 0.500 )
-          waittimed ( 2.250 )
-          playanim (  "EA_ZONE3", "jarvis", "", "greeting_done" )
-          waitsignal ( "greeting_done" )
-          cameraPan(" 0.000 18.000 90.000 ", 0.500, "FALSE" )
-          hero1 = alive("_HERO1_" )
-          hero2 = alive("_HERO2_" )
-          hero3 = alive("_HERO3_" )
-          hero4 = alive("_HERO4_" )
-          if hero1 == 1
-               setInvisible("_HERO1_", "FALSE" )
-          endif
-          if hero2 == 1
-               setInvisible("_HERO2_", "FALSE" )
-          endif
-          if hero3 == 1
-               setInvisible("_HERO3_", "FALSE" )
-          endif
-          if hero4 == 1
-               setInvisible("_HERO4_", "FALSE" )
-          endif
-          startConversation("act1/stark/1_stark2_300" )
-     else
-          cameraFade(0.000, 0.000 )
-          cameraMove(" 56.000 970.000 120.000 ", 0.000 )
-          cameraPan(" 0.000 18.000 270.000 ", 0.000, "FALSE" )
-          waittimed ( 0.500 )
-          # ( "Get Weasel to right spot" )
-          copyOriginAndAngles("weasel", "wp_weaselpath01" )
-          waittimed ( 0.100 )
-          setWaypointPath("weasel", "weaselpath", 1 )
-          cameraResetOldSchool( )
+     setGameFlag("stark", 4, 1 )
+     startCutScene("FALSE", "FALSE" )
+     lockControls(0.000 )
+     setInvisible("_ALL_HEROES_", "TRUE" )
+     copyOriginAndAngles("_HERO1_", "hero_spot01" )
+     copyOriginAndAngles("_HERO2_", "hero_spot02" )
+     copyOriginAndAngles("_HERO3_", "hero_spot03" )
+     copyOriginAndAngles("_HERO4_", "hero_spot04" )
+     cameraMove(" 58.500 601.000 88.000 ", 0.000 )
+     cameraPan(" 0.000 12.000 90.000 ", 0.000, "FALSE" )
+     waittimed ( 0.200 )
+     setEnable("jarvis", "FALSE" )
+     setEnable("trigger_zonelink01", "FALSE" )
+     # ( "This needs to be rescripted" )
+     cameraMove(" 55.000 643.000 71.000 ", 2.000 )
+     # ( "Camera focus 55 738 41" )
+     cameraPan(" 0.000 16.000 90.000 ", 3.000, "FALSE" )
+     waittimed ( 0.200 )
+     cameraFade(0.000, 0.500 )
+     waittimed ( 2.250 )
+     playanim (  "EA_ZONE3", "jarvis", "", "greeting_done" )
+     waitsignal ( "greeting_done" )
+     cameraPan(" 0.000 18.000 90.000 ", 0.500, "FALSE" )
+     hero1 = alive("_HERO1_" )
+     hero2 = alive("_HERO2_" )
+     hero3 = alive("_HERO3_" )
+     hero4 = alive("_HERO4_" )
+     if hero1 == 1
+          setInvisible("_HERO1_", "FALSE" )
      endif
+     if hero2 == 1
+          setInvisible("_HERO2_", "FALSE" )
+     endif
+     if hero3 == 1
+          setInvisible("_HERO3_", "FALSE" )
+     endif
+     if hero4 == 1
+          setInvisible("_HERO4_", "FALSE" )
+     endif
+     startConversation("act1/stark/1_stark2_300" )
 endif
+# ( "****************END This is for a weasel special conversation****************" )
 give_skill = getGameFlag("stark", 12 )
 if give_skill == 1
      waittimed ( 1.000 )
