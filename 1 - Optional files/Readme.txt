@@ -45,6 +45,8 @@ Other:
 - "Optional Dark Bosses (Original Ultimate)" contains Dark Cyclop's Ultimate skin (playable counterpart), which was replaced with a dark variant of his Astonishing skin.
   Notes: This was for consistency with the doomsday cutscene.
          There's plans for Dark Colossus to receive this treatment too.
+- "Optional Objectives" are objectives for side quests, which were added in an effort to make side quests more conistent.
+  Note: They add 5 objectives and a few game flags which might add to limits (unknown).
 - "Optional Quick Play Mod 2.0" is an update of the Quick Play Mod by Maegawa (eg. no legal text intro when starting the game) with additions, such as: skipped events (Pitfall arcade game, etc.); early access to second hup areas; more skipped introduction and intro cutscene; unlocked simulators.
   Note: This is meant for mod testing.
   Tips: Add only individual files to add parts of this mod, or remove individual files to remove parts from this mod

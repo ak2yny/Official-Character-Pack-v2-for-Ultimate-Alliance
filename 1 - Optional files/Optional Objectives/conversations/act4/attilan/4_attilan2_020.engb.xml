@@ -1,0 +1,89 @@
+<conversation>
+    <startCondition conditionscriptfile="common/conv/humantorch" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_020_010_cry" text="%CRYSTAL%: Hi, Johnny. It's been a while.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/humantorch/4_attilan2_020_011_ht" text="%HUMANTORCH%: Hey, Crystal. Yeah, it's been too long. It's really good to see you.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/invisiblewoman" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_020_020_cry" text="%CRYSTAL%: Hi, Sue. I'm glad you could make it to Attilan.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/invisiblewoman/4_attilan2_020_021_iw" text="%INVISIBLEWOMAN%: It's always nice to visit here, Crystal.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/mrfantastic" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_020_030_cry" text="%CRYSTAL%: Reed, it's always a pleasure to see you here in Attilan.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/mrfantastic/4_attilan2_020_031_mf" text="%MRFANTASTIC%: Hello, Crystal. It's been too long since the Fantastic Four last visited here.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="common/conv/thing" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_020_040_cry" text="%CRYSTAL%: Ben Grimm. It's been too long since you last came to Attilan.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/thing/4_attilan2_020_041_thi" text="%THING%: Aww, keep that up and yer gonna make me blush, Crystal.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_020_050_cry" text="%CRYSTAL%: Yes. Did you need something else?">
+                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" tagindex="autogen_tag_1" text="%PLAYER%">
+                <response soundtoplay="voice/player/4_attilan2_100_010_tl" text="Who are you?">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_100_011_cry" text="%CRYSTAL%: My name is Crystal. I'm the sister of Medusa, who's the wife of Black Bolt.">
+                        <response text="%PLAYER%: So you're an Inhuman?">
+                            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_100_013_cry" text="%CRYSTAL%: Yes. I have the psionic ability to control the four elements: fire, water, earth, and air.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="What is the Ultimate Nullifier?">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_200_011_cry" text="%CRYSTAL%: A hand held device of unknown origin, the Ultimate Nullifier is thought to be able to eliminate any target desired.">
+                        <response soundtoplay="voice/player/4_attilan2_200_012_tl" text="%PLAYER%: How powerful is it?">
+                            <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_200_013_cry" text="%CRYSTAL%: Apparently even Galactus is frightened by it.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%"/>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response soundtoplay="voice/player/4_attilan2_300_010_tl" text="I know where Medusa went to get the Ultimate Nullifier:">
+                    <line text="%MENU%: Medusa went to:">
+                        <response chosenscriptfile="setGameFlag('opt_obj', 2,1)" tagjump="autogen_tag_1" text="The Baxter Building"/>
+                        <response chosenscriptfile="setGameFlag('opt_obj', 2,1)" tagjump="autogen_tag_1" text="S.H.I.E.L.D. Headquarters"/>
+                        <response chosenscriptfile="setGameFlag('conv_var4', 9,1)" tagjump="autogen_tag_1" text="Muir Island"/>
+                    </line>
+                </response>
+                <response text="Thank you, Crystal.">
+                    <line notalkanim="true" soundtoplay="voice/crystal/4_attilan2_400_011_cry" text="%CRYSTAL%: You're welcome.">
+                        <response chosenscriptfile="act4/attilan/talk_crystal_post" conversationend="true" text="%BLANK%"/>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

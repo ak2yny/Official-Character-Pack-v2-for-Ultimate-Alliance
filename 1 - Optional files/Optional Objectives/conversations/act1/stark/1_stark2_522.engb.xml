@@ -29,8 +29,8 @@
                 </response>
                 <response text="I know which hacker you should talk to.">
                     <line text="%Menu%: Talk to:">
-                        <response chosenscriptfile="setGameFlag('conv_vars', 29,1)" tagjump="autogen_tag_1" text="C.B. Cebulski"/>
-                        <response chosenscriptfile="setGameFlag('conv_vars', 29,0)" tagjump="autogen_tag_1" text="Beroge"/>
+                        <response chosenscriptfile="act1/stark/weasel_hacker1" tagjump="autogen_tag_1" text="C.B. Cebulski"/>
+                        <response chosenscriptfile="act1/stark/weasel_hacker0" tagjump="autogen_tag_1" text="Beroge"/>
                     </line>
                 </response>
                 <response text="Thanks, Weasel.">

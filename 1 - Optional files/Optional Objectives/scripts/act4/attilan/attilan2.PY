@@ -20,6 +20,15 @@ if shiar_done == 1
           setGameFlag("attilan1", 2, 1 )
           # ( "This setsup the intro camera" )
           act("intro_setup2", "" )
+          # ( "This checks if the player gave Crystal the right info about Medusa" )
+          loc_correct = getGameFlag("conv_var4", 9 )
+          loc_wrong = getGameFlag("opt_obj", 2 )
+          answer = iadd(loc_correct, loc_wrong)
+          if answer == 0
+               objective ( "attilan_obj10",  "EOBJCMD_HIDE" )
+          else
+               objective ( "attilan_obj10", "EOBJCMD_COMPLETE" )
+          endif
           startConversation("act4/attilan/4_attilan2_310" )
      endif
 elif attilan1 == 0

@@ -29,6 +29,10 @@ else
           pwd_correct = getGameFlag("conv_vars", 25 )
           pwd_wrong = getGameFlag("opt_obj", 1 )
           answer = iadd(pwd_correct, pwd_wrong)
+          if answer == 0
+               objective ( "stark_obj10",  "EOBJCMD_HIDE" )
+          endif
+          objective ( "stark_obj70",  "EOBJCMD_SHOW" )
      endif
 endif
 if intro == 1
@@ -44,6 +48,7 @@ if intro == 1
           # ( "***************END This marks that the player has talked to Weasel after atlantis***************" )
           # ( "This needs to be scripted" )
           startConversation("act1/stark/1_stark2_520" )
+          objective ( "stark_obj10",  "EOBJCMD_COMPLETE" )
      else
           cameraFade(0.000, 0.000 )
           cameraMove(" 56.000 970.000 120.000 ", 0.000 )

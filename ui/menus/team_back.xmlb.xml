@@ -1,0 +1,51 @@
+<menu_items>
+    <item animate="true" enabled="false" name="actor01_model" neverfocus="true" type="MENU_ITEM_ACTORMODEL" />
+    <item animate="true" enabled="false" name="actor02_model" neverfocus="true" type="MENU_ITEM_ACTORMODEL" />
+    <item animate="true" enabled="false" name="actor03_model" neverfocus="true" type="MENU_ITEM_ACTORMODEL" />
+    <item animate="true" enabled="false" name="actor04_model" neverfocus="true" type="MENU_ITEM_ACTORMODEL" />
+    <item effect="menu/team_ambience" enabled="false" name="ambience" neverfocus="true" type="MENU_ITEM_EFFECT" />
+    <item enabled="false" name="cam_origin" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_position01" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_position02" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_position03" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_position04" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_spin" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item enabled="false" name="cam_team" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item model="ui/models/m_pda_team_mask" name="pause_mask" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item diffuse="1.798 1.296 1.020" enabled="false" light_type="omni" name="light01" neverfocus="true" radius="75" type="MENU_ITEM_LIGHT" />
+    <item diffuse="1.400 1.400 1.400" enabled="false" light_type="omni" mode="hero_browse hero_powers hero_outfit hero_gear hero_stats hero_powers_info hero_outfit_info hero_stats_info hero_power_assign team_skills team_replace team_details team_skills_info" name="light02" neverfocus="true" radius="60" type="MENU_ITEM_LIGHT" />
+    <item diffuse="1.898 1.396 1.120" enabled="false" light_type="omni" name="light03" neverfocus="true" radius="80" type="MENU_ITEM_LIGHT" />
+    <item diffuse="0.996 0.996 1.520" enabled="false" light_type="omni" name="light04" neverfocus="true" radius="205" type="MENU_ITEM_LIGHT" />
+    <item diffuse="0.996 0.996 1.520" enabled="false" light_type="omni" mode="hero_replace" name="light05" neverfocus="true" radius="150" type="MENU_ITEM_LIGHT" />
+    <item down=" " left="pad25_model" model="ui/models/m_invis" name="pad01_model" right="pad02_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad01_model" model="ui/models/m_invis" name="pad02_model" right="pad03_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad02_model" model="ui/models/m_invis" name="pad03_model" right="pad13_model" type="MENU_ITEM_MODEL" up=" " />
+    <item effect="menu/team_ghostrider" enabled="true" name="pad03_fx" neverfocus="true" type="MENU_ITEM_EFFECT" />
+    <item down=" " left="pad96_model" model="ui/models/m_invis" name="pad04_model" right="pad21_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad21_model" model="ui/models/m_invis" name="pad05_model" right="pad14_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad18_model" model="ui/models/m_invis" name="pad06_model" right="pad16_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad23_model" model="ui/models/m_invis" name="pad07_model" right="pad17_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad24_model" model="ui/models/m_invis" name="pad08_model" right="pad26_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad22_model" model="ui/models/m_invis" name="pad09_model" right="pad19_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad19_model" model="ui/models/m_invis" name="pad10_model" right="pad20_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad20_model" model="ui/models/m_invis" name="pad11_model" right="pad12_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad11_model" model="ui/models/m_invis" name="pad12_model" right=" " type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad03_model" model="ui/models/m_invis" name="pad13_model" right="pad96_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad05_model" model="ui/models/m_invis" name="pad14_model" right="pad15_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad14_model" model="ui/models/m_invis" name="pad15_model" right="pad18_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad06_model" model="ui/models/m_invis" name="pad16_model" right="pad23_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad07_model" model="ui/models/m_invis" name="pad17_model" right="pad24_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad15_model" model="ui/models/m_invis" name="pad18_model" right="pad06_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad09_model" model="ui/models/m_invis" name="pad19_model" right="pad10_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad10_model" model="ui/models/m_invis" name="pad20_model" right="pad11_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad04_model" model="ui/models/m_invis" name="pad21_model" right="pad05_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad26_model" model="ui/models/m_invis" name="pad22_model" right="pad09_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad16_model" model="ui/models/m_invis" name="pad23_model" right="pad07_model" type="MENU_ITEM_MODEL" up=" " />
+    <item effect="menu/team_humantorch" enabled="false" name="pad08_fx" neverfocus="true" type="MENU_ITEM_EFFECT" />
+    <item down=" " left="pad17_model" model="ui/models/m_invis" name="pad24_model" right="pad08_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left=" " model="ui/models/m_invis" name="pad25_model" right="pad01_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad08_model" model="ui/models/m_invis" name="pad26_model" right="pad22_model" type="MENU_ITEM_MODEL" up=" " />
+    <item down=" " left="pad13_model" model="ui/models/m_invis" name="pad96_model" right="pad04_model" type="MENU_ITEM_MODEL" up=" " />
+    <item model="ui/models/m_invis" name="stage" neverfocus="true" type="MENU_ITEM_MODEL" />
+    <item effect="menu/riser" enabled="false" name="new_stage_fx" neverfocus="true" type="MENU_ITEM_EFFECT" />
+</menu_items>
