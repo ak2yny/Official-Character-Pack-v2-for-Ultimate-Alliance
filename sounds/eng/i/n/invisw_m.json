@@ -1,0 +1,302 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/INVISW_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/LAND",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/PICKUP",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/PAIN/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/PAIN/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/PAIN/***RANDOM***/2",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/THROW",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P10_POWER",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P1_CHARGE",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P1_POWER",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P1_RELEASE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P2_IMPACT/***RANDOM***/0",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P2_IMPACT/***RANDOM***/1",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P2_POWER",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P3_CHARGE",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P3_POWER",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P3_CHARGE_LOOP",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P3_RELEASE",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P4_HOLD",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P4_POWER",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P4_THROW",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P5_POWER",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P6_IMPACT/***RANDOM***/0",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P6_IMPACT/***RANDOM***/1",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P6_IMPACT/***RANDOM***/2",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P6_POWER",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P7_POWER",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/INVISW_M/P8_POWER",
+            "sample_index": 28,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "invisw_m\\DEATH3_C.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\JUMP3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\LAND3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\LIFT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\THROW3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p10_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p1_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p2_impactB.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p3_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p4_hold.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p4_throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p6_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p6_impactb.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p6_impactc.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "invisw_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

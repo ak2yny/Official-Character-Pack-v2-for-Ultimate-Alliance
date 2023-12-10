@@ -1,0 +1,267 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/CABLE_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/JUMP",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/LAND",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/PAIN/***RANDOM***/0",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/PAIN/***RANDOM***/1",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/PAIN/***RANDOM***/2",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/PICKUP",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/THROW",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/SPECIAL_DRAW",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/SPECIAL_HOLSTER",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P1_POWER",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P2_POWER",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P3_CHARGE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P3_POWER",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P4_CHARGE",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": 27598485,
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P5_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P6_POWER",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P6_CHARGE",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": 185844929,
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": 185844930,
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P7_POWER",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P8_POWER",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P9_POWER",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P2_IMPACT",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CABLE_M/P10_POWER",
+            "sample_index": 25,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "cable_m\\death.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\jump.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\land.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\pain1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\pain2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\pain3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\special_draw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\special_holster.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p4_explode.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p6_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\bodyslide_one.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\bodyslide_two.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p9_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "cable_m\\p10_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

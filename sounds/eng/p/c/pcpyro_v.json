@@ -1,0 +1,537 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/PCPYRO_V/BORED/***RANDOM***/0",
+            "sample_index": 0,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/BORED/***RANDOM***/1",
+            "sample_index": 1,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/BORED/***RANDOM***/2",
+            "sample_index": 2,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/BORED/***RANDOM***/3",
+            "sample_index": 3,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CANTGO/***RANDOM***/0",
+            "sample_index": 4,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CANTGO/***RANDOM***/1",
+            "sample_index": 5,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CANTTALK/***RANDOM***/0",
+            "sample_index": 6,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CANTTALK/***RANDOM***/1",
+            "sample_index": 7,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CANTTALK/***RANDOM***/2",
+            "sample_index": 8,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKANY/***RANDOM***/0",
+            "sample_index": 9,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKANY/***RANDOM***/1",
+            "sample_index": 10,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKANY/***RANDOM***/2",
+            "sample_index": 11,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKTARGET/***RANDOM***/0",
+            "sample_index": 12,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKTARGET/***RANDOM***/1",
+            "sample_index": 13,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDATTACKTARGET/***RANDOM***/2",
+            "sample_index": 14,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDFOLLOW/***RANDOM***/0",
+            "sample_index": 15,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDFOLLOW/***RANDOM***/1",
+            "sample_index": 16,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/CMDFOLLOW/***RANDOM***/2",
+            "sample_index": 17,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/EPITAPH",
+            "sample_index": 18,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/ISEEYOU/***RANDOM***/0",
+            "sample_index": 19,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/ISEEYOU/***RANDOM***/1",
+            "sample_index": 20,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/ISEEYOU/***RANDOM***/2",
+            "sample_index": 21,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/ISEEYOU/***RANDOM***/3",
+            "sample_index": 22,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/ISEEYOU/***RANDOM***/4",
+            "sample_index": 23,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LEVELUP/***RANDOM***/0",
+            "sample_index": 24,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LEVELUP/***RANDOM***/1",
+            "sample_index": 25,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LEVELUP/***RANDOM***/2",
+            "sample_index": 26,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LOCKED/***RANDOM***/0",
+            "sample_index": 27,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LOCKED/***RANDOM***/1",
+            "sample_index": 28,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LOWHEALTH/***RANDOM***/0",
+            "sample_index": 29,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LOWHEALTH/***RANDOM***/1",
+            "sample_index": 30,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/LOWHEALTH/***RANDOM***/2",
+            "sample_index": 31,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOPOWER/***RANDOM***/0",
+            "sample_index": 32,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOPOWER/***RANDOM***/1",
+            "sample_index": 33,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOWORK/***RANDOM***/0",
+            "sample_index": 34,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOWORK/***RANDOM***/1",
+            "sample_index": 35,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOWORK/***RANDOM***/2",
+            "sample_index": 36,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/NOWORK/***RANDOM***/3",
+            "sample_index": 37,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/PICKUP/***RANDOM***/0",
+            "sample_index": 38,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/PICKUP/***RANDOM***/1",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/PICKUP/***RANDOM***/2",
+            "sample_index": 40,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/RESPAFFIRM/***RANDOM***/0",
+            "sample_index": 41,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/RESPAFFIRM/***RANDOM***/1",
+            "sample_index": 42,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/RESPAFFIRM/***RANDOM***/2",
+            "sample_index": 43,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/RESPAFFIRM/***RANDOM***/3",
+            "sample_index": 44,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/TAUNTKD",
+            "sample_index": 45,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/TOOHEAVY/***RANDOM***/0",
+            "sample_index": 46,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/TOOHEAVY/***RANDOM***/1",
+            "sample_index": 47,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/VICTORY/***RANDOM***/0",
+            "sample_index": 48,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/VICTORY/***RANDOM***/1",
+            "sample_index": 49,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/VICTORY/***RANDOM***/2",
+            "sample_index": 50,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/XTREME",
+            "sample_index": 51,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PCPYRO_V/XTREME2",
+            "sample_index": 52,
+            "flags": 255
+        }
+    ],
+    "samples": [
+        {
+            "file": "pcpyro_v\\BORED.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\BORED2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\BORED3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\BORED4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CANTGO.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CANTGO2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CANTTALK.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CANTTALK2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CANTTALK3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKANY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKANY2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKANY3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKTARGET.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKTARGET2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDATTACKTARGET3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDFOLLOW.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDFOLLOW2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\CMDFOLLOW3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\EPITAPH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\ISEEYOU1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\ISEEYOU2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\ISEEYOU3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\ISEEYOU4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\ISEEYOU5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LEVELUP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LEVELUP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LEVELUP3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LOCKED.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LOCKED2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LOWHEALTH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LOWHEALTH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\LOWHEALTH2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOPOWER.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOPOWER2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOWORK.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOWORK2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOWORK3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\NOWORK4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\PICKUP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\PICKUP3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\RESPAFFIRM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\RESPAFFIRM2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\RESPAFFIRM3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\RESPAFFIRM4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\TAUNTKD.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\TOOHEAVY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\TOOHEAVY2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\VICTORY.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\VICTORY5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\VICTORY6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\XTREME.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcpyro_v\\XTREME2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

@@ -1,0 +1,227 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/TOAD_M/DEATH",
+            "sample_index": 0,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/TOAD_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/LAND",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/P1_CHARGE",
+            "sample_index": 4,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/P2_CHARGE",
+            "sample_index": 5,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/P2_IMPACT",
+            "sample_index": 6,
+            "flags": 12
+        },
+        {
+            "hash": "CHAR/TOAD_M/P3_IMPACT",
+            "sample_index": 7,
+            "flags": 12
+        },
+        {
+            "hash": "CHAR/TOAD_M/P4_IMPACT",
+            "sample_index": 8,
+            "flags": 12
+        },
+        {
+            "hash": "CHAR/TOAD_M/P5_CHARGE",
+            "sample_index": 9,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/P6_CHARGE",
+            "sample_index": 10,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/P7_CHARGE",
+            "sample_index": 11,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/P7_IMPACT",
+            "sample_index": 12,
+            "flags": 12
+        },
+        {
+            "hash": "CHAR/TOAD_M/P9_CHARGE",
+            "sample_index": 13,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/TOAD_M/PAIN/***RANDOM***/0",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/PAIN/***RANDOM***/1",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/PAIN/***RANDOM***/2",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/PAIN/***RANDOM***/3",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/PAINHEAVY",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/PICKUP",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/SMASH",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/TOAD_M/THROW",
+            "sample_index": 21,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "toad_m\\death.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\jump.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\jump1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\land.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p2_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p4_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p6_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p7_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p7_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\pain.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\pain3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\pain2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\pain1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\painheavy.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\smash.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "toad_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

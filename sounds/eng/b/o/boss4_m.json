@@ -1,0 +1,1059 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/GALAC_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/2",
+            "sample_index": 3,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/3",
+            "sample_index": 4,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/4",
+            "sample_index": 5,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/FOOTSTEP/***RANDOM***/5",
+            "sample_index": 6,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P1_CHARGE",
+            "sample_index": 7,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P1_POWER",
+            "sample_index": 8,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P2_CHARGE",
+            "sample_index": 9,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P2_POWER",
+            "sample_index": 10,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P3_CHARGE",
+            "sample_index": 11,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P3_IMPACT",
+            "sample_index": 12,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P3_POWER",
+            "sample_index": 13,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P4_CHARGE",
+            "sample_index": 14,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/P4_POWER",
+            "sample_index": 15,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/PAIN/***RANDOM***/0",
+            "sample_index": 16,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/PAIN/***RANDOM***/1",
+            "sample_index": 17,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/GALAC_M/PAIN/***RANDOM***/2",
+            "sample_index": 18,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/PUNISH_M/DEATH/***RANDOM***/0",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/DEATH/***RANDOM***/1",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/DEATH/***RANDOM***/2",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/PAIN/***RANDOM***/0",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/PAIN/***RANDOM***/1",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/PAIN/***RANDOM***/2",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/PAIN/***RANDOM***/3",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P1_CHARGE/***RANDOM***/0",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P1_CHARGE/***RANDOM***/1",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P1_CHARGE/***RANDOM***/2",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P1_CHARGE/***RANDOM***/3",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P2_CHARGE",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/PUNISH_M/P2_POWER",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/SSURF_M/DEATH",
+            "sample_index": 32,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PAIN/***RANDOM***/0",
+            "sample_index": 33,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PAIN/***RANDOM***/1",
+            "sample_index": 34,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/DODGE/***RANDOM***/0",
+            "sample_index": 35,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/DODGE/***RANDOM***/1",
+            "sample_index": 36,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/P4_CHARGE",
+            "sample_index": 37,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/P4_POWER",
+            "sample_index": 38,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/P5_CHARGE",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PICKUP/***RANDOM***/0",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PICKUP/***RANDOM***/1",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PICKUP/***RANDOM***/2",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PICKUP/***RANDOM***/3",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/SSURF_M/PICKUP/***RANDOM***/4",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/GAME/TREASURE",
+            "sample_index": 40,
+            "flags": 255
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/0",
+            "sample_index": 41,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/1",
+            "sample_index": 42,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/BLOCKED/***RANDOM***/2",
+            "sample_index": 43,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/0",
+            "sample_index": 44,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/1",
+            "sample_index": 45,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_METAL/***RANDOM***/2",
+            "sample_index": 46,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/0",
+            "sample_index": 47,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/1",
+            "sample_index": 48,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/HIT_NORMAL/***RANDOM***/2",
+            "sample_index": 49,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/0",
+            "sample_index": 50,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/1",
+            "sample_index": 51,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_HEAVY/***RANDOM***/2",
+            "sample_index": 52,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/0",
+            "sample_index": 53,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/1",
+            "sample_index": 54,
+            "flags": 31
+        },
+        {
+            "hash": "COMMON/MELEE/WHOOSH_LIGHT/***RANDOM***/2",
+            "sample_index": 55,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/0",
+            "sample_index": 56,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/1",
+            "sample_index": 57,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_ELECTRICAL_M/***RANDOM***/2",
+            "sample_index": 58,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_L/***RANDOM***/0",
+            "sample_index": 59,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_L/***RANDOM***/1",
+            "sample_index": 60,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_BIO_L/***RANDOM***/2",
+            "sample_index": 61,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_M/***RANDOM***/0",
+            "sample_index": 62,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_M/***RANDOM***/1",
+            "sample_index": 63,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_HOLLOW_M/***RANDOM***/2",
+            "sample_index": 64,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_L/***RANDOM***/0",
+            "sample_index": 65,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_L/***RANDOM***/1",
+            "sample_index": 66,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_L/***RANDOM***/2",
+            "sample_index": 67,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/0",
+            "sample_index": 68,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/1",
+            "sample_index": 69,
+            "flags": 31
+        },
+        {
+            "hash": "DEATH_STYLE/DS_METAL_M/***RANDOM***/2",
+            "sample_index": 70,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 71,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 72,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 73,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/0",
+            "sample_index": 74,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/1",
+            "sample_index": 75,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SAND/***RANDOM***/2",
+            "sample_index": 76,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 77,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 78,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/FOOTSTEP/FS_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 79,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/0",
+            "sample_index": 80,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/1",
+            "sample_index": 81,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_HOLLOW_METAL/***RANDOM***/2",
+            "sample_index": 82,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/0",
+            "sample_index": 83,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/1",
+            "sample_index": 84,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SAND/***RANDOM***/2",
+            "sample_index": 85,
+            "flags": 255
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/0",
+            "sample_index": 86,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/1",
+            "sample_index": 87,
+            "flags": 31
+        },
+        {
+            "hash": "MATERIAL/HIT/HIT_SOLID_METAL/***RANDOM***/2",
+            "sample_index": 88,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/BEAM",
+            "sample_index": 89,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/BUILDINGA",
+            "sample_index": 90,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/BUILDINGB_SHOT",
+            "sample_index": 91,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/CATWALK_BREAK",
+            "sample_index": 92,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/GPUNISHER_TELEPORT",
+            "sample_index": 93,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/NEXUS_HURT_GALACTUS",
+            "sample_index": 94,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/NEXUS_HURT_ME",
+            "sample_index": 95,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/NEXUS_LOOP",
+            "sample_index": 96,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/BOSS4/SWITCH_USE",
+            "sample_index": 97,
+            "flags": 255
+        },
+        {
+            "hash": "ZONE_SHARED/MOVER/DOOR_SKRULL",
+            "sample_index": 98,
+            "flags": 31
+        },
+        {
+            "hash": "ZONE_SHARED/SPECIAL/BLINK_PORTAL",
+            "sample_index": 99,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "boss4_m\\DEATH7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\footstep2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\pain.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\pain2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\pain3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\DEATH4_D.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\DEATH3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_charge2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_charge3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p1_charge4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p2_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p2_power_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\DEATH3_C.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\PAIN6_B.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\THROW3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p4_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p4_power_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\treasure.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\block3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\block4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\blocked1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_metal13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_metal8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_metal12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_normal13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_normal17.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_normal12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh-heavy5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh-heavy4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh-heavy3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh14.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\whoosh15.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_electric2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_electric3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_electric.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal_bio_l.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal_hollow1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal_hollow3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal_hollow4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\ds_metal12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal12.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal13.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal11.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal11_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal12_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hollow_metal13_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\solid_metal4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\solid_metal5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\solid_metal6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_hollow_metal9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_hollowmetal.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_metal5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal10.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal7.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal9.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal7_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal9_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\hit_solid_metal10_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\beam.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\buildinga.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\buildingb_shot.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\catwalk_break.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\gpunisher_teleport.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\nexus_hurt_galactus.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\nexus_hurt_me.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\nexus_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "boss4_m\\switch_use.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\door_skrull.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_m\\blink_portal.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "boss4_v\\LIFT_LONG.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_v\\LIFT_LONG2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_v\\LIFT_SHORT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_v\\LIFT_SHORT2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "boss4_v\\LIFT_SHORT3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

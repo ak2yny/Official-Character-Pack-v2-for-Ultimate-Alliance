@@ -1,0 +1,277 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/XMAN_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/LAND/***RANDOM***/0",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/LAND/***RANDOM***/1",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/LIFT/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/LIFT/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/PAIN/***RANDOM***/0",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/PAIN/***RANDOM***/1",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/PAIN/***RANDOM***/2",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/THROW",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/FLYBEGIN",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/FLYEND",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/XMAN_M/P7_IMPACT",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": 84980725,
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": 70130711,
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": 222223508,
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": 95500533,
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": 69836354,
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": 84980581,
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": 84980565,
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": 84980613,
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": 84980645,
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": 84980629,
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": 17513504,
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": 84980533,
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": 84980677,
+            "sample_index": 26,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "xman_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\JUMP3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\LAND3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\LIFT.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\lift2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\PAIN6.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\flybegin.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\flyend.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p7_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p2_throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\power4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p2_fire.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p1_charge_1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p9_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\power3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "xman_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

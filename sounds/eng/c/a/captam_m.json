@@ -1,0 +1,287 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/CAPTAM_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/LAND/***RANDOM***/0",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/LAND/***RANDOM***/1",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/PICKUP/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/PICKUP/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/PAIN/***RANDOM***/0",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/PAIN/***RANDOM***/1",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/PAIN/***RANDOM***/2",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/THROW",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P10_POWER",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P1_GRIP",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P1_IMPACT",
+            "sample_index": 13,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P1_POWER",
+            "sample_index": 14,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P1_RICOCHET/***RANDOM***/0",
+            "sample_index": 15,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P1_RICOCHET/***RANDOM***/1",
+            "sample_index": 16,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P2_CHARGE",
+            "sample_index": 17,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P2_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P3_CHARGE",
+            "sample_index": 19,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P3_POWER",
+            "sample_index": 20,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P4_CHARGE",
+            "sample_index": 21,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P4_POWER",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P5_CHARGE",
+            "sample_index": 23,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P5_POWER",
+            "sample_index": 24,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P6_POWER",
+            "sample_index": 25,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P8_POWER",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/CAPTAM_M/P9_POWER",
+            "sample_index": 27,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "captam_m\\DEATH3_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\JUMP3_B.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\JUMP3_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\LAND2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\LAND3_C.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\PICKUP1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\PICKUP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p10_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p1_grip.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p1_ricochet2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p1_ricochet5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p2_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "captam_m\\p9_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

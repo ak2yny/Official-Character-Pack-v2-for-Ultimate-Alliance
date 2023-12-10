@@ -1,0 +1,352 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/BLADE_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/LAND",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/PICKUP",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/PAIN/***RANDOM***/0",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/PAIN/***RANDOM***/1",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/PAIN/***RANDOM***/2",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/THROW",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/DRAW_GUN",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/DRAW_SWORD",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/HOLSTER_GUN",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P1_CHARGE",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P1_POWER",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P2_CHARGE",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P2_POWER",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P2_RELEASE",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P3_IMPACT",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P3_POWER",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P4_IMPACT/***RANDOM***/0",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P4_IMPACT/***RANDOM***/1",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P4_SHOT",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P5_CHARGE",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P5_EXPLODE",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P5_IMPACT",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P5_POWER",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P6_IMPACT",
+            "sample_index": 26,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P6_POWER",
+            "sample_index": 27,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P7_POWER",
+            "sample_index": 28,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P9_POWER",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P8_ATTACK",
+            "sample_index": 29,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P8_CHOMP",
+            "sample_index": 30,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P8_POWER",
+            "sample_index": 31,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/P9_CHARGE",
+            "sample_index": 32,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/BLADE_M/SHEATH_SWORD",
+            "sample_index": 33,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "blade_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\JUMP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\PICKUP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\PAIN5.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\PAIN4.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\PAIN6_D.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\THROW3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\draw_gun.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\draw_sword.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\holster_gun.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p1_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p2_release.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p3_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p4_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p4_impactc.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p4_shot.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p5_explode.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p5_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p5_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p6_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p6_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p7_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p8_bite.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p8_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p8_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "blade_m\\sheath_sword.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

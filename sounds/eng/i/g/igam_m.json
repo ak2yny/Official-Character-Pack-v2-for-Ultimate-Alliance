@@ -1,0 +1,157 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/IGAM_M/DEATH",
+            "sample_index": 0,
+            "flags": 255
+        },
+        {
+            "hash": "CHAR/IGAM_M/JUMP",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/LAND",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/P1_CHARGE",
+            "sample_index": 3,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/P1_IMPACT",
+            "sample_index": 4,
+            "flags": 12
+        },
+        {
+            "hash": "CHAR/IGAM_M/P2_CHARGE",
+            "sample_index": 5,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/P2_POWER",
+            "sample_index": 6,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/P3_CHARGE",
+            "sample_index": 7,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/P7_CHARGE",
+            "sample_index": 8,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/P9_CHARGE",
+            "sample_index": 9,
+            "flags": 50
+        },
+        {
+            "hash": "CHAR/IGAM_M/PAIN/***RANDOM***/0",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/PAIN/***RANDOM***/1",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/PAIN/***RANDOM***/2",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/PICKUP",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/IGAM_M/THROW",
+            "sample_index": 14,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "igam_m\\death.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\jump.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\land.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p1_impact.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p3_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p7_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\pain1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\pain2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\pain3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\pickup.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "igam_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

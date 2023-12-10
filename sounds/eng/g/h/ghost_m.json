@@ -1,0 +1,279 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "CHAR/GHOST_M/DEATH",
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/JUMP/***RANDOM***/0",
+            "sample_index": 1,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/JUMP/***RANDOM***/1",
+            "sample_index": 2,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/JUMP/***RANDOM***/2",
+            "sample_index": 3,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/JUMP/***RANDOM***/3",
+            "sample_index": 4,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/LAND",
+            "sample_index": 5,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/PICKUP/***RANDOM***/0",
+            "sample_index": 6,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/PICKUP/***RANDOM***/1",
+            "sample_index": 7,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/PAIN/***RANDOM***/0",
+            "sample_index": 8,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/PAIN/***RANDOM***/1",
+            "sample_index": 9,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/PAIN/***RANDOM***/2",
+            "sample_index": 10,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P1_CHARGE",
+            "sample_index": 11,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P1_CHARGE_LOOP",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P1_POWER",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P2_CHARGE",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P2_CHARGE_LOOP",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P2_POWER",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P3_POWER/***RANDOM***/0",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P3_POWER/***RANDOM***/1",
+            "sample_index": 18,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P4_CHARGE",
+            "sample_index": 19,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P4_POWER",
+            "sample_index": 20,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P5_CHARGE",
+            "sample_index": 21,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P6_CHARGE",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P7_CHARGE",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/P9_CHARGE",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/THROW/***RANDOM***/0",
+            "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/GHOST_M/THROW/***RANDOM***/1",
+            "sample_index": 26,
+            "flags": 31
+        }
+    ],
+    "samples": [
+        {
+            "file": "ghost_m\\DEATH.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\JUMP.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\JUMP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\jump2a.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\JUMP3_A.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\LAND.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\PICKUP1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\PICKUP2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\PAIN.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\PAIN3.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\PAIN2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p1_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p1_charge_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "ghost_m\\p1_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p2_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p2_charge_loop.wav",
+            "format": 106,
+            "sample_rate": 22050,
+            "flags": 1
+        },
+        {
+            "file": "ghost_m\\p2_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p3_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p3_powerA.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p4_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p4_power.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p5_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p6_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p7_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\p9_charge.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\throw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "ghost_m\\throw2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

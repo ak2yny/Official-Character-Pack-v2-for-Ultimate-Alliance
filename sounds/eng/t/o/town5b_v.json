@@ -1,0 +1,870 @@
+{
+    "platform": "PC",
+    "sounds": [
+        {
+            "hash": "MUSIC/TOWN5B_A",
+            "sample_index": 0,
+            "flags": 255
+        },
+        {
+            "hash": "MUSIC/TOWN5B_C",
+            "sample_index": 1,
+            "flags": 255
+        },
+        {
+            "hash": "STATSCREEN/AMB",
+            "sample_index": 2,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_000_PYM",
+            "sample_index": 3,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_002_PYM",
+            "sample_index": 4,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_052_PYM",
+            "sample_index": 5,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_054_PYM",
+            "sample_index": 6,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_056_PYM",
+            "sample_index": 7,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_057_PYM",
+            "sample_index": 8,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKPANTHER/5_DOOMSTARK1B_040_011_BP",
+            "sample_index": 9,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_010_BW",
+            "sample_index": 10,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_012_BW",
+            "sample_index": 11,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_013_BW",
+            "sample_index": 12,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_020_BW",
+            "sample_index": 13,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_101_BW",
+            "sample_index": 14,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_103_BW",
+            "sample_index": 15,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_201_BW",
+            "sample_index": 16,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_203_BW",
+            "sample_index": 17,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_301_BW",
+            "sample_index": 18,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_303_BW",
+            "sample_index": 19,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/4_DOOMSTARK1B_040_401_BW",
+            "sample_index": 20,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_010_BW",
+            "sample_index": 21,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_020_BW",
+            "sample_index": 22,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_030_BW",
+            "sample_index": 23,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_040_BW",
+            "sample_index": 24,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_042_BW",
+            "sample_index": 25,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/BLACKWIDOW/5_DOOMSTARK1B_040_060_BW",
+            "sample_index": 26,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/CAPTAINAMERICA/5_DOOMSTARK1B_040_021_CA",
+            "sample_index": 27,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/DAREDEVIL/5_DOOMSTARK1B_040_011_DD",
+            "sample_index": 28,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/DEADPOOL/5_DOOMSTARK1B_040_021_DP",
+            "sample_index": 29,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/DRSTRANGE/5_DOOMSTARK1B_060_011_STR",
+            "sample_index": 30,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/ELEKTRA/5_DOOMSTARK1B_040_031_EKA",
+            "sample_index": 31,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_010_010_NF",
+            "sample_index": 32,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_010_011_NF",
+            "sample_index": 33,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_010_013_NF",
+            "sample_index": 34,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_010_014_NF",
+            "sample_index": 35,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_010_NF",
+            "sample_index": 36,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_020_NF",
+            "sample_index": 37,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_060_NF",
+            "sample_index": 38,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_101_NF",
+            "sample_index": 39,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_103_NF",
+            "sample_index": 40,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_201_NF",
+            "sample_index": 41,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_204_NF",
+            "sample_index": 42,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_030_401_NF",
+            "sample_index": 43,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_040_010_NF",
+            "sample_index": 44,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_040_020_NF",
+            "sample_index": 45,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_040_030_NF",
+            "sample_index": 46,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_040_040_NF",
+            "sample_index": 47,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/FURY/5_DOOMSTARK1B_040_050_NF",
+            "sample_index": 48,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/GHOSTRIDER/5_DOOMSTARK1B_060_021_GR",
+            "sample_index": 49,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/ICEMAN/5_DOOMSTARK1B_040_041_ICE",
+            "sample_index": 50,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/ICEMAN/5_DOOMSTARK1B_040_043_ICE",
+            "sample_index": 51,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/INVISIBLEWOMAN/5_DOOMSTARK1B_060_031_IW",
+            "sample_index": 52,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/IRONMAN/5_DOOMSTARK1B_030_031_IM",
+            "sample_index": 53,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/IRONMAN/5_DOOMSTARK1B_090_010_IM",
+            "sample_index": 54,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/LUKECAGE/5_DOOMSTARK1B_040_041_LC",
+            "sample_index": 55,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/MRFANTASTIC/5_DOOMSTARK1B_040_051_MF",
+            "sample_index": 56,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_040_PYM",
+            "sample_index": 57,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_050_PYM",
+            "sample_index": 58,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_060_PYM",
+            "sample_index": 59,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_070_PYM",
+            "sample_index": 60,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_201_PYM",
+            "sample_index": 61,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_203_PYM",
+            "sample_index": 62,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_301_PYM",
+            "sample_index": 63,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_303_PYM",
+            "sample_index": 64,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/PYM/5_DOOMSTARK1B_050_401_PYM",
+            "sample_index": 65,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/SILVERSURFER/5_DOOMSTARK1B_060_056_SS",
+            "sample_index": 66,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/SPIDERMAN/NOWORK",
+            "sample_index": 67,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/SPIDERWOMAN/5_DOOMSTARK1B_040_061_SPW",
+            "sample_index": 68,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/STORM/5_DOOMSTARK1B_060_041_STO",
+            "sample_index": 69,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/THING/5_DOOMSTARK1B_060_051_THI",
+            "sample_index": 70,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/THOR/5_DOOMSTARK1B_050_051_THO",
+            "sample_index": 71,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_010_VIS",
+            "sample_index": 72,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_020_VIS",
+            "sample_index": 73,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_030_VIS",
+            "sample_index": 74,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_040_VIS",
+            "sample_index": 75,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_050_VIS",
+            "sample_index": 76,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_055_VIS",
+            "sample_index": 77,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_060_VIS",
+            "sample_index": 78,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_070_VIS",
+            "sample_index": 79,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_101_VIS",
+            "sample_index": 80,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_103_VIS",
+            "sample_index": 81,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_201_VIS",
+            "sample_index": 82,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_203_VIS",
+            "sample_index": 83,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/VISION/5_DOOMSTARK1B_060_301_VIS",
+            "sample_index": 84,
+            "flags": 255
+        },
+        {
+            "hash": "VOICE/WOLVERINE/5_DOOMSTARK1B_040_061_WOL",
+            "sample_index": 85,
+            "flags": 255
+        }
+    ],
+    "samples": [
+        {
+            "file": "town5b_v\\town5B_a.wav",
+            "format": 0,
+            "sample_rate": 44100,
+            "flags": 2
+        },
+        {
+            "file": "town5b_v\\town5B_c.wav",
+            "format": 0,
+            "sample_rate": 44100,
+            "flags": 2
+        },
+        {
+            "file": "town5b_v\\amb.wav",
+            "format": 0,
+            "sample_rate": 41000,
+            "flags": 2
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_000_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_002_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_052_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_054_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_056_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_DOOMSTARK1B_050_057_PYM.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_011_bp.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_010_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_012_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_013_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_020_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_101_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_103_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_201_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_203_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_301_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_303_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\4_doomstark1b_040_401_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_010_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_020_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_030_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_040_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_042_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_060_bw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_021_ca.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_011_dd.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_021_dp.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_011_str.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_031_eka.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_010_010_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_010_011_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_010_013_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_010_014_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_010_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_020_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_060_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_101_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_103_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_201_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_204_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_401_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_010_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_020_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_030_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_040_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_050_nf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_021_gr.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_041_ice.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_043_ice.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_031_iw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_030_031_im.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_090_010_im.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_041_lc.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_051_mf.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_040_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_050_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_060_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_070_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_201_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_203_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_301_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_303_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_401_pym.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_056_ss.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\NOWORK.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_061_spw.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_041_sto.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_051_thi.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_050_051_tho.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_010_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_020_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_030_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_040_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_050_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_055_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_060_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_070_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_101_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_103_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_201_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_203_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_060_301_vis.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "town5b_v\\5_doomstark1b_040_061_wol.wav",
+            "format": 106,
+            "sample_rate": 22050
+        }
+    ]
+}

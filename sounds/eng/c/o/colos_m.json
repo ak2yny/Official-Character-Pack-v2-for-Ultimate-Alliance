@@ -2,6 +2,11 @@
     "platform": "PC",
     "sounds": [
         {
+            "hash": 109787810,
+            "sample_index": 0,
+            "flags": 31
+        },
+        {
             "hash": "CHAR/COLOS_M/COL_PUNCH/***RANDOM***/0",
             "sample_index": 0,
             "flags": 31
@@ -62,8 +67,23 @@
             "flags": 31
         },
         {
+            "hash": 228180914,
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
             "hash": "CHAR/COLOS_M/DEATH",
             "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_V/DEATH",
+            "sample_index": 12,
+            "flags": 31
+        },
+        {
+            "hash": 238222578,
+            "sample_index": 13,
             "flags": 31
         },
         {
@@ -72,8 +92,28 @@
             "flags": 31
         },
         {
+            "hash": "CHAR/COLOS_V/JUMP",
+            "sample_index": 13,
+            "flags": 31
+        },
+        {
+            "hash": 250799538,
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
             "hash": "CHAR/COLOS_M/LAND",
             "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_V/LAND",
+            "sample_index": 14,
+            "flags": 31
+        },
+        {
+            "hash": 110264642,
+            "sample_index": 15,
             "flags": 31
         },
         {
@@ -89,6 +129,41 @@
         {
             "hash": "CHAR/COLOS_M/PAIN/***RANDOM***/2",
             "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/0",
+            "sample_index": 15,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/1",
+            "sample_index": 16,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/2",
+            "sample_index": 17,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_M/PICKUP/***RANDOM***/0",
+            "sample_index": 22,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_M/PICKUP/***RANDOM***/1",
+            "sample_index": 23,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/COLOS_M/PICKUP/***RANDOM***/2",
+            "sample_index": 24,
+            "flags": 31
+        },
+        {
+            "hash": 24037282,
+            "sample_index": 18,
             "flags": 31
         },
         {
@@ -109,66 +184,6 @@
         {
             "hash": "CHAR/COLOS_M/THROW/***RANDOM***/3",
             "sample_index": 21,
-            "flags": 31
-        },
-        {
-            "hash": 109787810,
-            "sample_index": 0,
-            "flags": 31
-        },
-        {
-            "hash": 228180914,
-            "sample_index": 12,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/DEATH",
-            "sample_index": 12,
-            "flags": 31
-        },
-        {
-            "hash": 238222578,
-            "sample_index": 13,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/JUMP",
-            "sample_index": 13,
-            "flags": 31
-        },
-        {
-            "hash": 250799538,
-            "sample_index": 14,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/LAND",
-            "sample_index": 14,
-            "flags": 31
-        },
-        {
-            "hash": 110264642,
-            "sample_index": 15,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/0",
-            "sample_index": 15,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/1",
-            "sample_index": 16,
-            "flags": 31
-        },
-        {
-            "hash": "CHAR/COLOS_V/PAIN/***RANDOM***/2",
-            "sample_index": 17,
-            "flags": 31
-        },
-        {
-            "hash": 24037282,
-            "sample_index": 18,
             "flags": 31
         },
         {
@@ -300,6 +315,21 @@
         },
         {
             "file": "colos_m\\THROW.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "colos_v\\LIFT_LONG1.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "colos_v\\LIFT_SHORT2.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "colos_v\\LIFT_SHORT5.wav",
             "format": 106,
             "sample_rate": 22050
         }
