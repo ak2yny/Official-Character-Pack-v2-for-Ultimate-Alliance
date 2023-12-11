@@ -2,27 +2,27 @@
     "platform": "PC",
     "sounds": [
         {
-            "hash": "CHAR/PCSAB_M/PICKUP/***RANDOM***/0",
+            "hash": "CHAR/PCSAB_M/DEATH",
             "sample_index": 0,
             "flags": 31
         },
         {
-            "hash": "CHAR/PCSAB_M/DEATH",
+            "hash": "CHAR/PCSAB_M/JUMP",
             "sample_index": 1,
             "flags": 31
         },
         {
-            "hash": "CHAR/PCSAB_M/JUMP",
+            "hash": "CHAR/PCSAB_M/LAND",
             "sample_index": 2,
             "flags": 31
         },
         {
-            "hash": "CHAR/PCSAB_M/LAND",
+            "hash": "CHAR/PCSAB_M/LIFT_LONG",
             "sample_index": 3,
             "flags": 31
         },
         {
-            "hash": "CHAR/PCSAB_M/LIFT_LONG",
+            "hash": "CHAR/PCSAB_M/PICKUP/***RANDOM***/0",
             "sample_index": 4,
             "flags": 31
         },
@@ -164,11 +164,6 @@
     ],
     "samples": [
         {
-            "file": "pcsab_m\\PICKUP1.wav",
-            "format": 106,
-            "sample_rate": 22050
-        },
-        {
             "file": "pcsab_m\\DEATH.wav",
             "format": 106,
             "sample_rate": 22050
@@ -185,6 +180,11 @@
         },
         {
             "file": "pcsab_m\\LIFT_LONG.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "pcsab_m\\PICKUP1.wav",
             "format": 106,
             "sample_rate": 22050
         },

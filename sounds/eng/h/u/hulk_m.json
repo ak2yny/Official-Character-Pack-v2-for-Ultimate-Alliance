@@ -127,8 +127,13 @@
             "flags": 31
         },
         {
-            "hash": "CHAR/HULK_M/THROW",
+            "hash": "CHAR/HULK_M/STRUGGLE",
             "sample_index": 25,
+            "flags": 31
+        },
+        {
+            "hash": "CHAR/HULK_M/THROW",
+            "sample_index": 26,
             "flags": 31
         }
     ],
@@ -154,7 +159,7 @@
             "sample_rate": 22050
         },
         {
-            "file": "hulk_m\\PICKUP.wav",
+            "file": "hulk_m\\LIFT.wav",
             "format": 106,
             "sample_rate": 22050
         },
@@ -257,6 +262,11 @@
         },
         {
             "file": "hulk_m\\PAIN8.wav",
+            "format": 106,
+            "sample_rate": 22050
+        },
+        {
+            "file": "hulk_v\\STRUGGLE.wav",
             "format": 106,
             "sample_rate": 22050
         },
