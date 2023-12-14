@@ -162,13 +162,17 @@
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_M/THROW",
+            "hash": "CHAR/DOOM_M/STRUGGLE",
             "sample_index": 32,
+            "flags": 31},
+        {
+            "hash": "CHAR/DOOM_M/THROW",
+            "sample_index": 33,
             "flags": 31
         },
         {
             "hash": "CHAR/DOOM_M/GRAB_SMASH",
-            "sample_index": 33,
+            "sample_index": 34,
             "flags": 31
         }
     ],
@@ -204,12 +208,12 @@
             "sample_rate": 22050
         },
         {
-            "file": "doom_m\\PICKUP2.wav",
+            "file": "doom_m\\LIFT_LONG.wav",
             "format": 106,
             "sample_rate": 22050
         },
         {
-            "file": "doom_m\\PICKUP1.wav",
+            "file": "doom_m\\LIFT_SHORT.wav",
             "format": 106,
             "sample_rate": 22050
         },
@@ -335,6 +339,10 @@
             "format": 106,
             "sample_rate": 22050
         },
+        {
+            "file": "doom_v\\STRUGGLE.wav",
+            "format": 106,
+            "sample_rate": 22050},
         {
             "file": "doom_m\\THROW.wav",
             "format": 106,

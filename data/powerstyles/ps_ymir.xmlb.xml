@@ -1,0 +1,175 @@
+<PowerStyle>
+    <event damage="100" damagescale="difficulty" inherit="punch" knockback="555" name="ymir_club">
+        <damageMod name="dmgmod_auto_knockback" />
+    </event>
+    <FightMove aitype="melee" animenum="ea_power1" locktransitionangles="true" name="power_attack" noautoaim="true" priority="5" turnrate="0.2">
+        <trigger bolt="Bip01 Head" effect="char/ymir/p1_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/ymir/p1_power" fxlevel="2" name="effect" time="0.34" />
+        <trigger name="sound" sound="char/ymir_m/p1_charge" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/iceman/p1_aura" life="3.5" name="powerup" renderfx="chilled" tag="21" time="-1">
+            <affecter affect_type="scale" attribute="move" level="0.3" />
+        </trigger>
+        <trigger class="freeze" life="3.5" name="powerup" renderfx="chilled" sound1="char/ymir_m/p1_impact" sound2="char/ymir_m/p1_explode" tag="20" time="-1" user1="2">
+            <special_fx bolt="Bip01 Spine2" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/iceman/special_frozen" fxlevel="3" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/iceman/special_frozen" fxlevel="2" how_used="custom" tag="1" />
+            <powerup life="2" renderfx="chilled">
+                <special_fx bolt="Bip01 Spine2" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true" />
+                <affecter affect_type="scale" attribute="move" level="0.3" />
+            </powerup>
+        </trigger>
+        <event arc="20" attacktype="blast" damage="100" damagescale="difficulty" damagetype="dmg_cold" height="0" inherit="punch" maxrange="280" name="p_radius" verticalrange="470" victimeventtag="20" />
+        <event arc="20" attacktype="blast" damage="100" damagescale="difficulty" damagetype="dmg_cold" height="0" inherit="punch" maxrange="500" name="p_radius_slow" verticalrange="470" victimeventtag="21" />
+        <trigger name="sound" sound="char/ymir_m/p1_power" time="0.34" />
+        <trigger angle="0" name="p_radius" time="0.34" />
+        <trigger angle="0" name="p_radius_slow" time="0.34" />
+        <trigger angle="15" name="p_radius" time="0.45" />
+        <trigger angle="15" name="p_radius_slow" time="0.45" />
+        <trigger angle="-15" name="p_radius" time="0.65" />
+        <trigger angle="-15" name="p_radius_slow" time="0.65" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2" locktransitionangles="true" name="power_smash" noautoaim="true" playspeed="1.25" priority="5" turnrate="0.2">
+        <trigger name="sound" sound="char/ymir_m/p2_yell" time="0" />
+        <trigger name="sound" sound="char/ymir_m/p2_charge" time="0.4" />
+        <trigger effect="char/ymir/p2_power" name="effect" time="0.4" />
+        <trigger angle="-45" arc="18" height="80" maxrange="370" name="ymir_club" time="0.4" verticalrange="160" />
+        <trigger angle="-25" arc="12" height="0" maxrange="370" name="ymir_club" time="0.444" verticalrange="260" />
+        <trigger angle="0" arc="12" height="0" maxrange="370" name="ymir_club" time="0.47" verticalrange="260" />
+        <trigger angle="10" arc="12" height="0" maxrange="370" name="ymir_club" time="0.49" verticalrange="260" />
+        <trigger angle="20" arc="12" height="0" maxrange="370" name="ymir_club" time="0.52" verticalrange="260" />
+        <trigger angle="30" arc="12" height="0" maxrange="370" name="ymir_club" time="0.54" verticalrange="260" />
+        <trigger angle="38" arc="12" height="0" maxrange="370" name="ymir_club" time="0.55" verticalrange="260" />
+        <trigger angle="45" arc="12" height="0" maxrange="370" name="ymir_club" time="0.6" verticalrange="260" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power3" blendtime="0" locktransitionangles="true" name="power_boost" noautoaim="true" priority="5" turnrate="0.2">
+        <trigger effect="char/ymir/p3_power" fxlevel="1" name="effect" time="0.26" />
+        <trigger effect="char/ymir/p3_power" fxlevel="2" name="effect" time="0.32" />
+        <trigger name="sound" sound="char/ymir_m/p3_charge" time="0" />
+        <trigger angle="0" arc="9" height="0" maxrange="380" name="ymir_club" time="0.32" verticalrange="200" />
+        <trigger name="sound" sound="char/ymir_m/p3_power" time="0.32" />
+        <trigger angle="20" arc="12" height="0" maxrange="170" name="ymir_club" time="0.27" verticalrange="100" />
+        <trigger angle="20" arc="180" damage="100" damagescale="difficulty" height="0" knockback="900" maxrange="100" name="punch" offset="490" time="0.32">
+            <damageMod name="dmgmod_ground_only" />
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <trigger angle="20" arc="180" damage="40" damagescale="difficulty" height="0" knockback="900" maxrange="300" name="punch" offset="490" time="0.322">
+            <damageMod name="dmgmod_ground_only" />
+        </trigger>
+        <trigger donothing="true" life="1" name="hotspot" radius="420" time="0" />
+        <trigger jump="true" life="0.4" name="hotspot" radius="420" time="0.3" />
+        <trigger name="runscript" script="act3/niffleheim/niffleheim2/clubsmash" time="0.31" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power4" locktransitionangles="true" name="power_xtreme" noautoaim="true" priority="5" turnrate="0.2">
+        <trigger name="sound" sound="char/ymir_m/p4_charge" time="0" />
+        <trigger effect="char/ymir/p4_power" fxlevel="1" name="effect" time="0.44" />
+        <trigger angle="-10" arc="15" height="0" maxrange="170" name="ymir_club" time="0.42" verticalrange="100" />
+        <trigger angle="-10" arc="180" damage="100" damagescale="difficulty" height="0" knockback="620" maxrange="190" name="punch" offset="100" time="0.42">
+            <damageMod name="dmgmod_ground_only" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger angle="-10" arc="180" damage="50" damagescale="difficulty" height="0" maxrange="250" name="punch" offset="100" time="0.421">
+            <damageMod name="dmgmod_ground_only" />
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger angle="-10" arc="180" damage="1" damagescale="difficulty" height="0" maxrange="500" name="punch" offset="100" time="0.422">
+            <damageMod name="dmgmod_ground_only" />
+            <damageMod name="dmgmod_trip" />
+        </trigger>
+        <trigger life="2" name="hotspot" radius="500" time="0" />
+        <trigger jump="true" life="0.4" name="hotspot" radius="500" time="0.4" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power5" blendtime="0" handler="ch_grab_hold_base" name="challenge1" priority="5">
+        <trigger name="sound" sound="char/ymir_m/p5_charge" time="0" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_ymir_victim" name="victim" nodename="challenge1_victim" offset="531 4 71" time="0" victimface="true" />
+        <trigger as_weapon="false" bolt="Bip01 L Hand" name="bolt_victim" remove_victim_ent="false" time="0" type="ce_bolt_victim_model" />
+        <trigger doslidemove="true" name="victim" offset="390 5 121" time="0.58" victimface="true" />
+    </FightMove>
+    <FightMove animenum="ea_power6" handler="ch_grab_hold_base" lockangles="true" name="challenge2" priority="5">
+        <trigger doslidemove="true" name="victim" offset="156 -113 276" time="0" victimface="true" />
+    </FightMove>
+    <FightMove animenum="ea_power7" handler="ch_grab_hold_base" lockangles="true" name="challenge3" priority="5">
+        <trigger doslidemove="true" name="victim" offset="0 -87 454" time="0" victimface="true" />
+    </FightMove>
+    <FightMove animenum="ea_power8" handler="ch_grab_hold_base" lockangles="true" name="challenge4" priority="5">
+        <trigger doslidemove="true" motion_track_offset="false" name="victim" offset="100 2 500" time="0" victimface="away" />
+        <chain action="Idle" result="null" />
+    </FightMove>
+    <FightMove animenum="ea_power11" handler="ch_grab_hold_base" lockangles="true" name="ymir_challenge4_fail" priority="5">
+        <trigger critical="true" doslidemove="true" name="victim" offset="249 2 285" time="0" victimface="true" />
+        <trigger arc="30" damage="200" damagescale="none" height="354" maxrange="520" name="punch" time="0.75" verticalrange="100" />
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.75" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power9" lockangles="true" name="challenge5" priority="5">
+        <trigger critical="true" name="victim_release" ownertime="1" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power10" blendtime="0.8" lockangles="true" name="challenge_lose1" priority="5">
+        <trigger critical="true" name="victim_release" ownertime="1" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_idle" lockangles="true" lockchaining="false" locktransitionangles="true" name="idle" noncombat="true">
+        <chain action="walk" result="null" />
+        <chain action="run" result="null" />
+        <chain action="sprint" result="null" />
+        <chain action="strafeleft" result="null" />
+        <chain action="straferight" result="null" />
+        <chain action="advance" result="null" />
+        <chain action="retreat" result="null" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="groundattack" result="null" />
+        <chain action="move" result="null" />
+        <chain action="special" result="null" />
+        <chain action="blocking" result="null" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_bored_loop_1" blendtime="0.2" handler="ch_bored_loop" lockchaining="false" name="boredloop" noncombat="true">
+        <chain action="walk" result="null" />
+        <chain action="run" result="null" />
+        <chain action="sprint" result="null" />
+        <chain action="strafeleft" result="null" />
+        <chain action="straferight" result="null" />
+        <chain action="advance" result="null" />
+        <chain action="retreat" result="null" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="groundattack" result="null" />
+        <chain action="move" result="null" />
+        <chain action="special" result="null" />
+        <chain action="blocking" result="null" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_bored_1_1" handler="ch_bored_generic" lockchaining="false" name="boredgeneric" noncombat="true">
+        <chain action="walk" result="null" />
+        <chain action="run" result="null" />
+        <chain action="sprint" result="null" />
+        <chain action="strafeleft" result="null" />
+        <chain action="straferight" result="null" />
+        <chain action="advance" result="null" />
+        <chain action="retreat" result="null" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="groundattack" result="null" />
+        <chain action="move" result="null" />
+        <chain action="special" result="null" />
+        <chain action="blocking" result="null" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_walk1" handler="ch_move" lockchaining="false" name="walk" noncombat="true">
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_run1" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_sprint1" handler="ch_move" lockchaining="false" name="sprint" noncombat="true">
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

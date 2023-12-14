@@ -1,0 +1,361 @@
+<PowerStyle iconfile="textures/ui/moonknight_icons.png">
+    <event actorskin="4150" anim_set="41_Moonknight_staff" bolt="Bip01 L Hand" boltslot="ebolton_clawright" ignoreanimmap="true" name="nunchuck_bolton" replacecurrent="true" type="ce_bolton"/>
+    <event bolt="Bip01 L Hand" boltslot="ebolton_clawright" inherit="bolton" model="models/bolton/moonknight_staff" name="staff_bolton"/>
+    <event inherit="sound" name="staff_woosh" sound="char/moon_m/staff_swing"/>
+    <event class="requirements" inherit="powerup" life="-1" name="skin22_powerup" remove_on_node_end="true">
+        <require cat="skill" item="moonk_outfit22"/>
+        <affecter affect_type="scale" attribute="damage" level="%moonk_outfit22_dmg"/>
+    </event>
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <chain action="special" result="idle"/>
+        <chain action="rollleft" result="rollforward"/>
+        <chain action="rollright" result="rollforward"/>
+        <chain action="retreat" result="rollforward"/>
+        <chain action="advance" result="rollforward"/>
+    </FightMove>
+    <FightMove animenum="ea_power12" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.54">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger name="staff_woosh" time="0.2"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger effect="char/moonk/special_attack" fxlevel="1" name="effect" tag="1" time="0.17"/>
+        <trigger name="punch" time="0.36"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power13" endchaintime="1" fallback="attacklight2" lockangles="true" name="attacklight2" priority="3" startchaintime="0.5">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger name="staff_woosh" time="0.2"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger effect="char/moonk/special_attack" fxlevel="2" name="effect" time="0.23"/>
+        <trigger name="punch" time="0.33"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power14" fallback="attacklight3" inherit="attacklight1" name="attacklight3">
+        <trigger fxlevel="3" tag="1" time="0.28"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power15" fallback="attackheavy1" handler="ch_hold_smash" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
+    </FightMove>
+    <FightMove animenum="ea_power16" fallback="attack_knockback_charge" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1"/>
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14"/>
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1"/>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power17" blendtime="0.1" endchaintime="1" fallback="attackknockback2" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger charge_type="stop" name="charge" time="0"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1"/>
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1"/>
+        <trigger effect="char/moonk/special_attack" fxlevel="4" name="effect" time="0.22"/>
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.25"/>
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power18" endchaintime="1" fallback="popupattack2" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <trigger name="staff_woosh" time="0.23"/>
+        <trigger movement="20" name="slide" time="0.17"/>
+        <trigger charge="1" name="charge" time="0"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_ground"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </trigger>
+        <trigger effect="char/moonk/special_attack" fxlevel="5" name="effect" time="0.22"/>
+        <trigger bolt="Bip01 L Hand" life="0.23" name="trail" time="0.25"/>
+        <trigger name="punch" time="0.35"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power19" endchaintime="1" fallback="attackstun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.55">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1"/>
+        <trigger effect="char/moonk/special_attack" fxlevel="6" name="effect" time="0.28"/>
+        <trigger name="staff_woosh" time="0.23"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Hand" life="0.15" name="trail" time="0.25"/>
+        <trigger name="backhand1" time="0.31"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="smash" result="attackstun_finish"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="attacktrip2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power20" endchaintime="1" fallback="attackstun_finish" lockangles="true" name="attackstun_finish">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1">
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </event>
+        <trigger effect="char/moonk/special_attack" fxlevel="7" name="effect" time="0.22"/>
+        <trigger name="staff_woosh" time="0.25"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" time="0.3"/>
+        <trigger name="backhand1" time="0.4"/>
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power8_loop" blendtime="0.1" endchaintime="1" fallback="attacktrip2" lockangles="true" name="attacktrip2">
+        <require cat="affecter" item="special" level="5"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger boltslot="ebolton_clawright" critical="on_exit" name="bolton" removebolton="true" time="-1"/>
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip"/>
+            <damageMod name="dmgmod_ground"/>
+        </event>
+        <trigger effect="char/moonk/special_attack" fxlevel="8" name="effect" time="0.26"/>
+        <trigger name="staff_woosh" time="0.2"/>
+        <trigger movement="10" name="slide" time="0.06"/>
+        <trigger bolt="Bip01 R Toe0" life="0.4" name="trail" time="0.13"/>
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28"/>
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3"/>
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_power11" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6">
+        <trigger anim="power_11" name="nunchuck_bolton" time="0"/>
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_moonknight_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true"/>
+        <trigger name="stop" time="0"/>
+        <trigger flag1="nopush" name="flags" time="0" type="ce_set_flags"/>
+        <trigger critical="on_exit" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags"/>
+        <trigger damage="2 3" name="punch" time="0.25"/>
+        <trigger name="stop" time="0.5"/>
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.5"/>
+        <trigger effect="char/moonk/grabsmash_proj" fxlevel="2" name="effect" time="0.66"/>
+        <trigger effect="char/moonk/grabsmash_proj" fxlevel="1" name="effect_sound" sound="char/moon_m/throw_multi" time="0.75"/>
+        <trigger execute_against="owner" name="otherevent" othertag="1" time="0.79"/>
+        <trigger damage="2 3" damagescale="normal" index="2" knockback="190" name="hitme" tag="1" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_no_pain"/>
+        </trigger>
+        <trigger boltslot="ebolton_clawright" critical="true" name="removebolton" removebolton="true" time="1" type="ce_bolton"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1" combotextfinisher="Crescent" combotextstarter="Slicing" icon="0" is_power="true" lockangles="true" name="power1" noautoaim="true" priority="5">
+        <require cat="skill" item="moonk_p1" level="1"/>
+        <trigger effect="char/moonk/p1_power" fxlevel="2" name="effect" time="0.3"/>
+        <trigger name="skin22_powerup" time="0"/>
+        <trigger name="sound" sound="char/moon_m/throw_multi" time="0.29"/>
+        <trigger arc="0" attacktype="projectile" center="true" count="%moonk_p1_num" damage="%moonk_p1_dmg" damagescale="none" damagetype="dmg_energy" entity="moonk_p1_proj" filename="ents_moonknight" maxrange="800" name="projectile" powerusage="%moonk_p1_pwr" speed="800" time="0.29"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power2" icon="1" is_power="true" name="power2" powerup_tag="moonk_p2" priority="5" startchaintime="0.85" turnrate="0.5">
+        <require cat="skill" item="moonk_p2" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.8"/>
+        <trigger name="powerusage" powerusage="%moonk_p2_pwr" time="0"/>
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0.8"/>
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" loop_type="start" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="p2_link" time="0.8">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="power2_release"/>
+        <chain action="samepowerhold" result="power2_loop"/>
+    </FightMove>
+    <FightMove always_target="true" animenum="ea_power2_loop" blendtime="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="moonk_p2" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <chain action="Idle" result="power2_release"/>
+        <chain action="samepowerhold" result="power2_loop"/>
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power2_end" combotextfinisher="Hook" combotextstarter="Grappling" is_power="true" lockangles="true" locktransitionangles="true" name="power2_release" powerup_tag="moonk_p2" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0"/>
+        <trigger name="sound" sound="char/moon_m/cable" time="0.17"/>
+        <trigger critical="true" name="powerup" remove_tag="p2_link" time="0.17"/>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="16 0 37" attacktype="projectile" count="1" damage="%moonk_p2_dmg" damagemods_require_charge="true" damagescale="none" damagetype="dmg_physical" entity="moonk_p2_proj" filename="ents_moonknight" fulltargeting="true" knockback="40" life="%moonk_p2_lif" name="projectile" pierce="true" speed="1500" targetable="false" time="0.17">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_ground_only"/>
+        </trigger>
+        <trigger name="powerup" remove_on_node_end="true" time="0.17">
+            <special_fx bolt="Bip01 R Hand" bolt2ent="moonk_p2_proj" effect="char/moonk/p2_power" fxlevel="2" how_used="primary"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power3" combotextfinisher="Blast" combotextstarter="Driving" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="moonk_p3" level="1"/>
+        <trigger name="staff_bolton" time="0"/>
+        <trigger effect="char/moonk/p3_power" fxlevel="1" name="effect_sound" sound="char/moon_m/staff_out" time="0"/>
+        <trigger effect="char/moonk/p3_power" fxlevel="3" name="effect_sound" sound="char/moon_m/staff_hit" time="0.55"/>
+        <trigger damage="%moonk_p3_dmg" damagetype="dmg_physical" knockback="120" maxrange="150" name="radial" powerusage="%moonk_p3_pwr" time="0.5">
+            <damagemod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <trigger boltslot="ebolton_clawright" critical="true" name="bolton" removebolton="true" time="1"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="10" aitype="projectile" animenum="ea_power4" blendtime="0" combotextfinisher="Slice" combotextstarter="Dicing" handler="ch_returning_projectile" icon="3" is_power="true" lockangles="true" name="power4" priority="5" startchaintime="0.75">
+        <require cat="skill" item="moonk_p4" level="1"/>
+        <trigger name="skin22_powerup" time="0"/>
+        <trigger name="kill_boomerang" time="0" type="ce_destroy_personal_proj"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="sound" sound="char/moon_m/p4_throw" time="0.65"/>
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="16 0 48" attacktype="projectile" count="1" damage="%moonk_p4_dmg" damagescale="none" damagetype="dmg_energy" entity="moonk_p4_proj" filename="ents_moonknight" fulltargeting="true" knockback="120" maxrange="800" name="projectile" pierce="true" powerusage="%moonk_p1_pwr" speed="450" targetable="true" time="0.65">
+            <Damagemod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <chain action="samepowerhold" result="power4_loop"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" combotextfinisher="Onslaught" combotextstarter="Rallying" handler="ch_returning_projectile" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_loop" noautoaim="true" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <chain action="idle" result="idle"/>
+        <chain action="samepowerhold" result="power4_loop"/>
+        <chain action="special" result="power4_end"/>
+    </FightMove>
+    <FightMove animenum="ea_power4_end" blendtime="0" combotextfinisher="Onslaught" combotextstarter="Rallying" is_power="true" lockangles="true" locktransitionangles="true" name="power4_end" noautoaim="true" powerup_tag="captam_shield" priority="5">
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power5" combotextfinisher="Knockout" combotextstarter="Boxing" icon="4" is_power="true" locktransitionangles="true" name="power5" noautoaim="true" powerup_tag="moon5" priority="5" turnrate="0.5">
+        <require cat="skill" item="moonk_p5" level="1"/>
+        <trigger button="samepowerclick" name="button_hint" time="0"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger anim="power_5" name="nunchuck_bolton" tag="1" time="0"/>
+        <trigger name="sound" sound="char/moon_m/numchuck_end" tag="2" time="0"/>
+        <trigger force_stack="true" life="%moonk_p5_lif" name="powerup" tag="100" time="-1">
+            <affecter attribute="move_attack" level="%moonk_p5_inc"/>
+        </trigger>
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="moon5_tag" time="0"/>
+        <trigger effect="char/moonk/p5_power" fxlevel="1" name="effect" tag="10" time="0.6"/>
+        <trigger damage="%moonk_p5_dmg" damagescale="none" name="punch" powerusage="%moonk_p5_pwr" selfeventtag="100" time="0.6"/>
+        <trigger name="sound" sound="char/moon_m/numchuck" tag="3" time="0.6"/>
+        <trigger boltslot="ebolton_clawright" critical="true" name="removebolton" removebolton="true" time="1" type="ce_bolton"/>
+        <chain action="idle" result="power5_loop1"/>
+        <chain action="samepowerclick" result="power5_loop1"/>
+    </FightMove>
+    <FightMove animenum="ea_power9" inherit="power5" name="power5_loop1" powerup_tag="moon5">
+        <trigger anim="power_9" tag="1"/>
+        <trigger tag="2" time="-1"/>
+        <trigger fxlevel="2" tag="10" time="0.3"/>
+        <chain action="idle" result="power5_end"/>
+        <chain action="samepowerclick" result="power5_loop2"/>
+    </FightMove>
+    <FightMove animenum="ea_power10" inherit="power5_loop1" name="power5_loop2" powerup_tag="moon5">
+        <trigger anim="power_10" tag="1"/>
+        <trigger fxlevel="3" how_used="primary" tag="10" time="0.3"/>
+        <chain action="idle" result="power5_end"/>
+        <chain action="samepowerclick" result="power5_loop1"/>
+    </FightMove>
+    <FightMove animenum="ea_power5_end" is_power="true" lockangles="true" name="power5_end" powerup_tag="moon5" priority="5">
+        <trigger anim="power_5_end" name="nunchuck_bolton" time="0"/>
+        <trigger name="sound" sound="char/moon_m/numchuck_end" time="0.5"/>
+        <trigger boltslot="ebolton_clawright" critical="true" name="removebolton" removebolton="true" time="1" type="ce_bolton"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="moonk_p6" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/moonk/p6_power" fxlevel="1" name="effect" time="0.25"/>
+        <trigger bolt="Bip01 R Hand" effect="char/moonk/p6_power" fxlevel="1" name="effect_sound" sound="char/moon_m/staff_combat" time="0.25"/>
+        <trigger life="%moonk_p6_lif" name="powerup" powerusage="%moonk_p6_pwr" time="0.5">
+            <affecter attribute="special" level="5"/>
+            <special_fx effect="char/moonk/p6_power" fxlevel="2" how_used="primary"/>
+            <special_fx effect="char/moonk/p6_power" fxlevel="3" how_used="deactivation"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="moonk_p7" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/moonk/p7_power" fxlevel="1" name="effect" time="0.25"/>
+        <trigger bolt="Bip01 R Hand" effect="char/moonk/p7_power" fxlevel="1" name="effect_sound" sound="char/moon_m/full_moon" time="0.25"/>
+        <trigger class="sense" enemy="true" life="%moonk_p7_lif" name="powerup" powerusage="%moonk_p7_pwr" time="0.5">
+            <affecter attribute="def_dodge" level="%moonk_p7_dodge"/>
+            <special_fx effect="char/moonk/p7_power" fxlevel="2" how_used="primary"/>
+            <special_fx effect="char/moonk/p7_power" fxlevel="3" how_used="deactivation"/>
+        </trigger>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="moonk_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Devastation" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <trigger name="skin22_powerup" time="0"/>
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger bolt="Bip01 L Hand" effect="char/moonk/p8_power" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/moonk/p8_power" fxlevel="1" name="effect" time="0"/>
+        <trigger effect="char/moonk/p8_power" fxlevel="2" name="effect" time="0"/>
+        <trigger description="!BADFILE:@HERO_MOOONKNIGHT@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Lunar Eclipse"/>
+        <trigger name="sound" sound="char/moon_m/xtreme_launch" time="0.3"/>
+        <event attacktype="projectile" damage="%moonk_p8_dmg" damagescale="none" damagetype="dmg_energy" entity="moonk_p8_proj" filename="ents_moonknight" inherit="projectile" maxinstances="8" name="p8_proj" pierce="true" speed="1500" useboltangles="true"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 0" attack_bone_pos="5 -20 43" index="1" name="p8_proj" time="0.315"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -135" attack_bone_pos="-33 -6 45" index="2" name="p8_proj" time="0.33"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 -45" attack_bone_pos="-13 -23 45" index="3" name="p8_proj" time="0.36"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 135" attack_bone_pos="1 22 44" index="4" name="p8_proj" time="0.37"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 -90" attack_bone_pos="-9 -19 42" index="5" name="p8_proj" time="0.44"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 90" attack_bone_pos="8 20 45" index="6" name="p8_proj" time="0.45"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 180" attack_bone_pos="-5 16 44" index="7" name="p8_proj" time="0.48"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 45" attack_bone_pos="32 12 42" index="8" name="p8_proj" time="0.5"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+</PowerStyle>

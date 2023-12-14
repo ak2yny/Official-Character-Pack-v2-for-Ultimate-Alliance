@@ -4,67 +4,67 @@
         {
             "hash": "CHAR/DOOM_V/1_HELI3_030_010_DOO",
             "sample_index": 0,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/3_NIFFLEHEIM2_042_010_DOO",
             "sample_index": 1,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/3_NIFFLEHEIM2_042_011_DOO",
             "sample_index": 2,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/3_NIFFLEHEIM2_042_013_DOO",
             "sample_index": 3,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/3_NIFFLEHEIM2_042_015_DOO",
             "sample_index": 4,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_001_DOO",
             "sample_index": 5,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_002_DOO",
             "sample_index": 6,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_003_DOO",
             "sample_index": 7,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_004_DOO",
             "sample_index": 8,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_005_DOO",
             "sample_index": 9,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_006_DOO",
             "sample_index": 10,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_007_DOO",
             "sample_index": 11,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/5_DOOM5_114_008_DOO",
             "sample_index": 12,
-            "flags": 31
+            "flags": 255
         },
         {
             "hash": "CHAR/DOOM_V/BORED/***RANDOM***/0",
@@ -197,6 +197,11 @@
             "flags": 31
         },
         {
+            "hash": 258245554,
+            "sample_index": 39,
+            "flags": 31
+        },
+        {
             "hash": "CHAR/DOOM_V/LAUGH_SHORT",
             "sample_index": 39,
             "flags": 31
@@ -282,12 +287,12 @@
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/STRUGGLE",
+            "hash": "CHAR/DOOM_V/TAUNTKD/***RANDOM***/0",
             "sample_index": 56,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/TAUNTKD/***RANDOM***/0",
+            "hash": "CHAR/DOOM_V/TAUNTKD/***RANDOM***/1",
             "sample_index": 57,
             "flags": 31
         },
@@ -297,63 +302,58 @@
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/TAUNTKD/***RANDOM***/3",
+            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/0",
             "sample_index": 59,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/0",
+            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/1",
             "sample_index": 60,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/1",
+            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/2",
             "sample_index": 61,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/TOOHEAVY/***RANDOM***/2",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/0",
             "sample_index": 62,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/0",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/1",
             "sample_index": 63,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/1",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/2",
             "sample_index": 64,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/2",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/3",
             "sample_index": 65,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/3",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/4",
             "sample_index": 66,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/4",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/5",
             "sample_index": 67,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/5",
+            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/6",
             "sample_index": 68,
             "flags": 31
         },
         {
-            "hash": "CHAR/DOOM_V/VICTORY/***RANDOM***/6",
-            "sample_index": 69,
-            "flags": 31
-        },
-        {
             "hash": "CHAR/DOOM_V/XTREME",
-            "sample_index": 70,
+            "sample_index": 69,
             "flags": 31
         }
     ],
@@ -635,11 +635,6 @@
         },
         {
             "file": "doom_v\\RESPAFFIRM4.wav",
-            "format": 106,
-            "sample_rate": 22050
-        },
-        {
-            "file": "doom_v\\STRUGGLE.wav",
             "format": 106,
             "sample_rate": 22050
         },
