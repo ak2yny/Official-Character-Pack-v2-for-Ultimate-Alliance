@@ -39,6 +39,11 @@ Other:
   IMPORTANT: For experts only.
 - "1 Recommended Game Stability Mods" include fixes by the Outsider and reducers by Spoony, which should reduce the chance for crashes because of limits.
 - "2 Full X_Voice" adds roster callouts for modded characters not included in the OCP, should you install any characters yourself.
+- "Optional Character Sounds" includes ZSM/ZSS files with differences as follows:
+   - Thor: Added pickup and grab grunt sound (officially added but not working - left out in main because Thor lifts effortlessly)
+   - Dark Phoenix: Alternate grunts and a few power sounds, using as many XML2 PSP sounds as possible
+                   Notes: From leftover files in a PC version
+                          The sounds in main are from Outsider's booster, which sound better, that's why this is optional
 - "Optional Extra Daredevil Action Figure": Suggested by Cyborg Sun, Rampage created a mod for Attilan adding another Daredevil action figure, as every other hub had a hidden figure previously.
 - "Optional Invisible Player Indicator and target selector" is what gave the colored rings around the characters currently being played.
 - "Optional Main Menu BG with image instead of video" makes it so that you the video playing in the background of start menu is a loadscreen instead.
