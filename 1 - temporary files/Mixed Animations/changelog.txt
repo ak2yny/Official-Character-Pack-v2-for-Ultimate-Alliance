@@ -1,6 +1,15 @@
 Changelog by ak2yny
 -------------------
 
+Notes:
+- Dihan\Dust
+   useless files: data\fightstyles\fightstyle_dust.engb
+                  Packages\generated\fightstyles\fightstyle_dust.engb
+                  Packages\generated\characters\dust_xml.pkgb
+- Deedooo's Patriot Mod V1.0
+   useless files: data\fightstyles\fightstyle_pat.xmlb
+
+
 v3:
 - Erik Lensherr\Ermac (Mortal Kombat)
    Completely new mix, using correct priority this time: low - fightstyle; mid - normal set (except in non-combat); high - 4_combat set
@@ -46,6 +55,8 @@ v3:
    Removed fightstyle_t800 from packages.
 - Boreman\CannonballV2
    Uses fightstyle_default (even before). Mixed animations from 157_luke_cage, 07_rogue (XML2) and fightstyle_default (07_captamerica_4_combat).
+- Canino\Hyperion
+   Added packages where leftover references to fightstyle_ironfist are removed.
 - Deedoo\Speed
    Added power_8 from Cap's fightstyle_default.
    Note: 147_spd.igb had two power_2. I used the first one, assuming that that's what the game does.
@@ -87,18 +98,42 @@ v3:
    Added attackstun_finish and attacktrip2 from his old fightstyle to the powerstyle, assuming they have the correct effect biped binding.
 - LucasFernandesBR\Morrigan (Darkstalkers)
    Added packages where fightstyle animation set reference is removed.
+- Matt710\Enchantress (Marvel)
+   Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (heavy+light attack chains, ground attack)
+   Added packages where fightstyle animation set reference is removed.
+- LucasFernandesBR\Black Dwarf
+   Added packages where fightstyle animation set reference is removed.
 - MelloMods\Adam Warlock
    Added packages where fightstyle animation set reference is removed.
+- MelloMods\Deathlok
+   Added packages where fightstyle animation set reference is removed.
+- Neeboo Nine\Gorgon (Avalanche clone)
+   Mixed animation sets with fightstyle_thing (05_thing_4_combat).
+   Removed fightstyle references and replaced with default in herostat.
+   Added two moves from fightstyle_thing from OCP (heavy attack).
 - Norrin Radd\Banshee
    Added packages where fightstyle animation set reference is removed.
 - Norrin Radd\Cable
    Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (heavy attack chain & fury's ground attacks)
 - sbarth13\Ares (Marvel)
    Added packages where fightstyle animation set reference is removed.
+- sbarth13\Beta Ray Bill
+   Added packages where fightstyle animation set reference is removed.
+- sbarth13\Black Bolt
+   Added packages where fightstyle animation set reference is removed.
 - sbarth13\Dagger
    Changed to fightstyle_default & added 3 moves from fs dagger to ps.
    Mixed animations from 12_elektra_4_combat, 24_scarlet_witch (XML2) and 238_dagger (MUA2 - Wii version instead of PSP/PS2).
    Using the version from the mod_update (including shared_talents).
+   Added packages from his previous version which don't have fightstyle animation set references.
+- sbarth13\Daimon Hellstrom
+   Added packages where fightstyle animation set reference is removed.
+- sbarth13\Drax The Destroyer
+   Added packages where fightstyle animation set reference is removed.
+- sbarth13\Gamora
+   Added packages where fightstyle animation set reference is removed.
+- sbarth13\Gorgon
+   Added packages where fightstyle animation set reference is removed.
 - thetommyboy2002\The Flash
    Added first package where fightstyle animation set reference is removed.
 - Tien\Green Lantern
@@ -133,6 +168,7 @@ v3:
 - Julio Cabral\Hercules
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight1-3, attackstun_finish, attackknockback2)
    Note: ea_ground_attack1 is not in shared_anims. Using the default fighmove here (only the animation is different).
+   Added second package where fightstyle animation set reference is removed.
 - Lean\Vertigo
    Fixed ce_spawn_actor using the correct character (Vertigo). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
    Removed skin and skin filter, since using herself as a character for spawning automatically uses the current skin.
