@@ -55,6 +55,9 @@ v3:
    Removed fightstyle_t800 from packages.
 - Boreman\CannonballV2
    Uses fightstyle_default (even before). Mixed animations from 157_luke_cage, 07_rogue (XML2) and fightstyle_default (07_captamerica_4_combat).
+- Canino\Iron Fist
+   Added packages where leftover references to fightstyle are removed.
+   Note: The packages (especially the 8th and 9th NC packages) include other useless entries.
 - Canino\Hyperion
    Added packages where leftover references to fightstyle_ironfist are removed.
 - Deedoo\Speed
@@ -65,6 +68,8 @@ v3:
    Note: originally used 145_wic only, but mixed it to use it plus the 4_combat animation file. Two animations don't exist in MUA's shared_anims, but I added them again, just in case.
 - Dihan\Elixir
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash & jumpsmash_release_impact)
+- iammingy\Iron Fist
+   Added packages where leftover references to fightstyle are removed.
 - Julio Cabral\Sentry (Marvel)
    Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash_release_impact)
    Note: Version 1.1
@@ -134,6 +139,8 @@ v3:
    Added packages where fightstyle animation set reference is removed.
 - sbarth13\Gorgon
    Added packages where fightstyle animation set reference is removed.
+- sbarth13\Karnak
+   Added packages where fightstyle animation set reference is removed.
 - thetommyboy2002\The Flash
    Added first package where fightstyle animation set reference is removed.
 - Tien\Green Lantern
@@ -169,6 +176,9 @@ v3:
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight1-3, attackstun_finish, attackknockback2)
    Note: ea_ground_attack1 is not in shared_anims. Using the default fighmove here (only the animation is different).
    Added second package where fightstyle animation set reference is removed.
+- Lean\Kate Bishop
+   added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash)
+   Added packages where fightstyle animation set reference is removed.
 - Lean\Vertigo
    Fixed ce_spawn_actor using the correct character (Vertigo). No need for shared_nodes_combat anymore, this file can now safely be replaced by the OCP2 version.
    Removed skin and skin filter, since using herself as a character for spawning automatically uses the current skin.
