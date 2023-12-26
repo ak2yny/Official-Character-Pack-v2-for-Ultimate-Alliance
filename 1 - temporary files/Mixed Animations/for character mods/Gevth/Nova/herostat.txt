@@ -1,0 +1,65 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser ;
+   body = 5 ;
+   characteranims = 183_nova ;
+   charactername = Nova ;
+   level = 1 ;
+   menulocation = xx ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = nova ;
+   playable = true ;
+   powerstyle = ps_nova ;
+   scriptlevel = 3 ;
+   skin = 18301 ;
+   skin_01_name = Original ;
+   skin_02 = 02 ;
+   skin_02_name = New Warrior ;
+   skin_03 = 03 ;
+   skin_03_name = Retro ;
+   skin_04 = 04 ;
+   skin_04_name = Kid Nova ;
+   skin_05 = 05 ;
+   skin_05_name = Annihilation (UMvC3) ;
+   sounddir = nova_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 6 ;
+      talent {
+      level = 1 ;
+      name = nova_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = block ;
+      }
+
+      talent {
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      effect = char/nova/special_beam ;
+      fxlevel = 1 ;
+      }
+
+   }

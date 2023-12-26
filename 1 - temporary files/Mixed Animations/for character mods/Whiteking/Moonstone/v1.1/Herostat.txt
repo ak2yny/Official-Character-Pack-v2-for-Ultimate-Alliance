@@ -1,0 +1,67 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 249_moonstone ;
+   charactername = Moonstone ;
+   level = 1 ;
+   menulocation = xxxxx ;
+   mind = 12 ;
+   moveset1 = moveset_flying ;
+   name = Moonstone ;
+   playable = true ;
+   powerstyle = ps_moonstone ;
+   scriptlevel = 3 ;
+   skin = 24901 ;
+   skin_01_name = Moonstone ;
+   skin_02 = 02 ;
+   skin_02_name = Ms. Marvel ;
+   skin_03 = 03 ;
+   skin_03_name = Thunderbolts ;
+   skin_04 = 04 ;
+   skin_04_name = Meteorite ;
+   sounddir = moonst_m ;
+   strength = 4 ;
+   team = hero ;
+   textureicon = 5 ;
+      talent {
+      level = 1 ;
+      name = mstone_power3 ;
+      }
+
+  
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent { 
+      level = 1 ;
+      name = might ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 L Hand ;
+      effect = char/mstone/p1_phase ;
+      fxlevel = 1 ;
+      }
+
+      StatEffect {
+      anim = flying ;
+      bolt = Bip01 R Hand ;
+      effect = char/mstone/p1_phase ;
+      fxlevel = 1 ;
+      }
+
+   }
