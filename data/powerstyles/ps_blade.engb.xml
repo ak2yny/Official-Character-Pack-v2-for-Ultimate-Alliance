@@ -1,0 +1,463 @@
+<PowerStyle iconfile="textures/ui/blade_icons.png">
+    <event inherit="skinsegment" name="draw_sword" show="true" show2="false" skinsegment="0101_sword_segment" skinsegment2="0101_sword_back_segment" />
+    <event inherit="skinsegment" name="draw_gun" show="true" show2="false" skinsegment="0101_gun_segment" skinsegment2="0101_gun_back_segment" />
+    <event inherit="skinsegment" name="sheath_sword" show="true" show2="false" skinsegment="0101_sword_back_segment" skinsegment2="0101_sword_segment" />
+    <event inherit="skinsegment" name="holster_gun" show="true" show2="false" skinsegment="0101_gun_back_segment" skinsegment2="0101_gun_segment" />
+    <event class="requirements" inherit="powerup" name="weapon_mastery" remove_on_node_end="true">
+        <require cat="skill" item="blade_outfit31" level="1" />
+        <affecter affect_type="scale" attribute="atk_damage" level="%blade_outfit31_pct" />
+    </event>
+    <FightMove animenum="ea_power9" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="stop" time="0" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <affecter affect_type="scale" attribute="atk_vampire" level="%blade_grabs_hlth" />
+            <affecter affect_type="scale" attribute="atk_vampire_energy" level="%blade_grabs_nrgy" />
+        </trigger>
+        <trigger name="whoosh_light" time="0" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_blade_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger name="sound" sound="char/blade_m/p8_attack" time="0.48" />
+        <trigger damage="4 5" name="punch" offset="-30" time="0.48" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="0.8" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="draw_sword" time="0" />
+        <trigger critical="on_exit" name="sheath_sword" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger name="draw_sword" time="0.04" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.28" name="trail" time="0.14" />
+        <trigger arc="65" name="kick" time="0.28" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.77" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.1" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger name="draw_sword" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.18" />
+        <trigger arc="65" name="kick" time="0.29" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.9" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.1" lockangles="true" name="attacklight3">
+        <trigger name="whoosh_light" time="0.26" />
+        <trigger name="draw_sword" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.22" />
+        <trigger arc="70" name="kick" time="0.35" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" blendtime="0.1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.6">
+        <trigger name="draw_sword" time="0" />
+        <trigger name="whoosh_heavy" time="0.26" />
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.2" />
+        <trigger knockback="0" maxrange="60" name="kick_heavy" time="0.4" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.867" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" blendtime="0.1" lockangles="true" name="attackstun_finish">
+        <trigger name="draw_sword" time="0" />
+        <trigger name="whoosh_heavy" time="0.18" />
+        <trigger bolt="fx01" life="0.27" name="trail" time="0.16" />
+        <trigger knockback="0" maxrange="70" name="kick_heavy" time="0.273">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger critical="on_exit" name="sheath_sword" time="0.864" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.6">
+        <trigger name="draw_sword" time="0" />
+        <trigger name="whoosh_heavy" time="0.22" />
+        <trigger movement="20" name="slide" time="0.25" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.2" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="punch" time="0.33" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.775" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.1" lockangles="true" name="attacktrip2">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="draw_sword" time="0" />
+        <trigger name="whoosh_light" time="0.28" />
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.25" />
+        <trigger angle="-35" height="-10" index="1" name="sweep" time="0.33" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.37" />
+        <trigger angle="35" height="-10" index="1" name="sweep" time="0.41" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.882" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.05" handler="ch_hold_smash" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.4" turnrate="0.5">
+        <trigger bolt="Bip01 R Hand" boltslot="ebolton_weapon" model="models/bolton/blade_shotgun" name="bolton" replacecurrent="true" time="0.07" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="bolton" removebolton="true" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" bolt_point="fx" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" bolt_point="fx" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger bolt="Bip01 R Hand" boltslot="ebolton_weapon" model="models/bolton/blade_shotgun" name="bolton" replacecurrent="true" time="0" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="bolton" removebolton="true" time="-1" />
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="bolton" removebolton="true" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger bolt="Bip01 R Hand" boltslot="ebolton_weapon" model="models/bolton/blade_shotgun" name="bolton" replacecurrent="true" time="0" />
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.21" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.21" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.21" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.21" />
+        <trigger arc="67" damage="3 4" knockback="190" maxrange="84" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger arc="72" damage="2 3" knockback="190" maxrange="96" name="kick" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.21" />
+        <trigger bolt="Bip01 R Hand" bolt_point="fx" effect="char/blade/p4_power" fxlevel="2" name="effect" time="0.21" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.86" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_ground1" endchaintime="1" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack" noautoaim="true" startchaintime="0.44">
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="draw_sword" time="0" />
+        <trigger movement="12" name="slide" targetdistance="50" time="0.16" />
+        <trigger name="whoosh_heavy" time="0.2" />
+        <trigger bolt="fx01" life="0.24" name="trail" time="0.12" />
+        <trigger name="ground_attack" time="0.28" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.88" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="attack" result="attacklight1" />
+    </FightMove>
+    <FightMove animenum="ea_attack_ground1" endchaintime="1" fallback="attacklight1" lockangles="true" locktransitionangles="true" name="groundattack2" noautoaim="true" startchaintime="0.44">
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="draw_sword" time="0" />
+        <trigger name="whoosh_heavy" time="0.2" />
+        <trigger bolt="fx01" life="0.24" name="trail" time="0.12" />
+        <trigger name="ground_attack" time="0.28" />
+        <trigger critical="on_exit" name="sheath_sword" time="0.88" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="attack" result="attacklight1" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power14" blendtime="0.1" endchaintime="1" lockangles="true" name="groundattackknockback2" priority="5" startchaintime="0.8">
+        <trigger bolt="Bip01 R Hand" boltslot="ebolton_weapon" model="models/bolton/blade_shotgun" name="bolton" replacecurrent="true" time="0" />
+        <trigger charge_type="stop" name="charge" time="0" />
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.28" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.2" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.2" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.2" />
+        <trigger movement="12" name="slide" targetdistance="50" time="0.16" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.28" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1">
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.86" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power1" icon="0" is_power="true" name="power1" playspeed="1" priority="5" startchaintime="0.4">
+        <require cat="skill" item="blade_p1" level="1" />
+        <trigger name="powerusage" powerusage="%blade_p1_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/blade_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="fx01" effect="char/blade/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="blade_p1_link" time="0">
+            <special_fx bolt="fx01" effect="char/blade/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/blade_m/draw_sword" time="0.37" />
+        <trigger name="draw_sword" time="0.37" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p1_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p1_link" time="-1" />
+        <trigger critical="true" name="sheath_sword" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" icon="1" is_power="true" lockchaining="false" name="power1_loop" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p1_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p1_link" time="-1" />
+        <trigger critical="true" name="sheath_sword" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Edge" combotextstarter="Slicing" icon="1" is_power="true" name="power1_release" priority="5">
+        <trigger name="weapon_mastery" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/blade_m/p1_power" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p1_charge" time="0" />
+        <trigger effect="char/blade/p1_power" fxlevel="%blade_p1_fx1" name="effect" tag="2" time="0.3" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p1_link" time="0.35" />
+        <trigger arc="%blade_p1_arc" damage="%blade_p1_dmg" damagescale="none" damagetype="dmg_blade" name="radial" time="0.35" />
+        <trigger effect="char/blade/p1_power" fxlevel="5" name="effect" time="0.38" />
+        <trigger name="sound" sound="char/blade_m/sheath_sword" time="0.75" />
+        <trigger critical="true" name="sheath_sword" time="0.8" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power2" icon="1" is_power="true" name="power2" priority="5" startchaintime="0.41">
+        <require cat="skill" item="blade_p2" level="1" />
+        <trigger name="powerusage" powerusage="%blade_p2_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/blade_m/p2_charge" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/blade/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="blade_p2_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/blade/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/blade_m/draw_sword" time="0.4" />
+        <trigger name="draw_sword" time="0.4" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p2_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p2_link" time="-1" />
+        <trigger critical="true" name="sheath_sword" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" icon="1" is_power="true" lockchaining="false" name="power2_loop" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p2_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p2_link" time="-1" />
+        <trigger critical="true" name="sheath_sword" time="-1" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_end" combotextfinisher="Swipe" combotextstarter="Ripping" icon="1" is_power="true" name="power2_release" priority="5">
+        <trigger name="weapon_mastery" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/blade_m/p2_power" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p2_charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p2_link" time="0.22" />
+        <trigger fx_size_scale="%blade_p2_fxscale" name="powerup" remove_on_node_end="true" time="0.22">
+            <special_fx effect="char/blade/p2_power" fxlevel="%blade_p2_fx1" how_used="activation" never_cycle="true" />
+        </trigger>
+        <event damage="%blade_p2_dmg" damagescale="none" damagetype="dmg_blade" inherit="radial" maxrange="%blade_p2_rad" name="blender" />
+        <trigger name="blender" time="0.3" />
+        <trigger name="blender" time="0.5" />
+        <trigger name="blender" time="0.7" />
+        <trigger name="sound" sound="char/blade_m/sheath_sword" time="0.8" />
+        <trigger critical="true" name="sheath_sword" time="0.9" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power3" combotextfinisher="Razor" combotextstarter="Rending" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="blade_p3" level="1" />
+        <trigger name="weapon_mastery" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/blade/p3_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p3_power" time="0.2" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="10 3 42" attacktype="projectile" count="1" damage="%blade_p3_dmg" damagescale="none" damagetype="dmg_energy" entity="glaive_strike" filename="ents_blade" fulltargeting="true" maxrange="800" name="projectile" pierce="true" powerusage="%blade_p3_pwr" speed="600" targetable="true" time="0.44" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power4" combotextfinisher="Shot" combotextstarter="Blasting" icon="3" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="blade_p4" level="1" />
+        <trigger name="weapon_mastery" time="0" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <affecter attribute="atk_critical" level="0.5" scope_victimstunned="true" />
+        </trigger>
+        <event arc="5" damage="%blade_p4_dmg" damagescale="none" damagetype="direct" fxlevel="1" hiteffect="char/blade/p4_impact" inherit="radial" knockback="120" maxrange="500" name="p4shot" />
+        <event actorbolt="Gun1" attacktype="projectile" count="1" entity="gunshot_fx" filename="ents_blade" fulltargeting="false" inherit="projectile" maxrange="500" name="p4shot_fx" noautoaim="true" speed="1000" targetable="false" useboltangles="true">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger name="sound" sound="char/blade_m/draw_gun" time="0.15" />
+        <trigger name="draw_gun" time="0.15" />
+        <trigger angle="15" name="p4shot" powerusage="%blade_p4_pwr" time="0.37" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="32 -2 57" name="p4shot_fx" time="0.37" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.37" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/blade/p4_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p4_shot" time="0.37" />
+        <trigger angle="5" name="p4shot" time="0.46" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="30 2 56" name="p4shot_fx" time="0.46" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.46" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/blade/p4_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p4_shot" time="0.46" />
+        <trigger angle="-5" name="p4shot" time="0.53" />
+        <trigger angle="-5" attack_bone_angles="0 0 0" attack_bone_pos="32 5 53" name="p4shot_fx" time="0.53" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.53" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/blade/p4_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p4_shot" time="0.53" />
+        <trigger angle="-15" name="p4shot" time="0.64" />
+        <trigger angle="-15" attack_bone_angles="0 0 0" attack_bone_pos="36 6 52" name="p4shot_fx" time="0.64" />
+        <trigger life="0.05" motor="rumble" name="rumble" time="0.64" vibration="0.5" />
+        <trigger bolt="Gun1" effect="char/blade/p4_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p4_shot" time="0.64" />
+        <trigger name="sound" sound="char/blade_m/holster_gun" time="0.82" />
+        <trigger name="holster_gun" time="0.82" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power5" icon="4" is_power="true" lockangles="true" name="power5" priority="5" startchaintime="0.75">
+        <require cat="skill" item="blade_p5" level="1" />
+        <trigger name="powerusage" powerusage="%blade_p5_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/blade_m/p5_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="fx01" effect="char/blade/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="blade_p5_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/blade/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p5_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p5_link" time="-1" />
+        <chain action="Idle" result="power5_release" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power12" icon="4" is_power="true" lockchaining="false" name="power5_loop" noautoaim="true" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p5_charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p5_link" time="-1" />
+        <chain action="Idle" result="power5_release" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power5_end" combotextfinisher="Skewer" combotextstarter="Impaling" icon="4" is_power="true" name="power5_release" noautoaim="true" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="fx01" effect="char/blade/p5_power" fxlevel="3" name="effect" time="0" />
+        <trigger name="sound" sound="char/blade_m/p5_power" time="0.32" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blade_m/p5_charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="blade_p5_link" time="0.35" />
+        <trigger allow_actors="true" allow_non_actors="false" center_bolt="true" class="time_bomb" explosion_damage="%blade_p5_expdmg" explosion_knockback="%blade_p5_kb" explosion_radius="%blade_p5_rad" life="%blade_p5_lif" name="powerup" tag="101" time="-1">
+            <special_fx center_bolt="true" effect="char/blade/p5_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="base/material/explode/exp_generic_med" fxlevel="2" how_used="custom" tag="1" />
+            <special_fx how_used="custom" sound="p5_explode" tag="1" />
+        </trigger>
+        <trigger actorbolt="fx01" attack_bone_angles="139 44 -121" attack_bone_pos="-7 -13 31" attacktype="projectile" damage="%blade_p5_dmg" damagescale="none" damagetype="dmg_physical" entity="spike_proj" filename="ents_blade" fulltargeting="true" maxrange="500" name="projectile" speed="800" targetable="true" time="0.35" victimeventtag="101" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="aoe" animenum="ea_power6" combotextfinisher="Flash" combotextstarter="Blinding" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="blade_p6" level="1" />
+        <trigger name="powerusage" powerusage="%blade_p6_pwr" time="0" />
+        <trigger name="sound" sound="char/blade_m/p6_power" time="0" />
+        <trigger actorbolt="fx01" angoffset="0 75 35" attack_bone_angle="81 -22 -162" attack_bone_pos="30 -13 64" entity="flash_bomb" explodedamage="1" explodedamagescale="none" explodedamagetype="dmg_physical" explodevictimeventtag="50" filename="ents_blade" name="projectile" speed="350" time="0.35" victimeventtag="50">
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger life="%blade_p6_dmglif" name="powerup" next_eventtag="51" tag="50" time="-1">
+            <special_fx bolt="Bip01 Head" effect="char/blade/p6_aura" fxlevel="1" how_used="primary" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%blade_p6_atkdmg" />
+        </trigger>
+        <trigger class="stunned" life="%blade_p6_stnlif" name="powerup" tag="51" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="blade_p7" level="1" />
+        <trigger bolt="fx01" effect="char/blade/p7_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p7_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/blade/p7_power" fxlevel="2" name="effect" time="0.5" />
+        <trigger life="%blade_p7_lif" name="powerup" powerusage="%blade_p7_pwr" time="0.5">
+            <affecter attribute="health_regen_pct" level="%blade_p7_rgn" />
+            <affecter affect_type="scale" attribute="move" level="%blade_p7_spd" />
+            <affecter attribute="strength" level="%blade_p7_str" />
+            <affecter affect_type="scale" attribute="def_damage" level="%blade_p7_defdmg" />
+            <special_fx bolt="Bip01 R Hand" effect="char/blade/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 L Hand" effect="char/blade/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 Spine2" effect="char/blade/p7_aura" fxlevel="2" how_used="primary" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" handler="ch_team_xtreme" icon="10" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="blade_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="4" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power11" combotextfinisher="Fever" icon="8" is_power="true" lockangles="true" name="power9" playspeed="7" priority="uninterruptable">
+        <event animbased="true" arc="180" damage="0" inherit="radial" knockback="40" maxrange="350" name="xtremeblast" victimeventtag="20">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger attacks_per_second="1" class="harming" damage="%blade_p9_dmg" damagetype="dmg_radiation" life="1" name="powerup" tag="20" time="-1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Blood Haze" />
+        <trigger effect="char/blade/p9_power" fxlevel="1" name="effect_sound" sound="char/blade_m/p9_charge" time="0.22" />
+        <trigger name="sound" sound="char/blade_m/draw_gun" time="0.378" />
+        <trigger name="draw_gun" time="0.378" />
+        <trigger name="sound" sound="char/blade_m/p9_power" time="0.476" />
+        <trigger bolt="Gun1" effect="char/blade/p9_power" fxlevel="2" name="effect_sound" sound="char/blade_m/p4_shot" time="0.476" />
+        <trigger bolt="Gun1" effect="char/blade/p9_power" fxlevel="2" name="effect_sound" sound="char/blade_m/p4_shot" time="0.536" />
+        <trigger bolt="Gun1" effect="char/blade/p9_power" fxlevel="2" name="effect_sound" sound="char/blade_m/p4_shot" time="0.585" />
+        <trigger bolt="Gun1" effect="char/blade/p9_power" fxlevel="2" name="effect_sound" sound="char/blade_m/p4_shot" time="0.634" />
+        <trigger effect="char/blade/p9_power" fxlevel="3" name="effect" time="0.675" />
+        <trigger name="xtremeblast" time="0.675" />
+        <trigger critical="true" name="holster_gun" time="0.817" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

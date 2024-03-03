@@ -1,0 +1,436 @@
+<PowerStyle iconfile="textures/ui/thor_icons.png">
+    <event inherit="powerup" name="hammer_powerup" remove_on_node_end="true">
+        <affecter affect_type="affect_scale" attribute="atk_damage" level="%thor_p10_dmg" />
+    </event>
+    <event inherit="powerup" name="elemental_powerup" remove_on_node_end="true">
+        <affecter affect_type="affect_scale" attribute="atk_damage" level="%thor_p11_dmg" />
+    </event>
+    <event critical="true" inherit="skinsegment" name="hammer_hand_hide" show="false" skinsegment="hammer_segment" />
+    <event inherit="skinsegment" name="hammer_hand_show" show="true" skinsegment="hammer_segment" />
+    <event inherit="skinsegment" name="hammer_back_hide" show="false" skinsegment="hammer_back_segment" />
+    <event critical="true" inherit="skinsegment" name="hammer_back_show" show="true" skinsegment="hammer_back_segment" />
+    <event critical="true" inherit="skinsegment" name="hammer_to_hand" show="true" show2="false" skinsegment="hammer_segment" skinsegment2="hammer_back_segment" />
+    <event critical="true" inherit="skinsegment" name="hammer_to_back" show="false" show2="true" skinsegment="hammer_segment" skinsegment2="hammer_back_segment" />
+    <FightMove animenum="ea_power12" fallback="grab_smash" handler="ch_grab_hold_base" lockspeed="true" name="grab_smash" noautoaim="true" priority="6" turnrate="0.2">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_thor_victim" name="victim" nodename="grabsmash_victim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.2" />
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.55" />
+        <trigger arc="45" damage="4 5" damagescale="normal" height="70" knockback="305" maxrange="110" name="radial" offset="-20" time="0.59">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger critical="true" name="hammer_to_back" time="0.8" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_fly_idle" fallback="jumploop" handler="ch_flying" lockchaining="false" name="flying" noncombat="true" powerup_tag="flying">
+        <require cat="skill" item="flight" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx effect="char/thor/ability_fly" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger name="hammer_to_back" next_eventtag="11" tag="10" time="-1" />
+        <trigger class="remove_on_events" life="-1" name="powerup" on_flying_end="true" remove_eventtag="10" time="0" />
+        <chain action="idle" result="flying" />
+        <chain action="attack" result="flymelee1" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.29" />
+        <trigger movement="10" name="slide" time="0.28" />
+        <trigger bolt="fx01" life="0.37" name="trail" time="0.21" />
+        <trigger name="punch" time="0.36" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.07" />
+        <trigger critical="on_exit" name="hammer_to_back" time="0.86" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.33" />
+        <trigger movement="20" name="slide" time="0.21" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.25" />
+        <trigger name="punch" time="0.36" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.27" />
+        <trigger movement="10" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.35" name="trail" time="0.18" />
+        <trigger name="punch" time="0.31" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="0.87" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacktrip2" startchaintime="1">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="0.87" />
+        <trigger name="whoosh_light" time="0.13" />
+        <trigger movement="10" name="slide" time="0.06" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.13" />
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3" />
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.24" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish" startchaintime="0.5625">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.24" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="fx01" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="fx01" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" time="0" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger bolt="fx01" life="0.35" name="trail" offsetend="12" time="0.25" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.315" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <trigger critical="on_exit" name="hammer_to_back" time="-1" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_ground1" blendtime="0.1" endchaintime="1" lockangles="true" name="groundattackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="-1" />
+        <event inherit="punch_veryheavy" knockback="0" maxrange="50" name="ground_attack">
+            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.24" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1">
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <trigger name="whoosh_heavy" time="0.17" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0" />
+        <trigger critical="on_exit" name="hammer_to_back" time="0.8" />
+        <trigger name="whoosh_heavy" time="0.176" />
+        <trigger movement="20" name="slide" time="0.176" />
+        <trigger bolt="fx01" life="0.4" name="trail" time="0.3" />
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power1" icon="0" is_power="true" lockangles="true" name="power1" powerup_tag="thor_hammer" priority="5" startchaintime="0.6">
+        <require cat="skill" item="thor_p1" level="1" />
+        <trigger name="powerusage" powerusage="%thor_p1_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/thor_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/thor/p1_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="thor_p1_link" time="0.6">
+            <special_fx bolt="Bip01 R Hand" effect="char/thor/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.6" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="Idle" result="power1_release" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" icon="0" is_power="true" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="thor_hammer" priority="5" startchaintime="0.01" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_type="update" name="sound" sound="char/thor_m/p1_charge_loop" time="0" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="Idle" result="power1_release" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power1_end" combotextfinisher="Might" combotextstarter="Sundering" icon="0" is_power="true" lockangles="true" name="power1_release" powerup_tag="thor_hammer" priority="5">
+        <event arc="65" damage="%thor_p1_dmg" inherit="radial" maxrange="65" name="bighit" />
+        <trigger name="hammer_powerup" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="slide" targetdistance="120" targetradius="65" time="0.1" />
+        <trigger effect="char/thor/p1_power" fxlevel="1" name="effect_sound" sound="char/thor_m/p1_power" time="0.36" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/thor_m/p1_charge" time="0.36" />
+        <trigger critical="true" name="powerup" remove_tag="thor_p1_link" time="0.36" />
+        <trigger failtag="20" min_charge="1" name="filter" passtag="10" time="0.36" />
+        <trigger chance="%thor_p1_pct" class="atk_instant_pct" life="-1" name="powerup" next_eventtag="11" percent="1" remove_on_node_end="true" tag="10" time="-1">
+            <afffecter attribute="powerup_scope" scope_victimstunned="true" />
+        </trigger>
+        <trigger knockback="190" name="bighit" tag="11" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger name="bighit" tag="20" time="-1" />
+        <trigger critical="true" name="hammer_to_back" time="0.67" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power2" combotextfinisher="Strike" combotextstarter="Uru" icon="1" is_power="true" lockangles="true" name="power2" powerup_tag="thor_hammer" priority="5" takeimpactdamage="false">
+        <require cat="skill" item="thor_p2" level="1" />
+        <trigger name="sound" sound="char/thor_m/p2_charge" time="0" />
+        <trigger name="hammer_powerup" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.1" />
+        <trigger bolt="Bip01 R Hand" effect="char/thor/p2_power" fxlevel="1" name="effect_sound" sound="char/thor_m/p2_power" time="0.2" />
+        <trigger effect="char/thor/p2_power" fxlevel="2" name="effect_sound" sound="char/thor_m/p2_impact" time="0.5" />
+        <trigger name="velocity" time="0.5" up="-4000" />
+        <trigger effect="char/thor/p2_impact" fxlevel="1" name="effect" time="0.56" />
+        <trigger damage="%thor_p2_dmg" knockback="120" maxrange="100" name="radial" offset="65" powerusage="%thor_p2_pwr" tiles="true" time="0.56" />
+        <trigger critical="true" name="hammer_to_back" time="0.92" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event entity="thor_p3_lightning" filename="ents_thor" inherit="relative_spawn" name="spawn_lightning" relative="target" type="ce_atk_spawn_relative" />
+    <FightMove aireusetime="30" aitype="rangednolos" animenum="ea_power3" combotextfinisher="Tempest" combotextstarter="Asgardian" endchaintime="0.88" handler="ch_thor_lightning" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3" priority="4" startchaintime="0.15">
+        <require cat="skill" item="thor_p3" level="1" />
+        <trigger damage="%thor_p3_dmg2" damagescale="none" damagetype="dmg_electricity" fxlevel="1" hiteffect="char/thor/p3_impact" knockback="40" maxrange="120" name="secondary_hit" tag="60" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_energize" />
+            <damageMod name="dmgmod_weld" />
+            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 R Hand" bolt2="Bip01 Spine2" effect="char/thor/p3_charge" fxlevel="3" name="effect_sound" sound="char/thor_m/p3_impact" tag="100" time="-1" />
+        <trigger name="elemental_powerup" time="0" />
+        <trigger name="sound" sound="char/thor_m/p3_charge" time="0" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.04" />
+        <trigger name="target1" numtargets="%thor_p3_num" time="0.15" type="ce_thor_lightning_init" />
+        <trigger bolt="Bip01 R Hand" effect="char/thor/p3_power" fxlevel="2" name="effect_sound" sound="char/thor_m/p3_power" time="0.15" />
+        <trigger bolt="Motion" bolt2="Bip01 R Hand" effect="char/thor/p3_power" fxlevel="3" name="effect" time="0.15" />
+        <trigger attackerheight="false" attacktype="direct" damage="%thor_p3_dmg" damagelevel="1" damagescale="none" damagetype="dmg_electricity" fxlevel="1" maxrange="120" name="spawn_lightning" powerusage="%thor_p3_pwr" time="0.15">
+            <damageMod name="dmgmod_energize" />
+            <damageMod name="dmgmod_weld" />
+        </trigger>
+        <trigger critical="true" name="hammer_to_back" time="0.945" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="aoe" animenum="ea_power4" combotextfinisher="Storm" combotextstarter="Freezing" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" priority="5">
+        <require cat="skill" item="thor_p4" level="1" />
+        <trigger name="sound" sound="char/thor_m/p4_charge" time="0" />
+        <trigger charge="0.1" charge_time="4" charged_eventtag="100" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger arc="0" attacktype="projectile" count="1" damage="%thor_p4_dmg" damagelevel="2" damagescale="none" damagetype="dmg_wind" entity="thor_tornado" filename="ents_thor" life="%thor_p4_lif" maxinstances="2" maxrange="800" name="projectile" powerusage="%thor_p4_pwr" scale="0.1" speed="90" tag="1" targetable="false" time="0" tracecheck="false">
+            <damageMod name="dmgmod_extinguish" />
+        </trigger>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/thor_m/p4_charge" time="0.4" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.4" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <trigger critical="true" name="victim_release" ownertime="999" time="-1" />
+        <chain action="Idle" result="power4_loop1" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" energypersecond="%thor_p4_pwr" icon="3" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power4_loop1" powerup_tag="thorp4" priority="5">
+        <trigger button="twirl_stick" name="button_hint" time="0" />
+        <trigger loop_type="start" name="sound" sound="char/thor_m/p4_power" time="0" />
+        <trigger critical="true" name="hammer_to_back" time="-1" />
+        <trigger critical="true" name="victim_release" ownertime="999" time="-1" />
+        <chain action="idle" result="power4_loop" />
+    </FightMove>
+    <FightMove handler="ch_twirl_stick_loop" inherit="power4_loop1" lockchaining="false" name="power4_loop">
+        <chain action="idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" combotextfinisher="Storm" combotextstarter="Freezing" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" playspeed="2" priority="5">
+        <trigger name="elemental_powerup" time="0" />
+        <trigger name="victim_release" ownertime="999" time="0" />
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger loop_type="stop" name="sound" sound="char/thor_m/p4_power" time="0" />
+        <trigger name="sound" sound="char/thor_m/p4_release" time="0" />
+        <trigger critical="true" name="hammer_to_back" time="0" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="projectile" animenum="ea_power5" combotextfinisher="Sledgehammer" combotextstarter="Valhallan" handler="ch_returning_projectile" icon="4" is_power="true" lockangles="true" lockspeed="true" name="power5" powerup_tag="thor_hammer" priority="5">
+        <require cat="skill" item="thor_p5" level="1" />
+        <trigger name="hammer_powerup" time="0" />
+        <trigger name="sound" sound="char/thor_m/p5_charge" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.4" />
+        <trigger effect="char/thor/p5_power" fxlevel="2" name="effect" time="0.6" />
+        <trigger critical="true" name="hammer_hand_hide" time="0.78" />
+        <trigger name="sound" sound="char/thor_m/p5_power" time="0.75" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angle="0 0 0" attack_bone_pos="18 -19 30" attacktype="projectile" count="1" damage="%thor_p5_dmg" damagescale="none" damagetype="dmg_physical" entity="thor_p5_proj" filename="ents_thor" fulltargeting="true" maxrange="800" name="projectile" pierce="true" powerusage="%thor_p5_pwr" speed="850" targetable="true" time="0.78">
+            <damagemod name="dmgmod_stun" />
+        </trigger>
+        <trigger critical="true" name="hammer_back_show" time="-1" />
+        <chain action="Idle" result="power5_cooldown" />
+    </FightMove>
+    <Fightmove animenum="ea_power10" is_power="true" lockangles="true" locktransitionangles="true" name="power5_cooldown" playspeed="2" priority="5">
+        <chain action="Idle" result="idle" />
+    </Fightmove>
+    <FightMove animenum="ea_menu_action" icon="5" is_power="true" lockangles="true" lockspeed="true" name="power6" priority="5">
+        <require cat="skill" item="thor_p6" level="1" />
+        <trigger name="sound" sound="char/thor_m/p6_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/thor/p6_power" fxlevel="1" name="effect" time="0.166" />
+        <trigger effect="char/thor/p6_power" fxlevel="2" name="effect" time="0.166" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.18" />
+        <trigger effect="char/thor/p6_power" fxlevel="3" name="effect" time="0.466" />
+        <trigger life="%thor_p6_lif" name="powerup" powerusage="%thor_p6_pwr" time="0.466">
+            <affecter affect_type="scale" attribute="move_attack" level="%thor_p6_spd" />
+            <special_fx effect="char/thor/p6_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger critical="true" name="hammer_to_back" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power7" icon="6" is_power="true" lockangles="true" lockspeed="true" name="power7" priority="5">
+        <require cat="skill" item="thor_p7" level="1" />
+        <trigger name="sound" sound="char/thor_m/p7_power" time="0" />
+        <trigger name="kill_hammer" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="hammer_to_hand" time="0.18" />
+        <trigger effect="char/thor/p7_power" fxlevel="1" name="effect_sound" sound="char/thor_m/p3_impact" time="0.258" />
+        <trigger effect="char/thor/p7_power" fxlevel="2" name="effect" time="0.258" />
+        <trigger apply_ally="all" life="%thor_p7_lif" name="powerup" powerusage="%thor_p7_pwr" time="0.483">
+            <affecter attribute="all_talents" level="%thor_p7_ski" scope_talent="thor_p7" />
+            <special_fx effect="char/thor/p7_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger critical="true" name="hammer_to_back" time="0.85" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="thor_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="7" time="0" />
+        <trigger apply_ally="true" heal_type="energy" name="heal" percent="%thor_p9_hlt" tag="1" time="-1" type="ce_heal" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Wrath" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" powerup_tag="ghost_p9" priority="uninterruptable" takeimpactdamage="false">
+        <trigger name="hammer_powerup" time="0" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Wrath of the Gods" />
+        <trigger name="hammer_hand_show" time="0.1" />
+        <trigger name="hammer_back_hide" time="0.1" />
+        <trigger name="sound" sound="char/thor_m/p9_charge" time="0.2" />
+        <trigger effect="char/thor/p8_power" fxlevel="1" name="effect" time="0.158" />
+        <trigger effect="char/thor/p9_power" fxlevel="2" name="effect" time="0.289" />
+        <trigger name="sound" sound="char/thor_m/p2_impact" time="0.605" />
+        <trigger name="velocity" time="0.52" up="-40000" />
+        <trigger effect="char/thor/p9_impact" fxlevel="1" name="effect" time="0.605" />
+        <trigger damage="%thor_p9_dmg" damagetype="dmg_electricity" knockback="40" maxrange="600" name="radial" offset="65" tiles="true" time="0.605">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger critical="true" name="hammer_to_back" time="0.92" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

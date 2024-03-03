@@ -1,0 +1,54 @@
+<conversation>
+    <startCondition noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/ghostrider/2_strange2_260_010_gr" text="%GhostRiderNPC%: If you aren't nervous about going to Mephisto's Realm, you will be when we get there.">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/ghostrider/2_strange2_260_020_gr" text="%GhostRiderNPC%: Is there something else you wanted?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="Do you know Mephisto?">
+                    <line soundtoplay="voice/ghostrider/2_strange2_260_101_gr" text="%GhostRiderNPC%: Probably better than anyone here. It's because of him I became the Ghost Rider.">
+                        <response text="%PLAYER%: How did that happen?">
+                            <line soundtoplay="voice/ghostrider/2_strange2_260_103_gr" text="%GhostRiderNPC%: When I learned my stepfather had cancer I turned to the occult in hopes of making a deal to find a cure. Little did I know, the entity I met had no intention of keeping his part of the bargain.">
+                                <response chosenscriptfile="setGameFlag('conv_var2', 16,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 16 )" text="Who did you make a deal with?">
+                    <line soundtoplay="voice/ghostrider/2_strange2_260_201_gr" text="%GhostRiderNPC%: None other than Mephisto. The spells and incantations I learned opened a portal to his dimension. He offered to cure my stepfather in return for my astral spirit.">
+                        <response text="%PLAYER%: So what happened?">
+                            <line soundtoplay="voice/ghostrider/2_strange2_260_203_gr" text="%GhostRiderNPC%: Mephisto let my stepfather die in a motorcycle accident. Because of that, I was able to back out of the deal... sort of. I wound up bound to Zarathos which turned me into the Ghost Rider.">
+                                <response chosenscriptfile="setGameFlag('conv_var2', 17,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 17 )" text="Are you always the Ghost Rider?">
+                    <line soundtoplay="voice/ghostrider/2_strange2_260_301_gr" text="%GhostRiderNPC%: No, sometimes I'm just good old Johnny Blaze, professional motorcycle stunt rider.">
+                        <response text="%PLAYER%: When do you become the Ghost Rider?">
+                            <line soundtoplay="voice/ghostrider/2_strange2_260_303_gr" text="%GhostRiderNPC%: When I was bonded to Zarathos it happened when ever the sun went down. Then, for a time, it happened whenever I saw injustice. But now that I'm free of that fiend, I've learned to control it.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Ghost Rider.">
+                    <line soundtoplay="voice/GHOSTRIDER/2_STRANGE2_260_401_GR_B" text="%GhostRiderNPC%: Any time.">
+                        <response chosenscriptfile="act2/strange/talk_ghostrider_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

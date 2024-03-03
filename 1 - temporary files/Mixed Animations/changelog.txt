@@ -79,6 +79,8 @@ v3:
    Note: originally used 145_wic only, but mixed it to use it plus the 4_combat animation file. Two animations don't exist in MUA's shared_anims, but I added them again, just in case.
 - Dihan\Elixir
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (jumpsmash & jumpsmash_release_impact)
+- Dihan\Psylocke
+   Added packages where leftover references to fightstyle are removed.
 - Fox456\Moondragon
    Added packages where leftover references to fightstyle are removed.
 - Gevth\Mystique
@@ -110,6 +112,8 @@ v3:
    Added packages where fightstyle animation set reference is removed.
 - Julio Cabral\MUA- Dragon Ball mods Pack2\Vegeta
    Added packages where fightstyle animation set reference is removed.
+- Julio Cabral\Odin (Marvel)
+   Added packages where fightstyle animation set reference is removed.
 - Julio Cabral\Raiden (Mortal Kombat)
    Added packages where fightstyle animation set reference is removed.
 - Julio Cabral\Saint Seiya Mod Part2
@@ -131,6 +135,8 @@ v3:
    Added packages where fightstyle animation set reference is removed.
 - LucasFernandesBR\Morrigan (Darkstalkers)
    Added packages where fightstyle animation set reference is removed.
+- Markloto\Oya (X-Men)
+   Added packages where weird fightstyle animation set reference is removed (fixed other packages according to oya_16806.pkgb).
 - Matt710\Enchantress (Marvel)
    Added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (heavy+light attack chains, ground attack)
    Added packages where fightstyle animation set reference is removed.
@@ -218,6 +224,8 @@ v3:
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (attacklight1-3, attackstun_finish, attackknockback2)
    Note: ea_ground_attack1 is not in shared_anims. Using the default fighmove here (only the animation is different).
    Added second package where fightstyle animation set reference is removed.
+- Julio Cabral\Punisher
+   Added packages where fightstyle animation set reference is removed.
 - Julio Cabral\Thanos
    Added packages where fightstyle animation set reference is removed.
 - Lean\Kate Bishop
@@ -350,12 +358,5 @@ v2:
 - Maegawa\Toad
    added animations from 209_toad.igb from XML2 pack (anims were removed in OCP 2)
    added code from the org. fightstyle of the mod to the powerstlye, because it differs from fightstyle_default. (all melee attacks)
-
-- Teancum\War Machine
-   Unknown animation mix
-- Teancum\War Machine
-   Unknown animation mix
-- Teancum\War Machine
-   Unknown animation mix
    
    

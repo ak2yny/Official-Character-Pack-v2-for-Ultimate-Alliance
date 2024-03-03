@@ -1,0 +1,25 @@
+<PowerStyle>
+    <FightMove aireusetime="3.5" aitype="melee" animenum="ea_power1" lockangles="true" name="power_attack" priority="2">
+        <trigger name="sound" sound="char/ultrm_m/p1_power" time="0.2" />
+        <trigger effect="char/ultrm/p1_power" fxlevel="1" name="effect" time="0.32" />
+        <trigger attacktype="punch" damage="%mdmg_low" damagescale="difficulty" knockback="245" name="punch" tag="2" time="0.4" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="melee" animenum="ea_power2" lockangles="true" name="power_smash" priority="5">
+        <trigger name="sound" sound="char/ultrm_m/p2_power" time="0.25" />
+        <trigger effect="char/ultrm/p2_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger attacktype="punch" damage="%mdmg_high" damagescale="difficulty" knockback="305" name="punch" tag="2" time="0.44" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_ko_head1" death="true" lockangles="true" name="deathgen" priority="uninterruptable" sequenced="true">
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/ultrm/special_death" fxlevel="1" name="effect_sound" sound="char/ultrm_m/death" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ultrm/special_death" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ultrm/special_death" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/ultrm/special_death" fxlevel="3" name="effect" time="0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/ultrm/special_death" fxlevel="3" name="effect" time="0" />
+        <trigger bolt="Bip01 Spine2" effect="char/ultrm/special_death" fxlevel="4" name="effect" time="0" />
+        <trigger name="remove" time="0" />
+        <trigger name="stop" time="1" />
+    </FightMove>
+</PowerStyle>

@@ -1,0 +1,415 @@
+<PowerStyle iconfile="textures/ui/warbird_icons.png">
+    <event damagetype="dmg_energy" inherit="punch" name="LuminousWave">
+        <damagemod name="dmgmod_auto_knockback" />
+    </event>
+    <event attacktype="projectile" count="1" damage="%war_p1_dmg" damagescale="none" damagetype="dmg_energy" entity="War_UnguidedPhoton" filename="ents_warbird" fulltargeting="false" inherit="projectile" maxrange="500" name="UnguidedPhoton" noautoaim="true" speed="1000" targetable="false" />
+    <FightMove animenum="ea_attack_light1" blendtime="0.05" lockangles="true" name="attacklight1" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/attack_light" fxlevel="1" name="effect" time="0.21" />
+        <trigger name="punch" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.05" lockangles="true" name="attacklight2" priority="3" startchaintime="0.64">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/attack_light" fxlevel="2" name="effect" time="0.21" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/attack_light" fxlevel="2" name="effect" time="0.21" />
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" lockangles="true" name="attacklight3">
+        <trigger name="whoosh_light" time="0.2" />
+        <trigger bolt="Bip01 L Toe0" effect="char/warbird/attack_light" fxlevel="2" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Toe0" effect="char/warbird/attack_light" fxlevel="2" name="effect" time="0.2" />
+        <trigger effect="char/warbird/attack_light" fxlevel="3" name="effect" time="0.2" />
+        <trigger name="punch" time="0.26" />
+        <trigger maxrange="72" name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger movement="0" name="slide" time="0.1" />
+        <trigger name="whoosh_heavy" time="0.21" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/attack_light" fxlevel="2" name="effect" time="0.24" />
+        <trigger name="backhand1" time="0.31" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="whoosh_heavy" time="0.25" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/attack_finisher" fxlevel="1" name="effect" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="backhand1" time="0.37" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.66">
+        <trigger charge="1" name="charge" time="0" />
+        <trigger name="whoosh_heavy" time="0.25" />
+        <trigger bolt="Bip01 R Toe0" effect="char/warbird/attack_finisher" fxlevel="1" name="effect" time="0.25" />
+        <trigger movement="20" name="slide" time="0.26" />
+        <trigger index="1" knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" lockangles="true" name="attacktrip2">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger bolt="Bip01 R Toe0" effect="char/warbird/attack_finisher" fxlevel="2" name="effect" time="0.1" />
+        <trigger bolt="Bip01 L Toe0" effect="char/warbird/attack_finisher" fxlevel="2" name="effect" time="0.15" />
+        <trigger name="whoosh_heavy" time="0.31" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/attack_finisher" fxlevel="2" name="effect" time="0.31" />
+        <trigger effect="char/warbird/attack_finisher" fxlevel="3" name="effect" time="0.42" />
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.42" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.42" />
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.42" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.4">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="102" sound="common/melee/kb_charge_loop" tag="101" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/attack_finisher" fxlevel="4" name="effect_sound" sound="common/melee/dmg_knockback" time="0.18" />
+        <trigger bolt="Bip01 R Hand" critical="true" effect="char/warbird/attack_finisher" fxlevel="4" loop_type="stop" name="effect_sound" sound="common/melee/kb_charge_loop" time="0.18" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.18" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.2" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.26" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.37" />
+        <trigger damage="3 4" knockback="190" maxrange="60" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" maxrange="60" name="kick" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_walk1" handler="ch_move" lockchaining="false" name="walk" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="blocking" result="blocking" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_run1" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_sprint1" handler="ch_move" lockchaining="false" name="sprint" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+    </FightMove>
+    <FightMove animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.99">
+        <trigger name="stop" time="0" />
+        <trigger name="whoosh_light" time="0.18" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_warbird_victim" name="victim" nodename="Grab_Smash_Victim" targetdistance="26" time="0" victimface="true" />
+        <trigger bolt="Bip01 L Toe0" effect="char/warbird/grabsmash_victim" fxlevel="3" name="effect" time="0.18" />
+        <trigger bolt="Bip01 R Toe0" effect="char/warbird/grabsmash_victim" fxlevel="3" name="effect" time="0.18" />
+        <trigger execute_against="victim" name="otherevent" othertag="1" time="0.76" />
+        <trigger damage="4 5" damagescale="normal" name="selfattack" tag="1" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger critical="true" interactionend="true" name="victim_release" time="0.99" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power1" combotextfinisher="Storm" combotextstarter="Light" icon="0" is_power="true" lockangles="true" name="power1" priority="5">
+        <require cat="skill" item="war_power1" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p1_power" fxlevel="2" name="effect" time="0.09" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p1_power" fxlevel="2" name="effect" time="0.18" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p1_power" fxlevel="3" name="effect" time="0.41" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p1_power" fxlevel="3" name="effect" time="0.41" />
+        <trigger name="sound" sound="char/warbir_m/p1_power" time="0.5" />
+        <trigger effect="char/warbird/p1_power" fxlevel="4" name="effect" time="0.5" />
+        <trigger class="orbiting_projectiles" life="%war_p1_lif" mintime="1.3" name="powerup" no_stack_use_new="true" numeventstocall="%war_p1_num_balls" powerusage="%war_p1_pwr" range="300" spawnentityname="War_UnguidedPhoton" time="0.5">
+            <SpawnProjectileAndOrbit event="1" />
+            <SpawnProjectileAndOrbit event="2" />
+            <SpawnProjectileAndOrbit event="3" />
+            <SpawnProjectileAndOrbit event="4" />
+            <SpawnProjectileAndOrbit event="5" />
+            <SpawnProjectileAndOrbit event="6" />
+        </trigger>
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.25 1" tag="1" time="-1" />
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.25 -1" tag="2" time="-1" />
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.5 1" tag="3" time="-1" />
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.5 -1" tag="4" time="-1" />
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.75 1" tag="5" time="-1" />
+        <trigger name="UnguidedPhoton" orbitaxis="0 0.75 -1" tag="6" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="melee" animenum="ea_power2" blendtime="0.05" combotextfinisher="Impact" combotextstarter="Lethal" icon="1" is_power="true" lockangles="true" name="power2" noflying="true" priority="5">
+        <require cat="skill" item="war_power2" level="1" />
+        <trigger critical="true" name="powerusage" powerusage="%war_p2_pwr" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p2_power" fxlevel="1" name="effect_sound" sound="char/warbir_m/p2_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p2_power" fxlevel="1" name="effect" time="0" />
+        <trigger maxrange="80" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="30" time="0" />
+        <trigger name="filter" passtag="20" requirevictim="true" time="0.5" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p2_power" fxlevel="2" name="effect" next_eventtag="21" tag="20" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p2_power" fxlevel="2" name="effect" next_eventtag="30" tag="21" time="-1" />
+        <trigger execute_against="victim" name="otherevent" othertag="31" othertag2="32" othertag3="33" tag="30" time="-1" />
+        <trigger allow_actors="true" allow_non_actors="false" class="time_bomb" explosion_damage="%war_p2_dmg2" explosion_knockback="190" explosion_radius="77" group_to_affect="teammates" life="%war_p2_lif" name="powerup" tag="31" time="-1">
+            <special_fx bolt="Bip01 Spine2" effect="char/warbird/p2_victim" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/warbird/p2_victim" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger name="sound" sound="char/warbir_m/p2_impact" tag="32" time="-1" />
+        <trigger damage="3 4" damagescale="none" index="2" name="selfattack" tag="33" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger critical="true" name="victim_release" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power3" combotextfinisher="Ray" combotextstarter="Splitting" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="war_power3" level="1" />
+        <trigger name="powerusage" powerusage="%war_p3_pwr" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p3_power" fxlevel="2" name="effect_sound" sound="char/warbir_m/p3_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p3_power" fxlevel="2" name="effect" time="0" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="7 0 37" beambolt="Bip01 R Hand" beameffect="char/warbird/p3_power" damage="%war_p3_dmg" damagescale="none" damagetype="dmg_energy" fxlevel="1" hiteffect="char/warbird/p3_impact" inherit="beam" maxrange="500" name="PrismBeam" pierce="true" powerusage="%war_p3_pwr" radius="0" spawneffect="char/warbird/p3_spawn" split_count="3" split_damage="13 15" tag="3" time="0.55" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power4" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" powerup_tag="warbird_p4" priority="5">
+        <require cat="skill" item="war_power4" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%war_p4_pwr" time="0" />
+        <trigger name="sound" sound="char/warbir_m/p4_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="2" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="warbird_p4_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="8" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="8" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power4_charging" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power4_loop" handler="ch_invis_wman_stick" icon="3" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_charging" powerup_tag="warbird_p4" priority="5" startchaintime="0.01">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="samepowerhold" result="power4_charging" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="special2" result="power4_unfocus_release" />
+        <chain action="special" result="power4_focus_release" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power4_end" combotextfinisher="Flare" combotextstarter="Blinding" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" powerup_tag="warbird_p4" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger arc="30" damage="%war_p4_regular_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="LuminousWave" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%war_p4_lif" name="powerup" shared_tag="shared_stunned" tag="2" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="warbird_p4_link" time="0.24" />
+        <trigger effect="char/warbird/p4_power" fxlevel="3" name="effect_sound" sound="char/warbir_m/p4_power" time="0.24" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power4_end" combotextfinisher="Flare" combotextstarter="Blinding" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_unfocus_release" powerup_tag="warbird_p4" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger arc="45" damage="%war_p4_unfocus_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="LuminousWave" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%war_p4_lif" name="powerup" shared_tag="shared_stunned" tag="2" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="warbird_p4_link" time="0.24" />
+        <trigger effect="char/warbird/p4_power" fxlevel="4" name="effect_sound" sound="char/warbir_m/p4_power" time="0.24" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power4_end" combotextfinisher="Flare" combotextstarter="Blinding" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_focus_release" powerup_tag="warbird_p4" priority="5">
+        <trigger arc="15" damage="%war_p4_focus_dmg" damagescale="none" damagetype="dmg_energy" knockback="40" maxrange="200" name="LuminousWave" time="0.24" victimeventtag="1" />
+        <trigger maxdangerrating="10" min_charge="1" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="0.33" selfonly="true" tag="2" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="warbird_p4_link" time="0.24" />
+        <trigger effect="char/warbird/p4_power" fxlevel="5" name="effect_sound" sound="char/warbir_m/p4_power" time="0.24" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p4_power" fxlevel="8" name="effect" time="0.24" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power5" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5" powerup_tag="warbird_p5" priority="5">
+        <require cat="skill" item="war_power5" level="1" />
+        <trigger name="powerusage" powerusage="%war_p5_pwr" time="0" />
+        <trigger name="sound" sound="char/warbir_m/p4_charge" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p5_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="warbird_p5_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/warbird/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/warbird/p5_power" fxlevel="3" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power5_charging" />
+    </FightMove>
+    <FightMove animenum="ea_power11" icon="4" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power5_charging" powerup_tag="warbird_p5" priority="5" startchaintime="0.01">
+        <chain action="Idle" result="power5_release" />
+        <chain action="samepowerhold" result="power5_charging" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" combotextfinisher="Flash" combotextstarter="Nega" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5_release" powerup_tag="warbird_p5" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="warbird_p5_link" time="0.38" />
+        <trigger damage="%war_p5_dmg" damagescale="none" damagetype="dmg_energy" knockback="190" maxrange="120" name="radial" time="0.38" victimeventtag="1" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%war_p5_lif" name="powerup" tag="2" time="-1">
+            <affecter affect_type="scale" attribute="move_attack" level="%war_p5_spd" />
+        </trigger>
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p5_power" fxlevel="4" name="effect_sound" sound="char/warbir_m/p4_power" time="0.38" />
+        <trigger effect="char/warbird/p5_power" fxlevel="5" name="effect" time="0.38" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" lockspeed="true" name="power6" priority="5">
+        <require cat="skill" item="war_power6" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p6_power" fxlevel="1" name="effect_sound" sound="char/warbir_m/p6_power" time="0" />
+        <trigger effect="char/warbird/p6_power" fxlevel="2" name="effect_sound" sound="char/warbir_m/p6_power" time="0" />
+        <trigger effect="char/warbird/p6_power" fxlevel="3" name="effect" time="0.66" />
+        <trigger life="%war_p6_lif" name="powerup" next_eventtag="1" tag_name="_arcade_remove" time="0.66">
+            <special_fx effect="base/powerup/pu_timescale" fxlevel="1" how_used="primary" never_cycle="true" />
+            <affecter affect_type="scale" attribute="game_speed" level="%war_p6_w_spd" />
+        </trigger>
+        <trigger apply_ally="all" life="%war_p6_lif" name="powerup" no_shadow="true" powerusage="%war_p6_pwr" tag="1" tag_name="_arcade_remove" time="-1">
+            <special_fx effect="char/warbird/p6_power" fxlevel="4" how_used="primary" />
+            <special_fx effect="char/warbird/p6_power" fxlevel="5" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="physics" level="%war_p6_allies_spd" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="war_power7" level="1" />
+        <trigger effect="char/warbird/p7_power" fxlevel="1" name="effect_sound" sound="char/warbir_m/p7_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p7_power" fxlevel="2" name="effect" time="0.25" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p7_power" fxlevel="2" name="effect" time="0.25" />
+        <trigger effect="char/warbird/p7_power" fxlevel="3" name="effect" time="0.53" />
+        <trigger apply_ally="all" class="add_attack" damagepercent="%war_p7_dam_inc" damagetype="dmg_energy" life="%war_p7_lif" name="powerup" no_shadow="true" powerusage="%war_p7_pwr" time="0.53">
+            <affecter attribute="powerup_scope" scope_non_powers="true">
+                <scope scope_attack="punch" />
+                <scope scope_attack="kick" />
+            </affecter>
+            <special_fx effect="char/warbird/p7_power" fxlevel="4" how_used="primary" />
+            <special_fx effect="char/warbird/p7_power" fxlevel="5" how_used="deactivation" />
+        </trigger>
+        <trigger apply_ally="all" life="%war_p7_lif" name="powerup" no_shadow="true" time="0.53">
+            <affecter attribute="resist_energy" level="%war_p7_energy_res" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="war_power9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Rage" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Warbird's Wrath" />
+        <trigger bolt="Bip01 L Hand" effect="char/warbird/p9_power" fxlevel="1" name="effect_sound" sound="char/warbir_m/p9_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/warbird/p9_power" fxlevel="1" name="effect" time="0" />
+        <trigger effect="char/warbird/p9_power" fxlevel="2" name="effect" time="0" />
+        <trigger effect="char/warbird/p9_power" fxlevel="3" name="effect" time="0.44" />
+        <trigger arc="180" damage="%war_p9_dmg" damagescale="none" damagetype="dmg_energy" maxrange="600" name="radial" time="0.48" victimeventtag="1" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger failtag="20" is_stunned="true" name="filter" passtag="10" tag="2" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="0.5" selfonly="true" tag="10" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger life="%war_p9_lif" name="powerup" shared_tag="shared_stunned" tag="20" time="-1" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

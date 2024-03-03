@@ -1,0 +1,317 @@
+<PowerStyle iconfile="textures/ui/lukecage_icons.png">
+    <FightMove animenum="ea_attack_light1" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.54">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.25" name="trail" offsetend="12" time="0.3" />
+        <trigger name="punch" time="0.45" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" offsetend="12" time="0.3" />
+        <trigger name="punch" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" endchaintime="1" fallback="attacklight2" lockangles="true" name="attacklight3" priority="3" startchaintime="0.54">
+        <trigger name="whoosh_light" time="0.2" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" offsetend="12" time="0.2" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <trigger name="whoosh_heavy" time="0.23" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.28">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger movement="20" name="slide" time="0.2" />
+        <trigger bolt="Bip01 R Hand" life="0.25" name="trail" time="0.25" />
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" lockangles="true" name="attacktrip2">
+        <event arc="67" inherit="kick" knockback="0" maxrange="86" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger actorskin="15750" anim="attack_trip1" anim_set="157_luke_cage_chain" blendtime="0" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="whoosh_light" time="0.3" />
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.25" />
+        <trigger angle="-60" height="-10" index="1" name="sweep" time="0.35" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.37" />
+        <trigger angle="60" height="-10" index="1" name="sweep" time="0.4" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.944" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.15" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.29" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.29" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" blendtime="0" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" locktransitionangles="true" name="grab_smash" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger name="sound" sound="char/lukeca_m/p10_charge" time="0" />
+        <trigger name="verify_victim_alive" passtag="1" time="0" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_luke_cage_victim" name="victim" nodename="grabsmashvictim_start" offset="22 0 0" tag="1" time="-1" victimface="true" />
+        <trigger count="set" name="count" tag="2" time="0" value="8" />
+        <trigger charge="0" charge_type="set" name="charge" tag="3" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/lukeca/grabsmash" fxlevel="1" name="effect" tag="6" time="0.18" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/grabsmash" fxlevel="2" name="effect" tag="7" time="0.61" />
+        <trigger flags1="nopush" name="flags" tag="4" time="0.5" type="ce_set_flags" />
+        <trigger damage="2 3" damagescale="normal" knockback="120" maxrange="64" name="radial" tag="10" time="0.66">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger critical="true" name="victim_release" tag="5" time="-1" />
+        <chain action="smash" result="grab_smash_loop" />
+        <chain action="idle" result="grab_smash_end" />
+    </FightMove>
+    <FightMove animenum="ea_power11" fallback="grab_smash_end" inherit="grab_smash" name="grab_smash_loop" playspeed="%lukec_grabsmash_spd">
+        <require cat="counter" level="1" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger nodename="grabsmashvictim_loop" offset="-6 -16 0" tag="1" />
+        <trigger count="add" name="count" tag="2" time="0" value="-1" />
+        <trigger charge="0.3" charge_type="add" tag="3" />
+        <trigger tag="6" time="-1" />
+        <trigger tag="7" time="0.41" />
+        <trigger critical="true" flags1="nopush" name="flags" resetflags="true" tag="4" time="-1" type="ce_set_flags" />
+        <trigger tag="10" time="0.5" />
+        <chain action="smash" result="grab_smash_loop" />
+        <chain action="idle" result="grab_smash_end" />
+    </FightMove>
+    <FightMove animenum="ea_power12" lockangles="true" lockspeed="true" locktransitionangles="true" name="grab_smash_end" priority="5">
+        <trigger name="victim" nodename="getuponfront" time="0" />
+        <trigger critical="true" flags1="nopush" name="flags" resetflags="true" time="0" type="ce_set_flags" />
+        <trigger name="victim_release" time="0.99" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power1" icon="0" is_power="true" name="power1" noautoaim="true" powerup_tag="lukeca_p1" priority="5" startchaintime="0.55" turnrate="0.5">
+        <require cat="skill" item="lukec_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/lukeca_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" powerusage="%lukec_p1_pwr" remove_on_node_end="true" tag_name="lukeca_p1_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/lukeca/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="melee" always_target="true" animenum="ea_power1_loop" icon="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="lukeca_p1" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power1_end" combotextfinisher="Jab" combotextstarter="Impervious" icon="0" is_power="true" lockangles="true" name="power1_release" powerup_tag="lukeca_p1" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger life="0.2" movement="0" name="slide" targetdistance="90" targetradius="50" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p1_power" fxlevel="3" name="effect_sound" sound="char/lukeca_m/p1_power" time="0.14" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/lukeca_m/p1_charge" time="0.14" />
+        <trigger critical="true" name="powerup" remove_tag="lukeca_p1_link" time="0.21" />
+        <trigger arc="65" damage="%lukec_p1_dmg" damagemods_require_charge="true" damagescale="none" knockback="%lukec_p1_kb" maxrange="72" name="punch" time="0.21">
+            <damageMod name="dmgmod_auto_knockback" />
+            <damageMod name="dmgmod_ground" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power2" combotextfinisher="Mayhem" combotextstarter="Metal" icon="1" is_power="true" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="lukec_p2" level="1" />
+        <trigger name="sound" sound="char/lukeca_m/p2_charge" time="0" />
+        <trigger actorskin="15750" anim="power_2" anim_set="157_luke_cage_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger effect="char/lukeca/p2_power" fxlevel="1" name="effect" time="0.25" />
+        <trigger arc="45" damage="%lukec_p2_dmg" maxrange="100" name="radial" powerusage="%lukec_p2_pwr" time="0.28">
+            <damageMod name="dmgmod_popup" />
+            <damageMod name="dmgmod_ground" />
+        </trigger>
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.85" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" animenum="ea_power3" combotextfinisher="Assault" combotextstarter="Catastrophic" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="lukec_p3" level="1" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger name="sound" sound="char/lukeca_m/p3_charge" time="0" />
+        <trigger count="set" name="count" powerusage="%lukec_p3_pwr" time="0" value="10" />
+        <trigger charge="0" charge_type="set" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p3_power" fxlevel="1" name="effect" time="0.6" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p3_power" fxlevel="2" name="effect_sound" size="%lukec_p3_fxscale" sound="char/lukeca_m/p3_power" time="0.78" />
+        <trigger effect="char/lukeca/p3_power" fxlevel="3" name="effect" size="%lukec_p3_fxscale" time="0.78" />
+        <trigger damage="%lukec_p3_dmg" knockback="120" maxrange="%lukec_p3_rng" name="radial" powerusage="%lukec_p3_pwr" time="0.78">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="power3_loop" />
+    </FightMove>
+    <Fightmove animenum="ea_power3_loop" fallback="power3_end" is_power="true" lockangles="true" locktransitionangles="true" name="power3_loop" playspeed="%lukec_p3_spd" priority="5">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0" value="-1" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/lukeca/p3_power" fxlevel="1" name="effect" time="0.35" />
+        <trigger bolt="Bip01 L Hand" effect="char/lukeca/p3_power" fxlevel="2" name="effect_sound" size="%lukec_p3_fxscale" sound="char/lukeca_m/p3_power" time="0.45" />
+        <trigger damage="%lukec_p3_dmg2" knockback="120" maxrange="%lukec_p3_rng" name="radial" time="0.45" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p3_power" fxlevel="1" name="effect" time="0.89" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p3_power" fxlevel="2" name="effect_sound" size="%lukec_p3_fxscale" sound="char/lukeca_m/p3_power" time="0.99" />
+        <trigger damage="%lukec_p3_dmg2" knockback="120" maxrange="%lukec_p3_rng" name="radial" time="0.99" />
+        <trigger charge="0.2" charge_type="add" name="charge" time="0.99" />
+        <chain action="idle" result="power3_end" />
+        <chain action="samepowerclick" result="power3_loop" />
+    </Fightmove>
+    <Fightmove animenum="ea_power3_end" is_power="true" lockangles="true" locktransitionangles="true" name="power3_end" priority="5" startchaintime="0.8">
+        <trigger name="sound" sound="char/lukeca_m/p3_end" time="0" />
+        <chain action="idle" result="idle" />
+    </Fightmove>
+    <FightMove ainopush="true" aitype="melee" animenum="ea_power4" combotextfinisher="Hurl" combotextstarter="Sledge" handler="ch_grab_hold_base" icon="3" is_power="true" lockangles="true" lockspeed="true" name="power4" priority="5">
+        <require cat="skill" item="lukec_p4" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger maxrange="72" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="30" selfeventtag="1" time="0" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_luke_cage_victim" name="victim" next_eventtag="2" nodename="power4_victim_start" offset="32 0 0" tag="1" time="-1" victimface="true" />
+        <trigger name="sound" next_eventtag="3" sound="char/lukeca_m/p4_grab" tag="2" time="-1" />
+        <trigger name="powerusage" powerusage="%lukec_p4_pwr" tag="3" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="char/lukeca/p4_power" fxlevel="1" name="effect" time="0.41" />
+        <trigger failtag="105" name="verify_victim_alive" time="0.55" />
+        <trigger damage="%lukec_p4_dmg" damagescale="none" maxrange="65" name="punch" tag="105" time="-1" />
+        <trigger critical="true" name="victim_release" ownertime="0" time="-1" />
+        <chain action="idle" result="power4_spin" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power4_loop" combotextfinisher="Hurl" combotextstarter="Sledge" energypersecond="%lukec_p4_pwr" handler="ch_grab_hold_base" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_spin" priority="5">
+        <event arc="22.5" damage="1" damagescale="none" inherit="radial" knockback="305" maxrange="110" name="dohit" victimeventtag="3" />
+        <trigger class="harming" damage="%lukec_p4_dmg" damagetype="dmg_physical" life="1" name="powerup" tag="3" time="-1" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_luke_cage_victim" name="victim" nodename="power4_victim_spin" offset="0 0 0" time="0" victimface="true" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="sound" sound="char/lukeca_m/p4_start" time="0" />
+        <trigger angle="22.5" name="dohit" time="0.11" />
+        <trigger angle="45" name="dohit" time="0.22" />
+        <trigger angle="67.5" name="dohit" time="0.33" />
+        <trigger angle="112.5" name="dohit" time="0.44" />
+        <trigger angle="157.5" name="dohit" time="0.55" />
+        <trigger angle="202.5" name="dohit" time="0.66" />
+        <trigger angle="247.5" name="dohit" time="0.77" />
+        <trigger angle="292.5" name="dohit" time="0.88" />
+        <trigger angle="337.5" name="dohit" time="0.99" />
+        <trigger critical="true" damagescale="none" facethrowdir="false" impactdamage="%lukec_p4_dmg" name="throw" throwdirection="Back" thrownode="thrownbackloop" throwspeed="450" time="-1" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_spin" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power4_end" combotextfinisher="Hurl" combotextstarter="Sledge" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power4_release" priority="5">
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_luke_cage_victim" name="victim" nodename="power4_victim_thrown" offset="62 0 0" time="0" victimface="true" />
+        <trigger name="charsound" play_sound_on_victim="true" sound="snd_superdrop_yell" time="0.35" />
+        <trigger name="sound" sound="char/lukeca_m/p4_end" time="0.35" />
+        <trigger critical="true" facethrowdir="false" impactdamage="%lukec_p4_dmg" name="throw" throwdirection="Back" thrownode="thrownbackloop" throwspeed="450" time="0.35" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power5" combotextfinisher="Slam" combotextstarter="Punishing" icon="4" is_power="true" lockangles="true" name="power5" priority="5">
+        <require cat="skill" item="lukec_p5" level="1" />
+        <trigger name="sound" sound="char/lukeca_m/p5_charge" time="0" />
+        <trigger effect="char/lukeca/p5_power" fxlevel="1" name="effect" time="0.13" />
+        <trigger bolt="Bip01 Pelvis" effect="char/lukeca/p5_power" fxlevel="2" name="effect" time="0.13" />
+        <trigger effect="char/lukeca/p5_power" fxlevel="3" name="effect_sound" sound="char/lukeca_m/p5_power" time="0.38" />
+        <trigger damage="%lukec_p5_dmg" knockback="245" maxrange="72" name="radial" powerusage="%lukec_p5_pwr" tiles="true" time="0.38">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="%lukec_p5_dmg" damagescale="none" name="punch" time="0.65" />
+        <trigger effect="char/lukeca/p5_power" fxlevel="1" name="effect" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power6" combotextfinisher="Backlash" combotextstarter="Dynamic" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="lukec_p6" level="1" />
+        <trigger effect="char/lukeca/p6_power" fxlevel="1" name="effect_sound" sound="char/lukeca_m/p6_charge" time="0" />
+        <trigger effect="char/lukeca/p6_power" fxlevel="2" name="effect" time="0.36" />
+        <trigger life="%lukec_p6_lif" name="taunt" time="0.36" />
+        <trigger life="%lukec_p6_lif" name="powerup" powerusage="%lukec_p6_pwr" time="0.36">
+            <special_fx effect="char/lukeca/p6_power" fxlevel="3" how_used="primary" />
+            <special_fx effect="char/lukeca/p6_power" fxlevel="4" how_used="deactivation" />
+            <affecter attribute="deflect_projectiles" level="1" />
+            <affecter affect_type="scale" attribute="def_damage" level="%lukec_p6_dmg" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="lukec_p7" level="1" />
+        <trigger name="sound" sound="char/lukeca_m/p7_charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/lukeca/p7_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger bolt="Bip01 R Hand" effect="char/lukeca/p7_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger effect="char/lukeca/p7_power" fxlevel="2" name="effect" time="0.45" />
+        <trigger life="%lukec_p7_lif" name="powerup" powerusage="%lukec_p7_pwr" time="0.45">
+            <special_fx effect="char/lukeca/p7_power" fxlevel="3" how_used="primary" />
+            <special_fx effect="char/lukeca/p7_power" fxlevel="4" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="maxhealth" level="%lukec_p7_hlt" />
+            <affecter affect_type="scale" attribute="strength" level="%lukec_p7_str" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="lukec_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="10" only_non_looped="true" team_xtreme="10" time="0" />
+        <trigger class="remove_on_events" life="-1" name="powerup" on_xtreme_end="true" tag="10" time="-1">
+            <affecter affect_type="scale" attribute="extra_money" level="%lukec_p8_mon" />
+        </trigger>
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Smash" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <trigger name="sound" sound="char/lukeca_m/p8_charge" time="0" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Sweet Christmas" />
+        <trigger effect="char/lukeca/p8_power" fxlevel="1" name="effect" time="0.18" />
+        <trigger bolt="Bip01 Pelvis" effect="char/lukeca/p8_power" fxlevel="2" name="effect" time="0.18" />
+        <trigger effect="char/lukeca/p8_power" fxlevel="3" name="effect" time="0.46" />
+        <trigger damage="%lukec_p8_dmg" maxrange="150" name="radial" tiles="true" time="0.46" />
+        <trigger damage="%lukec_p8_dmg" maxrange="300" name="radial" tiles="true" time="0.5" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>
