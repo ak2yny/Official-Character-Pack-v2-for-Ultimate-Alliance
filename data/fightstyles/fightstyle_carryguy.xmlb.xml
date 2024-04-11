@@ -1,29 +1,4 @@
 <FightingStyle>
-    <FightMove ainopush="true" animenum="ea_popup_start" handler="ch_popup" lockangles="true" lockchaining="false" lockspeed="true" name="popupstart" priority="pain" priority_override="pain" sequenced="true">
-        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01"/>
-        <trigger name="set_weapon_visible" time="0" visible="false"/>
-        <trigger bolt="Bip01 Spine2" life="0.5" name="trail" time="0"/>
-        <chain action="special" result="popupland"/>
-        <chain action="special2" result="popupbreak"/>
-        <chain action="idle" result="popuploop"/>
-    </FightMove>
-    <FightMove animenum="ea_trip" death="true" handler="ch_trip" lockangles="true" lockspeed="true" locktransitionangles="true" name="trip" priority="pain" priority_override="pain">
-        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01"/>
-        <trigger name="body_sound" time="0.3"/>
-        <trigger name="onground" onfront="true" onground="true" time="0.3"/>
-        <chain action="idle" result="getuponfront"/>
-    </FightMove>
-    <FightMove animenum="ea_thrown_back_loop" handler="ch_thrown" lockangles="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="knockbackstart" noblendanim="true" noncombat="true" priority="pain" priority_override="pain" sequenced="true">
-        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01"/>
-        <chain action="special" result="thrownbackland"/>
-        <chain action="special2" result="thrownbackhitwall"/>
-    </FightMove>
-    <FightMove animenum="ea_thrown_fwd_loop" blendtime="0.1" handler="ch_thrown" lockangles="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="knockfwdstart" noncombat="true" sequenced="true">
-        <trigger critical="on_exit" name="otherevent" othernode="DropActorAsWeapon" othertag="254" time="0.01"/>
-        <chain action="attack" result="thrownfwdland"/>
-        <chain action="special" result="thrownfwdland"/>
-        <chain action="special2" result="thrownfwdhitwall"/>
-    </FightMove>
     <FightMove animenum="ea_power8_end" handler="ch_idle" lockchaining="false" name="idle" noncombat="true">
         <chain action="walk" result="walk"/>
         <chain action="run" result="run"/>
