@@ -4,13 +4,11 @@
 # ( "If they found it, he awards them" )
 gothorn = getGameFlag("asgard4", 12 )
 if gothorn == 0
-     waittimed ( 1.000 )
      startConversation("act3/asgard/asgard4/3_ASGARD4_120" )
 else
      remove ( "horn_conv_trig", "horn_conv_trig" )
      setGameFlag("asgard4", 16, 1 )
      objective ( "asgard_obj50",  "EOBJCMD_COMPLETE" )
-     waittimed ( 1.000 )
      startConversation("act3/asgard/asgard4/3_ASGARD4_130" )
 endif
 
