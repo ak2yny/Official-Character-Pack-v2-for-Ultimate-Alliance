@@ -1,4 +1,6 @@
-![Banner](https://cdn.discordapp.com/attachments/566058097463001088/884559439447851018/MM_Banner.png)
+<p align="center">
+    <img src="https://github.com/ak2yny/Official-Character-Pack-v2-for-Ultimate-Alliance/assets/57107961/dd371ed7-d3d9-461d-9116-883b863e6503" height="250">
+</p>
 <h1 align="center">
     Official Characters Pack 2 by MarvelMods.com
 </h1>
