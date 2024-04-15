@@ -1,0 +1,78 @@
+<conversation>
+    <startCondition conditionscriptfile="act3/valhalla/talk_hermod_wthor" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/hermod/3_valhalla1_070_010_her" text="%HERMOD%: Thor, it does my heart good to see you back amongst the gods.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/thor/3_valhalla1_070_011_tho" text="%THOR%: Hermod, my friend, I am pleased you did not fall in the attack on Asgard.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/hermod/3_valhalla1_070_012_her" text="%HERMOD%: Aye. But I bring bad news from the Bifrost bridge. The Wrecking Crew has closed the gates to Midgard, stopping any reinforcements from joining us.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/thor/3_valhalla1_070_013_tho" text="%THOR%: Worry no longer, Hermod. We shall go to Bifrost and reopen the gates.">
+                                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition conditionscriptfile="act3/valhalla/talk_hermod_nothor" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line soundtoplay="voice/hermod/3_valhalla1_070_020_her" text="%HERMOD%: Greetings, human. My name is Hermod and I bring bad news - the Bifrost bridge is under attack by the Wrecking Crew.">
+                <response text="%PLAYER%: What can we do to help?">
+                    <line soundtoplay="voice/hermod/3_valhalla1_070_022_her" text="%HERMOD%: I would ask that you travel across the bridge and open the gate to Midgard. Then additional reinforcements will be able to join us.">
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line soundtoplay="voice/hermod/3_valhalla1_070_030_her" text="%HERMOD%: Yes? How might I help you?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line tagindex="autogen_tag_1" text="%PLAYER%">
+                <response scriptfile="common/conv/thor_disallow" text="Who are you?">
+                    <line soundtoplay="voice/hermod/3_valhalla1_070_101_her" text="%HERMOD%: I am Hermod, the fleetest of foot in all of Asgard. Because of my speed I sometimes act as a messenger for Odin.">
+                        <response text="%PLAYER%: Have you ever been to Earth?">
+                            <line soundtoplay="voice/hermod/3_valhalla1_070_103_her" text="%HERMOD%: Yes. I lived there for a short time because of a spell Odin cast. The gods were sent to Earth and given human identities.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="common/conv/thor_disallow" text="What's the Bifrost bridge?">
+                    <line soundtoplay="voice/hermod/3_valhalla1_070_201_her" text="%HERMOD%: Bifrost is also known as The Rainbow Bridge. It's the only permanent pathway between Asgard and Midgard - or Earth as you call it.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/hermod/3_valhalla1_070_202_her" text="%HERMOD%: Normally the bridge is protected by Heimdall, but he was taken prisoner during the battle for Asgard.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Who's the Wrecking Crew?">
+                    <line soundtoplay="voice/hermod/3_valhalla1_070_301_her" text="%HERMOD%: They are a group of villains lead by a human named Wrecker. He acquired Asgardian powers when he was mistaken for Loki.">
+                        <response scriptfile="common/conv/thor_disallow" text="%PLAYER%: He has the power of a god?">
+                            <line soundtoplay="voice/hermod/3_valhalla1_070_303_her" text="%HERMOD%: Yes, as do his cohorts. They have plagued Thor and Asgard many times over the years.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                        <response tagjump="autogen_tag_1" text="%BLANK%" />
+                    </line>
+                </response>
+                <response text="Thanks, Hermod.">
+                    <line soundtoplay="voice/hermod/3_valhalla1_070_401_her" text="%HERMOD%: Certainly.">
+                        <response chosenscriptfile="act3/valhalla/talk_hermod_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>
