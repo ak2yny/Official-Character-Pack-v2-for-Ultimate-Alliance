@@ -1,0 +1,17 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/lizard/6_villainmission_660_010_liz" text="%LIZARD%: So you're here!">
+                <response soundtoplay="voice/player/6_villainmission_660_011_tl" text="%PLAYER%: Lizard, there's no reason to fight. We know you're Dr. Connors.">
+                    <line soundtoplay="voice/lizard/6_villainmission_660_012_liz" text="%LIZARD%: Your death will be very painful!">
+                        <response soundtoplay="voice/player/6_villainmission_660_013_tl" text="%PLAYER%: All right, if that's how you want it. We'll fight you, if we have to.">
+                            <line soundtoplay="voice/lizard/6_villainmission_660_014_liz" text="%LIZARD%: Time to die!">
+                                <response conversationend="true" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

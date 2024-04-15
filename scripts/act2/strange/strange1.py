@@ -105,7 +105,7 @@ pitfall_won = getGameFlag("murder2", 4 )
 if jeanremove == 0
      if jeandead == 0
          if pitfall_won == 1
-             act("sp_jeansimple01", "" )
+             act("sp_jeangrey01", "" )
          endif
      endif
 endif
