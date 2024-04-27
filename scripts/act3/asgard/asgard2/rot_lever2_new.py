@@ -70,6 +70,7 @@ if rotation1 == 3
           waittimed ( 0.100 )
           cameraFade(0.000, 1.000 )
           waittimed ( 1.000 )
+          awardXPToPlayable(500 )
      else
           waittimed ( 3.000 )
      endif
