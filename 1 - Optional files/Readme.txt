@@ -52,8 +52,8 @@ Other:
          There's plans for Dark Colossus to receive this treatment too.
 - "Optional Objectives" are objectives for side quests, which were added in an effort to make side quests more conistent.
   Note: They add 5 objectives and a few game flags which might add to limits (unknown).
-- "Optional Quick Play Mod 2.0" is an update of the Quick Play Mod by Maegawa (eg. no legal text intro when starting the game) with additions, such as: skipped events (Pitfall arcade game, etc.); early access to second hup areas; more skipped introduction and intro cutscene; unlocked simulators.
-  Note: This is meant for mod testing.
+- "Optional Quick Play Mod 2.0" is an update of the Quick Play Mod by Maegawa (eg. no legal text intro when starting the game) with additions, such as: skipped events (Pitfall arcade game, etc.); early access to second hub areas; more skipped introduction and intro cutscene; unlocked simulators.
+  Note: This is experimental and meant for mod testing.
   Tips: Add only individual files to add parts of this mod, or remove individual files to remove parts from this mod
 - "Optional Save Jean and Nightcrawler Using Magneto" contains the mod, where Magneto's able to save both X-Men in Mephosto's Realm.
   Note: This was added in OCP 1, and moved to Optional Files in OCP 2.5.
