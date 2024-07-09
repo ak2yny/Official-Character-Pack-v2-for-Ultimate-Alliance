@@ -191,7 +191,7 @@
         <trigger effect="char/dphero/p1_power" fxlevel="3" name="effect" time="0.54"/>
         <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.5"/>
         <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.5"/>
-        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.56"/>
+        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="3" maxrange="60" name="power_sword" powerusage="0" time="0.56"/>
         <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.56"/>
         <trigger critical="true" name="sheathe_right_sword" time="0.88"/>
         <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.88"/>
@@ -215,7 +215,7 @@
         <trigger chance="%dead_p2_tc" name="otherevent" othertag="14" tag="13" time="-1"/>
         <trigger damage="0" index="2" name="self_attack" tag="14" time="-1" type="ce_atk_self">
             <damageMod name="dmgmod_no_damage"/>
-            <damagemod name="dmgmod_knockback"/>
+            <damagemod name="dmgmod_auto_knockback"/>
         </trigger>
         <trigger attack_bone_angles="70 2 1" attack_bone_pos="49 -6 38" beambolt="fx01" fxlevel="1" name="gun_shot" powerusage="%dead_p2_pwr" time="0"/>
         <trigger name="sound" sound="char/dphero_m/p2_power" time="0"/>
@@ -253,7 +253,7 @@
         <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0"/>
         <trigger effect="char/dphero/p3_power" fxlevel="3" name="effect" time="0.2"/>
         <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect_sound" sound="char/dphero_m/p1_stab" time="0.32"/>
-        <trigger arc="30" damage="%dead_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" time="0.32"/>
+        <trigger arc="30" damage="%dead_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" time="0.32" victimeventtag="101"/>
         <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect_sound" sound="char/dphero_m/p3_power" time="0.95"/>
         <trigger critical="true" name="hide_stab_sword" time="-1"/>
         <chain action="idle" result="power3_loop"/>
