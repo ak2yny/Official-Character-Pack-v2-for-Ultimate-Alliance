@@ -1,406 +1,406 @@
-<PowerStyle iconfile="textures/ui/deadpool_icons1.png">
-    <event damagescale="none" name="teleport_data_store" type="ce_atk_teleport_mark_start" />
-    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility" />
-    <event arc="60" damage="3 4" damagelevel="2" damagetype="dmg_blade" inherit="punch_heavy" knockback="120" maxrange="72" name="power_sword" tiles="true" victimeventtag="20" />
+﻿<PowerStyle iconfile="textures/ui/deadpool_icons1.png">
+    <event damagescale="none" name="teleport_data_store" type="ce_atk_teleport_mark_start"/>
+    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility"/>
+    <event arc="60" damage="3 4" damagelevel="2" damagetype="dmg_blade" inherit="punch_heavy" knockback="120" maxrange="72" name="power_sword" tiles="true" victimeventtag="20"/>
     <event class="requirements" inherit="powerup" name="weapon_mastery" remove_on_node_end="true">
-        <require cat="skill" item="dead_outfit41" level="1" />
-        <affecter attribute="atk_damage" level="%dead_outfit41_pct" />
+        <require cat="skill" item="dead_outfit41" level="1"/>
+        <affecter attribute="atk_damage" level="%dead_outfit41_pct"/>
     </event>
-    <event inherit="skinsegment" name="hide_swords" show="false" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_l_hand" />
-    <event inherit="skinsegment" name="show_swords" show="true" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_l_hand" />
-    <event inherit="skinsegment" name="show_stab_sword" show="true" show2="false" skinsegment="sword_l_hand_reverse" skinsegment2="sword_r_back" />
-    <event inherit="skinsegment" name="hide_stab_sword" show="false" show2="true" skinsegment="sword_l_hand_reverse" skinsegment2="sword_r_back" />
-    <event inherit="skinsegment" name="hide_back_swords" show="false" show2="false" skinsegment="sword_r_back" skinsegment2="sword_l_back" />
-    <event inherit="skinsegment" name="show_back_swords" show="true" show2="true" skinsegment="sword_r_back" skinsegment2="sword_l_back" />
-    <event inherit="skinsegment" name="gun_both_hide" show="false" skinsegment="guns" />
-    <event inherit="skinsegment" name="gun_both_show" show="true" skinsegment="guns" />
+    <event inherit="skinsegment" name="hide_swords" show="false" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_l_hand"/>
+    <event inherit="skinsegment" name="show_swords" show="true" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_l_hand"/>
+    <event inherit="skinsegment" name="show_stab_sword" show="true" show2="false" skinsegment="sword_l_hand_reverse" skinsegment2="sword_r_back"/>
+    <event inherit="skinsegment" name="hide_stab_sword" show="false" show2="true" skinsegment="sword_l_hand_reverse" skinsegment2="sword_r_back"/>
+    <event inherit="skinsegment" name="hide_back_swords" show="false" show2="false" skinsegment="sword_r_back" skinsegment2="sword_l_back"/>
+    <event inherit="skinsegment" name="show_back_swords" show="true" show2="true" skinsegment="sword_r_back" skinsegment2="sword_l_back"/>
+    <event inherit="skinsegment" name="gun_both_hide" show="false" skinsegment="guns"/>
+    <event inherit="skinsegment" name="gun_both_show" show="true" skinsegment="guns"/>
     <FightMove animenum="ea_power11" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
-        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_deadpool_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
-        <trigger name="sound" sound="char/dphero_m/p10_power" time="0" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.37" />
-        <trigger damage="4 5" knockback="0" maxrange="64" name="punch" time="0.5" />
-        <trigger critical="true" name="victim_release" time="0.98" />
-        <trigger critical="true" name="skinsegment" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.98" />
-        <chain action="idle" result="idle" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_deadpool_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true"/>
+        <trigger name="sound" sound="char/dphero_m/p10_power" time="0"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.37"/>
+        <trigger damage="4 5" knockback="0" maxrange="64" name="punch" time="0.5"/>
+        <trigger critical="true" name="victim_release" time="0.98"/>
+        <trigger critical="true" name="skinsegment" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.98"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0" />
-        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0" />
-        <trigger critical="on_exit" name="skinsegment" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="-1" />
-        <trigger critical="on_exit" name="skinsegment" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="-1" />
-        <chain action="special" result="idle" />
-        <chain action="rollleft" result="rollforward" />
-        <chain action="rollright" result="rollforward" />
-        <chain action="retreat" result="rollforward" />
-        <chain action="advance" result="rollforward" />
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0"/>
+        <trigger name="skinsegment" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0"/>
+        <trigger critical="on_exit" name="skinsegment" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="-1"/>
+        <trigger critical="on_exit" name="skinsegment" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="-1"/>
+        <chain action="special" result="idle"/>
+        <chain action="rollleft" result="rollforward"/>
+        <chain action="rollright" result="rollforward"/>
+        <chain action="retreat" result="rollforward"/>
+        <chain action="advance" result="rollforward"/>
     </FightMove>
     <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.69">
-        <trigger name="whoosh_light" time="0.15" />
-        <trigger movement="0" name="slide" time="0" />
-        <trigger bolt="Bip01 R Toe0" life="0.46" name="trail" time="0.15" />
-        <trigger name="kick" time="0.31" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight2" />
-        <chain action="groundattack" result="groundattack2" />
-        <chain action="smash" result="attackstun1" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_light" time="0.15"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Toe0" life="0.46" name="trail" time="0.15"/>
+        <trigger name="kick" time="0.31"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.53">
-        <trigger name="whoosh_heavy" time="0.16" />
-        <trigger movement="0" name="slide" time="0" />
-        <trigger bolt="Bip01 R Toe0" life="0.32" name="trail" time="0.15" />
-        <trigger name="kick" tag="10" time="0.32" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight3" />
-        <chain action="groundattack" result="groundattack" />
-        <chain action="smash" result="popupattack2" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_heavy" time="0.16"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 R Toe0" life="0.32" name="trail" time="0.15"/>
+        <trigger name="kick" tag="10" time="0.32"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_light3" blendtime="0" endchaintime="1" lockangles="true" name="attacklight3" priority="3">
-        <trigger name="whoosh_light" time="0.27" />
-        <trigger movement="0" name="slide" time="0" />
-        <trigger bolt="Bip01 L Toe0" life="0.33" name="trail" time="0.2" />
-        <trigger bolt="Bip01 R Toe0" life="0.47" name="trail" time="0.33" />
-        <trigger damage="1 2" name="kick" time="0.4" />
-        <trigger damage="1 2" index="2" name="kick" time="0.6" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="attack" result="null" />
-        <chain action="smash" result="null" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_light" time="0.27"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="Bip01 L Toe0" life="0.33" name="trail" time="0.2"/>
+        <trigger bolt="Bip01 R Toe0" life="0.47" name="trail" time="0.33"/>
+        <trigger damage="1 2" name="kick" time="0.4"/>
+        <trigger damage="1 2" index="2" name="kick" time="0.6"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
-        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
-        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
-        <trigger bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
-        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1"/>
         <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
-            <special_fx bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
         </trigger>
-        <chain action="idle" result="attackknockback2" />
-        <chain action="groundsmash" result="groundattackknockback2" />
-        <chain action="special" result="attack_knockback_charge" />
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
     </FightMove>
     <FightMove animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
-        <trigger charge_type="stop" name="charge" time="0" />
-        <trigger movement="10" name="slide" time="0" />
-        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.2" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.2" />
-        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.2" />
-        <trigger bolt="Bip01 L Toe0" life="0.37" name="trail" time="0.21" />
-        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.37" />
+        <trigger charge_type="stop" name="charge" time="0"/>
+        <trigger movement="10" name="slide" time="0"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.2"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.2"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.2"/>
+        <trigger bolt="Bip01 L Toe0" life="0.37" name="trail" time="0.21"/>
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.37"/>
         <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
-            <damagemod name="dmgmod_auto_knockback" />
-            <damagemod name="dmgmod_no_atk_roll" />
-            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+            <damagemod name="dmgmod_ground"/>
         </trigger>
-        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
-        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="attacklight1" />
-        <chain action="blocking" result="blocking" />
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1"/>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_jump_start" handler="ch_move_jump" icon="4" lockangles="true" lockchaining="false" name="jump" noncombat="true">
-        <chain action="move" result="teleport_end" />
-        <chain action="attack" result="jumpsmash" />
-        <chain action="smash" result="jumpsmash" />
-        <chain action="powers" result="powers" />
-        <chain action="idle" result="jumploop" />
-        <chain action="special" result="jumpland" />
-        <require cat="skill" item="dead_tele" level="1" />
+        <chain action="move" result="teleport_end"/>
+        <chain action="attack" result="jumpsmash"/>
+        <chain action="smash" result="jumpsmash"/>
+        <chain action="powers" result="powers"/>
+        <chain action="idle" result="jumploop"/>
+        <chain action="special" result="jumpland"/>
+        <require cat="skill" item="dead_tele" level="1"/>
     </FightMove>
     <FightMove animenum="ea_jump_loop" handler="ch_jump" icon="4" lockangles="true" lockchaining="false" name="jumploop">
-        <chain action="move" result="teleport_end" />
-        <chain action="attack" result="jumpsmash" />
-        <chain action="smash" result="jumpsmash" />
-        <chain action="powers" result="powers" />
-        <chain action="special" result="jumpland" />
-        <chain action="idle" result="jumploop" />
-        <require cat="skill" item="dead_tele" level="1" />
+        <chain action="move" result="teleport_end"/>
+        <chain action="attack" result="jumpsmash"/>
+        <chain action="smash" result="jumpsmash"/>
+        <chain action="powers" result="powers"/>
+        <chain action="special" result="jumpland"/>
+        <chain action="idle" result="jumploop"/>
+        <require cat="skill" item="dead_tele" level="1"/>
     </FightMove>
     <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.89">
-        <event inherit="skinsegment" name="sheathe_left_sword" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" />
-        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.06" />
-        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.11" />
-        <trigger name="whoosh_light" time="0.17" />
-        <trigger movement="0" name="slide" time="0" />
-        <trigger charge="1" name="charge" time="0" />
+        <event inherit="skinsegment" name="sheathe_left_sword" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back"/>
+        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.06"/>
+        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.11"/>
+        <trigger name="whoosh_light" time="0.17"/>
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger charge="1" name="charge" time="0"/>
         <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.33">
-            <damagemod name="dmgmod_popup" />
-            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
         </trigger>
-        <trigger movement="0" name="slide" time="0" />
-        <trigger bolt="fx03" life="0.3" name="trail" time="0.25" />
-        <trigger name="punch" time="0.35" />
-        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.83" />
-        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="0.72" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="attack" result="null" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="blocking" result="blocking" />
+        <trigger movement="0" name="slide" time="0"/>
+        <trigger bolt="fx03" life="0.3" name="trail" time="0.25"/>
+        <trigger name="punch" time="0.35"/>
+        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.83"/>
+        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="0.72"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_stun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
-        <trigger name="whoosh_heavy" time="0.2" />
-        <trigger bolt="Bip01 R Toe0" life="0.35" name="trail" time="0.15" />
-        <trigger knockback="0" maxrange="50" name="kick_heavy" time="0.25" />
-        <chain action="idle" result="idle" />
-        <chain action="guard" result="null" />
-        <chain action="smash" result="attackstun_finish" />
-        <chain action="powers" result="powers" />
-        <chain action="move" result="jump" />
-        <chain action="attack" result="attacktrip2" />
-        <chain action="groundattack" result="groundattack" />
-        <chain action="blocking" result="blocking" />
+        <trigger name="whoosh_heavy" time="0.2"/>
+        <trigger bolt="Bip01 R Toe0" life="0.35" name="trail" time="0.15"/>
+        <trigger knockback="0" maxrange="50" name="kick_heavy" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="smash" result="attackstun_finish"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="attacktrip2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove animenum="ea_attack_stun2" lockangles="true" name="attackstun_finish">
-        <trigger name="whoosh_heavy" time="0.25" />
-        <trigger bolt="Bip01 L Hand" life="0.35" name="trail" time="0.2" />
+        <trigger name="whoosh_heavy" time="0.25"/>
+        <trigger bolt="Bip01 L Hand" life="0.35" name="trail" time="0.2"/>
         <trigger knockback="0" maxrange="50" name="kick_heavy" time="0.35">
-            <damagemod name="dmgmod_stun" />
-            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
         </trigger>
-        <chain action="idle" result="idle" />
-        <chain action="move" result="jump" />
-        <chain action="smash" result="null" />
-        <chain action="blocking" result="blocking" />
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
     </FightMove>
     <FightMove aireusetime="5" aitype="projectilenear" animenum="ea_power1" combotextfinisher="Smite" combotextstarter="Slayer's" handler="ch_nightcrawlerboltons" icon="0" is_power="true" lockangles="true" name="power1" powerup_tag="dead_power1" priority="5">
-        <event inherit="skinsegment" name="sheathe_left_sword" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" />
-        <event inherit="skinsegment" name="sheathe_right_sword" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" />
-        <require cat="skill" item="dead_p1" level="1" />
-        <trigger name="weapon_mastery" time="0" />
-        <trigger name="sound" sound="char/dphero_m/p1_power" time="0" />
-        <trigger name="show_swords" time="0.11" />
-        <trigger name="hide_back_swords" time="0.11" />
-        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.11" />
-        <trigger effect="char/dphero/p1_power" fxlevel="1" name="effect" time="0.26" />
-        <trigger arc="45" damage="%dead_p1_dmg" damagescale="none" index="1" name="power_sword" powerusage="%dead_p1_pwr" time="0.3" />
-        <trigger name="sound" sound="char/dphero_m/p1_stab" time="0.3" />
-        <trigger effect="char/dphero/p1_power" fxlevel="2" name="effect" time="0.48" />
-        <trigger effect="char/dphero/p1_power" fxlevel="3" name="effect" time="0.54" />
-        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.5" />
-        <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.5" />
-        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.56" />
-        <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.56" />
-        <trigger critical="true" name="sheathe_right_sword" time="0.88" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.88" />
-        <trigger critical="true" name="sheathe_left_sword" time="0.94" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.94" />
-        <chain action="idle" result="idle" />
+        <event inherit="skinsegment" name="sheathe_left_sword" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back"/>
+        <event inherit="skinsegment" name="sheathe_right_sword" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back"/>
+        <require cat="skill" item="dead_p1" level="1"/>
+        <trigger name="weapon_mastery" time="0"/>
+        <trigger name="sound" sound="char/dphero_m/p1_power" time="0"/>
+        <trigger name="show_swords" time="0.11"/>
+        <trigger name="hide_back_swords" time="0.11"/>
+        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.11"/>
+        <trigger effect="char/dphero/p1_power" fxlevel="1" name="effect" time="0.26"/>
+        <trigger arc="45" damage="%dead_p1_dmg" damagescale="none" index="1" name="power_sword" powerusage="%dead_p1_pwr" time="0.3"/>
+        <trigger name="sound" sound="char/dphero_m/p1_stab" time="0.3"/>
+        <trigger effect="char/dphero/p1_power" fxlevel="2" name="effect" time="0.48"/>
+        <trigger effect="char/dphero/p1_power" fxlevel="3" name="effect" time="0.54"/>
+        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.5"/>
+        <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.5"/>
+        <trigger arc="90" damage="%dead_p1_dmg" damagescale="none" index="2" maxrange="60" name="power_sword" powerusage="0" time="0.56"/>
+        <trigger name="sound" sound="char/dphero_m/p1_slash" time="0.56"/>
+        <trigger critical="true" name="sheathe_right_sword" time="0.88"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.88"/>
+        <trigger critical="true" name="sheathe_left_sword" time="0.94"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.94"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="5" aitype="projectile" animenum="ea_power2" icon="1" is_power="true" lockangles="true" name="power2" noautoaim="true" powerup_tag="dead_power2" priority="5">
-        <require cat="skill" item="dead_p2" level="1" />
-        <trigger name="powerusage" powerusage="%dead_p2_pwr" time="0" />
-        <trigger name="gun_both_show" time="0.46" />
-        <trigger name="sound" sound="char/dphero_m/special_draw" time="0.46" />
-        <trigger critical="true" name="gun_both_hide" time="-1" />
-        <chain action="Idle" result="power2_loop" />
+        <require cat="skill" item="dead_p2" level="1"/>
+        <trigger name="powerusage" powerusage="%dead_p2_pwr" time="0"/>
+        <trigger name="gun_both_show" time="0.46"/>
+        <trigger name="sound" sound="char/dphero_m/special_draw" time="0.46"/>
+        <trigger critical="true" name="gun_both_hide" time="-1"/>
+        <chain action="Idle" result="power2_loop"/>
     </FightMove>
     <FightMove aireusetime="5" always_target="true" animenum="ea_power2_loop" combotextfinisher="Blast" combotextstarter="Double" icon="1" is_power="true" lockangles="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="dead_gun" priority="5" target_only_actors="true" turnrate="0.3">
-        <require cat="skill" item="dead_p2" level="1" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger name="weapon_mastery" time="0" />
-        <event arc="0" attacktype="beam" beameffect="char/dphero/p2_power" damage="%dead_p2_dmg" damagescale="none" damagetype="dmg_physical" fxlevel="1" hiteffect="char/dphero/p2_impact" inherit="beam" knockback="120" maxrange="800" name="gun_shot" victimeventtag="13" />
-        <trigger chance="%dead_p2_tc" name="otherevent" othertag="14" tag="13" time="-1" />
+        <require cat="skill" item="dead_p2" level="1"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="weapon_mastery" time="0"/>
+        <event arc="0" attacktype="beam" beameffect="char/dphero/p2_power" damage="%dead_p2_dmg" damagescale="none" damagetype="dmg_physical" fxlevel="1" hiteffect="char/dphero/p2_impact" inherit="beam" knockback="120" maxrange="800" name="gun_shot" victimeventtag="13"/>
+        <trigger chance="%dead_p2_tc" name="otherevent" othertag="14" tag="13" time="-1"/>
         <trigger damage="0" index="2" name="self_attack" tag="14" time="-1" type="ce_atk_self">
-            <damageMod name="dmgmod_no_damage" />
-            <damagemod name="dmgmod_knockback" />
+            <damageMod name="dmgmod_no_damage"/>
+            <damagemod name="dmgmod_knockback"/>
         </trigger>
-        <trigger attack_bone_angles="70 2 1" attack_bone_pos="49 -6 38" beambolt="fx01" fxlevel="1" name="gun_shot" powerusage="%dead_p2_pwr" time="0" />
-        <trigger name="sound" sound="char/dphero_m/p2_power" time="0" />
-        <trigger attack_bone_angles="-42 1 -4" attack_bone_pos="44 -2 40" beambolt="fx02" fxlevel="2" name="gun_shot" time="0.5" />
-        <trigger name="sound" sound="char/dphero_m/p2_power" time="0.5" />
-        <trigger critical="true" name="gun_both_hide" time="-1" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_holster" time="-1" />
-        <chain action="Idle" result="power2_end" />
-        <chain action="samepowerhold" result="power2_loop" />
+        <trigger attack_bone_angles="70 2 1" attack_bone_pos="49 -6 38" beambolt="fx01" fxlevel="1" name="gun_shot" powerusage="%dead_p2_pwr" time="0"/>
+        <trigger name="sound" sound="char/dphero_m/p2_power" time="0"/>
+        <trigger attack_bone_angles="-42 1 -4" attack_bone_pos="44 -2 40" beambolt="fx02" fxlevel="2" name="gun_shot" time="0.5"/>
+        <trigger name="sound" sound="char/dphero_m/p2_power" time="0.5"/>
+        <trigger critical="true" name="gun_both_hide" time="-1"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_holster" time="-1"/>
+        <chain action="Idle" result="power2_end"/>
+        <chain action="samepowerhold" result="power2_loop"/>
     </FightMove>
     <FightMove animenum="ea_power2_end" is_power="true" lockangles="true" name="power2_end" priority="5">
-        <trigger critical="true" name="gun_both_hide" time="0.69" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_holster" time="0.69" />
-        <chain action="Idle" result="idle" />
+        <trigger critical="true" name="gun_both_hide" time="0.69"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_holster" time="0.69"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="aoe" animenum="ea_power3" endchaintime="0.95" handler="ch_teleport_dash_start" icon="2" is_power="true" name="power3" noautoaim="true" priority="5" startchaintime="0.9" turnrate="0.5">
-        <require cat="skill" item="dead_p3" level="1" />
-        <trigger count="set" name="count" time="0" value="%dead_p3_num_att" />
-        <trigger name="powerusage" powerusage="%dead_p3_pwr" time="0" />
-        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect_sound" sound="char/dphero_m/p3_power" time="0.4" />
-        <trigger name="show_stab_sword" time="0.75" />
-        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.75" />
-        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect" time="0.8" />
-        <trigger attacktype="direct" name="teleport_mark_start" time="0" />
-        <trigger maxrange="300" maxtargets="%dead_p3_num_att" name="teleport_dash_prep" time="0" />
-        <trigger critical="true" name="hide_stab_sword" time="-1" />
-        <chain action="Idle" result="power3_loop" />
+        <require cat="skill" item="dead_p3" level="1"/>
+        <trigger count="set" name="count" time="0" value="%dead_p3_num_att"/>
+        <trigger name="powerusage" powerusage="%dead_p3_pwr" time="0"/>
+        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect_sound" sound="char/dphero_m/p3_power" time="0.4"/>
+        <trigger name="show_stab_sword" time="0.75"/>
+        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.75"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect" time="0.8"/>
+        <trigger attacktype="direct" name="teleport_mark_start" time="0"/>
+        <trigger maxrange="300" maxtargets="%dead_p3_num_att" name="teleport_dash_prep" time="0"/>
+        <trigger critical="true" name="hide_stab_sword" time="-1"/>
+        <chain action="Idle" result="power3_loop"/>
     </FightMove>
     <FightMove animenum="ea_power9" blendtime="0" combotextfinisher="Mayhem" combotextstarter="Moving" endchaintime="0.75" fallback="power3_end" is_power="true" lockangles="true" name="power3_loop" noautoaim="true" playspeed="0.7" powerup_tag="dead_power3" priority="5" startchaintime="0.7">
-        <require cat="counter" level="1" />
-        <trigger life="%dead_p3_stn_lif" name="powerup" shared_tag="shared_stunned" tag="101" time="-1" />
-        <trigger name="weapon_mastery" time="0" />
-        <trigger count="add" name="count" time="0" value="-1" />
-        <trigger name="sound" sound="char/dphero_m/p3_impact" time="0" />
-        <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0" />
-        <trigger effect="char/dphero/p3_power" fxlevel="3" name="effect" time="0.2" />
-        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect_sound" sound="char/dphero_m/p1_stab" time="0.32" />
-        <trigger arc="30" damage="%dead_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" time="0.32" />
-        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect_sound" sound="char/dphero_m/p3_power" time="0.95" />
-        <trigger critical="true" name="hide_stab_sword" time="-1" />
-        <chain action="idle" result="power3_loop" />
+        <require cat="counter" level="1"/>
+        <trigger life="%dead_p3_stn_lif" name="powerup" shared_tag="shared_stunned" tag="101" time="-1"/>
+        <trigger name="weapon_mastery" time="0"/>
+        <trigger count="add" name="count" time="0" value="-1"/>
+        <trigger name="sound" sound="char/dphero_m/p3_impact" time="0"/>
+        <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0"/>
+        <trigger effect="char/dphero/p3_power" fxlevel="3" name="effect" time="0.2"/>
+        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect_sound" sound="char/dphero_m/p1_stab" time="0.32"/>
+        <trigger arc="30" damage="%dead_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" time="0.32"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect_sound" sound="char/dphero_m/p3_power" time="0.95"/>
+        <trigger critical="true" name="hide_stab_sword" time="-1"/>
+        <chain action="idle" result="power3_loop"/>
     </FightMove>
     <FightMove animenum="ea_power17" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="power3_end" noautoaim="true" priority="5" startchaintime="0.9">
-        <trigger name="sound" sound="char/dphero_m/p3_power" time="0" />
-        <trigger critical="true" name="hide_stab_sword" time="0.05" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.05" />
-        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0" />
-        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5" />
-        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect" time="0.57" />
-        <chain action="idle" result="idle" />
+        <trigger name="sound" sound="char/dphero_m/p3_power" time="0"/>
+        <trigger critical="true" name="hide_stab_sword" time="0.05"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.05"/>
+        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0"/>
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5"/>
+        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect" time="0.57"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="melee" animenum="ea_power4" energypersecond="%dead_p4_pwr" fallback="attacklight1" icon="3" is_power="true" name="power4" powerup_tag="dead_power4" priority="5" startchaintime="0.95">
-        <require cat="skill" item="dead_p4" level="1" />
-        <trigger name="sound" sound="char/dphero_m/special_unsheathe" tag="1" time="-1" />
-        <trigger name="powerusage" powerusage="%dead_p4_pwr" time="0" />
-        <trigger name="sound" sound="char/dphero_m/p4_power" time="0" />
-        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.17" />
-        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.31" />
-        <trigger critical="true" name="hide_swords" time="-1" />
-        <chain action="idle" result="power4_loop" />
+        <require cat="skill" item="dead_p4" level="1"/>
+        <trigger name="sound" sound="char/dphero_m/special_unsheathe" tag="1" time="-1"/>
+        <trigger name="powerusage" powerusage="%dead_p4_pwr" time="0"/>
+        <trigger name="sound" sound="char/dphero_m/p4_power" time="0"/>
+        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.17"/>
+        <trigger name="skinsegment" next_eventtag="1" show="true" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.31"/>
+        <trigger critical="true" name="hide_swords" time="-1"/>
+        <chain action="idle" result="power4_loop"/>
     </FightMove>
     <FightMove animenum="ea_power4_loop" combotextfinisher="Whirlwind" combotextstarter="Slicing" energypersecond="%dead_p4_pwr" fallback="attacklight1" handler="ch_ngtmovingboltons" is_power="true" lockangles="false" name="power4_loop" playspeed="1.5" powerup_tag="dead_power4" priority="5" startchaintime="0.99" turnrate="0.4">
-        <trigger name="weapon_mastery" time="0" />
-        <trigger button="samepowerhold" name="button_hint" time="0" />
-        <trigger class="harming" damage="%dead_p4_dmg" damagetype="dmg_blade" life="1" name="powerup" tag="10" time="-1" use_tint="false" use_trait_scale="false" />
-        <trigger effect="char/dphero/p4_power" name="effect_sound" sound="char/dphero_m/p4_charge" time="0" />
-        <trigger damage="%dead_p4_dmg" damagetype="dmg_blade" inherit="radial" knockback="120" maxrange="72" name="sword_rad" time="0.15" />
-        <trigger critical="true" name="hide_swords" time="-1" />
-        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="-1" />
-        <chain action="idle" result="power4_end" />
-        <chain action="special" result="power4_loop" />
+        <trigger name="weapon_mastery" time="0"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger class="harming" damage="%dead_p4_dmg" damagetype="dmg_blade" life="1" name="powerup" tag="10" time="-1" use_tint="false" use_trait_scale="false"/>
+        <trigger effect="char/dphero/p4_power" name="effect_sound" sound="char/dphero_m/p4_charge" time="0"/>
+        <trigger damage="%dead_p4_dmg" damagetype="dmg_blade" inherit="radial" knockback="120" maxrange="72" name="sword_rad" time="0.15"/>
+        <trigger critical="true" name="hide_swords" time="-1"/>
+        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="-1"/>
+        <chain action="idle" result="power4_end"/>
+        <chain action="special" result="power4_loop"/>
     </FightMove>
     <FightMove animenum="ea_power4_end" fallback="attacklight1" handler="ch_nightcrawlerboltons" is_power="true" lockchaining="false" name="power4_end" priority="5">
-        <trigger loop_type="stop" name="sound" sound="char/dphero_m/p4_power" time="0" />
-        <trigger name="sound" sound="char/dphero_m/special_sheathe" tag="1" time="-1" />
-        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.75" />
-        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.8" />
-        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="-1" />
-        <chain action="idle" result="idle" />
+        <trigger loop_type="stop" name="sound" sound="char/dphero_m/p4_power" time="0"/>
+        <trigger name="sound" sound="char/dphero_m/special_sheathe" tag="1" time="-1"/>
+        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_r_back" time="0.75"/>
+        <trigger critical="true" name="skinsegment" next_eventtag="1" show="false" show2="true" skinsegment="sword_l_hand" skinsegment2="sword_l_back" time="0.8"/>
+        <trigger name="sound" sound="char/dphero_m/special_sheathe" time="-1"/>
+        <chain action="idle" result="idle"/>
     </FightMove>
     <FightMove aireusetime="30" aitype="aoe" animenum="ea_power5" combotextfinisher="Toss" combotextstarter="Bombastic" icon="4" is_power="true" lockangles="true" name="power5" priority="5">
-        <require cat="skill" item="dead_p5" level="1" />
-        <trigger name="sound" sound="char/dphero_m/p5_power" tag="1" time="-1" />
-        <trigger name="powerusage" powerusage="%dead_p5_pwr" time="0" />
-        <event damage="1" damagescale="none" damagetype="dmg_physical" entity="dp_grenade" explodedamage="%dead_p5_dmg" explodedamagetype="dmg_physical" filename="ents_dphero" fulltargeting="true" inherit="projectile" name="throw_grenade" speed="600" targetable="true" />
-        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.14" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 90" attack_bone_pos="39 10 56" name="throw_grenade" next_eventtag="1" time="0.15" />
-        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 180" attack_bone_pos="-14 -11 133" name="throw_grenade" next_eventtag="1" time="0.25" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 -90" attack_bone_pos="-5 -3 129" name="throw_grenade" next_eventtag="1" time="0.37" />
-        <trigger actorbolt="Bip01 R Hand" angoffset="15 0 0" attack_bone_pos="8 -29 113" name="throw_grenade" next_eventtag="1" time="0.57" />
-        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.71" />
-        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.83" />
-        <chain action="Idle" result="idle" />
+        <require cat="skill" item="dead_p5" level="1"/>
+        <trigger name="sound" sound="char/dphero_m/p5_power" tag="1" time="-1"/>
+        <trigger name="powerusage" powerusage="%dead_p5_pwr" time="0"/>
+        <event damage="1" damagescale="none" damagetype="dmg_physical" entity="dp_grenade" explodedamage="%dead_p5_dmg" explodedamagetype="dmg_physical" filename="ents_dphero" fulltargeting="true" inherit="projectile" name="throw_grenade" speed="600" targetable="true"/>
+        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.14"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 90" attack_bone_pos="39 10 56" name="throw_grenade" next_eventtag="1" time="0.15"/>
+        <trigger actorbolt="Bip01 L Hand" angoffset="0 0 180" attack_bone_pos="-14 -11 133" name="throw_grenade" next_eventtag="1" time="0.25"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="0 0 -90" attack_bone_pos="-5 -3 129" name="throw_grenade" next_eventtag="1" time="0.37"/>
+        <trigger actorbolt="Bip01 R Hand" angoffset="15 0 0" attack_bone_pos="8 -29 113" name="throw_grenade" next_eventtag="1" time="0.57"/>
+        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.71"/>
+        <trigger effect="char/dphero/p5_power" fxlevel="1" name="effect" time="0.83"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="melee" animenum="ea_power6" combotextfinisher="Wit" combotextstarter="Sarcastic" icon="5" is_power="true" lockangles="true" name="power6" powerup_tag="dead_power6" priority="5">
-        <require cat="skill" item="dead_p6" level="1" />
-        <trigger bolt="Bip01 L Hand" effect="char/dphero/p6_trail" fxlevel="1" name="effect" time="0" />
-        <trigger bolt="Bip01 R Hand" effect="char/dphero/p6_trail" fxlevel="1" name="effect" time="0" />
-        <trigger effect="char/dphero/p6_power" fxlevel="1" name="effect_sound" sound="char/dphero_v/p6_power" time="0.2" />
+        <require cat="skill" item="dead_p6" level="1"/>
+        <trigger bolt="Bip01 L Hand" effect="char/dphero/p6_trail" fxlevel="1" name="effect" time="0"/>
+        <trigger bolt="Bip01 R Hand" effect="char/dphero/p6_trail" fxlevel="1" name="effect" time="0"/>
+        <trigger effect="char/dphero/p6_power" fxlevel="1" name="effect_sound" sound="char/dphero_v/p6_power" time="0.2"/>
         <trigger life="%dead_p6_life" name="powerup" tag="100" time="-1">
-            <special_fx bolt="Bip01 Head" effect="char/dphero/p6_aura" how_used="primary" />
-            <affecter affect_type="scale" attribute="def_damage" level="%dead_p6_defdmg" />
+            <special_fx bolt="Bip01 Head" effect="char/dphero/p6_aura" how_used="primary"/>
+            <affecter affect_type="scale" attribute="def_damage" level="%dead_p6_defdmg"/>
         </trigger>
-        <trigger arc="180" damage="0" damagetype="dmg_physical" maxrange="144" name="taunt" powerusage="%dead_p6_pwr" time="0.4" victimeventtag="100" />
-        <chain action="Idle" result="idle" />
+        <trigger arc="180" damage="0" damagetype="dmg_physical" maxrange="144" name="taunt" powerusage="%dead_p6_pwr" time="0.4" victimeventtag="100"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" icon="6" is_power="true" name="power7" powerup_tag="dead_power7" priority="5">
-        <require cat="skill" item="dead_p7" level="1" />
-        <trigger name="sound" sound="char/dphero_m/p7_power" time="0" />
-        <trigger name="show_swords" time="0.1" />
-        <trigger name="hide_back_swords" time="0.1" />
-        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.1" />
+        <require cat="skill" item="dead_p7" level="1"/>
+        <trigger name="sound" sound="char/dphero_m/p7_power" time="0"/>
+        <trigger name="show_swords" time="0.1"/>
+        <trigger name="hide_back_swords" time="0.1"/>
+        <trigger name="sound" sound="char/dphero_m/special_unsheathe" time="0.1"/>
         <trigger apply_ally="all" life="%dead_p7_life" name="powerup" powerusage="%dead_p7_pwr" time="0.4">
-            <affecter affect_type="scale" attribute="move_attack" level="%dead_p7_spd" />
-            <affecter affect_type="sum" attribute="atk_damage" level="%dead_p7_dmg" />
-            <special_fx effect="char/dphero/p7_aura" fxlevel="1" how_used="primary" />
-            <special_fx bolt="Bip01 R Hand" effect="char/dphero/p7_aura" fxlevel="2" how_used="primary" />
-            <special_fx bolt="Bip01 L Hand" effect="char/dphero/p7_aura" fxlevel="2" how_used="primary" />
+            <affecter affect_type="scale" attribute="move_attack" level="%dead_p7_spd"/>
+            <affecter affect_type="sum" attribute="atk_damage" level="%dead_p7_dmg"/>
+            <special_fx effect="char/dphero/p7_aura" fxlevel="1" how_used="primary"/>
+            <special_fx bolt="Bip01 R Hand" effect="char/dphero/p7_aura" fxlevel="2" how_used="primary"/>
+            <special_fx bolt="Bip01 L Hand" effect="char/dphero/p7_aura" fxlevel="2" how_used="primary"/>
         </trigger>
-        <trigger effect="char/dphero/p7_power" fxlevel="1" name="effect" time="0.4" />
-        <trigger critical="true" name="hide_swords" time="0.9" />
-        <trigger critical="true" name="show_back_swords" time="0.9" />
-        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.9" />
-        <chain action="Idle" result="idle" />
+        <trigger effect="char/dphero/p7_power" fxlevel="1" name="effect" time="0.4"/>
+        <trigger critical="true" name="hide_swords" time="0.9"/>
+        <trigger critical="true" name="show_back_swords" time="0.9"/>
+        <trigger critical="true" name="sound" sound="char/dphero_m/special_sheathe" time="0.9"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
     <FightMove animenum="ea_power17" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" lockangles="true" name="teleport_end" noautoaim="true" priority="5" startchaintime="0.55">
-        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect_sound" sound="char/dphero_m/p3_power" time="0" />
-        <trigger maxrange="250" name="teleport" time="0" />
-        <trigger name="sound" sound="char/dphero_m/p3_power" time="0.1" />
-        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.1" />
-        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect" time="0.4" />
-        <chain action="idle" result="idle" />
-        <chain action="walk" result="walk" />
-        <chain action="run" result="run" />
+        <trigger bolt="Bip01 Pelvis" effect="char/dphero/p3_power" fxlevel="2" name="effect_sound" sound="char/dphero_m/p3_power" time="0"/>
+        <trigger maxrange="250" name="teleport" time="0"/>
+        <trigger name="sound" sound="char/dphero_m/p3_power" time="0.1"/>
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.1"/>
+        <trigger effect="char/dphero/p3_power" fxlevel="1" name="effect" time="0.4"/>
+        <chain action="idle" result="idle"/>
+        <chain action="walk" result="walk"/>
+        <chain action="run" result="run"/>
     </FightMove>
     <FightMove animenum="ea_idle1" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
-        <require cat="skill" item="dead_p8" level="1" />
-        <require cat="xtreme" level="1" />
-        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="6" time="0" />
-        <chain action="idle" result="team_xtreme" />
-        <chain action="special" result="power8" />
+        <require cat="skill" item="dead_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="6" time="0"/>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
     </FightMove>
     <FightMove animenum="ea_power8" combotextfinisher="Reprisal" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="1.3" priority="uninterruptable">
         <event inherit="powerup" life="-1" name="uzi" remove_on_node_end="true">
-            <special_fx bolt="fx01" effect="char/dphero/p8_power" fxlevel="3" how_used="activation" never_cycle="true" />
-            <special_fx bolt="fx02" effect="char/dphero/p8_power" fxlevel="3" how_used="activation" never_cycle="true" />
-            <special_fx bolt="fx01" effect="char/dphero/p8_power" fxlevel="1" how_used="primary" never_cycle="true" />
-            <special_fx bolt="fx02" effect="char/dphero/p8_power" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="fx01" effect="char/dphero/p8_power" fxlevel="3" how_used="activation" never_cycle="true"/>
+            <special_fx bolt="fx02" effect="char/dphero/p8_power" fxlevel="3" how_used="activation" never_cycle="true"/>
+            <special_fx bolt="fx01" effect="char/dphero/p8_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="fx02" effect="char/dphero/p8_power" fxlevel="2" how_used="primary" never_cycle="true"/>
         </event>
         <event arc="180" damage="%dead_p8_dmg" damagescale="none" damagetype="dmg_physical" fxlevel="1" hiteffect="char/dphero/p8_impact" index="1" inherit="punch" knockback="40" maxrange="350" name="uzi_dmg" victimeventtag="20">
-            <damageMod name="dmgmod_popup" />
-            <damageMod name="dmgmod_ground" />
+            <damageMod name="dmgmod_popup"/>
+            <damageMod name="dmgmod_ground"/>
         </event>
-        <trigger name="sound" next_eventtag="102" sound="char/dphero_m/p8_end" tag="101" time="-1" />
-        <trigger loop_type="stop" name="sound" sound="char/dphero_m/p8_power_loop" tag="102" time="-1" />
-        <trigger failtag="40" min_health_pct="%dead_p8_pct" name="filter" tag="20" time="-1" />
+        <trigger name="sound" next_eventtag="102" sound="char/dphero_m/p8_end" tag="101" time="-1"/>
+        <trigger loop_type="stop" name="sound" sound="char/dphero_m/p8_power_loop" tag="102" time="-1"/>
+        <trigger failtag="40" min_health_pct="%dead_p8_pct" name="filter" tag="20" time="-1"/>
         <trigger damage="%dead_p8_dmg" index="3" name="selfattack" tag="40" time="-1" type="ce_atk_self">
-            <damagemod name="dmgmod_kill" />
+            <damagemod name="dmgmod_kill"/>
         </trigger>
-        <trigger life="-1" name="slowmotion" speed="0.8" time="0" type="ce_game_speed" />
-        <trigger always="true" name="camera_override" time="0" />
-        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Merc's Revenge" />
-        <trigger name="gun_both_show" time="0.04" />
-        <trigger effect="char/dphero/p8_power" fxlevel="4" name="effect_sound" sound="char/dphero_m/special_draw" time="0.04" />
-        <trigger life="-1" name="slowmotion" speed="0.4" time="0.15" type="ce_game_speed" />
-        <trigger name="uzi" tag_name="deadpool_p8_link" time="0.19" />
-        <trigger effect="char/dphero/p8_power" fxlevel="5" loop_type="start" name="effect_sound" sound="char/dphero_m/p8_power_loop" time="0.19" />
-        <trigger maxrange="40" name="uzi_dmg" time="0.19" />
-        <trigger maxrange="60" name="uzi_dmg" time="0.31" />
-        <trigger name="uzi" next_eventtag="101" remove_tag="deadpool_p8_link" time="0.43" />
-        <trigger life="-1" name="normalspeed" speed="0.65" time="0.45" type="ce_game_speed" />
-        <trigger effect="char/dphero/p8_power" fxlevel="3" name="effect" time="0.49" />
-        <trigger life="-1" name="slowmotion" speed="0.25" time="0.54" type="ce_game_speed" />
-        <trigger name="uzi" tag_name="deadpool_p8_link" time="0.61" />
-        <trigger effect="char/dphero/p8_power" fxlevel="6" loop_type="start" name="effect_sound" sound="char/dphero_m/p8_power_loop" time="0.61" />
-        <trigger angle="0" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.61" />
-        <trigger angle="-180" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.61" />
-        <trigger angle="-60" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.68" />
-        <trigger angle="-240" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.68" />
-        <trigger angle="-120" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.72" />
-        <trigger angle="-330" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.72" />
-        <trigger name="uzi" next_eventtag="101" remove_tag="deadpool_p8_link" time="0.85" />
-        <trigger critical="true" end="true" name="xtreme_start" time="0.8" />
-        <trigger critical="true" name="gun_both_hide" time="0.94" />
-        <trigger critical="true" name="sound" next_eventtag="102" sound="char/dphero_m/special_holster" time="0.94" />
-        <chain action="Idle" result="idle" />
+        <trigger life="-1" name="slowmotion" speed="0.8" time="0" type="ce_game_speed"/>
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Merc's Revenge"/>
+        <trigger name="gun_both_show" time="0.04"/>
+        <trigger effect="char/dphero/p8_power" fxlevel="4" name="effect_sound" sound="char/dphero_m/special_draw" time="0.04"/>
+        <trigger life="-1" name="slowmotion" speed="0.4" time="0.15" type="ce_game_speed"/>
+        <trigger name="uzi" tag_name="deadpool_p8_link" time="0.19"/>
+        <trigger effect="char/dphero/p8_power" fxlevel="5" loop_type="start" name="effect_sound" sound="char/dphero_m/p8_power_loop" time="0.19"/>
+        <trigger maxrange="40" name="uzi_dmg" time="0.19"/>
+        <trigger maxrange="60" name="uzi_dmg" time="0.31"/>
+        <trigger name="uzi" next_eventtag="101" remove_tag="deadpool_p8_link" time="0.43"/>
+        <trigger life="-1" name="normalspeed" speed="0.65" time="0.45" type="ce_game_speed"/>
+        <trigger effect="char/dphero/p8_power" fxlevel="3" name="effect" time="0.49"/>
+        <trigger life="-1" name="slowmotion" speed="0.25" time="0.54" type="ce_game_speed"/>
+        <trigger name="uzi" tag_name="deadpool_p8_link" time="0.61"/>
+        <trigger effect="char/dphero/p8_power" fxlevel="6" loop_type="start" name="effect_sound" sound="char/dphero_m/p8_power_loop" time="0.61"/>
+        <trigger angle="0" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.61"/>
+        <trigger angle="-180" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.61"/>
+        <trigger angle="-60" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.68"/>
+        <trigger angle="-240" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.68"/>
+        <trigger angle="-120" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.72"/>
+        <trigger angle="-330" arc="35" index="2" knockback="245" name="uzi_dmg" time="0.72"/>
+        <trigger name="uzi" next_eventtag="101" remove_tag="deadpool_p8_link" time="0.85"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.8"/>
+        <trigger critical="true" name="gun_both_hide" time="0.94"/>
+        <trigger critical="true" name="sound" next_eventtag="102" sound="char/dphero_m/special_holster" time="0.94"/>
+        <chain action="Idle" result="idle"/>
     </FightMove>
 </PowerStyle>
