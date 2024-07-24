@@ -1,0 +1,54 @@
+<conversation>
+    <startCondition noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_010_spw" text="%SpiderWomanSimple%: Hello, it's good to see you. Do you need something?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_020_spw" text="%SpiderWomanSimple%: Hi. Back again so soon?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="You worked for S.H.I.E.L.D.?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_101_spw" text="%SpiderWomanSimple%: Well, I used to work for HYDRA. But when they sent me out to kill Nick Fury, I figured out I was working for the wrong team.">
+                        <response text="%PLAYER%: And then you went to work for S.H.I.E.L.D.?">
+                            <line notalkanim="true" soundtoplay="voice/SPIDERWOMAN/2_STRANGE2_280_103_SPW_A" text="%SpiderWomanSimple%: Not quite. I went off on my own and played Super Hero in San Francisco. Then I died and that put a damper on things.">
+                                <response chosenscriptfile="setGameFlag('conv_var2', 19,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 19 )" text="What happened when you died?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_201_spw" text="%SpiderWomanSimple%: Dr. Strange was brought in. He saved me, but because of the spells he cast, I lost my powers. I was completely normal.">
+                        <response text="%PLAYER%: What did you do?">
+                            <line notalkanim="true" soundtoplay="voice/SPIDERWOMAN/2_STRANGE2_280_203_SPW_A" text="%SpiderWomanSimple%: I became a private eye for a while. But then HYDRA came around and offered to restore my powers.">
+                                <response chosenscriptfile="setGameFlag('conv_var2', 20,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 20 )" text="Did you accept HYDRA's offer to restore your powers?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_301_spw" text="%SpiderWomanSimple%: Of course I did, I was nothing without my powers. But once I got them back, HYRDA forced me to join S.H.I.E.L.D. as a double agent or they would have taken my powers away again.">
+                        <response text="%PLAYER%: You spied on S.H.I.E.L.D. for HYDRA?">
+                            <line notalkanim="true" soundtoplay="voice/SPIDERWOMAN/2_STRANGE2_280_303_SPW" text="%SpiderWomanSimple%: No, not really - the joke was on HYRDA. I was working for Colonel Fury all along.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Spider-Woman.">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_280_401_spw" text="%SpiderWomanSimple%: My pleasure.">
+                        <response chosenscriptfile="act2/strange/talk_spiderwoman_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

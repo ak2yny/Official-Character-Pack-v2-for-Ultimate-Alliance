@@ -1,0 +1,800 @@
+<PowerStyle iconfile="textures/ui/nightcrawler_icons.png">
+    <event damagescale="none" name="teleport_data_store" type="ce_atk_teleport_mark_start" />
+    <event damagescale="none" name="MarkStartPosForTeleport" type="ce_atk_teleport_mark_start" />
+    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility" />
+    <event arc="60" damagelevel="2" damagetype="dmg_blade" inherit="punch_heavy" maxrange="72" name="sword_strike" />
+    <event damagescale="none" inherit="sword_strike" knockback="120" name="power_sword" tiles="true" />
+    <event actorskin="4710" anim_set="47_nightcrawlerdlc_tail" bolt="Bip01 Pelvis" ignoreanimmap="true" name="tail_bolton" replacecurrent="true" type="ce_bolton" />
+    <event inherit="skinsegment" name="hide_swords" show="false" show2="false" skinsegment="sword_L_segment" skinsegment2="sword_R_segment" />
+    <event inherit="skinsegment" name="show_swords" show="true" show2="true" skinsegment="sword_L_segment" skinsegment2="sword_R_segment" />
+    <event inherit="skinsegment" name="hide_sheathed_swords" show="false" skinsegment="sword_Back_segment" />
+    <event inherit="skinsegment" name="show_sheathed_swords" show="true" skinsegment="sword_Back_segment" />
+    <event effect="char/night/p1_power" fxlevel="1" name="teleport_effect" type="ce_effect" />
+    <FightMove animenum="ea_jog1" handler="ch_move" lockchaining="false" name="jog" noncombat="true">
+        <trigger animbased="true" name="footstep" time="0.9" volume="0.25" />
+        <trigger animbased="true" name="footstep" time="0.15" volume="0.5" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="jog" result="jog" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+    </FightMove>
+    <FightMove animenum="ea_run1" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <trigger animbased="true" name="footstep" time="0.9" volume="0.5" />
+        <trigger animbased="true" name="footstep" time="0.15" volume="1.0" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_jump_start" handler="ch_move_jump" icon="4" lockangles="true" lockchaining="false" name="jump" noncombat="true">
+        <chain action="move" result="teleport_end" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="idle" result="jumploop" />
+        <chain action="special" result="jumpland" />
+    </FightMove>
+    <FightMove animenum="ea_jump_loop" handler="ch_jump" icon="4" lockangles="true" lockchaining="false" name="jumploop">
+        <chain action="move" result="teleport_end" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="special" result="jumpland" />
+        <chain action="idle" result="jumploop" />
+    </FightMove>
+    <FightMove animenum="ea_power17" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" lockangles="true" name="teleport_end" noautoaim="true" priority="5" startchaintime="0.55">
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p3_power" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="0.0" />
+        <trigger maxrange="250" name="teleport" time="0.0" />
+        <trigger name="sound" pitch_range="250" sound="char/night_m/teleport_end" time="0.3" />
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.1" />
+        <trigger effect="char/night/p3_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger effect="char/night/p3_power" fxlevel="2" name="effect" time="0.15" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+    </FightMove>
+    <FightMove animenum="ea_power9" blendtime="0.1" endchaintime="1.0" fallback="attacklight1" lockangles="true" name="attacklight1" playspeed="1.0" priority="3" startchaintime="0.75">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <trigger name="whoosh_light" time="0.2" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="2" name="effect" time="0.4" />
+        <trigger damagetype="dmg_blade" maxrange="65" name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" blendtime="0.1" endchaintime="1.0" fallback="attacklight2" lockangles="true" name="attacklight2" playspeed="1.0" priority="3" startchaintime="0.75">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <trigger name="whoosh_heavy" time="0.21" />
+        <trigger movement="10" name="slide" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.25" name="trail" time="0.16" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="3" name="effect" time="0.35" />
+        <trigger damagetype="dmg_blade" maxrange="65" name="kick" time="0.29" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power19" blendtime="0.1" endchaintime="1.0" fallback="attacklight3" lockangles="true" name="attacklight3" playspeed="1.0" priority="3" startchaintime="0.5">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="whoosh_heavy" time="0.21" />
+        <trigger movement="30" name="slide" time="0.21" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="4" name="effect" time="0.35" />
+        <trigger damagetype="dmg_blade" maxrange="65" name="kick" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power11" fallback="attackheavy_default" handler="ch_hold_smash" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect_sound" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" name="attackheavy_default" playspeed="1.0" powerup_tag="kbatk" startchaintime="0.8" turnrate="0.5">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_power12" fallback="attack_knockback_charge" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger min_charge="1.0" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power13" blendtime="0.1" endchaintime="1.0" fallback="attackknockback2" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <trigger charge_type="stop" name="charge" time="0.0" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="1" name="effect" time="0.0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.3" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" damagetype="dmg_blade" knockback="190" maxrange="65" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power14" endchaintime="1.0" fallback="popupattack2" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="whoosh_heavy" time="0.17" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1.0" name="charge" time="0" />
+        <trigger damagetype="dmg_blade" knockback="0" maxrange="65" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="whoosh_heavy" time="0.176" />
+        <trigger movement="20" name="slide" time="0.176" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="5" name="effect" time="0.2" />
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power15" endchaintime="1.0" fallback="attackstun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.55">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <event damagetype="dmg_blade" inherit="punch_heavy" knockback="0" maxrange="65" name="backhand1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="6" name="effect" time="0.2" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power16" endchaintime="1.0" fallback="attackstun_finish" lockangles="true" name="attackstun_finish">
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0.5" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.9" />
+        <event damagetype="dmg_blade" inherit="punch_heavy" knockback="0" maxrange="65" name="backhand1">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="whoosh_heavy" time="0.0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger effect="char/night/special_swordarmed" fxlevel="8" name="effect" time="0.2" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power18" blendtime="0.1" endchaintime="1.0" fallback="attacktrip2" lockangles="true" name="attacktrip2" playspeed="1.0">
+        <trigger anim="attack_trip2" boltslot="ebolton_tail" name="tail_bolton" time="0" />
+        <trigger boltslot="ebolton_tail" critical="on_exit" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <trigger anim="idle" boltslot="ebolton_tail" critical="on_exit" name="tail_bolton" time="-1" />
+        <require cat="affecter" item="special" level="5" />
+        <trigger name="show_swords" time="0" />
+        <trigger name="hide_sheathed_swords" time="0" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.95" />
+        <event damagetype="dmg_blade" inherit="kick" knockback="0" maxrange="65" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger effect="char/night/special_swordarmed" fxlevel="7" name="effect" time="0.26" />
+        <trigger movement="10" name="slide" time="0.06" />
+        <trigger bolt="Bip01 R Toe0" life="0.4" name="trail" time="0.13" />
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3" />
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power20" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger effect="char/night/grabsmash" fxlevel="1" name="effect_sound" sound="char/night_m/grab_smash" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/grabsmash" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/night/grabsmash" fxlevel="3" name="effect" time="0.13" />
+        <trigger damage="3 4" damagescale="normal" damagetype="physical" height="-75" index="1" knockback="120" maxrange="64" name="radial" time="0.55" verticalrange="72">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="stop" time="0.5" />
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.65" />
+        <trigger name="sound" sound="common/melee/woosh_throw" time="0.35" />
+        <trigger damage="3 4" damagescale="normal" index="2" maxrange="70" name="punch" offset="-30" time="0.65">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="melee" animenum="ea_power1_start" icon="0" is_power="true" locktransitionangles="true" name="power1" powerup_tag="night_p1" priority="5" turnrate="0.5">
+        <require cat="skill" item="night_power1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0.0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/night/p1_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" powerusage="%night_p1_pwr" remove_on_node_end="true" tag_name="night_p1_link" time="0.0">
+            <special_fx bolt="Bip01 R Toe0" effect="char/night/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="sound" sound="char/night_m/p1_charge2" time="0.0" />
+        <trigger name="sound" sound="char/night_m/p1_power" time="0.38" />
+        <chain action="Idle" result="power1_loop" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="melee" animenum="ea_power1_loop" icon="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" powerup_tag="night_p1" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="Idle" result="power1_tele" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="melee" animenum="ea_menu_idle" icon="0" is_power="true" locktransitionangles="true" name="power1_tele" playspeed="4" powerup_tag="night_p1" priority="5" startchaintime="0.9" turnrate="0.5">
+        <trigger name="set_visible" time="0.0" visible="false" />
+        <trigger effect="char/night/bamf" fxlevel="1" name="effect" time="0.0" />
+        <trigger name="sound" sound="char/night_m/p3_teleport" time="0.0" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.0">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger life="0.05" movement="400" name="slide" targetdistance="410" time="0.01" />
+        <trigger critical="on_exit" name="set_visible" time="-1" visible="true" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <trigger critical="on_exit" effect="char/night/bamf" fxlevel="1" name="effect" time="-1" />
+        <chain action="Idle" result="power1_end" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="melee" animenum="ea_power1_end" combotextfinisher="Kick" combotextstarter="Acrobatic" icon="0" is_power="true" lockangles="true" name="power1_end" playspeed="0.75" powerup_tag="night_p1" priority="5">
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1" />
+        <trigger life="%night_p1_life" name="powerup" shared_tag="shared_stunned" tag="21" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p1_power" name="effect" time="0.0" />
+        <trigger name="set_visible" time="0.0" visible="true" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p1_power" fxlevel="2" name="effect" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p1_power" fxlevel="3" name="effect" time="0.05" />
+        <trigger name="whoosh_heavy" time="0.1" />
+        <trigger damage="%night_p1_dmg" damagescale="none" maxrange="60" name="kick" time="0.14" victimeventtag="20" />
+        <trigger critical="true" name="powerup" remove_tag="night_p1_link" time="0.14" />
+        <trigger name="set_visible" time="0.6" visible="true" />
+        <trigger name="whoosh_heavy" time="0.38" />
+        <trigger damage="%night_p1_dmg2" damagescale="none" index="2" knockback="190" maxrange="60" name="kick" time="0.38" victimeventtag="20">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+        <trigger bolt="Bip01 R Toe0" effect="char/night/p1_power" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/night/p1_power" fxlevel="3" name="effect" time="0.0" />
+    </FightMove>
+    <FightMove aireusetime="5.0" aitype="projectilenear" animenum="ea_power2" combotextfinisher="Mastery" combotextstarter="Sword" handler="ch_nightcrawlerboltons" icon="1" is_power="true" lockchaining="false" name="power2" powerup_tag="night_power2" priority="5">
+        <require cat="skill" item="night_power2" level="1" />
+        <trigger name="show_swords" time="0.12" />
+        <trigger name="hide_sheathed_swords" time="0.12" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0.12" />
+        <trigger effect="char/night/p2_power" fxlevel="1" name="effect" time="0.12" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p2_power" fxlevel="2" name="effect" time="0.12" />
+        <trigger name="sound" sound="char/night_m/p2_charge" time="0.2" />
+        <trigger arc="135" damage="%night_p2_dam" index="0" name="power_sword" powerusage="%night_p2_pwr" time="0.3" />
+        <trigger damage="%night_p2_dam" index="0" name="power_sword" time="0.35" />
+        <trigger arc="135" damage="%night_p2_dam" index="1" maxrange="60" name="power_sword" time="0.47" />
+        <trigger name="sound" sound="char/night_m/p2_power" time="0.5" />
+        <trigger damage="%night_p2_dam" name="power_sword" time="0.65" />
+        <trigger name="hide_swords" time="0.87" />
+        <trigger name="show_sheathed_swords" time="0.87" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.87" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="aoe" animenum="ea_power3" endchaintime="0.95" handler="ch_teleport_dash_start" icon="2" is_power="true" name="power3" noautoaim="true" priority="5" startchaintime="0.9" turnrate="0.5">
+        <require cat="skill" item="night_power3" level="1" />
+        <trigger count="set" name="count" time="0" value="%night_p3_num_att" />
+        <trigger name="sound" sound="char/night_m/p3_charge" time="0.1" />
+        <trigger name="powerusage" powerusage="%night_p3_pwr" time="0" />
+        <trigger effect="char/night/p3_power" fxlevel="1" name="effect_sound" sound="char/night_m/p3_teleport" time="0.4" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_attack" time="0.75" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p3_power" fxlevel="2" name="effect" time="0.8" />
+        <trigger attacktype="direct" name="teleport_mark_start" time="0.0" />
+        <trigger maxrange="300" maxtargets="%night_p3_num_att" name="teleport_dash_prep" time="0.0" />
+        <trigger name="show_swords" time="0.8" />
+        <trigger name="hide_sheathed_swords" time="0.8" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0.8" />
+        <trigger critical="true" name="hide_swords" time="-1" />
+        <trigger critical="true" name="show_sheathed_swords" time="-1" />
+        <chain action="Idle" result="power3_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power3_loop" blendtime="0" combotextfinisher="Flurry" combotextstarter="Bamf" endchaintime="0.75" fallback="power3_end" is_power="true" lockangles="true" name="power3_loop" noautoaim="true" playspeed="0.7" powerup_tag="night_power3" priority="5" startchaintime="0.7">
+        <require cat="counter" level="1" />
+        <trigger life="%night_p3_stn_lif" name="powerup" shared_tag="shared_stunned" tag="101" time="-1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.0">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger doattack="false" forcedistance="30" name="teleport_dash" setvictimtotarget="false" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p3_power" fxlevel="3" name="effect" time="0.0" />
+        <trigger effect="char/night/p3_power" fxlevel="1" name="effect_sound" pitch_range="200" sound="char/night_m/p3_swing" time="0.32" />
+        <trigger arc="30" damage="%night_p3_dmg" damagescale="none" damagetype="dmg_teleport" maxrange="72" name="teleport_punch" time="0.32" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <trigger critical="true" name="hide_swords" time="-1" />
+        <trigger critical="true" name="show_sheathed_swords" time="-1" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p3_power" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="0.7" />
+        <chain action="idle" result="power3_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="power3_end" noautoaim="true" priority="5" startchaintime="0.9">
+        <trigger name="sound" sound="char/night_m/p3_power" time="0" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/teleport_end" time="0.3" />
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger critical="on_exit" name="sound" sound="char/night_m/special_sheath" time="-1" />
+        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0.0" />
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5" />
+        <trigger effect="char/night/p3_power" fxlevel="3" name="effect" time="0.0" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5.0" aitype="melee" animenum="ea_power4" combotextfinisher="Whirlwind" combotextstarter="Sword" handler="ch_nightcrawlerboltons" icon="3" is_power="true" name="power4" powerup_tag="night_power4" priority="5" startchaintime="0.95">
+        <require cat="skill" item="night_power4" level="1" />
+        <trigger name="powerusage" powerusage="%night_p4_pwr" time="0.0" />
+        <trigger name="show_swords" time="0.3" />
+        <trigger name="hide_sheathed_swords" time="0.12" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0.12" />
+        <trigger class="harming" damage="%night_p4_dam" damagescale="none" damagetype="dmg_physical" life="1" name="powerup" tag="10" time="-1" use_tint="false" />
+        <trigger arc="180" damage="%night_p4_dam" maxrange="80" name="power_sword" time="0.15" />
+        <trigger name="sound" sound="char/night_m/p4_charge" time="0.5" />
+        <trigger name="hide_swords" tag="100" time="-1" />
+        <trigger name="show_sheathed_swords" tag="101" time="-1" />
+        <trigger name="powerusage" powerusage="%night_p4_pwr" time="0" />
+        <chain action="idle" result="power4_loop" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p4_power" fxlevel="1" name="effect" time="0.0" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" combotextfinisher="Whirlwind" combotextstarter="Sword" energypersecond="%night_p4_pwr" fallback="power4_end" handler="ch_ngtmovingboltons" is_power="true" lockangles="false" name="power4_loop" playspeed="2.0" powerup_tag="night_power4" priority="5" startchaintime="0.99" turnrate="0.4">
+        <trigger name="hide_swords" tag="100" time="-1" />
+        <trigger name="show_sheathed_swords" tag="101" time="-1" />
+        <trigger effect="char/night/p4_power" fxlevel="2" loop_type="start" name="effect_sound" pitch_range="200" sound="char/night_m/p4_power" time="0.5" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger arc="180" damage="%night_p4_dam" maxrange="60" name="power_sword" time="0.15" />
+        <trigger arc="180" damage="%night_p4_dam" index="1" maxrange="60" name="power_sword" time="0.15">
+            <damageMod name="dmgmod_no_actors" />
+        </trigger>
+        <trigger loop_type="update" name="sound" sound="char/night_m/p4_power" time="0.15" />
+        <chain action="idle" result="power4_end" />
+        <chain action="special" result="power4_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" handler="ch_nightcrawlerboltons" is_power="true" lockchaining="false" name="power4_end" priority="5">
+        <trigger loop_type="update" name="sound" sound="char/night_m/p4_power" time="0.0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/night_m/p4_power" time="0.1" />
+        <trigger name="hide_swords" time="0.7" />
+        <trigger name="show_sheathed_swords" time="0.7" />
+        <trigger name="sound" sound="char/night_m/special_sheath" time="0.7" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="projectilenear" animenum="ea_power3" endchaintime="0.95" handler="ch_teleport_dash_start" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <require cat="skill" item="night_power5" level="1" />
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%night_p5_pwr" time="0.0" />
+        <trigger attacktype="direct" name="teleport_mark_start" time="0.0" />
+        <trigger maxrange="300" maxtargets="1" name="teleport_dash_prep" notargetbosses="true" targetactorsonly="true" targetmustbegrabable="true" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" next_eventtag="30" noteleportwotarget="true" setvictimtotarget="true" time="0" />
+        <trigger name="sound" sound="char/night_m/p2_power" time="0.1" />
+        <trigger fail_node="power5_end" name="verify_victim_alive" passtag="31" tag="30" time="-1" />
+        <trigger failtag="40" filteractor="true" maxdangerrating="10" name="filter" noboss="true" passtag="32" tag="31" time="-1" />
+        <trigger count="set" name="count" next_eventtag="33" powerusage="%night_p5_pwr" tag="32" time="-1" value="%night_p5_num_att" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="hold_in_place_no_break_no_snd" tag="33" targetdistance="33" time="-1" />
+        <trigger count="set" name="count" powerusage="%night_p5_pwr" tag="40" time="-1" value="0" />
+        <trigger charge="0" charge_type="set" name="charge" tag="3" time="0.0" />
+        <chain action="Idle" result="power5_end_no_fx" />
+        <chain action="samepowerclick" result="power5_loop" />
+    </FightMove>
+    <event arc="60" damage="%night_p5_dmg" damagescale="none" inherit="punch" knockback="0" maxrange="60" name="night_punch" />
+    <event arc="60" damage="%night_p5_dmg" damagescale="none" inherit="kick" knockback="0" maxrange="60" name="night_kick" />
+    <FightMove ainopush="true" aitype="projectilenear" animenum="ea_power1" combotextfinisher="Blitz" combotextstarter="Bamfing" fallback="power5_end" handler="ch_grab_hold_base" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_loop" playspeed="%night_p5_spd1" powerup_tag="night_power5" priority="uninterruptable" startchaintime="1.0">
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <require cat="counter" level="1" />
+        <trigger count="add" critical="on_exit" name="count" time="-1" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="common/melee/woosh_punch" time="0" />
+        <trigger maxrange="60" mustbeactor="true" mustbegrabbable="true" name="victim_set" searchangle="10.0" selfeventtag="77" time="0" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="78" tag="77" time="-1" />
+        <trigger fail_node="power5_end" name="verify_victim_alive" passtag="79" tag="78" time="-1" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="p5_victim_2" tag="79" time="-1" victimface="true" />
+        <trigger damage="%night_p5_dmg" damagescale="none" index="1" knockback="0" maxrange="32" name="radial" time="0.1" />
+        <trigger name="set_visible" time="0.2" visible="false" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.2">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.3" />
+        <trigger effect="char/night/p5_power" fxlevel="1" name="effect" time="0.2" />
+        <trigger name="set_visible" time="0.35" visible="true" />
+        <trigger critical="true" name="powerup" remove_tag="nc_invis_tag" time="0.35" />
+        <trigger name="sound" sound="char/night_m/p2_power" time="0.35" />
+        <trigger damage="%night_p5_dmg" damagescale="none" index="2" knockback="0" maxrange="32" name="radial" time="0.55" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="1" name="effect_sound" sound="char/night_m/p3_teleport" time="0.5" />
+        <trigger name="set_visible" time="0.65" visible="false" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.65">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <trigger critical="on_exit" name="set_visible" time="-1" visible="true" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <chain action="samepowerclick" result="power5_loop2" />
+        <chain action="idle" result="power5_end" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="projectilenear" animenum="ea_power2_loop" combotextfinisher="Blitz" combotextstarter="Bamfing" fallback="power5_end" handler="ch_grab_hold_base" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_loop2" noautoaim="true" playspeed="%night_p5_spd2" powerup_tag="night_power5" priority="uninterruptable" startchaintime="1.0">
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <trigger fail_node="power5_end" name="verify_victim_alive" passtag="80" time="0" />
+        <trigger name="sound" pitch_range="200" sound="common/melee/woosh_kick" time="0" />
+        <trigger interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="p5_victim_3" tag="80" time="-1" />
+        <trigger damage="%night_p5_dmg" damagescale="none" knockback="0" maxrange="32" name="radial" time="0.15" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.2" />
+        <trigger effect="char/night/p5_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger name="set_visible" time="0.3" visible="false" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.25">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger critical="on_exit" name="set_visible" time="-1" visible="true" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="4" name="effect" time="-1" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <chain action="samepowerclick" result="power5_loop3" />
+        <chain action="idle" result="power5_end" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="projectilenear" animenum="ea_power2_end" combotextfinisher="Blitz" combotextstarter="Bamfing" fallback="power5_end" handler="ch_grab_hold_base" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_loop3" noautoaim="true" playspeed="%night_p5_spd3" powerup_tag="night_power5" priority="uninterruptable" startchaintime="1.0">
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <trigger name="sound" pitch_range="200" sound="common/melee/woosh_punch" time="0" />
+        <trigger fail_node="power5_end" name="verify_victim_alive" passtag="81" time="0" />
+        <trigger interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="p5_victim_4" tag="81" time="-1" />
+        <trigger damage="%night_p5_dmg" damagescale="none" knockback="0" maxrange="32" name="radial" time="0.1" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.2" />
+        <trigger effect="char/night/p5_power" fxlevel="3" name="effect" time="0.2" />
+        <trigger name="set_visible" time="0.25" visible="false" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.25">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger critical="on_exit" name="set_visible" time="-1" visible="true" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="4" name="effect" time="-1" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <chain action="samepowerclick" result="power5_loop4" />
+        <chain action="idle" result="power5_end" />
+    </FightMove>
+    <FightMove ainopush="true" aitype="projectilenear" animenum="ea_power5_end" combotextfinisher="Blitz" combotextstarter="Bamfing" fallback="power5_end" handler="ch_grab_hold_base" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_loop4" noautoaim="true" playspeed="%night_p5_spd4" powerup_tag="night_power5" priority="uninterruptable" startchaintime="1.0">
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <trigger name="sound" pitch_range="200" sound="common/melee/woosh_kick" time="0" />
+        <trigger fail_node="power5_end" name="verify_victim_alive" passtag="82" time="0" />
+        <trigger interaction="data/fightstyles/interact_nightcrawler_victim" name="victim" nodename="p5_victim_5" tag="82" time="-1" />
+        <trigger damage="%night_p5_dmg" damagescale="none" knockback="0" maxrange="32" name="radial" time="0.1" />
+        <trigger bolt="Bip01 pelvis" effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.4" />
+        <trigger effect="char/night/p5_power" fxlevel="4" name="effect" time="0.2" />
+        <trigger name="set_visible" time="0.45" visible="false" />
+        <trigger class="callevents" life="-1" name="powerup" tag_name="nc_invis_tag" time="0.45">
+            <affecter attribute="invisible" />
+        </trigger>
+        <trigger charge="0.5" charge_type="add" name="charge" time="0.99" />
+        <trigger critical="on_exit" name="set_visible" time="-1" visible="true" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="4" name="effect" time="-1" />
+        <trigger critical="on_exit" name="powerup" remove_tag="nc_invis_tag" time="-1" />
+        <chain action="samepowerclick" result="power5_loop" />
+        <chain action="idle" result="power5_end" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="power5_end_no_fx" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger dashhome="true" doattack="false" name="teleport_dash" next_eventtag="15" time="0.0" />
+        <trigger interactionend="true" name="victim_release" tag="15" time="-1" />
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.25" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove inherit="power5_end_no_fx" name="power5_end">
+        <trigger effect="char/night/bamf" fxlevel="4" name="effect_sound" sound="char/night_m/p3_teleport" time="0.1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/teleport_end" time="0.3" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="night_power6" level="1" />
+        <trigger class="on_critical" life="%night_p6_lif" name="powerup" owner_combat_node_tag="21" time="0.0" victim_combat_node_tag="20" />
+        <trigger class="atk_instant_pct" name="powerup" percent="0.33" selfonly="true" tag="20" time="-1" />
+        <trigger name="sound" sound="char/night_m/p6_crit" tag="21" time="-1" />
+        <trigger add="cloaked" name="disapear" tag="10" time="-1" type="ce_renderfx" />
+        <trigger name="appear" remove="cloaked" tag="11" time="-1" type="ce_renderfx" />
+        <trigger name="sound" sound="char/night_m/p6_power" time="0.0" />
+        <trigger effect="char/blackp/p6_power" fxlevel="1" name="effect" time="0.2" />
+        <trigger bolt="Bip01 L Toe0" effect="char/blackp/p6_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Toe0" effect="char/blackp/p6_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger effect="char/blackp/p6_power" fxlevel="3" name="effect" time="0.4" />
+        <trigger effect="char/blackp/p6_power" fxlevel="4" name="effect" time="0.5" />
+        <trigger class="callevents" life="%night_p6_lif" name="powerup" powerusage="%night_p6_pwr" time="0.5">
+            <Functionevent function="activate" triggertag="10" />
+            <Functionevent function="deactivate" triggertag="11" />
+            <special_fx effect="char/blackp/p6_aura" fxlevel="1" how_used="primary" />
+            <affecter attribute="invisible" />
+            <affecter attribute="critical" level="%night_p6_cri" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buffself" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="night_p7" level="1" />
+        <trigger name="set_visible" time="0.1" visible="false" />
+        <trigger effect="char/night/bamf" fxlevel="1" name="effect_sound" sound="char/night_m/p7_power" time="0.1" />
+        <trigger name="show_swords" time="0.22" />
+        <trigger name="hide_sheathed_swords" time="0.22" />
+        <trigger name="sound" sound="char/night_m/special_unsheath" time="0.22" volume="0.6" />
+        <trigger effect="char/night/bamf" fxlevel="1" name="effect" time="0.4" />
+        <trigger name="set_visible" time="0.45" visible="true" />
+        <trigger life="%night_p7_lif" name="powerup" powerusage="%night_p7_pwr" time="0.5">
+            <affecter attribute="special" level="5" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%night_p7_dmg" />
+            <special_fx effect="char/night/p7_power" fxlevel="2" how_used="primary" />
+            <special_fx effect="char/night/p7_power" fxlevel="3" how_used="deactivation" />
+        </trigger>
+        <trigger critical="on_exit" name="hide_swords" time="-1" />
+        <trigger critical="on_exit" name="show_sheathed_swords" time="-1" />
+        <trigger critical="on_exit" name="sound" sound="char/night_m/special_sheath" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="night_power8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0.0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8_start" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="aoe" animenum="ea_power8" endchaintime="0.95" handler="ch_teleport_dash_start" icon="7" is_power="true" name="power8_start" noautoaim="true" playspeed="10" priority="uninterruptable" startchaintime="0.9" turnrate="0.5">
+        <require cat="skill" item="night_power8" level="1" />
+        <trigger description="!BADREF:@HERO_NIGHTCRAWLER@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Bamf Unleashed" />
+        <trigger filteractor="true" maxdangerrating="10" name="filter" noboss="true" passtag="1" time="0" />
+        <trigger count="set" name="count" powerusage="%night_p8_pwr" tag="1" time="-1" value="4" />
+        <trigger attacktype="direct" name="teleport_mark_start" time="0.0" />
+        <trigger maxrange="250" maxtargets="8" name="teleport_dash_prep" time="0.0" />
+        <trigger name="sound" sound="char/night_m/p2_charge" time="0.0" />
+        <trigger name="sound" sound="char/night_m/p3_teleport" time="0.8" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.8" />
+        <chain action="Idle" result="power8_loop1" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0" endchaintime="1.0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop1" noautoaim="true" playspeed="10" powerup_tag="night_power8" priority="uninterruptable" startchaintime="0.99">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/night/p8_charge" fxlevel="1" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop2" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback2" blendtime="0" endchaintime="1.0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop2" noautoaim="true" playspeed="16" powerup_tag="night_power8" priority="uninterruptable" startchaintime="0.99">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" knockback="190" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/night/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop3" />
+    </FightMove>
+    <FightMove animenum="ea_power18" blendtime="0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop3" noautoaim="true" playspeed="19" powerup_tag="night_power8" priority="uninterruptable">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_trip" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/night/p8_charge" fxlevel="3" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop4" />
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop4" noautoaim="true" playspeed="25" powerup_tag="night_power8" priority="uninterruptable">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p8_charge" fxlevel="4" name="effect" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/night/p8_charge" fxlevel="4" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop5" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0" endchaintime="1.0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop5" noautoaim="true" playspeed="30" powerup_tag="night_power8" priority="uninterruptable" startchaintime="0.99">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_trip" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/night/p8_charge" fxlevel="5" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop6" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback2" blendtime="0" endchaintime="1.0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop6" noautoaim="true" playspeed="35" powerup_tag="night_power8" priority="uninterruptable" startchaintime="0.99">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" knockback="190" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/night/p8_charge" fxlevel="6" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop7" />
+    </FightMove>
+    <FightMove animenum="ea_power18" blendtime="0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop7" noautoaim="true" playspeed="40" powerup_tag="night_power8" priority="uninterruptable">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_trip" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/night/p8_charge" fxlevel="7" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_loop8" />
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0" fallback="power8_end" is_power="true" lockangles="true" name="power8_loop8" noautoaim="true" playspeed="45" powerup_tag="night_power8" priority="uninterruptable">
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger name="sound" pitch_range="200" sound="char/night_m/p3_swing" time="0" />
+        <trigger doattack="false" forcedistance="40" name="teleport_dash" setvictimtotarget="true" time="0.0" />
+        <trigger execute_against="victim" name="otherevent" othertag="11" time="0.2" />
+        <trigger damage="%night_p8_dmgc" damagescale="none" index="2" name="selfattack" tag="11" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/night/bamf" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/night/p8_charge" fxlevel="8" name="effect" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/night/p8_charge" fxlevel="8" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" critical="on_exit" effect="char/night/bamf" fxlevel="2" name="effect_sound" sound="char/night_m/p3_teleport" time="-1" />
+        <chain action="idle" result="power8_end" />
+    </FightMove>
+    <event damage="0" damagelevel="2" damagetype="dmg_physical" fxlevel="3" hiteffect="char/night/bamf" inherit="blast" maxrange="300" name="bamf" radius="100" random="true" />
+    <FightMove animenum="ea_power8_end" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="power8_end" noautoaim="true" playspeed="5" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="sound" sound="char/night_m/p3_power" time="0" />
+        <trigger name="sound" sound="char/night_m/p8_power" time="0.0" />
+        <trigger name="sound" sound="char/night_m/p8_end" time="0.35" />
+        <trigger name="set_visible" time="0.0" visible="true" />
+        <trigger name="set_visible" time="0.01" visible="false" />
+        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0.0" />
+        <trigger name="set_visible" time="0.35" visible="true" />
+        <trigger cleardata="true" name="teleport_data_store" set_visible="true" time="0.5" />
+        <event arc="180" attacktype="blast" damage="%night_p8_dmg" damagescale="difficulty" inherit="punch" knockback="600" name="p_radius">
+            <damageMod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger damage="%night_p8_dmg" knockback="200" maxrange="175" name="p_radius" time="0.5" />
+        <trigger bolt="Bip01 Pelvis" effect="char/night/p8_power" name="effect" time="0.0" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.9" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

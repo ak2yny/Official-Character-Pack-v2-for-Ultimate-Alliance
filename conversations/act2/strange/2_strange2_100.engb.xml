@@ -1,0 +1,93 @@
+<conversation>
+    <startCondition conditionscriptfile="common/conv/hulk" noanimresetactivator="true" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/hulk/2_strange2_102_010_hul" text="%HULK%: Hulk has a question to ask pretty Spider-Woman but Hulk doesn't want to be laughed at.">
+                <response text="%BLANK%">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_102_011_spw" text="%SpiderWomanSimple%: Hulk, I swear you are the last person I'd ever laugh at. Now what was your question?">
+                        <response text="%BLANK%">
+                            <line notalkanim="true" soundtoplay="voice/hulk/2_strange2_102_012_hul" text="%HULK%: Hulk wants to know why people hate him. Everywhere Hulk goes, people run from him or attack him.">
+                                <response text="%BLANK%">
+                                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_102_013_spw" text="%SpiderWomanSimple%: They just don't know you that well, Hulk. But all of us here know what a good person you are.">
+                                        <response text="%BLANK%">
+                                            <line notalkanim="true" soundtoplay="voice/hulk/2_strange2_102_014_hul" text="%HULK%: So pretty Spider-Woman likes Hulk?">
+                                                <response text="%BLANK%">
+                                                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_102_015_spw" text="%SpiderWomanSimple%: Sure. What's not to like about a huge green guy who can bend a metal girder with his bare hands?">
+                                                        <response text="%BLANK%">
+                                                            <line notalkanim="true" soundtoplay="voice/hulk/2_strange2_102_016_hul" text="%HULK%: You aren't lying, are you? Nobody ever likes Hulk.">
+                                                                <response text="%BLANK%">
+                                                                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_102_017_spw" text="%SpiderWomanSimple%: Honest, Hulk. I'm telling the truth. You can consider me your friend.">
+                                                                        <response text="%BLANK%">
+                                                                            <line notalkanim="true" soundtoplay="voice/hulk/2_strange2_102_018_hul" text="%HULK%: Aw, shucks. Hulk feels all happy now.">
+                                                                                <response chosenscriptfile="act2/strange/talk_spiderwoman_post" conversationend="true" text="%BLANK%" />
+                                                                            </line>
+                                                                        </response>
+                                                                    </line>
+                                                                </response>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noanimresetactivator="true" noreturntogamecamatend="true" runonce="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_010_spw" text="%SpiderWomanSimple%: Hi, how are you?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noanimresetactivator="true" noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_020_spw" text="%SpiderWomanSimple%: Hello. Back again so soon?">
+                <response tagjump="autogen_tag_1" text="%BLANK%" />
+            </line>
+        </participant>
+    </startCondition>
+    <startCondition noanimresetactivator="true" noreturntogamecamatend="true">
+        <participant name="default">
+            <line notalkanim="true" tagindex="autogen_tag_1" text="%PLAYER%">
+                <response text="Why do men get stupid around you?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_101_spw" text="%SpiderWomanSimple%: Oh, you must have seen how Jarvis reacted to me at Stark Tower. It's a pheromone thing. I'm still learning how to control it.">
+                        <response text="%PLAYER%: A pheromone thing?">
+                            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_103_spw" text="%SpiderWomanSimple%: Yes. You see I transmit a chemical that makes men very attracted to me. It gets a lot worse when I'm under stress, like during battle.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Are you any relation to Spider-Man?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_201_spw" text="%SpiderWomanSimple%: None whatsoever. I'm not his sister, I'm not his cousin he gave blood to, and his powers were never accidentally transferred to me.">
+                        <response text="%PLAYER%: You've never even dated?">
+                            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_203_spw" text="%SpiderWomanSimple%: Well, he is cute in a geeky sort of way, but with his sense of humor, I prefer to keep my distance.">
+                                <response chosenscriptfile="setGameFlag('conv_var2', 10,1)" tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response scriptfile="disallowResponseOnVar( 'conv_var2', 10 )" text="So why are you called Spider-Woman?">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_301_spw" text="%SpiderWomanSimple%: Mostly because I have enhanced strength and can stick to walls like the web-slinger. But also I have the power to generate bio-electric venom blasts.">
+                        <response text="%PLAYER%: Wow, Spider-Man can't do that.">
+                            <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_303_spw" text="%SpiderWomanSimple%: No. He also hasn't had the training in hand to hand combat that I've had.">
+                                <response tagjump="autogen_tag_1" text="%BLANK%" />
+                            </line>
+                        </response>
+                    </line>
+                </response>
+                <response text="Thanks, Spider-Woman.">
+                    <line notalkanim="true" soundtoplay="voice/spiderwoman/2_strange2_100_401_spw" text="%SpiderWomanSimple%: It was my pleasure.">
+                        <response chosenscriptfile="act2/strange/talk_spiderwoman_post" conversationend="true" text="%BLANK%" />
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>
