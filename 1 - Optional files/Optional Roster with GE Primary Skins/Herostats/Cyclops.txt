@@ -1,0 +1,45 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 6 ;
+   characteranims = 172_cyclops ;
+   charactername = Cyclops ;
+   level = 1 ;
+   menulocation = 42 ;
+   mind = 8 ;
+   name = Cyclops ;
+   playable = true ;
+   powerstyle = ps_cyclops ;
+   scriptlevel = 3 ;
+   skin = 17201 ;
+   skin_01_name = Astonishing ;
+   skin_02 = 03 ;
+   skin_02_name = Original ;
+   skin_03 = 04 ;
+   skin_03_name = Classic ;
+   skin_04 = 02 ;
+   skin_04_name = Ultimate ;
+   sounddir = cyclop_m ;
+   strength = 7 ;
+   team = hero ;
+      talent {
+      level = 1 ;
+      name = cyclops_power1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = leadership ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

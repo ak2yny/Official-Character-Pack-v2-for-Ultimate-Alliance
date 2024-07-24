@@ -1,0 +1,72 @@
+   stats {
+   ailevel = 1 ;
+   autospend = support ;
+   body = 5 ;
+   characteranims = 171_hawkeye ;
+   charactername = Hawkeye ;
+   dlchero = true ;
+   level = 1 ;
+   menulocation = 41 ;
+   mind = 12 ;
+   name = Hawkeye ;
+   playable = true ;
+   powerstyle = ps_hawkeye ;
+   scriptlevel = 3 ;
+   skin = 17101 ;
+   skin_01_name = Classic ;
+   skin_02 = 04 ;
+   skin_02_name = Modern ;
+   skin_03 = 03 ;
+   skin_03_name = Street Gear ;
+   skin_04 = 02 ;
+   skin_04_name = Ultimate ;
+   sounddir = hwkeye_m ;
+   strength = 4 ;
+   team = hero ;
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_bow_back_segment ;
+      hideskin2 = 20301_bow_L_hand_mid_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_arrow_R_hand_segment ;
+      hideskin2 = 20301_ball_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_ice_R_hand_segment ;
+      hideskin2 = 20301_glue_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_missile_R_hand_segment ;
+      hideskin2 = 20301_bird_R_hand_segment ;
+      }
+
+      Multipart {
+      health = 0 ;
+      hideskin = 20301_bow_L_hand_segment ;
+      nonmenuonly = true ;
+      showskin = 20301_bow_back_segment ;
+      }
+
+      talent {
+      level = 1 ;
+      name = hawk_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }

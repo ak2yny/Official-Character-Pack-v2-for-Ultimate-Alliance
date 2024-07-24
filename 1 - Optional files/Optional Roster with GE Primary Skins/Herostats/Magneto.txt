@@ -1,0 +1,48 @@
+   stats {
+   ailevel = 1 ;
+   autospend = bruiser_light ;
+   body = 6 ;
+   characteranims = 175_magneto ;
+   charactername = Magneto ;
+   ignoreboundsscaling = true ;
+   level = 1 ;
+   menulocation = 45 ;
+   mind = 10 ;
+   moveset1 = moveset_flying ;
+   name = Magneto ;
+   playable = true ;
+   powerstyle = ps_magneto ;
+   scale_factor = 1.05 ;
+   scriptlevel = 3 ;
+   skin = 17504 ;
+   skin_01_name = Classic ;
+   skin_02 = 02 ;
+   skin_02_name = 80's ;
+   skin_03 = 03 ;
+   skin_03_name = Xorn ;
+   skin_04 = 01 ;
+   skin_04_name = Ultimate ;
+   sounddir = magnet_m ;
+   strength = 5 ;
+   team = hero ;
+      talent {
+      level = 1 ;
+      name = magneto_p1 ;
+      }
+
+      talent {
+      level = 1 ;
+      name = flight ;
+      }
+
+      talent {
+      level = 1 ;
+      name = fightstyle_default ;
+      }
+
+      talent {
+      level = 1 ;
+      name = melee_moves ;
+      }
+
+   }
