@@ -1,0 +1,277 @@
+<PowerStyle iconfile="textures/ui/magma_icons.png">
+    <FightMove animenum="ea_jump_start" handler="ch_move_jump" lockangles="true" name="jump" noncombat="true" startchaintime="0.1">
+        <chain action="move" result="power4" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="idle" result="jumploop" />
+        <chain action="special" result="jumpland" />
+    </FightMove>
+    <FightMove animenum="ea_jump_loop" handler="ch_jump" lockangles="true" name="jumploop" noncombat="true">
+        <chain action="move" result="power4" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="special" result="jumpland" />
+        <chain action="idle" result="jumploop" />
+    </FightMove>
+    <FightMove animenum="ea_power11" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6" switch_dir_on_end="true">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_magma_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger name="stop" time="0.5" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/attack_light" life="0.75" name="effect" time="0.5" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/attack_light" life="0.75" name="effect" time="0.5" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" index="1" knockback="120" maxrange="64" name="radial" time="0.7">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.7" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.17" name="trail" offsetend="12" time="0.25" />
+        <trigger name="punch" time="0.42" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.5">
+        <trigger name="whoosh_light" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" offsetend="12" time="0.2" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight3" startchaintime="0.62">
+        <event inherit="punch_heavy" maxrange="50" name="backhand" />
+        <trigger name="whoosh_light" time="0" />
+        <trigger life="0.18" movement="0" name="slide" time="0.09" />
+        <trigger bolt="Bip01 L Hand" life="0.26" name="trail" time="0.19" />
+        <trigger name="backhand" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" fallback="attackheavy1" handler="ch_popup_attack" lockangles="true" name="popupattack2" startchaintime="0.6">
+        <event inherit="punch_heavy" knockback="0" maxrange="50" name="uppercut">
+            <damageMod name="dmgmod_popup" />
+        </event>
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.15" />
+        <trigger height="-10" name="uppercut" time="0.26" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1" combotextfinisher="Balls" combotextstarter="Burning" endchaintime="0.9" icon="0" lockangles="true" name="power1" powerup_tag="magma_blast" priority="5" startchaintime="0.1" turnrate="0.15">
+        <require cat="talent" item="magma_p1" level="1" />
+        <trigger name="sound" sound="char/magma_m/p1_power" time="0" />
+        <trigger actorbolt="Bip01 R Hand" arc="0" attacktype="projectile" center="true" count="%magma_p1_num" damage="%magma_p1_dmg" damagelevel="1" damagescale="none" damagetype="dmg_fire" entity="lava_ball" filename="ents_magma" knockback="0" maxrange="800" name="projectile" powerusage="%magma_p1_pwr" speed="600" tag="1" time="0.45">
+            <damageMod name="dmgmod_weld" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power2" icon="1" is_power="true" name="power2" powerup_tag="magma_blast2" priority="5" startchaintime="0.7">
+        <require cat="skill" item="magma_p2" level="1" />
+        <trigger name="powerusage" powerusage="%magma_p2_pwr" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/magma_m/p2_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="char/magma_m/p2_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="ghost_p2_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove aitype="projectilenear" always_target="true" animenum="ea_power2_loop" icon="1" is_power="true" lockchaining="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="magma_blast2" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_type="update" name="sound" sound="char/magma_m/p2_charge_loop" time="0" />
+        <chain action="Idle" result="power2_release" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power2_end" combotextfinisher="Fire" combotextstarter="Burning" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2_release" noautoaim="true" powerup_tag="magma_blast2" priority="5">
+        <event arc="75" damage="%magma_p2_dmg" damagetype="dmg_fire" fxlevel="1" hiteffect="char/ghostr/p1_impact" inherit="blast" knockback="120" maxrange="200" name="fireblast" numblasts="1" offset="-1" powerusage="0" radius="12" targetable="true" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="3" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="3" name="effect" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p2_link" time="0.25" />
+        <trigger name="sound" sound="char/magma_m/p2_power" time="0.25" />
+        <trigger loop_type="stop" name="sound" sound="char/magma_m/p2_charge_loop" time="0.25" />
+        <trigger loop_type="stop" name="sound" sound="char/magma_m/p2_charge" time="0.25" />
+        <trigger failtag="10" min_charge="1" name="filter" passtag="20" time="0.35" />
+        <trigger name="fireblast" tag="10" time="-1" />
+        <trigger name="fireblast" tag="20" time="-1" victimeventtag="30">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger class="harming" damage="%magma_p2_dmg2" damagetype="dmg_fire" life="5" name="powerup" tag="30" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="base/powerup/pu_burning" fxlevel="1" how_used="primary" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="projectile" animenum="ea_power3" combotextfinisher="Eruption" combotextstarter="Molten" icon="2" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="magma_p3" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/magma/p2_charge" fxlevel="2" name="effect" time="0" />
+        <trigger name="sound" sound="char/magma_m/p3_power" time="0.5" />
+        <trigger damage="%magma_p3_dmg" damagetype="dmg_fire" hiteffect="char/magma/p2_rift" maxrange="250" name="blast" powerusage="%magma_p3_pwr" radius="72" targetable="true" time="0.5">
+            <damageMod name="dmgmod_popup" />
+            <damageMod name="dmgmod_weld" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_power4" blendtime="0" combotextfinisher="Slide" combotextstarter="Fiery" energypersecond="%magma_p4_pwr" fallback="airjump" handler="ch_skating" icon="3" is_power="true" lockangles="false" locktransitionangles="true" name="power4" noautoaim="true" playspeed="8" priority="5" turnrate="0.4">
+        <require cat="skill" item="magma_p4" level="1" />
+        <trigger name="powerusage" powerusage="%magma_p4_pwr" tag="10" time="0" />
+        <trigger effect="char/magma/special_board" name="effect" tag="77" time="-1" />
+        <trigger loop_type="start" name="sound" sound="char/magma_m/p4_power" time="0" />
+        <trigger center_bolt="true" life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx effect="char/magma/special_skate" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/magma/special_skate_charge" fxlevel="2" />
+            <special_fx bolt="Bip01 L Hand" effect="char/magma/special_skate_charge" fxlevel="2" />
+        </trigger>
+        <trigger arc="180" attacktype="blast" damage="%magma_p4_dmg" damagescale="none" damagetype="dmg_fire" hiteffect="char/magma/p1_impact" knockback="%magma_p4_kb" name="punch" tag="1" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="power4_loop" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove airbornemovement="true" inherit="power4" lockchaining="false" name="power4_loop" playspeed="2">
+        <trigger powerusage="0" tag="10" />
+        <trigger loop_type="update" name="sound" sound="char/magma_m/p4_power" time="0" />
+        <chain action="idle" result="skateend" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_jump_loop" handler="ch_jump" lockangles="true" name="skateend">
+        <trigger loop_type="stop" name="sound" sound="char/magma_m/p4_power" time="0.1" />
+        <chain action="idle" result="skateend" />
+        <chain action="special" result="jumpland" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power5" icon="4" is_power="true" lockspeed="true" name="power5" powerup_tag="magma_ranged" priority="5" startchaintime="0.7" turnrate="0.15">
+        <require cat="skill" item="magma_p5" level="1" />
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <trigger name="sound" sound="char/magma_m/p5_charge" time="0" />
+        <trigger name="powerusage" powerusage="%magma_p5_pwr" time="0" />
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power4_loop" combotextfinisher="Barrage" combotextstarter="Flaming" energypersecond="%magma_p5_pwr" icon="4" is_power="true" lockchaining="true" lockspeed="true" locktransitionangles="true" name="power5_loop" noautoaim="true" powerup_tag="humant_ranged" priority="5" turnrate="0.25">
+        <event attack_bone_angles="0 0 0" attack_bone_pos="20 12 36" beambolt="Bip01 R Hand" damage="0" damagetype="dmg_fire" fxlevel="1" hiteffect="char/humant/p1_impact" inherit="beam" maxrange="150" name="flame_dmg" pierce="true" radius="24" spawneffect="char/humant/p1_power" victimeventtag="100">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger damage="0" damagetype="dmg_fire" name="hitme" tag="102" time="-1" type="ce_atk_self" />
+        <trigger failtag="120" filteractor="true" name="filter" passtag="101" tag="100" time="-1" />
+        <trigger class="harming" damage="%magma_p5_dmg" damagetype="dmg_fire" life="1" name="powerup" next_eventtag="102" tag="101" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="1" how_used="primary" />
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger allow_non_actors="true" class="harming" damage="%magma_p5_dmg2" damagetype="dmg_fire" life="2" name="powerup" tag="120" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/humant/p1_aura" fxlevel="2" how_used="primary" />
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger name="unlock_loop_chaining" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="3" loop_type="start" manual_loop_timer="0.2" name="sound" sound="char/magma_m/p5_loop" time="0" />
+        <trigger index="1" name="flame_dmg" time="0.15" />
+        <trigger index="2" name="flame_dmg" time="0.3" />
+        <trigger index="3" name="flame_dmg" time="0.45" />
+        <trigger index="4" name="flame_dmg" time="0.6" />
+        <trigger index="5" name="flame_dmg" time="0.75" />
+        <trigger index="6" name="flame_dmg" time="0.9" />
+        <chain action="Idle" result="power5_end" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" icon="4" is_power="true" lockspeed="true" locktransitionangles="true" name="power5_end" noautoaim="true" priority="5" turnrate="0.2">
+        <trigger loop_type="stop" name="sound" sound="char/magma_m/p5_loop" time="0" />
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="buffself" animenum="ea_power6" icon="5" lockangles="true" Name="power6" powerup_tag="magma_power" priority="5">
+        <require cat="skill" item="magma_p6" level="1" />
+        <trigger name="sound" sound="char/magma_m/p6_power" time="0" />
+        <trigger effect="char/magma/p3_fireform" name="effect" time="0" />
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21311" skin_filter="21301" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21312" skin_filter="21302" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21313" skin_filter="21303" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21314" skin_filter="21304" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21315" skin_filter="21305" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <trigger effect="char/magma/powerup_fireform" effect_cust1="char/magma/p3_expire" func_deactivate="customeffect1deactivate" life="%magma_p6_lif" name="powerup" powerup="def_damage" powerusage="%magma_p6_pwr" skin="21316" skin_filter="21306" skin_swap="true" tag="1" time="0.3">
+            <affecter affect_type="sum" attribute="atk_damage" level="%magma_p6_dmg" />
+            <special_fx effect="char/magma/p3_expire" how_used="deactivation" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="buffself" animenum="ea_power7" icon="6" lockangles="true" name="power7" powerup_tag="magma_power7" priority="5">
+        <require cat="skill" item="magma_p7" level="1" />
+        <trigger bolt="Bip01 L Hand" effect="char/magma/special_trail" name="effect_sound" sound="char/magma_m/p6_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/magma/special_trail" name="effect" time="0" />
+        <trigger effect="char/magma/special_burning" fxlevel="1" name="effect_sound" sound="char/magma_m/p7_impact" time="0.5" />
+        <trigger apply_ally="all" apply_enemy="none" apply_self="true" class="add_attack" damagepercent="%magma_p7_dmg" damagetype="dmg_fire" life="%magma_p7_tim" name="powerup" powerusage="%magma_p7_pwr" tag="3" time="0.5">
+            <affecter attribute="powerup_scope" scope_non_powers="true" />
+            <special_fx bolt="Bip01 L Hand" effect="char/magma/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 R Hand" effect="char/magma/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx bolt="Bip01 L Hand" effect="char/magma/special_trail" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/magma/special_trail" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event damage="%magma_p8_dmg" damagetype="dmg_fire" hiteffect="char/magma/p4_impact" inherit="blast" maxrange="225" name="lava_impact" radius="60" random="true" numblasts="4" />
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="magma_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="4" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" blendtime="0" combotextfinisher="Volcano" icon="7" is_power="true" lockangles="true" name="power8" playspeed="10" powerup_tag="magma_xtreme" priority="uninterruptable">
+        <require cat="skill" item="magma_p8" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Volcano" />
+        <trigger name="xtreme_start" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/magma_m/p8_power" time="0" />
+        <trigger effect="char/magma/p4_volcano" name="effect" time="0" />
+        <trigger effect="char/magma/p4_volcano2" name="effect" time="0.1" timebased="true" />
+        <trigger life="1.5" motor="vibrate" name="rumble" time="0.15" timebased="true" vibrate="0.75" />
+        <trigger damage="%magma_p8_dmg" name="lava_impact" tag="2" time="0.25" timebased="true" />
+        <trigger damage="%magma_p8_dmg" name="lava_impact" tag="3" time="0.2" timebased="true" />
+        <trigger damage="%magma_p8_dmg" name="lava_impact" tag="4" time="0.225" timebased="true" />
+        <trigger damage="%magma_p8_dmg" name="lava_impact" tag="5" time="0.25" timebased="true" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.7" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

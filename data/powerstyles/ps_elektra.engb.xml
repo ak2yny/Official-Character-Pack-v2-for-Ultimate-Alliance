@@ -1,0 +1,398 @@
+<PowerStyle iconfile="textures/ui/elektra_icons.png">
+    <event count="1" damage="%elek_p1_dam" damagescale="none" damagetype="dmg_blade" entity="ninja_star" filename="ents_elektra" fulltargeting="true" inherit="projectile" life="3" name="NinjaStar" speed="800" targetable="true" />
+    <event count="3" damage="0" entity="cursed_ninja_star" filename="ents_elektra" fulltargeting="true" inherit="projectile" life="2" name="CurseStars" pierce="true" speed="800" spread="60" targetable="true" useboltangles="true">
+        <damageMod name="dmgmod_no_damage" />
+    </event>
+    <event count="1" damage="%elek_p1_dam" damagescale="none" damagetype="dmg_blade" entity="guided_ninja_star" filename="ents_elektra" fulltargeting="true" inherit="projectile" life="3" name="GuidedNinjaStar" speed="800" targetable="true" />
+    <event count="1" entity="thrown_sai" filename="ents_elektra" fulltargeting="true" inherit="projectile" life="3" name="ThrownSai" speed="800" targetable="true" />
+    <event class="requirements" inherit="powerup" name="sai_mastery" remove_on_node_end="true">
+        <require cat="skill" item="elektra_outfit22" level="1" />
+        <affecter affect_type="scale" attribute="atk_damage" level="%elek_outfit22_pct" />
+    </event>
+    <event arc="20" attacktype="punch" damage="3 4" damagetype="dmg_blade" inherit="punch" name="SaiAttack" />
+    <event inherit="skinsegment" name="hide_sais" show="false" show2="false" skinsegment="1201_sai_left_segment" skinsegment2="1201_sai_right_segment" />
+    <event inherit="skinsegment" name="show_sais" show="true" show2="true" skinsegment="1201_sai_left_segment" skinsegment2="1201_sai_right_segment" />
+    <event inherit="skinsegment" name="show_left_sai" show="true" skinsegment="1201_sai_left_segment" />
+    <event inherit="skinsegment" name="show_right_sai" show="true" skinsegment="1201_sai_right_segment" />
+    <event inherit="skinsegment" name="hide_stars" show="false" show2="false" skinsegment="1201_star_left_segment" skinsegment2="1201_star_right_segment" />
+    <event inherit="skinsegment" name="hide_right_star" show="false" skinsegment="1201_star_right_segment" />
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.58">
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx04" life="0.25" name="trail" time="0.23" />
+        <trigger damagetype="dmg_blade" name="punch" time="0.33" />
+        <trigger name="show_sais" time="0.08" />
+        <trigger critical="on_exit" name="hide_sais" time="0.83" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger movement="10" name="slide" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.25" name="trail" time="0.16" />
+        <trigger bolt="fx03" life="0.21" name="trail" time="0.21" />
+        <trigger name="kick" time="0.29" />
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="whoosh_light" time="0.3" />
+        <trigger movement="20" name="slide" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.36" name="trail" time="0.2" />
+        <trigger bolt="fx03" life="0.21" name="trail" time="0.21" />
+        <trigger name="kick" time="0.4" />
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="0.71" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.52">
+        <trigger name="whoosh_heavy" time="0.17" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="show_sais" time="0.08" />
+        <trigger critical="on_exit" name="hide_sais" time="0.83" />
+        <trigger name="whoosh_heavy" time="0.176" />
+        <trigger movement="20" name="slide" time="0.176" />
+        <trigger bolt="Bip01 R Toe0" life="0.75" name="trail" time="0.2" />
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.45">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Toe0" life="0.2" name="trail" time="0.2" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish" startchaintime="0.5625">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="1" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx03" life="0.3" name="trail" time="0.2" />
+        <trigger bolt="fx04" life="0.3" name="trail" time="0.2" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger name="show_sais" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect_sound" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger critical="on_exit" name="hide_sais" time="-1" />
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="show_sais" time="0" />
+        <trigger critical="on_exit" name="hide_sais" time="0.75" />
+        <trigger bolt="fx03" life="0.5" name="trail" time="0.1" />
+        <trigger bolt="fx04" life="0.5" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.3" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power9" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" icon="8" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9" switch_dir_on_end="true">
+        <trigger name="stop" time="0" />
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="show_right_sai" time="0.15" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_elektra_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger damage="4 5" damagetype="dmg_bleed" knockback="0" name="SaiAttack" offset="-65" time="0.45" victimeventtag="1" />
+        <trigger class="harming" damage="4 5" life="3" name="powerup" tag="1" time="-1" use_trait_scale="true" />
+        <trigger critical="true" name="victim_release" ownertime="0" time="0.68" />
+        <trigger critical="true" name="hide_sais" time="0.88" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1" icon="0" is_power="true" name="power1" powerup_tag="power1_sequence" priority="5" turnrate="0.5">
+        <require cat="skill" item="elektra_p1" level="1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/elekra_m/p1_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%elek_p1_pow" time="-1" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="fx01" effect="char/elektra/p1_power" fxlevel="2" name="effect" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="fx02" effect="char/elektra/p1_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="elek_p1_right" time="0">
+            <special_fx bolt="fx02" effect="char/elektra/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="elek_p1_left" time="0">
+            <special_fx bolt="fx01" effect="char/elektra/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger inherit="skinsegment" name="show_stars" show="true" show2="true" skinsegment="1201_star_left_segment" skinsegment2="1201_star_right_segment" time="0" />
+        <trigger critical="true" name="hide_stars" time="-1" />
+        <chain action="idle" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power1_loop" icon="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" powerup_tag="power1_sequence" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="hide_stars" time="-1" />
+        <chain action="Idle" result="power1_end" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_end" blendtime="0" combotextfinisher="Shuriken" combotextstarter="Assassin's" icon="0" is_power="true" lockangles="true" name="power1_end" noautoaim="true" powerup_tag="power1_sequence" priority="5">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="char/elekra_m/p1_power" time="0.3" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/elekra_m/p1_charge" time="0.3" />
+        <trigger name="hide_right_star" time="0.3" />
+        <trigger critical="true" name="powerup" remove_tag="elek_p1_right" time="0.3" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.3" />
+        <trigger actorbolt="fx02" attack_bone_angles="9 10 20" attack_bone_pos="37 1 38" name="GuidedNinjaStar" powerusage="%elek_p1_pow" tag="10" time="-1" />
+        <trigger actorbolt="fx02" attack_bone_angles="9 10 20" attack_bone_pos="37 1 38" name="NinjaStar" powerusage="%elek_p1_pow" tag="11" time="-1" />
+        <trigger name="sound" sound="char/elekra_m/p1_power" time="0.42" />
+        <trigger critical="true" name="hide_stars" time="0.42" />
+        <trigger critical="true" name="powerup" remove_tag="elek_p1_left" time="0.42" />
+        <trigger failtag="21" min_charge="1" name="filter" passtag="20" time="0.42" />
+        <trigger actorbolt="fx01" attack_bone_angles="-23 -1 -6" attack_bone_pos="46 0 59" name="GuidedNinjaStar" tag="20" time="-1" />
+        <trigger actorbolt="fx01" attack_bone_angles="-23 -1 -6" attack_bone_pos="46 0 59" name="NinjaStar" tag="21" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2" combotextfinisher="Slice" combotextstarter="Ruthless" icon="1" is_power="true" lockangles="true" name="power2" priority="5" startchaintime="0.99">
+        <require cat="skill" item="elektra_p2" level="1" />
+        <trigger name="sai_mastery" time="0" />
+        <trigger name="show_sais" time="0.04" />
+        <trigger effect="char/elektra/p2_power" fxlevel="1" name="effect_sound" sound="char/elekra_m/p2_power" time="0.13" />
+        <trigger damage="%elek_p2_dam" damagescale="none" damagetype="dmg_blade" index="1" name="SaiAttack" powerusage="%elek_p2_pow" time="0.13" victimeventtag="1" />
+        <trigger effect="char/elektra/p2_power" fxlevel="2" name="effect" time="0.5" />
+        <trigger damage="%elek_p2_dam2" damagescale="none" damagetype="dmg_blade" index="2" name="SaiAttack" time="0.5" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger failtag="3" is_stunned="true" name="filter" passtag="10" tag="2" time="-1" />
+        <trigger chance="%elek_p2_chance" name="otherevent" othertag="10" tag="3" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="%elek_p2_deadlystk" selfonly="true" tag="10" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger critical="true" name="hide_sais" time="0.85" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power3" icon="2" is_power="true" name="power3" powerup_tag="power3_sequence" priority="5" turnrate="0.5">
+        <require cat="skill" item="elektra_p3" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/elekra_m/p3_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" powerusage="%elek_p3_pow" time="0" />
+        <trigger bolt="fx01" effect="char/elektra/p3_power" fxlevel="3" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger name="show_left_sai" time="0.1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="elek_p3_left" time="0">
+            <special_fx bolt="fx01" effect="char/elektra/p3_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="show_left_sai" time="0" />
+        <trigger effect="char/elektra/p3_power" fxlevel="2" name="effect" time="0.667" />
+        <trigger critical="true" name="hide_sais" time="-1" />
+        <chain action="Idle" result="power3_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power2_loop" icon="2" is_power="true" lockchaining="false" locktransitionangles="true" name="power3_loop" noautoaim="true" powerup_tag="power3_sequence" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="hide_sais" time="-1" />
+        <chain action="Idle" result="power3_end" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power2_end" combotextfinisher="Touch" combotextstarter="Deadly" icon="2" is_power="true" lockangles="true" name="power3_end" noautoaim="true" powerup_tag="power3_sequence" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sai_mastery" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="elek_p3_left" time="0.1" />
+        <trigger effect="char/elektra/p3_power" fxlevel="4" name="effect_sound" sound="char/elekra_m/p3_power" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/elekra_m/p3_charge" time="0.18" />
+        <trigger actorbolt="fx01" attack_bone_angles="0 0 0" attack_bone_pos="24 -6 23" damage="%elek_p3_dam" damagescale="none" damagetype="dmg_blade" knockback="%elek_p3_knockback" name="ThrownSai" time="0.18" victimeventtag="1" />
+        <trigger critical="true" name="hide_sais" time="0.18" />
+        <trigger maxdangerrating="10" min_charge="1" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger chance="%elek_p3_chance" name="otherevent" othertag="3" tag="2" time="-1" />
+        <trigger damage="1" name="hitme" tag="3" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_kill" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="melee" animenum="ea_power4" combotextfinisher="Punch" combotextstarter="Devastating" icon="3" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="elektra_p4" level="1" />
+        <trigger name="sound" sound="char/elekra_m/p4_power" time="0" />
+        <trigger effect="char/elektra/p4_power" fxlevel="1" name="effect" time="0.389" />
+        <trigger damage="0" damagescale="none" name="SaiAttack" powerusage="%elek_p4_pow" time="0.395" victimeventtag="1">
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger life="%elek_p4_stuntime" name="powerup" next_eventtag="2" shared_tag="shared_stunned" tag="1" time="-1" />
+        <trigger bolt="Bip01 Neck" effect="char/elektra/p4_power" fxlevel="2" name="effect" tag="2" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="melee" animenum="ea_power5" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5" powerup_tag="power5_sequence" priority="5">
+        <require cat="skill" item="elektra_p5" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/elekra_m/p5_charging" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" powerusage="%elek_p5_pow" time="0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/elektra/p5_power" fxlevel="2" name="effect" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Toe0" effect="char/elektra/p5_power" fxlevel="2" name="effect_sound" next_eventtag="102" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger effect="char/elektra/p5_power" fxlevel="6" name="effect" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="elek_p5_link" time="0">
+            <special_fx bolt="Bip01 R Toe0" effect="char/elektra/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Toe0" effect="char/elektra/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/elektra/p5_power" fxlevel="5" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" icon="4" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power5_loop" powerup_tag="power5_sequence" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="Idle" result="power5_end" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" combotextfinisher="Kick" combotextstarter="Roundhouse" icon="4" is_power="true" lockangles="true" locktransitionangles="true" name="power5_end" powerup_tag="power5_sequence" priority="5" startchaintime="0.99">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="elek_p5_link" time="0.206" />
+        <trigger name="sound" sound="char/elekra_m/p5_power" time="0.206" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/elekra_m/p5_charging" time="0.206" />
+        <trigger failtag="10" min_charge="1" name="filter" passtag="1" time="0.206" />
+        <trigger effect="char/elektra/p5_power" fxlevel="3" name="effect" time="0.824" />
+        <trigger chance="%elek_p5_v_chance" failtag="10" name="otherevent" othertag="20" othertag2="10" tag="1" time="-1" />
+        <trigger fx_size_scale="%elek_p5_fxscale" name="powerup" next_eventtag="11" remove_on_node_end="true" tag="10" time="-1">
+            <special_fx effect="char/elektra/p5_power" fxlevel="4" how_used="activation" never_cycle="true" />
+        </trigger>
+        <trigger damage="%elek_p5_dam" damagescale="none" inherit="radial" maxrange="%elek_p5_rng" name="spin_kick" tag="11" time="-1" />
+        <trigger fx_chargeable="true" name="powerup" remove_on_node_end="true" tag="20" time="-1">
+            <affecter affect_type="scale" attribute="atk_vampire" level="%elek_p5_vamp" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="elektra_p6" level="1" />
+        <trigger bolt="Bip01 L Hand" effect="char/elektra/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/elektra/p6_power" fxlevel="2" name="effect" time="0" />
+        <trigger effect="char/elektra/p6_power" fxlevel="3" name="effect" time="0.296" />
+        <trigger effect="char/elektra/p6_power" fxlevel="4" name="effect_sound" sound="char/elekra_m/p6_power" time="0.74" />
+        <trigger life="%elek_p6_time" name="powerup" powerusage="%elek_p6_pow" time="0.74">
+            <special_fx effect="char/elektra/p6_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/elektra/p6_aura" fxlevel="2" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%elek_p6_dam_inc" />
+            <affecter affect_type="scale" attribute="def_damage" level="%elek_p6_def" />
+            <affecter affect_type="scale" attribute="move_attack" level="%elek_p6_spd_inc" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" blendtime="0" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="elektra_p7" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/elektra/p7_power" fxlevel="1" name="effect" time="0.14" />
+        <trigger bolt="Bip01 L Hand" effect="char/elektra/p7_power" fxlevel="2" name="effect" time="0.14" />
+        <trigger effect="char/elektra/p7_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger effect="char/elektra/p6_power" fxlevel="4" name="effect_sound" sound="char/elekra_m/p7_power" time="0.61" />
+        <trigger apply_ally="all" life="%elek_p7_time" name="powerup" powerusage="%elek_p7_pow" time="0.61">
+            <special_fx effect="char/elektra/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/elektra/p7_aura" fxlevel="2" how_used="deactivation" />
+            <special_fx effect="char/elektra/p7_aura" fxlevel="3" how_used="activation" />
+            <affecter affect_type="scale" attribute="atk_damage" level="%elek_p7_dam_inc" scope_non_powers="true">
+                <scope scope_attack="punch" />
+                <scope scope_attack="kick" />
+            </affecter>
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="9" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="elektra_p10" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="8" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power10" />
+    </FightMove>
+    <FightMove animenum="ea_power10" combotextfinisher="Curse" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power10" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Debuff" name="team_xtreme_msg" time="0" title="Curse of the Hand" />
+        <trigger life="-1" name="slower" speed="0.5" time="0" type="ce_game_speed" />
+        <trigger name="sound" sound="char/elekra_m/p10_power" time="0" />
+        <trigger inherit="skinsegment" name="show_stars" show="true" show2="true" skinsegment="1201_star_left_segment" skinsegment2="1201_star_right_segment" time="0" />
+        <trigger effect="char/elektra/p10_power" fxlevel="1" name="effect" time="0.375" />
+        <trigger bolt="Bip01 L Toe0" effect="char/elektra/p10_power" fxlevel="2" name="effect" time="0.375" />
+        <trigger bolt="Bip01 R Toe0" effect="char/elektra/p10_power" fxlevel="2" name="effect" time="0.375" />
+        <trigger critical="true" name="hide_stars" time="0.563" />
+        <trigger actorbolt="fx01" attack_bone_angles="0 50 90" attack_bone_pos="40 20 115" name="CurseStars" time="0.563" victimeventtag="1" />
+        <trigger actorbolt="fx02" attack_bone_angles="0 50 -90" attack_bone_pos="38 -22 113" name="CurseStars" time="0.563" victimeventtag="1" />
+        <trigger actorbolt="fx01" attack_bone_angles="0 30 90" attack_bone_pos="40 20 115" name="CurseStars" speed="1000" time="0.563" victimeventtag="1" />
+        <trigger actorbolt="fx02" attack_bone_angles="0 30 -90" attack_bone_pos="38 -22 113" name="CurseStars" speed="1000" time="0.563" victimeventtag="1" />
+        <trigger arc="180" attacktype="blast" damage="%elek_p10_dmg" damagescale="none" inherit="punch" maxrange="500" name="p_radius" time="0.68" victimeventtag="1" />
+        <trigger effect="char/elektra/p10_power" fxlevel="1" name="effect" time="0.813" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger failtag="20" is_stunned="true" name="filter" passtag="10" tag="2" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="%elek_p10_dam" selfonly="true" tag="10" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger life="%elek_p10_stuntime" name="powerup" shared_tag="shared_stunned" tag="20" time="-1" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.8" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

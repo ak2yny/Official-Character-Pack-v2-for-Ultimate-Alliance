@@ -1,272 +1,271 @@
 <bonuses>
+    <bonus descbonus="+15%% Maximum Energy" descname1="Classic" descname2="Avengers" powerup="shared_team_max_energy" sound="common/team_bonus_cav">
+        <hero name="blackpanther"/>
+        <hero name="captainamerica"/>
+        <hero name="hulk"/>
+        <hero name="ironman"/>
+        <hero name="thor"/>
+    </bonus>
     <bonus descbonus="+5%% Damage" descname1="Avengers" powerup="shared_team_increase_damage" sound="common/team_bonus_av">
-        <hero name="captainamerica" />
-        <hero name="ironman" />
-        <hero name="warbird" skin="1401" />
-        <hero name="spiderwoman" />
-        <hero name="thor" />
-        <hero name="hawkeye" />
-        <hero name="blackpanther" />
-        <hero name="blackwidowv" />
+        <hero name="captainamerica"/>
+        <hero name="ironman"/>
+        <hero name="warbird" skin="1401"/>
+        <hero name="spiderwoman" skin="3801"/>
+        <hero name="thor"/>
+        <hero name="hawkeye"/>
+        <hero name="blackpanther"/>
+        <hero name="blackwidowv"/>
     </bonus>
     <bonus descbonus="20 Health Per Knockout" descname1="Fantastic" descname2="Four" powerup="shared_team_health_per_kill" sound="common/team_bonus_ff4">
-        <hero name="thing" />
-        <hero name="mrfantastic" />
-        <hero name="invisiblewoman" />
-        <hero name="humantorch" />
+        <hero name="thing"/>
+        <hero name="mrfantastic"/>
+        <hero name="invisiblewoman"/>
+        <hero name="humantorch"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Energy" descname1="New" descname2="Fantastic Four" powerup="shared_team_max_energy" sound="common/team_bonus_nff">
-        <hero name="ghostrider" />
-        <hero name="hulk" />
-        <hero name="lukecage" />
-        <hero name="spiderman" />
-        <hero name="wolverine" />
-    </bonus>
-    <bonus descbonus="+15%% Maximum Energy" descname1="Classic" descname2="Avengers" powerup="shared_team_max_energy" sound="common/team_bonus_cav">
-        <hero name="blackpanther" />
-        <hero name="captainamerica" />
-        <hero name="hulk" />
-        <hero name="ironman" />
-        <hero name="thor" />
+        <hero name="ghostrider"/>
+        <hero name="hulk"/>
+        <hero name="lukecage"/>
+        <hero name="spiderman"/>
+        <hero name="wolverine"/>
     </bonus>
     <bonus descbonus="5%% Damage Inflicted as Health Gain" descname1="Defenders" powerup="shared_team_damage_to_health" sound="common/team_bonus_def">
-        <hero name="drstrange" />
-        <hero name="hulk" />
-        <hero name="iceman" />
-        <hero name="lukecage" />
-        <hero name="silversurfer" />
-        <hero name="ghostrider" />
-        <hero name="hawkeye" />
-        <hero name="deadpool" />
+        <hero name="drstrange"/>
+        <hero name="hulk"/>
+        <hero name="iceman"/>
+        <hero name="lukecage"/>
+        <hero name="silversurfer"/>
+        <hero name="ghostrider"/>
+        <hero name="hawkeye"/>
+        <hero name="deadpool"/>
     </bonus>
     <bonus descbonus="+5 All Resistances" descname1="New" descname2="Avengers" powerup="shared_team_increase_resistances" sound="common/team_bonus_nav">
-        <hero name="captainamerica" />
-        <hero name="ironman" />
-        <hero name="lukecage" />
-        <hero name="spiderman" />
-        <hero name="spiderwoman" />
-        <hero name="wolverine" />
-        <hero name="hawkeye" />
-        <hero name="ronin" />
+        <hero name="captainamerica"/>
+        <hero name="ironman"/>
+        <hero name="lukecage"/>
+        <hero name="spiderman"/>
+        <hero name="spiderwoman" skin="3801"/>
+        <hero name="wolverine"/>
+        <hero name="ronin"/>
     </bonus>
     <bonus descbonus="+6 Body, Strike, Focus" descname1="Marvel" descname2="Knights" powerup="shared_team_increase_traits" sound="common/team_bonus_mk">
-        <hero name="blackpanther" />
-        <hero name="daredevil" />
-        <hero name="drstrange" />
-        <hero name="lukecage" />
-        <hero name="spiderman" />
-        <hero name="moonknight" />
-        <hero name="ghostrider" />
-        <hero name="blade" />
+        <hero name="blackpanther"/>
+        <hero name="daredevil"/>
+        <hero name="drstrange"/>
+        <hero name="lukecage"/>
+        <hero name="spiderman"/>
+        <hero name="moonknight"/>
+        <hero name="ghostrider"/>
+        <hero name="blade"/>
     </bonus>
     <bonus descbonus="+5 Health Regeneration" descname1="Super" descname2="Natural" powerup="shared_team_health_regen" sound="common/team_bonus_sn">
-        <hero name="blade" />
-        <hero name="drstrange" />
-        <hero name="ghostrider" />
-        <hero name="thor" />
+        <hero name="blade"/>
+        <hero name="drstrange"/>
+        <hero name="ghostrider"/>
+        <hero name="thor"/>
     </bonus>
     <bonus descbonus="+15 Strike" descname1="Bruisers" powerup="shared_team_increase_striking" sound="common/team_bonus_br">
-        <hero name="captainamerica" />
-        <hero name="lukecage" />
-        <hero name="warbird" />
-        <hero name="thing" />
-        <hero name="colossus" />
-        <hero name="hulk" />
-        <hero name="captainmarvel" />
+        <hero name="captainamerica"/>
+        <hero name="lukecage"/>
+        <hero name="warbird"/>
+        <hero name="thing"/>
+        <hero name="colossus"/>
+        <hero name="hulk"/>
+        <hero name="captainmarvel"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Health" descname1="Air" descname2="Force" powerup="shared_team_max_health" sound="common/team_bonus_af">
-        <hero name="humantorch" />
-        <hero name="warbird" />
-        <hero name="storm" />
-        <hero name="thor" />
-        <hero name="captainmarvel" />
+        <hero name="humantorch"/>
+        <hero name="warbird"/>
+        <hero name="storm"/>
+        <hero name="thor"/>
+        <hero name="captainmarvel"/>
     </bonus>
     <bonus descbonus="+15 Strike" descname1="Martial" descname2="Artists" powerup="shared_team_increase_striking" sound="common/team_bonus_ma">
-        <hero name="blackpanther" />
-        <hero name="captainamerica" />
-        <hero name="daredevil" />
-        <hero name="moonknight" />
-        <hero name="nickfury" />
-        <hero name="nightcrawlerdlc" />
-        <hero name="ronin" />
+        <hero name="blackpanther"/>
+        <hero name="captainamerica"/>
+        <hero name="daredevil"/>
+        <hero name="moonknight"/>
+        <hero name="nickfury"/>
+        <hero name="nightcrawlerdlc"/>
+        <hero name="ronin"/>
     </bonus>
     <bonus descbonus="+5%% Damage" descname1="Femme" descname2="Fatale" powerup="shared_team_increase_damage" sound="common/team_bonus_ff">
-        <hero name="elektra" />
-        <hero name="invisiblewoman" />
-        <hero name="warbird" />
-        <hero name="spiderwoman" />
-        <hero name="storm" />
-        <hero name="blackwidowv" />
-        <hero name="ronin" />
+        <hero name="elektra"/>
+        <hero name="invisiblewoman"/>
+        <hero name="warbird"/>
+        <hero name="spiderwoman"/>
+        <hero name="storm"/>
+        <hero name="blackwidowv"/>
+        <hero name="ronin"/>
     </bonus>
     <bonus descbonus="+60%% S.H.I.E.L.D. Credit Drops" descname1="Assassins" powerup="shared_team_extra_money" sound="common/team_bonus_as">
-        <hero name="blade" />
-        <hero name="deadpool" />
-        <hero name="elektra" />
-        <hero name="wolverine" />
-        <hero name="ronin" />
-        <hero name="blackwidowv" />
+        <hero name="blade"/>
+        <hero name="deadpool"/>
+        <hero name="elektra"/>
+        <hero name="wolverine"/>
+        <hero name="ronin"/>
+        <hero name="blackwidowv"/>
     </bonus>
     <bonus descbonus="10%% Reduced Energy Cost" descname1="Scorchers" powerup="shared_team_reduce_energy_cost" sound="common/team_bonus_sco">
-        <hero name="ghostrider" />
-        <hero name="humantorch" />
-        <hero name="storm" />
-        <hero name="thor" />
+        <hero name="ghostrider"/>
+        <hero name="humantorch"/>
+        <hero name="storm"/>
+        <hero name="thor"/>
     </bonus>
     <bonus descbonus="+5%% Experience Points" descname1="Dark" descname2="Past" powerup="shared_team_increase_xp" sound="common/team_bonus_dp">
-        <hero name="blade" />
-        <hero name="elektra" />
-        <hero name="ghostrider" />
-        <hero name="spiderwoman" />
-        <hero name="hawkeye" />
+        <hero name="blade"/>
+        <hero name="elektra"/>
+        <hero name="ghostrider"/>
+        <hero name="spiderwoman"/>
+        <hero name="hawkeye"/>
     </bonus>
     <bonus descbonus="+60%% S.H.I.E.L.D. Credit Drops" descname1="Marvel" descname2="Royalty" powerup="shared_team_extra_money" sound="common/team_bonus_mr">
-        <hero name="blackpanther" />
-        <hero name="doomdlc" />
-        <hero name="drstrange" />
-        <hero name="thor" />
-        <hero name="storm" />
+        <hero name="blackpanther"/>
+        <hero name="doomdlc"/>
+        <hero name="drstrange"/>
+        <hero name="thor"/>
+        <hero name="storm"/>
     </bonus>
     <bonus descbonus="+5 All Resistances" descname1="Agents of" descname2="S.H.I.E.L.D." powerup="shared_team_increase_resistances" sound="common/team_bonus_ags">
-        <hero name="captainamerica" />
-        <hero name="nickfury" />
-        <hero name="spiderwoman" skin="3802" />
-        <hero name="wolverine" />
-        <hero name="blackwidowv" />
-        <hero name="ironman" />
+        <hero name="captainamerica"/>
+        <hero name="nickfury"/>
+        <hero name="spiderwoman" skin="3802"/>
+        <hero name="wolverine"/>
+        <hero name="blackwidowv"/>
+        <hero name="ironman"/>
     </bonus>
     <bonus descbonus="+5%% Criticals" descname1="Weapon" descname2="Specialists" powerup="shared_team_increase_criticals" sound="common/team_bonus_ws">
-        <hero name="blade" />
-        <hero name="captainamerica" />
-        <hero name="deadpool" />
-        <hero name="elektra" />
-        <hero name="hawkeye" />
-        <hero name="nickfury" />
-        <hero name="blackwidowv" />
-        <hero name="ronin" />
+        <hero name="blade"/>
+        <hero name="captainamerica"/>
+        <hero name="deadpool"/>
+        <hero name="elektra"/>
+        <hero name="hawkeye"/>
+        <hero name="nickfury"/>
+        <hero name="blackwidowv"/>
+        <hero name="ronin"/>
     </bonus>
     <bonus descbonus="5%% Damage Inflicted as Health Gain" descname1="Natural" descname2="Forces" powerup="shared_team_damage_to_health" sound="common/team_bonus_nf">
-        <hero name="iceman" />
-        <hero name="humantorch" />
-        <hero name="magneto" />
-        <hero name="storm" />
-        <hero name="thor" />
+        <hero name="iceman"/>
+        <hero name="humantorch"/>
+        <hero name="magneto"/>
+        <hero name="storm"/>
+        <hero name="thor"/>
     </bonus>
     <bonus descbonus="+5 Health Regeneration" descname1="Double" descname2="Date" powerup="shared_team_health_regen" sound="common/team_bonus_dd">
-        <hero name="mrfantastic" />
-        <hero name="invisiblewoman" />
-        <hero name="blackpanther" />
-        <hero name="storm" />
+        <hero name="mrfantastic"/>
+        <hero name="invisiblewoman"/>
+        <hero name="blackpanther"/>
+        <hero name="storm"/>
     </bonus>
     <bonus descbonus="20 Energy Per Knockout" descname1="Power" descname2="Platoon" powerup="shared_team_energy_per_kill" sound="common/team_bonus_pp">
-        <hero name="ironman" />
-        <hero name="warbird" />
-        <hero name="silversurfer" />
-        <hero name="thor" />
-        <hero name="captainmarvel" />
+        <hero name="ironman"/>
+        <hero name="warbird"/>
+        <hero name="silversurfer"/>
+        <hero name="thor"/>
+        <hero name="captainmarvel"/>
     </bonus>
     <bonus descbonus="10%% Reduced Energy Cost" descname1="Agile" descname2="Warriors" powerup="shared_team_reduce_energy_cost" sound="common/team_bonus_aw">
-        <hero name="blackpanther" />
-        <hero name="daredevil" />
-        <hero name="deadpool" />
-        <hero name="elektra" />
-        <hero name="nightcrawlerdlc" />
-        <hero name="spiderman" />
-        <hero name="blackwidowv" />
-        <hero name="ronin" />
+        <hero name="blackpanther"/>
+        <hero name="daredevil"/>
+        <hero name="deadpool"/>
+        <hero name="elektra"/>
+        <hero name="nightcrawlerdlc"/>
+        <hero name="spiderman"/>
+        <hero name="blackwidowv"/>
+        <hero name="ronin"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Health" descname1="Think" descname2="Tanks" powerup="shared_team_max_health" sound="common/team_bonus_tt">
-        <hero name="drstrange" />
-        <hero name="mrfantastic" />
-        <hero name="ironman" />
-        <hero name="spiderman" />
-        <hero name="hulk" />
+        <hero name="drstrange"/>
+        <hero name="mrfantastic"/>
+        <hero name="ironman"/>
+        <hero name="spiderman"/>
+        <hero name="hulk"/>
     </bonus>
     <bonus descbonus="+5%% Experience Points" descname1="Natural" descname2="Leaders" powerup="shared_team_increase_xp" sound="common/team_bonus_nl">
-        <hero name="captainamerica" />
-        <hero name="cyclops" />
-        <hero name="doomdlc" />
-        <hero name="drstrange" />
-        <hero name="magneto" />
-        <hero name="mrfantastic" />
-        <hero name="nickfury" />
-        <hero name="storm" />
+        <hero name="captainamerica"/>
+        <hero name="cyclops"/>
+        <hero name="doomdlc"/>
+        <hero name="drstrange"/>
+        <hero name="magneto"/>
+        <hero name="mrfantastic"/>
+        <hero name="nickfury"/>
+        <hero name="storm"/>
     </bonus>
     <bonus descbonus="5%% Damage Inflicted as Health Gain" descname1="Bad To" descname2="The Bone" powerup="shared_team_damage_to_health" sound="common/team_bonus_bb">
-        <hero name="blade" />
-        <hero name="ghostrider" />
-        <hero name="hulk" />
-        <hero name="lukecage" />
-        <hero name="sabretooth" />
-        <hero name="wolverine" />
-        <hero name="venom" />
+        <hero name="blade"/>
+        <hero name="ghostrider"/>
+        <hero name="hulk"/>
+        <hero name="lukecage"/>
+        <hero name="sabretooth"/>
+        <hero name="wolverine"/>
+        <hero name="venom"/>
     </bonus>
     <bonus descbonus="+6 Body, Strike, Focus" descname1="Raven" descname2="Ultimates" powerup="shared_team_increase_traits" sound="common/team_bonus_ru">
-        <hero name="deadpool" />
-        <hero name="invisiblewoman" />
-        <hero name="thing" />
-        <hero name="iceman" />
-        <hero name="silversurfer" />
-        <hero name="colossus" />
-        <hero name="moonknight" />
+        <hero name="deadpool"/>
+        <hero name="invisiblewoman"/>
+        <hero name="thing"/>
+        <hero name="iceman"/>
+        <hero name="silversurfer"/>
+        <hero name="colossus"/>
+        <hero name="moonknight"/>
     </bonus>
     <bonus descbonus="+5%% Criticals" descname1="Alternate" descname2="Identities" powerup="shared_team_increase_criticals" sound="common/team_bonus_ai">
-        <hero name="doomdlc" skin="17403" />
-        <hero name="ironman" skin="1503" />
-        <hero name="ghostrider" skin="0604" />
-        <hero name="spiderwoman" skin="3803" />
-        <hero name="warbird" skin="1403" />
-        <hero name="thor" skin="1003" />
-        <hero name="captainamerica" skin="0703" />
-        <hero name="spiderman" skin="0903" />
+        <hero name="doomdlc" skin="17403"/>
+        <hero name="ironman" skin="1503"/>
+        <hero name="ghostrider" skin="0604"/>
+        <hero name="spiderwoman" skin="3803"/>
+        <hero name="warbird" skin="1403"/>
+        <hero name="thor" skin="1003"/>
+        <hero name="captainamerica" skin="0703"/>
+        <hero name="spiderman" skin="0903"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Health" descname1="Flashback" powerup="shared_team_max_health" sound="common/team_bonus_fb">
-        <hero name="iceman" skin="0804" />
-        <hero name="captainamerica" skin="0704" />
-        <hero name="daredevil" skin="0202" />
-        <hero name="ironman" skin="1505" />
-        <hero name="magneto" skin="17502" />
-        <hero name="warbird" skin="1402" />
-        <hero name="wolverine" skin="0302" />
-        <hero name="ghostrider" skin="0602" />
+        <hero name="iceman" skin="0804"/>
+        <hero name="captainamerica" skin="0704"/>
+        <hero name="daredevil" skin="0202"/>
+        <hero name="ironman" skin="1505"/>
+        <hero name="magneto" skin="17502"/>
+        <hero name="warbird" skin="1402"/>
+        <hero name="wolverine" skin="0302"/>
+        <hero name="ghostrider" skin="0602"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Energy" descname1="X-Men" powerup="shared_team_max_energy" sound="common/team_bonus_xm">
-        <hero name="colossus" />
-        <hero name="cyclops" />
-        <hero name="iceman" />
-        <hero name="magneto" />
-        <hero name="nightcrawlerdlc" />
-        <hero name="sabretooth" />
-        <hero name="storm" />
-        <hero name="wolverine" />
+        <hero name="colossus"/>
+        <hero name="cyclops"/>
+        <hero name="iceman"/>
+        <hero name="magneto"/>
+        <hero name="nightcrawlerdlc"/>
+        <hero name="sabretooth"/>
+        <hero name="storm"/>
+        <hero name="wolverine"/>
     </bonus>
     <bonus descbonus="10%% Reduced Energy Cost" descname1="Rogues" descname2="Gallery" powerup="shared_team_reduce_energy_cost" sound="common/team_bonus_rg">
-        <hero name="doomdlc" />
-        <hero name="venom" />
-        <hero name="sabretooth" />
-        <hero name="magneto" />
-        <hero name="elektra" />
-        <hero name="deadpool" />
-        <hero name="silversurfer" />
-        <hero name="ghostrider" skin="0603" />
+        <hero name="doomdlc"/>
+        <hero name="venom"/>
+        <hero name="sabretooth"/>
+        <hero name="magneto"/>
+        <hero name="elektra"/>
+        <hero name="deadpool"/>
+        <hero name="silversurfer"/>
+        <hero name="ghostrider" skin="0603"/>
     </bonus>
     <bonus descbonus="5%% Damage Inflicted as Health Gain" descname1="West Coast" descname2="Avengers" powerup="shared_team_damage_to_health" sound="common/team_bonus_wca">
-        <hero name="hawkeye" />
-        <hero name="humantorch" />
-        <hero name="ironman" />
-        <hero name="moonknight" />
-        <hero name="spiderwoman" skin="3803" />
-        <hero name="thing" />
-        <hero name="captainamerica" skin="0703" />
+        <hero name="hawkeye"/>
+        <hero name="humantorch"/>
+        <hero name="ironman"/>
+        <hero name="moonknight"/>
+        <hero name="spiderwoman" skin="3803"/>
+        <hero name="thing"/>
+        <hero name="captainamerica" skin="0703"/>
     </bonus>
     <bonus descbonus="+15%% Maximum Energy" descname1="Shaba" descname2="Ultimates" powerup="shared_team_max_energy" sound="common/team_bonus_shb">
-        <hero name="cyclops" />
-        <hero name="hawkeye" />
-        <hero name="hulk" />
-        <hero name="nightcrawlerdlc" />
-        <hero name="doomdlc" />
-        <hero name="magneto" />
-        <hero name="sabretooth" />
-        <hero name="venom" />
+        <hero name="cyclops"/>
+        <hero name="hawkeye"/>
+        <hero name="hulk"/>
+        <hero name="nightcrawlerdlc"/>
+        <hero name="doomdlc"/>
+        <hero name="magneto"/>
+        <hero name="sabretooth"/>
+        <hero name="venom"/>
     </bonus>
 </bonuses>
