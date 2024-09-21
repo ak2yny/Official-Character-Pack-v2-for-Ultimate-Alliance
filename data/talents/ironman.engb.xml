@@ -188,7 +188,7 @@
             <talentvalue level="6" name="ironman_p6_req" value="29"/>
             <talentvalue level="10" name="ironman_p6_req" value="53"/>
             <talentvalue level="11" name="ironman_p6_req" value="73"/>
-            <talentvalue level="1" name="ironman_p6_cost" value="0.3"/>
+            <talentvalue level="1" name="ironman_p6_cost" value="0.7"/>
             <talentvalue level="11" name="ironman_p6_cost" value="0.5"/>
             <talentvalue level="1" name="ironman_p6_lif" value="40"/>
             <talentvalue level="2" name="ironman_p6_lif" value="50"/>
@@ -203,7 +203,7 @@
             <talentvalue level="10" name="ironman_p6_pwr" value="140"/>
             <talentvalue level="11" name="ironman_p6_pwr" value="172"/>
         </talentvalues>
-        <level description="%ironman_p6_cost:p $EP cost\n%ironman_p6_lif seconds\n%ironman_p6_pwr $EP">
+        <level description="%ironman_p6_cost:s $EP cost\n%ironman_p6_lif seconds\n%ironman_p6_pwr $EP">
             <tier cost="1" count="1"/>
             <tier cost="2" count="4"/>
             <tier cost="3" count="1"/>

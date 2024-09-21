@@ -1,0 +1,339 @@
+<PowerStyle iconfile="textures/ui/ironman_icons.png">
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger life="-1" name="powerup" powerup_tag="ironm_blk" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 Spine2" effect="char/iron/special_blocking" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Spine2" effect="char/iron/special_blocking" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="ironm_blk" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_power9" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="6">
+        <trigger attackerface="false" doslidemove="true" interaction="data/fightstyles/interact_ironman_victim" name="victim" nodename="grabsmashvictim" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/iron/p3_power" fxlevel="4" name="effect_sound" sound="char/iron_m/p6_charge" time="0.13" />
+        <trigger bolt="Bip01 R Toe0" effect="char/iron/p3_power" fxlevel="4" name="effect" time="0.13" />
+        <trigger effect="char/iron/p3_power" fxlevel="5" name="effect" time="0.13" />
+        <trigger damage="3 4" damagescale="normal" damagetype="physical" height="-75" index="1" knockback="120" maxrange="64" name="radial" time="0.55" verticalrange="72">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="stop" time="0.5" />
+        <trigger critical="true" name="victim_release" ownertime="0.5" time="0.65" />
+        <trigger life="0.4" name="powerup" remove_on_node_end="true" tag_name="iron_jet_link" time="0.55">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="0.4" name="powerup" remove_on_node_end="true" tag_name="iron_smoke_link" time="0.55">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger damage="3 4" damagescale="normal" index="2" maxrange="70" name="punch" offset="-30" time="0.65">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_fly_idle" energypersecond="%flight_pwr" fallback="jumploop" handler="ch_flying" lockchaining="false" name="flying" noncombat="true" powerup_tag="flying">
+        <require cat="skill" item="flight" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/ability_fly_hand" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/ability_fly_hand" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="flying" />
+        <chain action="attack" result="flymelee1" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" offsetend="12" time="0.35" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.3" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.3" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.3" />
+        <trigger movement="20" name="slide" targetdistance="50" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.4" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_jump_start" handler="ch_move_jump" lockangles="true" name="jump" noncombat="true" startchaintime="0.01">
+        <trigger life="0.4" name="powerup" remove_on_node_end="true" tag_name="iron_jet_link" time="0">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="0.4" name="powerup" remove_on_node_end="true" tag_name="iron_smoke_link" time="0">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="move" result="flying" />
+        <chain action="attack" result="jumpsmash" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="powers" result="powers" />
+        <chain action="idle" result="jumploop" />
+        <chain action="special" result="jumpland" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" powerup_tag="iron_atk_light" priority="3" startchaintime="0.47">
+        <trigger movement="0" name="slide" time="0" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="iron_jet_link" time="0.13">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag_name="iron_smoke_link" time="0.13">
+            <special_fx bolt="Bip01 L Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Toe0" effect="char/iron/special_attack" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.13" />
+        <trigger name="whoosh_light" time="0.2" />
+        <trigger name="punch" time="0.27" />
+        <trigger name="powerup" remove_tag="iron_jet_link" time="0.73" />
+        <trigger name="powerup" remove_tag="iron_smoke_link" time="0.73" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" powerup_tag="iron_atk_light" priority="3" startchaintime="0.44">
+        <trigger name="whoosh_light" time="0.22" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.22" />
+        <trigger name="punch" time="0.28" />
+        <trigger name="powerup" remove_tag="iron_jet_link" time="0.67" />
+        <trigger name="powerup" remove_tag="iron_smoke_link" time="0.67" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3" powerup_tag="iron_atk_light" priority="3">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" time="0.21" />
+        <trigger name="powerup" remove_tag="iron_jet_link" time="0.21" />
+        <trigger name="powerup" remove_tag="iron_smoke_link" time="0.21" />
+        <trigger name="punch" time="0.26" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacktrip2" startchaintime="1">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="whoosh_light" time="0.13" />
+        <trigger movement="10" name="slide" time="0.06" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.3" />
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3" />
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aireusetime="4" aitype="projectile" animenum="ea_power1" icon="0" is_power="true" locktransitionangles="true" name="power1" playspeed="0.7" priority="5" startchaintime="0.6" turnrate="0.5">
+        <require cat="skill" item="ironman_p1" level="1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/iron_m/p1_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%ironman_p1_pwr" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/iron/p1_power" fxlevel="3" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p1_power" fxlevel="3" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="iron_p1_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/iron/p1_power" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/iron/p1_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="iron_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/iron_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power1_loop" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" noautoaim="true" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="iron_p1_link" time="-1" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="idle" result="power1_release" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_end" combotextfinisher="Blast" combotextstarter="Plasma" is_power="true" name="power1_release" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="iron_p1_link" time="0.24" />
+        <trigger effect="char/iron/p1_power" fxlevel="4" name="effect_sound" sound="char/iron_m/p1_power" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/iron_m/p1_charge" time="0.24" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="35 -4 47" attacktype="projectile" damagescale="none" damagetype="dmg_energy" entity="iron_p1_proj" explodedamage="%ironman_p1_dmg" exploderadius="%ironman_p1_rad" filename="ents_ironman" fulltargeting="true" name="projectile" speed="650" tag="20" targetable="true" time="0.24" />
+        <chain action="idle" result="idle" />
+        <chain action="samepowerclick" result="power1" />
+    </FightMove>
+    <FightMove aireusetime="4" aitype="projectile" always_target="true" animenum="ea_power2" combotextfinisher="Beam" combotextstarter="Energy" icon="1" is_power="true" lockspeed="true" locktransitionangles="true" name="power2" noautoaim="true" priority="5" startchaintime="0.72" turnrate="0.5">
+        <require cat="skill" item="ironman_p2" level="1" />
+        <event count="1" damage="%ironman_p2_dmg" damagetype="dmg_energy" entity="iron_p2_proj" filename="ents_ironman" inherit="projectile" knockback="40" life="%ironman_p2_lif" name="laser_shot" numbounces="%ironman_p2_bnc" pierce="true" speed="700" targetable="true" />
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger name="sound" sound="char/iron_m/p2_power" time="0.18" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="40 3 50" name="laser_shot" powerusage="%ironman_p2_pwr" time="0.18" />
+        <trigger name="sound" sound="char/iron_m/p2_power" time="0.54" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="40 -8 50" name="laser_shot" time="0.54" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerclick" result="power2" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power3" icon="2" is_power="true" lockangles="true" name="power3" noflying="true" playspeed="0.5" priority="5" startchaintime="0.25">
+        <require cat="skill" item="ironman_p3" level="1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/iron_m/p3_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%ironman_p3_pwr" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p3_power" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="iron_p3_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/iron/p3_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="iron_p3_link" time="-1" />
+        <chain action="Idle" result="power3_release" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power12" is_power="true" lockchaining="false" locktransitionangles="true" name="power3_loop" noautoaim="true" noflying="true" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="iron_p3_link" time="-1" />
+        <chain action="Idle" result="power3_release2" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power14" combotextfinisher="Uppercut" combotextstarter="Propulsive" is_power="true" lockangles="true" name="power3_release" noflying="true" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p3_power" fxlevel="3" name="effect_sound" sound="char/iron_m/p3_power" tag="1" time="0" />
+        <trigger life="0.3" movement="0" name="slide" tag="2" targetdistance="90" targetradius="40" time="0.18" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/iron_m/p3_charge" time="0.25" />
+        <trigger critical="true" name="powerup" remove_tag="iron_p3_link" time="0.25" />
+        <trigger attacktype="punch" damage="%ironman_p3_dmg" damagescale="none" damagetype="dmg_physical" knockback="0" name="punch" tag="13" time="0.25">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power13" combotextfinisher="Uppercut" combotextstarter="Propulsive" fallback="power3_release" inherit="power3_release" is_power="true" name="power3_release2" noflying="true">
+        <trigger bolt="Bip01 L Toe0" effect="char/iron/p3_power" fxlevel="4" name="effect_sound" sound="char/iron_m/p3_release" time="0" />
+        <trigger bolt="Bip01 R Toe0" effect="char/iron/p3_power" fxlevel="4" name="effect" time="0" />
+        <trigger effect="char/iron/p3_power" fxlevel="5" name="effect" time="0" />
+        <trigger tag="2" time="0" />
+        <trigger knockback="120" tag="13" time="0.13" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event damage="%ironman_p4_dmg" damagescale="none" damagetype="dmg_energy" inherit="radial" knockback="40" maxrange="175" name="iron_p4_atk" tiles="true" />
+    <FightMove aireusetime="30" animenum="ea_power4" combotextfinisher="Attack" combotextstarter="Hi-tech" endchaintime="0.8" handler="ch_repeat_attack" icon="3" is_power="true" lockangles="true" lockchaining="true" lockspeed="true" name="power4" playspeed="1" priority="4" startchaintime="0.25" storepowerbuttons="true">
+        <require cat="skill" item="ironman_p4" level="1" />
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/iron/p4_charge" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p4_charge" fxlevel="1" name="effect" time="0" />
+        <trigger effect="char/iron/p4_charge" fxlevel="2" name="effect_sound" sound="char/iron_m/p4_charge" time="0" />
+        <trigger button="samepowerclick" name="hint" time="0" type="ce_power_button_hint" />
+        <trigger effect="char/iron/p4_power" fxlevel="1" name="effect_sound" sound="char/iron_m/p4_power" time="0.21" />
+        <trigger name="iron_p4_atk" powerusage="%ironman_p4_pwr" time="0.21" />
+        <trigger damage="%ironman_p4_dmg2" name="iron_p4_atk" next_eventtag="101" tag="100" time="-1" />
+        <trigger effect="char/iron/p4_power" fxlevel="2" name="effect_sound" pitch_range="600" sound="char/iron_m/p2_power" tag="101" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4" aitype="buffself" animenum="ea_power5" icon="4" is_power="true" lockangles="true" name="power5" powerup_tag="iro_power5" priority="5">
+        <require cat="skill" item="ironman_p5" level="1" />
+        <trigger bolt="Bip01 L Hand" effect="char/iron/p5_power" fxlevel="1" name="effect" time="0.35" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p5_power" fxlevel="1" name="effect" time="0.35" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Hand" effect="char/iron/p5_power" fxlevel="2" name="effect" time="0.35" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Hand" effect="char/iron/p5_power" fxlevel="2" name="effect" time="0.35" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Toe0" effect="char/iron/p5_power" fxlevel="2" name="effect" time="0.35" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Toe0" effect="char/iron/p5_power" fxlevel="2" name="effect" time="0.35" />
+        <trigger effect="char/iron/p5_power" fxlevel="3" name="effect" time="0.35" />
+        <trigger name="sound" sound="char/iron_m/p5_charge" time="0.45" />
+        <trigger life="%ironman_p5_lif" name="powerup" powerusage="%ironman_p5_pwr" time="0.54">
+            <affecter affect_type="scale" attribute="move_attack" level="%ironman_p5_spe" />
+            <affecter affect_type="max" attribute="move_attack" level="2.5" />
+            <affecter affect_type="scale" attribute="damage" level="%ironman_p5_dmg" />
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="char/iron/p5_power" fxlevel="2" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="char/iron/p5_power" fxlevel="2" />
+            <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="char/iron/p5_power" fxlevel="2" />
+            <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="char/iron/p5_power" fxlevel="2" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/iron/p5_power" fxlevel="4" name="effect" time="0.54" />
+        <trigger bolt="Bip01 L Hand" effect="char/iron/p5_power" fxlevel="4" name="effect" time="0.54" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p5_power" fxlevel="4" name="effect" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="15" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" powerup_tag="iro_power6" priority="5">
+        <require cat="skill" item="ironman_p6" level="1" />
+        <trigger bolt="Bip01 L Hand" effect="char/iron/p6_power" fxlevel="1" name="effect_sound" sound="char/iron_m/p6_charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/iron/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger effect="char/iron/p6_power" fxlevel="2" name="effect" time="0.45" />
+        <trigger apply_ally="all" life="%ironman_p6_lif" name="powerup" powerusage="%ironman_p6_pwr" time="0.5">
+            <affecter affect_type="scale" attribute="power_cost" level="%ironman_p6_cost" />
+            <special_fx effect="char/iron/p6_aura" fxlevel="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <event damage="%ironman_p8_dmg" damagelevel="2" damagetype="dmg_energy" enemynumber="0" fxlevel="1" hiteffect="char/iron/p8_impact" inherit="blast" maxrange="225" name="strike_impact" radius="60" random="true" />
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="ironman_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="1" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" blendtime="0" combotextfinisher="Retribution" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Air Strike" name="team_xtreme_msg" time="0" title="Air Strike" />
+        <trigger name="sound" sound="char/iron_m/p8_charge" time="0" />
+        <trigger bolt="Bip01 L Toe0" effect="char/iron/p8_power" fxlevel="1" name="effect_sound" time="0.25" />
+        <trigger bolt="Bip01 R Toe0" effect="char/iron/p8_power" fxlevel="1" name="effect" time="0.25" />
+        <trigger effect="char/iron/p8_power" fxlevel="2" name="effect" time="0.25" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.46" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.48" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.52" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.54" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.56" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.58" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.6" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.62" />
+        <trigger bolt="Bip01 Spine2" effect="char/iron/p8_power" fxlevel="3" name="effect" time="0.64" />
+        <trigger effect="char/iron/p8_power" fxlevel="4" name="effect_sound" sound="char/iron_m/p8_bomb" time="0.7" />
+        <trigger enemynumber="0" name="strike_impact" time="0.7" />
+        <trigger enemynumber="1" name="strike_impact" time="0.715" />
+        <trigger enemynumber="2" name="strike_impact" time="0.73" />
+        <trigger enemynumber="3" name="strike_impact" time="0.745" />
+        <trigger enemynumber="4" name="strike_impact" time="0.76" />
+        <trigger enemynumber="5" name="strike_impact" time="0.775" />
+        <trigger enemynumber="6" name="strike_impact" time="0.79" />
+        <trigger enemynumber="7" name="strike_impact" time="0.805" />
+        <trigger enemynumber="8" name="strike_impact" time="0.82" />
+        <trigger enemynumber="9" name="strike_impact" time="0.835" />
+        <trigger effect="char/iron/p8_power" fxlevel="5" name="effect" time="0.803" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.85" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>
