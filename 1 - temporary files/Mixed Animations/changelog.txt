@@ -89,7 +89,7 @@ v3:
    Moved from MelloMods (it's by Gevth, but found in MelloMod's thread).
    I was too late to see that it's in the wrong location and already mixed it again, so I included this mix with following improvements:
     Removed more useless stuff from herostat.
-    Idle is now in non combat animation set, so Nova has access to it in non-combat zones.
+    Idle is now in non combat animation set, giving him an unique menu idle at the same time (since non combat zones use boredloop and not idle, this doesn't affect his non combat idle).
    Added packages where leftover references to fightstyle are removed.
 - iammingy\Iron Fist
    Added packages where leftover references to fightstyle are removed.
