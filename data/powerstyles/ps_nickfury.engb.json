@@ -778,13 +778,8 @@
         },
         "FightMove": {
             "aitype": "projectile",
-            "always_target": true,
             "animenum": "ea_power2",
             "blendtime": 0.05,
-            "combotextfinisher": "Precision",
-            "combotextstarter": "Deadly",
-            "energypersecond": "%nickf_p2_pwr",
-            "handler": "ch_lock_strafe",
             "icon": 1,
             "is_power": true,
             "lockangles": true,
@@ -800,6 +795,73 @@
                 "level": 1
             },
             "trigger": {
+                "class": "callevents",
+                "life": -1,
+                "name": "powerup",
+                "powerusage": "%nickf_p2_pwr",
+                "remove_on_node_end": true,
+                "time": 0,
+                "FunctionEvent": {
+                    "function": "deactivate",
+                    "triggertag": 1
+                },
+                "BoltOn": {
+                    "bolt": "Bip01 R Hand",
+                    "model": "models/bolton/nickfury_smg",
+                    "replacecurrent": true,
+                    "slot": "ebolton_weapon"
+                },
+                "special_fx": {
+                    "how_used": "activation",
+                    "sound": "char/fury_m/p2_charge"
+                },
+                "special_fx": {
+                    "how_used": "deactivation",
+                    "sound": "char/fury_m/p2_end"
+                },
+                "affecter": {
+                    "affect_type": "sum",
+                    "attribute": "energy_regen",
+                    "level": "%nickf_p2_pwr2"
+                },
+                "affecter": {
+                    "affect_type": "scale",
+                    "attribute": "momentum",
+                    "level": 0
+                }
+            },
+            "trigger": {
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/fury_m/p2_loop",
+                "tag": 1,
+                "time": -1
+            },
+            "chain": {
+                "action": "idle",
+                "result": "power2_loop"
+            }
+        },
+        "Fightmove": {
+            "aitype": "projectile",
+            "always_target": true,
+            "animenum": "ea_power2",
+            "blendtime": 0.05,
+            "combotextfinisher": "Precision",
+            "combotextstarter": "Deadly",
+            "energypersecond": 1,
+            "handler": "ch_lock_strafe",
+            "icon": 1,
+            "is_power": true,
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power2_loop",
+            "noautoaim": true,
+            "powerup_tag": "nickf_proj_power",
+            "priority": 5,
+            "trigger": {
+                "allow_non_actors": true,
                 "class": "harming",
                 "damage": "%nickf_p2_dmg",
                 "damagetype": "dmg_physical",
@@ -847,64 +909,41 @@
                 }
             },
             "trigger": {
+                "loop_timeout": 3,
+                "loop_type": "start",
                 "name": "sound",
-                "sound": "char/fury_m/p2_charge",
-                "tag": 2,
-                "time": 0
-            },
-            "trigger": {
-                "bolt": "Bip01 R Hand",
-                "boltslot": "ebolton_weapon",
-                "model": "models/bolton/nickfury_smg",
-                "name": "bolton",
-                "replacecurrent": true,
-                "tag": 3,
-                "time": 0
-            },
-            "trigger": {
-                "boltslot": "ebolton_weapon",
-                "critical": true,
-                "name": "removebolton",
-                "removebolton": true,
-                "time": -1,
-                "type": "ce_bolton"
+                "sound": "char/fury_m/p2_loop",
+                "time": 0.13
             },
             "trigger": {
                 "name": "p2_shot",
                 "tag": 10,
-                "time": -1,
+                "time": 0.13,
                 "victimeventtag": 1
             },
             "trigger": {
                 "name": "p2_shot",
                 "tag": 11,
-                "time": -1,
+                "time": 0.31,
                 "victimeventtag": 1
             },
             "trigger": {
                 "name": "p2_shot",
                 "tag": 12,
-                "time": -1,
+                "time": 0.56,
                 "victimeventtag": 1
             },
             "trigger": {
                 "name": "p2_shot",
                 "tag": 13,
-                "time": -1,
+                "time": 0.63,
                 "victimeventtag": 1
             },
             "trigger": {
                 "name": "p2_shot",
                 "tag": 14,
-                "time": -1,
+                "time": 0.81,
                 "victimeventtag": 1
-            },
-            "trigger": {
-                "loop_type": "start",
-                "name": "sound",
-                "sound": "char/fury_m/p2_loop",
-                "tag": 4,
-                "time": -1
             },
             "chain": {
                 "action": "idle",
@@ -932,63 +971,9 @@
             }
         },
         "Fightmove": {
-            "inherit": "power2",
-            "name": "power2_loop",
-            "trigger": {
-                "tag": 2,
-                "time": -1
-            },
-            "trigger": {
-                "tag": 3,
-                "time": -1
-            },
-            "trigger": {
-                "tag": 4,
-                "time": 0.13
-            },
-            "trigger": {
-                "tag": 10,
-                "time": 0.13
-            },
-            "trigger": {
-                "tag": 11,
-                "time": 0.31
-            },
-            "trigger": {
-                "tag": 12,
-                "time": 0.56
-            },
-            "trigger": {
-                "tag": 13,
-                "time": 0.63
-            },
-            "trigger": {
-                "tag": 14,
-                "time": 0.81
-            }
-        },
-        "Fightmove": {
             "animenum": "ea_idle1",
             "name": "power2_end",
             "priority": 4,
-            "trigger": {
-                "name": "sound",
-                "sound": "char/fury_m/p2_end",
-                "time": 0
-            },
-            "trigger": {
-                "loop_type": "stop",
-                "name": "sound",
-                "sound": "char/fury_m/p2_loop",
-                "time": 0
-            },
-            "trigger": {
-                "boltslot": "ebolton_weapon",
-                "name": "removebolton",
-                "removebolton": true,
-                "time": 0,
-                "type": "ce_bolton"
-            },
             "trigger": {
                 "combatnode": "idle",
                 "forcerestart": true,
