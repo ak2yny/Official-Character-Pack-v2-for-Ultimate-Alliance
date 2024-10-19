@@ -842,24 +842,14 @@
                 "result": "power2_loop"
             }
         },
-        "Fightmove": {
-            "aitype": "projectile",
-            "always_target": true,
-            "animenum": "ea_power2",
-            "blendtime": 0.05,
-            "combotextfinisher": "Precision",
-            "combotextstarter": "Deadly",
-            "energypersecond": 1,
-            "handler": "ch_lock_strafe",
-            "icon": 1,
-            "is_power": true,
-            "lockangles": true,
-            "lockchaining": false,
-            "locktransitionangles": true,
-            "name": "power2_loop",
-            "noautoaim": true,
-            "powerup_tag": "nickf_proj_power",
-            "priority": 5,
+        "FightMove": {
+            "animenum": "ea_idle1",
+            "name": "power2_damage",
+            "require": {
+                "cat": "affecter",
+                "item": "special",
+                "level": 1
+            },
             "trigger": {
                 "allow_non_actors": true,
                 "class": "harming",
@@ -909,6 +899,39 @@
                 }
             },
             "trigger": {
+                "name": "p2_shot",
+                "next_eventtag": 11,
+                "tag": 10,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "name": "otherevent",
+                "othernode": "power2_loop",
+                "othertag": 12,
+                "tag": 11,
+                "time": -1
+            }
+        },
+        "Fightmove": {
+            "aitype": "projectile",
+            "always_target": true,
+            "animenum": "ea_power2",
+            "blendtime": 0.05,
+            "combotextfinisher": "Precision",
+            "combotextstarter": "Deadly",
+            "energypersecond": 1,
+            "handler": "ch_lock_strafe",
+            "icon": 1,
+            "is_power": true,
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power2_loop",
+            "noautoaim": true,
+            "powerup_tag": "nickf_proj_power",
+            "priority": 5,
+            "trigger": {
                 "loop_timeout": 3,
                 "loop_type": "start",
                 "name": "sound",
@@ -916,34 +939,35 @@
                 "time": 0.13
             },
             "trigger": {
-                "name": "p2_shot",
-                "tag": 10,
+                "class": "callevents",
+                "life": -1,
+                "name": "powerup",
+                "no_stack": true,
+                "remove_on_node_end": true,
                 "time": 0.13,
-                "victimeventtag": 1
+                "FunctionEvent": {
+                    "function": "activate",
+                    "triggertag": 13
+                },
+                "affecter": {
+                    "attribute": "special",
+                    "level": 1
+                }
             },
             "trigger": {
-                "name": "p2_shot",
-                "tag": 11,
-                "time": 0.31,
-                "victimeventtag": 1
-            },
-            "trigger": {
-                "name": "p2_shot",
+                "delay": 0.133,
+                "event": 13,
+                "name": "rate_of_fire",
                 "tag": 12,
-                "time": 0.56,
-                "victimeventtag": 1
+                "time": -1,
+                "type": "ce_schedule_event"
             },
             "trigger": {
-                "name": "p2_shot",
+                "name": "otherevent",
+                "othernode": "power2_damage",
+                "othertag": 10,
                 "tag": 13,
-                "time": 0.63,
-                "victimeventtag": 1
-            },
-            "trigger": {
-                "name": "p2_shot",
-                "tag": 14,
-                "time": 0.81,
-                "victimeventtag": 1
+                "time": -1
             },
             "chain": {
                 "action": "idle",
