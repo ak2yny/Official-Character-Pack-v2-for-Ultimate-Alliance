@@ -1,0 +1,1310 @@
+{
+    "talents": {
+        "talent": {
+            "descname": "Furious",
+            "description": "Grab and slam a nearby victim into the ground.",
+            "descshort": "Melee",
+            "icon": 0,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p1",
+            "power": "power1",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p1_req",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p1_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p1_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p1_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p1_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p1_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p1_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p1_dmg",
+                    "value": "17 19"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p1_dmg",
+                    "value": "58 64"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p1_dmg",
+                    "value": "78 86"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p1_dmg",
+                    "value": "109 120"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p1_dmg",
+                    "value": "139 154"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p1_dmg",
+                    "value": "221 244"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p1_dmg",
+                    "value": "319 353"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p1_pwr",
+                    "value": 7
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p1_pwr",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p1_pwr",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p1_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p1_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p1_pwr",
+                    "value": 34
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p1_pwr",
+                    "value": 43
+                }
+            },
+            "level": {
+                "description": "%nickf_p1_dmg  $DMG_PHYSICAL\\n%nickf_p1_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p1_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "SMG",
+            "description": "Pull out a Sub Machine Gun and fire as long as button is held. Allows movement and strafing.  $PT_HOLD",
+            "descshort": "Special",
+            "icon": 1,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p2",
+            "power": "power2",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p2_req",
+                    "value": 5
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p2_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p2_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p2_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p2_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p2_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p2_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p2_dmg",
+                    "value": "11 13"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p2_dmg",
+                    "value": "20 23"
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p2_dmg",
+                    "value": "31 34"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p2_dmg",
+                    "value": "44 49"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p2_dmg",
+                    "value": "58 64"
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p2_dmg",
+                    "value": "92 101"
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p2_dmg",
+                    "value": "132 147"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p2_pwr",
+                    "value": 7
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p2_pwr",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p2_pwr",
+                    "value": 11
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p2_pwr",
+                    "value": 15
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p2_pwr",
+                    "value": 15
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p2_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p2_pwr",
+                    "value": 28
+                }
+            },
+            "level": {
+                "description": "%nickf_p2_dmg $DMG_PHYSICAL per second\\n%nickf_p2_pwr $EP per second",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p2_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Sniper",
+            "description": "Use high-powered rifle to shoot a single enemy.  Fires on release. 25% chance for instant knockout; if victim is stunned, chance increases to 50%.  $PT_HOLD",
+            "descshort": "Projectile",
+            "icon": 2,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p3",
+            "power": "power3",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p3_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p3_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p3_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p3_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p3_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p3_dmg",
+                    "value": "82 90"
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p3_dmg",
+                    "value": "112 124"
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p3_dmg",
+                    "value": "143 157"
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p3_dmg",
+                    "value": "224 248"
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p3_dmg",
+                    "value": "322 356"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p3_pwr",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p3_pwr",
+                    "value": 22
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p3_pwr",
+                    "value": 23
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p3_pwr",
+                    "value": 35
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p3_pwr",
+                    "value": 43
+                }
+            },
+            "level": {
+                "description": "%nickf_p3_dmg $DMG_PHYSICAL\\n%nickf_p3_pwr $EP",
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p3_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Frag",
+            "description": "Toss a grenade; explodes in a radius.",
+            "descshort": "Radial",
+            "icon": 3,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p4",
+            "power": "power4",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p4_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "nickf_p4_req",
+                    "value": 13
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p4_req",
+                    "value": 16
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "nickf_p4_req",
+                    "value": 25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p4_req",
+                    "value": 28
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "nickf_p4_req",
+                    "value": 52
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "nickf_p4_req",
+                    "value": 72
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p4_dmg",
+                    "value": "17 19"
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "nickf_p4_dmg",
+                    "value": "20 23"
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p4_dmg",
+                    "value": "27 30"
+                },
+                "talentvalue": {
+                    "level": 7,
+                    "name": "nickf_p4_dmg",
+                    "value": "41 45"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p4_dmg",
+                    "value": "51 56"
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "nickf_p4_dmg",
+                    "value": "85 94"
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "nickf_p4_dmg",
+                    "value": "126 139"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p4_pwr",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 3,
+                    "name": "nickf_p4_pwr",
+                    "value": 18
+                },
+                "talentvalue": {
+                    "level": 4,
+                    "name": "nickf_p4_pwr",
+                    "value": 21
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p4_pwr",
+                    "value": 27
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p4_pwr",
+                    "value": 30
+                },
+                "talentvalue": {
+                    "level": 12,
+                    "name": "nickf_p4_pwr",
+                    "value": 44
+                },
+                "talentvalue": {
+                    "level": 13,
+                    "name": "nickf_p4_pwr",
+                    "value": 56
+                }
+            },
+            "level": {
+                "description": "%nickf_p4_dmg $DMG_FIRE\\n%nickf_p4_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 3
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p4_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Motion Sensor",
+            "description": "Reveals all enemies on the Automap; also decreases $DMG for entire party.",
+            "descshort": "Boost",
+            "icon": 5,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p6",
+            "power": "power6",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p6_req",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p6_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p6_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p6_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p6_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p6_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p6_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p6_dmg",
+                    "value": 0.8
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p6_dmg",
+                    "value": 0.5
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p6_lif",
+                    "value": 20
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p6_lif",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p6_lif",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p6_lif",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p6_lif",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p6_lif",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p6_lif",
+                    "value": 180
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p6_pwr",
+                    "value": 32
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p6_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p6_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_p6_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p6_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 14,
+                    "name": "nickf_p6_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 15,
+                    "name": "nickf_p6_pwr",
+                    "value": 172
+                }
+            },
+            "level": {
+                "description": "%nickf_p6_dmg:s $DMG taken\\n%nickf_p6_lif seconds\\n%nickf_p6_pwr $EP",
+                "tier": {
+                    "cost": 1,
+                    "count": 5
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p6_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Cloaking Device",
+            "description": "Go into stealth mode; all attacks have greater chance of causing criticals.",
+            "descshort": "Boost",
+            "icon": 6,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p7",
+            "power": "power7",
+            "type": "boost",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p7_req",
+                    "value": 14
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "nickf_p7_req",
+                    "value": 17
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p7_req",
+                    "value": 26
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p7_req",
+                    "value": 29
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p7_req",
+                    "value": 53
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "nickf_p7_req",
+                    "value": 73
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p7_pwr",
+                    "value": 60
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "nickf_p7_pwr",
+                    "value": 68
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p7_pwr",
+                    "value": 88
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p7_pwr",
+                    "value": 92
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p7_pwr",
+                    "value": 140
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "nickf_p7_pwr",
+                    "value": 172
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p7_cri",
+                    "value": 0.05
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "nickf_p7_cri",
+                    "value": 0.15
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p7_lif",
+                    "value": 40
+                },
+                "talentvalue": {
+                    "level": 2,
+                    "name": "nickf_p7_lif",
+                    "value": 50
+                },
+                "talentvalue": {
+                    "level": 5,
+                    "name": "nickf_p7_lif",
+                    "value": 65
+                },
+                "talentvalue": {
+                    "level": 6,
+                    "name": "nickf_p7_lif",
+                    "value": 80
+                },
+                "talentvalue": {
+                    "level": 10,
+                    "name": "nickf_p7_lif",
+                    "value": 120
+                },
+                "talentvalue": {
+                    "level": 11,
+                    "name": "nickf_p7_lif",
+                    "value": 180
+                }
+            },
+            "level": {
+                "description": "%nickf_p7_cri:p critical chance\\n%nickf_p7_lif seconds",
+                "tier": {
+                    "cost": 1,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 2,
+                    "count": 4
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 3,
+                    "count": 4,
+                    "difficulty": "hard"
+                },
+                "tier": {
+                    "cost": 4,
+                    "count": 1,
+                    "difficulty": "hard"
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p7_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "S.H.I.E.L.D. Strike",
+            "description": "Calls down an airstrike on all visible enemies. Also increases $DMG inflicted by other attacks in sequence.",
+            "descshort": "Xtreme",
+            "icon": 7,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_p8",
+            "power": "team_xtreme",
+            "type": "xtreme",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p8_req",
+                    "value": 10
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p8_req",
+                    "value": 45
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p8_dmg",
+                    "value": "85 94"
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p8_dmg",
+                    "value": "238 263"
+                },
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_p8_dmgs",
+                    "value": 1.25
+                },
+                "talentvalue": {
+                    "level": 8,
+                    "name": "nickf_p8_dmgs",
+                    "value": 1.6
+                }
+            },
+            "level": {
+                "description": "%nickf_p8_dmg $DMG_FIRE\\n%nickf_p8_dmgs:s $DMG increase",
+                "tier": {
+                    "cost": 2,
+                    "count": 1
+                },
+                "tier": {
+                    "cost": 0,
+                    "count": 7
+                },
+                "require": {
+                    "cat": "level",
+                    "level": "%nickf_p8_req"
+                }
+            }
+        },
+        "talent": {
+            "descname": "Leadership",
+            "description": "Increases $DMG and experience points for all combo attacks.",
+            "icon": 29,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit11",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit11_com",
+                    "value": 1.25
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit11_com",
+                    "value": 2.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit11_com:s combo $DMG\\n%nickf_outfit11_com:s combo $XP",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "combo_damage",
+                        "level": "%nickf_outfit11_com"
+                    },
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "combo_xp",
+                        "level": "%nickf_outfit11_com"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Boost Stats",
+            "description": "Boosts Body, Focus, and Strike stats.",
+            "icon": 13,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit12",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit12_all",
+                    "value": 2
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit12_all",
+                    "value": 10
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%nickf_outfit12_all Body\\n+%nickf_outfit12_all Focus\\n+%nickf_outfit12_all Strike",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "traits",
+                        "level": "%nickf_outfit12_all"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "$DR",
+            "description": "Increases defense.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit13",
+            "skin": 0,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit13_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit13_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%nickf_outfit13_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%nickf_outfit13_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Marksman",
+            "description": "Increases the amount of $DMG done with gun attacks.",
+            "icon": 4,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_outfit21",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit21_dmg",
+                    "value": 1.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit21_dmg",
+                    "value": 1.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit21_dmg:s gun $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "damage",
+                        "level": "%nickf_outfit21_dmg",
+                        "scope_node": "nickf_proj_power"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Maximum $EP",
+            "description": "Increases maximum energy.",
+            "icon": 21,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit22",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit22_mep",
+                    "value": 1.04
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit22_mep",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit22_mep:s maximum $EP",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "maxenergy",
+                        "level": "%nickf_outfit22_mep"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "$DR",
+            "description": "Increases defense.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit23",
+            "skin": 1,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit23_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit23_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%nickf_outfit23_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%nickf_outfit23_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Melee Mastery",
+            "description": "Increases the $DMG of all melee attacks.",
+            "icon": 5,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit31",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit31_dmg",
+                    "value": 1.04
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit31_dmg",
+                    "value": 1.2
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit31_dmg:s melee $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "atk_damage",
+                        "level": "%nickf_outfit31_dmg",
+                        "scope_non_powers": true
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Reflect Melee",
+            "description": "Reflects some $DMG back to melee attackers.",
+            "icon": 19,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit32",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit32_ref",
+                    "value": 0.25
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit32_ref",
+                    "value": 1.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit32_ref:p $DMG reflected",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "reflect_damage",
+                        "level": "%nickf_outfit32_ref",
+                        "scope_non_powers": true,
+                        "scope": {
+                            "scope_attack": "punch"
+                        },
+                        "scope": {
+                            "scope_attack": "kick"
+                        }
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "$DR",
+            "description": "Increases defense.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit33",
+            "skin": 2,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit33_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit33_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%nickf_outfit33_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%nickf_outfit33_dr"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Maximum $HP",
+            "description": "Increases maximum health.",
+            "icon": 20,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit41",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit41_hlt",
+                    "value": 1.05
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit41_hlt",
+                    "value": 1.25
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit41_hlt:s maximum $HP",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "maxhealth",
+                        "level": "%nickf_outfit41_hlt"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "Marksman",
+            "description": "Increases the amount of $DMG done with gun attacks.",
+            "icon": 4,
+            "icon_texture": "textures/ui/nickfury_icons.png",
+            "name": "nickf_outfit42",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit42_dmg",
+                    "value": 1.03
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit42_dmg",
+                    "value": 1.15
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "%nickf_outfit42_dmg:s gun $DMG",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "affect_type": "scale",
+                        "attribute": "damage",
+                        "level": "%nickf_outfit42_dmg",
+                        "scope_node": "nickf_proj_power"
+                    }
+                }
+            }
+        },
+        "talent": {
+            "descname": "$DR",
+            "description": "Increases defense.",
+            "icon": 22,
+            "icon_texture": "textures/ui/talent_icons.png",
+            "name": "nickf_outfit43",
+            "skin": 3,
+            "type": "passive",
+            "talentvalues": {
+                "talentvalue": {
+                    "level": 1,
+                    "name": "nickf_outfit43_dr",
+                    "value": 1
+                },
+                "talentvalue": {
+                    "level": 9,
+                    "name": "nickf_outfit43_dr",
+                    "value": 9
+                }
+            },
+            "level": {
+                "count": 9,
+                "description": "+%nickf_outfit43_dr $DR",
+                "powerup": {
+                    "life": -1,
+                    "affecter": {
+                        "attribute": "defense_rating",
+                        "level": "%nickf_outfit43_dr"
+                    }
+                }
+            }
+        }
+    }
+}

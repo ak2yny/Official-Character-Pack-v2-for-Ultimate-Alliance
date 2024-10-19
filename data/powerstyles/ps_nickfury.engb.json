@@ -1,0 +1,1569 @@
+{
+    "PowerStyle": {
+        "iconfile": "textures/ui/nickfury_icons.png",
+        "event": {
+            "inherit": "skinsegment",
+            "name": "show_left_gun",
+            "show": true,
+            "skinsegment": "gun_left_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "hide_left_gun",
+            "show": false,
+            "skinsegment": "gun_left_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "show_right_gun",
+            "show": true,
+            "skinsegment": "gun_right_segment"
+        },
+        "event": {
+            "inherit": "skinsegment",
+            "name": "hide_right_gun",
+            "show": false,
+            "skinsegment": "gun_right_segment"
+        },
+        "FightMove": {
+            "animenum": "ea_power10",
+            "handler": "ch_grab_hold_base",
+            "lockangles": true,
+            "lockspeed": true,
+            "name": "grab_smash",
+            "noautoaim": true,
+            "priority": "uninterruptable",
+            "startchaintime": 0.9,
+            "trigger": {
+                "attackerface": true,
+                "doslidemove": true,
+                "interaction": "data/fightstyles/interact_nickfury_victim",
+                "name": "victim",
+                "nodename": "grabsmashvictim",
+                "targetdistance": 22,
+                "time": 0,
+                "victimface": true
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p10_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "bolt2": "Bip01 Pelvis",
+                "effect": "char/fury/grabsmash",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.14
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "bolt2": "Bip01 Neck",
+                "bolt2ent": "victim",
+                "effect": "char/fury/grabsmash",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.51
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "bolt2": "Bip01 Neck",
+                "bolt2ent": "victim",
+                "effect": "char/fury/grabsmash",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.51
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "bolt2": "Bip01 L Hand",
+                "effect": "char/fury/grabsmash",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.76
+            },
+            "trigger": {
+                "damage": "4 5",
+                "knockback": 0,
+                "maxrange": 64,
+                "name": "punch",
+                "offset": -50,
+                "time": 0.76,
+                "damagemod": {
+                    "name": "dmgmod_no_hiteffect"
+                }
+            },
+            "trigger": {
+                "name": "victim_release",
+                "ownertime": 2,
+                "time": 0.76
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light1",
+            "blendtime": 0.05,
+            "lockangles": true,
+            "name": "attacklight1",
+            "priority": 3,
+            "startchaintime": 0.58,
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.25
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.25
+            },
+            "trigger": {
+                "name": "punch",
+                "time": 0.41
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight2"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack2"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "attackstun1"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light2",
+            "blendtime": 0.05,
+            "lockangles": true,
+            "name": "attacklight2",
+            "priority": 3,
+            "startchaintime": 0.5,
+            "trigger": {
+                "bolt": "Bip01 L Toe0",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.18
+            },
+            "trigger": {
+                "name": "punch",
+                "time": 0.31
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight3"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "popupattack2"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_light3",
+            "blendtime": 0.05,
+            "lockangles": true,
+            "name": "attacklight3",
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 3,
+                "name": "effect",
+                "time": 0.2
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.2
+            },
+            "trigger": {
+                "name": "punch",
+                "time": 0.33
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "powers",
+                "result": "powers"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "null"
+            },
+            "chain": {
+                "action": "smash",
+                "result": "null"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_popup",
+            "blendtime": 0.05,
+            "endchaintime": 1,
+            "handler": "ch_popup_attack",
+            "lockangles": true,
+            "name": "popupattack2",
+            "priority": 5,
+            "startchaintime": 0.75,
+            "trigger": {
+                "charge": 1,
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "name": "show_right_gun",
+                "time": 0.13
+            },
+            "trigger": {
+                "name": "whoosh_light",
+                "time": 0.13
+            },
+            "trigger": {
+                "bolt": "fx02",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 4,
+                "name": "effect_sound",
+                "sound": "char/fury_m/p3_power",
+                "time": 0.33
+            },
+            "trigger": {
+                "knockback": 0,
+                "maxrange": 50,
+                "name": "punch_heavy",
+                "time": 0.33,
+                "damagemod": {
+                    "name": "dmgmod_popup"
+                },
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "trigger": {
+                "name": "punch",
+                "time": 0.36
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_right_gun",
+                "time": 0.87
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "move",
+                "result": "jump"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_heavy1",
+            "blendtime": 0.1,
+            "handler": "ch_hold_smash",
+            "lockangles": true,
+            "name": "attackheavy1",
+            "playspeed": 1,
+            "powerup_tag": "kbatk",
+            "startchaintime": 0.8,
+            "trigger": {
+                "loop_timeout": 3,
+                "loop_type": "start",
+                "name": "sound",
+                "sound": "common/melee/kb_charge",
+                "time": 0
+            },
+            "trigger": {
+                "charge": 0,
+                "charge_time": 1,
+                "charged_eventtag": 100,
+                "name": "charge",
+                "tag": 1,
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "base/hit/hit_knockback_charge",
+                "fxlevel": 2,
+                "loop_type": "start",
+                "name": "effect_sound",
+                "next_eventtag": 101,
+                "sound": "common/melee/kb_charge_loop",
+                "tag": 100,
+                "time": -1
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "base/hit/hit_knockback_charge",
+                "fxlevel": 2,
+                "loop_type": "start",
+                "name": "effect_sound",
+                "next_eventtag": 102,
+                "sound": "common/melee/kb_charge_loop",
+                "tag": 101,
+                "time": -1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "common/melee/kb_charge_done",
+                "tag": 102,
+                "time": -1
+            },
+            "trigger": {
+                "fx_chargeable": true,
+                "life": -1,
+                "name": "powerup",
+                "remove_on_node_end": true,
+                "tag": 2,
+                "tag_name": "knockback_link",
+                "time": 0,
+                "special_fx": {
+                    "bolt": "Bip01 L Hand",
+                    "effect": "base/hit/hit_knockback_charge",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                },
+                "special_fx": {
+                    "bolt": "Bip01 R Hand",
+                    "effect": "base/hit/hit_knockback_charge",
+                    "fxlevel": 1,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "chain": {
+                "action": "idle",
+                "result": "attackknockback2"
+            },
+            "chain": {
+                "action": "groundsmash",
+                "result": "groundattackknockback2"
+            },
+            "chain": {
+                "action": "special",
+                "result": "attack_knockback_charge"
+            }
+        },
+        "FightMove": {
+            "aitype": "melee",
+            "animenum": "ea_attack_knockback2",
+            "blendtime": 0,
+            "endchaintime": 1,
+            "lockangles": true,
+            "name": "attackknockback2",
+            "powerup_tag": "kbatk",
+            "priority": 5,
+            "startchaintime": 0.8,
+            "trigger": {
+                "charge_type": "stop",
+                "name": "charge",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "common/melee/dmg_knockback",
+                "time": 0.13
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "common/melee/kb_charge_loop",
+                "time": 0.13
+            },
+            "trigger": {
+                "critical": true,
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "common/melee/kb_charge",
+                "time": 0.13
+            },
+            "trigger": {
+                "movement": 40,
+                "name": "slide",
+                "targetdistance": 50,
+                "time": 0.13
+            },
+            "trigger": {
+                "failtag": 11,
+                "min_charge": 1,
+                "name": "filter",
+                "passtag": 10,
+                "time": 0.21
+            },
+            "trigger": {
+                "damage": "3 4",
+                "knockback": 190,
+                "name": "kick",
+                "tag": 10,
+                "time": -1,
+                "damagemod": {
+                    "name": "dmgmod_auto_knockback"
+                },
+                "damagemod": {
+                    "name": "dmgmod_no_atk_roll"
+                },
+                "damagemod": {
+                    "name": "dmgmod_ground"
+                }
+            },
+            "trigger": {
+                "damage": "2 3",
+                "knockback": 190,
+                "name": "kick",
+                "tag": 11,
+                "time": -1
+            },
+            "trigger": {
+                "critical": true,
+                "name": "powerup",
+                "remove_tag": "knockback_link",
+                "time": 0.21
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight1"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_ground1",
+            "endchaintime": 1,
+            "fallback": "attacklight1",
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "groundattack",
+            "noautoaim": true,
+            "startchaintime": 0.61,
+            "event": {
+                "inherit": "punch_veryheavy",
+                "knockback": 0,
+                "maxrange": 50,
+                "name": "ground_attack",
+                "damageMod": {
+                    "name": "dmgmod_ground"
+                },
+                "damageMod": {
+                    "name": "dmgmod_no_atk_roll"
+                }
+            },
+            "trigger": {
+                "name": "show_right_gun",
+                "time": 0.11
+            },
+            "trigger": {
+                "bolt": "fx02",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 4,
+                "name": "effect_sound",
+                "sound": "char/fury_m/p3_power",
+                "time": 0.34
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "life": 0.14,
+                "name": "trail",
+                "time": 0.1
+            },
+            "trigger": {
+                "name": "ground_attack",
+                "time": 0.34
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_right_gun",
+                "time": 0.99
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack2"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight1"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_attack_ground2",
+            "blendtime": 0,
+            "endchaintime": 1,
+            "fallback": "attacklight1",
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "groundattack2",
+            "noautoaim": true,
+            "startchaintime": 0.61,
+            "event": {
+                "inherit": "punch_veryheavy",
+                "knockback": 0,
+                "maxrange": 50,
+                "name": "ground_attack",
+                "damageMod": {
+                    "name": "dmgmod_ground"
+                },
+                "damageMod": {
+                    "name": "dmgmod_no_atk_roll"
+                }
+            },
+            "trigger": {
+                "movement": 0,
+                "name": "slide",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "fx02",
+                "effect": "char/fury/special_attack",
+                "fxlevel": 4,
+                "name": "effect_sound",
+                "sound": "char/fury_m/p3_power",
+                "time": 0.13
+            },
+            "trigger": {
+                "name": "show_right_gun",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "life": 0.14,
+                "name": "trail",
+                "time": 0.38
+            },
+            "trigger": {
+                "name": "ground_attack",
+                "time": 0.13
+            },
+            "trigger": {
+                "critical": "on_exit",
+                "name": "hide_right_gun",
+                "time": 0.8
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            },
+            "chain": {
+                "action": "guard",
+                "result": "null"
+            },
+            "chain": {
+                "action": "blocking",
+                "result": "blocking"
+            },
+            "chain": {
+                "action": "groundattack",
+                "result": "groundattack"
+            },
+            "chain": {
+                "action": "attack",
+                "result": "attacklight1"
+            }
+        },
+        "FightMove": {
+            "aitype": "melee",
+            "animenum": "ea_power1",
+            "combotextfinisher": "Wrath",
+            "combotextstarter": "Furious",
+            "handler": "ch_grab_hold_base",
+            "icon": 0,
+            "is_power": true,
+            "name": "power1",
+            "priority": 5,
+            "turnrate": 0.5,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p1",
+                "level": 1
+            },
+            "event": {
+                "damage": 1,
+                "damagescale": "none",
+                "inherit": "punch",
+                "name": "p1_punch"
+            },
+            "trigger": {
+                "name": "powerusage",
+                "powerusage": "%nickf_p1_pwr",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p1_charge",
+                "time": 0
+            },
+            "trigger": {
+                "maxrange": 72,
+                "name": "victim_set",
+                "searchangle": 90,
+                "selfeventtag": 1,
+                "time": 0
+            },
+            "trigger": {
+                "attackerface": true,
+                "doslidemove": true,
+                "interaction": "data/fightstyles/interact_nickfury_victim",
+                "name": "victim",
+                "nodename": "power1_victim",
+                "offset": "50 0 0",
+                "tag": 1,
+                "time": -1,
+                "victimface": true
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p1_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.19
+            },
+            "trigger": {
+                "fail_node": "null",
+                "failtag": 3,
+                "name": "verify_victim",
+                "time": 0.22
+            },
+            "trigger": {
+                "damage": "%nickf_p1_dmg",
+                "name": "p1_punch",
+                "tag": 3,
+                "time": -1
+            },
+            "trigger": {
+                "fail_node": "idle",
+                "name": "verify_victim",
+                "time": 0.22
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p1_power",
+                "time": 0.22
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p1_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.62
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/fury/p1_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.62
+            },
+            "trigger": {
+                "damage": "%nickf_p1_dmg",
+                "damagescale": "none",
+                "index": 2,
+                "maxrange": 64,
+                "name": "radial",
+                "offset": 60,
+                "time": 0.68,
+                "damagemod": {
+                    "name": "dmgmod_auto_knockback"
+                }
+            },
+            "trigger": {
+                "critical": true,
+                "name": "victim_release",
+                "time": 0.68
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "always_target": true,
+            "animenum": "ea_power2",
+            "blendtime": 0.05,
+            "combotextfinisher": "Precision",
+            "combotextstarter": "Deadly",
+            "energypersecond": "%nickf_p2_pwr",
+            "handler": "ch_lock_strafe",
+            "icon": 1,
+            "is_power": true,
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power2",
+            "noautoaim": true,
+            "powerup_tag": "nickf_proj_power",
+            "priority": 5,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p2",
+                "level": 1
+            },
+            "trigger": {
+                "class": "harming",
+                "damage": "%nickf_p2_dmg",
+                "damagetype": "dmg_physical",
+                "life": 1,
+                "name": "powerup",
+                "next_eventtag": 107,
+                "tag": 1,
+                "time": -1
+            },
+            "trigger": {
+                "chance": 0.25,
+                "name": "otherevent",
+                "othertag": 108,
+                "tag": 107,
+                "time": -1
+            },
+            "trigger": {
+                "damage": 1,
+                "damagescale": "none",
+                "index": 2,
+                "name": "painme",
+                "tag": 108,
+                "time": -1,
+                "type": "ce_atk_self",
+                "damagemod": {
+                    "name": "dmgmod_forcepain"
+                }
+            },
+            "event": {
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "26 -7 52",
+                "attacktype": "beam",
+                "beambolt": "fx03",
+                "beameffect": "char/fury/p2_power",
+                "damage": 1,
+                "damagescale": "none",
+                "damagetype": "dmg_physical",
+                "fxlevel": 1,
+                "hiteffect": "char/fury/p2_impact",
+                "inherit": "beam",
+                "maxrange": 600,
+                "name": "p2_shot",
+                "damagemod": {
+                    "name": "dmgmod_no_damage"
+                }
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p2_charge",
+                "tag": 2,
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "boltslot": "ebolton_weapon",
+                "model": "models/bolton/nickfury_smg",
+                "name": "bolton",
+                "replacecurrent": true,
+                "tag": 3,
+                "time": 0
+            },
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "critical": true,
+                "name": "removebolton",
+                "removebolton": true,
+                "time": -1,
+                "type": "ce_bolton"
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "tag": 10,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "tag": 11,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "tag": 12,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "tag": 13,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "tag": 14,
+                "time": -1,
+                "victimeventtag": 1
+            },
+            "trigger": {
+                "loop_type": "start",
+                "name": "sound",
+                "sound": "char/fury_m/p2_loop",
+                "tag": 4,
+                "time": -1
+            },
+            "chain": {
+                "action": "idle",
+                "result": "power2_end"
+            },
+            "chain": {
+                "action": "samepowerhold",
+                "result": "power2_loop"
+            },
+            "chain": {
+                "action": "advance",
+                "result": "power2_forward"
+            },
+            "chain": {
+                "action": "straferight",
+                "result": "power2_strafe_right"
+            },
+            "chain": {
+                "action": "retreat",
+                "result": "power2_backward"
+            },
+            "chain": {
+                "action": "strafeleft",
+                "result": "power2_strafe_left"
+            }
+        },
+        "Fightmove": {
+            "inherit": "power2",
+            "name": "power2_loop",
+            "trigger": {
+                "tag": 2,
+                "time": -1
+            },
+            "trigger": {
+                "tag": 3,
+                "time": -1
+            },
+            "trigger": {
+                "tag": 4,
+                "time": 0.13
+            },
+            "trigger": {
+                "tag": 10,
+                "time": 0.13
+            },
+            "trigger": {
+                "tag": 11,
+                "time": 0.31
+            },
+            "trigger": {
+                "tag": 12,
+                "time": 0.56
+            },
+            "trigger": {
+                "tag": 13,
+                "time": 0.63
+            },
+            "trigger": {
+                "tag": 14,
+                "time": 0.81
+            }
+        },
+        "Fightmove": {
+            "animenum": "ea_idle1",
+            "name": "power2_end",
+            "priority": 4,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p2_end",
+                "time": 0
+            },
+            "trigger": {
+                "loop_type": "stop",
+                "name": "sound",
+                "sound": "char/fury_m/p2_loop",
+                "time": 0
+            },
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "name": "removebolton",
+                "removebolton": true,
+                "time": 0,
+                "type": "ce_bolton"
+            },
+            "trigger": {
+                "combatnode": "idle",
+                "forcerestart": true,
+                "name": "othernode",
+                "time": 0
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power11",
+            "inherit": "power2_loop",
+            "name": "power2_forward"
+        },
+        "FightMove": {
+            "animenum": "ea_power12",
+            "inherit": "power2_loop",
+            "name": "power2_backward"
+        },
+        "FightMove": {
+            "animenum": "ea_power13",
+            "inherit": "power2_loop",
+            "name": "power2_strafe_right"
+        },
+        "FightMove": {
+            "animenum": "ea_power14",
+            "inherit": "power2_loop",
+            "name": "power2_strafe_left"
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "animenum": "ea_power3",
+            "icon": 2,
+            "is_power": true,
+            "name": "power3",
+            "noautoaim": true,
+            "powerup_tag": "p3_hold",
+            "priority": 5,
+            "turnrate": 0.8,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p3",
+                "level": 1
+            },
+            "trigger": {
+                "button": "samepowerhold",
+                "name": "button_hint",
+                "time": 0
+            },
+            "trigger": {
+                "name": "powerusage",
+                "powerusage": "%nickf_p3_pwr",
+                "time": 0
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p3_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "boltslot": "ebolton_weapon",
+                "model": "models/bolton/nickfury_sniperrifle",
+                "name": "bolton",
+                "replacecurrent": true,
+                "tag": 1,
+                "time": 0
+            },
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "critical": true,
+                "name": "removebolton",
+                "removebolton": true,
+                "time": -1,
+                "type": "ce_bolton"
+            },
+            "trigger": {
+                "life": -1,
+                "name": "powerup",
+                "remove_on_node_end": true,
+                "time": 0.99,
+                "special_fx": {
+                    "bolt": "fx04",
+                    "effect": "char/fury/p3_power",
+                    "fxlevel": 2,
+                    "how_used": "primary",
+                    "never_cycle": true
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "power3_loop"
+            }
+        },
+        "Fightmove": {
+            "animenum": "ea_power3_loop",
+            "is_power": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power3_loop",
+            "noautoaim": true,
+            "powerup_tag": "p3_hold",
+            "priority": 5,
+            "turnrate": 0.8,
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "critical": true,
+                "name": "removebolton",
+                "removebolton": true,
+                "time": -1,
+                "type": "ce_bolton"
+            },
+            "chain": {
+                "action": "idle",
+                "result": "power3_end"
+            },
+            "chain": {
+                "action": "samepowerhold",
+                "result": "power3_loop"
+            }
+        },
+        "Fightmove": {
+            "animenum": "ea_power3_end",
+            "combotextfinisher": "Bullet",
+            "combotextstarter": "Assassin's",
+            "is_power": true,
+            "lockangles": true,
+            "locktransitionangles": true,
+            "name": "power3_end",
+            "noautoaim": true,
+            "powerup_tag": "nickf_proj_power",
+            "priority": 5,
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p3_power",
+                "time": 0
+            },
+            "trigger": {
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "48 -6 56",
+                "attacktype": "projectile",
+                "beambolt": "fx04",
+                "beameffect": "char/fury/p3_power",
+                "damage": "%nickf_p3_dmg",
+                "damagescale": "none",
+                "damagetype": "dmg_physical",
+                "fxlevel": 1,
+                "hiteffect": "char/fury/p3_impact",
+                "knockback": 370,
+                "name": "beam",
+                "radius": 16,
+                "targetable": false,
+                "time": 0,
+                "victimeventtag": 1,
+                "Damagemod": {
+                    "name": "dmgmod_auto_knockback"
+                }
+            },
+            "trigger": {
+                "failtag": 3,
+                "is_stunned": true,
+                "name": "filter",
+                "passtag": 2,
+                "tag": 1
+            },
+            "trigger": {
+                "chance": 0.5,
+                "name": "otherevent",
+                "othertag": 5,
+                "tag": 2
+            },
+            "trigger": {
+                "chance": 0.25,
+                "name": "otherevent",
+                "othertag": 5,
+                "tag": 3
+            },
+            "trigger": {
+                "damage": 1,
+                "index": 2,
+                "name": "killme",
+                "tag": 5,
+                "time": -1,
+                "type": "ce_atk_self",
+                "damagemod": {
+                    "name": "dmgmod_kill"
+                }
+            },
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "critical": true,
+                "name": "removebolton",
+                "removebolton": true,
+                "time": 0.99,
+                "type": "ce_bolton"
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "aitype": "projectile",
+            "animenum": "ea_power4",
+            "combotextfinisher": "Shrapnel",
+            "combotextstarter": "Disintegration",
+            "icon": 3,
+            "is_power": true,
+            "lockangles": true,
+            "name": "power4",
+            "priority": 5,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p4",
+                "level": 1
+            },
+            "trigger": {
+                "name": "powerusage",
+                "powerusage": "%nickf_p4_pwr",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/fury/p4_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.22
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p4_charge",
+                "time": 0.49
+            },
+            "trigger": {
+                "actorbolt": "Bip01 R Hand",
+                "attack_bone_angles": "0 0 0",
+                "attack_bone_pos": "30 2 58",
+                "attacktype": "blast",
+                "damage": 0,
+                "damagetype": "dmg_fire",
+                "entity": "nickfury_p4_grenade",
+                "explodedamage": "%nickf_p4_dmg",
+                "explodedamagemod": "dmgmod_auto_knockback",
+                "explodedamagetype": "dmg_fire",
+                "exploderadius": 96,
+                "filename": "ents_nickfury",
+                "name": "projectile",
+                "speed": 350,
+                "time": 0.49
+            },
+            "chain": {
+                "action": "idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power6",
+            "icon": 5,
+            "is_power": true,
+            "lockangles": true,
+            "name": "power6",
+            "priority": 5,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p6",
+                "level": 1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p6_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "boltslot": "ebolton_weapon",
+                "model": "models/bolton/nickfury_motionsensor",
+                "name": "bolton",
+                "replacecurrent": true,
+                "time": 0
+            },
+            "trigger": {
+                "effect": "char/fury/p6_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.38
+            },
+            "trigger": {
+                "apply_ally": "all",
+                "class": "sense",
+                "enemy": true,
+                "life": "%nickf_p6_lif",
+                "name": "powerup",
+                "powerusage": "%nickf_p6_pwr",
+                "time": 0.38,
+                "affecter": {
+                    "affect_type": "scale",
+                    "attribute": "def_damage",
+                    "level": "%nickf_p6_dmg"
+                }
+            },
+            "trigger": {
+                "boltslot": "ebolton_weapon",
+                "critical": true,
+                "name": "removebolton",
+                "removebolton": true,
+                "time": 0.99,
+                "type": "ce_bolton"
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_power7",
+            "icon": 6,
+            "is_power": true,
+            "lockangles": true,
+            "name": "power7",
+            "priority": 5,
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p7",
+                "level": 1
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p7_charge",
+                "time": 0
+            },
+            "trigger": {
+                "add": "cloaked",
+                "name": "disappear",
+                "tag": 10,
+                "time": -1,
+                "type": "ce_renderfx"
+            },
+            "trigger": {
+                "name": "appear",
+                "remove": "cloaked",
+                "tag": 11,
+                "time": -1,
+                "type": "ce_renderfx"
+            },
+            "trigger": {
+                "bolt": "Bip01 R Hand",
+                "effect": "char/fury/p7_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.36
+            },
+            "trigger": {
+                "effect": "char/fury/p7_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.36
+            },
+            "trigger": {
+                "class": "callevents",
+                "life": "%nickf_p7_lif",
+                "name": "powerup",
+                "powerusage": "%nickf_p7_pwr",
+                "time": 0.45,
+                "Functionevent": {
+                    "function": "activate",
+                    "triggertag": 10
+                },
+                "Functionevent": {
+                    "function": "deactivate",
+                    "triggertag": 11
+                },
+                "affecter": {
+                    "attribute": "invisible"
+                },
+                "affecter": {
+                    "attribute": "critical",
+                    "level": "%nickf_p7_cri"
+                },
+                "special_fx": {
+                    "effect": "char/fury/p7_power",
+                    "fxlevel": 3,
+                    "how_used": "primary"
+                },
+                "special_fx": {
+                    "effect": "char/fury/p7_power",
+                    "fxlevel": 4,
+                    "how_used": "deactivation"
+                }
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        },
+        "FightMove": {
+            "animenum": "ea_idle1",
+            "blendtime": 0,
+            "handler": "ch_team_xtreme",
+            "icon": 7,
+            "is_power": true,
+            "lockangles": true,
+            "lockchaining": false,
+            "name": "team_xtreme",
+            "playspeed": 10,
+            "priority": "uninterruptable",
+            "require": {
+                "cat": "skill",
+                "item": "nickf_p8",
+                "level": 1
+            },
+            "require": {
+                "cat": "xtreme",
+                "level": 1
+            },
+            "trigger": {
+                "name": "xtreme_start",
+                "next_eventtag": 1,
+                "only_non_looped": true,
+                "team_xtreme": 11,
+                "time": 0
+            },
+            "trigger": {
+                "apply_ally": "all",
+                "apply_self": false,
+                "class": "remove_on_events",
+                "life": -1,
+                "name": "powerup",
+                "on_xtreme_end": true,
+                "tag": 1,
+                "time": -1,
+                "affecter": {
+                    "affect_type": "scale",
+                    "attribute": "atk_damage",
+                    "level": "%nickf_p8_dmgs"
+                }
+            },
+            "chain": {
+                "action": "idle",
+                "result": "team_xtreme"
+            },
+            "chain": {
+                "action": "special",
+                "result": "power8"
+            }
+        },
+        "event": {
+            "damage": "%nickf_p8_dmg",
+            "damagelevel": 2,
+            "damagetype": "dmg_fire",
+            "enemynumber": 0,
+            "fxlevel": 1,
+            "hiteffect": "char/fury/p8_impact",
+            "inherit": "blast",
+            "maxrange": 300,
+            "name": "airstrike",
+            "radius": 60,
+            "random": true
+        },
+        "FightMove": {
+            "animenum": "ea_power8",
+            "combotextfinisher": "Might",
+            "icon": 7,
+            "is_power": true,
+            "lockangles": true,
+            "lockspeed": true,
+            "name": "power8",
+            "playspeed": 10,
+            "priority": "uninterruptable",
+            "trigger": {
+                "always": true,
+                "name": "camera_override",
+                "time": 0
+            },
+            "trigger": {
+                "description": "Attack",
+                "name": "team_xtreme_msg",
+                "time": 0,
+                "title": "S.H.I.E.L.D. Strike"
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p8_charge",
+                "time": 0
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p8_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.19
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p8_power",
+                "fxlevel": 1,
+                "name": "effect",
+                "time": 0.29
+            },
+            "trigger": {
+                "name": "sound",
+                "sound": "char/fury_m/p8_power",
+                "time": 0.4
+            },
+            "trigger": {
+                "enemynumber": 0,
+                "name": "airstrike",
+                "time": 0.4
+            },
+            "trigger": {
+                "enemynumber": 1,
+                "name": "airstrike",
+                "time": 0.42
+            },
+            "trigger": {
+                "enemynumber": 2,
+                "name": "airstrike",
+                "time": 0.44
+            },
+            "trigger": {
+                "enemynumber": 3,
+                "name": "airstrike",
+                "time": 0.46
+            },
+            "trigger": {
+                "enemynumber": 4,
+                "name": "airstrike",
+                "time": 0.48
+            },
+            "trigger": {
+                "enemynumber": 5,
+                "name": "airstrike",
+                "time": 0.5
+            },
+            "trigger": {
+                "enemynumber": 6,
+                "name": "airstrike",
+                "time": 0.52
+            },
+            "trigger": {
+                "enemynumber": 7,
+                "name": "airstrike",
+                "time": 0.54
+            },
+            "trigger": {
+                "enemynumber": 8,
+                "name": "airstrike",
+                "time": 0.56
+            },
+            "trigger": {
+                "enemynumber": 9,
+                "name": "airstrike",
+                "time": 0.58
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p8_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.63
+            },
+            "trigger": {
+                "bolt": "Bip01 L Hand",
+                "effect": "char/fury/p8_power",
+                "fxlevel": 2,
+                "name": "effect",
+                "time": 0.77
+            },
+            "trigger": {
+                "critical": true,
+                "end": true,
+                "name": "xtreme_start",
+                "time": 0.93
+            },
+            "chain": {
+                "action": "Idle",
+                "result": "idle"
+            }
+        }
+    }
+}
