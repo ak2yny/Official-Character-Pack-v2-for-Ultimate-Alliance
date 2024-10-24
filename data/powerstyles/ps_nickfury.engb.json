@@ -837,17 +837,24 @@
                 "result": "power2_loop"
             }
         },
-        "FightMove": {
-            "animenum": "ea_idle1",
+        "Fightmove": {
+            "aitype": "projectile",
+            "always_target": true,
+            "animenum": "ea_power2",
+            "blendtime": 0.05,
             "combotextfinisher": "Precision",
             "combotextstarter": "Deadly",
+            "energypersecond": 1,
+            "handler": "ch_lock_strafe",
+            "icon": 1,
             "is_power": true,
-            "name": "power2_damage",
-            "require": {
-                "cat": "affecter",
-                "item": "special",
-                "level": 1
-            },
+            "lockangles": true,
+            "lockchaining": false,
+            "locktransitionangles": true,
+            "name": "power2_loop",
+            "noautoaim": true,
+            "powerup_tag": "nickf_proj_power",
+            "priority": 5,
             "trigger": {
                 "allow_non_actors": true,
                 "class": "harming",
@@ -892,43 +899,11 @@
                 "inherit": "beam",
                 "maxrange": 600,
                 "name": "p2_shot",
+                "victimeventtag": 1,
                 "damagemod": {
                     "name": "dmgmod_no_damage"
                 }
             },
-            "trigger": {
-                "name": "p2_shot",
-                "next_eventtag": 11,
-                "tag": 10,
-                "time": -1,
-                "victimeventtag": 1
-            },
-            "trigger": {
-                "name": "otherevent",
-                "othernode": "power2_loop",
-                "othertag": 12,
-                "tag": 11,
-                "time": -1
-            }
-        },
-        "Fightmove": {
-            "aitype": "projectile",
-            "always_target": true,
-            "animenum": "ea_power2",
-            "blendtime": 0.05,
-            "combotextfinisher": "Precision",
-            "combotextstarter": "Deadly",
-            "energypersecond": 1,
-            "handler": "ch_lock_strafe",
-            "icon": 1,
-            "is_power": true,
-            "lockangles": true,
-            "lockchaining": false,
-            "locktransitionangles": true,
-            "name": "power2_loop",
-            "noautoaim": true,
-            "powerup_tag": "nickf_proj_power",
-            "priority": 5,
             "trigger": {
                 "loop_timeout": 3,
                 "loop_type": "start",
@@ -937,35 +912,24 @@
                 "time": 0.13
             },
             "trigger": {
-                "class": "callevents",
-                "life": -1,
-                "name": "powerup",
-                "no_stack": true,
-                "remove_on_node_end": true,
-                "time": 0.13,
-                "FunctionEvent": {
-                    "function": "activate",
-                    "triggertag": 13
-                },
-                "affecter": {
-                    "attribute": "special",
-                    "level": 1
-                }
+                "name": "p2_shot",
+                "time": 0.13
             },
             "trigger": {
-                "delay": 0.133,
-                "event": 13,
-                "name": "rate_of_fire",
-                "tag": 12,
-                "time": -1,
-                "type": "ce_schedule_event"
+                "name": "p2_shot",
+                "time": 0.31
             },
             "trigger": {
-                "name": "otherevent",
-                "othernode": "power2_damage",
-                "othertag": 10,
-                "tag": 13,
-                "time": -1
+                "name": "p2_shot",
+                "time": 0.56
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "time": 0.63
+            },
+            "trigger": {
+                "name": "p2_shot",
+                "time": 0.81
             },
             "chain": {
                 "action": "idle",
