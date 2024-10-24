@@ -1333,19 +1333,39 @@
                 "time": 0
             },
             "trigger": {
-                "name": "powerusage",
+                "class": "callevents",
+                "life": -1,
+                "name": "powerup",
                 "powerusage": "%devil_p2_pwr",
-                "time": 0
+                "remove_on_node_end": true,
+                "tag_name": "baton_grapple_link",
+                "time": 0,
+                "FunctionEvent": {
+                    "function": "activate",
+                    "triggertag": 20
+                },
+                "FunctionEvent": {
+                    "function": "deactivate",
+                    "triggertag": 21
+                }
             },
             "trigger": {
                 "name": "baton_to_hand",
-                "time": 0
+                "tag": 20,
+                "time": -1
+            },
+            "trigger": {
+                "name": "baton_to_leg",
+                "next_eventtag": 22,
+                "tag": 21,
+                "time": -1
             },
             "trigger": {
                 "bolt": "Bip01 R Hand",
                 "effect": "char/ddevil/p2_power",
                 "fxlevel": 4,
-                "name": "effect",
+                "name": "effect_sound",
+                "sound": "char/ddevil_m/p3_power",
                 "time": 0.74
             },
             "trigger": {
@@ -1353,6 +1373,7 @@
                 "interactionend": true,
                 "name": "victim_release",
                 "ownertime": 0,
+                "tag": 22,
                 "time": 0
             },
             "trigger": {
@@ -1372,11 +1393,6 @@
                 "tag": 10,
                 "time": -1,
                 "victimface": "away"
-            },
-            "trigger": {
-                "name": "sound",
-                "sound": "char/ddevil_m/p3_power",
-                "time": 0.76
             },
             "trigger": {
                 "fail_node": "power2_fail",
@@ -1461,18 +1477,6 @@
                     "never_cycle": true
                 }
             },
-            "trigger": {
-                "critical": true,
-                "interactionend": true,
-                "name": "victim_release",
-                "ownertime": 0,
-                "time": -1
-            },
-            "trigger": {
-                "critical": true,
-                "name": "baton_to_leg",
-                "time": -1
-            },
             "chain": {
                 "action": "Idle",
                 "result": "power2_loop"
@@ -1496,7 +1500,7 @@
                 "time": 0
             },
             "trigger": {
-                "fail_node": "null",
+                "fail_node": "power2_pullenemyin",
                 "failtag": 20,
                 "name": "verify_victim_alive",
                 "time": 0
@@ -1519,12 +1523,11 @@
                 "fail_node": "null",
                 "name": "verify_victim_alive",
                 "passtag": 1,
-                "time": 0
+                "time": -1
             },
             "trigger": {
                 "name": "charsound",
                 "next_eventtag": 2,
-                "only_non_looped": true,
                 "play_sound_on_victim": true,
                 "sound": "snd_pain",
                 "tag": 1,
@@ -1539,18 +1542,6 @@
                 "throwdirection": "TowardAttacker",
                 "thrownode": "thrownbackloop",
                 "throwspeed": 100,
-                "time": -1
-            },
-            "trigger": {
-                "critical": true,
-                "interactionend": true,
-                "name": "victim_release",
-                "ownertime": 0,
-                "time": -1
-            },
-            "trigger": {
-                "critical": true,
-                "name": "baton_to_leg",
                 "time": -1
             },
             "chain": {
@@ -1631,15 +1622,10 @@
                 "time": 0.5
             },
             "trigger": {
-                "critical": "on_exit",
-                "name": "baton_to_leg",
-                "time": 0.99
-            },
-            "trigger": {
                 "critical": true,
-                "interactionend": true,
-                "name": "victim_release",
-                "time": -1
+                "name": "powerup",
+                "remove_tag": "baton_grapple_link",
+                "time": 0.98
             },
             "chain": {
                 "action": "idle",
@@ -1657,10 +1643,6 @@
             "name": "power2_fail",
             "noautoaim": true,
             "powerup_tag": "ddevil_p2",
-            "trigger": {
-                "name": "baton_to_hand",
-                "time": 0
-            },
             "trigger": {
                 "actorbolt": "fx02",
                 "attack_bone_angles": "0 0 0",
@@ -1692,11 +1674,6 @@
                     "fxlevel": 1,
                     "how_used": "primary"
                 }
-            },
-            "trigger": {
-                "critical": "on_exit",
-                "name": "baton_to_leg",
-                "time": 0.99
             },
             "chain": {
                 "action": "Idle",
