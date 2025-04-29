@@ -1,0 +1,27 @@
+<PowerStyle>
+    <FightMove aireusetime="6" aitype="melee" animenum="ea_power1" lockangles="true" name="power_attack" priority="5">
+        <trigger name="sound" sound="char/greyg_m/p1_impact" time="-1" />
+        <trigger name="sound" sound="char/greyg_m/p1_explode" time="-1" />
+        <trigger name="sound" sound="char/greyg_m/p1_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/greyg/p1_power" fxlevel="1" name="effect" time="0" />
+        <trigger arc="60" attacktype="punch" damage="%mdmg_high" damagescale="difficulty" maxrange="40" name="punch" time="0.53" victimeventtag="20" />
+        <trigger class="freeze" die_on_critical="false" life="5" name="powerup" no_shatter_on_damage="true" sound1="char/greyg_m/p1_impact" sound2="char/greyg_m/p1_explode" tag="20" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/greyg/p1_power" fxlevel="2" how_used="activation" never_cycle="true" />
+            <special_fx effect="char/greyg/p1_power" fxlevel="4" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/greyg/p1_power" fxlevel="3" how_used="custom" never_cycle="true" tag="1" />
+        </trigger>
+        <trigger critical="true" name="victim_release" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4.5" aitype="aoe" animenum="ea_power2" lockangles="true" name="power_smash" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/greyg_m/p2_charge" time="0" />
+        <trigger effect="char/greyg/p2_power" fxlevel="1" name="effect" time="0.23" />
+        <trigger bolt="Bip01 R Hand" effect="char/greyg/p2_power" fxlevel="2" name="effect" time="0.45" />
+        <trigger arc="180" attacktype="punch" damage="%mdmg_high" damagescale="difficulty" knockback="370" maxrange="95" name="punch" time="0.53" verticalrange="200">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger effect="char/greyg/p2_power" fxlevel="3" name="effect_sound" sound="char/greyg_m/p2_power" time="0.53" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

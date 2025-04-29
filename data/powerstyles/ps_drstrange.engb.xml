@@ -1,0 +1,416 @@
+<PowerStyle iconfile="textures/ui/drstr_icons.png">
+    <event actorbolt="Bip01 L Hand" attacktype="projectile" count="1" damage="%drstr_p1_dmg" damagescale="none" entity="MysticBolt" filename="ents_drstr" fulltargeting="true" inherit="projectile" maxrange="500" name="MysticBolt" speed="1000" targetable="true" />
+    <event arc="180" attacktype="blast" damagescale="difficulty" inherit="punch" name="p_radius" />
+    <event inherit="p_radius" name="p_radius_kb">
+        <damageMod name="dmgmod_auto_knockback" />
+    </event>
+    <event damagescale="none" name="MarkStartPosForTeleport" type="ce_atk_teleport_mark_start" />
+    <event name="SetVisible" teleportation_caused="true" type="ce_force_visibility" />
+    <FightMove airbornemovement="true" animenum="ea_fly_idle" energypersecond="%flight_pwr" fallback="jumploop" handler="ch_flying" lockchaining="false" name="flying" noncombat="true" powerup_tag="flying">
+        <require cat="skill" item="flight" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/drstr/ability_fly" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/drstr/ability_fly" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/drstr/ability_fly" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="flying" />
+        <chain action="attack" result="flymelee1" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.58">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" time="0.2" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.29" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.25" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" time="0.21" />
+        <trigger name="punch" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" name="attacklight3">
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.25" />
+        <trigger bolt="Bip01 L Hand" life="0.2" name="trail" time="0.25" />
+        <trigger name="punch" time="0.41" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.714">
+        <trigger name="whoosh_heavy" time="0.29" />
+        <trigger bolt="Bip01 R Hand" life="0.175" name="trail" time="0.3" />
+        <trigger knockback="0" name="kick_heavy" time="0.42" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" lockangles="true" name="attackstun_finish">
+        <trigger name="whoosh_heavy" time="0.22" />
+        <trigger bolt="Bip01 R Hand" life="0.175" name="trail" time="0.25" />
+        <trigger knockback="0" name="kick_heavy" time="0.33">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.76">
+        <trigger name="whoosh_heavy" time="0.24" />
+        <trigger movement="20" name="slide" time="0.29" />
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.25" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.32">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" lockangles="true" name="attacktrip2">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="whoosh_light" time="0.14" />
+        <trigger arc="67" height="-10" name="sweep" time="0.29" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.05" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.4">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.14" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.14" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.14" />
+        <trigger movement="12" name="slide" targetdistance="50" time="0.14" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.28" />
+        <trigger damage="3 4" knockback="190" maxrange="84" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" maxrange="72" name="kick" tag="11" time="-1" />
+        <trigger bolt="Bip01 L Hand" life="0.43" name="trail" time="0.07" />
+        <trigger bolt="Bip01 R Hand" life="0.43" name="trail" time="0.07" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.28" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_walk1" handler="ch_move" lockchaining="false" name="walk" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="blocking" result="blocking" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_run1" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_sprint1" handler="ch_move" lockchaining="false" name="sprint" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.99">
+        <trigger name="stop" time="0" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_dr_strange_victim" name="victim" nodename="grabsmashvictim_start" targetdistance="22" time="0" victimface="true" />
+        <trigger interaction="data/fightstyles/interact_dr_strange_victim" name="victim" nodename="grabsmashvictim_loop_move" time="0.83" />
+        <trigger critical="true" name="victim_release" ownertime="0.1" time="0.83" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1" icon="0" is_power="true" name="power1" noautoaim="true" powerup_tag="DrS_MagicAttack" priority="5">
+        <require cat="skill" item="drstr_p1" level="1" />
+        <trigger name="powerusage" powerusage="%drstr_p1_pwr" time="-1" />
+        <chain action="Idle" result="power1_looping" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_loop" combotextfinisher="Missile" combotextstarter="Mystic" icon="0" is_power="true" name="power1_looping" noautoaim="true" powerup_tag="DrS_MagicAttack" priority="5" startchaintime="0.99">
+        <trigger name="powerusage" powerusage="%drstr_p1_pwr" time="0" />
+        <trigger button="samepowerclick" name="hint" time="0.231" type="ce_power_button_hint" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="19 -13 52" name="MysticBolt" time="0.25" />
+        <trigger name="sound" sound="char/drstr_m/p1_fire" time="0.25" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="28 2 37" name="MysticBolt" time="0.88" />
+        <trigger name="sound" sound="char/drstr_m/p1_fire" time="0.88" />
+        <chain action="Idle" result="power1_end" />
+        <chain action="samepowerclick" result="power1_looping" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_end" icon="0" is_power="true" name="power1_end" noautoaim="true" powerup_tag="DrS_MagicAttack" priority="5">
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power2" combotextfinisher="Blaze" combotextstarter="Arcane" endchaintime="0.75" handler="ch_repeat_attack" icon="1" is_power="true" lockangles="true" lockchaining="true" lockspeed="true" name="power2" playspeed="1" priority="5" startchaintime="0.231" storepowerbuttons="true">
+        <require cat="skill" item="drstr_p2" level="1" />
+        <trigger damage="%drstr_p2_dmg2" damagescale="none" index="2" maxrange="120" name="p_radius" tag="100" time="-1" />
+        <trigger beambolt="Bip01 Spine2" beambolt2="Bip01 Spine2" beameffect="char/drstr/p2_beam" class="absorb" damagepercent="%drstr_p2_vamp_perc" energy="false" inflicted="true" life="-1" name="powerup" remove_on_node_end="true" sponsor="true" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p2_power" fxlevel="1" name="effect_sound" sound="char/drstr_m/p2_start" time="0.062" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p2_power" fxlevel="1" name="effect" time="0.062" />
+        <trigger button="samepowerclick" name="hint" time="0.231" type="ce_power_button_hint" />
+        <trigger effect="char/drstr/p2_power" fxlevel="2" name="effect" time="0.231" />
+        <trigger damage="%drstr_p2_dmg" damagescale="none" index="1" maxrange="120" name="p_radius" powerusage="%drstr_p2_pwr" time="0.231" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power3" combotextfinisher="Sorcery" combotextstarter="Stygian" icon="2" is_power="true" lockangles="true" name="power3" powerup_tag="DrS_MagicAttack" priority="5">
+        <require cat="skill" item="drstr_p3" level="1" />
+        <trigger name="powerusage" powerusage="%drstr_p3_pwr" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p3_power" fxlevel="2" name="effect_sound" sound="char/drstr_m/p3_charge" time="0.091" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p3_power" fxlevel="3" name="effect" time="0.303" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="28 0 48" attacktype="projectile" count="1" damage="%drstr_p3_dmg" damagescale="none" damagetype="dmg_energy" entity="switch_p3_proj" filename="ents_drstr" fulltargeting="true" index="0" name="projectile" powerusage="0" speed="500" targetable="true" time="0.545" victimeventtag1="99" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="100" tag="99" time="-1" />
+        <trigger chance="%drstr_p3_chance" name="otherevent" othertag="200" tag="100" time="-1" />
+        <trigger fail_tag="101" instantkillonly="true" name="remove" nosponsor="false" success_tag="201" tag="200" time="-1" />
+        <trigger entity="switch_p5_crate" filename="ents_drstr" name="spawn" offset="0 0 20" tag="201" time="-1" />
+        <trigger damage="%drstr_p3_dmg" damagescale="none" damagetype="dmg_energy" index="1" name="selfattack" tag="101" time="-1" type="ce_atk_self" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="aoe" animenum="ea_power4" combotextfinisher="Swipe" combotextstarter="Cerebral" icon="3" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="drstr_p4" level="1" />
+        <trigger name="powerusage" powerusage="%drstr_p4_pwr" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/drstr/p4_power" fxlevel="1" name="effect_sound" sound="char/drstr_m/p4_power" time="0.111" />
+        <trigger effect="char/drstr/p4_power" fxlevel="2" name="effect" time="0.444" />
+        <trigger damage="%drstr_p4_dmg" damagescale="none" maxrange="200" name="p_radius" time="0.444" victimeventtag="1" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger life="%drstr_p4_dur" name="powerup" tag="2" time="-1">
+            <affecter attribute="team_switch" level="1" />
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectilenear" animenum="ea_power5" combotextfinisher="Enchantment" combotextstarter="Agamotto's" handler="ch_telekinesis" icon="4" is_power="true" lockangles="true" lockchaining="true" name="power5" powerup_tag="drstr_power5" priority="5" startchaintime="0.5">
+        <require cat="skill" item="drstr_p5" level="1" />
+        <trigger name="powerusage" powerusage="%drstr_p5_power" time="0" />
+        <trigger attacktype="psionic" damage="0" damagelevel="1" damagescale="none" damagetype="dmg_energy" maxrange="300" name="telekinesis_dmg" tag="2" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_environment" />
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p5_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p5_power" fxlevel="1" name="effect" time="0" />
+        <trigger life="-1" name="powerup" tag_name="drstr_p5_link" time="0">
+            <special_fx effect="char/drstr/p5_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p5_victim" fxlevel="1" name="effect" tag="100" time="-1" />
+        <trigger damage="%drstr_p5_dm1" damagescale="none" damagetype="dmg_physical" heaviness="%drstr_p5_hvy" impactdamage="%drstr_p5_dm2" name="suspend" tag="1" time="-1" tklevel="11" />
+        <chain action="special" result="power5_hold" />
+        <chain action="idle" result="power5_release" />
+    </FightMove>
+    <FightMove animenum="ea_power5" energypersecond="%drstr_p5_pps" handler="ch_telekinesis" icon="4" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power5_hold" priority="5" startchaintime="1">
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p5_victim" fxlevel="1" name="effect" tag="100" time="-1" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/drstr_m/p5_loop" time="0" />
+        <trigger critical="on_interrupt" loop_type="stop" name="sound" sound="char/drstr_m/p5_loop" time="-1" />
+        <chain action="special" result="power5_hold" />
+        <chain action="idle" result="power5_release" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" icon="4" is_power="true" lockangles="true" name="power5_release" priority="uninterruptable">
+        <trigger critical="true" name="powerup" remove_tag="drstr_p5_link" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/drstr_m/p5_loop" time="0" />
+        <trigger effect="char/drstr/p5_power" fxlevel="3" name="effect_sound" sound="char/drstr_m/p5_throw" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p5_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p5_power" fxlevel="1" name="effect" time="0" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="drstr_p6" level="1" />
+        <trigger name="sound" sound="char/drstr_m/p6_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p6_power" fxlevel="1" name="effect" time="0.056" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p6_power" fxlevel="1" name="effect" time="0.056" />
+        <trigger effect="char/drstr/p6_power" fxlevel="2" name="effect" time="0.306" />
+        <trigger effect="char/drstr/p6_power" fxlevel="3" name="effect" time="0.638" />
+        <trigger beambolt="Bip01 L Hand" beambolt2="Bip01 Spine2" beameffect="char/drstr/p6_beam" healthpct="%drstr_p6_hlth_los" maxrange="600" name="remove_powerups" powerup_team="other" time="0.638" />
+        <trigger apply_ally="all" life="%drstr_p6_life" name="powerup" time="0.638">
+            <special_fx effect="char/drstr/p6_aura" fxlevel="1" how_used="primary" />
+            <affecter attribute="health_regen_pct" level="%drstr_p6_regen" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="rangednolos" animenum="ea_power7" combotextfinisher="Emanation" combotextstarter="Eldritch" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="drstr_p7" level="1" />
+        <trigger name="sound" sound="char/drstr_m/p7_power" time="0" />
+        <trigger name="powerusage" powerusage="%drstr_p7_pwr" time="0" />
+        <trigger effect="char/drstr/p7_power" fxlevel="1" name="effect" time="0.125" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p7_power" fxlevel="2" name="effect" time="0.125" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p7_power" fxlevel="2" name="effect" time="0.125" />
+        <trigger effect="char/drstr/p7_power" fxlevel="3" name="effect" time="0.563" />
+        <trigger actorbolt="Bip01 Head" attack_bone_angles="0 0 0" attack_bone_pos="21 0 52" attackdistance="5" attackrate="1" canmove="true" count="1" damage="%drstr_p7_dam" damagescale="none" damagetype="dmg_telekinesis" enemysearchdistance="360" entity="pixies" filename="ents_drstr" firesprojectiles="false" followowner="true" health="100" leashinnerdistance="24" leashouterdistance="60" life="%drstr_p7_life" maxinstances="1" movespeed="900" name="Pixies" orbitaxis="0 0 1" orbitaxisoffset="0 0 0" orbitowner="true" orbitrampuptime="1.3" orbitspeed="250" powerusage="0" time="0.7" type="ce_atk_spawn_sentry" updaterate="100" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="drstr_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="9" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Maelstrom" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power9" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Special" name="team_xtreme_msg" time="0" title="Mystic Maelstrom" />
+        <trigger name="sound" sound="char/drstr_m/p9_charge" time="0" />
+        <trigger life="-1" name="slower" speed="0.5" time="0" type="ce_game_speed" />
+        <trigger bolt="Bip01 L Hand" effect="char/drstr/p9_power" fxlevel="1" name="effect" time="0.067" />
+        <trigger bolt="Bip01 R Hand" effect="char/drstr/p9_power" fxlevel="1" name="effect" time="0.067" />
+        <trigger effect="char/drstr/p9_power" fxlevel="2" name="effect" time="0.367" />
+        <trigger effect="char/drstr/p9_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger damage="0" index="1" maxrange="600" name="p_radius" time="0.5" victimeventtag="1">
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger name="sound" sound="char/drstr_m/p9_power" time="0.5" />
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger failtag="3" is_stunned="true" name="filter" passtag="20" tag="2" time="-1" />
+        <trigger failtag="4" is_frozen="true" name="filter" passtag="20" tag="3" time="-1" />
+        <trigger failtag="5" is_slowed="true" name="filter" passtag="20" tag="4" time="-1" />
+        <trigger chance="%drstr_p9_chance" failtag="5" name="otherevent" othertag="21" tag="20" time="-1" />
+        <trigger instantkillonly="true" name="remove" nosponsor="false" success_tag="22" tag="21" time="-1" />
+        <trigger item="xtreme_pip" name="spawn_item" offset="0 0 20" tag="22" time="-1" />
+        <trigger damage="%drstr_p9_dmg" damagescale="none" damagetype="dmg_mental" name="self_attack" tag="5" time="-1" type="ce_atk_self" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.65" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power11" handler="ch_nightcrawlerdecide" icon="9" is_power="true" name="TeleportBegin" noautoaim="true" noflying="true" priority="5" startchaintime="0.99" turnrate="0.5">
+        <require cat="skill" item="drstr_teleport" level="1" />
+        <trigger name="powerusage" powerusage="%drstr_p10_pwr" time="-1" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="special" result="teleport_ally_begin" />
+        <chain action="special2" result="teleport_myself_only" />
+    </FightMove>
+    <FightMove animenum="ea_power11" handler="ch_tele_jump" is_power="true" name="teleport_myself_only" noautoaim="true" noflying="true" priority="5" startchaintime="0.95">
+        <trigger critical="true" name="powerusage" powerusage="%drstr_p10_pwr" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p10_power" fxlevel="1" name="effect_sound" sound="char/drstr_m/p10_power" time="0" />
+        <trigger name="sound" sound="char/drstr_m/p10_teleport_out" time="0.94" />
+        <trigger maxrange="%drstr_p10_rng" name="MarkStartPosForTeleport" time="0.94" />
+        <chain action="Idle" result="teleport_myself_end" />
+    </FightMove>
+    <FightMove animenum="ea_power12" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="teleport_myself_end" noautoaim="true" noflying="true" priority="5" startchaintime="0.55">
+        <trigger maxrange="%drstr_tele_rng" name="teleport" powerusage="0" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p10_power" fxlevel="2" name="effect" time="0" />
+        <trigger cleardata="true" name="MarkStartPosForTeleport" time="0.1" />
+        <trigger name="sound" sound="char/drstr_m/p10_teleport_in" time="0.1" />
+        <trigger damage="%drstr_p10_dmg" damagescale="none" inherit="radial" maxrange="65" name="tele_attk" time="0.1" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+    </FightMove>
+    <FightMove animenum="ea_power13" handler="ch_tele_jump" is_power="true" lockangles="true" locktransitionangles="true" name="teleport_ally_begin" noautoaim="true" noflying="true" startchaintime="0.95">
+        <trigger critical="true" name="powerusage" powerusage="%drstr_p10_pwr" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p10_power" fxlevel="1" name="effect_sound" sound="char/drstr_m/p10_power" time="0" />
+        <trigger bolt="Bip01 Pelvis" boltent="victim" effect="char/drstr/p10_power" fxlevel="1" name="effect" time="0" />
+        <trigger attackerface="true" name="victim" nodename="victim_teleport_node" targetdistance="30" time="0.94" usesponsornode="true" victimface="true" />
+        <trigger maxrange="%drstr_p10_rng" name="MarkStartPosForTeleport" nofailifnotarget="true" teleportwithvictim="true" time="0.94" />
+        <trigger name="sound" sound="char/drstr_m/p10_teleport_out" time="0.94" />
+        <chain action="idle" result="teleport_ally_end" />
+    </FightMove>
+    <FightMove animenum="ea_grab_break" handler="ch_grab_victim" is_power="true" lockangles="true" lockspeed="true" name="victim_teleport_node" noflying="true" priority="uninterruptable" startchaintime="0.99">
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power12" endchaintime="0.95" handler="ch_move_tele_land" is_power="true" lockangles="true" name="teleport_ally_end" noautoaim="true" noflying="true" priority="5" startchaintime="0.9">
+        <trigger maxrange="%drstr_p10_rng" name="teleport" nofailifnotarget="true" powerusage="0" teleportwithvictim="true" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/drstr/p10_power" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 Pelvis" boltent="victim" effect="char/drstr/p10_power" fxlevel="2" name="effect" time="0" />
+        <trigger name="sound" sound="char/drstr_m/p10_teleport_in" time="0.94" />
+        <trigger life="0.01" movement="-60" name="slide" time="0.1" />
+        <trigger damage="%drstr_p10_dmg" damagescale="none" inherit="radial" maxrange="65" name="tele_attk" time="0.1" />
+        <trigger name="victim_release" time="0.1" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

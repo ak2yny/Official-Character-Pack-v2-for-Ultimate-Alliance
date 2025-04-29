@@ -1,0 +1,431 @@
+<PowerStyle iconfile="textures/ui/daredevil_icons.png">
+    <event inherit="skinsegment" name="baton_to_hand" show="true" show2="false" skinsegment="baton_hand_segment" skinsegment2="batons_segment" />
+    <event inherit="skinsegment" name="baton_to_leg" show="false" show2="true" skinsegment="baton_hand_segment" skinsegment2="batons_segment" />
+    <event inherit="skinsegment" name="billy_club" show="false" skinsegment="batons_segment" />
+    <event actorskin="0250" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0201" type="ce_bolton" />
+    <event actorskin="0251" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0202" type="ce_bolton" />
+    <event actorskin="0252" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0203" type="ce_bolton" />
+    <event actorskin="0253" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0204" type="ce_bolton" />
+    <event actorskin="0254" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0205" type="ce_bolton" />
+    <event actorskin="0255" anim_set="02_Daredevil_batons" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" inherit="bolton" name="baton_bolton" replacecurrent="true" skin_filter="0206" type="ce_bolton" />
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger critical="on_exit" name="baton_to_leg" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0.05" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.545">
+        <trigger name="baton_to_hand" time="0.09" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="whoosh_light" time="0.22" />
+        <trigger effect="char/ddevil/attack_light" fxlevel="1" name="effect" time="0.22" />
+        <trigger name="punch" time="0.36" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.81" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.1" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.545">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger name="whoosh_light" time="0.25" />
+        <trigger effect="char/ddevil/attack_light" fxlevel="2" name="effect" time="0.25" />
+        <trigger name="punch" time="0.36" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.72" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.1" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger effect="char/ddevil/attack_light" fxlevel="3" name="effect" time="0.28" />
+        <trigger name="whoosh_light" time="0.28" />
+        <trigger name="punch" time="0.36" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.6">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger name="baton_to_hand" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="whoosh_heavy" time="0.31" />
+        <trigger effect="char/ddevil/attack_finisher" fxlevel="3" name="effect" time="0.31" />
+        <trigger name="backhand1" time="0.4" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="whoosh_heavy" time="0.33" />
+        <trigger effect="char/ddevil/attack_finisher" fxlevel="1" name="effect" time="0.33" />
+        <trigger effect="char/ddevil/attack_finisher" fxlevel="2" name="effect" time="0.33" />
+        <trigger knockback="0" maxrange="56" name="punch_heavy" time="0.4">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <trigger critical="on_exit" name="baton_to_leg" time="0.8" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" endchaintime="1" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.75">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger name="whoosh_heavy" time="0.27" />
+        <trigger effect="char/ddevil/attack_finisher" fxlevel="4" name="effect" time="0.27" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger critical="on_exit" name="baton_to_leg" time="0.85" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacktrip2">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="whoosh_light" time="0.13" />
+        <trigger movement="10" name="slide" time="0.06" />
+        <trigger bolt="Bip01 R Toe0" effect="char/ddevil/attack_finisher" fxlevel="5" name="effect" time="0.13" />
+        <trigger angle="-30" height="-10" index="1" name="sweep" time="0.28" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.3" />
+        <trigger angle="30" height="-10" index="1" name="sweep" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger critical="true" name="baton_to_leg" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" blendtime="0" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger critical="true" name="baton_to_leg" time="-1" />
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <trigger min_charge="1" name="filter" only_non_looped="true" passtag="20" time="0.14" />
+        <trigger life="0.25" name="slide" tag="20" targetdistance="96" targetradius="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger movement="30" name="slide" targetdistance="55" time="0.07" />
+        <trigger critical="true" effect="char/ddevil/attack_light" fxlevel="1" loop_type="stop" name="effect_sound" sound="common/melee/kb_charge_loop" time="0.15" />
+        <trigger critical="true" effect="char/ddevil/attack_light" fxlevel="2" loop_type="stop" name="effect_sound" sound="common/melee/kb_charge" time="0.15" />
+        <trigger bolt="fx02" effect="char/ddevil/attack_light" fxlevel="2" name="effect_sound" sound="common/melee/dmg_knockback" time="0.15" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.27" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.73" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_daredevil_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger name="sound" sound="char/ddevil_m/p10_power" time="0" />
+        <trigger execute_against="victim" name="otherevent" othertag="100" time="0.64" />
+        <trigger damage="4 5" damagescale="normal" name="selfattack" tag="100" time="-1" type="ce_atk_self" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="0.8" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_jumpslamloop" handler="ch_jump_smash" name="jumpsmash" playspeed="1" startchaintime="0.4" turnrate="0.5">
+        <trigger name="baton_to_hand" time="0" />
+        <trigger life="0.3" name="slide" targetdistance="75" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="fx02" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/js_charge_loop" tag="100" time="-1" />
+        <trigger bolt="fx01" effect="base/hit/hit_jumpsmash_charge" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="jumpsmash_link" time="0">
+            <special_fx bolt="fx02" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="fx01" effect="base/hit/hit_jumpsmash_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="baton_to_leg" time="-1" />
+        <chain action="idle" result="jumpsmash_release" />
+        <chain action="special" result="jumpsmash_release2" />
+    </FightMove>
+    <FightMove animenum="ea_power11" fallback="jumpsmash_release" lockangles="true" name="jumpsmash_release" playspeed="1" startchaintime="0.8">
+        <event damage="1 2" damagescale="normal" inherit="radial" knockback="190" maxrange="35" name="smash_attack">
+            <damagemod name="dmgmod_trip" />
+        </event>
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge_loop" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/js_charge" time="0" />
+        <trigger fx_chargeable="true" height="-36" name="smash_attack" remove_on_node_end="true" tag="10" time="0.1">
+            <special_fx bolt="fx02" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger fx_chargeable="true" name="smash_attack" remove_on_node_end="true" tag="11" time="0.26">
+            <special_fx bolt="fx01" effect="base/hit/hit_jumpsmash" fxlevel="1" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="jumpsmash_link" time="0" />
+        <trigger bolt="fx02" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger bolt="fx01" life="0.2" name="trail" offsetend="8" time="0.37" width="8" />
+        <trigger critical="on_exit" name="baton_to_leg" time="0.99" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove fallback="jumpsmash_release2" inherit="jumpsmash_release" name="jumpsmash_release2">
+        <trigger tag="10">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger maxrange="60" tag="11" />
+        <trigger effect="base/hit/hit_jumpsmash" name="effect" time="0.16" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power1" icon="0" is_power="true" name="power1" playspeed="1" powerup_tag="ddevil_p1" priority="5" startchaintime="0.4">
+        <require cat="skill" item="devil_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/ddevil_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ddevil/p1_charge" fxlevel="2" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p1_charge" fxlevel="2" name="effect" tag="101" time="-1" />
+        <trigger name="sound" sound="char/ddevil_m/p1_power" time="0" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" powerusage="%devil_p1_pwr" remove_on_node_end="true" tag_name="ddevil_p1_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/ddevil/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/ddevil/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger name="baton_to_hand" time="0.37" />
+        <trigger critical="true" name="baton_to_leg" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_charged" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" icon="1" is_power="true" lockchaining="false" name="power1_charged" powerup_tag="ddevil_p1" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="baton_to_leg" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_charged" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Bash" combotextstarter="Devil's" icon="1" is_power="true" name="power1_release" powerup_tag="ddevil_p1" priority="5">
+        <trigger min_charge="1" name="charge_stun" passtag="16" tag="15" time="-1" type="ce_filter_event" />
+        <trigger life="%devil_p1_stn" name="powerup" shared_tag="shared_stunned" tag="16" time="-1" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/ddevil_m/p1_release" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ddevil_m/p1_charge" time="0" />
+        <trigger arc="90" damage="%devil_p1_dmg" damagescale="none" name="radial" time="0.35" victimeventtag="15" />
+        <trigger effect="char/ddevil/p1_release" fxlevel="1" name="effect" time="0.35" />
+        <trigger critical="true" name="powerup" remove_tag="ddevil_p1_link" time="0.35" />
+        <trigger critical="true" name="baton_to_leg" time="0.8" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="beam" animenum="ea_power2" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2" powerup_tag="ddevil_p2" priority="5" startchaintime="0.99">
+        <require cat="skill" item="devil_p2" level="1" />
+        <trigger name="stop" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger class="callevents" life="-1" name="powerup" powerusage="%devil_p2_pwr" remove_on_node_end="true" tag_name="baton_grapple_link" time="0">
+            <FunctionEvent function="activate" triggertag="20" />
+            <FunctionEvent function="deactivate" triggertag="21" />
+        </trigger>
+        <trigger name="baton_to_hand" tag="20" time="-1" />
+        <trigger name="baton_to_leg" next_eventtag="22" tag="21" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p2_power" fxlevel="4" name="effect_sound" sound="char/ddevil_m/p3_power" time="0.74" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" tag="22" time="0" />
+        <trigger maxrange="400" mustbeactor="false" mustbegrabbable="true" mustbeonscreen="false" name="victim_set" searchangle="30" selfeventtag="10" time="0" />
+        <trigger attackerface="true" doslidemove="true" name="victim" tag="10" time="-1" victimface="away" />
+        <trigger fail_node="power2_fail" name="verify_victim_alive" passtag="1" time="0.97" />
+        <trigger life="-1" name="powerup" next_eventtag="2" remove_on_node_end="true" tag="1" tag_name="devil_p2_link" time="-1">
+            <special_fx bolt="fx02" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/ddevil/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger interaction="data/fightstyles/interact_daredevil_victim" name="victim" next_eventtag="3" nodename="held_in_place_victim" tag="2" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" next_eventtag="4" sound="char/ddevil_m/p2_charge" tag="3" time="-1" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" next_eventtag="5" tag="4" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p2_power" fxlevel="3" loop_type="stop" name="effect_sound" next_eventtag="101" sound="char/ddevil_m/p2_charge" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="5" tag_name="devil_p2_link2" time="-1">
+            <special_fx bolt="Bip01 R Hand" effect="char/ddevil/p2_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" blendtime="0" combotextfinisher="Strike" combotextstarter="Daring" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="ddevil_p2">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger fail_node="power2_pullenemyin" failtag="20" name="verify_victim_alive" time="0" />
+        <trigger name="powerup" next_eventtag="21" remove_tag="devil_p2_link" tag="20" time="-1" />
+        <trigger interactionend="true" name="victim_release" tag="21" time="-1" />
+        <trigger critical="on_interrupt" fail_node="null" name="verify_victim_alive" passtag="1" time="-1" />
+        <trigger name="charsound" next_eventtag="2" play_sound_on_victim="true" sound="snd_pain" tag="1" time="-1" />
+        <trigger damagescale="none" facethrowdir="false" impactdamage="%devil_p2_dmg" name="throw" tag="2" throwdirection="TowardAttacker" thrownode="thrownbackloop" throwspeed="100" time="-1" />
+        <chain action="Idle" result="power2_pullenemyin" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_end" blendtime="0" combotextfinisher="Strike" combotextstarter="Daring" is_power="true" lockangles="true" locktransitionangles="true" name="power2_pullenemyin" powerup_tag="ddevil_p2" priority="5" startchaintime="0.99" takeimpactdamage="false">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="devil_p2_link2" time="0" />
+        <trigger name="sound" sound="char/ddevil_m/p2_power" time="0" />
+        <trigger loop_type="stop" name="sound" sound="char/ddevil_m/p2_charge" time="0" />
+        <trigger fail_node="null" name="verify_victim_alive" passtag="1" time="0.23" />
+        <trigger name="charsound" next_eventtag="2" only_non_looped="true" play_sound_on_victim="true" sound="snd_pain" tag="1" time="-1" />
+        <trigger damagescale="none" facethrowdir="false" impactdamage="%devil_p2_dmg" name="throw" tag="2" throwdirection="TowardAttacker" thrownode="thrownbackloop" throwspeed="%devil_p2_throw_spd" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="devil_p2_link" time="0.5" />
+        <trigger critical="true" name="powerup" remove_tag="baton_grapple_link" time="0.98" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" blendtime="0" combotextfinisher="Strike" combotextstarter="Daring" is_power="true" lockangles="true" locktransitionangles="true" name="power2_fail" noautoaim="true" powerup_tag="ddevil_p2">
+        <trigger actorbolt="fx02" attack_bone_angles="0 0 0" attack_bone_pos="31 2 42" attacktype="projectile" count="1" damage="%devil_p2_dmg" damagescale="none" damagetype="dmg_physical" entity="ddevil_baton_strike" filename="ents_ddevil" fulltargeting="true" maxrange="260" name="projectile" pierce="true" powerusage="%devil_p3_pwr" speed="2000" targetable="false" time="0" />
+        <trigger name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="fx02" bolt2ent="ddevil_baton_strike" effect="char/ddevil/p3_cable" fxlevel="1" how_used="primary" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power3" combotextfinisher="Volley" combotextstarter="Universal" icon="2" is_power="true" lockangles="true" lockspeed="true" name="power3" priority="5">
+        <require cat="skill" item="devil_p3" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p3_power" fxlevel="4" name="effect_sound" sound="char/ddevil_m/p3_power" time="0.23" />
+        <trigger name="baton_to_hand" time="0" />
+        <trigger actorbolt="fx02" attack_bone_angles="0 0 0" attack_bone_pos="31 2 42" attacktype="projectile" count="1" damage="%devil_p3_dmg" damagescale="none" damagetype="dmg_physical" entity="ddevil_baton_strike" filename="ents_ddevil" fulltargeting="true" maxrange="260" name="projectile" pierce="true" powerusage="%devil_p3_pwr" speed="2000" targetable="false" time="0.31" />
+        <trigger name="powerup" remove_on_node_end="true" time="0.31">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_victimstunned="true" />
+            <special_fx bolt="fx02" bolt2ent="ddevil_baton_strike" effect="char/ddevil/p3_cable" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger critical="on_exit" name="baton_to_leg" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power4" combotextfinisher="Destruction" combotextstarter="Rampant" icon="10" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="devil_p4" level="1" />
+        <trigger name="billy_club" time="0" />
+        <trigger anim="power_4" name="baton_bolton" time="0" />
+        <trigger effect="char/ddevil/p4_power" fxlevel="1" name="effect_sound" sound="char/ddevil_m/p4_power" tag="1" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/ddevil/p4_power" fxlevel="2" name="effect" time="0.15" />
+        <trigger damagescale="none" index="2" knockback="190" name="kick" powerusage="%devil_p4_pwr" time="0.12" />
+        <trigger damagescale="none" index="2" knockback="190" name="kick" time="0.2" />
+        <event angle="0" arc="45" damage="%devil_p4_dmg" damagescale="none" damagetype="dmg_physical" inherit="radial" maxrange="110" name="baton_attack" offset="0">
+            <damagemod name="dmgmod_trip" />
+        </event>
+        <trigger effect="char/ddevil/p4_power" fxlevel="3" name="effect" time="0.33" />
+        <trigger angle="0" name="baton_attack" time="0.39" />
+        <trigger angle="315" name="baton_attack" time="0.4375" />
+        <trigger angle="270" name="baton_attack" time="0.485" />
+        <trigger angle="225" name="baton_attack" time="0.5325" />
+        <trigger angle="180" name="baton_attack" time="0.58" />
+        <trigger angle="135" name="baton_attack" time="0.6275" />
+        <trigger angle="90" name="baton_attack" time="0.675" />
+        <trigger angle="45" name="baton_attack" time="0.7225" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="1" type="ce_bolton" />
+        <trigger critical="on_exit" name="baton_to_leg" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power5" combotextfinisher="Blast" combotextstarter="Ultimate" icon="4" is_power="true" name="power5" priority="5" turnrate="0.7">
+        <require cat="skill" item="devil_p5" level="1" />
+        <trigger name="sound" sound="char/ddevil_m/p5_power" time="0" />
+        <trigger name="baton_to_hand" time="0" />
+        <trigger damage="%devil_p5_dmg" damagescale="none" index="2" knockback="190" name="kick" time="0.16" />
+        <trigger damage="%devil_p5_dmg" damagescale="none" index="2" knockback="190" name="kick" time="0.22" />
+        <trigger damage="%devil_p5_dmg" damagescale="none" index="2" knockback="190" name="kick" time="0.3" />
+        <trigger effect="char/ddevil/p4_power" fxlevel="1" name="effect" time="0.16" />
+        <trigger bolt="Bip01 Pelvis" effect="char/ddevil/p4_power" fxlevel="2" name="effect" time="0.16" />
+        <trigger effect="char/ddevil/p5_power" fxlevel="1" name="effect" time="0.48" />
+        <trigger effect="char/ddevil/p5_power" fxlevel="2" name="effect" time="0.5" />
+        <trigger arc="70" damage="%devil_p5_dmg" damagescale="none" name="punch" powerusage="%devil_p5_pwr" targetable="true" time="0.58">
+            <damagemod name="dmgmod_popup" />
+        </trigger>
+        <trigger critical="true" name="baton_to_leg" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="devil_p6" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p6_power" fxlevel="2" name="effect_sound" sound="char/ddevil_m/p6_power" time="0.23" />
+        <trigger effect="char/ddevil/p6_power" fxlevel="3" name="effect" time="0.23" />
+        <trigger effect="char/ddevil/p6_power" fxlevel="4" name="effect" time="0.7" />
+        <trigger apply_ally="all" life="%devil_p6_lif" name="powerup" powerusage="%devil_p6_pwr" time="0.7">
+            <affecter affect_type="scale" attribute="atk_damage" level="%devil_p6_dmg" />
+            <special_fx effect="char/ddevil/p6_power" fxlevel="5" how_used="primary" />
+            <special_fx effect="char/ddevil/p6_power" fxlevel="6" how_used="deactivation" />
+        </trigger>
+        <trigger class="sense" enemy="true" life="%devil_p6_lif" name="powerup" time="0.7" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="devil_p7" level="1" />
+        <trigger bolt="Bip01 Head" effect="char/ddevil/p7_power" fxlevel="1" name="effect_sound" sound="char/ddevil_m/p7_power" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/ddevil/p7_power" fxlevel="2" name="effect" time="0.4" />
+        <trigger bolt="Bip01 L Hand" effect="char/ddevil/p7_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger bolt="Bip01 R Hand" effect="char/ddevil/p7_power" fxlevel="3" name="effect" time="0.5" />
+        <trigger effect="char/ddevil/p7_power" fxlevel="4" name="effect" time="0.57" />
+        <trigger apply_ally="all" life="%devil_p7_lif" name="powerup" no_shadow="true" powerusage="%devil_p7_pwr" tag_name="_arcade_remove" time="0.59">
+            <special_fx effect="char/ddevil/p7_power" fxlevel="5" how_used="primary" />
+            <special_fx effect="char/ddevil/p7_power" fxlevel="6" how_used="deactivation" />
+            <affecter affect_type="scale" attribute="physics" level="%devil_p7_spd" />
+        </trigger>
+        <trigger life="%devil_p7_lif" name="powerup" tag_name="_arcade_remove" time="0.5">
+            <special_fx effect="base/powerup/pu_timescale" fxlevel="1" how_used="primary" never_cycle="true" />
+            <affecter affect_type="scale" attribute="game_speed" level="%devil_p7_slo" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="devil_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="9" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Attack" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="devil_p9" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Devil's Onslaught" />
+        <trigger effect="char/ddevil/p9_power" fxlevel="1" name="effect_sound" sound="char/ddevil_m/p9_power" time="0.44" />
+        <event angle="0" arc="45" damage="%devil_p9_dmg" damagescale="none" inherit="radial" knockback="305" maxrange="110" name="baton_attack" offset="0" victimeventtag="2" />
+        <trigger name="billy_club" time="0" />
+        <trigger anim="power_9" name="baton_bolton" time="0" />
+        <trigger anim="power_10" bolt="Bip01 L Hand" boltslot="ebolton_altweapon" name="baton_bolton" time="0" />
+        <trigger angle="180" name="baton_attack" time="0.38" />
+        <trigger angle="90" name="baton_attack" time="0.415" />
+        <trigger angle="270" name="baton_attack" time="0.415" />
+        <trigger angle="0" name="baton_attack" time="0.45" />
+        <trigger angle="90" maxrange="150" name="baton_attack" time="0.505" />
+        <trigger angle="270" maxrange="150" name="baton_attack" time="0.505" />
+        <trigger angle="180" maxrange="150" name="baton_attack" time="0.56" />
+        <trigger angle="0" maxrange="150" name="baton_attack" time="0.68" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.65" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <trigger critical="on_exit" name="baton_to_leg" time="1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

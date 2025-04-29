@@ -1,0 +1,72 @@
+<PowerStyle>
+    <FightMove aireusetime="6" aitype="beam" animenum="ea_power1" lockangles="true" name="power1" priority="5">
+        <trigger name="sound" sound="char/mandrn_m/p1_impact" time="-1" />
+        <trigger name="sound" sound="char/mandrn_m/p1_explode" time="-1" />
+        <trigger class="freeze" die_on_critical="true" life="4" name="powerup" sound1="char/mandrn_m/p1_impact" sound2="char/mandrn_m/p1_explode" tag="20" time="-1">
+            <special_fx bolt="Bip01 Spine2" effect="char/iceman/special_chilled" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/iceman/special_frozen" fxlevel="3" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/iceman/special_frozen" fxlevel="2" how_used="custom" tag="1" />
+        </trigger>
+        <trigger name="sound" sound="char/mandrn_m/p1_charge" time="0.56" />
+        <trigger attack_bone_angles="0 0 0" attack_bone_pos="20 0 53" beambolt="Bip01 L Hand" beameffect="char/mandrn/p1_power" damage="%mdmg_high" damagescale="difficulty" damagetype="dmg_energy" fxlevel="1" hiteffect="char/mandrn/p1_impact" inherit="beam" maxrange="500" name="freeze_fx" radius="0" spawneffect="char/mandrn/p1_shot" tag="3" time="0.56" victimeventtag="20" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4.5" aitype="beamanyrange" animenum="ea_power2" lockangles="true" name="power2" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mandrn/p2_charge" name="effect_sound" sound="char/mandrn_m/p1_charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mandrn/p2_charge" name="effect" time="0" />
+        <trigger name="sound" sound="char/mandrn_m/p2_power" time="0.58" />
+        <trigger arc="180" attack_bone_angles="0 0 0" attack_bone_pos="-9 -16 58" attacktype="beam" beambolt="Bip01 R Hand" beameffect="char/mandrn/p2_power" damage="%mdmg_high" damagescale="difficulty" damagetype="dmg_energy" hiteffect="char/mandrn/p2_impact" knockback="430" maxrange="800" name="beam" powerusage="6" time="0.39">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="aoe" animenum="ea_power3" lockangles="true" name="power3" priority="5">
+        <trigger arc="0" attacktype="projectile" count="1" damage="0" damagelevel="2" damagescale="difficulty" damagetype="dmg_wind" entity="mandarin_tornado" filename="ents_mandarin" life="1.9" maxinstances="1" maxrange="800" name="projectile" scale="1" speed="00" tag="1" targetable="false" time="0.3" tracecheck="false">
+            <damageMod name="dmgmod_extinguish" />
+        </trigger>
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/mandrn/p3_charge" fxlevel="1" name="effect_sound" sound="char/mandrn_m/p3_charge" time="0" />
+        <trigger bolt="Bip01 L hand" effect="char/mandrn/p3_charge" fxlevel="2" name="effect_sound" sound="char/mandrn_m/p3_charge" time="0" />
+        <trigger bolt="Bip01 R hand" effect="char/mandrn/p3_charge" fxlevel="2" name="effect_sound" sound="char/mandrn_m/p3_charge" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power4" is_power="true" lockangles="true" name="power4" priority="5">
+        <chain action="Idle" result="power4_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" blendtime="0" is_power="true" lockangles="false" locktransitionangles="true" name="power4_loop" noautoaim="true" turnrate="0.2">
+        <event attack_bone_angles="121 -41 -22" attack_bone_pos="17 -1 56" count="1" damage="%mdmg_high" damagescale="difficulty" entity="electro_blast" filename="ents_mandarin" fulltargeting="true" inherit="projectile" life="0.75" name="electro_blast" speed="800" targetable="true" />
+        <trigger bolt="Bip01 L Hand" effect="char/mandrn/p4_power" fxlevel="2" name="effect_sound" sound="char/mandrn_m/p4_power" time="0" />
+        <trigger actorbolt="Bip01 L Hand" name="electro_blast" time="0" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="beamanyrange" animenum="ea_power5" lockangles="true" name="power5" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mandrn/p5_charge" name="effect_sound" sound="char/mandrn_m/p5_charge" time="0.2" />
+        <trigger name="sound" sound="char/mandrn_m/p5_power" time="0.58" />
+        <trigger arc="0" attack_bone_angles="0 0 0" attack_bone_pos="-9 -16 58" attacktype="beam" beambolt="Bip01 R Hand" beameffect="char/mandrn/p5_power" damage="%mdmg_high" damagescale="difficulty" damagetype="dmg_energy" hiteffect="char/mandrn/p5_impact" knockback="620" maxrange="800" name="beam" powerusage="6" time="0.39">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power6" lockangles="true" name="power6" priority="5">
+        <chain action="idle" result="idle" />
+        <trigger bolt="Bip01 Head" effect="char/mandrn/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mandrn/p6_power" fxlevel="3" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mandrn/p6_power" fxlevel="4" name="effect" time="0.75" />
+    </FightMove>
+    <FightMove animenum="ea_power7" lockangles="true" name="power7" priority="5">
+        <trigger name="runscript" script="act1/mandarin/mandarin5/makedark" time="0" />
+        <chain action="idle" result="idle" />
+        <trigger effect="char/mandrn/p7_power" name="effect" time="0" />
+    </FightMove>
+    <FightMove aireusetime="8" aitype="beam" animenum="ea_power1" lockangles="true" name="power8" priority="5">
+        <trigger name="sound" sound="char/mandrn_m/p8_impact" time="-1" />
+        <trigger name="sound" sound="char/mandrn_m/p8_explode" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="char/mandrn/p8_charge" name="effect" time="0" />
+        <trigger name="sound" sound="char/mandrn_m/p8_charge" time="0.56" />
+        <trigger arc="0" attack_bone_angles="0 0 0" attack_bone_pos="20 0 53" attacktype="beam" beambolt="Bip01 L Hand" beameffect="char/mandrn/p8_power" damage="%mdmg_high" damagescale="difficulty" damagetype="dmg_energy" hiteffect="char/mandrn/p8_impact" maxrange="800" name="beam" time="0.56" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

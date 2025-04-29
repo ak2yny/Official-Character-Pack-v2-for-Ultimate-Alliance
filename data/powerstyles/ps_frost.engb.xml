@@ -1,0 +1,166 @@
+<PowerStyle iconfile="textures/ui/frost_icons.png">
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19805" skin_filter="19801" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19806" skin_filter="19802" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19807" skin_filter="19803" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19808" skin_filter="19804" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19810" skin_filter="19809" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event inherit="powerup" life="-1" name="DiamondOn" no_stack="true" skin="19815" skin_filter="19811" skin_swap="true" tag_name="diamond_on">
+        <affecter affect_type="scale" attribute="strength" level="%frost_p6_str" />
+        <affecter attribute="defense_rating" level="%frost_p6_def" />
+        <affecter attribute="nullify" level="1" />
+    </event>
+    <event critical="true" inherit="powerup" name="DiamondOff" remove_tag="diamond_on" />
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger name="DiamondOff" time="0" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_menu_goodbye" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="stop" time="0" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_frost_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true" />
+        <trigger name="sound" sound="char/emmaf_m/p2_charge" time="0.48" />
+        <trigger damage="4 5" damage_type="dmg_mental" name="punch" offset="-30" time="0.48">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger critical="true" interactionend="true" name="victim_release" time="0.8" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4" aitype="aoe" animenum="ea_power2" combotextfinisher="Fear" combotextstarter="Terrorizing" icon="0" is_power="true" lockangles="true" name="power1" priority="5">
+        <require cat="skill" item="frost_p1" level="1" />
+        <trigger name="sound" sound="char/emmaf_m/p2_power" time="0" />
+        <trigger effect="char/frost/p2_fear" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger damage="1" maxrange="120" name="radial" powerusage="%frost_p1_pwr" time="0.35" victimeventtag="20">
+            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="21" tag="20" time="-1" />
+        <trigger chance="%frost_p1_chance" name="otherevent" othertag="22" tag="21" time="-1" />
+        <trigger life="5" name="powerup" tag="22" time="-1">
+            <affecter attribute="fear" level="1" />
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_fear" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="9" aitype="aoe" animenum="ea_power9" combotextfinisher="Pain" combotextstarter="Excruciating" icon="1" is_power="true" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="frost_p2" level="1" />
+        <trigger name="sound" sound="char/emmaf_m/p1_power" time="0" />
+        <trigger effect="char/frost/p5_pain" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger damage="%frost_p2_dmg" damage_type="dmg_mental" knockback="120" maxrange="120" name="radial" powerusage="%frost_p2_pwr" time="0.35">
+            <damageMod name="dmgmod_popup" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="14" aitype="aoe" animenum="ea_power6" combotextfinisher="Stun" combotextstarter="Stunning" icon="2" is_power="true" lockangles="true" name="power3" priority="5">
+        <require cat="skill" item="frost_p3" level="1" />
+        <trigger life="%frost_p3_life" name="powerup" shared_tag="shared_stunned" tag="40" time="-1" />
+        <trigger name="sound" sound="char/emmaf_m/p2_power" time="0" />
+        <trigger effect="char/frost/p6_stun" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger damage="1" maxrange="120" name="radial" powerusage="%frost_p3_pwr" time="0.35" victimeventtag="40">
+            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="aoe" animenum="ea_power1" combotextfinisher="Control" combotextstarter="Suggestive" icon="3" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="frost_p4" level="1" />
+        <trigger name="sound" sound="char/emmaf_m/p1_power" time="0" />
+        <trigger effect="char/frost/p1_confuse" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Hand" effect="char/frost/p1_charge" name="effect" time="0.2" />
+        <trigger damage="1" maxrange="120" name="radial" powerusage="%frost_p4_pwr" time="0.35" victimeventtag="50">
+            <damagemod name="dmgmod_ground" />
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="51" tag="50" time="-1" />
+        <trigger chance="%frost_p4_chance" name="otherevent" othertag="52" tag="51" time="-1" />
+        <trigger life="10" name="powerup" tag="52" time="-1">
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted" />
+            <affecter attribute="team_switch" level="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power7" icon="4" is_power="true" lockangles="true" name="power5" priority="5">
+        <require cat="skill" item="frost_p5" level="1" />
+        <trigger effect="char/frost/p3_expire" fxlevel="1" name="effect" time="0.2" />
+        <trigger bolt="Bip01 L Toe0" effect="char/frost/p3_expire" fxlevel="2" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Toe0" effect="char/frost/p3_expire" fxlevel="2" name="effect" time="0.2" />
+        <trigger effect="char/frost/p3_expire" fxlevel="3" name="effect_sound" sound="char/emmaf_m/p3_power" time="0.4" />
+        <trigger effect="char/frost/p3_expire" fxlevel="4" name="effect" time="0.5" />
+        <trigger class="callevents" life="%frost_p5_lif" name="powerup" powerusage="%frost_p5_pwr" share_life="1" share_radius="80" time="0.5">
+            <special_fx effect="char/frost/p3_shell" fxlevel="1" how_used="primary" />
+            <affecter attribute="invisible" />
+            <affecter affect_type="scale" attribute="def_damage" level="%frost_p5_def" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" animenum="ea_power3" combotextfinisher="Diamond" combotextstarter="Solidified" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="frost_p6" level="1" />
+        <trigger name="powerusage" powerusage="%frost_p6_pwr" time="0" />
+        <trigger name="DiamondOn" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="6" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="frost_p7" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="1" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power7" />
+    </FightMove>
+    <FightMove animenum="ea_power4" blendtime="0" combotextfinisher="Disruption" icon="6" lockangles="true" name="power7" playspeed="10" powerup_tag="emma_power7" priority="5">
+        <require cat="skill" item="frost_p7" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Psychic Bedlam" />
+        <trigger life="-1" name="xtreme_start" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger effect="char/frost/p4_bedlam" fxlevel="1" name="effect_sound" sound="char/emmaf_m/p4_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/frost/p1_power" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/frost/p1_power" fxlevel="2" name="effect" time="0" />
+        <trigger arc="180" damage="0" damagelevel="1" index="1" maxrange="350" name="convert" time="0.43" type="ce_atk" victimeventtag="98" />
+        <trigger bolt="Bip01 Pelvis" effect="base/material/explode/exp_generic_sml" name="effect" tag="100" time="-1" />
+        <trigger arc="180" attacktype="psionic" damage="%frost_p7_dmg" damagelevel="1" damagetype="dmg_mental" index="2" knockback="190" maxrange="350" name="psychichbedlam" time="0.45" type="ce_atk" victimeventtag="100">
+            <damageMod name="dmgmod_popup" />
+            <damageMod name="dmgmod_environment" />
+        </trigger>
+        <trigger maxdangerrating="10" name="no_bosses" noboss="true" passtag="99" tag="98" time="-1" type="ce_filter_event" />
+        <trigger chance="%frost_p7_chance" name="do_chance" othertag="200" tag="99" time="-1" type="ce_otherevent" />
+        <trigger class="callevents" life="30" name="powerup" tag="200" time="-1">
+            <FunctionEvent function="deactivate" triggertag="201" />
+            <affecter attribute="team_switch" level="1" />
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_converted" />
+            <special_fx effect="base/material/explode/exp_generic_med" how_used="deactivation" />
+        </trigger>
+        <trigger instantkillonly="true" name="remove_me" nosponsor="false" tag="201" time="-1" type="ce_remove" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.99" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

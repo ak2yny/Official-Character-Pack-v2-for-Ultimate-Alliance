@@ -1,0 +1,484 @@
+<PowerStyle iconfile="textures/ui/magneto_icons.png">
+    <event damagescale="none" damagetype="dmg_energy" fxlevel="2" hiteffect="char/magneto/p1_impact" inherit="punch" name="MagnetoPulse" victimeventtag="100">
+        <damagemod name="dmgmod_auto_knockback" />
+        <damagemod name="dmgmod_ground" />
+    </event>
+    <event inherit="powerup" life="2" name="electrified" no_stack="true">
+        <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="char/storm/special_electrified" fxlevel="1" how_used="primary" never_cycle="true" />
+    </event>
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger critical="on_enter" name="sound" sound="char/mgneto_m/p6_power" time="0" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 Pelvis" effect="char/magneto/special_blocking" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="on_exit" name="sound" sound="char/mgneto_m/p3_throw" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove airbornemovement="true" animenum="ea_fly_idle" energypersecond="%flight_pwr" fallback="jumploop" handler="ch_flying" lockchaining="false" name="flying" noncombat="true" powerup_tag="flying">
+        <require cat="skill" item="flight" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 Spine1" effect="char/magneto/flying" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="flying" />
+        <chain action="attack" result="flymelee1" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1.0" lockangles="true" name="attacklight1" priority="3" startchaintime="0.61">
+        <trigger name="whoosh_light" time="0.31" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.25" name="trail" time="0.33" />
+        <trigger name="punch" time="0.46" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1.0" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.29" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.2" />
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" endchaintime="1.0" fallback="attacklight1" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger movement="20" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.17" />
+        <trigger name="kick" time="0.29" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.73">
+        <trigger name="whoosh_heavy" time="0.13" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1.0" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.27">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.33" name="trail" time="0.13" />
+        <trigger name="punch" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="1.0">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect" next_eventtag="102" tag="101" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1.0" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0.0" />
+        <trigger movement="25" name="slide" targetdistance="55" time="0.1" />
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.1" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.33" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove ainopush="true" animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" playspeed="1.2" powerup_tag="magnetic_power" priority="uninterruptable" startchaintime="0.99">
+        <trigger name="stop" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p3_power" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p3_power" fxlevel="2" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p3_power" fxlevel="2" name="effect" time="0.66" />
+        <trigger name="sound" sound="char/magnet_m/grab_smash" time="0.1" />
+        <trigger attackerface="true" interaction="data/fightstyles/interact_magneto_victim" name="victim" nodename="telekinesisvictim" time="0.001" victimface="true" />
+        <trigger execute_against="victim" name="otherevent" othertag="1" time="0.66" />
+        <trigger damage="4 5" damagescale="normal" name="attackself" tag="1" time="-1" type="ce_atk_self" />
+        <trigger critical="on_exit" facethrowdir="false" impactdamage="1" name="throw" throwdirection="right" time="0.67" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_walk1" handler="ch_move" lockchaining="false" name="walk" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="blocking" result="blocking" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_run1" handler="ch_move" lockchaining="false" name="run" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_sprint1" handler="ch_move" lockchaining="false" name="sprint" noncombat="true">
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+        <chain action="sprint" result="sprint" />
+        <chain action="strafeleft" result="strafeleft" />
+        <chain action="straferight" result="straferight" />
+        <chain action="advance" result="advance" />
+        <chain action="retreat" result="retreat" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="smash" result="attackheavy1" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+        <chain action="rollright" result="dodgeright" />
+        <chain action="rollleft" result="dodgeleft" />
+    </FightMove>
+    <FightMove aireusetime="30.0" aitype="beam" animenum="ea_power1" icon="0" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power1" powerup_tag="magnetic_power" priority="5" startchaintime="0.99">
+        <require cat="skill" item="magneto_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <trigger name="powerusage" powerusage="%magneto_p1_pwr" time="0.0" />
+        <trigger name="sound" sound="char/magnet_m/p1_charge" time="0.0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p1_power" fxlevel="2" how_used="activation" name="effect_sound" never_cycle="true" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p1_power" fxlevel="2" how_used="activation" name="effect" never_cycle="true" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="magneto_p1_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="char/magneto/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/magneto/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="on_interrupt" loop_type="stop" name="sound" sound="char/magnet_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_looping" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" handler="ch_invis_wman_stick" icon="0" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power1_looping" powerup_tag="magnetic_power" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <trigger life="0.45" motor="rumble" name="rumble" time="0.0" vibration="%magneto_p1_scale" />
+        <chain action="samepowerhold" result="power1_looping" />
+        <chain action="Idle" result="power1_regular_end" />
+        <chain action="special" result="power1_narrow_end" />
+        <chain action="special2" result="power1_wide_end" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Pulse" combotextstarter="Magnetic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_regular_end" powerup_tag="magnetic_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p1_link" time="0.24" />
+        <trigger effect="char/magneto/p1_release" fxlevel="1" name="effect_sound" sound="char/magnet_m/p1_power" time="0.24" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="101" tag="100" time="-1" />
+        <trigger chance="%magneto_p1_pct" name="otherevent" othertag="102" tag="101" time="-1" />
+        <trigger life="5.0" name="powerup" shared_tag="shared_stunned" tag="102" time="-1" />
+        <trigger arc="18.75" damage="%magneto_p1reg_dmg" knockback="190" maxrange="50" name="MagnetoPulse" time="0.24" />
+        <trigger arc="18.75" damage="%magneto_p1reg_dmg" knockback="190" maxrange="125" name="MagnetoPulse" time="0.39" />
+        <trigger arc="18.75" damage="%magneto_p1reg_dmg" knockback="190" maxrange="200" name="MagnetoPulse" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Pulse" combotextstarter="Magnetic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_narrow_end" powerup_tag="magnetic_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p1_link" time="0.24" />
+        <trigger effect="char/magneto/p1_release" fxlevel="2" name="effect_sound" sound="char/magnet_m/p1_power" time="0.24" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="101" tag="100" time="-1" />
+        <trigger chance="%magneto_p1_pct" name="otherevent" othertag="102" tag="101" time="-1" />
+        <trigger life="5.0" name="powerup" shared_tag="shared_stunned" tag="102" time="-1" />
+        <trigger arc="7.5" damage="%magneto_p1foc_dmg" knockback="305" maxrange="50" name="MagnetoPulse" time="0.24" />
+        <trigger arc="7.5" damage="%magneto_p1foc_dmg" knockback="305" maxrange="125" name="MagnetoPulse" time="0.39" />
+        <trigger arc="7.5" damage="%magneto_p1foc_dmg" knockback="305" maxrange="200" name="MagnetoPulse" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Pulse" combotextstarter="Magnetic" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_wide_end" powerup_tag="magnetic_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p1_link" time="0.24" />
+        <trigger effect="char/magneto/p1_release" fxlevel="3" name="effect_sound" sound="char/magnet_m/p1_power" time="0.24" />
+        <trigger maxdangerrating="10" min_charge="1.0" name="filter" noboss="true" passtag="101" tag="100" time="-1" />
+        <trigger chance="%magneto_p1_pct" name="otherevent" othertag="102" tag="101" time="-1" />
+        <trigger life="5.0" name="powerup" shared_tag="shared_stunned" tag="102" time="-1" />
+        <trigger arc="45" damage="%magneto_p1ufoc_dmg" knockback="40" maxrange="50" name="MagnetoPulse" time="0.24" />
+        <trigger arc="45" damage="%magneto_p1ufoc_dmg" knockback="40" maxrange="125" name="MagnetoPulse" time="0.39" />
+        <trigger arc="45" damage="%magneto_p1ufoc_dmg" knockback="40" maxrange="200" name="MagnetoPulse" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="projectile" animenum="ea_power2" blendtime="0" combotextfinisher="Toss" combotextstarter="Magnetic" handler="ch_returning_projectile" icon="1" is_power="true" lockangles="true" name="power2" powerup_tag="magnetic_power" priority="5" startchaintime="0.4">
+        <require cat="skill" item="magneto_p2" level="1" />
+        <trigger name="kill_shield" time="0" type="ce_destroy_personal_proj" />
+        <trigger name="sound" sound="char/magnet_m/p2_power" time="0.0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p2_power" fxlevel="2" name="effect" time="0.2" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p2_power" fxlevel="3" name="effect" time="0.2" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="16 0 48" attacktype="projectile" count="1" damage="%magneto_p2_dmg" damagescale="none" damagetype="dmg_physical" entity="metallic_shot" filename="ents_magneto" fulltargeting="true" knockback="120" maxrange="800" name="projectile" pierce="true" powerusage="%magneto_p2_pwr" speed="450" targetable="true" time="0.27">
+            <Damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="samepowerhold" result="power2_loop" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" combotextfinisher="Toss" combotextstarter="Magnetic" handler="ch_returning_projectile" icon="1" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="magnetic_power" priority="5" startchaintime="0.01">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="idle" result="idle" />
+        <chain action="samepowerhold" result="power2_loop" />
+        <chain action="special" result="power2_end" />
+    </FightMove>
+    <FightMove animenum="ea_power2_end" blendtime="0" combotextfinisher="Toss" combotextstarter="Magnetic" icon="1" is_power="true" lockangles="true" locktransitionangles="true" name="power2_end" noautoaim="true" powerup_tag="magnetic_power" priority="5">
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30.0" aitype="projectilenear" animenum="ea_power3_loop" combotextfinisher="Beam" combotextstarter="Magnetic" handler="ch_telekinesis" icon="2" is_power="true" lockangles="true" lockchaining="true" name="power3" powerup_tag="magnetic_power" priority="5" startchaintime="0.5">
+        <require cat="skill" item="magneto_p3" level="1" />
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/magnet_m/p3_power" time="0" />
+        <trigger loop_timeout="2.0" loop_type="start" name="sound" sound="char/magnet_m/p3_hold" time="0.1" />
+        <trigger name="powerusage" powerusage="%magneto_p3_pwr" time="0.0" />
+        <trigger fail_node="power3_release" name="verify_victim_alive" passtag="200" time="0.0" />
+        <trigger life="-1" name="powerup" tag_name="magneto_p3_left" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/magneto/p3_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_magneto_victim" name="victim" next_eventtag="201" nodename="power3_victim" tag="200" time="-1" victimface="true" />
+        <trigger life="-1" name="powerup" tag="201" tag_name="magneto_p3_attacker" time="-1">
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/magneto/p3_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger damage="%magneto_p3_dmg" damagescale="none" damagetype="dmg_energy" heaviness="%magneto_p3_hvy" impactdamage="%magneto_p3_dmg2" name="suspend" tag="1" time="-1" tklevel="11" />
+        <trigger attacktype="psionic" damage="0" damagelevel="1" damagescale="none" damagetype="dmg_energy" maxrange="300" name="telekinesis_dmg" tag="2" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_environment" />
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger critical="true" interactionend="false" name="victim_release" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p3_left" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/magnet_m/p3_hold" time="-1" />
+        <chain action="special" result="power3_hold" />
+        <chain action="idle" result="power3_release" />
+    </FightMove>
+    <FightMove animenum="ea_power3_loop" energypersecond="%magneto_p3_pps" handler="ch_telekinesis" icon="2" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power3_hold" powerup_tag="magnetic_power" priority="5" startchaintime="1.0">
+        <special_fx bolt="Bip01 Pelvis" effect="base/powerup/pu_burning" fxlevel="1" how_used="primary" never_cycle="true" />
+        <trigger loop_timeout="2.0" loop_type="update" name="sound" sound="char/magnet_m/p3_hold" time="0" />
+        <trigger critical="true" interactionend="false" name="victim_release" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p3_left" time="-1" />
+        <chain action="special" result="power3_hold" />
+        <chain action="idle" result="power3_release" />
+    </FightMove>
+    <FightMove animenum="ea_power3_end" icon="2" is_power="true" lockangles="true" name="power3_release" playspeed="1.5" powerup_tag="magnetic_power" priority="uninterruptable">
+        <trigger life="-1" name="powerup" tag_name="magneto_p3_right" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/magneto/p3_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="magneto_p3_attacker" time="0.1" />
+        <trigger name="sound" sound="char/magnet_m/p3_throw" time="0.1" />
+        <trigger critical="true" interactionend="false" name="victim_release" time="0.5" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p3_left" time="0.36" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p3_right" time="0.36" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p3_power" fxlevel="3" loop_type="stop" name="effect_sound" sound="char/magnet_m/p3_hold" time="0.36" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p3_power" fxlevel="3" name="effect" time="0.36" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30.0" aitype="aoe" animenum="ea_power4" icon="4" is_power="true" name="power4" powerup_tag="magnetic_power" priority="5">
+        <require cat="skill" item="magneto_p4" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <trigger name="powerusage" powerusage="%magneto_p4_pwr" time="0.0" />
+        <trigger name="sound" sound="char/magnet_m/p4_charge" time="0.0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/magnet_m/p4_loop" time="0.0" />
+        <trigger charge="0.0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p4_power" fxlevel="2" name="effect" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p4_power" fxlevel="2" name="effect_sound" next_eventtag="102" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger effect="char/magneto/p4_power2" fxlevel="3" name="effect" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="magneto_p4_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="char/magneto/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/magneto/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/magneto/p4_power2" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="5.0" animenum="ea_power4_loop" energypersecond="%magneto_p4_pps" icon="3" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_loop" powerup_tag="magnetic_power" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0.0" />
+        <trigger loop_timeout="2" loop_type="update" name="sound" sound="char/magnet_m/p4_loop" time="0.0" />
+        <trigger damage="%magneto_p4_dmgc" damagescale="none" knockback="40" maxrange="%magneto_p4_rng" name="radial" time="0.21" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="5.0" animenum="ea_power4_end" combotextfinisher="Explosion" combotextstarter="Magnetic" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_release" powerup_tag="magnetic_power" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p4_power2" fxlevel="4" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p4_power2" fxlevel="4" name="effect" time="0.0" />
+        <trigger effect="char/magneto/p4_power2" fxlevel="2" name="effect" size="%magneto_p4_fxscale" time="0.21" />
+        <trigger name="sound" sound="char/magnet_m/p4_release" time="0.21" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/magnet_m/p4_loop" time="0.21" />
+        <trigger critical="true" name="powerup" remove_tag="magneto_p4_link" time="0.21" />
+        <trigger damage="%magneto_p4_dmg" damagescale="none" knockback="190" maxrange="%magneto_p4_rng2" name="radial" time="0.21">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power5" icon="3" is_power="true" lockspeed="true" name="power5" powerup_tag="magnetic_power" priority="5" startchaintime="0.7" turnrate="0.15">
+        <require cat="skill" item="magneto_p5" level="1" />
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <trigger name="sound" sound="char/magnet_m/p5_charge" time="0" />
+        <trigger effect="char/magneto/p5_power" fxlevel="2" name="effect" time="0" />
+        <trigger name="powerusage" powerusage="%magneto_p5_pwr" time="0" />
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power20" combotextfinisher="Shockwaves" combotextstarter="Shockwaves" energypersecond="%magneto_p5_pwr" icon="4" is_power="true" lockchaining="true" lockspeed="true" locktransitionangles="true" name="power5_loop" noautoaim="true" powerup_tag="magnetic_power" priority="5" turnrate="0.25">
+        <event attack_bone_angles="0 0 0" attack_bone_pos="19 0 56" beambolt="Bip01 R Hand" damage="0" damagetype="dmg_energy" fxlevel="1" hiteffect="char/magneto/p5_impact" inherit="beam" knockback="190" maxrange="150" name="flame_dmg" pierce="true" radius="24" spawneffect="char/magneto/p5_power" victimeventtag="100">
+            <damagemod name="dmgmod_no_damage" />
+        </event>
+        <trigger effect="char/magneto/p5_power" fxlevel="3" name="effect" time="0" />
+        <trigger damage="0" damagetype="dmg_energy" name="hitme" next_eventtag="103" tag="102" time="-1" type="ce_atk_self" />
+        <trigger failtag="120" filteractor="true" name="filter" passtag="101" tag="100" time="-1" />
+        <trigger class="harming" damage="%magneto_p5_dmg" damagetype="dmg_energy" life="1.0" name="powerup" next_eventtag="102" tag="101" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/magneto/p5_aura" fxlevel="1" how_used="primary" />
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger chance="%magneto_p5_pct" name="otherevent" othertag="104" tag="103" time="-1" />
+        <trigger class="harming" damage="1" damagetype="dmg_energy" name="powerup" tag="104" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger allow_non_actors="true" class="harming" damage="%magneto_p5_dmg2" damagetype="dmg_energy" life="2.0" name="powerup" tag="120" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/magneto/p5_aura" fxlevel="2" how_used="primary" />
+            <damageMod remove="dmgmod_no_pain" />
+        </trigger>
+        <trigger name="unlock_loop_chaining" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="2.0" loop_type="start" name="sound" sound="char/magnet_m/p5_loop" time="0" />
+        <trigger index="1" name="flame_dmg" time="0.15" />
+        <trigger index="2" name="flame_dmg" time="0.3" />
+        <trigger index="3" name="flame_dmg" time="0.45" />
+        <trigger index="4" name="flame_dmg" time="0.6" />
+        <trigger index="5" name="flame_dmg" time="0.75" />
+        <trigger index="6" name="flame_dmg" time="0.9" />
+        <trigger loop_timeout="2.0" loop_type="update" name="sound" sound="char/magnet_m/p5_loop" time="0.9" />
+        <chain action="Idle" result="power5_end" />
+        <chain action="samepowerhold" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" icon="4" is_power="true" lockspeed="true" locktransitionangles="true" name="power5_end" noautoaim="true" powerup_tag="magnetic_power" priority="5" turnrate="0.2">
+        <trigger loop_type="update" name="sound" sound="char/magnet_m/p5_loop" time="0.0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/magnet_m/p5_loop" time="0.1" />
+        <trigger name="sound" sound="char/magnet_m/p5_release" time="0.1" />
+        <trigger failtag="100" is_flying="true" name="filter" time="0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" powerup_tag="magnetic_power" priority="5">
+        <require cat="skill" item="magneto_p6" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p6_power" fxlevel="1" name="effect_sound" sound="char/magnet_m/p6_power" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p6_power" fxlevel="1" name="effect" time="0.0" />
+        <trigger name="sound" sound="char/magnet_m/p6_shield_appear" time="0.47" />
+        <trigger name="powerusage" powerusage="%magneto_p6_pwr" time="0.57" />
+        <trigger effect="char/magneto/p6_power" fxlevel="2" name="effect" time="0.57" />
+        <trigger class="callevents" fx_size_scale="%magneto_p6_size" life="%magneto_p6_life" name="powerup" time="0.57">
+            <functionevent function="deactivate" triggertag="12" />
+            <special_fx effect="char/magneto/p6_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger entity_name="ScrapMetalShield" name="remove_powerups" tag="12" time="-1">
+            <special_fx effect="char/magneto/p6_aura" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger class="harming" life="%magneto_p6_life" name="powerup" share_enemies="true" share_life="1.0" share_physents="true" share_radius="70" time="0.57">
+            <affecter attribute="powerup_scope" share_filter="shared" />
+        </trigger>
+        <trigger count="1" entity="ScrapMetalShield" eventtagtocallonspawned="1" filename="ents_magneto" inherit="relative_spawn" life="%magneto_p6_life" maxinstances="1" name="ScrapMetalShield" relative="self" scale="%magneto_p6_size" setowneridtospawner="true" time="0.57" type="ce_atk_spawn_relative" />
+        <trigger allow_non_actors="true" class="force_field" effect="char/magneto/p6_impact" fxlevel="1" life="%magneto_p6_life" name="powerup" sound_touch="char/magnet_m/p6_impact" tag="1" time="-1">
+            <affecter attribute="powerup_scope">
+                <scope scope_attack="projectile" />
+            </affecter>
+            <affecter attribute="powerup_scope">
+                <scope scope_attack="projectile" />
+            </affecter>
+            <affecter affect_type="sum" attribute="deflect_projectiles" level="%magneto_p6_pct" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" lockspeed="true" name="power7" powerup_tag="magnetic_power" priority="5">
+        <require cat="skill" item="magneto_p7" level="1" />
+        <trigger name="sound" sound="char/magnet_m/p7_power" time="0" />
+        <trigger effect="char/magneto/p7_power" fxlevel="1" name="effect" time="0.258" />
+        <trigger effect="char/magneto/p7_power" fxlevel="2" name="effect" time="0.258" />
+        <trigger apply_ally="all" life="%magneto_p7_lif" name="powerup" powerusage="%magneto_p7_pwr" time="0.483">
+            <affecter attribute="all_talents" level="%magneto_p7_ski" scope_talent="magneto_p7" />
+            <special_fx effect="char/magneto/p7_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" powerup_tag="magnetic_power" priority="uninterruptable">
+        <require cat="skill" item="magneto_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="11" time="0.0" />
+        <trigger apply_ally="all" apply_self="false" class="remove_on_events" life="-1" name="powerup" on_xtreme_end="true" tag="1" time="-1">
+            <affecter affect_type="scale" attribute="atk_damage" level="%magneto_p8_dmgs" />
+        </trigger>
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <event damage="%magneto_p8_dmg" damagelevel="2" damagetype="dmg_physical" enemynumber="0" fxlevel="1" hiteffect="char/magneto/p8_impact" inherit="blast" maxrange="200" name="metal_storm" radius="60" random="true" />
+    <FightMove animenum="ea_power8" combotextfinisher="Might" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" powerup_tag="magnetic_power" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="!BADREF:@HERO_MAGNETO@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Metal Storm" />
+        <trigger name="sound" sound="char/magnet_m/p8_charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/magneto/p8_power" fxlevel="1" name="effect" time="0.05" />
+        <trigger bolt="Bip01 L Hand" effect="char/magneto/p8_power" fxlevel="1" name="effect" time="0.1" />
+        <trigger enemynumber="0" name="metal_storm" time="0.21" />
+        <trigger enemynumber="1" name="metal_storm" time="0.28" />
+        <trigger enemynumber="2" name="metal_storm" time="0.35" />
+        <trigger enemynumber="3" name="metal_storm" time="0.44" />
+        <trigger enemynumber="4" name="metal_storm" time="0.83" />
+        <trigger enemynumber="5" name="metal_storm" time="0.83" />
+        <trigger enemynumber="6" name="metal_storm" time="0.83" />
+        <trigger enemynumber="7" name="metal_storm" time="0.83" />
+        <trigger enemynumber="8" name="metal_storm" time="0.83" />
+        <trigger name="sound" pitch_range="300" sound="char/magnet_m/p8_power" time="0.21" />
+        <trigger name="sound" pitch_range="400" sound="char/magnet_m/p8_power" time="0.28" />
+        <trigger name="sound" pitch_range="300" sound="char/magnet_m/p8_power" time="0.35" />
+        <trigger name="sound" pitch_range="400" sound="char/magnet_m/p8_power" time="0.44" />
+        <trigger name="sound" pitch_range="300" sound="char/magnet_m/p8_power" time="0.83" />
+        <trigger name="sound" pitch_range="400" sound="char/magnet_m/p8_power" time="0.83" />
+        <trigger name="sound" pitch_range="400" sound="char/magnet_m/p8_power" time="0.83" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.93" />
+        <trigger name="sound" sound="char/magnet_m/p8_end" time="0.98" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

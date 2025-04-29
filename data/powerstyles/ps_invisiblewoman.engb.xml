@@ -1,0 +1,378 @@
+<PowerStyle iconfile="textures/ui/invisiblewoman_icons.png">
+    <event actorbolt="Bip01 L Hand" attacktype="projectile" count="1" damage="%inviswm_p2_dmg" damagescale="none" damagetype="dmg_physical" entity="KineticBolt" filename="ents_inviswn" fulltargeting="false" inherit="projectile" maxrange="500" name="KineticBolt" noautoaim="true" speed="1000" targetable="false" useboltangles="true" />
+    <event damagescale="none" damagetype="dmg_physical" fxlevel="2" hiteffect="char/invisw/p2_impact" inherit="punch" name="ConcussionBlast">
+        <damagemod name="dmgmod_auto_knockback" />
+    </event>
+    <event name="disappear" type="ce_force_visibility" visible="false" />
+    <event name="reappear" type="ce_force_visibility" visible="true" />
+    <event add="cloaked_no_tint" name="part_disappear" type="ce_renderfx" />
+    <event name="part_reappear" remove="cloaked_no_tint" type="ce_renderfx" />
+    <FightMove animenum="ea_blocking" blendtime="0.1" handler="ch_block" icon="2" lockangles="true" lockchaining="false" locktransitionangles="true" name="blocking" priority="6">
+        <trigger life="-1" name="powerup" powerup_tag="invis_blk" remove_on_node_end="true" time="0">
+            <special_fx effect="char/invisw/block" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/invisw/block" fxlevel="2" how_used="activation" />
+            <special_fx effect="char/invisw/block" fxlevel="2" how_used="activation" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="invis_blk" time="-1" />
+        <chain action="special" result="idle" />
+        <chain action="rollleft" result="rollforward" />
+        <chain action="rollright" result="rollforward" />
+        <chain action="retreat" result="rollforward" />
+        <chain action="advance" result="rollforward" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.61">
+        <trigger name="whoosh_light" time="0.31" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.25" name="trail" time="0.33" />
+        <trigger name="punch" time="0.46" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.57">
+        <trigger name="whoosh_light" time="0.29" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.2" />
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" endchaintime="1" fallback="attacklight1" lockangles="true" name="attacklight3" priority="3">
+        <trigger name="whoosh_light" time="0.21" />
+        <trigger movement="20" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" life="0.2" name="trail" time="0.17" />
+        <trigger name="kick" time="0.29" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.73">
+        <trigger name="whoosh_heavy" time="0.13" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger charge="1" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.27">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" life="0.33" name="trail" time="0.13" />
+        <trigger name="punch" time="0.3" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="1">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="2" name="effect" next_eventtag="102" tag="101" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1" lockangles="true" name="attackknockback2" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0" />
+        <trigger movement="25" name="slide" targetdistance="55" time="0.1" />
+        <trigger bolt="Bip01 L Hand" life="0.4" name="trail" time="0.1" />
+        <trigger bolt="Bip01 R Hand" life="0.4" name="trail" time="0.1" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.1" />
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.33" />
+        <trigger damage="3 4" knockback="190" name="punch" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" name="punch" tag="11" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power10" endchaintime="1" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="stop" time="0" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_invisiblewoman_victim" name="victim" nodename="Grab_Smash_Victim" targetdistance="22" time="0" victimface="true" />
+        <trigger name="disappear" time="0.04" />
+        <trigger effect="char/invisw/special_grabsmash" fxlevel="1" name="effect" time="0.04" />
+        <trigger name="sound" sound="char/invisw_m/p10_power" time="0.2" />
+        <trigger execute_against="victim" name="otherevent" othertag="1" time="0.2" />
+        <trigger damage="4 5" damagescale="normal" name="attackself" tag="1" time="-1" type="ce_atk_self" />
+        <trigger interactionend="false" name="victim_release" ownertime="0" time="0.73" />
+        <trigger critical="true" name="reappear" time="0.73" />
+        <trigger effect="char/invisw/special_grabsmash" fxlevel="1" name="effect" time="0.73" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="beam" animenum="ea_power1" icon="0" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power1" priority="5" startchaintime="0.99">
+        <require cat="skill" item="inviswm_p1" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%inviswm_p1_pwr" time="0" />
+        <trigger name="sound" sound="char/invisw_m/p1_power" time="0" />
+        <trigger name="sound" sound="char/invisw_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" tag="1" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p1_power" fxlevel="2" how_used="activation" name="effect_sound" never_cycle="true" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p1_power" fxlevel="2" how_used="activation" name="effect" never_cycle="true" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="invisw_p1_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/invisw/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/invisw/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="on_interrupt" loop_type="stop" name="sound" sound="char/invisw_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_looping" />
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" handler="ch_invis_wman_stick" icon="0" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power1_looping" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger life="0.45" motor="rumble" name="rumble" time="0" vibration="%inviswm_p1_scale" />
+        <chain action="samepowerhold" result="power1_looping" />
+        <chain action="Idle" result="power1_regular_end" />
+        <chain action="special" result="power1_narrow_end" />
+        <chain action="special2" result="power1_wide_end" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Blast" combotextstarter="Hammering" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_regular_end" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p1_link" time="0.24" />
+        <trigger effect="char/invisw/p1_release" fxlevel="1" name="effect_sound" sound="char/invisw_m/p1_release" time="0.24" />
+        <trigger arc="18.75" damage="%inviswm_p1reg_dmg" knockback="190" maxrange="50" name="ConcussionBlast" time="0.24" />
+        <trigger arc="18.75" damage="%inviswm_p1reg_dmg" knockback="190" maxrange="125" name="ConcussionBlast" time="0.39" />
+        <trigger arc="18.75" damage="%inviswm_p1reg_dmg" knockback="190" maxrange="200" name="ConcussionBlast" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Blast" combotextstarter="Hammering" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_narrow_end" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p1_link" time="0.24" />
+        <trigger effect="char/invisw/p1_release" fxlevel="2" name="effect_sound" sound="char/invisw_m/p1_release" time="0.24" />
+        <trigger arc="7.5" damage="%inviswm_p1foc_dmg" knockback="305" maxrange="50" name="ConcussionBlast" time="0.24" />
+        <trigger arc="7.5" damage="%inviswm_p1foc_dmg" knockback="305" maxrange="125" name="ConcussionBlast" time="0.39" />
+        <trigger arc="7.5" damage="%inviswm_p1foc_dmg" knockback="305" maxrange="200" name="ConcussionBlast" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Blast" combotextstarter="Hammering" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_wide_end" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p1_link" time="0.24" />
+        <trigger effect="char/invisw/p1_release" fxlevel="3" name="effect_sound" sound="char/invisw_m/p1_release" time="0.24" />
+        <trigger arc="45" damage="%inviswm_p1ufoc_dmg" knockback="40" maxrange="50" name="ConcussionBlast" time="0.24" />
+        <trigger arc="45" damage="%inviswm_p1ufoc_dmg" knockback="40" maxrange="125" name="ConcussionBlast" time="0.39" />
+        <trigger arc="45" damage="%inviswm_p1ufoc_dmg" knockback="40" maxrange="200" name="ConcussionBlast" time="0.54" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power2" icon="1" is_power="true" lockangles="true" name="power2" priority="5" startchaintime="0.99" turnrate="0.2">
+        <require cat="skill" item="inviswm_p2" level="1" />
+        <trigger name="powerusage" powerusage="%inviswm_p2_pwr" time="-1" />
+        <chain action="Idle" result="power2_looping" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" combotextfinisher="Bolts" combotextstarter="Shattering" energypersecond="%inviswm_p2_pwr" icon="1" is_power="true" name="power2_looping" priority="5" startchaintime="0.99" turnrate="0.2">
+        <trigger button="samepowerclick" name="button_hint" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p2_power" fxlevel="2" name="effect" time="0" />
+        <trigger name="sound" sound="char/invisw_m/p2_power" time="0.23" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="31 -8 46" name="KineticBolt" time="0.23" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p2_power" fxlevel="2" name="effect" time="0.33" />
+        <trigger name="sound" sound="char/invisw_m/p2_power" time="0.56" />
+        <trigger actorbolt="Bip01 L Hand" attack_bone_angles="0 0 0" attack_bone_pos="14 9 49" name="KineticBolt" time="0.56" />
+        <chain action="Idle" result="idle" />
+        <chain action="samepowerclick" result="power2_looping" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power3" icon="2" is_power="true" name="power3" powerup_tag="invisw_p3" priority="5">
+        <require cat="skill" item="inviswm_p3" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%inviswm_p3_pwr" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/invisw_m/p3_charge" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p1_power" fxlevel="2" name="effect" next_eventtag="101" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p1_power" fxlevel="2" name="effect_sound" next_eventtag="102" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger effect="char/invisw/p3_power" fxlevel="3" name="effect" tag="102" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="invisw_p3_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/invisw/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/invisw/p1_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx effect="char/invisw/p3_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power3_loop" />
+    </FightMove>
+    <FightMove aireusetime="5" animenum="ea_power8_loop" icon="2" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power3_loop" powerup_tag="invisw_p3" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <chain action="Idle" result="power3_release" />
+        <chain action="samepowerhold" result="power3_loop" />
+    </FightMove>
+    <FightMove aireusetime="5" animenum="ea_power8_end" combotextfinisher="Overload" combotextstarter="Splintering" icon="2" is_power="true" lockangles="true" locktransitionangles="true" name="power3_release" powerup_tag="invisw_p3" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p3_power" fxlevel="4" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p3_power" fxlevel="4" name="effect" time="0" />
+        <trigger effect="char/invisw/p3_power" fxlevel="2" name="effect" size="%inviswm_p3_fxscale" time="0.21" />
+        <trigger name="sound" sound="char/invisw_m/p3_release" time="0.21" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/invisw_m/p3_charge" time="0.21" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p3_link" time="0.21" />
+        <trigger damage="%inviswm_p3_dmg" damagescale="none" maxrange="%inviswm_p3_rng" name="radial" time="0.21" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectilenear" animenum="ea_power4_loop" combotextfinisher="Smash" combotextstarter="Psychic" handler="ch_telekinesis" icon="3" is_power="true" lockangles="true" lockchaining="true" name="power4" priority="5" startchaintime="0.5">
+        <require cat="skill" item="inviswm_p4" level="1" />
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/invisw_m/p4_power" time="0" />
+        <trigger name="powerusage" powerusage="%inviswm_p4_pwr" time="0" />
+        <trigger fail_node="power4_release" name="verify_victim_alive" passtag="200" time="0" />
+        <trigger life="-1" name="powerup" tag_name="invisw_p4_left" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/invisw/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_invisiblewoman_victim" name="victim" next_eventtag="201" nodename="power4_victim" tag="200" time="-1" victimface="true" />
+        <trigger life="-1" name="powerup" tag="201" tag_name="invisw_p4_attacker" time="-1">
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/invisw/p4_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger damage="%inviswm_p4_dmg" damagescale="none" damagetype="dmg_physical" heaviness="%inviswm_p4_hvy" impactdamage="%inviswm_p4_dmg2" name="suspend" tag="1" time="-1" tklevel="11" />
+        <trigger attacktype="psionic" damage="0" damagelevel="1" damagescale="none" damagetype="dmg_energy" maxrange="300" name="telekinesis_dmg" tag="2" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_environment" />
+            <damageMod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger critical="true" interactionend="false" name="victim_release" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p4_left" time="-1" />
+        <chain action="special" result="power4_hold" />
+        <chain action="idle" result="power4_release" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" energypersecond="%inviswm_p4_pps" handler="ch_telekinesis" is_power="true" lockangles="true" lockchaining="true" locktransitionangles="true" name="power4_hold" priority="5" startchaintime="1">
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/invisw_m/p4_hold" time="0" />
+        <trigger critical="true" interactionend="false" name="victim_release" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p4_left" time="-1" />
+        <chain action="special" result="power4_hold" />
+        <chain action="idle" result="power4_release" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" is_power="true" lockangles="true" name="power4_release" playspeed="1.5" priority="uninterruptable">
+        <trigger life="-1" name="powerup" tag_name="invisw_p4_right" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/invisw/p4_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="invisw_p4_attacker" time="0.1" />
+        <trigger critical="true" interactionend="false" name="victim_release" time="0.5" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p4_left" time="0.36" />
+        <trigger critical="true" name="powerup" remove_tag="invisw_p4_right" time="0.36" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p4_power" fxlevel="3" loop_type="stop" name="effect_sound" sound="char/invisw_m/p4_hold" time="0.36" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p4_power" fxlevel="3" name="effect_sound" sound="char/invisw_m/p4_throw" time="0.36" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectilenear" animenum="ea_power5" combotextfinisher="Shackle" combotextstarter="Severing" icon="4" is_power="true" lockangles="true" name="power5" priority="5">
+        <require cat="skill" item="inviswm_p5" level="1" />
+        <trigger maxrange="290" mustbeactor="true" mustbegrabbable="false" name="victim_set" searchangle="30" selfeventtag="77" time="0" />
+        <trigger attackerface="true" name="victim" setowners="false" tag="77" time="-1" victimface="false" />
+        <trigger name="sound" sound="char/invisw_m/p5_power" time="0" />
+        <trigger charge="0" charge_time="0.4" name="charge" time="0" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="invisw_p5_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/invisw/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/invisw/p5_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 L Hand" effect="char/invisw/p5_power" fxlevel="2" how_used="deactivation" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/invisw/p5_power" fxlevel="2" how_used="deactivation" never_cycle="true" />
+        </trigger>
+        <trigger name="powerusage" powerusage="%inviswm_p5_pwr" time="0.4" />
+        <trigger name="powerup" remove_tag="invisw_p5_link" time="0.4" />
+        <trigger fail_node="null" failtag="20" name="verify_victim_alive" passtag="99" time="0.4" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p5_power" fxlevel="3" name="effect" next_eventtag="21" tag="20" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p5_power" fxlevel="3" name="effect" tag="21" time="-1" />
+        <trigger can_be_grabbed="true" failtag="100" filter_target="victim" name="filter" passtag="2" tag="99" time="-1" />
+        <trigger name="otherevent" othertag="20" othertag2="101" tag="100" time="-1" />
+        <trigger execute_against="victim" name="otherevent" othertag="102" tag="101" time="-1" />
+        <trigger damage="%invwm_p5_crush_dmg" damagescale="none" name="self_attack" tag="102" time="-1" type="ce_atk_self" />
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_invisiblewoman_victim" name="victim" next_eventtag="3" nodename="Power5_Victim" tag="2" time="-1" victimface="true" />
+        <trigger execute_against="victim" name="otherevent" othertag="10" tag="3" time="-1" />
+        <trigger class="harming" damage="%invwm_p5_crush_dmg" damagetype="dmg_crushing" life="-1" name="powerup" next_eventtag="12" remove_on_death="true" tag="10" tag_name="inviswm_power5_vic" time="-1" />
+        <trigger class="callevents" life="%inviswm_p5_life" name="powerup" next_eventtag="13" tag="12" tag_name="invwm_p5_call_ev" time="-1">
+            <FunctionEvent function="deactivate" triggertag="207" />
+            <affecter affect_type="scale" attribute="def_pain" level="0" />
+            <affecter affect_type="scale" attribute="def_stunfreeze" level="0" />
+            <affecter affect_type="scale" attribute="def_knockback" level="0" />
+        </trigger>
+        <trigger flag1="nopickup" name="flags" resetflags="true" tag="13" time="-1" type="ce_set_flags" />
+        <trigger is_alive="true" name="filter" passtag="202" tag="207" time="-1" />
+        <trigger interaction="data/fightstyles/interact_invisiblewoman_victim" name="victim" next_eventtag="203" nodename="Power5_Victim_Explode" setowners="false" tag="202" time="-1" useeventvictim="true" />
+        <trigger name="flags" next_eventtag="204" resetflags="true" tag="203" time="-1" type="ce_set_flags" />
+        <trigger allow_actors="true" allow_non_actors="false" center_bolt="true" class="time_bomb" explosion_damage="%invwm_p5_expl_dmg" explosion_knockback="%invwm_p5_expl_kb" explosion_radius="77" group_to_affect="teammates" life="0.01" name="powerup" tag="204" time="-1" time_to_wait_to_process="0.01" />
+        <trigger name="victim_release" ownertime="0" time="0.99" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="inviswm_p6" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p6_power" fxlevel="1" name="effect_sound" sound="char/invisw_m/p6_power" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p6_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="powerusage" powerusage="%inviswm_p6_pwr" time="0.57" />
+        <trigger effect="char/invisw/p6_power" fxlevel="2" name="effect" time="0.57" />
+        <trigger class="callevents" fx_size_scale="%inviswm_p6_size" life="%inviswm_p6_life" name="powerup" time="0.57">
+            <functionevent function="deactivate" triggertag="12" />
+            <special_fx effect="char/invisw/p6_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger entity_name="FantasticShield" name="remove_powerups" tag="12" time="-1">
+            <special_fx effect="char/invisw/p6_aura" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger count="1" entity="FantasticShield" eventtagtocallonspawned="1" filename="ents_inviswn" inherit="relative_spawn" life="%inviswm_p6_life" maxinstances="1" name="FantasticShield" relative="self" scale="%inviswm_p6_size" setowneridtospawner="true" time="0.57" type="ce_atk_spawn_relative" />
+        <trigger allow_non_actors="true" class="force_field" effect="char/invisw/p6_impact" fxlevel="1" life="%inviswm_p6_life" name="powerup" sound_touch="char/invisw_m/p6_impact" tag="1" time="-1">
+            <affecter attribute="powerup_scope">
+                <scope scope_attack="projectile" />
+            </affecter>
+            <affecter affect_type="sum" attribute="deflect_projectiles" level="1" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="inviswm_p7" level="1" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p7_power" fxlevel="1" name="effect_sound" sound="char/invisw_m/p7_power" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p7_power" fxlevel="1" name="effect" time="0" />
+        <trigger name="powerusage" powerusage="%inviswm_p7_pwr" time="0.625" />
+        <trigger effect="char/invisw/p7_power" fxlevel="2" name="effect" time="0.625" />
+        <trigger class="callevents" life="%inviswm_p7_life" name="powerup" tag_name="invwm_p7_inv" time="0.625">
+            <FunctionEvent function="activate" triggertag="1" />
+            <FunctionEvent function="deactivate" triggertag="2" />
+            <affecter affect_type="sum" attribute="invisible" level="1" />
+            <affecter affect_type="sum" attribute="atk_critical" level="%inviswm_p7_crit" />
+            <affecter affect_type="sum" attribute="atk_stun_victim" level="%inviswm_p7_stun">
+                <scope scope_criticals="true" />
+            </affecter>
+            <special_fx effect="char/invisw/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/invisw/p7_aura" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger critical="true" name="part_disappear" tag="1" time="-1" />
+        <trigger critical="true" name="part_reappear" tag="2" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="inviswm_p8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Cyclone" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Ultimate Overload" />
+        <require cat="xtreme" level="1" />
+        <trigger alternate="true" life="-1" name="xtreme_start" time="0" worldspeed="0.5" />
+        <trigger bolt="Bip01 L Hand" effect="char/invisw/p8_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/invisw/p8_power" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 Pelvis" effect="char/invisw/p8_power" fxlevel="2" name="effect_sound" sound="char/invisw_m/p8_power" time="0.24" />
+        <trigger bolt="Bip01 Pelvis" effect="char/invisw/p8_power" fxlevel="3" name="effect" time="0.33" />
+        <trigger damage="%inviswm_p8_dmg" damagescale="none" damagetype="dmg_physical" knockback="190" maxrange="600" name="radial" time="0.33" victimeventtag="1">
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger maxdangerrating="10" name="filter" noboss="true" passtag="2" tag="1" time="-1" />
+        <trigger failtag="3" is_stunned="true" name="filter" passtag="20" tag="2" time="-1" />
+        <trigger class="atk_instant_pct" life="0.01" name="powerup" percent="0.5" selfonly="true" tag="20" time="-1">
+            <damageMod name="dmgmod_ignore_def" />
+        </trigger>
+        <trigger life="%inviswm_p8_life" name="powerup" shared_tag="shared_stunned" tag="3" time="-1" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

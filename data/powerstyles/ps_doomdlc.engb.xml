@@ -1,0 +1,418 @@
+<PowerStyle iconfile="textures/ui/doom_icons.png">
+    <event damagescale="difficulty" name="teleport_data_store" type="ce_atk_teleport_mark_start" />
+    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility" />
+    <event entity="doom_p3_lightning" filename="ents_doom" groundheightonfail="true" inherit="relative_spawn" name="spawn_lightning" relative="target" type="ce_atk_spawn_relative" />
+    <event inherit="powerup" life="2" name="electrified" no_stack="true">
+        <special_fx bolt="Bip01 L Hand" bolt2="Bip01 Neck" effect="char/doom/special_grab" fxlevel="2" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Neck" effect="char/doom/special_grab" fxlevel="2" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 L Toe0" bolt2="Bip01 Pelvis" effect="char/doom/special_grab" fxlevel="2" how_used="primary" never_cycle="true" />
+        <special_fx bolt="Bip01 R Toe0" bolt2="Bip01 Pelvis" effect="char/doom/special_grab" fxlevel="2" how_used="primary" never_cycle="true" />
+    </event>
+    <FightMove airbornemovement="true" animenum="ea_fly_idle" energypersecond="%flight_pwr" fallback="jumploop" handler="ch_flying" lockchaining="false" name="flying" noncombat="true" powerup_tag="flying">
+        <require cat="skill" item="flight" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/doom/ability_fly" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/doom/ability_fly" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 Pelvis" effect="char/doom/ability_fly" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="flying" />
+        <chain action="attack" result="flymelee1" />
+        <chain action="smash" result="jumpsmash" />
+        <chain action="guard" result="guarddecide" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" lockangles="true" name="attacklight1" playspeed="1.3" startchaintime="0.5">
+        <trigger movement="0" name="slide" time="0.0" />
+        <trigger name="whoosh_heavy" time="0.27" />
+        <trigger bolt="Bip01 R Hand" name="trail" time="0.27" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.1" fallback="attacklight1" lockangles="true" name="attacklight2" playspeed="1.25" startchaintime="0.6">
+        <trigger movement="0" name="slide" time="0.0" />
+        <trigger bolt="Bip01 R Hand" life="0.5" name="trail" time="0.22" />
+        <trigger name="whoosh_heavy" time="0.22" />
+        <trigger name="punch" time="0.33" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.15" fallback="attacklight2" lockangles="true" name="attacklight3" playspeed="1.25">
+        <trigger movement="30" name="slide" time="0.25" />
+        <trigger name="whoosh_heavy" time="0.27" />
+        <trigger bolt="Bip01 L Hand" life="0.5" name="trail" time="0.27" />
+        <trigger name="punch" time="0.36" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.714">
+        <trigger name="whoosh_heavy" time="0.29" />
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.3" />
+        <trigger knockback="0" name="kick_heavy" time="0.42" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" lockangles="true" name="attackstun_finish">
+        <trigger name="whoosh_heavy" time="0.22" />
+        <trigger bolt="Bip01 R Hand" life="0.5" name="trail" time="0.25" />
+        <trigger knockback="0" name="kick_heavy" time="0.33">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.76">
+        <trigger name="whoosh_heavy" time="0.24" />
+        <trigger movement="20" name="slide" time="0.29" />
+        <trigger bolt="Bip01 L Hand" life="0.3" name="trail" time="0.25" />
+        <trigger bolt="Bip01 R Hand" life="0.3" name="trail" time="0.25" />
+        <trigger charge="1.0" name="charge" time="0" />
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.32">
+            <damagemod name="dmgmod_popup" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger name="punch" time="0.35" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" lockangles="true" name="attacktrip2">
+        <event inherit="kick" knockback="0" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger name="whoosh_light" time="0.14" />
+        <trigger arc="67" height="-10" name="sweep" time="0.29" />
+        <trigger bolt="Bip01 R Hand" life="0.5" name="trail" time="0.25" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.05" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1.0" powerup_tag="kbatk" startchaintime="0.4">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0.0" />
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char\doom\special_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1" />
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0.0">
+            <special_fx bolt="Bip01 R Hand" effect="char\doom\special_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove animenum="ea_attack_knockback1" handler="ch_hold_smash" lockchaining="false" locktransitionangles="true" name="attack_knockback_charge" noautoaim="true" powerup_tag="kbatk" priority="3" turnrate="0.5">
+        <trigger loop_type="update" name="sound" sound="common/melee/kb_charge_loop" tag="10" time="-1" />
+        <chain action="idle" result="attackknockback2" />
+        <chain action="groundsmash" result="groundattackknockback2" />
+        <chain action="special" result="attack_knockback_charge" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0.1" endchaintime="1.0" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0.0" />
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.14" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.14" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.14" />
+        <trigger movement="30" name="slide" targetdistance="50" time="0.14" />
+        <trigger failtag="11" min_charge="1.0" name="filter" passtag="10" time="0.28" />
+        <trigger damage="3 4" knockback="190" maxrange="84" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_atk_roll" />
+            <damagemod name="dmgmod_ground" />
+        </trigger>
+        <trigger damage="2 3" knockback="190" maxrange="72" name="kick" tag="11" time="-1" />
+        <trigger bolt="Bip01 R Hand" life="0.43" name="trail" time="0.07" />
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.28" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight1" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_power11" endchaintime="1.0" fallback="grab_smash" handler="ch_grab_hold_base" is_power="true" lockangles="true" lockspeed="true" name="grabstart" noautoaim="true" playspeed="1.0" priority="uninterruptable" startchaintime="0.9">
+        <trigger name="stop" time="0.0" />
+        <trigger name="verify_victim_alive" time="0.0" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Doomdlc_Victim" name="victim" next_eventtag="21" nodename="doom_grab_victim1" offset="-1 0 0" time="0.0" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="36 0 0" tag="21" time="-1" />
+        <trigger name="sound" sound="char/doom_m/p5_charge" time="0.15" />
+        <trigger count="set" name="count" time="0" value="6" />
+        <chain action="idle" result="grab_loop" />
+        <chain action="attack" result="grab_loop" />
+        <chain action="smash" result="grab_smash" />
+    </FightMove>
+    <FightMove animenum="ea_power12" blendtime="0.15" endchaintime="1.0" fallback="grab_end" lockangles="true" lockspeed="true" name="grab_loop" noautoaim="true" playspeed="0.8" priority="uninterruptable" startchaintime="0.9">
+        <trigger fail_node="grab_end" name="verify_victim_alive" time="0.0" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Doomdlc_Victim" name="victim" next_eventtag="21" nodename="doom_grab_victim2" offset="-1 0 0" time="0.0" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="36 0 0" tag="21" time="-1" />
+        <require cat="counter" level="1" />
+        <trigger count="add" name="count" time="0.0" value="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/special_grab" fxlevel="1" name="effect" time="0.05" />
+        <trigger name="sound" sound="char/doom_m/grab_smash" time="0.05" />
+        <trigger execute_against="victim" name="otherevent" othertag="1" othertag2="2" time="0.05" />
+        <trigger damage="4 5" damagescale="normal" damagetype="dmg_electricity" name="self_attack" tag="1" time="-1" type="ce_atk_self">
+            <damageMod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger name="electrified" tag="2" time="-1">
+            <special_fx bolt="Bip01 Head" effect="char/doom/special_grab" fxlevel="2" how_used="activation" never_cycle="true" />
+        </trigger>
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="0" name="punch" time="0.05">
+            <damagemod name="dmgmod_no_pain" />
+        </trigger>
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="0" name="punch" time="0.15">
+            <damagemod name="dmgmod_no_pain" />
+        </trigger>
+        <chain action="attack" result="grab_loop" />
+        <chain action="smash" result="grab_smash" />
+        <chain action="idle" result="grab_end" />
+    </FightMove>
+    <FightMove animenum="ea_power14" blendtime="0.05" endchaintime="1.0" fallback="grab_smash_end" lockangles="true" lockspeed="true" name="grab_end" noautoaim="true" playspeed="0.9" priority="uninterruptable" startchaintime="0.8">
+        <trigger critical="on_exit" interactionend="true" name="victim_release" time="-1" />
+        <trigger name="verify_victim_alive" time="0.0" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Doomdlc_Victim" name="victim" next_eventtag="21" nodename="doom_grab_victim5" offset="-1 0 0" time="0.0" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="36 0 0" tag="21" time="-1" />
+        <trigger damage="2 3" fxlevel="2 4" hiteffect="base/hit/hit_default" hitenemyeffect="base/hit/hit_default" knockback="k3" name="punch" time="0.9">
+            <damagemod name="dmgmod_auto_knockback" />
+            <damagemod name="dmgmod_no_pain" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power13" blendtime="0" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" locktransitionangles="true" name="grab_smash" priority="uninterruptable">
+        <trigger name="stop" time="0.0" />
+        <trigger critical="on_exit" interactionend="true" name="victim_release" time="-1" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Doomdlc_Victim" name="victim" next_eventtag="22" nodename="doom_grab_victim3" offset="-1 0 0" time="0.0" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="36 0 0" tag="22" time="-1" useeventvictim="true" />
+        <trigger arc="180" damage="2 3" damagescale="difficulty" fxlevel="3" hiteffect="char/pildrv/p1_power" index="2" maxrange="30" name="punch" time="0.4" victimeventtag="200">
+            <damagemod name="dmgmod_stun" />
+        </trigger>
+        <trigger name="whoosh_heavy" time="0.45" />
+        <trigger effect="char/pildrv/p1_power" fxlevel="2" name="effect" tag="200" time="-1" />
+        <trigger critical="true" name="victim_release" ownertime="1.0" time="0.55" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="4.0" aitype="projectile" animenum="ea_power1" icon="0" is_power="true" locktransitionangles="true" name="power1" playspeed="0.7" priority="5" startchaintime="0.6" turnrate="0.5">
+        <require cat="skill" item="doom_power1" level="1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/doom_m/p1_charge" time="0.0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="powerusage" powerusage="%doom_p1_pwr" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/doom/p1_power" fxlevel="3" name="effect_sound" next_eventtag="101" sound="char/doom_m/p1_charge_end" tag="100" time="-1" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p1_power" fxlevel="3" name="effect" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="doom_p1_link" time="0.0">
+            <special_fx bolt="Bip01 L Hand" effect="char/doom/p1_power" fxlevel="2" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/doom/p1_power" fxlevel="2" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="doom_p1_link" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/doom_m/p1_charge" time="-1" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectile" always_target="true" animenum="ea_power1_loop" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" noautoaim="true" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="doom_p1_link" time="-1" />
+        <chain action="samepowerhold" result="power1_loop" />
+        <chain action="idle" result="power1_release" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power1_end" combotextfinisher="Blast" combotextstarter="Doom" icon="0" is_power="true" name="power1_release" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0.0" />
+        <trigger critical="true" name="powerup" remove_tag="doom_p1_link" time="0.24" />
+        <trigger effect="char/doom/p1_power" fxlevel="4" name="effect_sound" sound="char/doom_m/p1_power" time="0.24" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/doom_m/p1_charge" time="0.24" />
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="35 -4 47" attacktype="projectile" damage="%doom_p1_dmg" damagescale="none" damagetype="dmg_energy" entity="doom_p1_proj" explodedamage="%doom_p1_dmg" exploderadius="%doom_p1_rad" filename="ents_doom" fulltargeting="true" knockback="245" name="projectile" speed="650" tag="20" targetable="true" time="0.24">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="samepowerclick" result="power1" />
+    </FightMove>
+    <FightMove aireusetime="2.0" aitype="beamanyrange" animenum="ea_power2" combotextfinisher="Doom" combotextstarter="Mask of" icon="1" is_power="true" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="doom_power2" level="1" />
+        <trigger name="stop" time="0.0" />
+        <trigger name="sound" sound="char/doom_m/p2_charge" time="0.0" />
+        <trigger name="sound" sound="char/doom_m/p2_power" time="0.35" />
+        <trigger name="powerusage" powerusage="%doom_p2_pwr" time="0" />
+        <trigger chance="%doom_p2_chnc" class="atk_instant_pct" name="powerup" percent="1.0" remove_on_node_end="true" time="0.45" />
+        <trigger arc="0" attack_bone_angles="-85 -72 -10" attack_bone_pos="15 -1 46" attacktype="beam" beambolt="Bip01 Head" beameffect="char/doom/p2_power" damage="%doom_p2_dmg" damagescale="difficulty" damagetype="dmg_energy" fxlevel="1" hiteffect="char/doom/p2_impact" maxrange="800" name="beam" time="0.45" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="10" aitype="aoe" animenum="ea_power20" combotextfinisher="Detonation" combotextstarter="Doom" endchaintime="0.99" icon="4" is_power="true" name="power5" priority="5" startchaintime="0.95">
+        <require cat="skill" item="doom_power5" level="1" />
+        <trigger name="sound" sound="char/doom_m/p5_charge" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/doom/p5_power" fxlevel="1" name="effect" time="0.6" />
+        <trigger checksolo="true" name="teleport_data_store" tag="2" time="0" />
+        <trigger effect="char/doom/p5_power" fxlevel="2" name="effect" time="0.733" />
+        <trigger arc="180" attacktype="punch" damage="%doom_p5_dmg" damagescale="none" damagetype="dmg_physical" maxrange="100" name="punch" offset="37" powerusage="%doom_p5_pwr" time="0.733">
+            <damageMod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger bolt="Bip01 Pelvis" effect="char/doom/p5_teleport" fxlevel="1" name="effect" time="0.95" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" blendtime="0" handler="ch_move_tele_land" icon="4" lockangles="true" name="teleport_in" powerup_tag="nightcrawler_attack" priority="5">
+        <trigger attacktype="direct" maxrange="180" name="teleport_attack" powerusage="%doom_p5_pwr" tag="1" time="0.0" />
+        <trigger effect="char/doom/p5_teleport" fxlevel="2" name="effect_sound" sound="char/doom_m/p6_power" time="0.0" />
+        <trigger name="set_visible" time="0.0" visible="true" />
+        <trigger name="whoosh_heavy" time="0.5" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power5_start" endchaintime="0.95" handler="ch_tele_jump" icon="4" name="teleportfailedstrike" priority="5" startchaintime="0.9">
+        <trigger name="sound" sound="char/doom_m/p6_power" time="0.9" />
+        <trigger name="set_visible" time="0.9" visible="false" />
+        <chain action="Idle" result="teleport_in" />
+    </FightMove>
+    <FightMove animenum="ea_power5_end" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" icon="4" lockangles="true" name="ea_power5_end" noautoaim="true" priority="5" startchaintime="0.9">
+        <trigger cleardata="true" critical="true" name="teleport_data_store" set_visible="true" time="0.0" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+    </FightMove>
+    <FightMove aireusetime="5.0" aitype="rangednolos" animenum="ea_power4" combotextfinisher="Arc" combotextstarter="Doom" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4" powerup_tag="doom_p4" priority="5">
+        <require cat="skill" item="doom_power4" level="1" />
+        <trigger name="powerusage" powerusage="%doom_p4_pwr" time="0.0" />
+        <trigger loop_timeout="5.0" loop_type="start" name="sound" sound="char/doom_m/p4_power" time="0.23" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" tag_name="doom_p4_link" time="0.23">
+            <special_fx bolt="Bip01 L Hand" bolt2="Bip01 R Hand" effect="char/doom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 L Hand" effect="char/doom/p4_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger bolt="Bip01 R Hand" bolt2="Bip01 L Hand" effect="char/doom/p4_charge" fxlevel="2" time="0.5" />
+        <trigger bolt="Bip01 R Hand" bolt2="Bip01 L Hand" effect="char/doom/p4_charge" fxlevel="2" time="0.5" />
+        <chain action="idle" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="8.0" animenum="ea_power4_loop" blendtime="0" combotextfinisher="Arc" combotextstarter="Doom" energypersecond="%doom_p4_pps" handler="ch_storm_chain_lightning" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_loop" powerup_tag="doom_p4" priority="5" startchaintime="0.4">
+        <event allow_non_actors="true" attacks_per_second="1" class="harming" damagetype="dmg_electricity" inherit="electrified" life="1" name="chain_damage">
+            <damageMod remove="dmgmod_no_pain" />
+            <damageMod name="dmgmod_weld" />
+            <damageMod name="dmgmod_energize" />
+            <damageMod name="dmgmod_no_hiteffect" />
+        </event>
+        <trigger name="lightning_data" numtargets="%doom_p4_num_att" tag="1" time="-1" type="ce_lightning_data" usebothhands="true" />
+        <trigger damage="0" damagetype="dmg_electricity" name="attackme" tag="100" time="-1" type="ce_atk_self" victimeventtag="103">
+            <damageMod name="dmgmod_no_damage" />
+            <damageMod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger damage="%doom_p4_dmgc" name="chain_damage" tag="101" time="-1" />
+        <trigger effect="char/doom/p4_chain" fxlevel="1" name="effect" tag="102" time="-1" />
+        <trigger damage="%doom_p4_dmg" name="chain_damage" tag="103" time="-1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" loop_timeout="1.0" loop_type="start" name="sound" sound="char/doom_m/p4_power" time="0.0" />
+        <chain action="idle" result="power4_end" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove aireusetime="5.0" animenum="ea_power4_end" icon="3" is_power="true" lockangles="true" locktransitionangles="true" name="power4_end" powerup_tag="doom_p4" priority="5">
+        <trigger loop_type="stop" name="sound" sound="char/doom_m/p4_power" time="0.0" />
+        <trigger name="powerup" remove_tag="doom_p4_link" time="0.42" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="5.0" aitype="rangednolos" animenum="ea_power3" combotextfinisher="Doom" combotextstarter="Curse of" icon="2" is_power="true" lockangles="true" name="power3" playspeed="1.5" powerup_tag="doom_ln" priority="5">
+        <require cat="skill" item="doom_power3" level="1" />
+        <trigger name="powerup" remove_on_node_end="true" time="0.0">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.25" scope_victimlying="true" />
+        </trigger>
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p3_power" fxlevel="2" name="effect_sound" sound="char/doom_m/p1_power" time="0.0" volume="0.5" />
+        <trigger name="sound" pitch_range="200" sound="char/doom_m/p3_power" time="0.45" />
+        <trigger attackerheight="false" attacktype="direct" count="1" damage="%doom_p3_dmg" damagelevel="1" damagescale="none" damagetype="dmg_electricity" maxrange="190" name="spawn_lightning" powerusage="%doom_p3_pwr" tag="1" time="0.45" victimeventtag="20">
+            <damageMod name="dmgmod_energize" />
+            <damageMod name="dmgmod_weld" />
+            <damageMod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger class="harming" damage="%doom_p3_dot_dmg" damagetype="dmg_electricity" life="%doom_p3_dot_lif" name="powerup" tag="20" time="-1" victimeventtag="100" />
+        <trigger name="electrified" tag="100" time="-1" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="debuff" animenum="ea_power7" combotextfinisher="Horror" combotextstarter="Dreadful" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="doom_power7" level="1" />
+        <trigger name="sound" sound="char/doom_m/p7_power" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p7_power" fxlevel="1" name="effect" time="0.3" />
+        <trigger effect="char/doom/p7_power" fxlevel="2" name="effect" time="0.3" />
+        <trigger apply_ally="all" life="%doom_p7_life" name="powerup" no_shadow="true" powerusage="%doom_p7_pwr" time="0.46">
+            <special_fx effect="char/doom/p7_aura" fxlevel="1" how_used="primary" />
+            <special_fx effect="char/doom/p7_aura" fxlevel="2" how_used="deactivate" />
+            <affecter attribute="critical" level="%doom_p7_cri" />
+        </trigger>
+        <trigger apply_enemy="near" apply_self="false" life="%doom_p7_life" name="powerup" time="0.46">
+            <affecter attribute="fear">
+                <scope scope_affecter="def_mind_control" scope_affecter_reverse="true" />
+            </affecter>
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_fear" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="doom_power6" level="1" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p6_power" fxlevel="1" name="effect_sound" sound="char/doom_m/p6_power" time="0.0" />
+        <trigger bolt="Bip01 L Hand" effect="char/doom/p6_power" fxlevel="1" name="effect" time="0.0" />
+        <trigger name="powerusage" powerusage="%doom_p6_pwr" time="0.57" />
+        <trigger effect="char/doom/p6_power" fxlevel="2" name="effect" time="0.57" />
+        <trigger class="callevents" fx_size_scale="%doom_p6_size" life="%doom_p6_life" name="powerup" time="0.57">
+            <functionevent function="deactivate" triggertag="12" />
+            <special_fx effect="char/doom/p6_aura" fxlevel="1" how_used="primary" />
+        </trigger>
+        <trigger entity_name="DoomShield" name="remove_powerups" tag="12" time="-1">
+            <special_fx effect="char/doom/p6_aura" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger class="harming" damage="%doom_p6_dmg" damagetype="dmg_electricity" life="%doom_p6_life" name="powerup" share_enemies="true" share_life="1.0" share_physents="false" share_radius="70" time="0.57">
+            <affecter attribute="powerup_scope" share_filter="shared" />
+        </trigger>
+        <trigger count="1" entity="DoomShield" eventtagtocallonspawned="1" filename="ents_doom" inherit="relative_spawn" life="%doom_p6_life" maxinstances="1" name="DoomShield" relative="self" scale="%doom_p6_size" setowneridtospawner="true" time="0.57" type="ce_atk_spawn_relative" />
+        <trigger allow_non_actors="true" class="force_field" effect="char/invisw/p6_impact" fxlevel="1" life="%doom_p6_life" name="powerup" sound_touch="char/doom_m/p6_impact" tag="1" time="-1">
+            <affecter attribute="powerup_scope">
+                <scope scope_attack="projectile" />
+            </affecter>
+            <affecter affect_type="sum" attribute="deflect_projectiles" level="1.0" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="doom_power8" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="9" time="0.0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power8" />
+    </FightMove>
+    <FightMove aitype="aoe" animenum="ea_power8" combotextfinisher="Doomsday" icon="7" is_power="true" lockangles="true" lockspeed="true" name="power8" playspeed="3.5" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="!BADREF:@HERO_DOOM@TEAM_XTREME_MSG" name="team_xtreme_msg" time="0" title="Doomsday" />
+        <event arc="180" attacktype="blast" damage="%doom_p8_dmg" damagescale="difficulty" inherit="punch" knockback="600" name="p_radius">
+            <damageMod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger bolt="Bip01 L Hand" effect="char/doom/p8_charge" fxlevel="1" name="effect_sound" sound="char/doom_m/p6_power" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p8_charge" fxlevel="1" name="effect" time="0.0" />
+        <trigger bolt="Bip01 R Hand" effect="char/doom/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Hand" effect="char/doom/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Hand" effect="char/doom/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 L Toe0" effect="char/doom/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger bolt="Bip01 Pelvis" bolt2="Bip01 R Toe0" effect="char/doom/p8_charge" fxlevel="2" name="effect" time="0.0" />
+        <trigger effect="char/doom/p8_power" fxlevel="1" name="effect_sound" time="0.15" />
+        <trigger loop_type="start" name="sound" sound="char/doom_m/p4_power" time="0.35" />
+        <trigger loop_type="stop" name="sound" sound="char/doom_m/p4_power" time="1.0" />
+        <trigger name="sound" sound="char/doom_m/p5_charge" time="1.0" />
+        <trigger effect="char/doom/p8_power" fxlevel="2" name="effect_sound" sound="char/doom_m/p3_power" time="0.7" />
+        <trigger damage="%doom_p8_dmg" maxrange="75" name="p_radius" tag="2" time="0.7" />
+        <trigger damage="%doom_p8_dmg" knockback="400" maxrange="125" name="p_radius" tag="3" time="0.75" />
+        <trigger damage="%doom_p8_dmg" knockback="200" maxrange="175" name="p_radius" tag="4" time="0.8" />
+        <trigger critical="true" end="true" name="xtreme_start" time="1.0" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>

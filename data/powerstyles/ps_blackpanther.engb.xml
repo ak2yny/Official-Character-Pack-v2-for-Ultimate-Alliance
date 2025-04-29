@@ -1,0 +1,384 @@
+<PowerStyle iconfile="textures/ui/blackpanther_icons.png">
+    <event inherit="skinsegment" name="show_left_dagger" show="true" skinsegment="dagger_l_segment"/>
+    <event inherit="skinsegment" name="hide_left_dagger" show="false" skinsegment="dagger_l_segment"/>
+    <event inherit="skinsegment" name="show_right_dagger" show="true" skinsegment="dagger_r_segment"/>
+    <event inherit="skinsegment" name="hide_right_dagger" show="false" skinsegment="dagger_r_segment"/>
+    <event inherit="skinsegment" name="show_daggers" show="true" show2="true" skinsegment="dagger_l_segment" skinsegment2="dagger_r_segment"/>
+    <event inherit="skinsegment" name="hide_daggers" show="false" show2="false" skinsegment="dagger_l_segment" skinsegment2="dagger_r_segment"/>
+    <event name="set_visible" type="ce_force_visibility"/>
+    <FightMove animenum="ea_power9" endchaintime="1" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" noautoaim="true" priority="uninterruptable" startchaintime="0.9">
+        <trigger attackerface="true" doslidemove="true" interaction="data/fightstyles/interact_black_panther_victim" name="victim" nodename="grabsmashvictim" targetdistance="22" time="0" victimface="true"/>
+        <trigger name="victim_release" ownertime="1" time="0.5"/>
+        <trigger angle="180" damage="4 5" name="punch" time="0.65">
+            <damageMod name="dmgmod_ground"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" lockangles="true" name="attacklight1" priority="3" startchaintime="0.54">
+        <trigger name="show_right_dagger" time="0.08"/>
+        <trigger name="whoosh_light" time="0.25"/>
+        <trigger movement="12" name="slide" time="0.29"/>
+        <trigger bolt="fx01" life="0.25" name="trail" time="0.25"/>
+        <trigger name="punch" time="0.31"/>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.8"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight2"/>
+        <chain action="groundattack" result="groundattack2"/>
+        <chain action="smash" result="attackstun1"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0.05" lockangles="true" name="attacklight2" priority="3" startchaintime="0.64">
+        <trigger name="show_right_dagger" time="0"/>
+        <trigger name="show_left_dagger" time="0.1"/>
+        <trigger name="whoosh_light" time="0.3"/>
+        <trigger bolt="fx01" life="0.3" name="trail" time="0.28"/>
+        <trigger bolt="fx02" life="0.3" name="trail" time="0.28"/>
+        <trigger name="punch" time="0.43"/>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.93"/>
+        <trigger critical="on_exit" name="hide_left_dagger" time="0.79"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight3"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="smash" result="popupattack2"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0.05" name="attacklight3">
+        <trigger name="show_right_dagger" time="0"/>
+        <trigger name="show_left_dagger" time="0"/>
+        <trigger name="whoosh_light" time="0.3"/>
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.31"/>
+        <trigger bolt="Bip01 L Toe0" life="0.3" name="trail" time="0.31"/>
+        <trigger maxrange="72" name="kick" time="0.44"/>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.25"/>
+        <trigger critical="on_exit" name="hide_left_dagger" time="0.12"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="null"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.6">
+        <trigger name="show_right_dagger" time="0"/>
+        <trigger name="whoosh_heavy" time="0.29"/>
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.3"/>
+        <trigger bolt="Bip01 L Toe0" life="0.32" name="trail" time="0.34"/>
+        <trigger knockback="0" maxrange="64" name="kick_heavy" time="0.41"/>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.93"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="smash" result="attackstun_finish"/>
+        <chain action="powers" result="powers"/>
+        <chain action="move" result="jump"/>
+        <chain action="attack" result="attacktrip2"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" lockangles="true" name="attackstun_finish">
+        <trigger name="show_right_dagger" time="0"/>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.2"/>
+        <trigger name="whoosh_heavy" time="0.4"/>
+        <trigger bolt="Bip01 R Toe0" life="0.45" name="trail" time="0.35"/>
+        <trigger bolt="Bip01 L Toe0" life="0.45" name="trail" time="0.35"/>
+        <trigger knockback="0" maxrange="60" name="kick_heavy" time="0.5">
+            <damagemod name="dmgmod_stun"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+        <chain action="move" result="jump"/>
+        <chain action="smash" result="null"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_popup" blendtime="0.05" handler="ch_popup_attack" lockangles="true" name="popupattack2" priority="5" startchaintime="0.66">
+        <trigger name="show_right_dagger" time="0"/>
+        <trigger name="show_left_dagger" time="0"/>
+        <trigger name="whoosh_heavy" time="0.2"/>
+        <trigger movement="20" name="slide" time="0.22"/>
+        <trigger bolt="fx01" life="0.33" name="trail" time="0.15"/>
+        <trigger charge="1" name="charge" time="0"/>
+        <trigger knockback="0" maxrange="50" name="punch_heavy" time="0.3">
+            <damagemod name="dmgmod_popup"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger critical="on_exit" name="hide_right_dagger" time="0.88"/>
+        <trigger critical="on_exit" name="hide_left_dagger" time="0.05"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="move" result="jump"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" blendtime="0.1" handler="ch_hold_smash" lockangles="true" name="attackheavy1" playspeed="1" powerup_tag="kbatk" startchaintime="0.8">
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="common/melee/kb_charge" time="0"/>
+        <trigger charge="0" charge_time="1" charged_eventtag="100" name="charge" tag="1" time="0"/>
+        <trigger bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_loop" tag="100" time="-1"/>
+        <trigger bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="102" sound="common/melee/kb_charge_loop" tag="101" time="-1"/>
+        <trigger name="sound" sound="common/melee/kb_charge_done" tag="102" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag="2" tag_name="knockback_link" time="0">
+            <special_fx bolt="Bip01 L Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Toe0" effect="base/hit/hit_knockback_charge" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="idle" result="attackknockback2"/>
+        <chain action="groundsmash" result="groundattackknockback2"/>
+        <chain action="special" result="attack_knockback_charge"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_attack_knockback2" blendtime="0" endchaintime="1" lockangles="true" name="attackknockback2" powerup_tag="kbatk" priority="5" startchaintime="0.8">
+        <trigger charge_type="stop" name="charge" time="0"/>
+        <trigger name="sound" sound="common/melee/dmg_knockback" time="0.15"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge_loop" time="0.15"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="common/melee/kb_charge" time="0.15"/>
+        <trigger movement="20" name="slide" targetdistance="50" time="0.15"/>
+        <trigger failtag="11" min_charge="1" name="filter" passtag="10" time="0.25"/>
+        <trigger damage="3 4" knockback="190" maxrange="84" name="kick" tag="10" time="-1">
+            <damagemod name="dmgmod_auto_knockback"/>
+            <damagemod name="dmgmod_no_atk_roll"/>
+            <damagemod name="dmgmod_ground"/>
+        </trigger>
+        <trigger damage="2 3" knockback="190" maxrange="84" name="kick" tag="11" time="-1"/>
+        <trigger bolt="Bip01 R Toe0" life="0.3" name="trail" time="0.15"/>
+        <trigger bolt="Bip01 L Toe0" life="0.4" name="trail" time="0.15"/>
+        <trigger critical="true" name="powerup" remove_tag="knockback_link" time="0.25"/>
+        <chain action="idle" result="idle"/>
+        <chain action="guard" result="null"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="blocking" result="blocking"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power1" icon="0" is_power="true" name="power1" playspeed="1" powerup_tag="blackp_p1" priority="5" startchaintime="0.4">
+        <require cat="skill" item="panther_p1" level="1"/>
+        <trigger name="powerusage" powerusage="%panther_p1_pwr" time="0"/>
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/blackp_m/p1_charge" time="0"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0.9"/>
+        <trigger bolt="Bip01 L Hand" effect="char/blackp/p1_power" fxlevel="2" name="effect_sound" next_eventtag="101" sound="common/melee/kb_charge_done" tag="100" time="-1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/blackp/p1_power" fxlevel="2" name="effect" tag="101" time="-1"/>
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="blackp_p1_link" time="0.9">
+            <special_fx bolt="Bip01 L Hand" effect="char/blackp/p1_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+            <special_fx bolt="Bip01 R Hand" effect="char/blackp/p1_power" fxlevel="1" how_used="primary" never_cycle="true"/>
+        </trigger>
+        <chain action="Idle" result="power1_release"/>
+        <chain action="samepowerhold" result="power1_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power1_loop" icon="1" is_power="true" lockchaining="false" name="power1_loop" powerup_tag="blackp_p1" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <chain action="Idle" result="power1_release"/>
+        <chain action="samepowerhold" result="power1_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power1_end" combotextfinisher="Slash" combotextstarter="Wakandan" icon="1" is_power="true" name="power1_release" powerup_tag="blackp_p1" priority="5">
+        <trigger charge_type="stop" critical="true" name="charge" time="0"/>
+        <trigger name="sound" sound="char/blackp_m/p1_power" time="0"/>
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/blackp_m/p1_charge" time="0"/>
+        <trigger effect="char/blackp/p1_power" fxlevel="3" name="effect" time="0.25"/>
+        <trigger critical="true" name="powerup" remove_tag="blackp_p1_link" time="0.34"/>
+        <trigger arc="%panther_p1_arc" damage="%panther_p1_dmg" damagescale="none" damagetype="dmg_blade" name="radial" time="0.35"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power2" combotextfinisher="Blades" combotextstarter="Power" icon="1" is_power="true" lockangles="true" name="power2" priority="5">
+        <require cat="skill" item="panther_p2" level="1"/>
+        <trigger name="powerup" powerusage="%panther_p2_pwr" remove_on_node_end="true" time="0">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.5" scope_victimbleeding="true"/>
+        </trigger>
+        <trigger effect="char/blackp/p2_power" fxlevel="1" name="effect_sound" sound="char/blackp_m/p2_power" time="0.35"/>
+        <trigger name="show_right_dagger" time="0.2"/>
+        <trigger actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="18 19 33" attacktype="projectile" count="%panther_p2_cnt" damage="%panther_p2_dmg" damagescale="none" damagetype="dmg_energy" entity="energy_dagger" filename="ents_blackpanther" fulltargeting="false" maxrange="800" name="projectile" pierce="false" speed="600" spread="%panther_p2_arc" targetable="false" time="0.41" useboltangles="false"/>
+        <trigger critical="true" name="hide_right_dagger" time="0.41"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="5" aitype="aoe" animenum="ea_power3" fallback="attacklight1" icon="2" is_power="true" name="power3" powerup_tag="panther_power3" priority="5">
+        <require cat="skill" item="panther_p3" level="1"/>
+        <trigger name="powerusage" powerusage="%panther_p3_pwr" time="0"/>
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger name="sound" sound="char/blackp_m/p3_power" time="0"/>
+        <trigger name="show_daggers" time="0.4"/>
+        <trigger critical="true" name="hide_daggers" time="-1"/>
+        <chain action="idle" result="power3_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power14" combotextfinisher="Whirlwind" combotextstarter="Dissecting" energypersecond="%panther_p3_pwr" fallback="attacklight1" handler="ch_ngtmovingboltons" is_power="true" lockangles="false" name="power3_loop" playspeed="1.5" powerup_tag="panther_power3" priority="5" turnrate="0.4">
+        <trigger button="samepowerhold" name="button_hint" time="0"/>
+        <trigger effect="char/blackp/p3_power" loop_timeout="2" loop_type="start" name="effect_sound" sound="char/blackp_m/p3_loop" time="0"/>
+        <trigger apply_chance="%panther_p3_chnc" class="add_harming" damage="%panther_p3_bld" name="powerup" remove_on_node_end="true" time="0"/>
+        <event arc="180" damage="%panther_p3_dmg" damagelevel="2" damagescale="none" damagetype="dmg_blade" inherit="punch_heavy" knockback="120" maxrange="60" name="power_claws" tiles="true"/>
+        <trigger name="power_claws" time="0.15"/>
+        <trigger arc="180" index="1" maxrange="60" name="power_claws" time="0.15">
+            <damageMod name="dmgmod_no_actors"/>
+        </trigger>
+        <trigger critical="true" name="hide_daggers" time="-1"/>
+        <chain action="idle" result="power3_end"/>
+        <chain action="samepowerhold" result="power3_loop"/>
+    </FightMove>
+    <FightMove animenum="ea_power15" fallback="attacklight1" handler="ch_nightcrawlerboltons" is_power="true" lockchaining="false" name="power3_end" priority="5">
+        <trigger loop_type="stop" name="sound" sound="char/blackp_m/p3_loop" time="0"/>
+        <trigger name="sound" sound="char/blackp_m/p3_end" time="0"/>
+        <trigger critical="true" name="hide_daggers" time="0.85"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power4" combotextfinisher="Uppercut" combotextstarter="Devastating" icon="3" is_power="true" name="power4" priority="5">
+        <require cat="skill" item="panther_p4" level="1"/>
+        <trigger name="sound" sound="char/blackp_m/p4_power" time="0.49"/>
+        <trigger name="powerup" powerusage="%panther_p4_pwr" remove_on_node_end="true" time="0">
+            <affecter attribute="atk_critical" level="%panther_p4_crit"/>
+        </trigger>
+        <trigger name="show_daggers" time="0.15"/>
+        <trigger effect="char/blackp/p4_power" fxlevel="1" name="effect" time="0.42"/>
+        <trigger damage="%panther_p4_dmg" damagescale="none" damagetype="damage_blade" name="punch" time="0.45"/>
+        <trigger critical="true" name="hide_daggers" time="0.85"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aireusetime="30" aitype="projectile" animenum="ea_power16" icon="4" is_power="true" lockangles="true" lockspeed="true" name="power5" priority="5">
+        <require cat="skill" item="panther_p5" level="1"/>
+        <trigger name="powerusage" powerusage="%panther_p5_pwr" time="0"/>
+        <trigger name="show_daggers" time="0.4"/>
+        <trigger effect="char/blackp/p5_power" fxlevel="1" name="effect_sound" sound="char/blackp_m/p5_power" time="0.9"/>
+        <trigger bolt="Bip01 L Hand" effect="char/blackp/p5_power" fxlevel="5" name="effect" time="0.9"/>
+        <trigger bolt="Bip01 R Hand" effect="char/blackp/p5_power" fxlevel="5" name="effect" time="0.9"/>
+        <trigger critical="true" name="hide_daggers" time="-1"/>
+        <chain action="idle" result="power5_air"/>
+    </FightMove>
+    <FightMove aireusetime="10" animenum="ea_power5" handler="ch_lunge" icon="4" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" locktransitionangles="true" name="power5_air" playspeed="1" priority="5">
+        <require cat="skill" item="panther_p5" level="1"/>
+        <trigger attackerface="true" name="victim" next_eventtag="101" nodename="knockbackstart" tag="100" time="-1" useeventvictim="true" victimface="true"/>
+        <trigger doslidemove="true" name="victim" offset="30 0 1" tag="101" time="-1" useeventvictim="true"/>
+        <trigger critical="true" name="hide_daggers" time="-1"/>
+        <chain action="idle" result="power5_end"/>
+        <chain action="special" result="power5_attack"/>
+    </FightMove>
+    <FightMove animenum="ea_power13" combotextfinisher="Ambush" combotextstarter="Leaping" handler="ch_grab_hold_base" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_attack" noautoaim="true" powerup_tag="panther_power5" priority="5" startchaintime="1">
+        <trigger execute_against="victim" name="otherevent" othertag="105" time="0"/>
+        <trigger name="velocity" tag="105" time="-1" up="-1000"/>
+        <trigger effect="char/blackp/p5_power" fxlevel="2" name="effect_sound" sound="char/blackp_m/p5_attack" time="0.128"/>
+        <trigger arc="20" damage="0" damagescale="none" damagetype="dmg_blade" index="3" name="punch" time="0.18">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_nodamage"/>
+        </trigger>
+        <trigger effect="char/blackp/p5_power" fxlevel="3" name="effect_sound" sound="char/blackp_m/p5_attack" time="0.23"/>
+        <trigger arc="20" damage="0" damagescale="none" damagetype="dmg_blade" index="4" name="punch" time="0.27">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_nodamage"/>
+        </trigger>
+        <trigger flag1="nopush" name="flags" time="0.3" type="ce_set_flags"/>
+        <trigger critical="on_exit" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags"/>
+        <trigger effect="char/blackp/p5_power" fxlevel="2" name="effect_sound" sound="char/blackp_m/p5_attack" time="0.384"/>
+        <trigger arc="20" damage="0" damagescale="none" damagetype="dmg_blade" index="5" name="punch" time="0.42">
+            <damageMod name="dmgmod_ground"/>
+            <damageMod name="dmgmod_nodamage"/>
+        </trigger>
+        <trigger effect="char/blackp/p5_power" fxlevel="4" name="effect" time="0.589"/>
+        <trigger effect="char/blackp/p5_power" fxlevel="4" name="effect" time="0.589"/>
+        <trigger name="sound" sound="char/blackp_m/p5_attack" time="0.65"/>
+        <trigger arc="20" damage="%panther_p5_dmg" damagescale="none" damagetype="dmg_blade" index="6" name="punch" time="0.65">
+            <damageMod name="dmgmod_ground"/>
+        </trigger>
+        <trigger effect="char/blackp/p5_end" fxlevel="2" name="effect_sound" sound="char/blackp_m/p5_end" time="0.65"/>
+        <trigger arc="180" damage="0" damagescale="none" index="2" knockback="%panther_p5_kb" maxrange="72" name="kick" time="0.65"/>
+        <trigger critical="true" name="hide_daggers" time="0.95"/>
+        <trigger critical="true" name="victim_release" ownertime="1" time="0.95"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_power5_end" icon="4" is_power="true" lockangles="true" lockspeed="true" locktransitionangles="true" name="power5_end" powerup_tag="panther_power5" priority="5" startchaintime="1">
+        <require cat="skill" item="panther_p5" level="1"/>
+        <trigger arc="180" damage="%panther_p5_dmg" damagescale="none" knockback="305" maxrange="72" name="kick" time="0.35"/>
+        <trigger effect="char/blackp/p5_end" fxlevel="2" name="effect_sound" sound="char/blackp_m/p5_end" time="0.35"/>
+        <trigger critical="true" name="hide_daggers" time="0.25"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buffself" animenum="ea_power6" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="panther_p6" level="1"/>
+        <trigger class="callevents" life="%panther_p6_lif" name="powerup" time="0">
+            <Functionevent function="damage" thirdparty="true" triggertag="20"/>
+            <affecter attribute="powerup_scope">
+                <scope scope_criticals="true"/>
+            </affecter>
+        </trigger>
+        <trigger name="sound" next_eventtag="21" sound="char/blackp_m/p6_crit" tag="20" time="-1"/>
+        <trigger class="atk_instant_pct" name="powerup" percent="0.33" selfonly="true" tag="21" time="-1"/>
+        <trigger add="cloaked" name="disapear" tag="10" time="-1" type="ce_renderfx"/>
+        <trigger name="appear" remove="cloaked" tag="11" time="-1" type="ce_renderfx"/>
+        <trigger effect="char/blackp/p6_power" fxlevel="1" name="effect" time="0.2"/>
+        <trigger bolt="Bip01 L Toe0" effect="char/blackp/p6_power" fxlevel="2" name="effect" time="0.2"/>
+        <trigger bolt="Bip01 R Toe0" effect="char/blackp/p6_power" fxlevel="2" name="effect" time="0.2"/>
+        <trigger effect="char/blackp/p6_power" fxlevel="3" name="effect_sound" sound="char/blackp_m/p6_power" time="0.4"/>
+        <trigger effect="char/blackp/p6_power" fxlevel="4" name="effect" time="0.5"/>
+        <trigger class="callevents" life="%panther_p6_lif" name="powerup" powerusage="%panther_p6_pwr" time="0.5">
+            <Functionevent function="activate" triggertag="10"/>
+            <Functionevent function="deactivate" triggertag="11"/>
+            <special_fx effect="char/blackp/p6_aura" fxlevel="1" how_used="primary"/>
+            <affecter attribute="invisible"/>
+            <affecter affect_type="scale" attribute="def_damage" level="%panther_p6_def"/>
+        </trigger>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+    <FightMove aicanuse="false" aitype="buff" animenum="ea_power7" icon="6" is_power="true" name="power7" priority="5">
+        <require cat="skill" item="panther_p7" level="1"/>
+        <trigger bolt="Bip01 R Hand" effect="char/blackp/p7_power" fxlevel="1" name="effect_sound" sound="char/blackp_m/p7_power" time="0.114"/>
+        <trigger bolt="Bip01 L Hand" effect="char/blackp/p7_power" fxlevel="1" name="effect" time="0.114"/>
+        <trigger name="show_daggers" time="0.114"/>
+        <trigger bolt="Bip01 L Hand" effect="char/blackp/p7_power" fxlevel="2" name="effect" time="0.428"/>
+        <trigger bolt="Bip01 R Hand" effect="char/blackp/p7_power" fxlevel="2" name="effect" time="0.457"/>
+        <trigger apply_ally="all" life="%panther_p7_lif" name="powerup" powerusage="%panther_p7_pwr" time="0.457">
+            <affecter affect_type="scale" attribute="def_damage" level="%panther_p7_dmg"/>
+            <affecter attribute="def_defense_rating" level="%panther_p7_def" scope_attack="projectile"/>
+            <special_fx effect="char/blackp/p7_aura" fxlevel="1" how_used="primary"/>
+        </trigger>
+        <trigger class="sense" enemy="true" life="%panther_p7_lif" name="powerup" time="0.457"/>
+        <trigger critical="on_exit" name="hide_daggers" time="0.886"/>
+        <chain action="Idle" result="idle"/>
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="7" is_power="true" lockangles="true" lockchaining="false" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="panther_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger name="xtreme_start" next_eventtag="1" only_non_looped="true" team_xtreme="2" time="0"/>
+        <trigger apply_ally="all" class="remove_on_events" life="-1" name="powerup" no_shadow="true" on_xtreme_end="true" tag="1" time="-1">
+            <affecter affect_type="scale" attribute="atk_damage" level="1.5"/>
+        </trigger>
+        <chain action="idle" result="team_xtreme"/>
+        <chain action="special" result="power8"/>
+    </FightMove>
+    <FightMove animenum="ea_power8_start" handler="ch_teleport_dash_start" icon="7" is_power="true" lockspeed="true" name="power8" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="panther_p8" level="1"/>
+        <require cat="xtreme" level="1"/>
+        <trigger always="true" name="camera_override" time="0"/>
+        <trigger description="Boost" name="team_xtreme_msg" time="0" title="Panther's Might"/>
+        <trigger life="999" name="xtreme_start" time="0"/>
+        <trigger name="stop" time="0"/>
+        <trigger attacktype="direct" name="teleport_mark_start" time="0"/>
+        <trigger maxrange="300" maxtargets="10" name="teleport_dash_prep" targetactorsonly="true" time="0"/>
+        <trigger name="sound" sound="char/blackp_m/p8_power" time="0"/>
+        <trigger effect="char/blackp/p8_power" fxlevel="1" name="effect" time="0.633"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/blackp/p8_power" fxlevel="2" name="effect" time="0.633"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="-1"/>
+        <chain action="idle" result="power8_contact"/>
+        <chain action="special" result="power8_return"/>
+    </FightMove>
+    <FightMove animenum="ea_power8" combotextfinisher="Power" fallback="power8_return" is_power="true" name="power8_contact" playspeed="10" priority="uninterruptable">
+        <require cat="counter" level="1"/>
+        <trigger count="add" name="count" time="0" value="-1"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/blackp/p8_power" fxlevel="2" name="effect" time="0.185"/>
+        <trigger effect="char/blackp/p8_power" fxlevel="3" name="effect" time="0.296"/>
+        <trigger effect="char/blackp/p8_power" fxlevel="1" name="effect" time="0.629"/>
+        <trigger bolt="Bip01 Pelvis" effect="char/blackp/p8_power" fxlevel="2" name="effect" time="0.629"/>
+        <trigger doattack="false" forcedistance="-1" name="teleport_dash" setvictimtotarget="true" time="0"/>
+        <trigger name="sound" sound="char/blackp_m/p8_impact" time="0.24"/>
+        <trigger fail_node="null" name="verify_victim_alive" passtag="100" time="0.24"/>
+        <trigger execute_against="victim" name="otherevent" othertag="200" othertag2="210" tag="100" time="-1"/>
+        <trigger damage="%panther_p8_dmg" index="1" name="selfattack" tag="200" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_auto_knockback"/>
+        </trigger>
+        <trigger chance="0.25" execute_against="self" name="otherevent" othertag="211" tag="210" time="-1"/>
+        <trigger damage="%panther_p8_dmg" index="2" name="instantkill" tag="211" time="-1" type="ce_atk_self">
+            <damagemod name="dmgmod_kill"/>
+        </trigger>
+        <trigger critical="true" end="true" name="xtreme_start" time="-1"/>
+        <chain action="idle" result="power8_contact"/>
+    </FightMove>
+    <FightMove animenum="ea_power8_end" handler="ch_move_jump_land" is_power="true" lockangles="true" name="power8_return" playspeed="10" priority="uninterruptable">
+        <trigger dashhome="true" doattack="false" name="teleport_dash" time="0"/>
+        <trigger effect="char/blackp/p8_power" fxlevel="1" name="effect_sound" sound="char/blackp_m/p8_end" time="0.416"/>
+        <trigger critical="true" end="true" name="xtreme_start" time="0.5"/>
+        <chain action="idle" result="idle"/>
+    </FightMove>
+</PowerStyle>

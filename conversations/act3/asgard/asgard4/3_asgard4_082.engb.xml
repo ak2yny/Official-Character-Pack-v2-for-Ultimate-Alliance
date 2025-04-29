@@ -1,0 +1,45 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/hulk/3_asgard4_082_010_hul" text="%HULK%: Heimdall is stuck in ice. Hulk will save him.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/shocker/3_asgard4_082_011_sho" text="%ULTRASHOCKER%: Think again, big boy. Because to get to him, you'll have to go through us.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/rhino/3_asgard4_082_012_rhi" text="%ULTRARHINO%: And that ain't gonna happen cause I'm the biggest and baddest villain you've ever laid eyes on.">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/hulk/3_asgard4_082_013_hul" text="%HULK%: Ha, ha, ha, haaaaa!! Hulk not want to fight little man who dresses in a blanket and fat man who dresses like a moose.">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/shocker/3_asgard4_082_014_sho" text="%ULTRASHOCKER%: This is not a blanket, it's a non-conductive material that allows me to generate bolts of electricity. Without it, I'd be fried instantly.">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/rhino/3_asgard4_082_015_rhi" text="%ULTRARHINO%: And I ain't dressed like a moose. I'm a rhino - can't ya tell by the big horn?">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/hulk/3_asgard4_082_016_hul" text="%HULK%: Don't try to confuse Hulk. It makes Hulk angry, and when Hulk gets angry Hulk SMASH!">
+                                                                <response text="%BLANK%">
+                                                                    <line soundtoplay="voice/shocker/3_asgard4_082_017_sho" text="%ULTRASHOCKER%: Wow, this guy ain't quite right. Maybe you should let him call you a moose.">
+                                                                        <response text="%BLANK%">
+                                                                            <line soundtoplay="voice/rhino/3_asgard4_082_018_rhi" text="%ULTRARHINO%: What are you talkin' about? I ain't gonna take that from this big green dummy. And besides, I'm gonna trample him right now.">
+                                                                                <response text="%BLANK%">
+                                                                                    <line soundtoplay="voice/hulk/3_asgard4_082_019_hul" text="%HULK%: Bring it on, Moose Man! Hulk is the strongest there is!! Hulk will smash you into little pieces!!!">
+                                                                                        <response chosenscriptfile="act3/asgard/asgard4/rhino_shocker_attack" conversationend="true" text="%BLANK%"/>
+                                                                                    </line>
+                                                                                </response>
+                                                                            </line>
+                                                                        </response>
+                                                                    </line>
+                                                                </response>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>
