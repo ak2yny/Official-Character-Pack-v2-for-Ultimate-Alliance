@@ -370,7 +370,7 @@
             <talentvalue level="1" name="dead_outfit42_shw" value="2"/>
             <talentvalue level="9" name="dead_outfit42_shw" value="10"/>
         </talentvalues>
-        <level count="9" description="+%dead_outfit42_shw all resistances">
+        <level count="9" description="+%dead_outfit42_shw:p all resistances">
             <powerup life="-1">
                 <affecter attribute="resist_all" level="%dead_outfit42_pct"/>
             </powerup>

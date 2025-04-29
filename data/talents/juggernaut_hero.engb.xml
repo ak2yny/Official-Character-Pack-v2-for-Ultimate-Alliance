@@ -1,5 +1,5 @@
 <talents>
-    <talent descname="Unstoppable Strength" description="Mental resist, immunity to knockback, grabs, stuns and finishers." name="jugger_resist" type="ability">
+    <talent descname="Unstoppable Strength" description="Immunity to knockback, grabs, stuns, finishers and mental attacks." name="jugger_resist" type="ability">
         <level count="1">
             <powerup life="-1">
                 <affecter affect_type="scale" attribute="def_stunfreeze" level="0"/>

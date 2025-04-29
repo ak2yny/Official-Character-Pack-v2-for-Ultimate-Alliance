@@ -191,7 +191,7 @@ Official Character Pack 2
 -Nikita488: for igb to fbx conversions, Stage research, Alchemy tools, raven-formats and Zsnd (sound editor)
 -ak2yny: for general fixes, assistance, gold sounds upgrade, Cyclops, conversion, XML icons upscale
 -Cyborg Sun 天: for testing and reporting
--Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy, metal venger1, CCali.
+-Other general assistance and fixes : MrKablamm0fish, Outsider, Nikita488, LucasFernandesBr, BaconWizard17, Cohollow, deforexa, Jayglass, Andersonbrazil (skins + HUDs), Aventureiromax, Revknight, Cyborg Sun 天, Nick, Enchlore, UltraMegaMagnus, LarsKusanagi, brandonmeek (extraction point), Stickbro, Tubular Spaceman, BloodyMares, KingAdam, Julio Cabral, Datkofguy, Master Reaver aka Eclipso (many small fixes), Rock, Maegawa, epicandragon94, "M.", Fr3ddy, metal venger1, Lexonn_novaposhta, CCali.
 -Whiteking: for 5th and 6th skin for Emma Frost
 -Anyone else we forgot: Thanks
 

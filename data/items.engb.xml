@@ -1347,11 +1347,9 @@
     </item>
     <item class="gloves" cost="50000" displayname="Dark Uru Hammer" enemy_level="-1" model="pickups/equip_belt_a" name="DK_THOR_HMR" quality="legend" spawned_from="DarkThor" type="equipment" unique="true">
         <enhancement description="+^10 $DMG_ELECTRICITY to all melee attacks">
-            <powerup class="add_attack" damagetype="dmg_electricity" life="-1">
-                <affecter attribute="special" level="10"/>
+            <powerup class="add_attack" damage="10" damagetype="dmg_electricity" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch"/>
-                    <scope scope_attack="kick"/>
+                    <scope scope_non_powers="true" />
                 </affecter>
             </powerup>
         </enhancement>
@@ -1530,11 +1528,9 @@
     </item>
     <item class="gloves" cost="50000" displayname="White Ring of Mandarin" enemy_level="-1" model="pickups/equip_belt_a" name="MNDRN_RING" quality="legend" spawned_from="Mandarin" type="equipment" unique="true">
         <enhancement description="+^5 $DMG_ENERGY to all melee attacks">
-            <powerup class="add_attack" damagetype="dmg_energy" life="-1">
-                <affecter attribute="special" level="5"/>
+            <powerup class="add_attack" damage="5" damagetype="dmg_energy" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch"/>
-                    <scope scope_attack="kick"/>
+                    <scope scope_non_powers="true" />
                 </affecter>
             </powerup>
         </enhancement>
@@ -1607,22 +1603,18 @@
     </item>
     <item class="gloves" cost="50000" displayname="Shocker's Gloves" enemy_level="-1" model="pickups/equip_belt_a" name="SHKR_GLOVS" quality="legend" spawned_from="Shocker" type="equipment" unique="true">
         <enhancement description="+^10 $DMG_ELECTRICITY to all melee attacks">
-            <powerup class="add_attack" damagetype="dmg_electricity" life="-1">
-                <affecter attribute="special" level="10"/>
+            <powerup class="add_attack" damage="10" damagetype="dmg_electricity" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch"/>
-                    <scope scope_attack="kick"/>
+                    <scope scope_non_powers="true" />
                 </affecter>
             </powerup>
         </enhancement>
     </item>
     <item class="gloves" cost="50000" displayname="Starbolt's Flame" enemy_level="-1" model="pickups/equip_belt_a" name="STRBLT_FLAM" quality="legend" spawned_from="Starbolt" type="equipment" unique="true">
         <enhancement description="^5 $DMG_FIRE to all melee attacks">
-            <powerup class="add_attack" damagetype="dmg_fire" life="-1">
-                <affecter attribute="special" level="5"/>
+            <powerup class="add_attack" damage="5" damagetype="dmg_fire" life="-1">
                 <affecter attribute="powerup_scope">
-                    <scope scope_attack="punch"/>
-                    <scope scope_attack="kick"/>
+                    <scope scope_non_powers="true" />
                 </affecter>
             </powerup>
         </enhancement>
