@@ -9,6 +9,7 @@ Original skins/mannequins:
 - "Alternate Skins\Backup OCP 2.1 Black Widow Ultimate skin (PSP)" contains Black Widow's Ultimate skin that was replaced with her in game MUA skin in OCP 2.2 or 2.3.
 - "Alternate Skins\Backup OCP 2.3 Toad skins" contains 2 huds and 2 skins for toad that were removed in the OCP 2.4.
 - "Optional 5th and 6th skins (unnamed)" gives all playable characters a 5th and 6th skin, but you will need to name these skins and add them to the herostat manually.
+- "Optional Roster with GE Primary Skins" contains alt. mannequins matching different primary skins (set in herostats)
 * These can't be found in Optional Files. Get the original skins and mannequins from the original installation or backup. DLC skins and mannequins can be found here: https://www.mediafire.com/file/ob7yual5mhpiul6/MUA_Remastered_DLC_Skin_Backport_MrK.zip/file
 
 "Additional Sim":
@@ -54,7 +55,8 @@ Other:
   Note: They add 5 objectives and a few game flags which might add to limits (unknown).
 - "Optional Quick Play Mod 2.0" is an update of the Quick Play Mod by Maegawa (eg. no legal text intro when starting the game) with additions, such as: skipped events (Pitfall arcade game, etc.); early access to second hub areas; more skipped introduction and intro cutscene; unlocked simulators.
   Note: This is experimental and meant for mod testing.
-  Tips: Add only individual files to add parts of this mod, or remove individual files to remove parts from this mod
+  Tips: Add only individual files to add parts of this mod, or remove individual files to remove parts from this mod.
+- "Optional Skip Intro Videos" includes only the intro-video-skip script from the Quick Play mod.
 - "Optional Save Jean and Nightcrawler Using Magneto" contains the mod, where Magneto's able to save both X-Men in Mephosto's Realm.
   Note: This was added in OCP 1, and moved to Optional Files in OCP 2.5.
 - "Optional F4 Trusts Skrulls" allows the skrull bosses to be trusted when using any of the Fantastic Four characters in act 4.
