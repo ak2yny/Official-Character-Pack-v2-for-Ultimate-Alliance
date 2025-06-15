@@ -4,7 +4,7 @@
     <event arc="60" damage="3 4" damagelevel="2" damagetype="dmg_blade" inherit="punch_heavy" knockback="120" maxrange="72" name="power_sword" tiles="true" victimeventtag="20"/>
     <event class="requirements" inherit="powerup" name="weapon_mastery" remove_on_node_end="true">
         <require cat="skill" item="dead_outfit41" level="1"/>
-        <affecter attribute="atk_damage" level="%dead_outfit41_pct"/>
+        <affecter affect_type="scale" attribute="atk_damage" level="%dead_outfit41_pct"/>
     </event>
     <event inherit="skinsegment" name="hide_swords" show="false" show2="false" skinsegment="sword_r_hand" skinsegment2="sword_l_hand"/>
     <event inherit="skinsegment" name="show_swords" show="true" show2="true" skinsegment="sword_r_hand" skinsegment2="sword_l_hand"/>
