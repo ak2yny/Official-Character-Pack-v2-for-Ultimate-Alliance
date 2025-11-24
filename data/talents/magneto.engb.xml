@@ -304,29 +304,29 @@
             <require cat="level" level="%magneto_p8_req"/>
         </level>
     </talent>
-    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit11" skin="3" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="mag_outfit11" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="mag_outfit11_pct" value="1.05"/>
-            <talentvalue level="9" name="mag_outfit11_pct" value="1.15"/>
+            <talentvalue level="1" name="mag_outfit11_pct" value="1.04"/>
+            <talentvalue level="9" name="mag_outfit11_pct" value="1.24"/>
         </talentvalues>
-        <level count="9" description="%mag_outfit11_pct:s magnetic $DMG">
+        <level count="9" description="%mag_outfit11_pct:s maximum $HP">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%mag_outfit11_pct" scope_node="magnetic_power"/>
+                <affecter affect_type="scale" attribute="maxhealth" level="%mag_outfit11_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="mag_outfit12" skin="3" type="passive">
+    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit12" skin="0" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="mag_outfit12_pct" value="1.02"/>
-            <talentvalue level="9" name="mag_outfit12_pct" value="1.2"/>
+            <talentvalue level="1" name="mag_outfit12_pct" value="1.05"/>
+            <talentvalue level="9" name="mag_outfit12_pct" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%mag_outfit12_pct:s melee $DMG">
+        <level count="9" description="%mag_outfit12_pct:s magnetic $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit12_pct" scope_non_powers="true"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit12_pct" scope_node="magnetic_power"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit13" skin="3" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit13" skin="0" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mag_outfit13_dr" value="1"/>
             <talentvalue level="9" name="mag_outfit13_dr" value="9"/>
@@ -337,29 +337,31 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="mag_outfit21" skin="2" type="passive">
+    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="mag_outfit21" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="mag_outfit21_pct" value="1.04"/>
-            <talentvalue level="9" name="mag_outfit21_pct" value="1.24"/>
+            <talentvalue level="1" name="mag_outfit21_pct" value="0.02"/>
+            <talentvalue level="9" name="mag_outfit21_pct" value="0.12"/>
+            <talentvalue level="1" name="mag_outfit21_pctd" value="2"/>
+            <talentvalue level="9" name="mag_outfit21_pctd" value="12"/>
         </talentvalues>
-        <level count="9" description="%mag_outfit21_pct:s maximum $HP">
+        <level count="9" description="+%mag_outfit21_pctd All Resistances">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="maxhealth" level="%mag_outfit21_pct"/>
+                <affecter attribute="resist_all" level="%mag_outfit21_pct"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="mag_outfit22" skin="2" type="passive">
+    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit22" skin="1" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="mag_outfit22_pct" value="1.02"/>
-            <talentvalue level="9" name="mag_outfit22_pct" value="1.2"/>
+            <talentvalue level="1" name="mag_outfit22_pct" value="1.05"/>
+            <talentvalue level="9" name="mag_outfit22_pct" value="1.25"/>
         </talentvalues>
-        <level count="9" description="%mag_outfit22_pct:s power $DMG">
+        <level count="9" description="%mag_outfit22_pct:s magnetic $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit22_pct" scope_powers="true"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit22_pct" scope_node="magnetic_power"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit23" skin="2" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit23" skin="1" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mag_outfit23_dr" value="1"/>
             <talentvalue level="9" name="mag_outfit23_dr" value="9"/>
@@ -370,42 +372,7 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Resistance" description="Increases all resistances." icon="16" icon_texture="textures/ui/talent_icons.png" name="mag_outfit41" skin="1" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="mag_outfit41_pct" value="0.02"/>
-            <talentvalue level="9" name="mag_outfit41_pct" value="0.12"/>
-            <talentvalue level="1" name="mag_outfit41_pctd" value="2"/>
-            <talentvalue level="9" name="mag_outfit41_pctd" value="12"/>
-        </talentvalues>
-        <level count="9" description="+%mag_outfit41_pctd All Resistances">
-            <powerup life="-1">
-                <affecter attribute="resist_all" level="%mag_outfit41_pct"/>
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit42" skin="1" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="mag_outfit42_pct" value="1.05"/>
-            <talentvalue level="9" name="mag_outfit42_pct" value="1.25"/>
-        </talentvalues>
-        <level count="9" description="%mag_outfit42_pct:s magnetic $DMG">
-            <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%mag_outfit11_pct" scope_node="magnetic_power"/>
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit43" skin="1" type="passive">
-        <talentvalues>
-            <talentvalue level="1" name="mag_outfit43_dr" value="1"/>
-            <talentvalue level="9" name="mag_outfit43_dr" value="9"/>
-        </talentvalues>
-        <level count="9" description="+%mag_outfit43_dr $DR">
-            <powerup life="-1">
-                <affecter attribute="defense_rating" level="%mag_outfit43_dr"/>
-            </powerup>
-        </level>
-    </talent>
-    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="mag_outfit31" skin="0" type="passive">
+    <talent descname="Maximum $HP" description="Increases maximum health." icon="20" icon_texture="textures/ui/talent_icons.png" name="mag_outfit31" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mag_outfit31_pct" value="1.04"/>
             <talentvalue level="9" name="mag_outfit31_pct" value="1.24"/>
@@ -416,18 +383,18 @@
             </powerup>
         </level>
     </talent>
-    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit32" skin="0" type="passive">
+    <talent descname="Power Damage" description="Increases the $DMG of all powers." icon="0" icon_texture="textures/ui/talent_icons.png" name="mag_outfit32" skin="2" type="passive">
         <talentvalues>
-            <talentvalue level="1" name="mag_outfit32_pct" value="1.05"/>
-            <talentvalue level="9" name="mag_outfit32_pct" value="1.25"/>
+            <talentvalue level="1" name="mag_outfit32_pct" value="1.02"/>
+            <talentvalue level="9" name="mag_outfit32_pct" value="1.2"/>
         </talentvalues>
-        <level count="9" description="%mag_outfit32_pct:s magnetic $DMG">
+        <level count="9" description="%mag_outfit32_pct:s power $DMG">
             <powerup life="-1">
-                <affecter affect_type="scale" attribute="damage" level="%mag_outfit11_pct" scope_node="magnetic_power"/>
+                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit32_pct" scope_powers="true"/>
             </powerup>
         </level>
     </talent>
-    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit33" skin="0" type="passive">
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit33" skin="2" type="passive">
         <talentvalues>
             <talentvalue level="1" name="mag_outfit33_dr" value="1"/>
             <talentvalue level="9" name="mag_outfit33_dr" value="9"/>
@@ -435,6 +402,39 @@
         <level count="9" description="+%mag_outfit33_dr $DR">
             <powerup life="-1">
                 <affecter attribute="defense_rating" level="%mag_outfit33_dr"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Magnetic Damage" description="Increases the amount of $DMG done with magnetic attacks." icon="8" icon_texture="textures/ui/magneto_icons.png" name="mag_outfit41" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="mag_outfit41_pct" value="1.05"/>
+            <talentvalue level="9" name="mag_outfit41_pct" value="1.15"/>
+        </talentvalues>
+        <level count="9" description="%mag_outfit41_pct:s magnetic $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit41_pct" scope_node="magnetic_power"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="Melee Damage" description="Increases the $DMG of all melee attacks." icon="5" icon_texture="textures/ui/talent_icons.png" name="mag_outfit42" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="mag_outfit42_pct" value="1.02"/>
+            <talentvalue level="9" name="mag_outfit42_pct" value="1.2"/>
+        </talentvalues>
+        <level count="9" description="%mag_outfit42_pct:s melee $DMG">
+            <powerup life="-1">
+                <affecter affect_type="scale" attribute="atk_damage" level="%mag_outfit42_pct" scope_non_powers="true"/>
+            </powerup>
+        </level>
+    </talent>
+    <talent descname="$DR" description="Increases defense." icon="22" icon_texture="textures/ui/talent_icons.png" name="mag_outfit43" skin="3" type="passive">
+        <talentvalues>
+            <talentvalue level="1" name="mag_outfit43_dr" value="1"/>
+            <talentvalue level="9" name="mag_outfit43_dr" value="9"/>
+        </talentvalues>
+        <level count="9" description="+%mag_outfit43_dr $DR">
+            <powerup life="-1">
+                <affecter attribute="defense_rating" level="%mag_outfit43_dr"/>
             </powerup>
         </level>
     </talent>

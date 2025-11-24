@@ -1,0 +1,44 @@
+<PowerStyle>
+    <FightMove aireusetime="5" aitype="melee" animenum="ea_power1" handler="ch_grab_hold_base" lockangles="true" name="power_attack" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/kurse_m/p1_charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/kurse/p1_power" fxlevel="1" name="effect" time="0.143" />
+        <trigger name="sound" sound="char/kurse_m/p1_power" time="0.47" />
+        <trigger arc="75" damage="1" maxrange="60" name="punch" time="0.14286" victimeventtag="20">
+            <damagemod name="dmgmod_unblockable" />
+            <damagemod name="dmgmod_no_damage" />
+            <damagemod name="dmgmod_no_pain" />
+        </trigger>
+        <trigger filteractor="true" name="exclude_ai" passtag="21" sponsor_cant_have_victim="true" tag="20" time="-1" type="ce_filter_event" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Kurse_Victim" name="victim" next_eventtag="22" nodename="power_attack_victim" offset="-1 0 0" tag="21" time="-1" useeventvictim="true" victimface="true" />
+        <trigger doslidemove="true" name="victim" offset="36 0 0" tag="22" time="-1" useeventvictim="true" />
+        <trigger arc="180" damage="%mdmg_high" index="2" maxrange="30" name="punch" time="0.47">
+            <damagemod name="dmgmod_unblockable" />
+        </trigger>
+        <trigger critical="true" name="victim_release" ownertime="1" time="0.55" />
+        <trigger bolt="Bip01 R Hand" effect="char/kurse/p1_power" fxlevel="1" name="effect" time="0.68" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="melee" animenum="ea_power2" locktransitionangles="true" name="power_smash" noautoaim="true" priority="5" turnrate="0.2">
+        <event damage="%mdmg_high" damagescale="difficulty" inherit="punch" knockback="190" name="kurse_m_charge">
+            <damageMod name="dmgmod_auto_knockback" />
+        </event>
+        <trigger name="sound" sound="char/kurse_m/p2_charge" time="0" />
+        <trigger effect="char/kurse/p2_power" fxlevel="1" name="effect" time="0.45" />
+        <trigger name="kurse_m_charge" time="0.5" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" name="power_weaken">
+        <trigger critical="true" name="powerup" remove_tag="Kurse_invuln" time="0" />
+        <trigger class="callevents" life="15" name="powerup" special_description="901" time="0">
+            <FunctionEvent function="deactivate" triggertag="30" />
+            <affecter affect_type="scale" attribute="atk_damage" level="0.25" />
+            <special_fx effect="map/simulator/thor_kurse_vulnerable" fxlevel="1" />
+        </trigger>
+        <trigger name="sound" sound="Mission/kurse/weaken" time="0" />
+        <trigger life="-1" name="powerup" special_description="900" tag="30" tag_name="Kurse_invuln" time="-1">
+            <affecter affect_type="scale" attribute="def_damage" level="0" />
+        </trigger>
+        <chain action="idle" result="idle" />
+    </FightMove>
+</PowerStyle>

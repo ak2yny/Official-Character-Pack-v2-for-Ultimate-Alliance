@@ -1,0 +1,33 @@
+<conversation>
+    <startCondition>
+        <participant name="default">
+            <line soundtoplay="voice/blade/2_murder4_102_010_bla" text="%BladeSimple%: Daredevil, what are you doing here? And more importantly, what am I doing here...wherever 'here' is.">
+                <response text="%BLANK%">
+                    <line soundtoplay="voice/daredevil/2_murder4_102_011_dd" text="%DAREDEVIL%: This is a death trap called Murderworld. It was created by a professional assassin named Arcade. He must have been the one who brought you here.">
+                        <response text="%BLANK%">
+                            <line soundtoplay="voice/blade/2_murder4_102_012_bla" text="%BladeSimple%: Arcade, huh? I wonder what someone like that would want with me?">
+                                <response text="%BLANK%">
+                                    <line soundtoplay="voice/daredevil/2_murder4_102_013_dd" text="%DAREDEVIL%: I imagine it was because Dr. Doom ordered him to. Doom's formed a group of villains known as the Masters of Evil.">
+                                        <response text="%BLANK%">
+                                            <line soundtoplay="voice/blade/2_murder4_102_014_bla" text="%BladeSimple%: So old metal head is back...any clue as to what he's planning?">
+                                                <response text="%BLANK%">
+                                                    <line soundtoplay="voice/daredevil/2_murder4_102_015_dd" text="%DAREDEVIL%: No. But whatever it is, it's big. Doom's attacked two S.H.I.E.L.D. installations and stolen the new Super Soldier Serum.">
+                                                        <response text="%BLANK%">
+                                                            <line soundtoplay="voice/blade/2_murder4_102_016_bla" text="%BladeSimple%: Well, now my curiosity is piqued. Tell you what, I'm on your team. This is something I've gotta see to the end. Besides, there's nothing I'd rather do then take down Victor Von Doom.">
+                                                                <response chosenscriptfile="act2/murder/murder4/blade_fade_remove" conversationend="true" text="%BLANK%"/>
+                                                            </line>
+                                                        </response>
+                                                    </line>
+                                                </response>
+                                            </line>
+                                        </response>
+                                    </line>
+                                </response>
+                            </line>
+                        </response>
+                    </line>
+                </response>
+            </line>
+        </participant>
+    </startCondition>
+</conversation>

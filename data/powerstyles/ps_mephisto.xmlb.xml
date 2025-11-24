@@ -1,0 +1,200 @@
+<PowerStyle>
+    <Fightmove animenum="ea_power7" handler="ch_grab_hold_base" lockangles="true" locktransitionangles="true" name="special_steal_victim" playspeed="1" priority="uninterruptable">
+        <trigger flag1="nopush" name="flags" time="0" type="ce_set_flags" />
+        <trigger critical="on_exit" flag1="nopush" name="flags" resetflags="true" time="-1" type="ce_set_flags" />
+        <trigger attackerface="true" doslidemove="true" end_interaction_on_idle="false" interaction="data/fightstyles/interact_mephisto_victim" name="victim" nodename="grab_struggle_attacker" offset="80 0 0" setowners="true" time="0" use_owner="true" victimface="true" />
+        <trigger name="stop" time="0" />
+        <chain action="idle" result="null" />
+    </Fightmove>
+    <FightMove animenum="ea_attack_light1" lockangles="true" name="attacklight1" startchaintime="0.54">
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="whoosh_light" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="2" name="effect" time="0.38" />
+        <trigger damagetype="dmg_fire" name="punch" time="0.38" victimeventtag="100">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag="100" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/mefsto/attack" fxlevel="4" how_used="activation" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" fallback="attacklight1" lockangles="true" name="attacklight2" startchaintime="0.5">
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.3" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.3" />
+        <trigger name="whoosh_light" time="0.32" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="2" name="effect" time="0.5" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="2" name="effect" time="0.5" />
+        <trigger damagetype="dmg_fire" name="punch" time="0.5" victimeventtag="100">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag="100" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/mefsto/attack" fxlevel="4" how_used="activation" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <FightMove animenum="ea_attack_heavy1" endchaintime="1" lockangles="true" name="attackheavy1" startchaintime="0.5625">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger name="whoosh_heavy" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.08" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.5" />
+        <trigger effect="char/mefsto/attack" fxlevel="3" name="effect" time="0.5" />
+        <trigger name="backhand1" time="0.62" victimeventtag="100">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag="100" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="char/mefsto/attack" fxlevel="4" how_used="activation" never_cycle="true" />
+        </trigger>
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attackknockback1" />
+        <chain action="smash" result="attackheavy2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+    </FightMove>
+    <event damagescale="difficulty" name="teleport_data_store" nostomp="true" type="ce_atk_teleport_mark_start" />
+    <event name="set_visible" teleportation_caused="true" type="ce_force_visibility" />
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power1_start" endchaintime="0.95" handler="ch_tele_jump" icon="0" name="power1" priority="5" startchaintime="0.91">
+        <trigger checksolo="true" name="teleport_data_store" tag="2" time="0" />
+        <trigger effect="char/mefsto/p1_power" fxlevel="1" name="effect_sound" sound="char/mefsto_m/p1_charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.55" />
+        <trigger effect="char/mefsto/p1_power" fxlevel="2" name="effect" time="0.91" />
+        <trigger damage="1" damagescale="none" maxrange="250" name="blast" numblasts="8" radius="0" targetable="true" time="0.91" victimeventtag="13">
+            <damagemod name="dmg_no_damage" />
+            <damagemod name="dmg_no_pain" />
+        </trigger>
+        <trigger apply_chance="1" life="3" name="powerup" tag="13" time="-1">
+            <affecter attribute="fear" level="1" />
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_fear" how_used="primary" />
+        </trigger>
+        <trigger name="set_visible" time="0.99" visible="false" />
+        <chain action="Idle" result="teleport_in" />
+    </FightMove>
+    <FightMove animenum="ea_power1_end" blendtime="0" handler="ch_move_tele_land" lockangles="true" name="teleport_in" priority="5">
+        <trigger attacktype="direct" maxrange="180" name="teleport_attack" powerusage="0" tag="1" time="0" />
+        <trigger effect="char/mefsto/p1_power" fxlevel="2" name="effect_sound" sound="char/mefsto_m/p1_power" time="0" />
+        <trigger cleardata="true" critical="true" name="teleport_data_store" set_visible="true" time="0" />
+        <trigger critical="true" name="set_visible" time="0" visible="true" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="2" name="effect" time="0.15" />
+        <trigger name="whoosh_heavy" time="0.5" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power1_start" handler="ch_tele_jump" name="teleportfailedstrike" priority="5">
+        <trigger name="sound" sound="char/mefsto_m/p1_power" time="0.9" />
+        <trigger cleardata="true" critical="true" name="teleport_data_store" set_visible="true" time="0.99" />
+        <trigger critical="true" name="set_visible" time="0.99" visible="true" />
+        <chain action="Idle" result="teleport_in" />
+    </FightMove>
+    <FightMove animenum="ea_power1_start" blendtime="0" endchaintime="0.95" handler="ch_move_tele_land" lockangles="true" name="postteleport" noautoaim="true" priority="5" startchaintime="0.9">
+        <trigger effect="char/mefsto/p1_power" fxlevel="2" name="effect_sound" sound="char/mefsto_m/p1_power" time="0" />
+        <trigger critical="true" name="set_visible" time="0" visible="true" />
+        <trigger cleardata="true" critical="true" name="teleport_data_store" set_visible="true" time="0" />
+        <chain action="idle" result="idle" />
+        <chain action="walk" result="walk" />
+        <chain action="run" result="run" />
+    </FightMove>
+    <FightMove aireusetime="20" aitype="melee" animenum="ea_power2_loop" handler="ch_grab_hold_base" is_power="true" lockangles="true" name="power2" powerup_tag="mefsto_p2" priority="5">
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/mefsto_m/p2_charge" time="0" />
+        <trigger kill_fx_on_death="false" life="-1" name="powerup" remove_on_node_end="true" tag_name="mefsto_p2_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/mefsto/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/mefsto/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger arc="75" damage="1" damagescale="difficulty" index="1" maxrange="100" name="punch" time="0" victimeventtag="20">
+            <damagemod name="dmgmod_unblockable" />
+            <damagemod name="dmgmod_no_damage" />
+            <damagemod name="dmgmod_no_pain" />
+            <damagemod name="dmgmod_no_hiteffect" />
+        </trigger>
+        <trigger filteractor="true" name="exclude_ai" passtag="21" sponsor_cant_have_victim="true" tag="20" time="-1" type="ce_filter_event" />
+        <trigger attackerface="true" interaction="data/fightstyles/Interact_Mephisto_Victim" name="victim" next_eventtag="22" nodename="power_smash_victim" offset="-1 0 0" tag="21" time="-1" useeventvictim="true" victimface="false" />
+        <trigger doslidemove="false" name="victim" offset="-1 0 0" tag="22" time="-1" useeventvictim="true" />
+        <trigger name="runscript" script="act2/mephisto/mephisto4/hurting_start" time="0" />
+        <trigger critical="true" name="runscript" script="act2/mephisto/mephisto4/hurting_stop" time="0.99" />
+        <trigger execute_against="victim" name="otherevent" othertag="100" time="0.2" />
+        <trigger execute_against="victim" name="otherevent" othertag="101" time="0.4" />
+        <trigger execute_against="victim" name="otherevent" othertag="102" time="0.6" />
+        <trigger execute_against="victim" name="otherevent" othertag="103" time="0.8" />
+        <trigger execute_against="victim" name="otherevent" othertag="104" time="0.99" />
+        <event damage="5" damagescale="difficulty" inherit="self_attack" name="p2_attack" type="ce_atk_self">
+            <damagemod name="dmgmod_no_hiteffect" />
+        </event>
+        <trigger index="2" name="p2_attack" next_eventtag="200" tag="100" time="-1" />
+        <trigger index="3" name="p2_attack" next_eventtag="200" tag="101" time="-1" />
+        <trigger index="4" name="p2_attack" next_eventtag="200" tag="102" time="-1" />
+        <trigger index="5" name="p2_attack" next_eventtag="200" tag="103" time="-1" />
+        <trigger index="6" name="p2_attack" next_eventtag="200" tag="104" time="-1" />
+        <trigger bolt="Bip01 Pelvis" effect="char/mefsto/p2_power" fxlevel="2" name="effect" tag="200" time="-1" />
+        <chain action="Idle" result="power_smash2" />
+    </FightMove>
+    <FightMove aireusetime="5" aitype="melee" animenum="ea_power2_end" handler="ch_grab_hold_base" is_power="true" lockangles="true" locktransitionangles="true" name="power_smash2" powerup_tag="mefsto_p2" priority="5">
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="1" name="effect" time="0.36" />
+        <trigger name="powerup" remove_tag="mefsto_p2_link" time="0.36" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/attack" fxlevel="2" name="effect" time="0.48" />
+        <trigger arc="180" damage="10" damagescale="difficulty" index="2" maxrange="100" name="punch" time="0.48" />
+        <trigger critical="true" name="victim_release" ownertime="1" time="0.9" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="2" aitype="projectile" animenum="ea_power3" lockangles="true" name="power3" priority="5">
+        <event actorbolt="Bip01 R Hand" attack_bone_angles="0 0 0" attack_bone_pos="20 0 54" attacktype="projectile" count="1" damage="%mdmg_high" damagescale="difficulty" damagetype="dmg_energy" entity="mephisto_bolt" filename="ents_mephisto" inherit="projectile" knockback="1200" name="mephisto_bolt" speed="550" targetable="true" />
+        <trigger name="stop" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/p3_power" fxlevel="2" name="effect_sound" sound="char/mefsto_m/p3_power" time="0.05" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/p3_power" fxlevel="2" name="effect" time="0.05" />
+        <trigger index="2" name="mephisto_bolt" time="0.42" />
+        <trigger index="3" name="mephisto_bolt" time="0.58" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aireusetime="30" aitype="aoe" animenum="ea_power4" is_power="true" lockangles="true" name="power4" priority="5">
+        <trigger name="sound" sound="char/mefsto_m/p4_power" time="0" />
+        <trigger effect="char/mefsto/p4_power" fxlevel="2" name="effect" time="0" />
+        <trigger class="callevents" life="5" name="powerup" time="0">
+            <functionevent function="deactivate" triggertag="12" />
+            <special_fx effect="char/mefsto/p4_aura" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger entity_name="FantasticShield" name="remove_powerups" tag="12" time="-1">
+            <special_fx effect="char/mefsto/p4_aura" fxlevel="2" how_used="deactivation" />
+        </trigger>
+        <trigger count="1" entity="MephistoShield" eventtagtocallonspawned="1" filename="ents_mephisto" inherit="relative_spawn" life="5" maxinstances="1" name="MephistoShield" relative="self" scale="1" setowneridtospawner="true" time="0.5" type="ce_atk_spawn_relative" />
+        <trigger allow_non_actors="true" class="force_field" effect="char/mefsto/p4_impact" fxlevel="1" life="5" name="powerup" sound_touch="char/mefsto_m/p6_impact" tag="1" time="-1">
+            <affecter attribute="powerup_scope">
+                <scope scope_attack="projectile" />
+            </affecter>
+            <affecter affect_type="sum" attribute="deflect_projectiles" level="1" />
+        </trigger>
+        <chain action="Idle" result="power1" />
+    </FightMove>
+    <FightMove animenum="ea_power8" lockangles="true" name="power5" playspeed="0.5" priority="5">
+        <trigger name="sound" sound="char/mefsto_m/p5_charge" time="0" />
+        <trigger name="stop" time="0" />
+        <trigger name="sound" sound="char/mefsto_m/p5_loop" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/p5_power" fxlevel="1" name="effect" time="0.12" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/p5_power" fxlevel="1" name="effect" time="0.12" />
+        <trigger effect="char/mefsto/p5_power" fxlevel="2" name="effect" time="0.12" />
+        <trigger effect="char/mefsto/p5_power" fxlevel="3" name="effect" time="0.77" />
+        <trigger name="sound" sound="char/mefsto_m/p5_power" time="0.77" />
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power9" blendtime="0.5" lockangles="true" name="power5_loop" playspeed="0.5" priority="1">
+        <trigger bolt="Bip01 L Hand" effect="char/mefsto/p5_power" fxlevel="1" name="effect" time="0.12" />
+        <trigger bolt="Bip01 R Hand" effect="char/mefsto/p5_power" fxlevel="1" name="effect" time="0.12" />
+        <trigger effect="char/mefsto/p5_power" fxlevel="2" name="effect" time="0.12" />
+        <trigger effect="char/mefsto/p5_power" fxlevel="3" name="effect" time="0.77" />
+        <chain action="Idle" result="power5_loop" />
+    </FightMove>
+    <FightMove name="powerup_nopickup">
+        <trigger name="powerup" no_stack="true" remove_tag="shield" tag="70" time="0" />
+        <trigger life="-1" name="powerup" no_stack="true" tag="73" tag_name="shield" time="0">
+            <affecter attribute="def_pickup" />
+            <affecter attribute="def_grab" />
+        </trigger>
+    </FightMove>
+</PowerStyle>

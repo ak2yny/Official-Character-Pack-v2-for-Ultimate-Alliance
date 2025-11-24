@@ -1,0 +1,334 @@
+<PowerStyle iconfile="textures/ui/ghostrider_icons.png">
+    <FightMove animenum="ea_power10" fallback="grab_smash" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash" powerup_tag="ghost_chain_atk" priority="5">
+        <trigger count="set" name="count" time="0" value="5" />
+        <trigger actorskin="0650" anim="power_10" anim_set="06_ghostrider_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger doslidemove="true" interaction="data/fightstyles/interact_ghostrider_victim" name="victim" nodename="grab_smash_victim_start" offset="22 0 0" time="0" victimface="true" />
+        <trigger name="sound" sound="char/ghost_m/p2_charge" time="0" />
+        <trigger name="stop" time="0.1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.99" type="ce_bolton" />
+        <trigger critical="true" name="victim_release" time="-1" />
+        <chain action="idle" result="grab_smash_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power15" fallback="grab_smash_end" handler="ch_grab_hold_base" icon="9" lockangles="true" lockspeed="true" name="grab_smash_loop" powerup_tag="ghost_chain_atk" priority="5">
+        <require cat="counter" level="1" />
+        <trigger name="verify_victim_alive" time="0" />
+        <trigger doslidemove="true" name="victim" nodename="grab_smash_victim_loop" offset="0 0 0" time="0" victimface="true" />
+        <trigger name="sound" sound="char/ghost_m/p2_charge" time="0" />
+        <trigger name="stop" time="0.1" />
+        <trigger actorskin="0650" anim="power_15" anim_set="06_ghostrider_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" knockback="120" maxrange="64" name="radial" offset="96" time="0.3" />
+        <trigger name="verify_victim_alive" time="0.32" />
+        <trigger count="add" name="count" time="0" value="-1" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="-1" type="ce_bolton" />
+        <trigger critical="true" name="victim_release" time="-1" />
+        <chain action="smash" result="grab_smash_loop" />
+        <chain action="idle" result="grab_smash_end" />
+    </FightMove>
+    <FightMove animenum="ea_power15" blendtime="0" handler="ch_grab_hold_base" lockangles="true" lockspeed="true" name="grab_smash_end" noautoaim="true" powerup_tag="ghost_chain_atk" priority="6">
+        <trigger actorskin="0650" anim="power_15" anim_set="06_ghostrider_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="verify_victim_alive" time="0" />
+        <trigger doslidemove="true" name="victim" nodename="grab_smash_victim_loop" offset="-60 0 0" time="0" victimface="true" />
+        <trigger name="stop" time="0" />
+        <trigger damage="4 5" damagescale="normal" damagetype="physical" knockback="120" maxrange="64" name="radial" offset="96" time="0.3" />
+        <trigger name="verify_victim_alive" time="0.32" />
+        <trigger doslidemove="true" name="victim" nodename="getuponback" targetdistance="24" time="0.35" victimface="true" />
+        <trigger critical="true" name="victim_release" time="0.35" />
+        <trigger name="verify_victim_alive" time="0.4" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.95" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light1" blendtime="0" endchaintime="1" lockangles="true" name="attacklight1" priority="3" startchaintime="0.64">
+        <trigger actorskin="0660" anim="attack_light1" anim_set="06_ghostrider_chain" blendtime="0" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="whoosh_light" time="0.32" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" effect="char/ghostr/attack_light" name="effect" time="0.23" />
+        <trigger maxrange="72" name="punch" time="0.41" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.82" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight2" />
+        <chain action="groundattack" result="groundattack2" />
+        <chain action="smash" result="attackstun1" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light2" blendtime="0" endchaintime="1" lockangles="true" name="attacklight2" priority="3" startchaintime="0.64">
+        <trigger actorskin="0660" anim="attack_light2" anim_set="06_ghostrider_chain" blendtime="0" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="whoosh_light" time="0.36" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" effect="char/ghostr/attack_light" name="effect" time="0.29" />
+        <trigger arc="100" maxrange="60" name="punch" time="0.43" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.86" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="attack" result="attacklight3" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="smash" result="popupattack2" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_light3" blendtime="0" lockangles="true" name="attacklight3">
+        <trigger actorskin="0660" anim="attack_light3" anim_set="06_ghostrider_chain" blendtime="0" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="whoosh_light" time="0.29" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="fx01" effect="char/ghostr/attack_light" name="effect" time="0.24" />
+        <trigger maxrange="45" name="radial" offset="43 0 0" time="0.41" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.88" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="null" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_trip1" blendtime="0.05" lockangles="true" name="attacktrip2">
+        <event arc="67" inherit="kick" knockback="0" maxrange="86" name="sweep">
+            <damageMod name="dmgmod_trip" />
+            <damageMod name="dmgmod_ground" />
+        </event>
+        <trigger actorskin="0660" anim="attack_trip1" anim_set="06_ghostrider_chain" blendtime="0" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger name="whoosh_light" time="0.3" />
+        <trigger bolt="fx01" effect="char/ghostr/attack_light" name="effect" time="0.25" />
+        <trigger angle="-60" height="-10" index="1" name="sweep" time="0.35" />
+        <trigger angle="0" height="-10" index="1" name="sweep" time="0.37" />
+        <trigger angle="60" height="-10" index="1" name="sweep" time="0.4" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.944" type="ce_bolton" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun1" endchaintime="1" lockangles="true" name="attackstun1" priority="3" startchaintime="0.55">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1" />
+        <trigger name="whoosh_heavy" time="0.21" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/attack_light" life="0.15" name="effect" time="0.25" />
+        <trigger name="backhand1" time="0.31" />
+        <chain action="idle" result="idle" />
+        <chain action="guard" result="null" />
+        <chain action="smash" result="attackstun_finish" />
+        <chain action="powers" result="powers" />
+        <chain action="move" result="jump" />
+        <chain action="attack" result="attacktrip2" />
+        <chain action="groundattack" result="groundattack" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove animenum="ea_attack_stun2" endchaintime="1" lockangles="true" name="attackstun_finish">
+        <event inherit="punch_heavy" knockback="0" maxrange="56" name="backhand1">
+            <damagemod name="dmgmod_stun" />
+            <damagemod name="dmgmod_no_atk_roll" />
+        </event>
+        <trigger name="whoosh_heavy" time="0.25" />
+        <trigger movement="0" name="slide" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/attack_light" life="0.2" name="effect" time="0.25" />
+        <trigger name="backhand1" time="0.4" />
+        <chain action="idle" result="idle" />
+        <chain action="move" result="jump" />
+        <chain action="smash" result="null" />
+        <chain action="blocking" result="blocking" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power1" icon="0" is_power="true" name="power1" powerup_tag="ghost_hellfire_atk" priority="5" startchaintime="0.7">
+        <require cat="skill" item="ghost_p1" level="1" />
+        <trigger name="powerusage" powerusage="%ghost_p1_pwr" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="2" loop_type="start" name="sound" sound="char/ghost_m/p1_charge" time="0" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="2" loop_type="start" name="effect_sound" next_eventtag="101" sound="char/ghost_m/p1_charge_loop" tag="100" time="-1" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="101" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" remove_on_node_end="true" tag_name="ghost_p1_link" time="0">
+            <special_fx bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectilenear" always_target="true" animenum="ea_power1_loop" icon="0" is_power="true" lockchaining="false" locktransitionangles="true" name="power1_loop" noautoaim="true" powerup_tag="ghost_hellfire_atk" priority="5" turnrate="0.5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_type="update" name="sound" sound="char/ghost_m/p1_charge_loop" time="0" />
+        <chain action="Idle" result="power1_release" />
+        <chain action="samepowerhold" result="power1_loop" />
+    </FightMove>
+    <FightMove aitype="projectilenear" animenum="ea_power1_end" combotextfinisher="Fire" combotextstarter="Ravenous" icon="0" is_power="true" lockangles="true" locktransitionangles="true" name="power1_release" noautoaim="true" powerup_tag="ghost_hellfire_atk" priority="5">
+        <event arc="75" damage="%ghost_p1_dmg" damagetype="dmg_fire" fxlevel="1" hiteffect="char/ghostr/p1_impact" inherit="blast" knockback="120" maxrange="200" name="fireblast" numblasts="1" offset="-1" powerusage="0" radius="12" targetable="true" />
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger bolt="Bip01 L Hand" effect="char/ghostr/p1_charge" fxlevel="3" name="effect" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="3" name="effect" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p1_link" time="0.25" />
+        <trigger name="sound" sound="char/ghost_m/p1_power" time="0.25" />
+        <trigger loop_type="stop" name="sound" sound="char/ghost_m/p1_charge_loop" time="0.25" />
+        <trigger loop_type="stop" name="sound" sound="char/ghost_m/p1_charge" time="0.25" />
+        <trigger failtag="10" min_charge="1" name="filter" passtag="20" time="0.35" />
+        <trigger name="fireblast" tag="10" time="-1" />
+        <trigger name="fireblast" tag="20" time="-1" victimeventtag="30">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <trigger class="harming" damage="%ghost_p1_dmg2" damagetype="dmg_fire" life="5" name="powerup" tag="30" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="base/powerup/pu_burning" fxlevel="1" how_used="primary" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove aitype="projectile" animenum="ea_power2" combotextfinisher="Chains" combotextstarter="Fiendish" icon="1" is_power="true" lockangles="true" name="power2" powerup_tag="ghost_chain_atk" priority="5">
+        <require cat="skill" item="ghost_p2" level="1" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/ghost_m/p2_charge" time="0.8" />
+        <trigger charge="0" charge_time="1.0" charged_eventtag="100" name="charge" time="0.8" />
+        <trigger loop_type="start" name="sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger maxrange="400" mustbeactor="false" mustbegrabbable="true" name="victim_set" searchangle="30" selfeventtag="10" time="0" />
+        <trigger attackerface="true" name="victim" tag="10" time="-1" victimface="away" />
+        <trigger name="stop" time="0.01" />
+        <trigger fail_node="null" failtag="20" name="verify_victim_alive" passtag="1" time="0.8" />
+        <trigger life="-1" name="powerup" next_eventtag="2" powerusage="%ghost_p2_pwr" tag="1" tag_name="ghost_p2_link" time="-1">
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Pelvis" bolt2ent="victim" effect="char/ghostr/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Spine2" bolt2ent="victim" effect="char/ghostr/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger interaction="data/fightstyles/interact_ghostrider_victim" name="victim" next_eventtag="3" nodename="hold_in_place_no_break" nodename_nonhumanoid="immobilize" tag="2" time="-1" victimface="away" />
+        <trigger entity="ghost_ravish_chain_fail" filename="ents_ghostrider" maxinstances="1" name="projectile" next_eventtag="21" offset="50 0 40" speed="2200" tag="20" time="-1" />
+        <trigger life="-1" name="powerup" powerusage="%ghost_p2_pwr" remove_on_node_end="true" tag="21" tag_name="ghost_p2_link" time="-1">
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Pelvis" bolt2ent="ghost_ravish_chain_fail" effect="char/ghostr/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+            <special_fx bolt="Bip01 R Hand" bolt2="Bip01 Spine2" bolt2ent="ghost_ravish_chain_fail" effect="char/ghostr/p2_power" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger fail_node="power2_pullenemyin" failtag="30" name="verify_victim_alive" time="0.99" />
+        <trigger name="victim_release" next_eventtag="32" tag="30" time="-1" />
+        <trigger arc="10" damage="%ghost_p2_dmg" damagescale="none" maxrange="275" name="punch" tag="32" time="-1" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="-1" />
+        <chain action="idle" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power2_loop" blendtime="0" combotextfinisher="Chains" combotextstarter="Fiendish" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power2_loop" noautoaim="true" powerup_tag="ghost_chain_atk">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger name="verify_victim_alive" time="0" />
+        <trigger charge_type="stop" critical="true" name="charge" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p2_link" time="-1" />
+        <trigger critical="true" interactionend="true" name="victim_release" ownertime="0" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ghost_m/p2_charge_loop" time="-1" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ghost_m/p2_charge" time="-1" />
+        <chain action="Idle" result="power2_pullenemyin" />
+        <chain action="samepowerhold" result="power2_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power11" combotextfinisher="Chains" combotextstarter="Fiendish" is_power="true" lockangles="true" locktransitionangles="true" name="power2_pullenemyin" powerup_tag="ghost_chain_atk" priority="5" startchaintime="0.99" takeimpactdamage="false">
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger name="sound" sound="char/ghost_m/p2_power" time="0.27" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ghost_m/p2_charge_loop" time="0.27" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ghost_m/p2_charge" time="0.27" />
+        <trigger name="filter" passtag="1" require_victim_alive="true" time="0.54" />
+        <trigger name="charsound" next_eventtag="2" play_sound_on_victim="true" sound="snd_pain" tag="1" time="-1" />
+        <trigger damagescale="none" facethrowdir="false" impactdamage="%ghost_p2_dmg" name="throw" tag="2" throwdirection="TowardAttacker" thrownode="thrownbackloop" throwspeed="%ghost_p2_throw_spd" time="-1" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p2_link" time="0.99" />
+        <trigger critical="true" interactionend="true" name="victim_release" time="-1" />
+        <chain action="idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power3" combotextfinisher="Scourge" combotextstarter="Flaying" icon="2" is_power="true" lockangles="true" name="power3" powerup_tag="ghost_chain_atk" priority="5">
+        <require cat="skill" item="ghost_p3" level="1" />
+        <trigger life="-1" name="powerup" remove_on_node_end="true" time="0">
+            <affecter affect_type="add" attribute="atk_critical" level="1" scope_victiminair="true" />
+        </trigger>
+        <trigger actorskin="0660" anim="power_3" anim_set="06_ghostrider_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger actorskin="0660" anim="power_4" anim_set="06_ghostrider_chain" bolt="Bip01 L Hand" boltslot="ebolton_altweapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger boltslot="ebolton_weapon" critical="true" name="removebolton" removebolton="true" time="0.4" type="ce_bolton" />
+        <trigger boltslot="ebolton_altweapon" critical="true" name="removebolton" removebolton="true" time="0.4" type="ce_bolton" />
+        <trigger effect="char/ghostr/p3_power" fxlevel="1" name="effect" time="0.4" />
+        <trigger name="sound" sound="char/ghost_m/p3_power" time="0.5" />
+        <trigger arc="45" damage="%ghost_p3_dmg" fxlevel="2" hiteffect="char/ghostr/p3_power" knockback="%ghost_p3_kb" maxrange="120" name="radial" powerusage="%ghost_p3_pwr" time="0.5">
+            <damagemod name="dmgmod_auto_knockback" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power4" icon="3" is_power="true" lockangles="true" name="power4" priority="5">
+        <require cat="skill" item="ghost_p4" level="1" />
+        <trigger name="powerusage" powerusage="%ghost_p4_pwr" time="-1" />
+        <trigger loop_timeout="3" loop_type="start" name="sound" sound="char/ghost_m/p4_charge" time="0" />
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger charge="0" charge_time="1.2" charged_eventtag="100" name="charge" time="0" />
+        <trigger bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="2" name="effect_sound" sound="common/melee/kb_charge_done" tag="100" time="-1" />
+        <trigger fx_chargeable="true" life="-1" name="powerup" tag_name="ghost_p4_link" time="0">
+            <special_fx bolt="Bip01 R Hand" effect="char/ghostr/p1_charge" fxlevel="1" how_used="primary" never_cycle="true" />
+        </trigger>
+        <trigger critical="true" name="powerup" remove_tag="ghost_p4_link" time="-1" />
+        <chain action="samepowerhold" result="power4_loop" />
+        <chain action="Idle" result="power4_release" />
+    </FightMove>
+    <FightMove animenum="ea_power4_loop" icon="3" is_power="true" lockangles="true" lockchaining="false" locktransitionangles="true" name="power4_loop" priority="5">
+        <trigger button="samepowerhold" name="button_hint" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p4_link" time="-1" />
+        <chain action="Idle" result="power4_release" />
+        <chain action="samepowerhold" result="power4_loop" />
+    </FightMove>
+    <FightMove animenum="ea_power4_end" combotextfinisher="Havoc" combotextstarter="Cruel" icon="3" is_power="true" lockangles="true" name="power4_release" powerup_tag="ghost_chain_atk" priority="5" startchaintime="0.85" storepowerbuttons="true">
+        <event arc="50" damage="%ghost_p4_dmg" damagemods_require_charge="true" damagetype="dmg_fire" inherit="radial" knockback="190" maxrange="120" name="chain_slash" tiles="true">
+            <damagemod name="dmgmod_popup" />
+        </event>
+        <trigger charge_type="stop" critical="true" name="charge" time="0" />
+        <trigger critical="true" name="powerup" remove_tag="ghost_p4_link" time="0.9" />
+        <trigger name="sound" sound="char/ghost_m/p4_power" time="0" />
+        <trigger critical="true" loop_type="stop" name="sound" sound="char/ghost_m/p4_charge" time="0" />
+        <trigger actorskin="0660" anim="power_4_end" anim_set="06_ghostrider_chain" bolt="Bip01 R Hand" boltslot="ebolton_weapon" ignoreanimmap="true" name="bolton" replacecurrent="true" time="0" />
+        <trigger bolt="Bip01 R Hand" bolt_point="preserve_fx01" effect="char/ghostr/p4_power" fxlevel="1" name="effect" time="0.22" />
+        <trigger angle="0" name="chain_slash" powerusage="%ghost_p4_pwr" time="0.18" />
+        <trigger angle="-90" name="chain_slash" time="0.3" />
+        <trigger angle="180" name="chain_slash" time="0.35" />
+        <trigger angle="45" name="chain_slash" time="0.43" />
+        <trigger boltslot="ebolton_weapon" critical="on_exit" name="removebolton" removebolton="true" time="0.97" type="ce_bolton" />
+        <chain action="Idle" result="idle" />
+        <chain action="powers" result="powers" />
+    </FightMove>
+    <FightMove animenum="ea_power5" combotextfinisher="Bane" combotextstarter="Baneful" icon="4" is_power="true" name="power5" powerup_tag="ghost_hellfire_atk" priority="5" turnrate="0.5">
+        <require cat="skill" item="ghost_p5" level="1" />
+        <trigger name="sound" sound="char/ghost_m/p5_charge" time="0" />
+        <trigger name="powerusage" powerusage="%ghost_p5_pwr" time="0" />
+        <trigger allow_non_actors="true" class="harming" damage="%ghost_p5_dmg" damagetype="dmg_fire" life="10" name="powerup" share_life="5" share_radius="60" tag="20" time="-1">
+            <special_fx bolt="Bip01 Pelvis" effect="base/powerup/pu_burning" fxlevel="1" how_used="primary" never_cycle="true" />
+            <affecter attribute="fear">
+                <scope scope_affecter="def_mind_control" scope_affecter_reverse="true" />
+            </affecter>
+        </trigger>
+        <trigger effect="char/ghostr/p5_power" fxlevel="1" name="effect" time="0.35" />
+        <trigger arc="25" damage="1" damagescale="none" maxrange="120" name="radial" time="0.5" victimeventtag="20" />
+        <trigger arc="25" damage="1" damagescale="none" maxrange="120" name="radial" time="0.7" victimeventtag="20" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power6" combotextfinisher="Stare" combotextstarter="Remorseless" icon="5" is_power="true" lockangles="true" name="power6" priority="5">
+        <require cat="skill" item="ghost_p6" level="1" />
+        <trigger name="sound" sound="char/ghost_m/p6_charge" time="0" />
+        <trigger damage="0" damagescale="none" index="1" maxrange="120" name="radial" powerusage="%ghost_p6_pwr" time="0.374" victimeventtag="10">
+            <damagemod name="dmgmod_no_damage" />
+        </trigger>
+        <trigger bolt="Bip01 Head" effect="char/ghostr/p6_power" fxlevel="1" name="effect" time="0.375" />
+        <trigger damage="1" damagescale="none" index="2" maxrange="120" name="radial" time="0.375">
+            <damagemod name="dmgmod_no_pain" />
+        </trigger>
+        <trigger beambolt="Bip01 Spine2" beambolt2="Bip01 Head" beameffect="char/ghostr/p6_beam" class="absorb" damagepercent="%ghost_p6_pct" energy="true" life="%ghost_p6_lif" name="powerup" sponsor="true" tag="10" time="-1" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_power7" combotextfinisher="Horror" combotextstarter="Dreadful" icon="6" is_power="true" lockangles="true" name="power7" priority="5">
+        <require cat="skill" item="ghost_p7" level="1" />
+        <trigger name="sound" sound="char/ghost_m/p7_charge" time="0" />
+        <trigger bolt="Bip01 Head" effect="char/ghostr/p7_power" fxlevel="1" name="effect" time="0.1" />
+        <trigger apply_enemy="near" apply_self="false" life="%ghost_p7_lif" name="powerup" powerusage="%ghost_p7_pwr" time="0.5">
+            <affecter affect_type="scale" attribute="def_damage" level="%ghost_p7_dmg" />
+            <affecter attribute="fear">
+                <scope scope_affecter="def_mind_control" scope_affecter_reverse="true" />
+            </affecter>
+            <special_fx bolt="Bip01 Head" effect="base/powerup/pu_fear" />
+        </trigger>
+        <chain action="Idle" result="idle" />
+    </FightMove>
+    <FightMove animenum="ea_idle1" blendtime="0" handler="ch_team_xtreme" icon="8" is_power="true" lockangles="true" lockchaining="false" lockspeed="true" name="team_xtreme" playspeed="10" priority="uninterruptable">
+        <require cat="skill" item="ghost_p9" level="1" />
+        <require cat="xtreme" level="1" />
+        <trigger name="xtreme_start" only_non_looped="true" team_xtreme="2" time="0" />
+        <chain action="idle" result="team_xtreme" />
+        <chain action="special" result="power9" />
+    </FightMove>
+    <FightMove animenum="ea_power9" combotextfinisher="Revenge" icon="8" is_power="true" lockangles="true" lockspeed="true" name="power9" playspeed="10" powerup_tag="ghost_p9" priority="uninterruptable">
+        <trigger always="true" name="camera_override" time="0" />
+        <trigger description="Attack" name="team_xtreme_msg" time="0" title="Vengeance" />
+        <trigger effect="char/ghostr/p9_power" fxlevel="1" name="effect_sound" sound="char/ghost_m/p9_charge" time="0.433" />
+        <trigger beambolt="Bip01 Spine2" beambolt2="Bip01 Head" beameffect="char/ghostr/p6_beam" class="absorb" damagepercent="1" distribute_to_heroes="true" inflicted="true" life="-1" name="powerup" remove_on_node_end="true" time="0.433">
+            <affecter attribute="powerup_scope" scope_node="ghost_p9" />
+        </trigger>
+        <trigger damage="%ghost_p9_dmg" damagetype="dmg_fire" maxrange="250" name="radial" time="0.433" />
+        <trigger critical="true" end="true" name="xtreme_start" time="0.75" />
+        <chain action="Idle" result="idle" />
+    </FightMove>
+</PowerStyle>
