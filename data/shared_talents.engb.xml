@@ -14,7 +14,7 @@
     <talent fightstyle="true" name="fightstyle_nonhuman">
         <level/>
     </talent>
-    <talent descname="Leadership" description="Team gains ^four times the $XP for all combo attacks." hidden="true" name="leadership" type="ability">
+    <talent descname="Leadership" description="Team gains ^four times the $XP for all combo attacks." name="leadership" type="ability">
         <level count="1">
             <powerup apply_ally="all" life="-1">
                 <affecter affect_type="scale" attribute="combo_xp" level="4"/>
