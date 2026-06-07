@@ -11,22 +11,22 @@
             <FunctionEvent function="death" triggertag="10"/>
         </trigger>
         <trigger delay="3" maxhealthpercent="%darkp_ashes_hlth" name="resurrect" self="true" tag="10" time="-1" type="ce_resurrect"/>
-        <chain action="walk" result="walk" />
-        <chain action="run" result="run" />
-        <chain action="sprint" result="sprint" />
-        <chain action="strafeleft" result="strafeleft" />
-        <chain action="straferight" result="straferight" />
-        <chain action="advance" result="advance" />
-        <chain action="retreat" result="retreat" />
-        <chain action="guard" result="guarddecide" />
-        <chain action="attack" result="attacklight1" />
-        <chain action="smash" result="attackheavy1" />
-        <chain action="groundattack" result="groundattack" />
-        <chain action="move" result="jump" />
-        <chain action="special" result="boredloop" />
-        <chain action="blocking" result="blocking" />
-        <chain action="powers" result="powers" />
-        <chain action="rollright" result="dodgeright" />
+        <chain action="walk" result="walk"/>
+        <chain action="run" result="run"/>
+        <chain action="sprint" result="sprint"/>
+        <chain action="strafeleft" result="strafeleft"/>
+        <chain action="straferight" result="straferight"/>
+        <chain action="advance" result="advance"/>
+        <chain action="retreat" result="retreat"/>
+        <chain action="guard" result="guarddecide"/>
+        <chain action="attack" result="attacklight1"/>
+        <chain action="smash" result="attackheavy1"/>
+        <chain action="groundattack" result="groundattack"/>
+        <chain action="move" result="jump"/>
+        <chain action="special" result="boredloop"/>
+        <chain action="blocking" result="blocking"/>
+        <chain action="powers" result="powers"/>
+        <chain action="rollright" result="dodgeright"/>
         <chain action="rollleft" result="dodgeleft"/>
     </FightMove>
     <FightMove animenum="ea_menu_goodbye" lockangles="true" locktransitionangles="true" name="resurrect_v" playspeed="0.67">
@@ -152,7 +152,7 @@
         <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_aura" index="3" name="effect" tag="2" time="0.1"/>
         <trigger bolt="Bip01 Pelvis" effect="char/drkphoenx/p1_power" index="4" name="effect" tag="2" time="0.375"/>
         <trigger name="sound" sound="char/darkp_m/p1_power" time="0.1"/>
-        <trigger attackerheight="false" attacktype="direct" count="1" damage="%darkp_p2_dmg" damagelevel="1" damagescale="none" damagetype="dmg_telekinesis" fxlevel="1" hiteffect="char/drkphoenx/p1_power" maxrange="190" name="who_to_hit" powerusage="%pho_ment_burst_pwr" tag="1" time="0.375" victimeventtag="100">
+        <trigger attackerheight="false" attacktype="direct" count="1" damage="%darkp_p2_dmg" damagelevel="1" damagescale="none" damagetype="dmg_telekinesis" fxlevel="1" hiteffect="char/drkphoenx/p1_power" maxrange="190" name="who_to_hit" powerusage="%darkp_p2_pwr" tag="1" time="0.375" victimeventtag="100">
             <damageMod name="dmgmod_energize"/>
             <damageMod name="dmgmod_weld"/>
             <damageMod name="dmgmod_force_fx"/>
